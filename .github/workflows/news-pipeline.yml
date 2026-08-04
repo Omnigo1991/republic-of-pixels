@@ -1,16 +1,17 @@
-# Vollautomatische News-Pipeline: alle 6 Stunden neue Artikel generieren und
-# veröffentlichen. Der Push löst automatisch das Vercel-Production-Deployment aus.
+# Fortlaufende News-Pipeline: stündliche Prüfung der RSS-Feeds, Veröffentlichung
+# sobald relevante neue Meldungen da sind (max. 2 Artikel pro Lauf). Der Push löst
+# automatisch das Vercel-Production-Deployment aus.
 # Manueller Start: GitHub → Actions → "News-Pipeline" → "Run workflow".
 name: News-Pipeline
 
 on:
   schedule:
-    - cron: "23 */6 * * *"
+    - cron: "23 * * * *"
   workflow_dispatch:
     inputs:
       max_articles:
         description: "Maximale Artikel in diesem Lauf"
-        default: "3"
+        default: "2"
         required: false
 
 concurrency:
@@ -38,13 +39,25 @@ jobs:
       - name: Pipeline ausführen
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          MAX_ARTICLES_PER_RUN: ${{ github.event.inputs.max_articles || '3' }}
+          MAX_ARTICLES_PER_RUN: ${{ github.event.inputs.max_articles || '2' }}
         run: node pipeline/run.mjs
 
+      - name: Neue Artikel erkennen
+        id: changes
+        run: |
+          if git status --porcelain src/content/articles | grep -q .; then
+            echo "new=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "new=false" >> "$GITHUB_OUTPUT"
+            echo "Keine neuen Artikel — Build und Deployment entfallen."
+          fi
+
       - name: Build-Prüfung (nichts Kaputtes veröffentlichen)
+        if: steps.changes.outputs.new == 'true'
         run: npm run build
 
       - name: Änderungen committen und pushen
+        if: steps.changes.outputs.new == 'true'
         run: |
           git config user.name "RoP News-Pipeline"
           git config user.email "actions@github.com"

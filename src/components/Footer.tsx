@@ -26,7 +26,7 @@ export function Footer() {
 
           <div>
             <p className="mb-4 text-[12px] font-semibold tracking-[0.2em] text-text-tertiary">
-              REDAKTION
+              HOME
             </p>
             <ul className="flex flex-col gap-3">
               {CATEGORY_NAV.map((c) => (

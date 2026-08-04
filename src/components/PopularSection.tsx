@@ -51,7 +51,11 @@ function PopularCard({
         </span>
       </div>
       <div className="flex flex-1 flex-col gap-2 p-4">
-        <CategoryPill category={article.category} />
+        {/* Block-Wrapper: verhindert, dass der Flex-Column-Container die Pill
+            auf volle Breite streckt — Pill bleibt inhaltsbreit wie in der Newsliste. */}
+        <div>
+          <CategoryPill category={article.category} />
+        </div>
         <h3 className={`font-semibold leading-snug text-text-primary group-hover:text-accent transition-colors ${large ? "text-lg" : "text-[15px]"} line-clamp-2`}>
           {article.title}
         </h3>

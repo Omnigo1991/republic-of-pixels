@@ -20,7 +20,7 @@ const STATE_FILE = join(ROOT, "pipeline", "state.json");
 const ARTICLES_DIR = join(ROOT, "src", "content", "articles");
 const PUBLIC_DIR = join(ROOT, "public");
 
-const MAX_ARTICLES_PER_RUN = Number(process.env.MAX_ARTICLES_PER_RUN ?? 3);
+const MAX_ARTICLES_PER_RUN = Number(process.env.MAX_ARTICLES_PER_RUN ?? 2);
 const MAX_CANDIDATE_AGE_H = 48;
 const STATE_RETENTION_DAYS = 21;
 const HERO_VARIANTS = ["circuit", "controller", "particles", "waveform", "grid"];
@@ -87,7 +87,28 @@ Redaktionelles Profil:
 - Sprache: Deutsch (de-DE), Anrede der Leserschaft neutral oder "ihr", nie "Sie"
 - Fakten stammen ausschliesslich aus dem gelieferten Quellmaterial — nichts erfinden, keine Zahlen oder Zitate ergänzen, die dort nicht stehen`;
 
+// Titel der zuletzt veröffentlichten Artikel — verhindert bei stündlichen Läufen,
+// dass dieselbe Story erneut aufgegriffen wird, wenn eine weitere Quelle später
+// darüber berichtet (deren Feed-Eintrag hat einen neuen, unbekannten GUID).
+function recentPublishedTitles(hours = 72) {
+  const cutoff = Date.now() - hours * 3600000;
+  const titles = [];
+  for (const f of readdirSync(ARTICLES_DIR).filter((f) => f.endsWith(".json"))) {
+    try {
+      const a = JSON.parse(readFileSync(join(ARTICLES_DIR, f), "utf8"));
+      if (new Date(a.publishedAt).getTime() > cutoff) titles.push(a.title);
+    } catch {
+      // unlesbare Datei ignorieren
+    }
+  }
+  return titles.slice(-25);
+}
+
 async function selectCandidates(candidates) {
+  const published = recentPublishedTitles();
+  const publishedBlock = published.length
+    ? `\nBereits von uns veröffentlicht (diese Storys NICHT erneut auswählen, auch nicht aus anderer Quelle):\n${published.map((t) => `- ${t}`).join("\n")}\n`
+    : "";
   const list = candidates
     .map(
       (c, i) =>
@@ -98,6 +119,7 @@ async function selectCandidates(candidates) {
   const prompt = `Hier ist die Liste neuer Gaming-Meldungen aus unseren Quell-Feeds (Format: Index | Quelle | Alter | Titel | Anriss):
 
 ${list}
+${publishedBlock}
 
 Aufgaben:
 1. Erkenne Duplikate: Meldungen zur selben Nachricht bilden einen Cluster (Indizes zusammenfassen).
@@ -108,8 +130,9 @@ Aufgaben:
    - "platforms": Teilmenge von ["pc","playstation","xbox","nintendo"]
    - "isLeakOrRumor": true/false
    - "priority": 1 (höchste) bis ${MAX_ARTICLES_PER_RUN}
+   - "depth": "kurz" (Routinemeldung, wenig Substanz), "standard" (normale News) oder "lang" (grosse Nachricht mit viel Substanz und Einordnungsbedarf, z. B. Übernahmen, grosse Ankündigungen, Branchenbeben)
 
-Antworte NUR mit JSON, ohne Einleitung und ohne Kommentar — das erste Zeichen deiner Antwort muss "{" sein: {"selected":[{"indices":[...],"category":"...","platforms":[...],"isLeakOrRumor":...,"priority":...}]}
+Antworte NUR mit JSON, ohne Einleitung und ohne Kommentar — das erste Zeichen deiner Antwort muss "{" sein: {"selected":[{"indices":[...],"category":"...","platforms":[...],"isLeakOrRumor":...,"priority":...,"depth":"..."}]}
 Wenn nichts den Kriterien genügt, antworte {"selected":[]}.`;
 
   // Ein fehlgeschlagener Parse wird einmal wiederholt — die Auswahl ist der
@@ -139,8 +162,12 @@ ${sourcesBlock}
 
 Vorgaben:
 - Kategorie: ${cluster.category}${cluster.isLeakOrRumor ? " (als unbestätigt kennzeichnen!)" : ""}
-- Umfang: 350–600 Wörter im body
-- Struktur: Einstieg mit dem Kern der Nachricht, 2–3 Zwischenüberschriften, am Ende eine kurze Einordnung
+- Umfang: ${
+    { kurz: "250–350", standard: "350–550", lang: "550–750" }[cluster.depth] ?? "350–550"
+  } Wörter im body — die Länge muss dem Nachrichtenwert entsprechen, kein Aufblähen
+- Struktur: Einstieg mit dem Kern der Nachricht, ${
+    cluster.depth === "lang" ? "3–4" : "2–3"
+  } Zwischenüberschriften, am Ende eine kurze Einordnung
 - Bereits vergebene Slugs (nicht wiederverwenden): ${[...slugs].slice(-40).join(", ")}
 
 Antworte NUR mit einem JSON-Objekt mit exakt diesen Feldern:

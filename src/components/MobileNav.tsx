@@ -57,7 +57,7 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
 
           <div className="flex-1 overflow-y-auto px-6 py-8">
             <p className="mb-3 text-[12px] font-semibold tracking-[0.2em] text-text-tertiary">
-              REDAKTION
+              HOME
             </p>
             <nav className="mb-8 flex flex-col">
               {CATEGORY_NAV.map((c) => (
