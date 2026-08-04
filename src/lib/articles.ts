@@ -1,33 +1,5 @@
 import type { Article, Category, Platform } from "./types";
-
-import xboxRestructuring from "@/content/articles/xbox-restructuring-2026.json";
-import gta6 from "@/content/articles/gta-6-august-trailer-geruechte.json";
-import silentHill from "@/content/articles/silent-hill-townfall-release.json";
-import mina from "@/content/articles/mina-the-hollower-review.json";
-import halo from "@/content/articles/halo-campaign-evolved-review.json";
-import gpu from "@/content/articles/gpu-preiserhoehungen-august-2026.json";
-import eldenRing from "@/content/articles/elden-ring-tarnished-edition.json";
-import psPlus from "@/content/articles/ps-plus-essential-august-2026.json";
-import gamePass from "@/content/articles/xbox-game-pass-august-2026.json";
-import switch2 from "@/content/articles/switch-2-august-2026-ports.json";
-import indie from "@/content/articles/indie-games-boom-2026.json";
-
-// Alle Artikel werden hier explizit importiert (statt per fs-Scan), damit Next.js
-// sie zur Build-Zeit statisch bündeln und typisieren kann. Neue Artikel: JSON-Datei
-// unter src/content/articles/ ablegen und hier ergänzen.
-const ALL_ARTICLES = [
-  xboxRestructuring,
-  gta6,
-  silentHill,
-  mina,
-  halo,
-  gpu,
-  eldenRing,
-  psPlus,
-  gamePass,
-  switch2,
-  indie,
-] as unknown as Article[];
+import { ALL_ARTICLES } from "./articles.generated";
 
 export function getAllArticles(): Article[] {
   return [...ALL_ARTICLES].sort(

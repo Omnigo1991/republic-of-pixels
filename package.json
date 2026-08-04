@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "generate:articles": "node scripts/generate-article-index.mjs",
+    "predev": "node scripts/generate-article-index.mjs",
+    "prebuild": "node scripts/generate-article-index.mjs",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
