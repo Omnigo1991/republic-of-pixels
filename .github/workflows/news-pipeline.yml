@@ -50,7 +50,9 @@ jobs:
           git config user.email "actions@github.com"
           # articles.generated.ts wird vom prebuild-Schritt neu erzeugt und muss
           # mit committet werden, sonst blockiert die Änderung den Rebase.
-          git add src/content/articles public/images/articles pipeline/state.json src/lib/articles.generated.ts
+          # Der Bilder-Ordner existiert nur, wenn mindestens ein Bild geladen wurde.
+          git add src/content/articles pipeline/state.json src/lib/articles.generated.ts
+          if [ -d public/images/articles ]; then git add public/images/articles; fi
           if git diff --cached --quiet; then
             echo "Keine neuen Artikel in diesem Lauf."
             exit 0
