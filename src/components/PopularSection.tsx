@@ -55,6 +55,10 @@ function PopularCard({
         <h3 className={`font-semibold leading-snug text-text-primary group-hover:text-accent transition-colors ${large ? "text-lg" : "text-[15px]"} line-clamp-2`}>
           {article.title}
         </h3>
+        {/* Die grosse Karte spannt zwei Rasterzeilen — der Teaser füllt die Höhe sinnvoll. */}
+        {large && (
+          <p className="text-sm leading-relaxed text-text-secondary line-clamp-4">{article.excerpt}</p>
+        )}
       </div>
     </Link>
   );
