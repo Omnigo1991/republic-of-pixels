@@ -5,6 +5,7 @@ import Link from "next/link";
 import type { Article } from "@/lib/types";
 import { ArticleMedia } from "./ArticleMedia";
 import { CategoryPill } from "./Badges";
+import { splitTitle } from "@/lib/format";
 
 // Einzeilige Slider-Leiste (Betreiber-Vorgabe 04.08.2026, play3-Vorbild):
 // Karten in einer Reihe, horizontal scrollbar mit Snap; Pfeile oben rechts
@@ -100,11 +101,12 @@ function SliderArrow({
 }
 
 function PopularCard({ article, rank }: { article: Article; rank: number }) {
+  const { kicker, headline } = splitTitle(article.title, article.tags);
   return (
     <article className="w-[280px] shrink-0 snap-start sm:w-[320px]">
       <Link
         href={`/artikel/${article.slug}`}
-        className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border-subtle bg-surface-card transition-colors hover:bg-surface-hover"
+        className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border-subtle bg-surface-card transition-all duration-300 hover:bg-surface-hover hover:shadow-glow"
       >
         <div className="relative aspect-[16/9] overflow-hidden">
           <ArticleMedia
@@ -120,8 +122,13 @@ function PopularCard({ article, rank }: { article: Article; rank: number }) {
           <div>
             <CategoryPill category={article.category} />
           </div>
+          {kicker && (
+            <p className="text-[11px] font-bold uppercase tracking-wider text-accent line-clamp-1">
+              {kicker}
+            </p>
+          )}
           <h3 className="text-[15px] font-semibold leading-snug text-text-primary transition-colors group-hover:text-accent line-clamp-2">
-            {article.title}
+            {headline}
           </h3>
         </div>
       </Link>

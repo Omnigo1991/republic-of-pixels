@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Crimson Moon",
+    "date": "2026-09-01",
+    "platforms": ["playstation", "xbox", "pc"],
+    "articleSlug": "crimson-moon-release-september-2026"
+  },
+  {
+    "title": "Fire Emblem: Fortune's Weave",
+    "date": "2026-09-17",
+    "platforms": ["nintendo"],
+    "articleSlug": "fire-emblem-fortunes-weave-direct-details-2026"
+  },
+  {
+    "title": "The Walking Dead: Streets of Survival",
+    "date": "2026-09-18",
+    "platforms": ["playstation", "xbox", "nintendo", "pc"],
+    "articleSlug": "walking-dead-streets-of-survival-release"
+  },
+  {
+    "title": "EA Sports FC 27",
+    "date": "2026-09-25",
+    "platforms": ["playstation", "xbox", "pc"],
+    "articleSlug": "ea-fc-27-the-grounds-nba-2k-vorbild"
+  }
+]

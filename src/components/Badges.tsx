@@ -9,10 +9,19 @@ const CATEGORY_TONE: Record<Category, string> = {
   reviews: "text-text-secondary border-border-default bg-text-primary/[0.03]",
 };
 
-export function CategoryPill({ category }: { category: Category }) {
+// Varianten für Navy-Flächen (Hero, dunkle Bänder).
+const CATEGORY_TONE_DARK: Record<Category, string> = {
+  breaking: "text-accent-brand border-accent-brand/50 bg-accent-brand/10",
+  news: "text-navy-muted border-white/20 bg-white/[0.06]",
+  leaks: "text-[#F5B942] border-[#F5B942]/40 bg-[#F5B942]/10",
+  reviews: "text-navy-muted border-white/20 bg-white/[0.06]",
+};
+
+export function CategoryPill({ category, onDark = false }: { category: Category; onDark?: boolean }) {
+  const tone = onDark ? CATEGORY_TONE_DARK[category] : CATEGORY_TONE[category];
   return (
     <span
-      className={`inline-flex items-center rounded-full border px-2.5 py-1 text-[11px] font-semibold tracking-wide ${CATEGORY_TONE[category]}`}
+      className={`inline-flex items-center rounded-full border px-2.5 py-1 text-[11px] font-semibold tracking-wide ${tone}`}
     >
       {CATEGORY_LABELS[category].toUpperCase()}
     </span>

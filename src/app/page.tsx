@@ -3,6 +3,7 @@ import { TopStory } from "@/components/TopStory";
 import { PopularSection } from "@/components/PopularSection";
 import { ArticleListItem } from "@/components/ArticleListItem";
 import { CategoryChipBar } from "@/components/CategoryChipBar";
+import { ReleaseRadar } from "@/components/ReleaseRadar";
 import { Reveal } from "@/components/Reveal";
 
 export default function HomePage() {
@@ -12,17 +13,24 @@ export default function HomePage() {
 
   return (
     <>
+      {/* Hero auf Navy — setzt das Band aus Header + R-Zeichen nahtlos fort
+          (Original-Markenwelt). Top-Story ohne Reveal: sofort sichtbar. */}
+      <section className="bg-navy">
+        <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+          <TopStory article={topStory} />
+        </div>
+      </section>
+
       <CategoryChipBar active="alle" />
       <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
-        {/* Top-Story bleibt ohne Reveal — der Einstieg muss sofort sichtbar sein. */}
-        <section className="py-8 sm:py-12">
-          <TopStory article={topStory} />
-        </section>
+        <Reveal>
+          <PopularSection articles={popular} />
+        </Reveal>
 
         <div className="h-px w-full bg-border-subtle" />
 
         <Reveal>
-          <PopularSection articles={popular} />
+          <ReleaseRadar />
         </Reveal>
 
         <div className="h-px w-full bg-border-subtle" />

@@ -1,16 +1,21 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import Link from "next/link";
-import { Inter } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { LogoMark } from "@/components/Logo";
+import { BreakingTicker } from "@/components/BreakingTicker";
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: "swap",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-display",
   display: "swap",
 });
 
@@ -54,16 +59,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="de" className={inter.variable}>
+    <html lang="de" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <body className="min-h-screen bg-bg-base font-sans antialiased">
         <Header />
-        {/* Grosses Markenzeichen unterhalb des Headers, links im Contentraster —
-            scrollt mit der Seite (nicht sticky), Vorbild-Referenz des Betreibers. */}
-        <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8 pt-7 sm:pt-9">
-          <Link href="/" aria-label="Republic of Pixels – Startseite" className="inline-block group">
-            <LogoMark className="h-14 sm:h-16 w-auto text-accent-brand transition-transform duration-300 group-hover:scale-[1.04]" />
-          </Link>
-        </div>
+        <BreakingTicker />
         <main>{children}</main>
         <Footer />
         <Analytics />

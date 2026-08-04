@@ -15,7 +15,7 @@ import { TldrBox, WhyItMattersBox, ReviewBox, SourcesBox } from "@/components/Ar
 import { ShareButtons } from "@/components/ShareButtons";
 import { ReadingProgress } from "@/components/ReadingProgress";
 import { ArticleCard } from "@/components/ArticleCard";
-import { formatDateTime } from "@/lib/format";
+import { formatDateTime, splitTitle } from "@/lib/format";
 
 export function generateStaticParams() {
   return getAllArticles().map((a) => ({ slug: a.slug }));
@@ -93,9 +93,21 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           ))}
         </div>
 
-        <h1 className="text-3xl sm:text-[2.5rem] font-semibold leading-[1.15] tracking-tight text-text-primary">
-          {article.title}
-        </h1>
+        {(() => {
+          const { kicker, headline } = splitTitle(article.title, article.tags);
+          return (
+            <>
+              {kicker && (
+                <p className="mb-2 text-sm font-bold uppercase tracking-wider text-accent">
+                  {kicker}
+                </p>
+              )}
+              <h1 className="text-3xl sm:text-[2.5rem] font-semibold leading-[1.15] tracking-tight text-text-primary">
+                {headline}
+              </h1>
+            </>
+          );
+        })()}
         <p className="mt-4 text-lg leading-relaxed text-text-secondary">{article.subtitle}</p>
 
         <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 border-y border-border-subtle py-4 text-sm text-text-tertiary">

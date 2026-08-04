@@ -2,11 +2,12 @@ import Link from "next/link";
 import type { Article } from "@/lib/types";
 import { ArticleMedia } from "./ArticleMedia";
 import { CategoryPill } from "./Badges";
-import { formatDateTime } from "@/lib/format";
+import { formatDateTime, splitTitle } from "@/lib/format";
 
 // Chronologische Newsliste — strukturell an play3.de angelehnt (Bild + Text nebeneinander),
 // aber mit mehr Weissraum, ruhigerer Typo und klarer Artikeltrennung statt Card-Flut.
 export function ArticleListItem({ article }: { article: Article }) {
+  const { kicker, headline } = splitTitle(article.title, article.tags);
   return (
     <Link
       href={`/artikel/${article.slug}`}
@@ -21,8 +22,13 @@ export function ArticleListItem({ article }: { article: Article }) {
           <span className="text-xs text-text-tertiary hidden sm:inline">{formatDateTime(article.publishedAt)}</span>
           <span className="text-xs text-text-tertiary">· {article.readingTimeMinutes} Min.</span>
         </div>
+        {kicker && (
+          <p className="mb-0.5 text-[12px] font-bold uppercase tracking-wider text-accent line-clamp-1">
+            {kicker}
+          </p>
+        )}
         <h3 className="text-base sm:text-lg font-semibold leading-snug text-text-primary group-hover:text-accent transition-colors line-clamp-2">
-          {article.title}
+          {headline}
         </h3>
         <p className="mt-1.5 hidden sm:block text-sm text-text-secondary line-clamp-2">
           {article.excerpt}

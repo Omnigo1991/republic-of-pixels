@@ -2,28 +2,35 @@ import Link from "next/link";
 import type { Article } from "@/lib/types";
 import { ArticleMedia } from "./ArticleMedia";
 import { CategoryPill } from "./Badges";
-import { formatDateTime } from "@/lib/format";
+import { formatDateTime, splitTitle } from "@/lib/format";
 
 export function TopStory({ article }: { article: Article }) {
+  const { kicker, headline } = splitTitle(article.title, article.tags);
   return (
     <Link
       href={`/artikel/${article.slug}`}
       className="group grid gap-6 lg:grid-cols-2 lg:gap-10 lg:items-center"
     >
-      <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-border-subtle shadow-elevated">
+      {/* Hell-auf-Navy-Styling: Die Top-Story sitzt auf dem Marken-Navy-Band. */}
+      <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-white/10 shadow-elevated transition-shadow duration-500 group-hover:shadow-glowdark">
         <ArticleMedia article={article} priority sizes="(max-width: 1024px) 100vw, 50vw" className="h-full w-full transition-transform duration-700 group-hover:scale-[1.03]" />
       </div>
       <div>
         <div className="mb-4 flex items-center gap-3">
-          <CategoryPill category={article.category} />
-          <span className="text-xs text-text-tertiary">{formatDateTime(article.publishedAt)}</span>
-          <span className="text-xs text-text-tertiary">· {article.readingTimeMinutes} Min. Lesezeit</span>
+          <CategoryPill category={article.category} onDark />
+          <span className="text-xs text-navy-dim">{formatDateTime(article.publishedAt)}</span>
+          <span className="text-xs text-navy-dim">· {article.readingTimeMinutes} Min. Lesezeit</span>
         </div>
-        <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-semibold leading-[1.1] tracking-tight text-text-primary group-hover:text-accent transition-colors">
-          {article.title}
+        {kicker && (
+          <p className="mb-2 text-sm font-bold uppercase tracking-wider text-accent-brand">
+            {kicker}
+          </p>
+        )}
+        <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-semibold leading-[1.1] tracking-tight text-navy-text group-hover:text-accent-brand transition-colors">
+          {headline}
         </h1>
-        <p className="mt-4 text-lg leading-relaxed text-text-secondary">{article.subtitle}</p>
-        <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-accent">
+        <p className="mt-4 text-lg leading-relaxed text-navy-muted">{article.subtitle}</p>
+        <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-accent-brand">
           Zum Artikel
           <ArrowIcon className="h-4 w-4 transition-transform group-hover:translate-x-1" />
         </span>

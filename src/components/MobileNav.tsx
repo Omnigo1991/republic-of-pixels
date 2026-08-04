@@ -24,7 +24,7 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
       <Link
         href="/suche"
         aria-label="Suche öffnen"
-        className="flex h-10 w-10 items-center justify-center rounded-full text-text-secondary hover:text-text-primary hover:bg-text-primary/[0.04] transition-colors"
+        className="flex h-10 w-10 items-center justify-center rounded-full text-navy-muted hover:text-navy-text hover:bg-white/[0.06] transition-colors"
       >
         <SearchIcon className="h-5 w-5" />
       </Link>
@@ -32,7 +32,7 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
         onClick={() => setOpen(true)}
         aria-label="Menü öffnen"
         aria-expanded={open}
-        className="flex h-10 w-10 items-center justify-center rounded-full text-text-secondary hover:text-text-primary hover:bg-text-primary/[0.04] transition-colors"
+        className="flex h-10 w-10 items-center justify-center rounded-full text-navy-muted hover:text-navy-text hover:bg-white/[0.06] transition-colors"
       >
         <BurgerIcon className="h-5 w-5" />
       </button>
@@ -41,22 +41,22 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
           dadurch zum Containing Block für fixed-Elemente — ohne Portal würde
           das Overlay im 64px-Header gefangen (auf Mobile entdeckt, 04.08.2026). */}
       {open && mounted && createPortal(
-        <div className="fixed inset-0 z-[60] flex flex-col bg-bg-base animate-fadeIn">
-          <div className="flex h-16 items-center justify-between px-4 border-b border-border-subtle">
-            <span className="text-[13px] font-semibold tracking-[0.2em] text-text-tertiary">
+        <div className="fixed inset-0 z-[60] flex flex-col bg-navy animate-fadeIn">
+          <div className="flex h-16 items-center justify-between px-4 border-b border-navy-border">
+            <span className="text-[13px] font-semibold tracking-[0.2em] text-navy-dim">
               MENÜ
             </span>
             <button
               onClick={() => setOpen(false)}
               aria-label="Menü schliessen"
-              className="flex h-10 w-10 items-center justify-center rounded-full text-text-secondary hover:text-text-primary hover:bg-text-primary/[0.04]"
+              className="flex h-10 w-10 items-center justify-center rounded-full text-navy-muted hover:text-navy-text hover:bg-white/[0.06]"
             >
               <CloseIcon className="h-5 w-5" />
             </button>
           </div>
 
           <div className="flex-1 overflow-y-auto px-6 py-8">
-            <p className="mb-3 text-[12px] font-semibold tracking-[0.2em] text-text-tertiary">
+            <p className="mb-3 text-[12px] font-semibold tracking-[0.2em] text-navy-dim">
               HOME
             </p>
             <nav className="mb-8 flex flex-col">
@@ -65,15 +65,15 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
                   key={c.key}
                   href={`/kategorie/${c.key}`}
                   onClick={() => setOpen(false)}
-                  className="flex items-center justify-between border-b border-border-subtle py-4 text-xl font-medium text-text-primary active:text-accent"
+                  className="flex items-center justify-between border-b border-navy-border py-4 text-xl font-medium text-navy-text active:text-accent-brand"
                 >
                   {c.label}
-                  {c.key === "breaking" && <span className="h-2 w-2 rounded-full bg-accent" />}
+                  {c.key === "breaking" && <span className="h-2 w-2 rounded-full bg-accent-brand animate-pulseDot" />}
                 </Link>
               ))}
             </nav>
 
-            <p className="mb-3 text-[12px] font-semibold tracking-[0.2em] text-text-tertiary">
+            <p className="mb-3 text-[12px] font-semibold tracking-[0.2em] text-navy-dim">
               PLATTFORMEN
             </p>
             <nav className="mb-8 flex flex-col">
@@ -82,9 +82,9 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
                   key={p.key}
                   href={`/kategorie/${p.key}`}
                   onClick={() => setOpen(false)}
-                  className="flex items-center gap-3 border-b border-border-subtle py-4 text-xl font-medium text-text-primary active:text-accent"
+                  className="flex items-center gap-3 border-b border-navy-border py-4 text-xl font-medium text-navy-text active:text-accent-brand"
                 >
-                  <PlatformIcon platform={p.key} className="h-5 w-5 text-text-tertiary" />
+                  <PlatformIcon platform={p.key} className="h-5 w-5 text-navy-dim" />
                   {p.label}
                 </Link>
               ))}
@@ -94,7 +94,7 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
               href={instagramUrl}
               target="_blank"
               rel="noreferrer noopener"
-              className="flex items-center justify-center gap-2 rounded-full border border-accent/40 py-3.5 text-[15px] font-medium text-accent"
+              className="flex items-center justify-center gap-2 rounded-full border border-accent-brand/40 py-3.5 text-[15px] font-medium text-accent-brand"
             >
               Auf Instagram folgen
             </a>

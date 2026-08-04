@@ -7,8 +7,18 @@ html {
 }
 
 body {
-  background-color: #f7f8fa;
-  color: #0f0d2c;
+  background-color: #0b0a1e;
+  color: #f1f0f2;
+}
+
+/* Headlines in Space Grotesk — technisch-digitaler Charakter (Gaming-Look),
+   Fliesstext bleibt Inter/SF. Geladen via next/font in layout.tsx. */
+h1,
+h2,
+h3 {
+  font-family: var(--font-display), "Space Grotesk", -apple-system, BlinkMacSystemFont,
+    sans-serif;
+  letter-spacing: -0.015em;
 }
 
 ::selection {
@@ -22,25 +32,25 @@ body {
   height: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #f7f8fa;
+  background: #0b0a1e;
 }
 ::-webkit-scrollbar-thumb {
-  background: #dadde6;
+  background: #2a2850;
   border-radius: 999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #b8bdcc;
+  background: #3c3a68;
 }
 
 .prose-rop {
-  color: #0f0d2c;
+  color: #f1f0f2;
 }
 .prose-rop p {
   margin-top: 1.25em;
   margin-bottom: 1.25em;
   line-height: 1.75;
   font-size: 1.125rem;
-  color: #1d1b3a;
+  color: #e4e3ea;
 }
 .prose-rop h2 {
   margin-top: 2.5em;
@@ -48,13 +58,13 @@ body {
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: -0.01em;
-  color: #0f0d2c;
+  color: #f1f0f2;
 }
 .prose-rop blockquote {
   margin: 2em 0;
   padding: 0.25rem 0 0.25rem 1.25rem;
   border-left: 2px solid #02f0d1;
-  color: #4a4a61;
+  color: #a9a9c0;
   font-style: italic;
   font-size: 1.15rem;
 }
@@ -62,19 +72,19 @@ body {
   margin: 1.25em 0;
   padding-left: 1.25rem;
   list-style: disc;
-  color: #1d1b3a;
+  color: #e4e3ea;
 }
 .prose-rop li {
   margin: 0.5em 0;
   line-height: 1.7;
 }
 .prose-rop a {
-  color: #00806e;
+  color: #02f0d1;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 .prose-rop a:hover {
-  color: #006658;
+  color: #30f3d9;
 }
 
 @media (max-width: 640px) {
