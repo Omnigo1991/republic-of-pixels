@@ -80,11 +80,20 @@ Aufgaben:
    - "isLeakOrRumor": true/false
    - "priority": 1 (höchste) bis ${MAX_ARTICLES_PER_RUN}
 
-Antworte NUR mit JSON: {"selected":[{"indices":[...],"category":"...","platforms":[...],"gameName":...,"isLeakOrRumor":...,"priority":...}]}
+Antworte NUR mit JSON, ohne Einleitung und ohne Kommentar — das erste Zeichen deiner Antwort muss "{" sein: {"selected":[{"indices":[...],"category":"...","platforms":[...],"gameName":...,"isLeakOrRumor":...,"priority":...}]}
 Wenn nichts den Kriterien genügt, antworte {"selected":[]}.`;
 
-  const raw = await askClaude({ system: EDITORIAL_SYSTEM, prompt, maxTokens: 2000 });
-  return parseJsonResponse(raw).selected ?? [];
+  // Ein fehlgeschlagener Parse wird einmal wiederholt — die Auswahl ist der
+  // einzige Schritt, an dem der ganze Lauf hängt.
+  for (let attempt = 0; ; attempt++) {
+    try {
+      const raw = await askClaude({ system: EDITORIAL_SYSTEM, prompt, maxTokens: 3000 });
+      return parseJsonResponse(raw).selected ?? [];
+    } catch (err) {
+      if (attempt >= 1) throw err;
+      console.log(`  Auswahl fehlgeschlagen (${err.message}) — Wiederholung`);
+    }
+  }
 }
 
 async function generateArticle(cluster, clusterItems, sourceTexts, slugs) {

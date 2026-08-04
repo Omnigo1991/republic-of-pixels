@@ -17,5 +17,5 @@ export const FEEDS = [
   // Deutschsprachige Quellen (Markt- und Themennähe)
   { id: "gamestar", name: "GameStar", url: "https://www.gamestar.de/news/rss/news.rss", lang: "de", weight: 1.0, useFeedImage: false },
   { id: "play3", name: "play3.de", url: "https://www.play3.de/feed/", lang: "de", weight: 0.9, useFeedImage: false },
-  { id: "gamepro", name: "GamePro", url: "https://www.gamepro.de/rss/gamepro.rss", lang: "de", weight: 0.9, useFeedImage: false },
+  // GamePro blockt Bot-Abrufe serverseitig (HTTP 403, geprüft 04.08.2026) — entfernt.
 ];

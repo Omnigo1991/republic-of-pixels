@@ -52,6 +52,10 @@ export function parseJsonResponse(text) {
   const fenced = text.match(/```(?:json)?\s*([\s\S]*?)```/);
   const candidate = fenced ? fenced[1] : text;
   const start = candidate.search(/[\[{]/);
-  if (start === -1) throw new Error("Keine JSON-Struktur in der Antwort gefunden");
+  if (start === -1) {
+    throw new Error(
+      `Keine JSON-Struktur in der Antwort gefunden. Antwortbeginn: "${text.slice(0, 300)}"`
+    );
+  }
   return JSON.parse(candidate.slice(start).trim());
 }
