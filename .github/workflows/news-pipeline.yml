@@ -2,6 +2,7 @@
 # sobald relevante neue Meldungen da sind (max. 2 Artikel pro Lauf). Der Push löst
 # automatisch das Vercel-Production-Deployment aus.
 # Manueller Start: GitHub → Actions → "News-Pipeline" → "Run workflow".
+# Hinweis: Datei am 05.08.2026 neu gepusht, um GitHubs Schedule-Registrierung zu erzwingen.
 name: News-Pipeline
 
 on:
