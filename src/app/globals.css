@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0f0d2c;
+  color: #f1f0f2;
+}
+
+::selection {
+  background-color: #02f0d1;
+  color: #0f0d2c;
+}
+
+/* Ruhige, dünne Scrollbar im Markenlook */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0f0d2c;
+}
+::-webkit-scrollbar-thumb {
+  background: #292843;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3952;
+}
+
+.prose-rop {
+  color: #f1f0f2;
+}
+.prose-rop p {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+  line-height: 1.75;
+  font-size: 1.125rem;
+  color: #f1f0f2;
+}
+.prose-rop h2 {
+  margin-top: 2.5em;
+  margin-bottom: 0.75em;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #f1f0f2;
+}
+.prose-rop blockquote {
+  margin: 2em 0;
+  padding: 0.25rem 0 0.25rem 1.25rem;
+  border-left: 2px solid #02f0d1;
+  color: #adadb7;
+  font-style: italic;
+  font-size: 1.15rem;
+}
+.prose-rop ul {
+  margin: 1.25em 0;
+  padding-left: 1.25rem;
+  list-style: disc;
+  color: #f1f0f2;
+}
+.prose-rop li {
+  margin: 0.5em 0;
+  line-height: 1.7;
+}
+
+@media (max-width: 640px) {
+  .prose-rop p {
+    font-size: 1.0625rem;
+  }
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

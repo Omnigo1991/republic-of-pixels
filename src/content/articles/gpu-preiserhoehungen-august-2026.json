@@ -1,0 +1,88 @@
+{
+  "slug": "gpu-preiserhoehungen-august-2026",
+  "title": "AMD zieht nach: Auch Radeon-Grafikkarten werden im August teurer",
+  "subtitle": "Nachdem Nvidia bereits Ende Juli die Preise anhob, folgt AMD am 1. August – beide Hersteller verlangen jetzt mindestens 10 Prozent mehr für GPUs und Speicherkits.",
+  "excerpt": "AMD und Nvidia erhöhen im August 2026 die Preise für Grafikkarten und GDDR6-Speicherkits um mindestens 10 Prozent. Grund sind explodierende Speicherkosten, ausgelöst durch die Nachfrage der KI-Industrie.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Redaktion",
+  "publishedAt": "2026-08-01T16:45:00+02:00",
+  "readingTimeMinutes": 3,
+  "heroVariant": "circuit",
+  "isLeakOrRumor": false,
+  "tags": [
+    "Grafikkarten",
+    "AMD",
+    "Nvidia",
+    "Hardware",
+    "PC-Gaming",
+    "Preise"
+  ],
+  "tldr": [
+    "AMD erhöht ab dem 1. August die Preise für Radeon RX 9060 XT, RX 9070 und RX 9070 XT um mindestens 10 Prozent, nachdem Nvidia bereits Ende Juli bei GDDR7-Blackwell-Karten der RTX-50-Serie und älteren GeForce-Modellen vorgezogen hat.",
+    "Hauptursache sind explodierende GDDR6-Speicherpreise: Von rund 2,50 auf etwa 7,50 US-Dollar pro Gigabyte seit Ende 2025 – eine Verdreifachung, weil KI-Rechenzentren Fertigungskapazitäten beanspruchen, die sonst für Konsumenten-Grafikspeicher reserviert wären.",
+    "Analyst:innen erwarten weitere Preisanstiege von 8 bis 12 Prozent im Einzelhandel, sobald aktuelle Lagerbestände verkauft sind, sowie anhaltend hohe Preise mindestens bis 2027 – eine günstigere Alternative fehlt, seit Intel 2026 aus dem Consumer-GPU-Markt ausgestiegen ist."
+  ],
+  "whyItMatters": "Für alle, die aktuell einen PC aufrüsten oder neu bauen wollen, ist das eine unangenehme Nachricht mit Ansage: Die Preise für Grafikkarten steigen nicht wegen Zöllen oder Lieferkettenproblemen, sondern weil der eigentliche Speicherbaustein durch die KI-Industrie knapp und teuer geworden ist – ein Trend, der sich nach Einschätzung von Analyst:innen kaum kurzfristig umkehren dürfte. Wer in den nächsten Monaten eine neue GPU braucht, sollte diese Entwicklung bei der Kaufentscheidung einpreisen.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Es ist offiziell: Sowohl AMD als auch Nvidia erhöhen im August 2026 die Preise für ihre Grafikkarten und für GDDR6-Speicherkits – um jeweils mindestens 10 Prozent. Damit ziehen beide grossen GPU-Hersteller praktisch gleichzeitig an derselben Schraube, wenn auch nicht am selben Tag. Für alle, die gerade einen neuen PC planen oder ein Upgrade vor sich herschieben, ist das keine gute Nachricht – und laut den vorliegenden Berichten auch erst der Anfang."
+    },
+    {
+      "type": "heading",
+      "text": "Wer zuerst zog, wer folgte"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nvidia hat seine Preiserhöhung bereits Ende Juli vorgezogen. AMD liess sich bis zum 1. August Zeit – offenbar bewusst, um in der Zwischenzeit kurzfristig preislich wettbewerbsfähiger zu wirken, während die Konsumnachfrage insgesamt schwach war. Dieses Timing lässt sich als kleiner taktischer Vorteil lesen: Wer als Zweiter erhöht, kann sich für ein paar Tage als die vermeintlich günstigere Option präsentieren. Am Ende landen beide Hersteller aber am selben Punkt: höhere Preise für praktisch die gesamte aktuelle Produktpalette, unabhängig davon, wer zuerst gehandelt hat."
+    },
+    {
+      "type": "heading",
+      "text": "Welche Modelle betroffen sind"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bei AMD trifft es die Radeon RX 9060 XT, die RX 9070 sowie die RX 9070 XT – also Karten aus dem Mittelklasse- bis oberen Preissegment, die bei vielen PC-Gamer:innen als Standardwahl gelten. Bei Nvidia sind es die GDDR7-basierten Blackwell-Karten der RTX-50-Serie, aber auch ältere GeForce-Produkte, die weiterhin auf GDDR6-Speicher setzen. Damit bleibt kaum ein Preissegment von der Erhöhung verschont – von der Einsteiger- bis zur High-End-Klasse, und auch wer bewusst auf eine ältere Generation ausweicht, ist nicht automatisch vollständig aussen vor."
+    },
+    {
+      "type": "heading",
+      "text": "Der eigentliche Grund: Speicher, nicht Zölle"
+    },
+    {
+      "type": "paragraph",
+      "text": "Berichten zufolge liegt die Ursache nicht in Handelszöllen, sondern in den Speicherkosten selbst. GDDR6 ist der Grafikspeicher, der auf den meisten aktuellen Consumer-Grafikkarten zum Einsatz kommt, um Texturen und Bilddaten schnell genug für hohe Bildraten bereitzustellen. Genau dieser Baustein ist plötzlich massiv teurer geworden: Die Spotpreise für GDDR6-Speicher sind seit Ende 2025 von rund 2,50 US-Dollar auf etwa 7,50 US-Dollar pro Gigabyte gestiegen – eine Verdreifachung innerhalb weniger Monate. Der Grund dafür liegt ausserhalb des Grafikkarten-Marktes: KI-Rechenzentren-Beschleuniger beanspruchen zunehmend jene Fertigungskapazitäten, die zuvor für Konsumenten-Grafikspeicher reserviert waren. Wenn Speicherhersteller ihre Kapazitäten lieber in margenstärkere KI-Chips stecken, wird es für klassische Gaming-GPUs automatisch enger und teurer – ein Effekt, den weder AMD noch Nvidia direkt kontrollieren, da beide Unternehmen den Speicher bei Drittherstellern einkaufen, statt ihn selbst zu produzieren."
+    },
+    {
+      "type": "heading",
+      "text": "Was das für Käufer:innen bedeutet"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die aktuelle Erhöhung dürfte nicht das Ende der Fahnenstange sein. Sobald bestehende Lagerbestände abverkauft sind, rechnen Beobachter:innen mit weiteren Preissteigerungen im Einzelhandel von 8 bis 12 Prozent. Eine günstigere Ausweichmöglichkeit gibt es derzeit kaum, da Intel sich 2026 komplett aus dem Consumer-GPU-Markt zurückgezogen hat – ein Wettbewerber weniger, der sonst preislich hätte gegensteuern können und Druck auf AMD und Nvidia hätte ausüben können. Analyst:innen erwarten zudem weitere Erhöhungen im dritten und vierten Quartal 2026 und gehen davon aus, dass die Preise mindestens bis 2027 erhöht bleiben, solange die Nachfrage aus dem KI-Sektor nicht spürbar nachlässt. Etwas Entlastung bieten aktuell noch ältere Grafikkarten-Generationen, die für die Speicherkonkurrenz aus dem KI-Bereich weniger relevant sind und dadurch bislang moderater im Preis geblieben sind – für alle, die kein High-End-Modell brauchen, könnte ein Blick auf ältere Generationen also der pragmatischere Weg sein, um den aktuellen Preisschub zu umgehen."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Dass zwei direkte Konkurrenten binnen weniger Tage praktisch identisch begründete Preiserhöhungen durchziehen, zeigt vor allem eines: Der Flaschenhals liegt nicht bei AMD oder Nvidia selbst, sondern eine Ebene tiefer, bei der Speicherfertigung. Für die PC-Gaming-Community bedeutet das, dass die Preisentwicklung der nächsten Quartale weniger von GPU-Innovationen als von der Nachfrage aus dem KI-Sektor abhängen dürfte – eine Abhängigkeit, die sich kurzfristig kaum auflösen lässt. Wer in den kommenden Monaten ohnehin eine neue Grafikkarte braucht, sollte diese Marktlage bei Timing und Budget realistisch einplanen, statt auf schnell fallende Preise zu hoffen. Solange KI-Rechenzentren weiter im grossen Stil Speicherkapazitäten binden, bleibt der PC-Gaming-Markt in dieser Frage der schwächere Verhandlungspartner."
+    }
+  ],
+  "sources": [
+    {
+      "title": "AMD confirms August Radeon price hike, both GPU vendors now aligned: buyers pay more",
+      "url": "https://www.techtimes.com/articles/322593/20260801/amd-confirms-august-radeon-price-hike-both-gpu-vendors-now-aligned-buyers-pay-more.htm",
+      "publisher": "Tech Times"
+    }
+  ],
+  "review": null,
+  "relatedSlugs": [
+    "halo-campaign-evolved-review"
+  ]
+}

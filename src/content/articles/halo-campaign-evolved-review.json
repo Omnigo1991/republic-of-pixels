@@ -1,0 +1,116 @@
+{
+  "slug": "halo-campaign-evolved-review",
+  "title": "Halo: Campaign Evolved im Test: Solides Remake, kaputtgemacht durch Login-Zwang und Bugs",
+  "subtitle": "Der Advance Access von Halo Studios' Kampagnen-Remake startet mit gemischten Wertungen – nicht wegen des Spiels selbst, sondern wegen einer Kontoprüfung, die viele gar nicht erst ins Menü liess.",
+  "excerpt": "Halo: Campaign Evolved sammelt zum Start durchwachsene Wertungen. Der Grund liegt weniger im Remake selbst als in einer zwingenden Microsoft-Konto-Anmeldung, überlasteten Servern und technischen Bugs.",
+  "category": "reviews",
+  "platforms": [
+    "xbox",
+    "pc"
+  ],
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Redaktion",
+  "publishedAt": "2026-08-02T11:15:00+02:00",
+  "readingTimeMinutes": 3,
+  "heroVariant": "controller",
+  "isLeakOrRumor": false,
+  "tags": [
+    "Halo",
+    "Xbox Games Studios",
+    "Review",
+    "Remake",
+    "PC"
+  ],
+  "tldr": [
+    "Steam-Nutzerreviews stehen bei 68 Prozent ('Ausgeglichen'), PC Gamer bewertet das Remake mit 70 Prozent – zwei Punkte über dem Community-Schnitt.",
+    "Eine zwingende Microsoft-Konto-Verknüpfung verhinderte beim Start, dass Spieler:innen die reine Singleplayer-Kampagne spielen konnten, sobald die Server überlastet waren.",
+    "Neben dem Login-Ärger berichten Spieler:innen von Abstürzen, einem 'Shimmering'-Effekt bei schneller Bewegung, Framerate-Einbrüchen und nicht abschaltbarem Upscaling."
+  ],
+  "whyItMatters": "Dass ein reines Singleplayer-Spiel überhaupt eine Online-Kontoprüfung zum Start verlangt, ist der eigentliche Kern der Aufregung um Campaign Evolved – nicht bloss ein technisches Detail am Rande. Wenn eine Kampagne, die theoretisch komplett offline funktionieren könnte, durch überlastete Server unspielbar wird, zahlt die Kundschaft für ein Erlebnis, das ihr im Zweifel gar nicht zur Verfügung steht. Für Halo Studios und Microsoft ist das ein Vertrauensproblem, das über diesen einen Release hinausreicht.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Halo: Campaign Evolved ist seit Kurzem im kostenpflichtigen Advance Access auf Steam spielbar – und die ersten Reaktionen fallen ausgesprochen gemischt aus. Halo Studios hat mit dem Remake der Kampagne einen Titel abgeliefert, der auf dem Papier genau das bietet, was sich viele Fans gewünscht haben: eine überarbeitete Fassung der Geschichte um den Master Chief, aufbereitet für heutige Bildschirme und Hardware. In der Praxis überschatten jedoch handfeste technische und strukturelle Probleme diesen Start, und die Diskussion in der Community dreht sich aktuell weniger um Leveldesign oder Grafik als um die Frage, ob man überhaupt problemlos ins Spiel hineinkommt."
+    },
+    {
+      "type": "heading",
+      "text": "Die Zahlen: Ausgeglichen statt gefeiert"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Steam-Nutzerreviews pendeln aktuell bei 68 Prozent positiv, was Valve offiziell als 'Ausgeglichen' (Mixed) einstuft – für eine derart bekannte Marke ein ernüchterndes Signal, gerade weil Halo als Serie eine treue und lautstarke Fangemeinde hat, die genau hinschaut. Etwas wohlwollender fällt die Einschätzung von PC Gamer aus: Dort kommt Campaign Evolved auf 70 Prozent, zwei Punkte über dem, was die Community im Schnitt vergibt. Beide Werte deuten in dieselbe Richtung: Das Remake ist kein Totalausfall, aber auch weit entfernt von einem gefeierten Comeback, wie man es sich angesichts der Erwartungen an eine so bekannte Marke erhofft hätte."
+    },
+    {
+      "type": "heading",
+      "text": "Login-Pflicht fürs Singleplayer-Spiel: Der eigentliche Aufreger"
+    },
+    {
+      "type": "paragraph",
+      "text": "Was die Wertungen besonders drückt, ist kein Problem des Kampagnen-Designs, sondern eine Grundsatzentscheidung: Campaign Evolved verlangt beim Start eine Verknüpfung mit einem Microsoft-Konto – auch dann, wenn man ausschliesslich die Singleplayer-Kampagne spielen möchte. Wer sich nur durch die Story ballern will, ohne je den Mehrspieler-Modus anzurühren, kommt an dieser Kontoprüfung trotzdem nicht vorbei. Als die Server rund um den Start überlastet waren, kamen viele zahlende Spieler:innen schlicht gar nicht erst ins Spiel hinein – unabhängig davon, ob sie überhaupt online spielen wollten."
+    },
+    {
+      "type": "quote",
+      "text": "Login fehlgeschlagen. Kann Singleplayer nicht spielen, da die Server überlastet sind.",
+      "attribution": "Steam-Nutzer, zitiert bei PC Gamer"
+    },
+    {
+      "type": "quote",
+      "text": "Fehler 400 oder 500 beim Login bei Microsofts Online-Diensten.",
+      "attribution": "Steam-Nutzer, zitiert bei PC Gamer"
+    },
+    {
+      "type": "paragraph",
+      "text": "Genau das ist der Kern des Ärgers, nicht nur ein Nebenschauplatz: Ein Singleplayer-Erlebnis, das theoretisch komplett offline funktionieren könnte, wird durch eine Online-Kontoprüfung faktisch unspielbar, sobald die Infrastruktur dahinter strauchelt. Für Spieler:innen, die extra Geld für den frühen Zugang bezahlt haben, ist das eine besonders bittere Pille – schliesslich haben sie genau dafür bezahlt, früher als andere loslegen zu können, und standen stattdessen vor einer Fehlermeldung."
+    },
+    {
+      "type": "heading",
+      "text": "Server-Probleme inzwischen behoben – der Ärger bleibt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Halo Studios hat mittlerweile bestätigt, dass die Login-Probleme rund um die überlasteten Server behoben wurden. Das ist ein positives Signal und zeigt, dass das Studio auf die Kritik reagiert hat, ändert aber nichts daran, dass ausgerechnet in den ersten, medial wichtigsten Tagen des Advance Access viele zahlende Spieler:innen vor verschlossener Tür standen. Für ein Remake, das stark auf Vertrauen und Nostalgie setzt, ist ein holpriger erster Eindruck schwer wieder gutzumachen, gerade wenn er sich in Foren und Reviews niederschlägt, bevor der Grossteil der Community überhaupt selbst spielen konnte."
+    },
+    {
+      "type": "heading",
+      "text": "Technische Bugs abseits des Login-Ärgers"
+    },
+    {
+      "type": "paragraph",
+      "text": "Auch jenseits der Kontoproblematik hakt es an mehreren Stellen: Spieler:innen berichten von dauerhaften Abstürzen, einem sichtbaren 'Shimmering'-Effekt bei schnellen Kamerabewegungen, spürbaren Framerate-Einbrüchen und Rucklern. Hinzu kommt, dass sich Upscaling-Funktionen offenbar nicht deaktivieren lassen – für Spieler:innen mit eigenen Vorlieben bei Bildschärfe und Performance ein unnötiger Frustpunkt, gerade bei einem PC-Port, wo Nutzer:innen üblicherweise gewohnt sind, solche Einstellungen selbst in der Hand zu haben. In Summe wirkt der Advance Access damit an mehreren Ecken wie eine Version, die noch nicht ganz für den grossen Ansturm bereit war."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nimmt man alles zusammen, zeichnet sich ein Muster ab, das man in den letzten Jahren bei mehreren grossen Releases gesehen hat: technische Grundlagen, die unter dem Druck des Launch-Termins nicht ausgereift wirken, kombiniert mit einer Online-Infrastruktur-Entscheidung, die sich für ein Singleplayer-Spiel nur schwer rechtfertigen lässt. Ob sich das Bild nach weiteren Patches verbessert, wird sich zeigen – mit der Behebung der Login-Probleme hat Halo Studios zumindest einen ersten Schritt gemacht. Bis dahin gilt: Wer die Kampagne offline und ungestört erleben möchte, sollte aktuell noch abwarten, bis Server-Stabilität und technische Performance ein Niveau erreicht haben, das dem eigentlichen Anspruch des Remakes gerecht wird."
+    }
+  ],
+  "review": {
+    "label": "Für den Sale vormerken",
+    "strengths": [
+      "Die Kritik entzündet sich vor allem an Login-Zwang und Technik, nicht am grundlegenden Kampagnen-Design – ein Hinweis darauf, dass der Kern des Remakes wohl intakt ist",
+      "PC Gamer bewertet das Spiel trotz aller Startprobleme noch zwei Punkte über dem Nutzerschnitt"
+    ],
+    "weaknesses": [
+      "Zwingende Microsoft-Konto-Verknüpfung blockiert die Singleplayer-Kampagne, sobald Server überlastet sind",
+      "Überlastete Server verhinderten zeitweise jeglichen Zugriff aufs Spiel",
+      "Technische Bugs: dauerhafte Abstürze, Shimmering-Effekt, Framerate-Einbrüche, nicht abschaltbares Upscaling"
+    ],
+    "forWhom": "Für geduldige Halo-Fans, die auf Patches warten können, und für alle, die stabile Online-Infrastruktur nicht als grundsätzliches Ausschlusskriterium für ein Singleplayer-Spiel sehen.",
+    "verdict": "Ein Remake, dessen Fundament offenbar funktioniert, das aber durch eine schwer nachvollziehbare Online-Pflicht und technische Kinderkrankheiten zum Start ausgebremst wird.",
+    "recommendation": "Advance Access aktuell nur für sehr geduldige Fans empfehlenswert – alle anderen warten besser auf weitere Patches und den regulären Launch, bevor sie zugreifen."
+  },
+  "sources": [
+    {
+      "title": "Halo remake reviews totter as fans lament the 3 horsemen of 2026 game releases: bugs, pointless logins, and duff servers",
+      "url": "https://www.pcgamer.com/games/halo/halo-remake-reviews-totter-as-fans-lament-the-3-horsemen-of-2026-game-releases-bugs-pointless-logins-and-duff-servers/",
+      "publisher": "PC Gamer"
+    }
+  ],
+  "relatedSlugs": [
+    "xbox-restructuring-2026"
+  ]
+}

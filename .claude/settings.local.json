@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(unzip -l \"/Users/timothywiniger/Desktop/Republic of Pixels \\(Website\\)/republic-of-pixels-source.zip\")",
+      "Bash(unzip -o -q republic-of-pixels-source.zip)",
+      "Bash(npm install *)",
+      "Bash(npx next *)",
+      "WebFetch(domain:www.republicofpixels.com)",
+      "mcp__982c65d4-dcee-4f2b-aa2d-479ba3b63dd1__list_teams",
+      "mcp__982c65d4-dcee-4f2b-aa2d-479ba3b63dd1__list_projects",
+      "mcp__982c65d4-dcee-4f2b-aa2d-479ba3b63dd1__get_project"
+    ]
+  }
+}
