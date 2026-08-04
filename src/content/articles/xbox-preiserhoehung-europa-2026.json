@@ -1,0 +1,99 @@
+{
+  "slug": "xbox-preiserhoehung-europa-2026",
+  "title": "Xbox-Preise in Europa steigen um bis zu 30 Prozent",
+  "subtitle": "Seit dem 1. August 2026 kostet die Xbox Series S in mehreren Märkten mehr, als die Series X beim Launch verlangte",
+  "excerpt": "Microsoft hat die Preise für Xbox Series X und Series S in Europa und Großbritannien drastisch angehoben. Die Series S kostet nun teils mehr als die Series X zum Verkaufsstart 2020.",
+  "seoTitle": "Xbox Preiserhöhung 2026: Neue Preise für Series X und S",
+  "metaDescription": "Microsoft erhöht die Xbox-Preise in Europa um bis zu 30 Prozent. Alle neuen Preise für Series X und Series S sowie die Gründe der Speicherkrise im Überblick.",
+  "category": "breaking",
+  "platforms": [
+    "xbox"
+  ],
+  "tags": [
+    "Xbox Series X",
+    "Xbox Series S",
+    "Preiserhöhung",
+    "Microsoft",
+    "Speicherkrise"
+  ],
+  "tldr": [
+    "Microsoft hebt die Preise für Xbox Series X und Series S in Europa zum 1. August 2026 um bis zu 30 Prozent an",
+    "Die Series S (1TB) kostet in der EU nun 599,99 Euro, die Series X (Disc) 799,99 Euro",
+    "Grund ist laut Berichten die globale Speicherkrise, ausgelöst durch steigende Nachfrage nach RAM für KI-Anwendungen",
+    "Auch Sony hat im April die Preise erhöht, Nintendo soll zum 1. September folgen"
+  ],
+  "whyItMatters": "Die Preiserhöhungen treffen Spieler:innen mitten in der laufenden Konsolengeneration und verschieben das Preis-Leistungs-Verhältnis zwischen den Plattformen. Da die Ursache in einer globalen Speicherkrise liegt, dürften auch kommende Konsolengenerationen und PC-Hardware betroffen bleiben.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Microsoft hat die Preise für seine Xbox-Konsolen in Europa und Großbritannien zum 1. August 2026 spürbar erhöht. Je nach Modell liegt der Aufschlag zwischen 25 und 30 Prozent. Besonders auffällig: Die eigentlich als Einstiegsmodell positionierte Xbox Series S kostet in mehreren Märkten nun mehr, als die leistungsstärkere Series X bei ihrem Verkaufsstart 2020 verlangte."
+    },
+    {
+      "type": "heading",
+      "text": "Die neuen Preise im Überblick"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Xbox Series S (512GB): EU 499,99 € (zuvor 349,99 €), UK 429,99 £ (zuvor 299,99 £)",
+        "Xbox Series S (1TB): EU 599,99 € (zuvor 399,99 €), UK 519,99 £ (zuvor 349,99 £)",
+        "Xbox Series X (1TB, Digital): EU 749,99 € (zuvor 549,99 €), UK 619,99 £ (zuvor 449,99 £)",
+        "Xbox Series X (1TB, Disc): EU 799,99 € (zuvor 599,99 €), UK 669,99 £ (zuvor 499,99 £)"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Damit übersteigt der Preis der 1TB-Series-S die 799,99 Euro teure Disc-Version der Series X nur knapp und liegt über dem ursprünglichen Launchpreis der Series X. Vergleichbare Erhöhungen gab es zuvor in den USA, wo Microsoft die Preise um 100 bis 150 US-Dollar anhob – die europäischen Aufschläge fallen in Relation jedoch deutlich höher aus. Bereits im Juni hatte Microsoft zudem das 2-TB-Modell der Series X mit Verweis auf gestiegene Komponentenkosten eingestellt."
+    },
+    {
+      "type": "heading",
+      "text": "Speicherkrise als Auslöser"
+    },
+    {
+      "type": "paragraph",
+      "text": "Hintergrund der Preisanhebungen ist eine anhaltende globale Speicherkrise. Die Nachfrage nach RAM-Bausteinen ist durch den Ausbau von KI-Infrastruktur massiv gestiegen, was die Beschaffungskosten für Konsolenhersteller in die Höhe treibt. Samsung, einer der größten Speicherhersteller, hat für 2027 bereits vor einer 'severe' Versorgungskrise gewarnt. Die Situation wird als besonders paradox wahrgenommen, da Microsoft selbst massiv in den Ausbau von KI-Kapazitäten investiert."
+    },
+    {
+      "type": "quote",
+      "text": "Microsoft doesn't know what to do about the memory pricing crisis Microsoft is causing.",
+      "attribution": "Tyler, PC Gamer"
+    },
+    {
+      "type": "paragraph",
+      "text": "Laut aktuellem Quartalsbericht ist der Hardware-Umsatz von Xbox bereits um 29 Prozent zurückgegangen, was Microsoft mit einem geringeren Absatz an Konsolen begründet. Die Preiserhöhung könnte diesen Trend weiter verschärfen."
+    },
+    {
+      "type": "heading",
+      "text": "Nicht nur Xbox betroffen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Microsoft steht mit den Preisanpassungen nicht allein: Sony hatte bereits im April vergleichbare Erhöhungen bei PlayStation-Hardware vorgenommen. Nintendo soll zum 1. September 2026 folgen. In der deutschsprachigen Community sorgt die Entwicklung für Diskussionen über die künftige Erschwinglichkeit des Hobbys, wie unter anderem bei GameStar nachzulesen ist."
+    },
+    {
+      "type": "paragraph",
+      "text": "Einordnung: Da die kommende Konsolengeneration von Sony und Microsoft laut aktuellen Erwartungen erst Ende 2027 oder 2028 erscheinen dürfte, ist nicht absehbar, dass sich die Speicherpreise bis dahin normalisieren. Beobachter gehen davon aus, dass beide Hersteller bei Konsolen vorerst Verluste in Kauf nehmen und diese über Software- und Abo-Geschäfte ausgleichen – ein grundlegendes Ende der hohen Hardwarepreise ist damit kurzfristig nicht in Sicht."
+    }
+  ],
+  "isLeakOrRumor": false,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-04T16:03:50.964Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "grid",
+  "sources": [
+    {
+      "title": "Microsoft raises prices of Xbox by 25% to 30% in Europe with the Series S now costing more than the Series X at launch",
+      "url": "https://www.pcgamer.com/hardware/microsoft-raises-prices-of-xbox-by-25-percent-to-30-percent-in-europe-with-the-series-s-now-costing-more-than-the-series-x-at-launch/",
+      "publisher": "PC Gamer"
+    },
+    {
+      "title": "Here s A Breakdown Of The New Prices For Xbox Series X|S Consoles As Of August 2026",
+      "url": "https://www.purexbox.com/news/2026/08/heres-a-breakdown-of-the-new-prices-for-xbox-series-xs-consoles-as-of-august-2026",
+      "publisher": "Pure Xbox"
+    }
+  ],
+  "review": null,
+  "image": null
+}
