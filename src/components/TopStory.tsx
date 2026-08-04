@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Article } from "@/lib/types";
-import { PlaceholderArt } from "./PlaceholderArt";
+import { ArticleMedia } from "./ArticleMedia";
 import { CategoryPill } from "./Badges";
 import { formatDateTime } from "@/lib/format";
 
@@ -11,7 +11,7 @@ export function TopStory({ article }: { article: Article }) {
       className="group grid gap-6 lg:grid-cols-2 lg:gap-10 lg:items-center"
     >
       <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-border-subtle shadow-elevated">
-        <PlaceholderArt variant={article.heroVariant} className="h-full w-full transition-transform duration-700 group-hover:scale-[1.03]" />
+        <ArticleMedia article={article} priority sizes="(max-width: 1024px) 100vw, 50vw" className="h-full w-full transition-transform duration-700 group-hover:scale-[1.03]" />
       </div>
       <div>
         <div className="mb-4 flex items-center gap-3">

@@ -1,0 +1,59 @@
+# Vollautomatische News-Pipeline: alle 6 Stunden neue Artikel generieren und
+# veröffentlichen. Der Push löst automatisch das Vercel-Production-Deployment aus.
+# Manueller Start: GitHub → Actions → "News-Pipeline" → "Run workflow".
+name: News-Pipeline
+
+on:
+  schedule:
+    - cron: "23 */6 * * *"
+  workflow_dispatch:
+    inputs:
+      max_articles:
+        description: "Maximale Artikel in diesem Lauf"
+        default: "3"
+        required: false
+
+concurrency:
+  group: news-pipeline
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Dependencies installieren
+        run: npm ci
+
+      - name: Pipeline ausführen
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          MAX_ARTICLES_PER_RUN: ${{ github.event.inputs.max_articles || '3' }}
+        run: node pipeline/run.mjs
+
+      - name: Build-Prüfung (nichts Kaputtes veröffentlichen)
+        run: npm run build
+
+      - name: Änderungen committen und pushen
+        run: |
+          git config user.name "RoP News-Pipeline"
+          git config user.email "actions@github.com"
+          git add src/content/articles public/images/articles pipeline/state.json
+          if git diff --cached --quiet; then
+            echo "Keine neuen Artikel in diesem Lauf."
+            exit 0
+          fi
+          COUNT=$(git diff --cached --name-only -- src/content/articles | wc -l | tr -d ' ')
+          git commit -m "Auto-Publish: ${COUNT} neue Artikel ($(date -u +'%Y-%m-%d %H:%M UTC'))"
+          git pull --rebase origin main
+          git push origin main

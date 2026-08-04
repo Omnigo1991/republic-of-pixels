@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Article } from "@/lib/types";
-import { PlaceholderArt } from "./PlaceholderArt";
+import { ArticleMedia } from "./ArticleMedia";
 import { CategoryPill } from "./Badges";
 import { formatDateTime } from "@/lib/format";
 
@@ -12,7 +12,7 @@ export function ArticleCard({ article }: { article: Article }) {
       className="group flex flex-col overflow-hidden rounded-2xl border border-border-subtle bg-surface-card hover:bg-surface-hover transition-colors"
     >
       <div className="relative aspect-[16/9] overflow-hidden">
-        <PlaceholderArt variant={article.heroVariant} className="h-full w-full transition-transform duration-500 group-hover:scale-105" />
+        <ArticleMedia article={article} sizes="(max-width: 640px) 100vw, 33vw" className="h-full w-full transition-transform duration-500 group-hover:scale-105" />
       </div>
       <div className="flex flex-1 flex-col gap-3 p-5">
         <div className="flex items-center gap-2">

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Article } from "@/lib/types";
-import { PlaceholderArt } from "./PlaceholderArt";
+import { ArticleMedia } from "./ArticleMedia";
 import { CategoryPill } from "./Badges";
 
 export function PopularSection({ articles }: { articles: Article[] }) {
@@ -45,7 +45,7 @@ function PopularCard({
       }`}
     >
       <div className={`relative overflow-hidden ${large ? "aspect-[16/10]" : "aspect-[16/9]"}`}>
-        <PlaceholderArt variant={article.heroVariant} className="h-full w-full transition-transform duration-500 group-hover:scale-105" />
+        <ArticleMedia article={article} sizes="(max-width: 640px) 100vw, 33vw" className="h-full w-full transition-transform duration-500 group-hover:scale-105" />
         <span className="absolute left-3 top-3 flex h-7 w-7 items-center justify-center rounded-full bg-bg-base/80 text-xs font-bold text-accent backdrop-blur">
           {String(rank).padStart(2, "0")}
         </span>

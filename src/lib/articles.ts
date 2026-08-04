@@ -11,8 +11,16 @@ export function getArticleBySlug(slug: string): Article | undefined {
   return ALL_ARTICLES.find((a) => a.slug === slug);
 }
 
+const TOP_STORY_MAX_AGE_MS = 48 * 60 * 60 * 1000;
+
 export function getTopStory(): Article {
-  const flagged = ALL_ARTICLES.find((a) => a.isTopStory);
+  // Eine manuell markierte Top-Story gilt maximal 48 h — danach übernimmt
+  // automatisch der neueste Artikel, damit die Startseite nie veraltet wirkt.
+  const flagged = ALL_ARTICLES.find(
+    (a) =>
+      a.isTopStory &&
+      Date.now() - new Date(a.publishedAt).getTime() < TOP_STORY_MAX_AGE_MS
+  );
   return flagged ?? getAllArticles()[0];
 }
 
@@ -20,6 +28,14 @@ export function getPopularArticles(limit = 5): Article[] {
   const ranked = ALL_ARTICLES.filter((a) => a.popularityRank !== null).sort(
     (a, b) => (a.popularityRank as number) - (b.popularityRank as number)
   );
+  // Solange keine echten Popularitätsdaten (Analytics) einfliessen, wird mit
+  // den neuesten Artikeln aufgefüllt, damit die Sektion nie leer bleibt.
+  if (ranked.length < limit) {
+    const fill = getAllArticles().filter(
+      (a) => !ranked.some((r) => r.slug === a.slug)
+    );
+    return [...ranked, ...fill].slice(0, limit);
+  }
   return ranked.slice(0, limit);
 }
 

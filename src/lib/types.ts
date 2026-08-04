@@ -14,6 +14,15 @@ export interface Source {
   publisher?: string;
 }
 
+export interface ArticleImage {
+  /** Pfad unterhalb von public/, z. B. /images/articles/mein-artikel.webp */
+  src: string;
+  alt: string;
+  /** Bildnachweis, z. B. "Bild: Sony Interactive Entertainment" */
+  credit?: string;
+  sourceUrl?: string;
+}
+
 export type BodyBlock =
   | { type: "paragraph"; text: string }
   | { type: "heading"; text: string }
@@ -42,6 +51,11 @@ export interface Article {
   publishedAt: string;
   readingTimeMinutes: number;
   heroVariant: HeroVariant;
+  /** Echtes Artikelbild; ohne Bild greift PlaceholderArt (heroVariant). */
+  image?: ArticleImage | null;
+  /** Optionale SEO-Overrides; Fallback: title bzw. excerpt. */
+  seoTitle?: string;
+  metaDescription?: string;
   isLeakOrRumor: boolean;
   tags: string[];
   tldr: string[];

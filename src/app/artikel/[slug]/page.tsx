@@ -7,7 +7,7 @@ import {
   getRelated,
 } from "@/lib/articles";
 import { CATEGORY_LABELS, PLATFORM_LABELS } from "@/lib/types";
-import { PlaceholderArt } from "@/components/PlaceholderArt";
+import { ArticleMedia } from "@/components/ArticleMedia";
 import { CategoryPill, LeakBanner, Tag } from "@/components/Badges";
 import { ArticleBody } from "@/components/ArticleBody";
 import { TldrBox, WhyItMattersBox, ReviewBox, SourcesBox } from "@/components/ArticleBoxes";
@@ -25,20 +25,26 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const article = getArticleBySlug(params.slug);
   if (!article) return {};
+  const title = article.seoTitle ?? article.title;
+  const description = article.metaDescription ?? article.excerpt;
+  const images = article.image?.src ? [{ url: article.image.src, alt: article.image.alt }] : undefined;
   return {
-    title: article.title,
-    description: article.excerpt,
+    title,
+    description,
+    alternates: { canonical: `/artikel/${article.slug}` },
     openGraph: {
       type: "article",
-      title: article.title,
-      description: article.excerpt,
+      title,
+      description,
       publishedTime: article.publishedAt,
       authors: [article.author],
+      images,
     },
     twitter: {
       card: "summary_large_image",
-      title: article.title,
-      description: article.excerpt,
+      title,
+      description,
+      images: images?.map((i) => i.url),
     },
   };
 }
@@ -53,7 +59,10 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
     "@context": "https://schema.org",
     "@type": "NewsArticle",
     headline: article.title,
-    description: article.excerpt,
+    description: article.metaDescription ?? article.excerpt,
+    ...(article.image?.src
+      ? { image: [`https://www.republicofpixels.com${article.image.src}`] }
+      : {}),
     datePublished: article.publishedAt,
     dateModified: article.publishedAt,
     author: [{ "@type": "Organization", name: "Republic of Pixels" }],
@@ -99,9 +108,14 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           </div>
         )}
 
-        <div className="relative mt-8 aspect-[16/9] overflow-hidden rounded-2xl border border-border-subtle">
-          <PlaceholderArt variant={article.heroVariant} className="h-full w-full" />
-        </div>
+        <figure className="mt-8">
+          <div className="relative aspect-[16/9] overflow-hidden rounded-2xl border border-border-subtle">
+            <ArticleMedia article={article} priority sizes="(max-width: 768px) 100vw, 680px" className="h-full w-full" />
+          </div>
+          {article.image?.credit && (
+            <figcaption className="mt-2 text-xs text-text-tertiary">{article.image.credit}</figcaption>
+          )}
+        </figure>
 
         <TldrBox items={article.tldr} />
 
