@@ -41,8 +41,12 @@ export default function ImpressumPage() {
 
         <h2>Bildrechte</h2>
         <p>
-          Redaktionelle Grafiken auf Republic of Pixels werden ausschliesslich generativ/code-basiert
-          erstellt und verwenden keine fremden Marken- oder Spiele-Assets.
+          Artikelbilder stammen aus den jeweils verlinkten Quellen bzw. aus offiziellem
+          Presse- und Promotionsmaterial der Publisher und werden mit Bildnachweis
+          gekennzeichnet. Eigene redaktionelle Grafiken werden generativ/code-basiert
+          erstellt. Rechteinhaber können sich für Anliegen jederzeit an{" "}
+          <a href="mailto:redaktion@republicofpixels.com">redaktion@republicofpixels.com</a>{" "}
+          wenden; beanstandetes Material entfernen wir umgehend.
         </p>
       </div>
     </div>

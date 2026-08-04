@@ -59,6 +59,11 @@ export function Footer() {
             </p>
             <ul className="flex flex-col gap-3">
               <li>
+                <Link href="/ueber-uns" className="text-sm text-text-secondary hover:text-accent transition-colors">
+                  Über uns
+                </Link>
+              </li>
+              <li>
                 <Link href="/impressum" className="text-sm text-text-secondary hover:text-accent transition-colors">
                   Impressum
                 </Link>
@@ -84,7 +89,7 @@ export function Footer() {
 
         <div className="mt-14 flex flex-col gap-4 border-t border-border-subtle pt-8 text-xs text-text-tertiary sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} Republic of Pixels. Alle Rechte vorbehalten.</p>
-          <p>Unabhängige Berichterstattung. Keine Markenlogos oder Screenshots ohne geklärte Rechte.</p>
+          <p>Unabhängige Berichterstattung. Bildmaterial mit Quellenangabe, Quellen in jedem Artikel verlinkt.</p>
         </div>
       </div>
     </footer>

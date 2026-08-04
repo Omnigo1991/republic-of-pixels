@@ -47,6 +47,36 @@ function existingSlugs() {
   return slugs;
 }
 
+// Wählt bis zu 3 thematisch nächste Bestandsartikel als relatedSlugs
+// (Scoring: gemeinsame Tags > gleiche Kategorie > gemeinsame Plattform,
+// leichte Bevorzugung neuerer Artikel). Das Frontend nutzt relatedSlugs
+// direkt für die "Ähnliche Artikel"-Sektion → gezielte interne Verlinkung.
+function pickRelatedSlugs(article) {
+  const scored = [];
+  for (const f of readdirSync(ARTICLES_DIR).filter((f) => f.endsWith(".json"))) {
+    try {
+      const other = JSON.parse(readFileSync(join(ARTICLES_DIR, f), "utf8"));
+      if (other.slug === article.slug) continue;
+      const otherTags = (other.tags ?? []).map((t) => t.toLowerCase());
+      const sharedTags = (article.tags ?? []).filter((t) =>
+        otherTags.includes(t.toLowerCase())
+      ).length;
+      let score = sharedTags * 2;
+      if (other.category === article.category) score += 1;
+      if ((other.platforms ?? []).some((p) => article.platforms.includes(p))) score += 0.5;
+      const ageDays = (Date.now() - new Date(other.publishedAt).getTime()) / 86400000;
+      score += Math.max(0, 1 - ageDays / 30);
+      if (score > 1) scored.push({ slug: other.slug, score });
+    } catch {
+      // unlesbare Datei ignorieren
+    }
+  }
+  return scored
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 3)
+    .map((s) => s.slug);
+}
+
 const EDITORIAL_SYSTEM = `Du bist die Redaktion von Republic of Pixels, einem deutschsprachigen Premium-Gaming-Magazin (republicofpixels.com).
 
 Redaktionelles Profil:
@@ -214,6 +244,8 @@ async function main() {
         console.log(`  Verworfen: ${check.errors.join("; ")}`);
         continue;
       }
+
+      article.relatedSlugs = pickRelatedSlugs(article);
 
       console.log("  Bild beschaffen (Feed/Quelle) …");
       article.image = await acquireImage({

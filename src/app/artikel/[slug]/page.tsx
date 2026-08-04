@@ -11,10 +11,8 @@ import { ArticleMedia } from "@/components/ArticleMedia";
 import { CategoryPill, LeakBanner, Tag } from "@/components/Badges";
 import { ArticleBody } from "@/components/ArticleBody";
 import { TldrBox, WhyItMattersBox, ReviewBox, SourcesBox } from "@/components/ArticleBoxes";
-import { ReactionBar } from "@/components/ReactionBar";
 import { ShareButtons } from "@/components/ShareButtons";
 import { ReadingProgress } from "@/components/ReadingProgress";
-import { CommentSection } from "@/components/CommentSection";
 import { ArticleCard } from "@/components/ArticleCard";
 import { formatDateTime } from "@/lib/format";
 
@@ -127,12 +125,11 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
 
         <SourcesBox sources={article.sources} />
 
-        <div className="my-8 flex flex-wrap items-center justify-between gap-4 border-y border-border-subtle py-6">
-          <ReactionBar />
+        {/* Reaktionen und Kommentare folgen erst mit echter Datenhaltung
+            (docs/vergleich-2026-08.md, Sofortmassnahme 3): keine Attrappen live. */}
+        <div className="my-8 flex flex-wrap items-center justify-end gap-4 border-y border-border-subtle py-6">
           <ShareButtons title={article.title} />
         </div>
-
-        <CommentSection />
       </article>
 
       {related.length > 0 && (
