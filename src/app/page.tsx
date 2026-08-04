@@ -7,7 +7,7 @@ import { Reveal } from "@/components/Reveal";
 
 export default function HomePage() {
   const topStory = getTopStory();
-  const popular = getPopularArticles(5);
+  const popular = getPopularArticles(8);
   const chronological = getChronological(topStory.slug);
 
   return (

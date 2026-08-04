@@ -3,6 +3,7 @@ import { CATEGORY_NAV, PLATFORM_NAV } from "@/lib/articles";
 import { MobileNav } from "./MobileNav";
 import { SearchTrigger } from "./SearchOverlay";
 import { PlatformIcon } from "./PlatformIcons";
+import { HeaderBrand } from "./HeaderBrand";
 
 const INSTAGRAM_URL = "https://www.instagram.com/republicofpixels";
 
@@ -10,15 +11,9 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border-subtle/80 bg-bg-elevated/85 backdrop-blur-md supports-[backdrop-filter]:bg-bg-elevated/70">
       <div className="mx-auto flex h-16 max-w-content items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-        {/* Wortmarke in Button-Typo; das Markenzeichen (R) sitzt gross unter dem
-            Header (siehe BrandMark in layout.tsx) — Betreiber-Vorgabe 04.08.2026. */}
-        <Link
-          href="/"
-          className="shrink-0 px-1 text-[13px] font-bold tracking-wide text-accent-brand hover:text-accent transition-colors"
-          aria-label="Republic of Pixels – Startseite"
-        >
-          REPUBLIC OF PIXELS
-        </Link>
+        {/* Wortmarke in Button-Typo; beim Scrollen gleitet das R-Zeichen dazu
+            (HeaderBrand). Das grosse R sitzt unter dem Header, siehe layout.tsx. */}
+        <HeaderBrand />
 
         {/* Content-Kategorien — mittlere Zone, stärker gewichtet (siehe docs/konzept.md §5) */}
         <nav className="hidden lg:flex items-center gap-1" aria-label="Redaktion">

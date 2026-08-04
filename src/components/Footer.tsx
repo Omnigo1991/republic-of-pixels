@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Logo } from "./Logo";
+import { LogoMark } from "./Logo";
 import { CATEGORY_NAV, PLATFORM_NAV } from "@/lib/articles";
 import { PlatformIcon } from "./PlatformIcons";
 
@@ -9,7 +9,10 @@ export function Footer() {
       <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-2 gap-10 md:grid-cols-5">
           <div className="col-span-2">
-            <Logo />
+            {/* Nur das R-Markenzeichen in Logo-Cyan, ohne Wortmarke (Vorgabe 04.08.2026). */}
+            <Link href="/" aria-label="Republic of Pixels – Startseite" className="inline-block">
+              <LogoMark className="h-10 w-auto text-accent-brand" />
+            </Link>
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-text-secondary">
               Republic of Pixels ist eine unabhängige, deutschsprachige Gaming-Newsplattform.
               Wir ordnen ein, statt nur zu melden — ruhig, ehrlich und ohne Clickbait.
