@@ -76,11 +76,10 @@ Aufgaben:
    - "indices": alle zugehörigen Kandidaten-Indizes, den faktenreichsten zuerst
    - "category": "breaking" (nur bei wirklich grossen Nachrichten), "news" oder "leaks"
    - "platforms": Teilmenge von ["pc","playstation","xbox","nintendo"]
-   - "gameName": exakter Spielname für die Artwork-Suche im Steam-Store, oder null wenn kein einzelnes Spiel im Zentrum steht
    - "isLeakOrRumor": true/false
    - "priority": 1 (höchste) bis ${MAX_ARTICLES_PER_RUN}
 
-Antworte NUR mit JSON, ohne Einleitung und ohne Kommentar — das erste Zeichen deiner Antwort muss "{" sein: {"selected":[{"indices":[...],"category":"...","platforms":[...],"gameName":...,"isLeakOrRumor":...,"priority":...}]}
+Antworte NUR mit JSON, ohne Einleitung und ohne Kommentar — das erste Zeichen deiner Antwort muss "{" sein: {"selected":[{"indices":[...],"category":"...","platforms":[...],"isLeakOrRumor":...,"priority":...}]}
 Wenn nichts den Kriterien genügt, antworte {"selected":[]}.`;
 
   // Ein fehlgeschlagener Parse wird einmal wiederholt — die Auswahl ist der
@@ -216,11 +215,11 @@ async function main() {
         continue;
       }
 
-      console.log(`  Bild beschaffen (gameName: ${cluster.gameName ?? "—"}) …`);
+      console.log("  Bild beschaffen (Feed/Quelle) …");
       article.image = await acquireImage({
         slug: article.slug,
-        gameName: cluster.gameName,
         feedItem: items[0],
+        ogImage: items[0].ogImage,
         altText: article.title,
         publicDir: PUBLIC_DIR,
       });
