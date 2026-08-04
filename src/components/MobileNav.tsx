@@ -1,11 +1,16 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import Link from "next/link";
 import { CATEGORY_NAV, PLATFORM_NAV } from "@/lib/articles";
+import { PlatformIcon } from "./PlatformIcons";
 
 export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -19,7 +24,7 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
       <Link
         href="/suche"
         aria-label="Suche öffnen"
-        className="flex h-10 w-10 items-center justify-center rounded-full text-text-secondary hover:text-text-primary hover:bg-white/[0.04] transition-colors"
+        className="flex h-10 w-10 items-center justify-center rounded-full text-text-secondary hover:text-text-primary hover:bg-text-primary/[0.04] transition-colors"
       >
         <SearchIcon className="h-5 w-5" />
       </Link>
@@ -27,12 +32,15 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
         onClick={() => setOpen(true)}
         aria-label="Menü öffnen"
         aria-expanded={open}
-        className="flex h-10 w-10 items-center justify-center rounded-full text-text-secondary hover:text-text-primary hover:bg-white/[0.04] transition-colors"
+        className="flex h-10 w-10 items-center justify-center rounded-full text-text-secondary hover:text-text-primary hover:bg-text-primary/[0.04] transition-colors"
       >
         <BurgerIcon className="h-5 w-5" />
       </button>
 
-      {open && (
+      {/* Portal nach document.body: Der Header nutzt backdrop-filter und wird
+          dadurch zum Containing Block für fixed-Elemente — ohne Portal würde
+          das Overlay im 64px-Header gefangen (auf Mobile entdeckt, 04.08.2026). */}
+      {open && mounted && createPortal(
         <div className="fixed inset-0 z-[60] flex flex-col bg-bg-base animate-fadeIn">
           <div className="flex h-16 items-center justify-between px-4 border-b border-border-subtle">
             <span className="text-[13px] font-semibold tracking-[0.2em] text-text-tertiary">
@@ -41,7 +49,7 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
             <button
               onClick={() => setOpen(false)}
               aria-label="Menü schliessen"
-              className="flex h-10 w-10 items-center justify-center rounded-full text-text-secondary hover:text-text-primary hover:bg-white/[0.04]"
+              className="flex h-10 w-10 items-center justify-center rounded-full text-text-secondary hover:text-text-primary hover:bg-text-primary/[0.04]"
             >
               <CloseIcon className="h-5 w-5" />
             </button>
@@ -74,8 +82,9 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
                   key={p.key}
                   href={`/kategorie/${p.key}`}
                   onClick={() => setOpen(false)}
-                  className="border-b border-border-subtle py-4 text-xl font-medium text-text-primary active:text-accent"
+                  className="flex items-center gap-3 border-b border-border-subtle py-4 text-xl font-medium text-text-primary active:text-accent"
                 >
+                  <PlatformIcon platform={p.key} className="h-5 w-5 text-text-tertiary" />
                   {p.label}
                 </Link>
               ))}
@@ -90,7 +99,8 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
               Auf Instagram folgen
             </a>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </div>
   );

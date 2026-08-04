@@ -9,6 +9,7 @@ import {
 import { CATEGORY_LABELS, PLATFORM_LABELS } from "@/lib/types";
 import { ArticleMedia } from "@/components/ArticleMedia";
 import { CategoryPill, LeakBanner, Tag } from "@/components/Badges";
+import { PlatformIcon } from "@/components/PlatformIcons";
 import { ArticleBody } from "@/components/ArticleBody";
 import { TldrBox, WhyItMattersBox, ReviewBox, SourcesBox } from "@/components/ArticleBoxes";
 import { ShareButtons } from "@/components/ShareButtons";
@@ -85,7 +86,10 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
         <div className="mb-5 flex flex-wrap items-center gap-2">
           <CategoryPill category={article.category} />
           {article.platforms.map((p) => (
-            <Tag key={p}>{PLATFORM_LABELS[p]}</Tag>
+            <Tag key={p}>
+              <PlatformIcon platform={p} className="mr-1.5 h-3.5 w-3.5" />
+              {PLATFORM_LABELS[p]}
+            </Tag>
           ))}
         </div>
 

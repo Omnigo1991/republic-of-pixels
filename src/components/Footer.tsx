@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Logo } from "./Logo";
 import { CATEGORY_NAV, PLATFORM_NAV } from "@/lib/articles";
+import { PlatformIcon } from "./PlatformIcons";
 
 export function Footer() {
   return (
@@ -45,7 +46,8 @@ export function Footer() {
             <ul className="flex flex-col gap-3">
               {PLATFORM_NAV.map((p) => (
                 <li key={p.key}>
-                  <Link href={`/kategorie/${p.key}`} className="text-sm text-text-secondary hover:text-accent transition-colors">
+                  <Link href={`/kategorie/${p.key}`} className="inline-flex items-center gap-2 text-sm text-text-secondary hover:text-accent transition-colors">
+                    <PlatformIcon platform={p.key} className="h-3.5 w-3.5 text-text-tertiary" />
                     {p.label}
                   </Link>
                 </li>

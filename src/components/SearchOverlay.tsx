@@ -48,7 +48,7 @@ export function SearchPanel({ onNavigate }: { onNavigate?: () => void }) {
               key={a.slug}
               href={`/artikel/${a.slug}`}
               onClick={onNavigate}
-              className="flex items-center justify-between gap-4 rounded-xl px-3 py-3 hover:bg-white/[0.04] transition-colors"
+              className="flex items-center justify-between gap-4 rounded-xl px-3 py-3 hover:bg-text-primary/[0.04] transition-colors"
             >
               <div className="min-w-0">
                 <p className="truncate text-[15px] font-medium text-text-primary">{a.title}</p>
@@ -72,7 +72,7 @@ export function SearchTrigger() {
       <button
         onClick={() => setOpen(true)}
         aria-label="Suche öffnen"
-        className="flex h-9 w-9 items-center justify-center rounded-full text-text-secondary hover:text-text-primary hover:bg-white/[0.04] transition-colors"
+        className="flex h-9 w-9 items-center justify-center rounded-full text-text-secondary hover:text-text-primary hover:bg-text-primary/[0.04] transition-colors"
       >
         <SearchIcon className="h-[18px] w-[18px]" />
       </button>

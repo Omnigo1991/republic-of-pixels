@@ -95,5 +95,10 @@
     }
   ],
   "review": null,
-  "image": null
+  "image": {
+    "src": "/images/articles/fire-emblem-fortunes-weave-direct-details-2026.webp",
+    "alt": "Fire Emblem: Fortune's Weave: Nintendo Direct zeigt Story, Klassen und Kampfsystem",
+    "credit": "Bild: IGN",
+    "sourceUrl": "https://www.ign.com/articles/nintendo-direct-announced-focused-on-fire-emblem-fortunes-weave"
+  }
 }

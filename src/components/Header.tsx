@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { Logo } from "./Logo";
 import { CATEGORY_NAV, PLATFORM_NAV } from "@/lib/articles";
 import { MobileNav } from "./MobileNav";
 import { SearchTrigger } from "./SearchOverlay";
+import { PlatformIcon } from "./PlatformIcons";
 
 const INSTAGRAM_URL = "https://www.instagram.com/republicofpixels";
 
@@ -10,7 +10,15 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border-subtle/80 bg-bg-elevated/85 backdrop-blur-md supports-[backdrop-filter]:bg-bg-elevated/70">
       <div className="mx-auto flex h-16 max-w-content items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-        <Logo />
+        {/* Wortmarke in Button-Typo; das Markenzeichen (R) sitzt gross unter dem
+            Header (siehe BrandMark in layout.tsx) — Betreiber-Vorgabe 04.08.2026. */}
+        <Link
+          href="/"
+          className="shrink-0 px-1 text-[13px] font-bold tracking-wide text-accent-brand hover:text-accent transition-colors"
+          aria-label="Republic of Pixels – Startseite"
+        >
+          REPUBLIC OF PIXELS
+        </Link>
 
         {/* Content-Kategorien — mittlere Zone, stärker gewichtet (siehe docs/konzept.md §5) */}
         <nav className="hidden lg:flex items-center gap-1" aria-label="Redaktion">
@@ -18,7 +26,7 @@ export function Header() {
             <Link
               key={c.key}
               href={`/kategorie/${c.key}`}
-              className="relative px-4 py-2 text-[13px] font-medium tracking-wide text-text-secondary hover:text-text-primary transition-colors rounded-full hover:bg-white/[0.04]"
+              className="relative px-4 py-2 text-[13px] font-medium tracking-wide text-text-secondary hover:text-text-primary transition-colors rounded-full hover:bg-text-primary/[0.04]"
             >
               {c.key === "breaking" && (
                 <span className="absolute left-2 top-2.5 h-1.5 w-1.5 rounded-full bg-accent" />
@@ -35,9 +43,11 @@ export function Header() {
               <Link
                 key={p.key}
                 href={`/kategorie/${p.key}`}
-                className="px-3 py-2 text-[13px] font-medium text-text-tertiary hover:text-text-primary transition-colors rounded-full hover:bg-white/[0.04]"
+                title={p.label}
+                aria-label={p.label}
+                className="flex h-9 w-9 items-center justify-center text-text-tertiary hover:text-text-primary transition-colors rounded-full hover:bg-text-primary/[0.04]"
               >
-                {p.label.toUpperCase()}
+                <PlatformIcon platform={p.key} className="h-[18px] w-[18px]" />
               </Link>
             ))}
           </nav>

@@ -1,7 +1,9 @@
 import type { Config } from "tailwindcss";
 
-// Design-Tokens: exakt aus dem Republic-of-Pixels-Logo per Pixel-Sampling extrahiert
-// (Navy #0F0D2C, Cyan #02F0D1) und daraus mathematisch abgeleitet — siehe docs/konzept.md Abschnitt 3.
+// Design-Tokens, Light-Theme (Betreiber-Entscheidung 04.08.2026): Die Markenfarben
+// aus dem Logo (Navy #0F0D2C, Cyan #02F0D1) bleiben die Basis — Navy wird zur
+// Text-/Kontrastfarbe, Cyan bleibt Markenakzent (als Interaktionsfarbe abgedunkelt,
+// damit Links auf Weiss AA-Kontrast erreichen). Ursprüngliche Dark-Tokens: docs/konzept.md §3.
 const config: Config = {
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   darkMode: "class",
@@ -9,33 +11,34 @@ const config: Config = {
     extend: {
       colors: {
         bg: {
-          base: "#0F0D2C",
-          elevated: "#141230",
+          base: "#F7F8FA",
+          elevated: "#FFFFFF",
         },
         surface: {
-          card: "#171533",
-          hover: "#1B1937",
+          card: "#FFFFFF",
+          hover: "#F1F3F7",
         },
         border: {
-          subtle: "#201E3B",
-          default: "#292843",
-          strong: "#3A3952",
+          subtle: "#E9EBF1",
+          default: "#DADDE6",
+          strong: "#B8BDCC",
         },
         accent: {
-          DEFAULT: "#02F0D1",
-          hover: "#30F3D9",
-          active: "#02C5AB",
-          wash: "#0D3146",
+          DEFAULT: "#00806E",
+          hover: "#02A78F",
+          active: "#006658",
+          wash: "#E2FAF5",
+          brand: "#02F0D1",
         },
         text: {
-          primary: "#F1F0F2",
-          secondary: "#ADADB7",
-          tertiary: "#7D7C8D",
-          disabled: "#525167",
+          primary: "#0F0D2C",
+          secondary: "#4A4A61",
+          tertiary: "#75758A",
+          disabled: "#A9A9B8",
         },
-        success: "#2ED47A",
-        warning: "#F5B942",
-        error: "#F1544B",
+        success: "#1D9E5C",
+        warning: "#A97400",
+        error: "#D23F37",
       },
       fontFamily: {
         sans: [
@@ -55,8 +58,8 @@ const config: Config = {
         content: "80rem",
       },
       boxShadow: {
-        card: "0 1px 0 0 rgba(255,255,255,0.03) inset, 0 8px 24px -12px rgba(0,0,0,0.5)",
-        elevated: "0 20px 60px -20px rgba(0,0,0,0.6)",
+        card: "0 1px 2px rgba(15,13,44,0.05), 0 8px 24px -12px rgba(15,13,44,0.12)",
+        elevated: "0 24px 60px -24px rgba(15,13,44,0.25)",
       },
       borderRadius: {
         xl2: "1.25rem",

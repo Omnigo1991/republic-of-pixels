@@ -4,9 +4,9 @@ import { CATEGORY_LABELS, REVIEW_LABEL_META } from "@/lib/types";
 
 const CATEGORY_TONE: Record<Category, string> = {
   breaking: "text-accent border-accent/40 bg-accent/10",
-  news: "text-text-secondary border-border-default bg-white/[0.03]",
+  news: "text-text-secondary border-border-default bg-text-primary/[0.03]",
   leaks: "text-warning border-warning/40 bg-warning/10",
-  reviews: "text-text-secondary border-border-default bg-white/[0.03]",
+  reviews: "text-text-secondary border-border-default bg-text-primary/[0.03]",
 };
 
 export function CategoryPill({ category }: { category: Category }) {

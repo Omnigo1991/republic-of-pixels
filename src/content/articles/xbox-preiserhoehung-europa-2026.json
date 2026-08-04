@@ -95,5 +95,10 @@
     }
   ],
   "review": null,
-  "image": null
+  "image": {
+    "src": "/images/articles/xbox-preiserhoehung-europa-2026.webp",
+    "alt": "Xbox-Preise in Europa steigen um bis zu 30 Prozent",
+    "credit": "Bild: PC Gamer",
+    "sourceUrl": "https://www.pcgamer.com/hardware/microsoft-raises-prices-of-xbox-by-25-percent-to-30-percent-in-europe-with-the-series-s-now-costing-more-than-the-series-x-at-launch/"
+  }
 }

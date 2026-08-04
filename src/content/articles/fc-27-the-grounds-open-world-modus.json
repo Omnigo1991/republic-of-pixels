@@ -89,5 +89,10 @@
     }
   ],
   "review": null,
-  "image": null
+  "image": {
+    "src": "/images/articles/fc-27-the-grounds-open-world-modus.webp",
+    "alt": "EA Sports FC 27: Neuer Open-World-Modus „The Grounds“ angekündigt",
+    "credit": "Bild: IGN",
+    "sourceUrl": "https://www.ign.com/articles/fc-27s-the-grounds-looks-like-playstation-home-for-football-fans"
+  }
 }
