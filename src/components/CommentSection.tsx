@@ -35,7 +35,7 @@ export function CommentSection({ articleSlug }: { articleSlug: string }) {
     const [{ data: k }, { data: v }] = await Promise.all([
       supabase
         .from("comments")
-        .select("*, profiles(id, nickname, avatar_url)")
+        .select("*, profiles!comments_author_id_fkey(id, nickname, avatar_url)")
         .eq("article_slug", articleSlug)
         .order("created_at", { ascending: true }),
       supabase.from("comment_votes").select("comment_id, user_id"),
