@@ -52,19 +52,15 @@ const config: Config = {
         },
       },
       fontFamily: {
+        // EINE Schrift überall (Betreiber-Vorgabe 05.08.2026): Space Grotesk
+        // für Headlines UND Fliesstext — keine zweite Schriftfamilie.
         sans: [
+          "var(--font-display)",
+          "Space Grotesk",
           "-apple-system",
           "BlinkMacSystemFont",
-          "SF Pro Display",
-          "SF Pro Text",
-          "var(--font-inter)",
-          "Inter",
-          "Helvetica Neue",
-          "Arial",
           "sans-serif",
         ],
-        // Headlines: Space Grotesk — technisch-digitaler Charakter für den
-        // Gaming-Look, Fliesstext bleibt Inter/SF für Lesbarkeit.
         display: [
           "var(--font-display)",
           "Space Grotesk",
