@@ -55,6 +55,11 @@ jobs:
 
       - name: Build-Prüfung (nichts Kaputtes veröffentlichen)
         if: steps.changes.outputs.new == 'true'
+        env:
+          # Öffentliche Werte (landen ohnehin im Browser-Bundle) — nötig,
+          # damit der Prerender der Community-Komponenten durchläuft.
+          NEXT_PUBLIC_SUPABASE_URL: https://yvsrquekxnumvmgmjfpy.supabase.co
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: sb_publishable_hYuXxyx4p_uMMKLFpUu2JQ_lE2mlREG
         run: npm run build
 
       - name: Änderungen committen und pushen
