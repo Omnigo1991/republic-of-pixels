@@ -118,6 +118,15 @@ export function AuthStatus() {
             >
               Einstellungen
             </Link>
+            {istMaster && (
+              <Link
+                href="/redaktion/statistik"
+                onClick={() => setMenueOffen(false)}
+                className="block px-4 py-2.5 text-sm text-accent hover:bg-surface-hover transition-colors"
+              >
+                Statistik
+              </Link>
+            )}
             <div className="mx-3 my-1 h-px bg-border-subtle" />
             <button
               onClick={() => {

@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import { Footer } from "@/components/Footer";
+import { VisitTracker } from "@/components/VisitTracker";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -56,6 +57,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {/* Masthead wird pro Seitentyp gerendert (Masthead.tsx: brand/section/slim). */}
         <main>{children}</main>
         <Footer />
+        <VisitTracker />
         <Analytics />
       </body>
     </html>

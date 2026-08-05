@@ -58,7 +58,7 @@ export function PopularSection({ articles }: { articles: Article[] }) {
 
       <div
         ref={trackRef}
-        className="-mx-4 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-2 sm:-mx-1 sm:px-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        className="-mx-4 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-2 scroll-pl-4 sm:-mx-1 sm:px-1 sm:scroll-pl-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
       >
         {articles.map((a, i) => (
           <PopularCard key={a.slug} article={a} rank={i + 1} />
