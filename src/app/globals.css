@@ -22,6 +22,15 @@ h3 {
   color: #0f0d2c;
 }
 
+/* Verhindert, dass beim Scrollen auf Mobile ein kurzes Innehalten mit dem
+   Daumen auf Karten/Links (z. B. Artikel-Cards) versehentlich die native
+   Textauswahl auslöst. Der eigentliche Artikeltext bleibt selektierbar. */
+a:not(.prose-rop a) {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
 /* Ruhige, dünne Scrollbar im Markenlook */
 ::-webkit-scrollbar {
   width: 10px;
