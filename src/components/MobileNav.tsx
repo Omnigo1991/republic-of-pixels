@@ -24,7 +24,7 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
       <Link
         href="/suche"
         aria-label="Suche öffnen"
-        className="flex h-10 w-10 items-center justify-center rounded-full text-navy-muted hover:text-navy-text hover:bg-white/[0.06] transition-colors"
+        className="flex h-10 w-10 items-center justify-center rounded-full text-current hover:opacity-70 transition-opacity"
       >
         <SearchIcon className="h-5 w-5" />
       </Link>
@@ -32,7 +32,7 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
         onClick={() => setOpen(true)}
         aria-label="Menü öffnen"
         aria-expanded={open}
-        className="flex h-10 w-10 items-center justify-center rounded-full text-navy-muted hover:text-navy-text hover:bg-white/[0.06] transition-colors"
+        className="flex h-10 w-10 items-center justify-center rounded-full text-current hover:opacity-70 transition-opacity"
       >
         <BurgerIcon className="h-5 w-5" />
       </button>

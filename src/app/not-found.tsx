@@ -1,7 +1,10 @@
 import Link from "next/link";
+import { Masthead } from "@/components/Masthead";
 
 export default function NotFound() {
   return (
+    <>
+      <Masthead />
     <div className="mx-auto flex max-w-content flex-col items-center justify-center px-4 py-32 text-center">
       <p className="text-sm font-semibold tracking-[0.2em] text-accent">404</p>
       <h1 className="mt-4 text-3xl font-semibold tracking-tight text-text-primary">
@@ -17,5 +20,6 @@ export default function NotFound() {
         Zur Startseite
       </Link>
     </div>
+    </>
   );
 }

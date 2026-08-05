@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Masthead } from "@/components/Masthead";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -9,6 +10,8 @@ export const metadata: Metadata = {
 
 export default function UeberUnsPage() {
   return (
+    <>
+      <Masthead />
     <div className="mx-auto max-w-article px-4 sm:px-6 py-14">
       <h1 className="text-3xl font-semibold tracking-tight text-text-primary">
         Über Republic of Pixels
@@ -60,5 +63,6 @@ export default function UeberUnsPage() {
         </p>
       </div>
     </div>
+    </>
   );
 }

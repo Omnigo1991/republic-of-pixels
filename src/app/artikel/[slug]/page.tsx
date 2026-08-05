@@ -16,6 +16,7 @@ import { ShareButtons } from "@/components/ShareButtons";
 import { ReadingProgress } from "@/components/ReadingProgress";
 import { ArticleCard } from "@/components/ArticleCard";
 import { formatDateTime, splitTitle } from "@/lib/format";
+import { Masthead } from "@/components/Masthead";
 
 export function generateStaticParams() {
   return getAllArticles().map((a) => ({ slug: a.slug }));
@@ -75,6 +76,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
 
   return (
     <>
+      <Masthead />
       <ReadingProgress />
       <script
         type="application/ld+json"

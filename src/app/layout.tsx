@@ -3,9 +3,7 @@ import type { ReactNode } from "react";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
-import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { BreakingTicker } from "@/components/BreakingTicker";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -55,8 +53,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="de" className={inter.variable}>
       <body className="min-h-screen bg-bg-base font-sans antialiased">
-        <Header />
-        <BreakingTicker />
+        {/* Masthead wird pro Seitentyp gerendert (Masthead.tsx: brand/section/slim). */}
         <main>{children}</main>
         <Footer />
         <Analytics />

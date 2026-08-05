@@ -5,6 +5,7 @@ import { ArticleListItem } from "@/components/ArticleListItem";
 import { CategoryChipBar } from "@/components/CategoryChipBar";
 import { ReleaseRadar } from "@/components/ReleaseRadar";
 import { Reveal } from "@/components/Reveal";
+import { Masthead } from "@/components/Masthead";
 
 export default function HomePage() {
   const topStory = getTopStory();
@@ -13,8 +14,8 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Hero auf Navy — setzt das Band aus Header + R-Zeichen nahtlos fort
-          (Original-Markenwelt). Top-Story ohne Reveal: sofort sichtbar. */}
+      <Masthead variant="brand" />
+      {/* Top-Story ohne Reveal: sofort sichtbar. */}
       <section className="bg-navy">
         <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <TopStory article={topStory} />
