@@ -74,7 +74,12 @@
     }
   ],
   "review": null,
-  "image": null,
+  "image": {
+    "src": "/images/articles/xbox-platinum-trophy-aequivalent-2026.webp",
+    "alt": "Xbox Platin-Trophäen-Äquivalent",
+    "credit": "Bild: GameSpot",
+    "sourceUrl": "https://www.gamespot.com/articles/xbox-version-of-playstation-platinum-trophy-teased-for-later-this-year/"
+  },
   "relatedSlugs": [
     "halo-campaign-evolved-cod-black-ops-ps5-verkaufszahlen",
     "marvel-rivals-season-9-5-speicherplatz-reduktion",

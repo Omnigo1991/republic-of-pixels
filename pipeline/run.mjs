@@ -284,8 +284,7 @@ async function main() {
       console.log("  Bild beschaffen (Feed/Quelle) …");
       article.image = await acquireImage({
         slug: article.slug,
-        feedItem: items[0],
-        ogImage: items[0].ogImage,
+        items,
         altText: article.title,
         publicDir: PUBLIC_DIR,
       });

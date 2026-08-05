@@ -77,7 +77,12 @@
     }
   ],
   "review": null,
-  "image": null,
+  "image": {
+    "src": "/images/articles/minecraft-switch-2-vibrant-visuals-release.webp",
+    "alt": "Minecraft auf Nintendo Switch 2",
+    "credit": "Bild: GameSpot",
+    "sourceUrl": "https://www.gamespot.com/articles/minecraft-is-coming-to-switch-2-in-october-with-an-upgrade-path-for-switch-owners/"
+  },
   "relatedSlugs": [
     "fire-emblem-fortunes-weave-direct-details-2026",
     "diablo-4-switch-2-port-leak-september-2026",

@@ -16,6 +16,24 @@ const UA =
 const MIN_SOURCE_WIDTH = 640;
 const MAX_DOWNLOAD_BYTES = 15 * 1024 * 1024;
 
+// Viele Feeds (v. a. WordPress-basierte Quellen wie GameSpot) liefern im
+// media:content/enclosure nur eine kleine Vorschau über einen Resize-
+// Query-Parameter (z. B. "?w=300"), obwohl die CDN-URL das Originalbild in
+// voller Auflösung ausliefert, sobald der Parameter fehlt. Wir entfernen
+// bekannte Resize-Parameter, bevor wir das Bild herunterladen, statt ein
+// brauchbares Bild allein wegen der Vorschaugrösse zu verwerfen.
+function ohneGroessenParameter(url) {
+  try {
+    const u = new URL(url);
+    for (const p of ["w", "h", "width", "height", "resize", "fit", "crop", "quality"]) {
+      u.searchParams.delete(p);
+    }
+    return u.toString();
+  } catch {
+    return url;
+  }
+}
+
 async function download(url, timeoutMs = 20000) {
   const res = await fetch(url, {
     headers: { "User-Agent": UA },
@@ -44,12 +62,23 @@ async function optimizeAndSave(buffer, slug, publicDir) {
 }
 
 // Hauptfunktion: liefert ein ArticleImage-Objekt oder null (→ Placeholder).
-// ogImage ist das og:image der Quellseite (von extract.mjs mitgeliefert).
-export async function acquireImage({ slug, feedItem, ogImage, altText, publicDir }) {
-  const candidates = [
-    { url: feedItem?.image, label: "Feed-Bild" },
-    { url: ogImage, label: "og:image der Quelle" },
-  ].filter((c) => c.url);
+// items: alle Quellen des Clusters (nicht nur die primäre) — bei mehreren
+// Quellen erhöht das die Trefferchance deutlich, z. B. wenn die primäre
+// Quelle kein brauchbares Bild liefert, eine weitere aber schon.
+export async function acquireImage({ slug, items, altText, publicDir }) {
+  const candidates = [];
+  for (const it of items) {
+    if (it.image) {
+      candidates.push({ url: it.image, feedName: it.feedName, link: it.link, label: `${it.feedName}: Feed-Bild` });
+      const upsized = ohneGroessenParameter(it.image);
+      if (upsized !== it.image) {
+        candidates.push({ url: upsized, feedName: it.feedName, link: it.link, label: `${it.feedName}: Feed-Bild (Originalgrösse)` });
+      }
+    }
+    if (it.ogImage) {
+      candidates.push({ url: it.ogImage, feedName: it.feedName, link: it.link, label: `${it.feedName}: og:image` });
+    }
+  }
 
   for (const candidate of candidates) {
     try {
@@ -58,8 +87,8 @@ export async function acquireImage({ slug, feedItem, ogImage, altText, publicDir
       return {
         src,
         alt: altText,
-        credit: `Bild: ${feedItem.feedName}`,
-        sourceUrl: feedItem.link,
+        credit: `Bild: ${candidate.feedName}`,
+        sourceUrl: candidate.link,
       };
     } catch (err) {
       console.log(`  Bild: ${candidate.label} unbrauchbar (${err.message})`);
