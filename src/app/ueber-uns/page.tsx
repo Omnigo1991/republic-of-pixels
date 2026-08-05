@@ -32,6 +32,38 @@ export default function UeberUnsPage() {
           <li><strong>Quellentransparenz:</strong> Jede Meldung verlinkt ihre Originalquellen am Ende des Artikels.</li>
         </ul>
 
+        <h2>Der Kopf hinter der Republic</h2>
+        <div className="my-6 flex flex-col items-start gap-6 rounded-2xl border border-border-subtle bg-surface-card p-6 sm:flex-row sm:items-center not-prose">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/team/tim.png"
+            alt="Tim, Gründer von Republic of Pixels"
+            className="h-28 w-28 shrink-0 rounded-full object-cover"
+          />
+          <div>
+            <p className="text-lg font-semibold text-text-primary">
+              Tim <span className="ml-1 text-sm font-normal text-text-tertiary">Gründer &amp; Herausgeber</span>
+            </p>
+            <p className="mt-2 text-[15px] leading-relaxed text-text-secondary">
+              Tims Gaming-Geschichte beginnt dort, wo sie für viele beginnt: vor dem
+              Röhrenfernseher, mit <em>The Legend of Zelda: Ocarina of Time</em> — dem Moment,
+              in dem klar wurde, dass Spiele mehr sind als Zeitvertreib. Seither hat ihn keine
+              Plattform mehr losgelassen: von Nintendo-Klassikern über die PlayStation- und
+              Xbox-Generationen bis zum PC.
+            </p>
+            <p className="mt-2 text-[15px] leading-relaxed text-text-secondary">
+              Republic of Pixels hat er gegründet, weil ihm in der deutschsprachigen
+              Gaming-Landschaft etwas fehlte: ein Magazin, das Nachrichten ernst nimmt und
+              einordnet statt übertreibt — und dabei so aussieht, wie sich modernes Gaming
+              anfühlt. In den Kommentaren trifft man ihn als{" "}
+              <Link href="/profil/republicofpixels" className="text-accent hover:underline">
+                republicofpixels
+              </Link>
+              .
+            </p>
+          </div>
+        </div>
+
         <h2>Wie unsere Redaktion arbeitet</h2>
         <p>
           Republic of Pixels setzt auf ein technologiegestütztes Redaktionssystem: Unsere

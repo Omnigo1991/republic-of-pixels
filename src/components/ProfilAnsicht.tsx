@@ -128,7 +128,7 @@ export function ProfilAnsicht({ nickname }: { nickname: string }) {
                 // eslint-disable-next-line @next/next/no-img-element
                 <img src="/brand/r-avatar-navy.png" alt="" className="h-3.5 w-3.5" />
               )}
-              <span className="translate-y-[0.5px]">{rang.name}</span>
+              <span>{rang.name}</span>
             </span>
           </div>
           <p className="mt-2 text-sm text-text-secondary">
@@ -192,7 +192,7 @@ export function ProfilAnsicht({ nickname }: { nickname: string }) {
               title={`${r.beschreibung} (ab ${r.ab} Punkten)`}
               className={`inline-flex items-center justify-center rounded-full border px-3.5 py-[5px] text-[11px] leading-none ${punkte >= r.ab ? r.klasse : "border-border-subtle text-text-disabled"}`}
             >
-              <span className="translate-y-[0.5px]">{r.name}</span>
+              <span>{r.name}</span>
             </span>
           ))}
           <span title={MASTER_RANG.beschreibung} className="rounded-full border border-border-subtle px-3 py-1 text-[11px] text-text-disabled">
