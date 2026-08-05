@@ -1,0 +1,91 @@
+{
+  "slug": "halo-campaign-evolved-turbulente-entwicklung",
+  "title": "Insiderbericht: Turbulente Entwicklung von Halo: Campaign Evolved",
+  "subtitle": "Ein Halo-Insider beschreibt Enginewechsel, verworfene Arbeit und ein eingestelltes Multiplayer-Projekt als Folgen interner Probleme.",
+  "excerpt": "Laut einem unbestätigten Bericht des Halo-Insiders Rebs Gaming litt die Entwicklung von Halo: Campaign Evolved unter Missmanagement, einem komplizierten Enginewechsel und gestrichenen Features.",
+  "seoTitle": "Halo: Campaign Evolved – Turbulente Entwicklung laut Insider",
+  "metaDescription": "Ein Insiderbericht beschreibt unbestätigte Probleme bei der Entwicklung von Halo: Campaign Evolved, darunter ein gestrichenes Multiplayer-Projekt.",
+  "category": "news",
+  "platforms": [
+    "xbox",
+    "pc"
+  ],
+  "tags": [
+    "Halo",
+    "Halo: Campaign Evolved",
+    "Halo Studios",
+    "Unreal Engine 5",
+    "Leak"
+  ],
+  "tldr": [
+    "Insider Rebs Gaming berichtet von einer problembehafteten Entwicklung von Halo: Campaign Evolved",
+    "Externes Studio Abstraction wurde 2023 verpflichtet, aber später vorzeitig vom Projekt abgezogen",
+    "Der Wechsel zu Unreal Engine 5 erforderte offenbar einen kompletten Neuaufbau aller Assets statt einer Portierung",
+    "Laut Bericht führte Missmanagement zur Einstellung eines separaten Multiplayer-Projekts sowie zu Crunch im letzten Entwicklungsjahr"
+  ],
+  "whyItMatters": "Der Bericht zeigt, wie stark technische Fehleinschätzungen und interne Abläufe Umfang und Qualität eines aufwendigen Remakes beeinflussen können. Das ist besonders relevant, da Halo Studios am Ende von Campaign Evolved bereits ein Remake von Halo 2 angedeutet hat.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Laut einem neuen, bislang unbestätigten Bericht war die Entwicklung von Halo: Campaign Evolved deutlich turbulenter, als es das fertige Produkt vermuten lässt. Die Informationen stammen von Rebs Gaming, einem Insider aus dem Halo-Umfeld, dessen Berichterstattung in der Vergangenheit mehrfach von Journalisten bestätigt werden konnte."
+    },
+    {
+      "type": "heading",
+      "text": "Externes Studio und der Wechsel zur Unreal Engine 5"
+    },
+    {
+      "type": "paragraph",
+      "text": "Halo Studios arbeitet regelmäßig mit externen Teams und Auftragnehmern zusammen, was laut dem Bericht mit zu den Problemen bei Campaign Evolved beigetragen haben soll. Um das Jahr 2023 wurde demnach das Studio Abstraction engagiert, um das Ausgangsmaterial des Originals technisch anzupassen und mit einer neuen Engine sowie neuen Funktionen kompatibel zu machen. Halo Studios entschied sich für Unreal Engine 5, was Reibung erzeugte, da das Original auf der deutlich älteren Blam-Engine lief. Abstraction sollte dafür sorgen, dass neue Elemente wie eine Sprint-Funktion oder Vier-Spieler-Koop organisch in die ursprünglichen Level und Kampfsequenzen integriert wirken, obwohl diese ursprünglich nicht dafür ausgelegt waren."
+    },
+    {
+      "type": "paragraph",
+      "text": "Dem Bericht zufolge wurde Abstraction jedoch vorzeitig vom Projekt abgezogen, nachdem Halo Studios unrealistische Fristen und Erwartungen an ein technisch komplexes Vorhaben gestellt habe. Im Abspann des Spiels taucht das Studio nicht auf, einzelne Mitarbeitende erhielten jedoch eine besondere Erwähnung. Eine Quelle berichtete Rebs Gaming, dass die Arbeit von Abstraction verworfen und in kurzer Zeit neu umgesetzt worden sei – ein Vorgehen, das vermutlich zu Bugs und Problemen bei der Gegner-KI geführt hat."
+    },
+    {
+      "type": "heading",
+      "text": "Fehleinschätzungen und Folgen für andere Projekte"
+    },
+    {
+      "type": "paragraph",
+      "text": "Laut dem Insider ging die Leitung des Studios ursprünglich davon aus, bestehende Assets ließen sich problemlos in Unreal Engine 5 übertragen. Tatsächlich habe sich jedoch herausgestellt, dass sämtliche Assets komplett neu gebaut werden mussten – ein Aufwand, der offenbar nicht eingeplant war. Das insgesamt beschriebene Missmanagement soll darüber hinaus so gravierend gewesen sein, dass ein separates Multiplayer-Projekt im Halo-Universum eingestellt wurde, weil Personal und Ressourcen für Campaign Evolved benötigt wurden. Im letzten Jahr der Entwicklung sei zudem Crunch notwendig gewesen, um den Release-Termin zu halten."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ursprünglich war zudem geplant, Echtzeit-Zwischensequenzen einzusetzen, in denen Spieler:innen ihre individualisierte Rüstung und Waffen hätten sehen können. Dieses Feature wurde letztlich gestrichen: Das dafür zuständige externe Team habe demnach \"struggled\" und die Umsetzung nur knapp rechtzeitig zum Release fertiggestellt."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Trotz der geschilderten Probleme wird Halo: Campaign Evolved bislang vergleichsweise gut aufgenommen, wenngleich einige Fans angesichts der berichteten Schwierigkeiten das Gefühl haben, dass mehr möglich gewesen wäre. Verkaufszahlen liegen bislang nicht vor, sollen aber in den kommenden Wochen bekannt werden. Am Ende der Kampagne wurde zudem ein Remake von Halo 2 angeteasert – sollte sich der beschriebene Entwicklungsverlauf bestätigen, dürfte dessen Umsetzung mit besonderem Interesse verfolgt werden."
+    }
+  ],
+  "isLeakOrRumor": true,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-05T04:23:26.939Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "circuit",
+  "sources": [
+    {
+      "title": "Halo: Campaign Evolved Reportedly Had a Troubled Development That Impacted a Now-Canceled Multiplayer Project",
+      "url": "https://www.ign.com/articles/halo-campaign-evolved-reportedly-had-a-troubled-development-that-impacted-a-now-canceled-multiplayer-project",
+      "publisher": "IGN"
+    }
+  ],
+  "review": null,
+  "image": {
+    "src": "/images/articles/halo-campaign-evolved-turbulente-entwicklung.webp",
+    "alt": "Insiderbericht: Turbulente Entwicklung von Halo: Campaign Evolved",
+    "credit": "Bild: IGN",
+    "sourceUrl": "https://www.ign.com/articles/halo-campaign-evolved-reportedly-had-a-troubled-development-that-impacted-a-now-canceled-multiplayer-project"
+  },
+  "relatedSlugs": [
+    "final-fantasy-vii-revelation-spinoffs-verbindung",
+    "ea-fc-27-the-grounds-nba-2k-vorbild",
+    "crimson-moon-release-september-2026"
+  ]
+}
