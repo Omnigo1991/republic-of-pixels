@@ -1,8 +1,8 @@
 import type { Config } from "tailwindcss";
 
-// Design-Tokens, Dark-First V2 "Graphit" (Betreiber-Entscheidung 05.08.2026):
-// neutrales Dunkelgrau statt Navy (Discord-Schule) — beste Lesbarkeit bei
-// langen Artikeln, Bilder ohne Farbstich, Cyan #02F0D1 als einziger Akzent.
+// Design-Tokens "A1 Neutral Pur" (Betreiber-Entscheidung 05.08.2026 abends):
+// mathematisch neutrales Graphit (R=G=B, null Farbstich) — Bilder wie
+// kalibriert, Cyan #02F0D1 als einziger Akzent mit maximaler Wirkung.
 const config: Config = {
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   darkMode: "class",
@@ -10,17 +10,17 @@ const config: Config = {
     extend: {
       colors: {
         bg: {
-          base: "#121316",
-          elevated: "#17181C",
+          base: "#141414",
+          elevated: "#191919",
         },
         surface: {
-          card: "#1A1C21",
-          hover: "#20232A",
+          card: "#1B1B1B",
+          hover: "#232323",
         },
         border: {
-          subtle: "#26282E",
-          default: "#32353D",
-          strong: "#464B56",
+          subtle: "#262626",
+          default: "#333333",
+          strong: "#474747",
         },
         accent: {
           DEFAULT: "#02F0D1",
@@ -31,9 +31,9 @@ const config: Config = {
         },
         text: {
           primary: "#F1F0F2",
-          secondary: "#A8ABB4",
-          tertiary: "#7C7F89",
-          disabled: "#51545D",
+          secondary: "#A9A9A9",
+          tertiary: "#7D7D7D",
+          disabled: "#535353",
         },
         success: "#2ED47A",
         warning: "#F5B942",
@@ -41,12 +41,12 @@ const config: Config = {
         // Marken-Navy-Band (Header/Hero/Footer) — minimal heller als bg.base,
         // damit die Zonen sich subtil absetzen.
         navy: {
-          DEFAULT: "#17181C",
-          raised: "#1D1F24",
-          border: "#26282E",
+          DEFAULT: "#191919",
+          raised: "#1F1F1F",
+          border: "#262626",
           text: "#F1F0F2",
-          muted: "#A8ABB4",
-          dim: "#7C7F89",
+          muted: "#A9A9A9",
+          dim: "#7D7D7D",
         },
       },
       fontFamily: {

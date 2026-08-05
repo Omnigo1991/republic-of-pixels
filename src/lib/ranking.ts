@@ -11,7 +11,10 @@ export function punkteBerechnen(stats: {
   erhalteneVotes: number;
   vergebeneVotes: number;
 }): number {
-  return stats.kommentare * 3 + stats.erhalteneVotes * 2 + stats.vergebeneVotes;
+  // Bewusst konservativ (05.08.2026): Kommentar +2, erhaltener Upvote +1.
+  // Vergebene Upvotes zählen NICHT — sonst liesse sich der Rang durch
+  // Massen-Voten farmen und alle wären schnell high-level.
+  return stats.kommentare * 2 + stats.erhalteneVotes;
 }
 
 export interface Rang {
@@ -34,28 +37,28 @@ export const RAENGE: Rang[] = [
   },
   {
     name: "Bürger:in",
-    ab: 10,
+    ab: 20,
     icon: "🎮",
     klasse: "border-accent/40 text-accent bg-accent/10",
     beschreibung: "Aktives Mitglied der Republic of Pixels.",
   },
   {
     name: "Ratsmitglied",
-    ab: 40,
+    ab: 75,
     icon: "🛡️",
     klasse: "border-accent text-[#0F0D2C] bg-accent font-bold",
     beschreibung: "Prägt die Diskussionen sichtbar mit.",
   },
   {
     name: "Senator:in",
-    ab: 120,
+    ab: 200,
     icon: "🏛️",
     klasse: "border-warning/60 text-warning bg-warning/10 font-bold",
     beschreibung: "Eine tragende Stimme der Community.",
   },
   {
     name: "Pixel-Legende",
-    ab: 300,
+    ab: 500,
     icon: "👑",
     klasse:
       "border-transparent text-[#0F0D2C] bg-gradient-to-r from-accent via-[#7DF3E1] to-warning font-bold",

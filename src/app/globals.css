@@ -7,8 +7,8 @@ html {
 }
 
 body {
-  background-color: #121316;
-  color: #f1f0f2;
+  background-color: #141414;
+  color: #f2f2f2;
 }
 
 h1,
@@ -28,25 +28,25 @@ h3 {
   height: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #121316;
+  background: #141414;
 }
 ::-webkit-scrollbar-thumb {
-  background: #32353D;
+  background: #333333;
   border-radius: 999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #464B56;
+  background: #474747;
 }
 
 .prose-rop {
-  color: #f1f0f2;
+  color: #f2f2f2;
 }
 .prose-rop p {
   margin-top: 1.25em;
   margin-bottom: 1.25em;
   line-height: 1.75;
   font-size: 1.125rem;
-  color: #e4e3ea;
+  color: #e6e6e6;
 }
 .prose-rop h2 {
   margin-top: 2.5em;
@@ -60,7 +60,7 @@ h3 {
   margin: 2em 0;
   padding: 0.25rem 0 0.25rem 1.25rem;
   border-left: 2px solid #02f0d1;
-  color: #a8abb4;
+  color: #a9a9a9;
   font-style: italic;
   font-size: 1.15rem;
 }
@@ -68,7 +68,7 @@ h3 {
   margin: 1.25em 0;
   padding-left: 1.25rem;
   list-style: disc;
-  color: #e4e3ea;
+  color: #e6e6e6;
 }
 .prose-rop li {
   margin: 0.5em 0;
