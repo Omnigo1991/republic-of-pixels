@@ -33,7 +33,7 @@ export default function UeberUnsPage() {
         </ul>
 
         <h2>Der Kopf hinter der Republic</h2>
-        <div className="relative my-24 rounded-2xl border border-accent/35 bg-surface-card p-6 pt-20 text-center not-prose">
+        <div className="relative my-24 rounded-2xl border border-accent/50 bg-accent-wash/25 p-6 pt-20 text-center not-prose">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/team/tim.webp"
