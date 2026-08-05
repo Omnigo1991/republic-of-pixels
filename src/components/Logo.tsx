@@ -21,9 +21,12 @@ export function LogoMark({ className }: { className?: string }) {
 export function Logo({
   withWordmark = true,
   size = "md",
+  inline = false,
 }: {
   withWordmark?: boolean;
   size?: "sm" | "md" | "lg";
+  /** Wortmarke einzeilig neben dem R (Header-Variante V3) statt gestapelt. */
+  inline?: boolean;
 }) {
   const markSize = size === "lg" ? "h-10 w-auto" : size === "sm" ? "h-7 w-auto" : "h-9 w-auto";
   return (
@@ -33,17 +36,21 @@ export function Logo({
       aria-label="Republic of Pixels – Startseite"
     >
       <LogoMark className={`${markSize} transition-transform duration-300 group-hover:scale-105`} />
-      {withWordmark && (
-        // Wortmarke in der Site-Schrift (Space Grotesk) — eine Schrift überall.
-        <span className="font-display font-bold leading-none">
-          <span className="block text-[16px] sm:text-[17px] tracking-tight text-text-primary">
-            REPUBLIC
+      {withWordmark &&
+        (inline ? (
+          <span className="font-bold tracking-tight text-text-primary text-[19px] sm:text-[22px] leading-none">
+            REPUBLIC <span className="text-accent-brand">OF PIXELS</span>
           </span>
-          <span className="block text-[10px] sm:text-[11px] text-accent-brand tracking-[0.3em] mt-1">
-            OF PIXELS
+        ) : (
+          <span className="font-bold leading-none">
+            <span className="block text-[16px] sm:text-[17px] tracking-tight text-text-primary">
+              REPUBLIC
+            </span>
+            <span className="block text-[10px] sm:text-[11px] text-accent-brand tracking-[0.3em] mt-1">
+              OF PIXELS
+            </span>
           </span>
-        </span>
-      )}
+        ))}
     </Link>
   );
 }

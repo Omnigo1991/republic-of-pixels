@@ -52,18 +52,18 @@ const config: Config = {
         },
       },
       fontFamily: {
-        // EINE Schrift überall (Betreiber-Vorgabe 05.08.2026): Space Grotesk
-        // für Headlines UND Fliesstext — keine zweite Schriftfamilie.
+        // EINE Schrift überall (Betreiber-Vorgabe 05.08.2026, revidiert):
+        // Inter für alles — Headlines wie Fliesstext, keine zweite Familie.
         sans: [
-          "var(--font-display)",
-          "Space Grotesk",
+          "var(--font-inter)",
+          "Inter",
           "-apple-system",
           "BlinkMacSystemFont",
           "sans-serif",
         ],
         display: [
-          "var(--font-display)",
-          "Space Grotesk",
+          "var(--font-inter)",
+          "Inter",
           "-apple-system",
           "BlinkMacSystemFont",
           "sans-serif",

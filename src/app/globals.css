@@ -11,13 +11,9 @@ body {
   color: #f1f0f2;
 }
 
-/* Headlines in Space Grotesk — technisch-digitaler Charakter (Gaming-Look),
-   Fliesstext bleibt Inter/SF. Geladen via next/font in layout.tsx. */
 h1,
 h2,
 h3 {
-  font-family: var(--font-display), "Space Grotesk", -apple-system, BlinkMacSystemFont,
-    sans-serif;
   letter-spacing: -0.015em;
 }
 
