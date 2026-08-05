@@ -14,6 +14,7 @@ import { askClaude, parseJsonResponse } from "./lib/claude.mjs";
 import { extractArticleText } from "./lib/extract.mjs";
 import { acquireImage } from "./lib/images.mjs";
 import { validateArticle } from "./lib/validate.mjs";
+import { pingIndexNow } from "./lib/indexnow.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const STATE_FILE = join(ROOT, "pipeline", "state.json");
@@ -253,6 +254,7 @@ async function main() {
   console.log(`  ${selected.length} Cluster ausgewählt`);
 
   let published = 0;
+  const publishedSlugs = [];
   for (const cluster of selected) {
     const items = cluster.indices.map((i) => candidates[i]);
     const label = items[0].title.slice(0, 70);
@@ -294,6 +296,7 @@ async function main() {
         JSON.stringify(article, null, 2) + "\n"
       );
       slugs.add(article.slug);
+      publishedSlugs.push(article.slug);
       published++;
       console.log(`  ✓ Veröffentlicht: ${article.slug} (${check.wordCount} Wörter)`);
     } catch (err) {
@@ -311,6 +314,14 @@ async function main() {
     if (new Date(v).getTime() < keepAfter) delete state.seen[k];
   }
   writeFileSync(STATE_FILE, JSON.stringify(state, null, 2) + "\n");
+
+  if (publishedSlugs.length) {
+    const urls = [
+      "https://www.republicofpixels.com/",
+      ...publishedSlugs.map((s) => `https://www.republicofpixels.com/artikel/${s}`),
+    ];
+    await pingIndexNow(urls);
+  }
 
   console.log(`5/5 Fertig: ${published} Artikel geschrieben, State aktualisiert.`);
 }

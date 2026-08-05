@@ -70,7 +70,12 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
     publisher: {
       "@type": "Organization",
       name: "Republic of Pixels",
-      logo: { "@type": "ImageObject", url: "https://www.republicofpixels.com/favicon.svg" },
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.republicofpixels.com/brand/r-mark-navy.png",
+        width: 401,
+        height: 464,
+      },
     },
     mainEntityOfPage: `https://www.republicofpixels.com/artikel/${article.slug}`,
   };
