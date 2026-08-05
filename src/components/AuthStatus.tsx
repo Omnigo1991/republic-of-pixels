@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
 import type { Session } from "@supabase/supabase-js";
 import { getSupabase, type Profil } from "@/lib/supabase";
-import { AnmeldeDialog } from "./AuthDialog";
+import { AnmeldeDialog, NicknameWahl } from "./AuthDialog";
 import { MASTER_NICKNAME } from "@/lib/ranking";
 
 // Anmelde-Status in der Masthead-Navigationszeile. Angemeldet: Profilbild +
@@ -15,6 +15,8 @@ export function AuthStatus() {
   const supabase = useMemo(() => getSupabase(), []);
   const [session, setSession] = useState<Session | null>(null);
   const [profil, setProfil] = useState<Profil | null>(null);
+  const [profilGeladen, setProfilGeladen] = useState(false);
+  const [nicknameSpaeter, setNicknameSpaeter] = useState(false);
   const [dialogOffen, setDialogOffen] = useState(false);
   const [menueOffen, setMenueOffen] = useState(false);
   const [menuePos, setMenuePos] = useState({ top: 0, right: 0 });
@@ -33,18 +35,30 @@ export function AuthStatus() {
     return () => sub.subscription.unsubscribe();
   }, [supabase]);
 
+  const profilLaden = useCallback(
+    (userId: string) => {
+      setProfilGeladen(false);
+      return supabase
+        .from("profiles")
+        .select("id, nickname, avatar_url")
+        .eq("id", userId)
+        .maybeSingle()
+        .then(({ data }) => {
+          setProfil((data as Profil) ?? null);
+          setProfilGeladen(true);
+        });
+    },
+    [supabase]
+  );
+
   useEffect(() => {
     if (!session) {
       setProfil(null);
+      setProfilGeladen(false);
       return;
     }
-    supabase
-      .from("profiles")
-      .select("id, nickname, avatar_url")
-      .eq("id", session.user.id)
-      .maybeSingle()
-      .then(({ data }) => setProfil((data as Profil) ?? null));
-  }, [session, supabase]);
+    profilLaden(session.user.id);
+  }, [session, profilLaden]);
 
   // Menü schliessen bei Klick ausserhalb
   useEffect(() => {
@@ -62,11 +76,30 @@ export function AuthStatus() {
     return () => document.removeEventListener("mousedown", onKlick);
   }, [menueOffen]);
 
+  const zeigeNicknameDialog = Boolean(session) && profilGeladen && !profil && !nicknameSpaeter;
+  const nicknameDialog = zeigeNicknameDialog && (
+    <div
+      className="fixed inset-0 z-[70] flex items-center justify-center bg-black/60 p-4"
+      onClick={() => setNicknameSpaeter(true)}
+    >
+      <div className="w-full max-w-sm" onClick={(e) => e.stopPropagation()}>
+        <NicknameWahl onFertig={() => session && profilLaden(session.user.id)} />
+        <button
+          onClick={() => setNicknameSpaeter(true)}
+          className="mt-3 w-full text-center text-xs text-text-tertiary hover:text-accent transition-colors"
+        >
+          Später festlegen
+        </button>
+      </div>
+    </div>
+  );
+
   if (session) {
     const name = profil?.nickname ?? "Profil";
     const istMaster = profil?.nickname === MASTER_NICKNAME;
     return (
       <div ref={wrapperRef} className="relative">
+        {nicknameDialog}
         <button
           onClick={menueUmschalten}
           aria-haspopup="menu"
