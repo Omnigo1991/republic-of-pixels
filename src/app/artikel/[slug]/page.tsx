@@ -13,7 +13,6 @@ import { PlatformIcon } from "@/components/PlatformIcons";
 import { ArticleBody } from "@/components/ArticleBody";
 import { TldrBox, WhyItMattersBox, ReviewBox, SourcesBox } from "@/components/ArticleBoxes";
 import { ShareButtons } from "@/components/ShareButtons";
-import { ReadingProgress } from "@/components/ReadingProgress";
 import { ArticleCard } from "@/components/ArticleCard";
 import { formatDateTime, splitTitle } from "@/lib/format";
 import { Masthead } from "@/components/Masthead";
@@ -77,7 +76,6 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
   return (
     <>
       <Masthead />
-      <ReadingProgress />
       <script
         type="application/ld+json"
         // eslint-disable-next-line react/no-danger
