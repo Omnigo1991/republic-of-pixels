@@ -1,0 +1,111 @@
+{
+  "slug": "diablo-4-rebirth-eternal-seasonal-charaktere",
+  "title": "Diablo 4: Blizzard erlaubt Charakterwechsel zwischen Eternal und Seasonal",
+  "subtitle": "Die neue Funktion Rebirth testet Blizzard aktuell auf dem Public Test Realm vor dem Start von Season 15.",
+  "excerpt": "Mit der Funktion Rebirth können Diablo-4-Spieler ihre Eternal-Charaktere künftig für die Seasonal-Inhalte nutzen – allerdings nur auf Level 1 und ohne Ausrüstung.",
+  "seoTitle": "Diablo 4 Rebirth: Eternal-Charaktere für Seasonal nutzen",
+  "metaDescription": "Blizzard testet mit Rebirth eine neue Diablo-4-Funktion, die Eternal-Charaktere in den Seasonal-Modus überführt. Was bleibt erhalten, was nicht.",
+  "category": "news",
+  "platforms": [
+    "pc",
+    "playstation",
+    "xbox"
+  ],
+  "tags": [
+    "Diablo 4",
+    "Blizzard",
+    "Season 15",
+    "PTR",
+    "Rebirth"
+  ],
+  "tldr": [
+    "Blizzard testet die neue Funktion Rebirth auf dem Public Test Realm von Diablo 4",
+    "Rebirth wandelt Eternal-Charaktere in Seasonal-Charaktere um, setzt sie aber auf Level 1 zurück",
+    "Erhalten bleiben nur Spielzeit, Klasse, Name, Aussehen und kosmetische Elemente",
+    "Season 15 startet am 15. September, weitere Details folgen zur BlizzCon Anfang September"
+  ],
+  "whyItMatters": "Bislang mussten Diablo-4-Spieler zu jeder neuen Season einen komplett neuen Charakter erstellen, um Seasonal-Inhalte zu erleben. Rebirth ist Blizzards erste Antwort auf eine langjährige Forderung der Community, auch wenn der Fortschritt dabei verloren geht.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Blizzard testet derzeit auf dem Public Test Realm von Diablo 4 eine neue Funktion namens Rebirth, die künftig den Wechsel zwischen den beiden getrennten Spielinstanzen Eternal und Seasonal erleichtern soll. Damit greift der Entwickler eine Forderung auf, die aus der Community seit Jahren an ihn herangetragen wird."
+    },
+    {
+      "type": "heading",
+      "text": "Zwei getrennte Welten"
+    },
+    {
+      "type": "paragraph",
+      "text": "Diablo 4 unterscheidet zwischen dem permanenten Eternal-Realm und dem befristeten Seasonal-Realm, der jeweils die aktuellen Live-Service-Inhalte enthält. Während Eternal-Charaktere von allgemeinen Gameplay-Anpassungen profitieren, bleiben ihnen die neuen Seasonal-Mechaniken verschlossen. Wer die Inhalte einer neuen Season erleben wollte, musste bislang zwingend einen frischen Charakter erstellen – ein Umstand, der laut Blizzard bislang unangetastet blieb, obwohl er wiederholt kritisiert wurde."
+    },
+    {
+      "type": "heading",
+      "text": "Was Rebirth mitnimmt – und was nicht"
+    },
+    {
+      "type": "paragraph",
+      "text": "Rebirth erlaubt es, einen bestehenden Eternal-Charakter in einen Seasonal-Charakter umzuwandeln. Der Fortschritt in Sachen Ausrüstung, Level und Macht geht dabei jedoch verloren: Der Charakter startet wieder bei Level eins. Erhalten bleibt nur ein begrenzter Satz an Eigenschaften."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Klasse, Name, Aussehen und Charakterstatus (Normal oder Hardcore)",
+        "Kosmetische Vorlieben wie Transmogs und Pigmente",
+        "Reittiere, Zubehör und Haustiere",
+        "Portale und Grabsteine"
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "Instead of having to create a new character at the start of each season, you'll be able to select an Eternal character to continue their adventures in the Seasonal realm.",
+      "attribution": "Blizzard, offizieller Blog-Beitrag"
+    },
+    {
+      "type": "paragraph",
+      "text": "Weil Ausrüstung und Inventar bei der Umwandlung verfallen, empfiehlt Blizzard, Gegenstände vorab in den Eternal-Stash zu legen. Die Funktion lässt sich zudem erst aktivieren, wenn der Charakter keine ausgerüsteten oder im Inventar liegenden Items mehr besitzt."
+    },
+    {
+      "type": "quote",
+      "text": "You'll receive a warning before you click Rebirth that any retained items will be lost on Rebirth, giving you the option to remove all items or destroy them instead.",
+      "attribution": "Blizzard, offizieller Blog-Beitrag"
+    },
+    {
+      "type": "heading",
+      "text": "Bewusst schmale PTR-Fassung vor Season 15"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die aktuelle PTR-Version des Patches 3.2.0 fällt spürbar schlanker aus als frühere Seasonal-Vorschauen. Blizzard bestätigt, dass dies beabsichtigt ist: Die Testphase soll lediglich einzelne Mechaniken vorab zeigen, während größere Inhalte von Season 15 erst zur BlizzCon Anfang September enthüllt werden sollen. Season 15 selbst startet am 15. September, kurz nach Ende der Veranstaltung."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ob Rebirth die Grundproblematik der Trennung zwischen Eternal und Seasonal tatsächlich löst, bleibt abzuwarten. Da sämtlicher Ausrüstungs- und Levelfortschritt verloren geht, dürfte die Funktion für viele eher eine kosmetische Erleichterung als eine echte Fortschrittsübertragung darstellen."
+    }
+  ],
+  "isLeakOrRumor": false,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-05T13:02:43.014Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "particles",
+  "sources": [
+    {
+      "title": "Diablo 4 players have long wanted to bring their Eternal characters into the Seasonal realm, and now they're getting their wish, sort of",
+      "url": "https://www.eurogamer.net/diablo-4-season-15-update-rebirth",
+      "publisher": "Eurogamer"
+    }
+  ],
+  "review": null,
+  "image": {
+    "src": "/images/articles/diablo-4-rebirth-eternal-seasonal-charaktere.webp",
+    "alt": "Diablo 4: Blizzard erlaubt Charakterwechsel zwischen Eternal und Seasonal",
+    "credit": "Bild: Eurogamer",
+    "sourceUrl": "https://www.eurogamer.net/diablo-4-season-15-update-rebirth"
+  },
+  "relatedSlugs": [
+    "halo-campaign-evolved-cod-black-ops-ps5-verkaufszahlen",
+    "marvel-rivals-season-9-5-speicherplatz-reduktion",
+    "gears-of-war-e-day-pvp-versus-early-access-beta"
+  ]
+}
