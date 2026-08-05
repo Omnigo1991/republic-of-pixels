@@ -22,7 +22,7 @@
     "Im New Game+ kann der dritte Zubehör-Slot nach amiibo-Scan mit Bonus-WP verschwinden",
     "Ein Update zur Behebung ist in Arbeit, ein Termin steht noch nicht fest"
   ],
-  "whyItMatters": "Wer aktuell im New Game+ von Xenoblade Chronicles 2 unterwegs ist, sollte den amiibo-Bug kennen, bevor er Ausrüstungs-Slots einbüßt. Der Fall zeigt zudem, wie Nintendo mit Day-One-Problemen bei Remastern umgeht und wie transparent Support-Mitteilungen ausfallen.",
+  "whyItMatters": "Wer aktuell im New Game+ von Xenoblade Chronicles 2 unterwegs ist, sollte den amiibo-Bug kennen, bevor er Ausrüstungs-Slots einbüsst. Der Fall zeigt zudem, wie Nintendo mit Day-One-Problemen bei Remastern umgeht und wie transparent Support-Mitteilungen ausfallen.",
   "body": [
     {
       "type": "paragraph",
@@ -36,7 +36,7 @@
       "type": "list",
       "items": [
         "Die Lautstärke der Kampf-BGM fällt im Vergleich zu anderen Sounds spürbar zu niedrig aus.",
-        "Im New Game+ kann der dritte Zubehör-Slot verschwinden, wenn zuvor per Accessory Expansion Kit auf drei Slots erweitert wurde und anschließend ein amiibo für 'Bonus WP' gescannt wird."
+        "Im New Game+ kann der dritte Zubehör-Slot verschwinden, wenn zuvor per Accessory Expansion Kit auf drei Slots erweitert wurde und anschliessend ein amiibo für 'Bonus WP' gescannt wird."
       ]
     },
     {
@@ -45,7 +45,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Laut der Support-Mitteilung von Nintendo tritt der Zubehör-Bug ausschließlich dann auf, wenn das Accessory Expansion Kit – erhältlich vom Battle Bard nach dem Advanced New Game – bereits genutzt wurde, um die Slot-Zahl auf drei zu erhöhen, und danach über das Menü 'System' -> 'amiibo' ein amiibo gescannt wird, um 'Bonus WP' zu erhalten. Werden andere Boni als 'Bonus WP' erzielt, tritt der Fehler nicht auf. Bereits ausgerüstetes Zubehör in den betroffenen Slots geht dabei laut Nintendo nicht verloren, es wird lediglich der Slot selbst unsichtbar. Nintendo kündigte an, den genauen Release-Termin für das Update zu einem späteren Zeitpunkt bekanntzugeben, und entschuldigte sich für die Unannehmlichkeiten."
+      "text": "Laut der Support-Mitteilung von Nintendo tritt der Zubehör-Bug ausschliesslich dann auf, wenn das Accessory Expansion Kit – erhältlich vom Battle Bard nach dem Advanced New Game – bereits genutzt wurde, um die Slot-Zahl auf drei zu erhöhen, und danach über das Menü 'System' -> 'amiibo' ein amiibo gescannt wird, um 'Bonus WP' zu erhalten. Werden andere Boni als 'Bonus WP' erzielt, tritt der Fehler nicht auf. Bereits ausgerüstetes Zubehör in den betroffenen Slots geht dabei laut Nintendo nicht verloren, es wird lediglich der Slot selbst unsichtbar. Nintendo kündigte an, den genauen Release-Termin für das Update zu einem späteren Zeitpunkt bekanntzugeben, und entschuldigte sich für die Unannehmlichkeiten."
     },
     {
       "type": "quote",
