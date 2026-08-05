@@ -1,0 +1,95 @@
+{
+  "slug": "grafikkarten-preise-asien-speicherkrise-2026",
+  "title": "Speicherkrise treibt Grafikkartenpreise in Südkorea und Japan nach oben",
+  "subtitle": "Händlerdaten zeigen Aufschläge von bis zu 50 Prozent bei Nvidia-Modellen, Vorbestellungen könnten storniert werden",
+  "excerpt": "In Südkorea und Japan verteuern sich Nvidia-Grafikkarten binnen weniger Tage um bis zu 50 Prozent. Grund ist die globale Speicherknappheit durch den KI-Boom – Europa dürfte mit Verzögerung folgen.",
+  "seoTitle": "Grafikkarten-Preise: Speicherkrise trifft Asien mit bis zu 50%",
+  "metaDescription": "Nvidia-Grafikkarten kosten in Südkorea und Japan plötzlich bis zu 50 Prozent mehr. Die Speicherkrise durch KI-Nachfrage droht auch Europa zu erreichen.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "tags": [
+    "Nvidia",
+    "Grafikkarten",
+    "RTX 5060 Ti",
+    "Speicherkrise",
+    "PC Hardware"
+  ],
+  "tldr": [
+    "In Südkorea stiegen Preise für RTX-5060-Ti-Modelle laut Preisvergleichsportal Danawa um bis zu 49,7 Prozent",
+    "Der japanische Distributor CFD Sales kündigt für Gigabyte-Produkte ab 1. August Preisaufschläge von 20 bis 40 Prozent an und schließt Stornierungen unversendeter Bestellungen nicht aus",
+    "Ursache ist die hohe Nachfrage nach Speicherchips für KI-Hardware, Samsung erhöhte DRAM-Preise im dritten Quartal um rund 20 Prozent",
+    "Betroffen sind sowohl GDDR6-Speicher der RTX-4000-Reihe als auch GDDR7 der aktuellen RTX-50-Serie"
+  ],
+  "whyItMatters": "Wer ein PC-Upgrade plant, muss sich auf spürbar höhere Preise einstellen – die Entwicklung in Asien gilt als Vorbote für den europäischen Markt. Betroffen ist nicht nur das High-End-Segment, sondern gerade die für viele Spieler relevante Mittelklasse.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Wer in den kommenden Monaten eine neue Grafikkarte kaufen wollte, sollte die Preisentwicklung in Asien im Blick behalten. Innerhalb weniger Tage sind die Kosten für zahlreiche Nvidia-Modelle in Südkorea und Japan drastisch gestiegen. Auslöser ist eine globale Speicherkrise, die mittlerweile auch bei Endkunden ankommt."
+    },
+    {
+      "type": "heading",
+      "text": "Mittelklasse besonders betroffen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Laut Daten des südkoreanischen Preisvergleichsportals Danawa verteuerten sich zwischen Ende Juli und Anfang August vor allem Karten aus dem mittleren Preissegment. Die Gigabyte RTX 5060 Ti kostet demnach 49,4 Prozent mehr, die MSI-Variante des gleichen Modells sogar 49,7 Prozent. Auch im oberen Segment schlägt die Entwicklung durch: Die RTX 5080 verteuerte sich um rund 30 Prozent. Damit ist die aktuelle Preiswelle längst nicht mehr auf Flaggschiff-Modelle beschränkt, sondern trifft gerade jene Karten, die sich bislang an ein breiteres Publikum richteten."
+    },
+    {
+      "type": "heading",
+      "text": "Japanischer Großhändler warnt vor Stornierungen"
+    },
+    {
+      "type": "paragraph",
+      "text": "In Japan geht der Distributor CFD Sales noch einen Schritt weiter. Gegenüber Geschäftskunden kündigte das Unternehmen an, Produkte von Gigabyte ab dem 1. August 2026 um 20 bis 40 Prozent zu verteuern. Brisant ist ein zusätzlicher Hinweis: Bereits aufgegebene, aber noch nicht versendete Bestellungen könnten storniert werden, sollte die Ware nicht mehr zum ursprünglich vereinbarten Einkaufspreis beschafft werden können. Für Kundinnen und Kunden bedeutet das eine erhebliche Unsicherheit bei laufenden Bestellungen."
+    },
+    {
+      "type": "heading",
+      "text": "KI-Nachfrage als Preistreiber"
+    },
+    {
+      "type": "paragraph",
+      "text": "Hintergrund der Entwicklung ist die anhaltend hohe Nachfrage nach Speicherchips für KI-Anwendungen. Grafikkartenhersteller stehen dabei in direkter Konkurrenz zu Betreibern von KI-Rechenzentren um begrenzte Fertigungskapazitäten. Speicherhersteller wie Samsung haben ihre DRAM-Preise im dritten Quartal um etwa 20 Prozent angehoben – betroffen sind sowohl der ältere GDDR6-Speicher, der in Karten der RTX-4000-Serie verbaut ist, als auch der GDDR7-Speicher der aktuellen RTX-50-Generation. Hersteller wie Nvidia geben diese gestiegenen Kosten offenbar direkt an Partner und Händler weiter, die daraufhin ihre eigenen Preise anpassen."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Gigabyte RTX 5060 Ti: +49,4 Prozent",
+        "MSI RTX 5060 Ti: +49,7 Prozent",
+        "RTX 5080: rund +30 Prozent",
+        "Gigabyte-Produkte in Japan: +20 bis 40 Prozent ab 1. August"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Die aktuellen Zahlen beziehen sich zunächst ausschließlich auf lokale Reaktionen von Händlern und Distributoren in Südkorea und Japan. Eine unmittelbare Übertragung auf europäische oder deutsche Preise lässt sich daraus nicht ableiten, da hierzulande zunächst bestehende Lagerbestände zu den bisherigen Einkaufspreisen abverkauft werden dürften. Sollten diese Bestände jedoch aufgebraucht sein und neue Ware zu den gestiegenen Einkaufskonditionen beschafft werden müssen, ist auch in Europa mit spürbaren Preisanpassungen zu rechnen. Die Entwicklung in Asien liefert damit einen frühen Indikator dafür, in welche Richtung sich der Markt in den kommenden Monaten bewegen könnte."
+    }
+  ],
+  "isLeakOrRumor": false,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-05T09:02:44.509Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "circuit",
+  "sources": [
+    {
+      "title": "Grafikkarten - Die Speicherkrise schlägt zu: Grafikkarten-Preise gehen in Asien durch die Decke",
+      "url": "https://www.gamestar.de/artikel/hoehere-preise-asien-grafikkarten,3457540.html",
+      "publisher": "GameStar"
+    }
+  ],
+  "review": null,
+  "image": {
+    "src": "/images/articles/grafikkarten-preise-asien-speicherkrise-2026.webp",
+    "alt": "Speicherkrise treibt Grafikkartenpreise in Südkorea und Japan nach oben",
+    "credit": "Bild: GameStar",
+    "sourceUrl": "https://www.gamestar.de/artikel/hoehere-preise-asien-grafikkarten,3457540.html"
+  },
+  "relatedSlugs": [
+    "xbox-preiserhoehung-europa-2026",
+    "resident-evil-veronica-remake-2-millionen-wishlists",
+    "bergwerk-mining-sim-hindsight-studios-2026"
+  ]
+}
