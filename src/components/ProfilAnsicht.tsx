@@ -35,7 +35,7 @@ export function ProfilAnsicht({ nickname }: { nickname: string }) {
     (async () => {
       const { data: p } = await supabase
         .from("profiles")
-        .select("id, nickname, avatar_url, created_at, bonus_punkte")
+        .select("id, nickname, avatar_url, created_at")
         .eq("nickname", nickname)
         .maybeSingle();
       if (!p) {
