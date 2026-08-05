@@ -8,30 +8,39 @@ export default function CookiesPage() {
     <>
       <Masthead />
     <div className="mx-auto max-w-article px-4 sm:px-6 py-14">
-      <h1 className="text-3xl font-semibold tracking-tight text-text-primary">Cookie-Richtlinie</h1>
-
-      <div className="mt-6 rounded-xl border border-warning/30 bg-warning/[0.08] p-4 text-sm text-text-secondary">
-        Platzhaltertext — Kategorien final an die tatsächlich eingesetzten Dienste anpassen, bevor
-        ein Cookie-Consent-Banner live geschaltet wird.
-      </div>
+      <h1 className="text-3xl font-semibold tracking-tight text-text-primary">Cookies</h1>
 
       <div className="prose-rop mt-8">
-        <h2>Notwendige Cookies</h2>
-        <p>Für den Betrieb der Seite technisch erforderlich (z. B. Login-Session, Sicherheits-Token). Diese können nicht deaktiviert werden.</p>
-
-        <h2>Funktionale Cookies</h2>
-        <p>Speichern Einstellungen wie z. B. bereits gelesene Artikel oder Anzeige-Präferenzen.</p>
-
-        <h2>Analyse-Cookies</h2>
         <p>
-          Helfen uns zu verstehen, welche Artikel gelesen werden, um die "Beliebt bei
-          Lesern"-Sektion automatisiert zu berechnen. Werden nur mit deiner Zustimmung gesetzt.
+          Republic of Pixels setzt <strong>keine Cookies</strong> zu Tracking- oder
+          Werbezwecken ein. Wir binden auch keine Drittanbieter-Analyse- oder
+          Werbedienste (z. B. Google Analytics) ein, die Cookies setzen würden.
         </p>
 
-        <h2>Verwaltung deiner Einstellungen</h2>
+        <h2>Was wir stattdessen technisch nutzen</h2>
         <p>
-          Du kannst deine Cookie-Einstellungen jederzeit über den Consent-Banner am unteren
-          Bildschirmrand anpassen oder widerrufen.
+          Für den Betrieb der Seite speichern wir ausschliesslich technisch notwendige Daten
+          lokal in deinem Browser (<code>localStorage</code>), keine klassischen Cookies:
+        </p>
+        <ul>
+          <li>
+            <strong>Login-Sitzung:</strong> Falls du ein Konto hast, wird dein Login-Status
+            lokal gespeichert, damit du beim nächsten Besuch eingeloggt bleibst.
+          </li>
+          <li>
+            <strong>Anonyme Besucher-Kennung:</strong> Für unsere eigene, cookielose
+            Reichweitenmessung (z. B. für die "Beliebt bei Lesern"-Sektion und unser
+            internes Statistik-Cockpit) wird eine zufällige, anonyme Kennung ohne
+            Personenbezug lokal gespeichert. Es findet kein Tracking über andere Websites
+            hinweg statt.
+          </li>
+        </ul>
+
+        <h2>Deine Kontrolle</h2>
+        <p>
+          Du kannst diese lokal gespeicherten Daten jederzeit über die Einstellungen deines
+          Browsers löschen (z. B. "Website-Daten löschen"). Da wir keine Cookies setzen, ist
+          aktuell kein Cookie-Consent-Banner erforderlich.
         </p>
       </div>
     </div>
