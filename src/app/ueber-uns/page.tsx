@@ -36,7 +36,7 @@ export default function UeberUnsPage() {
         <div className="my-6 flex flex-col items-start gap-6 rounded-2xl border border-border-subtle bg-surface-card p-6 sm:flex-row sm:items-center not-prose">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/team/tim.png"
+            src="/team/tim.webp"
             alt="Tim, Gründer von Republic of Pixels"
             className="h-28 w-28 shrink-0 rounded-full object-cover"
           />
@@ -56,7 +56,7 @@ export default function UeberUnsPage() {
               Gaming-Landschaft etwas fehlte: ein Magazin, das Nachrichten ernst nimmt und
               einordnet statt übertreibt — und dabei so aussieht, wie sich modernes Gaming
               anfühlt. In den Kommentaren trifft man ihn als{" "}
-              <Link href="/profil/republicofpixels" className="text-accent hover:underline">
+              <Link href="/profil/republicofpixels" className="text-accent">
                 republicofpixels
               </Link>
               .

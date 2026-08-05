@@ -76,8 +76,7 @@ h3 {
 }
 .prose-rop a {
   color: #02f0d1;
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  text-decoration: none;
 }
 .prose-rop a:hover {
   color: #30f3d9;

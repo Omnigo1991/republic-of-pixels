@@ -137,7 +137,7 @@ export function EinstellungenForm() {
         {profil && (
           <>
             {" "}·{" "}
-            <Link href={`/profil/${profil.nickname}`} className="text-accent hover:underline">
+            <Link href={`/profil/${profil.nickname}`} className="text-accent">
               Mein öffentliches Profil ansehen
             </Link>
           </>
