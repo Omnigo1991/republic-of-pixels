@@ -6,6 +6,13 @@ import type { Config } from "tailwindcss";
 const config: Config = {
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   darkMode: "class",
+  // hover:/group-hover:-Utilities gelten nur noch auf Geräten mit echtem
+  // Hover (Maus) — auf Touch-Geräten bleibt der Hover-Zustand nach dem
+  // Antippen sonst "hängen" (z. B. Titel wirkt dauerhaft Cyan eingefärbt,
+  // wie eine versehentliche Markierung).
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
   theme: {
     extend: {
       colors: {

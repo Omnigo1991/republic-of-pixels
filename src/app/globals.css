@@ -22,22 +22,6 @@ h3 {
   color: #0f0d2c;
 }
 
-/* Verhindert, dass beim Scrollen auf Mobile ein kurzes Innehalten mit dem
-   Daumen (auf Karten, Links oder Artikeltext) versehentlich die native
-   Textauswahl auslöst. Eingabefelder bleiben normal bedienbar. */
-body {
-  -webkit-user-select: none;
-  user-select: none;
-  -webkit-touch-callout: none;
-}
-input,
-textarea,
-[contenteditable="true"] {
-  -webkit-user-select: text;
-  user-select: text;
-  -webkit-touch-callout: default;
-}
-
 /* Ruhige, dünne Scrollbar im Markenlook */
 ::-webkit-scrollbar {
   width: 10px;
