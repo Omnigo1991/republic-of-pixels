@@ -10,21 +10,16 @@ export default function ImpressumPage() {
     <div className="mx-auto max-w-article px-4 sm:px-6 py-14">
       <h1 className="text-3xl font-semibold tracking-tight text-text-primary">Impressum</h1>
 
-      <div className="mt-6 rounded-xl border border-warning/30 bg-warning/[0.08] p-4 text-sm text-text-secondary">
-        Platzhaltertext — bitte vor Live-Schaltung mit den echten Angaben (Betreiber, Anschrift,
-        Kontakt, ggf. Handelsregister/USt-ID) ausfüllen und rechtlich prüfen lassen. Diese Seite
-        ersetzt keine Rechtsberatung.
-      </div>
-
       <div className="prose-rop mt-8">
-        <h2>Angaben gemäss § 5 TMG</h2>
+        <h2>Angaben zum Betreiber</h2>
         <p>
           Republic of Pixels<br />
-          [Vollständiger Name / Firmenbezeichnung]<br />
-          [Strasse und Hausnummer]<br />
-          [PLZ und Ort]<br />
-          [Land]
+          Timothy Winiger<br />
+          Zugerstrasse 114<br />
+          6330 Cham<br />
+          Schweiz
         </p>
+        <p>Betrieben als Privatperson. Kein Handelsregistereintrag.</p>
 
         <h2>Kontakt</h2>
         <p>
@@ -32,8 +27,8 @@ export default function ImpressumPage() {
           Instagram: @republicofpixels
         </p>
 
-        <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
-        <p>[Name der verantwortlichen Person]<br />[Anschrift wie oben]</p>
+        <h2>Verantwortlich für den Inhalt</h2>
+        <p>Timothy Winiger<br />Anschrift wie oben</p>
 
         <h2>Haftungsausschluss</h2>
         <p>

@@ -10,15 +10,16 @@ export default function DatenschutzPage() {
     <div className="mx-auto max-w-article px-4 sm:px-6 py-14">
       <h1 className="text-3xl font-semibold tracking-tight text-text-primary">Datenschutzerklärung</h1>
 
-      <div className="mt-6 rounded-xl border border-warning/30 bg-warning/[0.08] p-4 text-sm text-text-secondary">
-        Platzhaltertext auf Basis gängiger DSGVO-Struktur — bitte vor Live-Schaltung durch eine
-        Datenschutz-Fachperson prüfen und an die tatsächlich eingesetzten Dienste (Hosting, Auth,
-        Analytics, Kommentarsystem) anpassen lassen.
-      </div>
-
       <div className="prose-rop mt-8">
         <h2>1. Verantwortlicher</h2>
-        <p>Republic of Pixels, [Anschrift], redaktion@republicofpixels.com</p>
+        <p>
+          Republic of Pixels, Timothy Winiger, Zugerstrasse 114, 6330 Cham, Schweiz<br />
+          E-Mail: redaktion@republicofpixels.com
+        </p>
+        <p>
+          Es gilt primär das Schweizer Datenschutzgesetz (revDSG). Für Besucher:innen aus der
+          EU wenden wir zusätzlich die Grundsätze der DSGVO an.
+        </p>
 
         <h2>2. Welche Daten wir verarbeiten</h2>
         <ul>
@@ -28,9 +29,9 @@ export default function DatenschutzPage() {
           <li>Cookies gemäss unserer <a href="/cookies">Cookie-Richtlinie</a></li>
         </ul>
 
-        <h2>3. Login über Google, Apple oder E-Mail</h2>
+        <h2>3. Login über Google, Discord oder E-Mail</h2>
         <p>
-          Bei der Anmeldung über Google oder Apple werden ausschliesslich die zur Kontoerstellung
+          Bei der Anmeldung über Google oder Discord werden ausschliesslich die zur Kontoerstellung
           notwendigen Daten (z. B. Name, E-Mail-Adresse) an unseren Authentifizierungsdienstleister
           übermittelt. Es findet keine Weitergabe an Dritte zu Werbezwecken statt.
         </p>
