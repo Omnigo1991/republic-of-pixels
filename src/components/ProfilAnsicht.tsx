@@ -35,7 +35,7 @@ export function ProfilAnsicht({ nickname }: { nickname: string }) {
     (async () => {
       const { data: p } = await supabase
         .from("profiles")
-        .select("id, nickname, avatar_url, created_at")
+        .select("id, nickname, avatar_url, created_at, bonus_punkte")
         .eq("nickname", nickname)
         .maybeSingle();
       if (!p) {
@@ -97,7 +97,7 @@ export function ProfilAnsicht({ nickname }: { nickname: string }) {
   }
 
   const istMaster = profil.nickname === MASTER_NICKNAME;
-  const punkte = punkteBerechnen(stats);
+  const punkte = punkteBerechnen(stats) + (profil.bonus_punkte ?? 0);
   const rang = rangFuer(punkte, profil.nickname);
   const next = naechsterRang(punkte, profil.nickname);
 

@@ -21,6 +21,7 @@ export interface Profil {
   id: string;
   nickname: string;
   avatar_url: string | null;
+  bonus_punkte?: number;
 }
 
 export interface Kommentar {
