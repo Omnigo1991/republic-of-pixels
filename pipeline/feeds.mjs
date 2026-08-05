@@ -21,4 +21,18 @@ export const FEEDS = [
   { id: "computerbase", name: "ComputerBase", url: "https://www.computerbase.de/rss/news.xml", lang: "de", weight: 0.9 },
   { id: "tomshardware", name: "Tom's Hardware", url: "https://www.tomshardware.com/feeds/all", lang: "en", weight: 0.9 },
   { id: "wccftech", name: "Wccftech", url: "https://wccftech.com/feed/", lang: "en", weight: 0.8 },
+  // Reichweiten-Ausbau (05.08.2026 abends): die grossen internationalen und
+  // deutschsprachigen Quellen für maximale Themenabdeckung.
+  { id: "polygon", name: "Polygon", url: "https://www.polygon.com/rss/index.xml", lang: "en", weight: 1.0 },
+  { id: "kotaku", name: "Kotaku", url: "https://kotaku.com/rss", lang: "en", weight: 0.9 },
+  { id: "gamesradar", name: "GamesRadar", url: "https://www.gamesradar.com/feeds.xml", lang: "en", weight: 0.9 },
+  { id: "rps", name: "Rock Paper Shotgun", url: "https://www.rockpapershotgun.com/feed", lang: "en", weight: 0.9 },
+  { id: "vg247", name: "VG247", url: "https://www.vg247.com/feed", lang: "en", weight: 1.0 },
+  { id: "gamespot", name: "GameSpot", url: "https://www.gamespot.com/feeds/game-news/", lang: "en", weight: 0.9 },
+  { id: "gamesindustry", name: "GamesIndustry.biz", url: "https://www.gamesindustry.biz/feed", lang: "en", weight: 1.0 },
+  { id: "eurogamer_de", name: "Eurogamer.de", url: "https://www.eurogamer.de/feed", lang: "de", weight: 1.0 },
+  { id: "meinmmo", name: "MeinMMO", url: "https://mein-mmo.de/feed/", lang: "de", weight: 0.8 },
+  { id: "golem_games", name: "Golem.de Games", url: "https://rss.golem.de/rss.php?tp=games&feed=RSS2.0", lang: "de", weight: 0.8 },
+  { id: "destructoid", name: "Destructoid", url: "https://www.destructoid.com/feed/", lang: "en", weight: 0.7 },
+  { id: "theverge_games", name: "The Verge Games", url: "https://www.theverge.com/rss/games/index.xml", lang: "en", weight: 0.9 },
 ];

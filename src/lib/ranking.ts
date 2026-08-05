@@ -20,36 +20,43 @@ export interface Rang {
   /** Tailwind-Klassen für den Badge-Pill */
   klasse: string;
   beschreibung: string;
+  /** Icon im Badge (Emoji; die Redaktion nutzt das R-Logo als Bild) */
+  icon: string;
 }
 
 export const RAENGE: Rang[] = [
   {
     name: "Neuankömmling",
     ab: 0,
+    icon: "🌱",
     klasse: "border-border-default text-text-secondary bg-text-primary/[0.04]",
     beschreibung: "Frisch in der Republic — willkommen!",
   },
   {
     name: "Bürger:in",
     ab: 10,
+    icon: "🎮",
     klasse: "border-accent/40 text-accent bg-accent/10",
     beschreibung: "Aktives Mitglied der Republic of Pixels.",
   },
   {
     name: "Ratsmitglied",
     ab: 40,
+    icon: "🛡️",
     klasse: "border-accent text-[#0F0D2C] bg-accent font-bold",
     beschreibung: "Prägt die Diskussionen sichtbar mit.",
   },
   {
     name: "Senator:in",
     ab: 120,
+    icon: "🏛️",
     klasse: "border-warning/60 text-warning bg-warning/10 font-bold",
     beschreibung: "Eine tragende Stimme der Community.",
   },
   {
     name: "Pixel-Legende",
     ab: 300,
+    icon: "👑",
     klasse:
       "border-transparent text-[#0F0D2C] bg-gradient-to-r from-accent via-[#7DF3E1] to-warning font-bold",
     beschreibung: "Der höchste Rang der Republic — legendär.",
@@ -59,6 +66,7 @@ export const RAENGE: Rang[] = [
 export const MASTER_RANG: Rang = {
   name: "REDAKTION",
   ab: 0,
+  icon: "R",
   klasse: "border-accent bg-accent text-[#0F0D2C] font-black tracking-wide",
   beschreibung: "Offizieller Account der Republic-of-Pixels-Redaktion.",
 };

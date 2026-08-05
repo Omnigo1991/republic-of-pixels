@@ -123,7 +123,13 @@ export function ProfilAnsicht({ nickname }: { nickname: string }) {
             <h1 className="text-2xl font-semibold tracking-tight text-text-primary sm:text-3xl">
               {profil.nickname}
             </h1>
-            <span className={`rounded-full border px-3 py-1 text-[11px] ${rang.klasse}`}>
+            <span className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-[11px] ${rang.klasse}`}>
+              {istMaster ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src="/brand/r-avatar-navy.png" alt="" className="h-3.5 w-3.5" />
+              ) : (
+                <span aria-hidden="true">{rang.icon}</span>
+              )}
               {rang.name}
             </span>
           </div>
@@ -186,8 +192,9 @@ export function ProfilAnsicht({ nickname }: { nickname: string }) {
             <span
               key={r.name}
               title={`${r.beschreibung} (ab ${r.ab} Punkten)`}
-              className={`rounded-full border px-3 py-1 text-[11px] ${punkte >= r.ab ? r.klasse : "border-border-subtle text-text-disabled"}`}
+              className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-[11px] ${punkte >= r.ab ? r.klasse : "border-border-subtle text-text-disabled"}`}
             >
+              <span aria-hidden="true">{r.icon}</span>
               {r.name}
             </span>
           ))}

@@ -228,7 +228,11 @@ async function main() {
   const candidates = results
     .flatMap((r) => r.items)
     .filter((it) => it.publishedAt && it.publishedAt.getTime() > cutoff)
-    .filter((it) => !state.seen[hashId(it.guid)]);
+    .filter((it) => !state.seen[hashId(it.guid)])
+    // Bei 26 Feeds: nur die 150 neuesten Kandidaten in die Auswahl geben,
+    // damit der Auswahl-Prompt fokussiert bleibt.
+    .sort((a, b) => b.publishedAt.getTime() - a.publishedAt.getTime())
+    .slice(0, 150);
 
   console.log(`2/5 ${candidates.length} neue Kandidaten (Fenster ${MAX_CANDIDATE_AGE_H}h)`);
   if (candidates.length === 0) {

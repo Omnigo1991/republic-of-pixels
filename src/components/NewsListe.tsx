@@ -27,7 +27,7 @@ export function NewsListe({ articles }: { articles: Article[] }) {
             onClick={() => setSichtbar((s) => s + SCHRITT)}
             className="rounded-full border border-accent/50 px-6 py-2.5 text-sm font-semibold text-accent transition-colors hover:bg-accent/10"
           >
-            Mehr anzeigen ({rest} weitere)
+            Mehr anzeigen
           </button>
         </div>
       )}

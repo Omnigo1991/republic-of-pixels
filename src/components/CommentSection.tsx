@@ -274,7 +274,9 @@ function EinKommentar(props: {
           <span className="text-sm font-semibold text-text-primary">Unbekannt</span>
         )}
         {k.profiles?.nickname === MASTER_NICKNAME && (
-          <span className={`rounded-full border px-2 py-0.5 text-[9px] ${MASTER_RANG.klasse}`}>
+          <span className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[9px] ${MASTER_RANG.klasse}`}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/brand/r-avatar-navy.png" alt="" className="h-2.5 w-2.5" />
             REDAKTION
           </span>
         )}
