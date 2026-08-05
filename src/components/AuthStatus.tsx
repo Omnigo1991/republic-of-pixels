@@ -64,7 +64,7 @@ export function AuthStatus() {
           {istMaster ? (
             <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#0F0D2C]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/brand/r-mark.png" alt="" className="h-4 w-auto" />
+              <img src="/brand/r-mark.png" alt="" className="h-4 w-auto translate-x-[2px] translate-y-[2px]" />
             </span>
           ) : profil?.avatar_url ? (
             // eslint-disable-next-line @next/next/no-img-element

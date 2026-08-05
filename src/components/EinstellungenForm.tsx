@@ -19,6 +19,7 @@ export function EinstellungenForm() {
   const [nickMeldung, setNickMeldung] = useState<string | null>(null);
   const [passwort, setPasswort] = useState("");
   const [pwMeldung, setPwMeldung] = useState<string | null>(null);
+  const [avatarMeldung, setAvatarMeldung] = useState<string | null>(null);
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data }) => {
@@ -59,6 +60,21 @@ export function EinstellungenForm() {
           : "Ungültig: 3–24 Zeichen; Buchstaben, Zahlen, Punkt, Minus, Unterstrich."
         : "Gespeichert — dein neuer Nickname ist aktiv."
     );
+  }
+
+  async function avatarSpeichern(url: string | null) {
+    if (!profil) return;
+    setAvatarMeldung(null);
+    const { error } = await supabase
+      .from("profiles")
+      .update({ avatar_url: url })
+      .eq("id", profil.id);
+    if (error) {
+      setAvatarMeldung("Speichern fehlgeschlagen — bitte erneut versuchen.");
+      return;
+    }
+    setProfil({ ...profil, avatar_url: url });
+    setAvatarMeldung("Profilbild gespeichert.");
   }
 
   async function passwortSpeichern() {
@@ -127,6 +143,48 @@ export function EinstellungenForm() {
           </button>
         </div>
         {nickMeldung && <p className="mt-2 text-xs text-text-secondary">{nickMeldung}</p>}
+      </div>
+
+      {/* Profilbild */}
+      <div className="mt-6 rounded-2xl border border-border-subtle bg-surface-card p-6">
+        <h2 className="text-lg font-semibold text-text-primary">Profilbild</h2>
+        <p className="mt-1 text-xs text-text-tertiary">
+          Wähle einen Pixel-Sprite — oder deine Initiale bzw. dein Login-Profilbild.
+        </p>
+        <div className="mt-4 flex flex-wrap items-center gap-3">
+          {/* Initiale (kein Bild) */}
+          <button
+            onClick={() => avatarSpeichern(null)}
+            title="Initiale verwenden"
+            className={`flex h-12 w-12 items-center justify-center rounded-full bg-accent-wash text-lg font-bold text-accent transition-transform hover:scale-105 ${profil?.avatar_url === null ? "ring-2 ring-accent" : "ring-1 ring-border-default"}`}
+          >
+            {(profil?.nickname ?? "?").slice(0, 1).toUpperCase()}
+          </button>
+          {/* Login-Profilbild (falls vorhanden) */}
+          {typeof session.user.user_metadata?.avatar_url === "string" && (
+            <button
+              onClick={() => avatarSpeichern(session.user.user_metadata.avatar_url as string)}
+              title="Profilbild aus deinem Login-Konto"
+              className={`h-12 w-12 overflow-hidden rounded-full transition-transform hover:scale-105 ${profil?.avatar_url === session.user.user_metadata.avatar_url ? "ring-2 ring-accent" : "ring-1 ring-border-default"}`}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={session.user.user_metadata.avatar_url as string} alt="" className="h-full w-full object-cover" referrerPolicy="no-referrer" />
+            </button>
+          )}
+          {/* Pixel-Sprites */}
+          {Array.from({ length: 12 }, (_, i) => `/avatars/sprite-${String(i + 1).padStart(2, "0")}.svg`).map((pfad) => (
+            <button
+              key={pfad}
+              onClick={() => avatarSpeichern(pfad)}
+              title="Pixel-Sprite wählen"
+              className={`h-12 w-12 overflow-hidden rounded-full transition-transform hover:scale-105 ${profil?.avatar_url === pfad ? "ring-2 ring-accent" : "ring-1 ring-border-default"}`}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={pfad} alt="" className="h-full w-full" />
+            </button>
+          ))}
+        </div>
+        {avatarMeldung && <p className="mt-3 text-xs text-text-secondary">{avatarMeldung}</p>}
       </div>
 
       {/* Passwort (nur E-Mail-Konten) */}

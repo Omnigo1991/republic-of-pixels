@@ -14,6 +14,7 @@ import { ArticleBody } from "@/components/ArticleBody";
 import { TldrBox, WhyItMattersBox, ReviewBox, SourcesBox } from "@/components/ArticleBoxes";
 import { ShareButtons } from "@/components/ShareButtons";
 import { CommentSection } from "@/components/CommentSection";
+import { ArticleReactions } from "@/components/ArticleReactions";
 import { ArticleCard } from "@/components/ArticleCard";
 import { formatDateTime, splitTitle } from "@/lib/format";
 import { Masthead } from "@/components/Masthead";
@@ -142,7 +143,8 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
 
         <SourcesBox sources={article.sources} />
 
-        <div className="my-8 flex flex-wrap items-center justify-end gap-4 border-y border-border-subtle py-6">
+        <div className="my-8 flex flex-wrap items-center justify-between gap-4 border-y border-border-subtle py-6">
+          <ArticleReactions articleSlug={article.slug} />
           <ShareButtons title={article.title} />
         </div>
 

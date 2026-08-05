@@ -106,15 +106,15 @@ export function ProfilAnsicht({ nickname }: { nickname: string }) {
       {/* Kopf */}
       <div className={`flex flex-col items-start gap-6 rounded-2xl border p-6 sm:flex-row sm:items-center sm:p-8 ${istMaster ? "border-accent/50 bg-accent-wash/25" : "border-border-subtle bg-surface-card"}`}>
         {istMaster ? (
-          <span className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-[#0F0D2C]">
+          <span className="flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden rounded-full bg-[#0F0D2C]">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/brand/r-mark.png" alt="" className="h-12 w-auto" />
+            <img src="/brand/r-mark.png" alt="" className="h-10 w-auto translate-x-[5px] translate-y-[5px]" />
           </span>
         ) : profil.avatar_url ? (
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={profil.avatar_url} alt="" className="h-20 w-20 shrink-0 rounded-2xl" referrerPolicy="no-referrer" />
+          <img src={profil.avatar_url} alt="" className="h-20 w-20 shrink-0 rounded-full object-cover" referrerPolicy="no-referrer" />
         ) : (
-          <span className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-accent-wash text-3xl font-bold text-accent">
+          <span className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-accent-wash text-3xl font-bold text-accent">
             {profil.nickname.slice(0, 1).toUpperCase()}
           </span>
         )}
