@@ -1,10 +1,8 @@
 import type { Config } from "tailwindcss";
 
-// Design-Tokens, Dark-First (Betreiber-Entscheidung 05.08.2026): Die Seite ist
-// grundsätzlich dunkel — sehr tiefes Navy-Schwarz als Basis (dunkler als das
-// Logo-Navy, damit es nicht "navy-lastig" wirkt), das Logo-Navy #0F0D2C als
-// Band für Header/Hero, Cyan #02F0D1 in voller Leuchtkraft als Akzent (auf
-// dunklem Grund voll AA-lesbar). Herleitung der Originalwerte: docs/konzept.md §3.
+// Design-Tokens, Dark-First V2 "Graphit" (Betreiber-Entscheidung 05.08.2026):
+// neutrales Dunkelgrau statt Navy (Discord-Schule) — beste Lesbarkeit bei
+// langen Artikeln, Bilder ohne Farbstich, Cyan #02F0D1 als einziger Akzent.
 const config: Config = {
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   darkMode: "class",
@@ -12,17 +10,17 @@ const config: Config = {
     extend: {
       colors: {
         bg: {
-          base: "#0B0A1E",
-          elevated: "#100E26",
+          base: "#121316",
+          elevated: "#17181C",
         },
         surface: {
-          card: "#151330",
-          hover: "#1A1838",
+          card: "#1A1C21",
+          hover: "#20232A",
         },
         border: {
-          subtle: "#201E3E",
-          default: "#2A2850",
-          strong: "#3C3A68",
+          subtle: "#26282E",
+          default: "#32353D",
+          strong: "#464B56",
         },
         accent: {
           DEFAULT: "#02F0D1",
@@ -33,9 +31,9 @@ const config: Config = {
         },
         text: {
           primary: "#F1F0F2",
-          secondary: "#A9A9C0",
-          tertiary: "#7D7C99",
-          disabled: "#52516B",
+          secondary: "#A8ABB4",
+          tertiary: "#7C7F89",
+          disabled: "#51545D",
         },
         success: "#2ED47A",
         warning: "#F5B942",
@@ -43,12 +41,12 @@ const config: Config = {
         // Marken-Navy-Band (Header/Hero/Footer) — minimal heller als bg.base,
         // damit die Zonen sich subtil absetzen.
         navy: {
-          DEFAULT: "#0F0D2C",
-          raised: "#171533",
-          border: "#26244A",
+          DEFAULT: "#17181C",
+          raised: "#1D1F24",
+          border: "#26282E",
           text: "#F1F0F2",
-          muted: "#A9A9C0",
-          dim: "#7D7C99",
+          muted: "#A8ABB4",
+          dim: "#7C7F89",
         },
       },
       fontFamily: {
