@@ -1,7 +1,7 @@
 import { getTopStory, getPopularArticles, getChronological } from "@/lib/articles";
 import { TopStory } from "@/components/TopStory";
 import { PopularSection } from "@/components/PopularSection";
-import { ArticleListItem } from "@/components/ArticleListItem";
+import { NewsListe } from "@/components/NewsListe";
 import { CategoryChipBar } from "@/components/CategoryChipBar";
 import { ReleaseRadar } from "@/components/ReleaseRadar";
 import { Reveal } from "@/components/Reveal";
@@ -45,13 +45,7 @@ export default function HomePage() {
               Chronologisch, neueste zuerst
             </p>
           </Reveal>
-          <div className="flex flex-col">
-            {chronological.map((article, i) => (
-              <Reveal key={article.slug} delayMs={(i % 3) * 80}>
-                <ArticleListItem article={article} />
-              </Reveal>
-            ))}
-          </div>
+          <NewsListe articles={chronological} />
         </section>
       </div>
     </>

@@ -17,4 +17,8 @@ export const FEEDS = [
   { id: "gamestar", name: "GameStar", url: "https://www.gamestar.de/news/rss/news.rss", lang: "de", weight: 1.0 },
   { id: "play3", name: "play3.de", url: "https://www.play3.de/feed/", lang: "de", weight: 0.9 },
   // GamePro blockt Bot-Abrufe serverseitig (HTTP 403, geprüft 04.08.2026) — entfernt.
+  // Hardware & Konsolen-Ökosystem (05.08.2026: PS6-/Xbox-Helix-Leaks, GPUs, Handhelds)
+  { id: "computerbase", name: "ComputerBase", url: "https://www.computerbase.de/rss/news.xml", lang: "de", weight: 0.9 },
+  { id: "tomshardware", name: "Tom's Hardware", url: "https://www.tomshardware.com/feeds/all", lang: "en", weight: 0.9 },
+  { id: "wccftech", name: "Wccftech", url: "https://wccftech.com/feed/", lang: "en", weight: 0.8 },
 ];

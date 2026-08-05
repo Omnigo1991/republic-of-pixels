@@ -1,5 +1,25 @@
 [
   {
+    "title": "Marvel Tōkon: Fighting Souls",
+    "date": "2026-08-06",
+    "platforms": ["playstation", "pc"]
+  },
+  {
+    "title": "Star Wars Zero Company",
+    "date": "2026-08-27",
+    "platforms": ["pc", "playstation", "xbox"]
+  },
+  {
+    "title": "The Immortal John Triptych",
+    "date": "2026-08-27",
+    "platforms": ["pc", "playstation", "xbox", "nintendo"]
+  },
+  {
+    "title": "Captain Tsubasa 2: World Fighters",
+    "date": "2026-08-28",
+    "platforms": ["pc", "playstation", "xbox", "nintendo"]
+  },
+  {
     "title": "Crimson Moon",
     "date": "2026-09-01",
     "platforms": ["playstation", "xbox", "pc"],

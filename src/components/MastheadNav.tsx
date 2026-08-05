@@ -11,8 +11,10 @@ import { AuthStatus } from "./AuthStatus";
 export function MastheadNav({ withMark = true }: { withMark?: boolean }) {
   return (
     <div className="relative mx-auto flex h-14 max-w-content items-center justify-between px-4 sm:px-6 lg:h-[72px] lg:justify-center lg:gap-3 lg:px-8">
-      <Link href="/" aria-label="Republic of Pixels – Startseite" className="flex items-center gap-2">
-        {withMark && (
+      <Link href="/" aria-label="Republic of Pixels – Startseite" className="flex items-center gap-3.5">
+        {/* R immer sichtbar (Betreiber-Vorgabe 05.08.: Header überall wie im
+            Scroll-Zustand); withMark bleibt für Sonderfälle erhalten. */}
+        {withMark !== false && (
           // eslint-disable-next-line @next/next/no-img-element
           <img src="/brand/r-mark-navy.png" alt="" aria-hidden="true" className="h-7 w-auto lg:h-9" />
         )}

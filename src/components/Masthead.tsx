@@ -40,7 +40,7 @@ export function Masthead({
           Republic of Pixels
         </div>
 
-        <MastheadNav withMark={false} />
+        <MastheadNav withMark />
 
         {/* Mobile kompakt (R proportional wie Desktop), Desktop grosszügig. */}
         {variant === "brand" && (

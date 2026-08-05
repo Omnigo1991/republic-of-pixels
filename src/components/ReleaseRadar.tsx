@@ -15,11 +15,13 @@ interface ReleaseEntry {
 // wird redaktionell bzw. künftig von der Pipeline gepflegt; vergangene Termine
 // fallen beim Build automatisch raus.
 export function ReleaseRadar() {
+  // Zeigt alle Termine der kommenden zwei Monate (Betreiber-Vorgabe 05.08.2026).
   const today = new Date().toISOString().slice(0, 10);
+  const inZweiMonaten = new Date(Date.now() + 62 * 86400000).toISOString().slice(0, 10);
   const upcoming = (releasesData as unknown as ReleaseEntry[])
-    .filter((r) => r.date >= today)
+    .filter((r) => r.date >= today && r.date <= inZweiMonaten)
     .sort((a, b) => a.date.localeCompare(b.date))
-    .slice(0, 6);
+    .slice(0, 9);
 
   if (upcoming.length === 0) return null;
 

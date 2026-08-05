@@ -43,6 +43,6 @@ export function ArticleBody({ blocks }: { blocks: BodyBlock[] }) {
 function slugify(text: string) {
   return text
     .toLowerCase()
-    .replace(/[^a-z0-9äöüß\s-]/g, "")
+    .replace(/[^a-z0-9äöüss\s-]/g, "")
     .replace(/\s+/g, "-");
 }

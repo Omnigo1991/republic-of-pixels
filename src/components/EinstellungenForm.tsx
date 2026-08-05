@@ -77,6 +77,29 @@ export function EinstellungenForm() {
     setAvatarMeldung("Profilbild gespeichert.");
   }
 
+  async function avatarHochladen(datei: File) {
+    if (!profil || !session) return;
+    setAvatarMeldung(null);
+    if (datei.size > 2 * 1024 * 1024) {
+      setAvatarMeldung("Bitte ein Bild bis maximal 2 MB wählen.");
+      return;
+    }
+    const endung = datei.type === "image/png" ? "png" : datei.type === "image/webp" ? "webp" : "jpg";
+    const pfad = `${session.user.id}/avatar-${Date.now()}.${endung}`;
+    const { error } = await supabase.storage.from("avatars").upload(pfad, datei, {
+      upsert: true,
+      contentType: datei.type,
+    });
+    if (error) {
+      setAvatarMeldung(
+        "Upload fehlgeschlagen — der Bilderspeicher ist noch nicht eingerichtet (schema-v3.sql) oder das Format wird nicht unterstützt."
+      );
+      return;
+    }
+    const { data } = supabase.storage.from("avatars").getPublicUrl(pfad);
+    await avatarSpeichern(data.publicUrl);
+  }
+
   async function passwortSpeichern() {
     setPwMeldung(null);
     const { error } = await supabase.auth.updateUser({ password: passwort });
@@ -184,6 +207,19 @@ export function EinstellungenForm() {
             </button>
           ))}
         </div>
+        <label className="mt-4 inline-flex cursor-pointer items-center gap-2 rounded-full border border-accent/50 px-4 py-2 text-sm font-medium text-accent transition-colors hover:bg-accent/10">
+          Eigenes Bild hochladen (max. 2 MB)
+          <input
+            type="file"
+            accept="image/png,image/jpeg,image/webp"
+            className="hidden"
+            onChange={(e) => {
+              const datei = e.target.files?.[0];
+              if (datei) avatarHochladen(datei);
+              e.target.value = "";
+            }}
+          />
+        </label>
         {avatarMeldung && <p className="mt-3 text-xs text-text-secondary">{avatarMeldung}</p>}
       </div>
 

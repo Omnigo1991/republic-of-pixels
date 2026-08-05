@@ -84,7 +84,7 @@ Redaktionelles Profil:
 - Ton: sachlich, präzise, journalistisch — wie ein kuratiertes Magazin, nicht wie ein Ticker
 - Kein Clickbait, keine Superlative, keine rhetorischen Fragen in Titeln
 - Leaks und Gerüchte werden klar als unbestätigt gekennzeichnet
-- Sprache: Deutsch (de-DE), Anrede der Leserschaft neutral oder "ihr", nie "Sie"
+- Sprache: Deutsch in SCHWEIZER Rechtschreibung — NIEMALS "ß", immer "ss" (Musst, gross, heisst); Anrede der Leserschaft neutral oder "ihr", nie "Sie"
 - Fakten stammen ausschliesslich aus dem gelieferten Quellmaterial — nichts erfinden, keine Zahlen oder Zitate ergänzen, die dort nicht stehen`;
 
 // Titel der zuletzt veröffentlichten Artikel — verhindert bei stündlichen Läufen,
@@ -123,7 +123,7 @@ ${publishedBlock}
 
 Aufgaben:
 1. Erkenne Duplikate: Meldungen zur selben Nachricht bilden einen Cluster (Indizes zusammenfassen).
-2. Wähle die maximal ${MAX_ARTICLES_PER_RUN} relevantesten Cluster für unser Magazin aus. Kriterien: Nachrichtenwert für deutschsprachige Gamer:innen, Aktualität, Substanz (keine reinen Deals-/Gewinnspiel-/Guide-Meldungen, keine Hardware-Kleinstmeldungen, keine Meldungen über einzelne Streamer).
+2. Wähle die maximal ${MAX_ARTICLES_PER_RUN} relevantesten Cluster für unser Magazin aus. Kriterien: Nachrichtenwert für deutschsprachige Gamer:innen, Aktualität, Substanz. Ausdrücklich erwünscht sind auch Hardware- und Konsolen-Themen mit Gaming-Relevanz: kommende Konsolen und Leaks dazu (z. B. PlayStation 6, nächste Xbox/Project Helix, Switch-Nachfolger), GPUs/CPUs fürs Gaming, Handhelds. NICHT erwünscht: reine Deals-/Gewinnspiel-/Guide-Meldungen, Kleinst-Hardware ohne Gaming-Bezug (Peripherie-Restposten, Büro-Hardware), Meldungen über einzelne Streamer.
 3. Pro ausgewähltem Cluster bestimme:
    - "indices": alle zugehörigen Kandidaten-Indizes, den faktenreichsten zuerst
    - "category": "breaking" (nur bei wirklich grossen Nachrichten), "news" oder "leaks"
@@ -189,7 +189,8 @@ Antworte NUR mit einem JSON-Objekt mit exakt diesen Feldern:
 Hinweis zu body: quote-Blöcke nur verwenden, wenn die Quelle ein wörtliches Zitat enthält.`;
 
   const raw = await askClaude({ system: EDITORIAL_SYSTEM, prompt, maxTokens: 8000 });
-  const draft = parseJsonResponse(raw);
+  // Sicherheitsnetz Schweizer Rechtschreibung: ß kommt nie auf die Seite.
+  const draft = JSON.parse(JSON.stringify(parseJsonResponse(raw)).replaceAll("\u00df", "ss").replaceAll("ß", "ss"));
 
   // Von der Pipeline kontrollierte Felder — das Modell entscheidet hier nicht.
   const words = (draft.body ?? [])
