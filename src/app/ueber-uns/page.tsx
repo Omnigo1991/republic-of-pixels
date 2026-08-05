@@ -33,35 +33,28 @@ export default function UeberUnsPage() {
         </ul>
 
         <h2>Der Kopf hinter der Republic</h2>
-        <div className="my-6 flex flex-col items-start gap-6 rounded-2xl border border-border-subtle bg-surface-card p-6 sm:flex-row sm:items-center not-prose">
+        <div className="relative my-24 rounded-2xl border border-accent/35 bg-surface-card p-6 pt-20 text-center not-prose">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/team/tim.webp"
             alt="Tim, Gründer von Republic of Pixels"
-            className="h-28 w-28 shrink-0 rounded-full object-cover"
+            className="absolute -top-16 left-1/2 h-32 w-32 -translate-x-1/2 rounded-full object-cover ring-2 ring-accent"
           />
-          <div>
-            <p className="text-lg font-semibold text-text-primary">
-              Tim <span className="ml-1 text-sm font-normal text-text-tertiary">Gründer &amp; Herausgeber</span>
-            </p>
-            <p className="mt-2 text-[15px] leading-relaxed text-text-secondary">
-              Tims Gaming-Geschichte beginnt dort, wo sie für viele beginnt: vor dem
-              Röhrenfernseher, mit <em>The Legend of Zelda: Ocarina of Time</em> — dem Moment,
-              in dem klar wurde, dass Spiele mehr sind als Zeitvertreib. Seither hat ihn keine
-              Plattform mehr losgelassen: von Nintendo-Klassikern über die PlayStation- und
-              Xbox-Generationen bis zum PC.
-            </p>
-            <p className="mt-2 text-[15px] leading-relaxed text-text-secondary">
-              Republic of Pixels hat er gegründet, weil ihm in der deutschsprachigen
-              Gaming-Landschaft etwas fehlte: ein Magazin, das Nachrichten ernst nimmt und
-              einordnet statt übertreibt — und dabei so aussieht, wie sich modernes Gaming
-              anfühlt. In den Kommentaren trifft man ihn als{" "}
-              <Link href="/profil/republicofpixels" className="text-accent">
-                republicofpixels
-              </Link>
-              .
-            </p>
-          </div>
+          <p className="text-lg font-semibold text-text-primary">
+            Tim <span className="ml-1 text-sm font-normal text-text-tertiary">Gründer &amp; Herausgeber</span>
+          </p>
+          <p className="mx-auto mt-4 max-w-lg text-[15px] leading-relaxed text-text-secondary">
+            Alles begann vor einem Röhrenfernseher: <em>The Legend of Zelda: Ocarina of Time</em>{" "}
+            war für Tim der Moment, in dem aus Spielen eine Leidenschaft wurde. Seither zieht
+            sie sich durch jede Plattform-Generation — von Nintendo über PlayStation und Xbox
+            bis zum PC.
+          </p>
+          <p className="mx-auto mt-3 max-w-lg text-[15px] leading-relaxed text-text-secondary">
+            Aus dieser Leidenschaft ist Republic of Pixels entstanden: ein Magazin, das
+            Gaming-News ernst nimmt, einordnet statt übertreibt — und so aussieht, wie sich
+            modernes Gaming anfühlt. In den Kommentaren trifft man ihn als{" "}
+            <Link href="/profil/republicofpixels" className="text-accent">republicofpixels</Link>.
+          </p>
         </div>
 
         <h2>Wie unsere Redaktion arbeitet</h2>
