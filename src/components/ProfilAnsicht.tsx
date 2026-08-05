@@ -133,7 +133,7 @@ export function ProfilAnsicht({ nickname }: { nickname: string }) {
           </div>
           <p className="mt-2 text-sm text-text-secondary">
             {istMaster
-              ? "Offizieller Account der Republic-of-Pixels-Redaktion."
+              ? "Offizieller Account der Redaktion von Republic of Pixels."
               : rang.beschreibung}
           </p>
           {beitritt && (

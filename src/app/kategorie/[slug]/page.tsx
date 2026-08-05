@@ -18,7 +18,7 @@ const CATEGORY_INTRO: Record<Category, string> = {
   breaking: "Die wichtigsten Eilmeldungen der Gaming-Branche — geprüft, eingeordnet, ohne Aufregung um der Aufregung willen.",
   news: "Der komplette News-Fluss aus PC-, Konsolen- und Branchenwelt.",
   leaks: "Gerüchte und Insider-Infos — klar gekennzeichnet, kritisch eingeordnet, nie als Fakt verkauft.",
-  reviews: "Unser Urteil zu aktuellen Releases, mit dem Republic-of-Pixels-Label-System statt Punktewertung.",
+  reviews: "Unser Urteil zu aktuellen Releases, mit dem Label-System von Republic of Pixels statt Punktewertung.",
 };
 
 const PLATFORM_INTRO: Record<Platform, string> = {

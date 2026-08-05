@@ -36,7 +36,7 @@ export function ReviewBox({ review }: { review: Review }) {
     <div className="my-10 rounded-2xl border border-border-default bg-surface-card p-6 sm:p-8">
       <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
         <p className="text-[13px] font-semibold tracking-wide text-text-tertiary">
-          REPUBLIC-OF-PIXELS-URTEIL
+          URTEIL VON REPUBLIC OF PIXELS
         </p>
         <ReviewLabelBadge label={review.label} />
       </div>

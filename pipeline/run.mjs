@@ -86,6 +86,7 @@ Redaktionelles Profil:
 - Kein Clickbait, keine Superlative, keine rhetorischen Fragen in Titeln
 - Leaks und Gerüchte werden klar als unbestätigt gekennzeichnet
 - Sprache: Deutsch in SCHWEIZER Rechtschreibung — NIEMALS "ß", immer "ss" (Musst, gross, heisst); Anrede der Leserschaft neutral oder "ihr", nie "Sie"
+- "Republic of Pixels" ist ein Markenname und wird NIEMALS mit Bindestrichen verbunden (kein "Republic-of-Pixels-Redaktion" o. Ä.) — bei Wortverbindungen umschreiben, z. B. "Redaktion von Republic of Pixels"
 - Fakten stammen ausschliesslich aus dem gelieferten Quellmaterial — nichts erfinden, keine Zahlen oder Zitate ergänzen, die dort nicht stehen`;
 
 // Titel der zuletzt veröffentlichten Artikel — verhindert bei stündlichen Läufen,

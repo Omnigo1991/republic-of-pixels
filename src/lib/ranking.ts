@@ -71,7 +71,7 @@ export const MASTER_RANG: Rang = {
   ab: 0,
   icon: "R",
   klasse: "border-accent bg-accent text-[#0F0D2C] font-black tracking-wide",
-  beschreibung: "Offizieller Account der Republic-of-Pixels-Redaktion.",
+  beschreibung: "Offizieller Account der Redaktion von Republic of Pixels.",
 };
 
 export function rangFuer(punkte: number, nickname: string): Rang {
