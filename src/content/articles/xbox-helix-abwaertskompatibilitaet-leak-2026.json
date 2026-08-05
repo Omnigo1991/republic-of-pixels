@@ -1,0 +1,96 @@
+{
+  "slug": "xbox-helix-abwaertskompatibilitaet-leak-2026",
+  "title": "Geleaktes Memo: Xbox Helix soll gesamte Konsolengeschichte abspielen",
+  "subtitle": "Ein unbestätigtes internes Dokument beschreibt Pläne für Abwärtskompatibilität von Original-Xbox und Xbox 360 auf PC und Next-Gen-Konsole",
+  "excerpt": "Laut einem geleakten Microsoft-Memo soll die kommende Xbox Helix samt PC praktisch die gesamte Xbox-Historie abspielen können. Publisher werden zum Opt-in für alte Titel aufgerufen, Details gelten als unbestätigt.",
+  "seoTitle": "Xbox Helix: Leak zu Abwärtskompatibilität aller Xbox-Spiele",
+  "metaDescription": "Ein geleaktes Memo soll zeigen, wie Microsoft Xbox-360- und Original-Xbox-Spiele auf Helix und PC bringen will. Details noch unbestätigt.",
+  "category": "news",
+  "platforms": [
+    "xbox",
+    "pc"
+  ],
+  "tags": [
+    "Xbox Helix",
+    "Abwärtskompatibilität",
+    "Xbox 360",
+    "Microsoft",
+    "Leak"
+  ],
+  "tldr": [
+    "Geleaktes internes Memo (laut Berichten von The Verge) beschreibt Pläne für weitreichende Abwärtskompatibilität auf Xbox Helix und PC",
+    "Original-Xbox- und Xbox-360-Titel sollen per Emulator ohne Entwickleraufwand verfügbar werden",
+    "Zwei Programme genannt: Disc-to-Digital-Lizenzierung (Programm 01) und Publisher-Opt-in für Altspiele (Programm 02)",
+    "Vier Original-Xbox-Spiele mit eingebautem 360-Emulator sind laut Berichten bereits seit vergangenem Monat auf PC erhältlich"
+  ],
+  "whyItMatters": "Sollte sich der Leak bestätigen, würde Xbox Helix potenziell die grösste Spielebibliothek aller Konsolen bündeln – ein zentrales Argument im Wettbewerb mit PlayStation und dem PC-Markt. Für Spielende bedeutet das mehr Zugriff auf klassische Titel über verschiedene Geräte hinweg.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Ein internes Dokument, das laut Berichten von The Verge vorliegt, soll zeigen, wie weit Microsoft die Abwärtskompatibilität für die kommende Xbox Helix treiben will. Demnach sollen nicht nur Titel für Xbox One und Xbox Series, sondern auch Spiele der ursprünglichen Xbox und der Xbox 360 auf Helix, PC und künftigen Handhelds laufen. Die Informationen stammen aus einem geleakten Memo und gelten bislang als unbestätigt."
+    },
+    {
+      "type": "heading",
+      "text": "Zwei Programme für ein gemeinsames Ökosystem"
+    },
+    {
+      "type": "paragraph",
+      "text": "Laut den Berichten unterscheidet das Dokument zwischen zwei Ansätzen, die Microsoft offenbar parallel verfolgt, um die verschiedenen Xbox-Generationen zusammenzuführen."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Programm 01 (Disc-to-Digital): Physische Datenträger ab der Xbox-One-Generation sollen sich in eine digitale, kontogebundene Lizenz umwandeln lassen. Diese bleibt gültig, bis die Disc in einer anderen Konsole verwendet wird – dann wandert die Lizenz zum Konto der nächsten Person.",
+        "Programm 02 (Publisher-Opt-in): Entwicklerstudios sollen selbst entscheiden, ob ihre alten Xbox- und Xbox-360-Titel per Emulation verfügbar gemacht werden, inklusive Preis und Game-Pass-Aufnahme. Laut Memo übernimmt Microsoft dabei sämtliche technische Arbeit, den massgeschneiderten Emulator, Zertifizierung, Storefront-Präsentation und Support, während Publisher „rights, pricing, and brand control“ behalten sollen."
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "it looks like devs won't have to do any engineering work to get Xbox 360 and Xbox games on PC. Microsoft's Xbox PC emulator handles it all",
+      "attribution": "Tom Warren, The Verge"
+    },
+    {
+      "type": "heading",
+      "text": "Was laut Berichten bereits läuft"
+    },
+    {
+      "type": "paragraph",
+      "text": "Erste Schritte sollen bereits umgesetzt sein: Vier Titel der ursprünglichen Xbox sind seit vergangenem Monat über den Xbox Store auf PC erhältlich. Dataminer fanden dabei laut den Berichten heraus, dass im Hintergrund tatsächlich ein Xbox-360-Emulator arbeitet, der die erste Xbox emuliert – und in Teilen bereits Xbox-360-Spiele zum Laufen bringt. Für die vollständige Ausrollung der Xbox-Emulation wird im Dokument offenbar Oktober 2026 als Zieltermin genannt. Beim Disc-to-Digital-Feature soll ursprünglich ein Insider-Test im Juli 2026 vorgesehen gewesen sein, der jedoch abgesagt wurde; eine Veröffentlichung wird den Berichten zufolge noch innerhalb dieses Jahres erwartet."
+    },
+    {
+      "type": "paragraph",
+      "text": "Da es sich um ein geleaktes internes Dokument handelt, sind Zeitpläne und Details bislang nicht offiziell von Microsoft bestätigt. Sollte sich die Strategie so umsetzen lassen, würde sie das Versprechen einer PC-nahen Konsole mit einem beinahe lückenlosen Zugriff auf die gesamte Xbox-Historie verbinden."
+    }
+  ],
+  "isLeakOrRumor": true,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-05T15:54:26.310Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "controller",
+  "sources": [
+    {
+      "title": "Microsoft wants the next-gen Xbox Helix to play every Xbox game ever made as it urges publishers to opt in — New report also claims Xbox 360 games coming to PC soon",
+      "url": "https://www.tomshardware.com/video-games/xbox/microsoft-wants-the-next-gen-xbox-helix-to-play-every-xbox-game-ever-made-as-it-urges-publishers-to-opt-in-new-report-also-claims-xbox-360-games-coming-to-pc-soon",
+      "publisher": "Tom's Hardware"
+    },
+    {
+      "title": "Abwärtskompatibilität: Xbox-360-Spiele kommen auf PC und Next-Gen-Xbox",
+      "url": "https://www.computerbase.de/news/gaming/abwaertskompatibilitaet-xbox-360-spiele-kommen-auf-pc-und-next-gen-xbox.98710/",
+      "publisher": "ComputerBase"
+    }
+  ],
+  "review": null,
+  "image": {
+    "src": "/images/articles/xbox-helix-abwaertskompatibilitaet-leak-2026.webp",
+    "alt": "Geleaktes Memo: Xbox Helix soll gesamte Konsolengeschichte abspielen",
+    "credit": "Bild: Tom's Hardware",
+    "sourceUrl": "https://www.tomshardware.com/video-games/xbox/microsoft-wants-the-next-gen-xbox-helix-to-play-every-xbox-game-ever-made-as-it-urges-publishers-to-opt-in-new-report-also-claims-xbox-360-games-coming-to-pc-soon"
+  },
+  "relatedSlugs": [
+    "fortnite-kingdom-hearts-leak-2026",
+    "halo-campaign-evolved-turbulente-entwicklung",
+    "xbox-preiserhoehung-europa-2026"
+  ]
+}
