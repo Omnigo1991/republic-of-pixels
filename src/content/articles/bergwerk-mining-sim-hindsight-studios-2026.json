@@ -1,0 +1,103 @@
+{
+  "slug": "bergwerk-mining-sim-hindsight-studios-2026",
+  "title": "Bergwerk: Deutsches Studio zeigt realistische Kohlebergbau-Simulation",
+  "subtitle": "Hindsight Studios kündigt mit Bergwerk – A Mining Sim einen Simulator an, in dem einstürzende Tunnel zur echten Gefahr werden.",
+  "excerpt": "Das NRW-Studio Hindsight Studios arbeitet an Bergwerk – A Mining Sim, einer Kohlebergbau-Simulation mit realistischer Grubenstatik. Erscheinen soll sie für PC, PS5 und Xbox Series X/S.",
+  "seoTitle": "Bergwerk – A Mining Sim: Kohlebergbau-Simulation angekündigt",
+  "metaDescription": "Bergwerk – A Mining Sim von Hindsight Studios bringt realistische Grubenstatik und Kohleabbau nach PC, PS5 und Xbox Series X/S. Alle Infos zum Simulator.",
+  "category": "news",
+  "platforms": [
+    "pc",
+    "playstation",
+    "xbox"
+  ],
+  "tags": [
+    "Bergwerk",
+    "Hindsight Studios",
+    "Aerosoft",
+    "Simulation",
+    "Kohlebergbau"
+  ],
+  "tldr": [
+    "Hindsight Studios (Herten, NRW) entwickelt die Kohlebergbau-Simulation Bergwerk – A Mining Sim",
+    "Grubenstatik ist zentrale Mechanik: Ohne Stützen und Lastverteilung können Tunnel einstürzen",
+    "Spielprinzip umfasst Werksplanung, Kohleabbau, Transportnetz und Verkauf auf dynamischem Markt",
+    "Release für PC (Steam), PS5 und Xbox Series X/S geplant, Termin noch offen"
+  ],
+  "whyItMatters": "Realismus-Simulationen aus Deutschland haben mit Titeln wie dem Landwirtschafts-Simulator bewiesen, dass sie auch abseits klassischer Genres kommerziell erfolgreich sein können. Bergwerk übertragt dieses Prinzip erstmals konsequent auf den Bergbau und setzt dabei auf physikalisch simulierte Gefahren statt reiner Abbau-Mechanik.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Das nordrhein-westfälische Studio Hindsight Studios mit Sitz in Herten hat seinen ersten großen Titel vorgestellt: Bergwerk – A Mining Sim. Die Simulation dreht sich um die Leitung eines Bergbauunternehmens im Kohle-Tagebau und -Untertagebau und wird vom deutschen Publisher Aerosoft vertrieben, zu dessen Portfolio bereits Simulatoren wie Subway Sim 2, The Bus und die Crime-Simulation Forensics: Crime Scene Detective gehören."
+    },
+    {
+      "type": "heading",
+      "text": "Vom Werksgelände zum Kohleflöz"
+    },
+    {
+      "type": "paragraph",
+      "text": "Spielerinnen und Spieler übernehmen zunächst die unternehmerische Seite: Gelände wird erworben und aus der Vogelperspektive zu einem Werksgelände geplant, inklusive Fördertürmen, Lagerstätten und Aufbereitungsanlagen. Anschließend geht es an den eigentlichen Abbau. Mit steuerbaren Maschinen werden mehrstöckige Gruben ausgehoben und Minenschächte gegraben, in denen sich die Kohleflöze befinden."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Planung des Werksgeländes mit Fördertürmen, Lagerstätten und Aufbereitungsanlagen",
+        "Abbau mit Fräswalzen, Spitzhacken und Sprengstoff",
+        "Transport der Kohle über Schienen und Förderbänder an die Oberfläche",
+        "Verkauf der aufbereiteten Kohle auf einem dynamischen Markt",
+        "Management-Elemente wie Gerätewartung und Kreditsystem"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Statik als Risiko"
+    },
+    {
+      "type": "paragraph",
+      "text": "Anders als in Bauspielen mit freier Grabmechanik verlangt Bergwerk laut Studio eine sorgfältige Berücksichtigung der Grubenstatik. Wird die Lastverteilung im Tunnel nicht durch Stützen abgesichert, drohen Einstürze. Hinzu kommt ein Stromnetz, das für das Abpumpen von Grubenwasser notwendig ist, sowie die laufende Kontrolle von Gasvorkommen und Staub im Grubensystem – Faktoren, die dem Simulator einen betont technischen Anspruch geben."
+    },
+    {
+      "type": "paragraph",
+      "text": "Bergwerk – A Mining Sim ist für PC über Steam sowie für PS5 und Xbox Series X/S angekündigt. Ein konkretes Erscheinungsdatum hat Aerosoft bislang nicht genannt."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Deutsche Simulationsspiele haben mit dem Landwirtschafts-Simulator 22 gezeigt, dass Nischen-Simulationen kommerziell mit Blockbustern konkurrieren können. Mit Bergwerk verlagert sich dieses Erfolgsmodell nun in den Bergbau – ein Genre, das im Simulationsmarkt bislang weniger stark besetzt ist als Landwirtschaft oder Fahrsimulation. Ob der technische Realismus-Anspruch auch außerhalb der Kernzielgruppe funktioniert, wird sich erst mit konkreten Gameplay-Details und einem Termin zeigen."
+    }
+  ],
+  "isLeakOrRumor": false,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-05T07:35:37.375Z",
+  "readingTimeMinutes": 1,
+  "heroVariant": "circuit",
+  "sources": [
+    {
+      "title": "BERGWERK - In dieser realistischen Kohlebergbausimulation aus Deutschland kann euer Tunnel einstürzen, wenn ihr nicht die Lastverteilungs-Physik berücksichtigt",
+      "url": "https://www.gamestar.de/artikel/bergwerk-realistische-kohlebergbausimulation-aus-deutschland,3457505.html",
+      "publisher": "GameStar"
+    },
+    {
+      "title": "Berwerk: In der realistischen Minen-Simulation buddelt ihr mit dicken Maschinen möglichst vorsichtig Kohle aus",
+      "url": "https://www.gamestar.de/videos/berwerk-in-der-realistischen-minen-simulation-buddelt-ihr-mit-dicken-maschinen-moeglichst-vorsichtig-kohle-aus,141730.html",
+      "publisher": "GameStar"
+    }
+  ],
+  "review": null,
+  "image": {
+    "src": "/images/articles/bergwerk-mining-sim-hindsight-studios-2026.webp",
+    "alt": "Bergwerk: Deutsches Studio zeigt realistische Kohlebergbau-Simulation",
+    "credit": "Bild: GameStar",
+    "sourceUrl": "https://www.gamestar.de/artikel/bergwerk-realistische-kohlebergbausimulation-aus-deutschland,3457505.html"
+  },
+  "relatedSlugs": [
+    "project-zomboid-spielerrekord-update-2026",
+    "bandai-namco-tgs-2026-lineup",
+    "monster-hunter-wilds-prologue-demo-2026"
+  ]
+}

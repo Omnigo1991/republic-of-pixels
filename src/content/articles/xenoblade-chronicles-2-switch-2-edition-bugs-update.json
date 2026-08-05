@@ -1,0 +1,90 @@
+{
+  "slug": "xenoblade-chronicles-2-switch-2-edition-bugs-update",
+  "title": "Xenoblade Chronicles 2 – Switch 2 Edition: Nintendo bestätigt Bugs, Update angekündigt",
+  "subtitle": "Zu leise Kampfmusik und ein verschwindender Zubehör-Slot im New Game+ sollen mit einem kommenden Patch behoben werden.",
+  "excerpt": "Eine Woche nach dem Release von Xenoblade Chronicles 2 auf Switch 2 hat Nintendo zwei Bugs offiziell bestätigt: zu leise Kampfmusik und ein verschwindender Zubehör-Slot im New Game+.",
+  "seoTitle": "Xenoblade Chronicles 2 Switch 2: Nintendo bestätigt Bugs, Update kommt",
+  "metaDescription": "Nintendo hat Bugs in Xenoblade Chronicles 2 – Switch 2 Edition bestätigt: leise Kampfmusik und verschwindende Zubehör-Slots. Ein Update ist in Vorbereitung.",
+  "category": "news",
+  "platforms": [
+    "nintendo"
+  ],
+  "tags": [
+    "Xenoblade Chronicles 2",
+    "Switch 2",
+    "Nintendo",
+    "New Game+",
+    "amiibo"
+  ],
+  "tldr": [
+    "Nintendo bestätigt zwei Bugs in Xenoblade Chronicles 2 – Switch 2 Edition",
+    "Kampfmusik ist in der aktuellen Version zu leise",
+    "Im New Game+ kann der dritte Zubehör-Slot nach amiibo-Scan mit Bonus-WP verschwinden",
+    "Ein Update zur Behebung ist in Arbeit, ein Termin steht noch nicht fest"
+  ],
+  "whyItMatters": "Wer aktuell im New Game+ von Xenoblade Chronicles 2 unterwegs ist, sollte den amiibo-Bug kennen, bevor er Ausrüstungs-Slots einbüßt. Der Fall zeigt zudem, wie Nintendo mit Day-One-Problemen bei Remastern umgeht und wie transparent Support-Mitteilungen ausfallen.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Rund eine Woche nach dem Erscheinen von Xenoblade Chronicles 2 auf der Switch 2 hat Nintendo offiziell zwei Bugs in dieser Fassung bestätigt. Wie zuerst von 'OatmealDome' in sozialen Medien aufgegriffen, gingen bei Nintendo mehrere Anfragen zu einer zu leisen Kampfmusik sowie zu einem verschwindenden dritten Zubehör-Slot im New Game+ ein. Ein Update zur Behebung beider Probleme sei bereits in Vorbereitung."
+    },
+    {
+      "type": "heading",
+      "text": "Zwei gemeldete Probleme"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Die Lautstärke der Kampf-BGM fällt im Vergleich zu anderen Sounds spürbar zu niedrig aus.",
+        "Im New Game+ kann der dritte Zubehör-Slot verschwinden, wenn zuvor per Accessory Expansion Kit auf drei Slots erweitert wurde und anschließend ein amiibo für 'Bonus WP' gescannt wird."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Nintendos Erklärung im Detail"
+    },
+    {
+      "type": "paragraph",
+      "text": "Laut der Support-Mitteilung von Nintendo tritt der Zubehör-Bug ausschließlich dann auf, wenn das Accessory Expansion Kit – erhältlich vom Battle Bard nach dem Advanced New Game – bereits genutzt wurde, um die Slot-Zahl auf drei zu erhöhen, und danach über das Menü 'System' -> 'amiibo' ein amiibo gescannt wird, um 'Bonus WP' zu erhalten. Werden andere Boni als 'Bonus WP' erzielt, tritt der Fehler nicht auf. Bereits ausgerüstetes Zubehör in den betroffenen Slots geht dabei laut Nintendo nicht verloren, es wird lediglich der Slot selbst unsichtbar. Nintendo kündigte an, den genauen Release-Termin für das Update zu einem späteren Zeitpunkt bekanntzugeben, und entschuldigte sich für die Unannehmlichkeiten."
+    },
+    {
+      "type": "quote",
+      "text": "We apologize for any inconvenience and trouble this may cause.",
+      "attribution": "Nintendo Support"
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Switch-2-Fassung von Xenoblade Chronicles 2 bietet gegenüber dem Original verbesserte Performance und Auflösung. Dass Nintendo die gemeldeten Bugs so zeitnah und öffentlich bestätigt, wird in der Community positiv aufgenommen, zumal frühere Ports der Reihe teils ohne offizielle Fehlerbehebungen blieben."
+    }
+  ],
+  "isLeakOrRumor": false,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-05T07:36:06.507Z",
+  "readingTimeMinutes": 1,
+  "heroVariant": "circuit",
+  "sources": [
+    {
+      "title": "Nintendo Identifies Xenoblade Chronicles 2 - Switch 2 Edition Bugs, Update On The Way",
+      "url": "https://www.nintendolife.com/news/2026/08/nintendo-identifies-xenoblade-chronicles-2-switch-2-edition-bugs-update-on-the-way",
+      "publisher": "Nintendo Life"
+    }
+  ],
+  "review": null,
+  "image": {
+    "src": "/images/articles/xenoblade-chronicles-2-switch-2-edition-bugs-update.webp",
+    "alt": "Xenoblade Chronicles 2 – Switch 2 Edition: Nintendo bestätigt Bugs, Update angekündigt",
+    "credit": "Bild: Nintendo Life",
+    "sourceUrl": "https://www.nintendolife.com/news/2026/08/nintendo-identifies-xenoblade-chronicles-2-switch-2-edition-bugs-update-on-the-way"
+  },
+  "relatedSlugs": [
+    "walking-dead-streets-of-survival-release",
+    "bandai-namco-tgs-2026-lineup",
+    "final-fantasy-vii-revelation-spinoffs-verbindung"
+  ]
+}
