@@ -74,7 +74,7 @@ export function SearchTrigger() {
         aria-label="Suche öffnen"
         className="flex h-9 w-9 items-center justify-center rounded-full text-current hover:opacity-70 transition-opacity"
       >
-        <SearchIcon className="h-[18px] w-[18px]" />
+        <SearchIcon className="h-5 w-5" />
       </button>
       {open && (
         <div
