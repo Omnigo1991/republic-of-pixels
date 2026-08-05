@@ -13,6 +13,7 @@ import { PlatformIcon } from "@/components/PlatformIcons";
 import { ArticleBody } from "@/components/ArticleBody";
 import { TldrBox, WhyItMattersBox, ReviewBox, SourcesBox } from "@/components/ArticleBoxes";
 import { ShareButtons } from "@/components/ShareButtons";
+import { CommentSection } from "@/components/CommentSection";
 import { ArticleCard } from "@/components/ArticleCard";
 import { formatDateTime, splitTitle } from "@/lib/format";
 import { Masthead } from "@/components/Masthead";
@@ -141,11 +142,11 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
 
         <SourcesBox sources={article.sources} />
 
-        {/* Reaktionen und Kommentare folgen erst mit echter Datenhaltung
-            (docs/vergleich-2026-08.md, Sofortmassnahme 3): keine Attrappen live. */}
         <div className="my-8 flex flex-wrap items-center justify-end gap-4 border-y border-border-subtle py-6">
           <ShareButtons title={article.title} />
         </div>
+
+        <CommentSection articleSlug={article.slug} />
       </article>
 
       {related.length > 0 && (
