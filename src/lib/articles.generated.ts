@@ -28,15 +28,16 @@ import a23 from "@/content/articles/marvel-rivals-season-9-5-speicherplatz-reduk
 import a24 from "@/content/articles/marvel-rivals-summer-festival-vol-2-2026.json";
 import a25 from "@/content/articles/minecraft-switch-2-vibrant-visuals-release.json";
 import a26 from "@/content/articles/monster-hunter-wilds-prologue-demo-2026.json";
-import a27 from "@/content/articles/project-zomboid-spielerrekord-update-2026.json";
-import a28 from "@/content/articles/resident-evil-veronica-remake-2-millionen-wishlists.json";
-import a29 from "@/content/articles/sony-disc-aus-2028-david-jaffe-kritik.json";
-import a30 from "@/content/articles/sony-tariff-rueckerstattung-ps5-preis-2026.json";
-import a31 from "@/content/articles/walking-dead-streets-of-survival-release.json";
-import a32 from "@/content/articles/xbox-game-pass-lineup-august-2026.json";
-import a33 from "@/content/articles/xbox-helix-abwaertskompatibilitaet-leak-2026.json";
-import a34 from "@/content/articles/xbox-platinum-trophy-aequivalent-2026.json";
-import a35 from "@/content/articles/xbox-preiserhoehung-europa-2026.json";
-import a36 from "@/content/articles/xenoblade-chronicles-2-switch-2-edition-bugs-update.json";
+import a27 from "@/content/articles/pokemon-tcg-japanische-staatsbuerger-only-2026.json";
+import a28 from "@/content/articles/project-zomboid-spielerrekord-update-2026.json";
+import a29 from "@/content/articles/resident-evil-veronica-remake-2-millionen-wishlists.json";
+import a30 from "@/content/articles/sony-disc-aus-2028-david-jaffe-kritik.json";
+import a31 from "@/content/articles/sony-tariff-rueckerstattung-ps5-preis-2026.json";
+import a32 from "@/content/articles/walking-dead-streets-of-survival-release.json";
+import a33 from "@/content/articles/xbox-game-pass-lineup-august-2026.json";
+import a34 from "@/content/articles/xbox-helix-abwaertskompatibilitaet-leak-2026.json";
+import a35 from "@/content/articles/xbox-platinum-trophy-aequivalent-2026.json";
+import a36 from "@/content/articles/xbox-preiserhoehung-europa-2026.json";
+import a37 from "@/content/articles/xenoblade-chronicles-2-switch-2-edition-bugs-update.json";
 
-export const ALL_ARTICLES = [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22, a23, a24, a25, a26, a27, a28, a29, a30, a31, a32, a33, a34, a35, a36] as unknown as Article[];
+export const ALL_ARTICLES = [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22, a23, a24, a25, a26, a27, a28, a29, a30, a31, a32, a33, a34, a35, a36, a37] as unknown as Article[];
