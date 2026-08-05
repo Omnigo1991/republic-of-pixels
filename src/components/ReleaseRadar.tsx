@@ -34,7 +34,7 @@ export function ReleaseRadar() {
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {upcoming.map((r) => {
           const inner = (
-            <div className="flex h-full items-center gap-4 rounded-2xl border border-border-subtle bg-surface-card p-4 transition-all duration-300 hover:bg-surface-hover hover:shadow-glow">
+            <div className="flex h-full items-center gap-4 rounded-2xl border border-border-subtle bg-surface-card p-4 transition-all duration-300 hover:bg-surface-hover">
               <div className="flex h-14 w-14 shrink-0 flex-col items-center justify-center rounded-xl border border-accent-brand/30 bg-accent-brand/[0.08]">
                 <span className="text-lg font-bold leading-none text-accent-brand">
                   {r.date.slice(8, 10)}
