@@ -17,7 +17,8 @@ export function ReadingProgress() {
   }, []);
 
   return (
-    <div className="fixed left-0 top-16 z-40 h-0.5 w-full bg-transparent">
+    // Direkt unter der Sticky-Navigationszeile (h-14) des Artikel-Mastheads.
+    <div className="fixed left-0 top-14 z-[55] h-0.5 w-full bg-transparent">
       <div
         className="h-full bg-accent transition-[width] duration-150"
         style={{ width: `${progress}%` }}

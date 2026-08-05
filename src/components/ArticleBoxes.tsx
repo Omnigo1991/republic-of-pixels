@@ -21,7 +21,8 @@ export function TldrBox({ items }: { items: string[] }) {
 
 export function WhyItMattersBox({ text }: { text: string }) {
   return (
-    <div className="my-8 rounded-2xl border-l-2 border-accent bg-accent-wash/40 p-6">
+    // Dezenter, rundum gleich dicker Cyan-Rand (Betreiber-Vorgabe 05.08.2026).
+    <div className="my-8 rounded-2xl border border-accent/35 bg-accent-wash/30 p-6">
       <p className="mb-2 text-[13px] font-semibold tracking-wide text-accent">
         WARUM DAS WICHTIG IST
       </p>
