@@ -11,8 +11,9 @@ import a6 from "@/content/articles/fire-emblem-fortunes-weave-direct-details-202
 import a7 from "@/content/articles/halo-campaign-evolved-turbulente-entwicklung.json";
 import a8 from "@/content/articles/marvel-rivals-summer-festival-vol-2-2026.json";
 import a9 from "@/content/articles/monster-hunter-wilds-prologue-demo-2026.json";
-import a10 from "@/content/articles/sony-disc-aus-2028-david-jaffe-kritik.json";
-import a11 from "@/content/articles/walking-dead-streets-of-survival-release.json";
-import a12 from "@/content/articles/xbox-preiserhoehung-europa-2026.json";
+import a10 from "@/content/articles/project-zomboid-spielerrekord-update-2026.json";
+import a11 from "@/content/articles/sony-disc-aus-2028-david-jaffe-kritik.json";
+import a12 from "@/content/articles/walking-dead-streets-of-survival-release.json";
+import a13 from "@/content/articles/xbox-preiserhoehung-europa-2026.json";
 
-export const ALL_ARTICLES = [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12] as unknown as Article[];
+export const ALL_ARTICLES = [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13] as unknown as Article[];
