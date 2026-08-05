@@ -3,6 +3,7 @@ import { CATEGORY_NAV, PLATFORM_NAV } from "@/lib/articles";
 import { MobileNav } from "./MobileNav";
 import { SearchTrigger } from "./SearchOverlay";
 import { PlatformIcon } from "./PlatformIcons";
+import { AuthStatus } from "./AuthStatus";
 
 // Gemeinsame Navigationszeile des Mastheads — genutzt vom Masthead selbst
 // (slim: mit R, brand/section: ohne R, dort steht es gross darunter) und von
@@ -49,10 +50,11 @@ export function MastheadNav({ withMark = true }: { withMark?: boolean }) {
         ))}
       </nav>
 
-      <div className="flex items-center lg:ml-3">
+      <div className="flex items-center gap-2 lg:ml-3">
         <span className="hidden lg:block">
           <SearchTrigger />
         </span>
+        <AuthStatus />
         <MobileNav instagramUrl="https://www.instagram.com/republicofpixels" />
       </div>
     </div>
