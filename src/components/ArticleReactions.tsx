@@ -9,10 +9,10 @@ import { AnmeldeDialog } from "./AuthDialog";
 // Artikel, umschaltbar. Datenhaltung: Tabelle article_reactions
 // (supabase/schema-v2.sql — muss einmalig im SQL-Editor ausgeführt werden).
 const REAKTIONEN: { key: string; emoji: string; label: string }[] = [
-  { key: "hype", emoji: "🔥", label: "Hype" },
-  { key: "liebe", emoji: "❤️", label: "Gefällt mir" },
-  { key: "wow", emoji: "😮", label: "Wow" },
-  { key: "lol", emoji: "😂", label: "Zum Lachen" },
+  { key: "gefaellt", emoji: "👍", label: "Gefällt mir" },
+  { key: "liebe", emoji: "❤️", label: "Liebe ich" },
+  { key: "gefaellt_nicht", emoji: "👎", label: "Gefällt mir nicht" },
+  { key: "enttaeuschend", emoji: "😞", label: "Enttäuschend" },
 ];
 
 export function ArticleReactions({ articleSlug }: { articleSlug: string }) {
@@ -99,9 +99,9 @@ export function ArticleReactions({ articleSlug }: { articleSlug: string }) {
                   : "border-border-default text-text-secondary hover:border-accent/50 hover:text-text-primary"
               }`}
             >
+              <span>{r.label}</span>
               <span aria-hidden="true">{r.emoji}</span>
-              {anzahl > 0 && <span className="text-xs font-semibold">{anzahl}</span>}
-              <span className="sr-only">{r.label}</span>
+              {anzahl > 0 && <span className="text-xs font-semibold text-accent">{anzahl}</span>}
             </button>
           );
         })}

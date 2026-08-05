@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import Link from "next/link";
 import type { Session } from "@supabase/supabase-js";
 import { getSupabase, type Profil } from "@/lib/supabase";
@@ -16,7 +17,15 @@ export function AuthStatus() {
   const [profil, setProfil] = useState<Profil | null>(null);
   const [dialogOffen, setDialogOffen] = useState(false);
   const [menueOffen, setMenueOffen] = useState(false);
+  const [menuePos, setMenuePos] = useState({ top: 0, right: 0 });
   const wrapperRef = useRef<HTMLDivElement>(null);
+  const menueRef = useRef<HTMLDivElement>(null);
+
+  function menueUmschalten() {
+    const rect = wrapperRef.current?.getBoundingClientRect();
+    if (rect) setMenuePos({ top: rect.bottom + 8, right: window.innerWidth - rect.right });
+    setMenueOffen((o) => !o);
+  }
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data }) => setSession(data.session));
@@ -41,7 +50,11 @@ export function AuthStatus() {
   useEffect(() => {
     if (!menueOffen) return;
     function onKlick(e: MouseEvent) {
-      if (wrapperRef.current && !wrapperRef.current.contains(e.target as Node)) {
+      const ziel = e.target as Node;
+      if (
+        wrapperRef.current && !wrapperRef.current.contains(ziel) &&
+        menueRef.current && !menueRef.current.contains(ziel)
+      ) {
         setMenueOffen(false);
       }
     }
@@ -55,7 +68,7 @@ export function AuthStatus() {
     return (
       <div ref={wrapperRef} className="relative">
         <button
-          onClick={() => setMenueOffen((o) => !o)}
+          onClick={menueUmschalten}
           aria-haspopup="menu"
           aria-expanded={menueOffen}
           title={`Angemeldet als ${name}`}
@@ -64,7 +77,7 @@ export function AuthStatus() {
           {istMaster ? (
             <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#0F0D2C]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/brand/r-mark.png" alt="" className="h-4 w-auto translate-x-[2px] translate-y-[2px]" />
+              <img src="/brand/r-avatar.png" alt="" className="h-full w-full" />
             </span>
           ) : profil?.avatar_url ? (
             // eslint-disable-next-line @next/next/no-img-element
@@ -84,10 +97,12 @@ export function AuthStatus() {
           </span>
         </button>
 
-        {menueOffen && (
+        {menueOffen && createPortal(
           <div
+            ref={menueRef}
             role="menu"
-            className="absolute right-0 top-10 z-[60] w-48 overflow-hidden rounded-xl border border-border-default bg-bg-elevated py-1.5 text-text-primary shadow-elevated"
+            style={{ top: menuePos.top, right: menuePos.right }}
+            className="fixed z-[70] w-48 overflow-hidden rounded-xl border border-border-default bg-bg-elevated py-1.5 text-text-primary shadow-elevated"
           >
             <Link
               href={`/profil/${name}`}
@@ -113,7 +128,8 @@ export function AuthStatus() {
             >
               Abmelden
             </button>
-          </div>
+          </div>,
+          document.body
         )}
       </div>
     );

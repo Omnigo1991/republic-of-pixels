@@ -7,7 +7,7 @@
 create table public.article_reactions (
   article_slug text not null,
   user_id uuid not null references public.profiles (id) on delete cascade,
-  reaction text not null check (reaction in ('hype', 'liebe', 'wow', 'lol')),
+  reaction text not null check (reaction in ('gefaellt', 'liebe', 'gefaellt_nicht', 'enttaeuschend')),
   created_at timestamptz not null default now(),
   primary key (article_slug, user_id)
 );

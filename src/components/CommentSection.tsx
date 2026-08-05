@@ -248,7 +248,7 @@ function EinKommentar(props: {
           // Master-Account: Logo als Profilbild, hervorgehoben
           <span className="flex h-7 w-7 items-center justify-center rounded-full bg-accent ring-2 ring-accent/40">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/brand/r-mark-navy.png" alt="" className="h-4 w-auto translate-x-[2px] translate-y-[2px]" />
+            <img src="/brand/r-avatar-navy.png" alt="" className="h-full w-full" />
           </span>
         ) : k.profiles?.avatar_url ? (
           // eslint-disable-next-line @next/next/no-img-element
