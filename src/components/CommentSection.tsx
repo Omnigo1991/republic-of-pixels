@@ -1,9 +1,11 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import Link from "next/link";
 import type { Session } from "@supabase/supabase-js";
 import { getSupabase, type Kommentar, type Profil } from "@/lib/supabase";
 import { AnmeldeDialog, NicknameWahl } from "./AuthDialog";
+import { MASTER_NICKNAME, MASTER_RANG } from "@/lib/ranking";
 
 // Echtes Kommentarsystem (ersetzt die frühere Demo-Attrappe).
 // Datenhaltung: Supabase (supabase/schema.sql), Moderation: sofort sichtbar
@@ -78,8 +80,13 @@ export function CommentSection({ articleSlug }: { articleSlug: string }) {
       .then(({ data }) => setProfil((data as Profil) ?? null));
   }, [session, supabase]);
 
-  const wurzeln = kommentare.filter((k) => k.parent_id === null);
-  const antwortenZu = (id: number) => kommentare.filter((k) => k.parent_id === id);
+  // Entfernte Kommentare verschwinden komplett; ein Platzhalter bleibt nur,
+  // wenn ein entfernter Wurzelkommentar noch sichtbare Antworten hat.
+  const antwortenZu = (id: number) =>
+    kommentare.filter((k) => k.parent_id === id && !k.deleted);
+  const wurzeln = kommentare.filter(
+    (k) => k.parent_id === null && (!k.deleted || antwortenZu(k.id).length > 0)
+  );
 
   async function stimmen(kommentarId: number) {
     if (!session) return setLoginOffen(true);
@@ -237,7 +244,13 @@ function EinKommentar(props: {
   return (
     <article>
       <div className="flex items-center gap-2.5">
-        {k.profiles?.avatar_url ? (
+        {k.profiles?.nickname === MASTER_NICKNAME ? (
+          // Master-Account: Logo als Profilbild, hervorgehoben
+          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-accent ring-2 ring-accent/40">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/brand/r-mark-navy.png" alt="" className="h-4 w-auto" />
+          </span>
+        ) : k.profiles?.avatar_url ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={k.profiles.avatar_url}
@@ -250,9 +263,21 @@ function EinKommentar(props: {
             {(k.profiles?.nickname ?? "?").slice(0, 1).toUpperCase()}
           </span>
         )}
-        <span className="text-sm font-semibold text-text-primary">
-          {k.profiles?.nickname ?? "Unbekannt"}
-        </span>
+        {k.profiles?.nickname ? (
+          <Link
+            href={`/profil/${k.profiles.nickname}`}
+            className="text-sm font-semibold text-text-primary hover:text-accent transition-colors"
+          >
+            {k.profiles.nickname}
+          </Link>
+        ) : (
+          <span className="text-sm font-semibold text-text-primary">Unbekannt</span>
+        )}
+        {k.profiles?.nickname === MASTER_NICKNAME && (
+          <span className={`rounded-full border px-2 py-0.5 text-[9px] ${MASTER_RANG.klasse}`}>
+            REDAKTION
+          </span>
+        )}
         <span className="text-xs text-text-tertiary">{zeitAbstand(k.created_at)}</span>
       </div>
       <p className="mt-2 whitespace-pre-wrap text-[15px] leading-relaxed text-text-secondary">

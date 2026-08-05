@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/admin"],
+        disallow: ["/admin", "/einstellungen"],
       },
     ],
     sitemap: "https://www.republicofpixels.com/sitemap.xml",
