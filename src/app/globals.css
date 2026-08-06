@@ -38,17 +38,23 @@ h3 {
   background: #474747;
 }
 
+/* Fliesstext-Typografie der Artikelseite. Der :where(:not(...))-Guard nimmt
+   alles mit .not-prose (und dessen Nachfahren) aus — nötig für eingebettete
+   UI wie die InlineArticleCard: Ohne den Guard überschreiben diese Regeln
+   (Spezifität 0-1-1) die Tailwind-Utilities der Karte (0-1-0), und die Karte
+   erbt Artikelschriftgrössen und -abstände. :where() hält die Spezifität
+   unverändert. Das echte not-prose des Typography-Plugins gibt es hier nicht. */
 .prose-rop {
   color: #f2f2f2;
 }
-.prose-rop p {
+.prose-rop p:where(:not(.not-prose, .not-prose *)) {
   margin-top: 1.25em;
   margin-bottom: 1.25em;
   line-height: 1.75;
   font-size: 1.125rem;
   color: #e6e6e6;
 }
-.prose-rop h2 {
+.prose-rop h2:where(:not(.not-prose, .not-prose *)) {
   margin-top: 2.5em;
   margin-bottom: 0.75em;
   font-size: 1.5rem;
@@ -56,7 +62,7 @@ h3 {
   letter-spacing: -0.01em;
   color: #02f0d1; /* Zwischenüberschriften in Cyan (Betreiber-Vorgabe 05.08.2026) */
 }
-.prose-rop blockquote {
+.prose-rop blockquote:where(:not(.not-prose, .not-prose *)) {
   margin: 2em 0;
   padding: 0.25rem 0 0.25rem 1.25rem;
   border-left: 3px solid #02f0d1;
@@ -66,29 +72,29 @@ h3 {
   font-size: 1.375rem;
   line-height: 1.4;
 }
-.prose-rop ul {
+.prose-rop ul:where(:not(.not-prose, .not-prose *)) {
   margin: 1.25em 0;
   padding-left: 1.25rem;
   list-style: disc;
   color: #e6e6e6;
 }
-.prose-rop li {
+.prose-rop li:where(:not(.not-prose, .not-prose *)) {
   margin: 0.5em 0;
   line-height: 1.7;
 }
-.prose-rop a {
+.prose-rop a:where(:not(.not-prose, .not-prose *)) {
   color: #02f0d1;
   text-decoration: none;
 }
-.prose-rop a:hover {
+.prose-rop a:where(:not(.not-prose, .not-prose *)):hover {
   color: #30f3d9;
 }
 
 @media (max-width: 640px) {
-  .prose-rop p {
+  .prose-rop p:where(:not(.not-prose, .not-prose *)) {
     font-size: 1.0625rem;
   }
-  .prose-rop blockquote {
+  .prose-rop blockquote:where(:not(.not-prose, .not-prose *)) {
     font-size: 1.15rem;
   }
 }
