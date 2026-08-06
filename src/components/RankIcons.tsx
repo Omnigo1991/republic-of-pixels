@@ -14,10 +14,23 @@ const PATHS: Record<RankIconKey, string> = {
   crown: "M4 15l3-10 5 5 5-5 3 10H4z M4 17h16v2H4v-2z",
 };
 
+// Jede Glyphe hat von Natur aus eine andere Tinten-Bounding-Box (Schild z. B.
+// 16×20px, Gamepad 20×10px, Medaille 10×17px — per SVG getBBox() gemessen,
+// Betreiber-Feedback: "Schild wirkt grösser"). transform normalisiert jede
+// Glyphe auf dieselbe maximale Ausdehnung (16px) um ihr eigenes Zentrum, damit
+// alle optisch gleich gross wirken statt nur dieselbe viewBox zu teilen.
+const TRANSFORMS: Partial<Record<RankIconKey, string>> = {
+  gamepad: "translate(12,12) scale(0.8) translate(-12,-11)",
+  shield: "translate(12,12) scale(0.8) translate(-12,-12)",
+  medal: "translate(12,12) scale(0.941) translate(-12,-12.5)",
+};
+
 export function RankIcon({ iconKey, className }: { iconKey: RankIconKey; className?: string }) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
-      <path d={PATHS[iconKey]} />
+      <g transform={TRANSFORMS[iconKey]}>
+        <path d={PATHS[iconKey]} />
+      </g>
     </svg>
   );
 }

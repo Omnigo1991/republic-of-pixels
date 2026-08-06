@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
 import type { Session } from "@supabase/supabase-js";
 import { getSupabase } from "@/lib/supabase";
 import { getAllArticles } from "@/lib/articles";
@@ -102,14 +103,16 @@ export function DeineMerkliste() {
             <button
               onClick={() => entfernen(e.tag)}
               aria-label={`${e.tag} von der Merkliste entfernen`}
-              className="absolute right-2 top-2 text-text-disabled opacity-0 transition-opacity hover:text-error group-hover:opacity-100"
+              className="absolute right-2 top-2 z-10 text-text-disabled opacity-0 transition-opacity hover:text-error group-hover:opacity-100"
             >
               ✕
             </button>
-            <p className="pr-4 text-sm font-medium text-text-primary">{e.tag}</p>
-            <p className={`mt-1 text-xs ${e.neueMeldung ? "text-accent" : "text-text-tertiary"}`}>
-              {e.neueMeldung ? "● Neue Meldung" : "Keine neuen Meldungen"}
-            </p>
+            <Link href={`/suche?q=${encodeURIComponent(e.tag)}`} className="block">
+              <p className="pr-4 text-sm font-medium text-text-primary">{e.tag}</p>
+              <p className={`mt-1 text-xs ${e.neueMeldung ? "text-accent" : "text-text-tertiary"}`}>
+                {e.neueMeldung ? "● Neue Meldung" : "Keine neuen Meldungen"}
+              </p>
+            </Link>
           </div>
         ))}
 
