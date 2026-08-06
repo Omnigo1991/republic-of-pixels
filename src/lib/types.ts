@@ -23,7 +23,7 @@ export interface ArticleImage {
   sourceUrl?: string;
 }
 
-export type EmbedPlatform = "twitter" | "reddit";
+export type EmbedPlatform = "twitter" | "reddit" | "youtube";
 
 export type BodyBlock =
   | { type: "paragraph"; text: string }

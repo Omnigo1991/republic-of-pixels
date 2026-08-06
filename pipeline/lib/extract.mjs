@@ -19,20 +19,27 @@ export async function extractArticleText(url, { maxChars = 9000, timeoutMs = 200
       html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["']/i)?.[1] ??
       null;
 
-    // Eingebetteter Tweet/Reddit-Post in der Quelle — wird bei der
-    // Artikelgenerierung als klick-zu-laden-Embed übernommen (siehe
-    // ExternalEmbed.tsx), statt das Bild nur zu beschreiben.
+    // Eingebetteter Tweet/Reddit-Post/YouTube-Trailer in der Quelle — wird bei
+    // der Artikelgenerierung als klick-zu-laden-Embed übernommen (siehe
+    // ExternalEmbed.tsx), statt das Bild nur zu beschreiben. Bei YouTube nur
+    // echte <iframe>-Einbettungen matchen (nicht jeder Link im Fliesstext),
+    // sonst landen unzusammenhängende Empfehlungs-/Footer-Links als Embed.
     const tweetUrl = html.match(
       /https?:\/\/(?:twitter\.com|x\.com)\/[A-Za-z0-9_]+\/status\/\d+/
     )?.[0];
     const redditUrl = html.match(
       /https?:\/\/(?:www\.)?reddit\.com\/r\/[A-Za-z0-9_]+\/comments\/[a-z0-9]+\/[^"'\s<>]*/
     )?.[0];
+    const youtubeId = html.match(
+      /<iframe[^>]+src=["']https?:\/\/(?:www\.)?youtube(?:-nocookie)?\.com\/embed\/([A-Za-z0-9_-]{11})/i
+    )?.[1];
     const embed = tweetUrl
       ? { platform: "twitter", url: tweetUrl }
       : redditUrl
         ? { platform: "reddit", url: redditUrl }
-        : null;
+        : youtubeId
+          ? { platform: "youtube", url: `https://www.youtube.com/watch?v=${youtubeId}` }
+          : null;
 
     const text = html
       .replace(/<script[\s\S]*?<\/script>/gi, " ")

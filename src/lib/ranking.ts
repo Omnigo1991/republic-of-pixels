@@ -17,49 +17,51 @@ export function punkteBerechnen(stats: {
   return stats.kommentare * 2 + stats.erhalteneVotes;
 }
 
+import type { RankIconKey } from "@/components/RankIcons";
+
 export interface Rang {
   name: string;
   ab: number;
   /** Tailwind-Klassen für den Badge-Pill */
   klasse: string;
   beschreibung: string;
-  /** Icon im Badge (Emoji; die Redaktion nutzt das R-Logo als Bild) */
-  icon: string;
+  /** Icon im Badge (RankIcon-Key; die Redaktion nutzt das R-Logo als Bild) */
+  icon: RankIconKey;
 }
 
 export const RAENGE: Rang[] = [
   {
     name: "Neuankömmling",
     ab: 0,
-    icon: "🌱",
+    icon: "spark",
     klasse: "border-border-default text-text-secondary bg-text-primary/[0.04]",
     beschreibung: "Frisch in der Republic — willkommen!",
   },
   {
     name: "Bürger:in",
     ab: 20,
-    icon: "🎮",
+    icon: "gamepad",
     klasse: "border-accent/40 text-accent bg-accent/10",
     beschreibung: "Aktives Mitglied der Republic of Pixels.",
   },
   {
     name: "Ratsmitglied",
     ab: 75,
-    icon: "🛡️",
+    icon: "shield",
     klasse: "border-accent text-[#0F0D2C] bg-accent font-bold",
     beschreibung: "Prägt die Diskussionen sichtbar mit.",
   },
   {
     name: "Senator:in",
     ab: 200,
-    icon: "🏛️",
+    icon: "medal",
     klasse: "border-warning/60 text-warning bg-warning/10 font-bold",
     beschreibung: "Eine tragende Stimme der Community.",
   },
   {
     name: "Pixel-Legende",
     ab: 500,
-    icon: "👑",
+    icon: "crown",
     klasse:
       "border-transparent text-[#0F0D2C] bg-gradient-to-r from-accent via-[#7DF3E1] to-warning font-bold",
     beschreibung: "Der höchste Rang der Republic — legendär.",
@@ -69,7 +71,7 @@ export const RAENGE: Rang[] = [
 export const MASTER_RANG: Rang = {
   name: "REDAKTION",
   ab: 0,
-  icon: "R",
+  icon: "crown",
   klasse: "border-accent bg-accent text-[#0F0D2C] font-black tracking-wide",
   beschreibung: "Offizieller Account der Redaktion von Republic of Pixels.",
 };

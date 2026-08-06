@@ -12,6 +12,7 @@ import { CategoryPill, LeakBanner, Tag } from "@/components/Badges";
 import { PlatformIcon } from "@/components/PlatformIcons";
 import { ArticleBody } from "@/components/ArticleBody";
 import { TldrBox, WhyItMattersBox, ReviewBox, SourcesBox } from "@/components/ArticleBoxes";
+import { WeiterlesenBox } from "@/components/WeiterlesenBox";
 import { ShareButtons } from "@/components/ShareButtons";
 import { CommentSection } from "@/components/CommentSection";
 import { ArticleReactions } from "@/components/ArticleReactions";
@@ -153,6 +154,8 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
         {article.review && <ReviewBox review={article.review} />}
 
         <SourcesBox sources={article.sources} />
+
+        <WeiterlesenBox articles={related} />
 
         <div className="my-8 flex flex-wrap items-center justify-between gap-4 border-y border-border-subtle py-6">
           <ArticleReactions articleSlug={article.slug} />

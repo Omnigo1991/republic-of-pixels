@@ -3,16 +3,23 @@
 import { useEffect, useRef, useState } from "react";
 import type { EmbedPlatform } from "@/lib/types";
 
-// Eingebettete Social-Posts (X/Reddit) laden ein Skript der jeweiligen
-// Plattform nach, das Cookies setzen kann — deshalb erst nach explizitem
-// Klick, passend zu unserer cookielosen Grundhaltung (siehe /cookies).
-const PLATFORM_META: Record<
-  EmbedPlatform,
-  { label: string; script: string }
-> = {
+// Eingebettete Social-Posts/Videos (X/Reddit/YouTube) laden Inhalte der
+// jeweiligen Plattform nach, die Cookies setzen können — deshalb erst nach
+// explizitem Klick, passend zu unserer cookielosen Grundhaltung (siehe
+// /cookies). YouTube läuft zusätzlich über die datensparsame
+// youtube-nocookie.com-Domain, sobald zugestimmt wurde.
+const PLATFORM_META: Record<EmbedPlatform, { label: string; script: string | null }> = {
   twitter: { label: "X", script: "https://platform.twitter.com/widgets.js" },
   reddit: { label: "Reddit", script: "https://embed.redditmedia.com/widgets/platform.js" },
+  youtube: { label: "YouTube", script: null },
 };
+
+function extractYouTubeId(url: string): string | null {
+  return (
+    url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([A-Za-z0-9_-]{11})/)?.[1] ??
+    null
+  );
+}
 
 declare global {
   interface Window {
@@ -26,7 +33,7 @@ export function ExternalEmbed({ platform, url }: { platform: EmbedPlatform; url:
   const meta = PLATFORM_META[platform];
 
   useEffect(() => {
-    if (!geladen) return;
+    if (!geladen || !meta.script) return;
     if (document.querySelector(`script[src="${meta.script}"]`)) {
       window.twttr?.widgets.load(containerRef.current ?? undefined);
       return;
@@ -52,6 +59,22 @@ export function ExternalEmbed({ platform, url }: { platform: EmbedPlatform; url:
         >
           Externe Inhalte zulassen
         </button>
+      </div>
+    );
+  }
+
+  if (platform === "youtube") {
+    const videoId = extractYouTubeId(url);
+    if (!videoId) return null;
+    return (
+      <div className="relative my-8 aspect-video overflow-hidden rounded-2xl border border-border-subtle not-prose">
+        <iframe
+          src={`https://www.youtube-nocookie.com/embed/${videoId}`}
+          title="YouTube-Video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          className="absolute inset-0 h-full w-full"
+        />
       </div>
     );
   }
