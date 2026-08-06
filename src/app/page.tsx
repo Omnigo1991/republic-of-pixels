@@ -4,6 +4,8 @@ import { PopularSection } from "@/components/PopularSection";
 import { NewsListe } from "@/components/NewsListe";
 import { CategoryChipBar } from "@/components/CategoryChipBar";
 import { ReleaseRadar } from "@/components/ReleaseRadar";
+import { GeradeImGespraech } from "@/components/GeradeImGespraech";
+import { DeineMerkliste } from "@/components/DeineMerkliste";
 import { PixelDivider } from "@/components/PixelDivider";
 import { Reveal } from "@/components/Reveal";
 import { Masthead } from "@/components/Masthead";
@@ -30,6 +32,9 @@ export default function HomePage() {
         </Reveal>
 
         <div className="h-px w-full bg-border-subtle" />
+
+        <GeradeImGespraech />
+        <DeineMerkliste />
 
         <Reveal>
           <ReleaseRadar />
