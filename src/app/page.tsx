@@ -18,8 +18,10 @@ export default function HomePage() {
   return (
     <>
       <Masthead variant="brand" />
-      {/* Top-Story ohne Reveal: sofort sichtbar. */}
-      <section className="bg-navy">
+      {/* Top-Story ohne Reveal: sofort sichtbar. Kein eigener Hintergrund mehr
+          (vorher bg-navy) — lief auf #191919 statt #141414 wie der Rest der
+          Seite und erzeugte einen sichtbaren "Cut" darunter. */}
+      <section>
         <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <TopStory article={topStory} />
         </div>
