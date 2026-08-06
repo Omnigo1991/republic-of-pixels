@@ -1,4 +1,5 @@
 import type { BodyBlock } from "@/lib/types";
+import { ExternalEmbed } from "./ExternalEmbed";
 
 export function ArticleBody({ blocks }: { blocks: BodyBlock[] }) {
   return (
@@ -32,6 +33,8 @@ export function ArticleBody({ blocks }: { blocks: BodyBlock[] }) {
                 ))}
               </ul>
             );
+          case "embed":
+            return <ExternalEmbed key={i} platform={block.platform} url={block.url} />;
           default:
             return null;
         }

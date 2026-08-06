@@ -23,11 +23,14 @@ export interface ArticleImage {
   sourceUrl?: string;
 }
 
+export type EmbedPlatform = "twitter" | "reddit";
+
 export type BodyBlock =
   | { type: "paragraph"; text: string }
   | { type: "heading"; text: string }
   | { type: "quote"; text: string; attribution?: string }
-  | { type: "list"; items: string[] };
+  | { type: "list"; items: string[] }
+  | { type: "embed"; platform: EmbedPlatform; url: string };
 
 export interface Review {
   label: ReviewLabel;

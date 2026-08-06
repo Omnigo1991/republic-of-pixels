@@ -266,6 +266,7 @@ async function main() {
         const ex = await extractArticleText(it.link);
         sourceTexts.push(ex.text);
         it.ogImage = ex.ogImage;
+        it.embed = ex.embed;
       }
 
       let article = await generateArticle(cluster, items, sourceTexts, slugs);
@@ -281,6 +282,16 @@ async function main() {
       }
 
       article.relatedSlugs = pickRelatedSlugs(article);
+
+      // Eingebetteter Tweet/Reddit-Post der Quelle (z. B. das Foto eines
+      // Leaks) wird direkt nach dem einleitenden Absatz platziert — die KI
+      // erzeugt die URL nicht selbst, um Tippfehler/Fehlzuordnungen zu
+      // vermeiden.
+      const embed = items.find((it) => it.embed)?.embed;
+      if (embed) {
+        article.body.splice(1, 0, { type: "embed", platform: embed.platform, url: embed.url });
+        console.log(`  Embed: ${embed.platform}`);
+      }
 
       console.log("  Bild beschaffen (Feed/Quelle) …");
       article.image = await acquireImage({

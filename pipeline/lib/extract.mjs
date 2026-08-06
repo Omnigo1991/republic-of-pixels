@@ -11,13 +11,28 @@ export async function extractArticleText(url, { maxChars = 9000, timeoutMs = 200
       signal: AbortSignal.timeout(timeoutMs),
       redirect: "follow",
     });
-    if (!res.ok) return { ok: false, error: `HTTP ${res.status}`, text: "", ogImage: null };
+    if (!res.ok) return { ok: false, error: `HTTP ${res.status}`, text: "", ogImage: null, embed: null };
     const html = await res.text();
 
     const ogImage =
       html.match(/<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i)?.[1] ??
       html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["']/i)?.[1] ??
       null;
+
+    // Eingebetteter Tweet/Reddit-Post in der Quelle — wird bei der
+    // Artikelgenerierung als klick-zu-laden-Embed übernommen (siehe
+    // ExternalEmbed.tsx), statt das Bild nur zu beschreiben.
+    const tweetUrl = html.match(
+      /https?:\/\/(?:twitter\.com|x\.com)\/[A-Za-z0-9_]+\/status\/\d+/
+    )?.[0];
+    const redditUrl = html.match(
+      /https?:\/\/(?:www\.)?reddit\.com\/r\/[A-Za-z0-9_]+\/comments\/[a-z0-9]+\/[^"'\s<>]*/
+    )?.[0];
+    const embed = tweetUrl
+      ? { platform: "twitter", url: tweetUrl }
+      : redditUrl
+        ? { platform: "reddit", url: redditUrl }
+        : null;
 
     const text = html
       .replace(/<script[\s\S]*?<\/script>/gi, " ")
@@ -37,8 +52,8 @@ export async function extractArticleText(url, { maxChars = 9000, timeoutMs = 200
       .trim()
       .slice(0, maxChars);
 
-    return { ok: true, text, ogImage };
+    return { ok: true, text, ogImage, embed };
   } catch (err) {
-    return { ok: false, error: String(err?.message ?? err), text: "", ogImage: null };
+    return { ok: false, error: String(err?.message ?? err), text: "", ogImage: null, embed: null };
   }
 }
