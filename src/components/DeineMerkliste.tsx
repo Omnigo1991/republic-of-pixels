@@ -20,6 +20,7 @@ export function DeineMerkliste() {
   const [geladen, setGeladen] = useState(false);
   const [neuesThema, setNeuesThema] = useState("");
   const [fehler, setFehler] = useState<string | null>(null);
+  const [vorschlaegeOffen, setVorschlaegeOffen] = useState(false);
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data }) => setSession(data.session));
@@ -55,10 +56,11 @@ export function DeineMerkliste() {
     }
   }, [session]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  async function hinzufuegen() {
-    const tag = neuesThema.trim();
+  async function hinzufuegen(wert?: string) {
+    const tag = (wert ?? neuesThema).trim();
     if (!tag || !session) return;
     setFehler(null);
+    setVorschlaegeOffen(false);
     const { error } = await supabase.from("watchlist").insert({ user_id: session.user.id, tag });
     if (error) {
       setFehler(error.code === "23505" ? "Schon auf deiner Merkliste." : "Konnte nicht hinzugefügt werden.");
@@ -67,6 +69,15 @@ export function DeineMerkliste() {
     setNeuesThema("");
     laden(session.user.id);
   }
+
+  const bereitsVerfolgt = new Set(eintraege.map((e) => e.tag));
+  const vorschlaege = neuesThema.trim()
+    ? alleTags
+        .filter(
+          (t) => t.toLowerCase().includes(neuesThema.trim().toLowerCase()) && !bereitsVerfolgt.has(t)
+        )
+        .slice(0, 6)
+    : alleTags.filter((t) => !bereitsVerfolgt.has(t)).slice(0, 6);
 
   async function entfernen(tag: string) {
     if (!session) return;
@@ -102,27 +113,41 @@ export function DeineMerkliste() {
           </div>
         ))}
 
-        <div className="rounded-2xl border border-dashed border-border-default p-4">
+        <div className="relative rounded-2xl border border-dashed border-border-default p-4">
           <input
-            list="merkliste-tags"
             value={neuesThema}
             onChange={(e) => setNeuesThema(e.target.value)}
+            onFocus={() => setVorschlaegeOffen(true)}
+            onBlur={() => setTimeout(() => setVorschlaegeOffen(false), 150)}
             onKeyDown={(e) => e.key === "Enter" && hinzufuegen()}
             placeholder="Spiel/Thema hinzufügen"
             className="w-full bg-transparent text-sm text-text-primary placeholder:text-text-tertiary focus:outline-none"
           />
-          <datalist id="merkliste-tags">
-            {alleTags.map((t) => (
-              <option key={t} value={t} />
-            ))}
-          </datalist>
           <button
-            onClick={hinzufuegen}
+            onClick={() => hinzufuegen()}
             className="mt-2 text-xs font-semibold text-accent hover:opacity-80"
           >
             + Hinzufügen
           </button>
           {fehler && <p className="mt-1 text-xs text-error">{fehler}</p>}
+
+          {vorschlaegeOffen && vorschlaege.length > 0 && (
+            <div className="absolute inset-x-0 top-full z-10 mt-1.5 overflow-hidden rounded-xl border border-border-default bg-bg-elevated shadow-elevated">
+              {!neuesThema.trim() && (
+                <p className="px-3 pt-2.5 text-[10px] tracking-wide text-text-tertiary">VORSCHLÄGE</p>
+              )}
+              {vorschlaege.map((t) => (
+                <button
+                  key={t}
+                  onMouseDown={(e) => e.preventDefault()}
+                  onClick={() => hinzufuegen(t)}
+                  className="block w-full px-3 py-2 text-left text-sm text-text-primary hover:bg-surface-hover transition-colors"
+                >
+                  {t}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </section>

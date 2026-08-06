@@ -6,7 +6,7 @@ import Link from "next/link";
 import type { Session } from "@supabase/supabase-js";
 import { getSupabase, type Profil } from "@/lib/supabase";
 import { AnmeldeDialog, NicknameWahl } from "./AuthDialog";
-import { MASTER_NICKNAME } from "@/lib/ranking";
+import { MASTER_NICKNAME, naechsterRang, punkteBerechnen } from "@/lib/ranking";
 
 // Anmelde-Status in der Masthead-Navigationszeile. Angemeldet: Profilbild +
 // Nickname, Klick öffnet ein kleines Menü (Profil / Einstellungen / Abmelden).
@@ -16,6 +16,7 @@ export function AuthStatus() {
   const [session, setSession] = useState<Session | null>(null);
   const [profil, setProfil] = useState<Profil | null>(null);
   const [profilGeladen, setProfilGeladen] = useState(false);
+  const [punkte, setPunkte] = useState<number | null>(null);
   const [nicknameSpaeter, setNicknameSpaeter] = useState(false);
   const [dialogOffen, setDialogOffen] = useState(false);
   const [menueOffen, setMenueOffen] = useState(false);
@@ -59,6 +60,36 @@ export function AuthStatus() {
     }
     profilLaden(session.user.id);
   }, [session, profilLaden]);
+
+  // Punktestand fürs Menü — leichtgewichtig (nur Zählungen, keine Listen).
+  useEffect(() => {
+    if (!profil) {
+      setPunkte(null);
+      return;
+    }
+    (async () => {
+      const { count: kommentare } = await supabase
+        .from("comments")
+        .select("id", { count: "exact", head: true })
+        .eq("author_id", profil.id)
+        .eq("deleted", false);
+      const { data: eigeneKommentare } = await supabase
+        .from("comments")
+        .select("id")
+        .eq("author_id", profil.id)
+        .eq("deleted", false);
+      const ids = (eigeneKommentare ?? []).map((k) => k.id);
+      let erhalten = 0;
+      if (ids.length > 0) {
+        const { count } = await supabase
+          .from("comment_votes")
+          .select("comment_id", { count: "exact", head: true })
+          .in("comment_id", ids);
+        erhalten = count ?? 0;
+      }
+      setPunkte(punkteBerechnen({ kommentare: kommentare ?? 0, erhalteneVotes: erhalten, vergebeneVotes: 0 }));
+    })();
+  }, [profil, supabase]);
 
   // Menü schliessen bei Klick ausserhalb
   useEffect(() => {
@@ -131,46 +162,94 @@ export function AuthStatus() {
         </button>
 
         {menueOffen && createPortal(
-          <div
-            ref={menueRef}
-            role="menu"
-            style={{ top: menuePos.top, right: menuePos.right }}
-            className="fixed z-[70] w-48 overflow-hidden rounded-xl border border-border-default bg-bg-elevated py-1.5 text-text-primary shadow-elevated"
-          >
-            <Link
-              href={`/profil/${name}`}
-              onClick={() => setMenueOffen(false)}
-              className="block px-4 py-2.5 text-sm hover:bg-surface-hover transition-colors"
-            >
-              Mein Profil
-            </Link>
-            <Link
-              href="/einstellungen"
-              onClick={() => setMenueOffen(false)}
-              className="block px-4 py-2.5 text-sm hover:bg-surface-hover transition-colors"
-            >
-              Einstellungen
-            </Link>
-            {istMaster && (
-              <Link
-                href="/redaktion/statistik"
-                onClick={() => setMenueOffen(false)}
-                className="block px-4 py-2.5 text-sm text-accent hover:bg-surface-hover transition-colors"
+          (() => {
+            const next = punkte !== null && !istMaster ? naechsterRang(punkte, name) : null;
+            return (
+              <div
+                ref={menueRef}
+                role="menu"
+                style={{ top: menuePos.top, right: menuePos.right }}
+                className="fixed z-[70] w-72 overflow-hidden rounded-xl border border-border-default bg-bg-elevated text-text-primary shadow-elevated"
               >
-                Statistik
-              </Link>
-            )}
-            <div className="mx-3 my-1 h-px bg-border-subtle" />
-            <button
-              onClick={() => {
-                setMenueOffen(false);
-                supabase.auth.signOut();
-              }}
-              className="block w-full px-4 py-2.5 text-left text-sm text-text-secondary hover:bg-surface-hover hover:text-error transition-colors"
-            >
-              Abmelden
-            </button>
-          </div>,
+                <div className="flex items-center gap-3 border-b border-border-subtle p-4">
+                  {istMaster ? (
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#0F0D2C]">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src="/brand/r-avatar.png" alt="" className="h-full w-full" />
+                    </span>
+                  ) : profil?.avatar_url ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={profil.avatar_url}
+                      alt=""
+                      className="h-10 w-10 shrink-0 rounded-full border border-current/20"
+                      referrerPolicy="no-referrer"
+                    />
+                  ) : (
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-current/40 text-sm font-bold">
+                      {name.slice(0, 1).toUpperCase()}
+                    </span>
+                  )}
+                  <div className="min-w-0">
+                    <p className="truncate text-sm font-semibold text-text-primary">{name}</p>
+                    {punkte !== null && (
+                      <p className="text-xs text-text-tertiary">{punkte} Punkte</p>
+                    )}
+                  </div>
+                </div>
+
+                {next && (
+                  <div className="border-b border-border-subtle px-4 py-3">
+                    <p className="mb-1.5 text-xs text-text-tertiary">
+                      Noch {next.fehlend} {next.fehlend === 1 ? "Punkt" : "Punkte"} bis {next.rang.name}
+                    </p>
+                    <div className="h-1.5 overflow-hidden rounded-full bg-surface-card">
+                      <div
+                        className="h-full rounded-full bg-accent transition-[width]"
+                        style={{ width: `${Math.min(100, Math.round(((punkte ?? 0) / next.rang.ab) * 100))}%` }}
+                      />
+                    </div>
+                  </div>
+                )}
+
+                <div className="py-1.5">
+                  <Link
+                    href={`/profil/${name}`}
+                    onClick={() => setMenueOffen(false)}
+                    className="block px-4 py-2.5 text-sm hover:bg-surface-hover transition-colors"
+                  >
+                    Mein Profil
+                  </Link>
+                  <Link
+                    href="/einstellungen"
+                    onClick={() => setMenueOffen(false)}
+                    className="block px-4 py-2.5 text-sm hover:bg-surface-hover transition-colors"
+                  >
+                    Einstellungen
+                  </Link>
+                  {istMaster && (
+                    <Link
+                      href="/redaktion/statistik"
+                      onClick={() => setMenueOffen(false)}
+                      className="block px-4 py-2.5 text-sm text-accent hover:bg-surface-hover transition-colors"
+                    >
+                      Statistik
+                    </Link>
+                  )}
+                  <div className="mx-3 my-1 h-px bg-border-subtle" />
+                  <button
+                    onClick={() => {
+                      setMenueOffen(false);
+                      supabase.auth.signOut();
+                    }}
+                    className="block w-full px-4 py-2.5 text-left text-sm text-text-secondary hover:bg-surface-hover hover:text-error transition-colors"
+                  >
+                    Abmelden
+                  </button>
+                </div>
+              </div>
+            );
+          })(),
           document.body
         )}
       </div>

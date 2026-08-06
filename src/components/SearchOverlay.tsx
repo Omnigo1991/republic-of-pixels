@@ -5,9 +5,26 @@ import Link from "next/link";
 import { getAllArticles } from "@/lib/articles";
 import { CATEGORY_LABELS } from "@/lib/types";
 
-export function SearchPanel({ onNavigate }: { onNavigate?: () => void }) {
-  const [query, setQuery] = useState("");
+export function SearchPanel({
+  onNavigate,
+  initialQuery = "",
+}: {
+  onNavigate?: () => void;
+  initialQuery?: string;
+}) {
+  const [query, setQuery] = useState(initialQuery);
   const articles = useMemo(() => getAllArticles(), []);
+
+  // Beliebte Suchen: häufigste Tags über alle Artikel, als Startpunkt vor
+  // der ersten Eingabe (Betreiber-Vorgabe 06.08.2026).
+  const beliebteSuchen = useMemo(() => {
+    const zaehler = new Map<string, number>();
+    for (const a of articles) for (const t of a.tags) zaehler.set(t, (zaehler.get(t) ?? 0) + 1);
+    return [...zaehler.entries()]
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 6)
+      .map(([tag]) => tag);
+  }, [articles]);
 
   const results = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -35,6 +52,23 @@ export function SearchPanel({ onNavigate }: { onNavigate?: () => void }) {
           className="w-full rounded-2xl border border-border-default bg-surface-card py-4 pl-12 pr-4 text-lg text-text-primary placeholder:text-text-tertiary focus:outline-none focus:border-accent/60 focus:ring-2 focus:ring-accent/20"
         />
       </div>
+
+      {!query.trim() && beliebteSuchen.length > 0 && (
+        <div className="mt-4">
+          <p className="mb-2 px-1 text-xs text-text-tertiary">BELIEBTE SUCHEN</p>
+          <div className="flex flex-wrap gap-2">
+            {beliebteSuchen.map((tag) => (
+              <button
+                key={tag}
+                onClick={() => setQuery(tag)}
+                className="rounded-full border border-border-default bg-surface-card px-3.5 py-1.5 text-sm text-text-secondary transition-colors hover:border-accent/50 hover:text-text-primary"
+              >
+                {tag}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
 
       {query.trim() && (
         <div className="mt-4 flex flex-col gap-1">
