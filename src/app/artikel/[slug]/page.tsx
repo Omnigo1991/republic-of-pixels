@@ -131,7 +131,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
         )}
 
         <figure className="mt-8">
-          <div className="relative aspect-[16/9] overflow-hidden pixel-notch border border-border-subtle">
+          <div className="relative aspect-[16/9] overflow-hidden rounded-2xl border border-border-subtle">
             <ArticleMedia article={article} priority sizes="(max-width: 768px) 100vw, 680px" className="h-full w-full" />
           </div>
           {article.image?.credit && (

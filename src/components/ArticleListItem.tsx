@@ -13,7 +13,7 @@ export function ArticleListItem({ article }: { article: Article }) {
       href={`/artikel/${article.slug}`}
       className="group flex gap-4 sm:gap-6 border-b border-border-subtle py-6 first:pt-0"
     >
-      <div className="relative w-28 sm:w-48 shrink-0 overflow-hidden pixel-notch border border-border-subtle aspect-[4/3] sm:aspect-[16/10]">
+      <div className="relative w-28 sm:w-48 shrink-0 overflow-hidden rounded-xl border border-border-subtle aspect-[4/3] sm:aspect-[16/10]">
         <ArticleMedia article={article} sizes="(max-width: 640px) 112px, 192px" className="h-full w-full transition-transform duration-500 group-hover:scale-105" />
       </div>
       <div className="flex min-w-0 flex-1 flex-col justify-center">
