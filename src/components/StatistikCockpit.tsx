@@ -18,6 +18,7 @@ interface Kennzahlen {
   besucher7: number;
   echtzeitAufrufe: number;
   echtzeitBesucher: number;
+  registrierteKonten: number;
   topSeiten: { path: string; aufrufe: number }[];
 }
 
@@ -85,6 +86,11 @@ export function StatistikCockpit() {
       ]);
       const echtzeitAufrufe = await anzahl(iso(jetzt - 5 * 60000));
 
+      const { count: registrierteKonten, error: kontenError } = await supabase
+        .from("profiles")
+        .select("id", { count: "exact", head: true });
+      if (kontenError) throw kontenError;
+
       const { data: seiten } = await supabase
         .from("page_views")
         .select("path")
@@ -97,7 +103,18 @@ export function StatistikCockpit() {
         .slice(0, 10)
         .map(([path, aufrufe]) => ({ path, aufrufe }));
 
-      setZahlen({ heute, tage7, tage30, gesamt, besucherHeute, besucher7, echtzeitAufrufe, echtzeitBesucher, topSeiten });
+      setZahlen({
+        heute,
+        tage7,
+        tage30,
+        gesamt,
+        besucherHeute,
+        besucher7,
+        echtzeitAufrufe,
+        echtzeitBesucher,
+        registrierteKonten: registrierteKonten ?? 0,
+        topSeiten,
+      });
       setStand(new Date());
       setFehler(null);
     } catch {
@@ -172,6 +189,16 @@ export function StatistikCockpit() {
                 <p className="text-3xl font-bold text-accent">{zahlen.echtzeitAufrufe}</p>
                 <p className="mt-1 text-xs text-text-tertiary">Seitenaufrufe</p>
               </div>
+            </div>
+          </div>
+
+          {/* Community */}
+          <div className="mb-6 flex items-center gap-4 rounded-2xl border border-border-subtle bg-surface-card p-6">
+            <div>
+              <p className="text-3xl font-bold text-text-primary">
+                {zahlen.registrierteKonten.toLocaleString("de-DE")}
+              </p>
+              <p className="mt-1 text-xs text-text-tertiary">Registrierte Konten</p>
             </div>
           </div>
 
