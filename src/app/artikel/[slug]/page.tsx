@@ -130,12 +130,17 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           </div>
         )}
 
-        <figure className="mt-8">
+        <figure className="relative mt-8">
           <div className="relative aspect-[16/9] overflow-hidden rounded-2xl border border-border-subtle">
             <ArticleMedia article={article} priority sizes="(max-width: 768px) 100vw, 680px" className="h-full w-full" />
           </div>
           {article.image?.credit && (
-            <figcaption className="mt-2 text-xs text-text-tertiary">{article.image.credit}</figcaption>
+            <>
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 rounded-b-2xl bg-gradient-to-t from-black/80 to-transparent" />
+              <figcaption className="absolute inset-x-0 bottom-0 px-4 pb-3 text-xs text-white/90 [text-shadow:0_1px_2px_rgba(0,0,0,0.6)]">
+                {article.image.credit}
+              </figcaption>
+            </>
           )}
         </figure>
 
