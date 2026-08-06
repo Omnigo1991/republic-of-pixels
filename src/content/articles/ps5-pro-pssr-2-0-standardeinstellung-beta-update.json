@@ -1,0 +1,96 @@
+{
+  "slug": "ps5-pro-pssr-2-0-standardeinstellung-beta-update",
+  "title": "PS5 Pro: Sony aktiviert PSSR-Bildverbesserung künftig standardmässig",
+  "subtitle": "Ein neues Beta-Systemsoftware-Update schaltet den PSSR-Qualitätsregler automatisch ein",
+  "excerpt": "Sony testet ein PS5-Systemsoftware-Update, das die Funktion zur PSSR-Bildverbesserung standardmässig aktiviert. Betroffen sind auch Spiele, die noch auf der ersten PSSR-Version laufen.",
+  "seoTitle": "PS5 Pro: PSSR-Bildverbesserung wird zum Standard",
+  "metaDescription": "Sony testet ein Beta-Update für PS5 und PS5 Pro, das die PSSR-Bildverbesserung automatisch aktiviert und ältere Spiele mit verbesserter Bildqualität versorgt.",
+  "category": "news",
+  "platforms": [
+    "playstation"
+  ],
+  "tags": [
+    "PS5 Pro",
+    "PSSR",
+    "Sony",
+    "PlayStation",
+    "Beta-Update"
+  ],
+  "tldr": [
+    "Sony verschickt Einladungen für ein neues PS5- und PS5-Pro-Beta-Systemsoftware-Update",
+    "Die Funktion 'Enhance PSSR Image Quality' wird darin standardmässig aktiviert",
+    "Auch Spiele mit der älteren PSSR-Version profitieren automatisch von schärferer Bildqualität",
+    "Ein offizielles Release-Datum für die breite Verteilung des Updates steht noch nicht fest"
+  ],
+  "whyItMatters": "PSSR ist das zentrale technische Merkmal der PS5 Pro und entscheidet massgeblich über die Bildqualität vieler Spiele. Eine automatische Aktivierung der Verbesserungsfunktion sorgt dafür, dass auch Besitzer:innen, die den Schalter bislang übersehen haben, ohne eigenes Eingreifen von schärferer Darstellung profitieren.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Sony testet derzeit ein neues Systemsoftware-Update für PS5 und PS5 Pro, das die Bildqualität vieler Spiele automatisch verbessern soll. Laut einem Bericht aus dem ResetERA-Forum verschickt Sony aktuell Einladungen an ausgewählte Nutzer:innen, um eine Beta-Version der Firmware zu testen. Kernstück der Änderung: Die bisher optionale Funktion 'Enhance PSSR Image Quality' wird künftig standardmässig aktiviert."
+    },
+    {
+      "type": "heading",
+      "text": "Was sich mit dem Update ändert"
+    },
+    {
+      "type": "paragraph",
+      "text": "PSSR, die PlayStation Spectral Super Resolution, ist die KI-gestützte Upscaling-Technologie, die als zentrales Merkmal der PS5 Pro gilt. Die erste Version des Upscalers hatte in einzelnen Titeln Schwächen gezeigt, etwa im Silent Hill 2 Remake, wo die Zusammenarbeit mit der Lichtberechnung von Unreal Engine 5 nicht einwandfrei funktionierte. Mit PSSR 2.0 hat Sony die Technologie überarbeitet und laut eigenen Angaben verbessert."
+    },
+    {
+      "type": "paragraph",
+      "text": "Spiele, die noch nicht auf PSSR 2.0 aktualisiert wurden, unterstützen bislang nur die erste Version des Upscalers und waren auf den manuellen Schalter zur Bildverbesserung angewiesen. Genau dieser Schalter wird mit dem Beta-Update nun automatisch aktiviert."
+    },
+    {
+      "type": "quote",
+      "text": "When enabled, enhanced PSSR image quality will also be applied to games that support the previous version of PSSR, providing an even sharper and clearer visual experience.",
+      "attribution": "Aus der E-Mail zur Beta-Einladung, zitiert von Wccftech"
+    },
+    {
+      "type": "heading",
+      "text": "Weitere Änderungen und offene Fragen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Neben der PSSR-Anpassung bringt das Beta-Update laut den vorliegenden Informationen allgemeine Verbesserungen bei Systemleistung und Stabilität sowie kleinere Anpassungen an der Funktion zum Deaktivieren von Bluetooth in bestimmten Regionen. Weitere grössere Neuerungen sind bislang nicht dokumentiert, wobei bei Beta-Versionen üblicherweise nicht ausgeschlossen ist, dass bis zur öffentlichen Veröffentlichung noch zusätzliche, bislang unangekündigte Funktionen ergänzt werden."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Der Schalter 'Enhance PSSR Image Quality' wird künftig automatisch aktiviert",
+        "Betroffen sind auch Spiele mit der ersten PSSR-Version",
+        "Der Schalter soll laut Sony langfristig entfallen, sobald künftige Upscaler-Versionen erscheinen",
+        "Ein offizielles Datum für die breite Verteilung des Updates ist noch nicht bekannt"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Für PS5-Pro-Besitzer:innen bedeutet die Änderung in erster Linie, dass sie sich künftig nicht mehr selbst um die Aktivierung der Bildverbesserung kümmern müssen. Bis eine für alle sichtbare Version des Updates erscheint, bleibt jedoch offen, ob Sony noch weitere Details zur weiteren Entwicklung von PSSR bekannt gibt."
+    }
+  ],
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-06T12:02:20.223Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "controller",
+  "sources": [
+    {
+      "title": "Sony Forces PSSR 2.0 On Every PS5 Pro Game, As New Beta Update Flips The Upscaler Toggle On By Default",
+      "url": "https://wccftech.com/sony-forces-pssr-2-0-every-ps5-pro-update-upscaler-toggle/",
+      "publisher": "Wccftech"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/ps5-pro-pssr-2-0-standardeinstellung-beta-update.webp",
+    "alt": "PS5 Pro: Sony aktiviert PSSR-Bildverbesserung künftig standardmässig",
+    "credit": "Bild: Wccftech",
+    "sourceUrl": "https://wccftech.com/sony-forces-pssr-2-0-every-ps5-pro-update-upscaler-toggle/"
+  },
+  "relatedSlugs": [
+    "sony-tariff-rueckerstattung-ps5-preis-2026",
+    "sony-disc-aus-2028-david-jaffe-kritik",
+    "xbox-platinum-trophy-aequivalent-2026"
+  ]
+}
