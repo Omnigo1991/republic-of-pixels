@@ -22,15 +22,15 @@ export function TopStory({ article }: { article: Article }) {
           <span className="text-xs text-navy-dim">· {article.readingTimeMinutes} Min. Lesezeit</span>
         </div>
         {kicker && (
-          <p className="mb-2 text-sm font-bold uppercase tracking-wider text-accent-brand">
+          <p className="mb-2 text-sm font-bold uppercase tracking-wider text-accent">
             {kicker}
           </p>
         )}
-        <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-semibold leading-[1.1] tracking-tight text-navy-text group-hover:text-accent-brand transition-colors">
+        <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-semibold leading-[1.1] tracking-tight text-navy-text group-hover:text-accent transition-colors">
           {headline}
         </h1>
         <p className="mt-4 text-lg leading-relaxed text-navy-muted">{article.subtitle}</p>
-        <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-accent-brand">
+        <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-accent">
           Zum Artikel
           <ArrowIcon className="h-4 w-4 transition-transform group-hover:translate-x-1" />
         </span>

@@ -34,7 +34,6 @@ const config: Config = {
           hover: "#30F3D9",
           active: "#02C5AB",
           wash: "#0C3A43",
-          brand: "#02F0D1",
         },
         text: {
           primary: "#F1F0F2",

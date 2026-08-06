@@ -14,7 +14,7 @@ export function Masthead({
 }) {
   return (
     <>
-      <div className="sticky top-0 z-50 bg-accent-brand text-[#0F0D2C]">
+      <div className="sticky top-0 z-50 bg-accent text-[#0F0D2C]">
         <MastheadNav withMark />
       </div>
       <BreakingTicker />

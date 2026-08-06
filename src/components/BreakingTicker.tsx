@@ -21,20 +21,20 @@ export function BreakingTicker() {
   return (
     <Link
       href={`/artikel/${latest.slug}`}
-      className="group block border-b border-accent-brand/20 bg-accent-brand/[0.07] outline-none transition-colors hover:bg-accent-brand/[0.12]"
+      className="group block border-b border-accent/20 bg-accent/[0.07] outline-none transition-colors hover:bg-accent/[0.12]"
     >
       <div className="mx-auto flex max-w-content items-center gap-3 px-4 py-2.5 sm:px-6 lg:px-8">
         <span className="relative flex h-2 w-2 shrink-0">
-          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-brand opacity-60" />
-          <span className="relative inline-flex h-2 w-2 rounded-full bg-accent-brand" />
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
+          <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
         </span>
-        <span className="shrink-0 text-[11px] font-bold uppercase tracking-[0.2em] text-accent-brand">
+        <span className="shrink-0 text-[11px] font-bold uppercase tracking-[0.2em] text-accent">
           Breaking
         </span>
-        <span className="truncate text-sm text-text-primary group-hover:text-accent-brand transition-colors">
+        <span className="truncate text-sm text-text-primary group-hover:text-accent transition-colors">
           {headline}
         </span>
-        <span className="ml-auto hidden shrink-0 text-xs text-text-tertiary group-hover:text-accent-brand sm:inline">
+        <span className="ml-auto hidden shrink-0 text-xs text-text-tertiary group-hover:text-accent sm:inline">
           Zum Artikel →
         </span>
       </div>

@@ -65,10 +65,10 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
                   key={c.key}
                   href={`/kategorie/${c.key}`}
                   onClick={() => setOpen(false)}
-                  className="flex items-center justify-between border-b border-navy-border py-4 text-xl font-medium text-navy-text active:text-accent-brand"
+                  className="flex items-center justify-between border-b border-navy-border py-4 text-xl font-medium text-navy-text active:text-accent"
                 >
                   {c.label}
-                  {c.key === "breaking" && <span className="h-2 w-2 rounded-full bg-accent-brand animate-pulseDot" />}
+                  {c.key === "breaking" && <span className="h-2 w-2 rounded-full bg-accent animate-pulseDot" />}
                 </Link>
               ))}
             </nav>
@@ -82,7 +82,7 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
                   key={p.key}
                   href={`/kategorie/${p.key}`}
                   onClick={() => setOpen(false)}
-                  className="flex items-center gap-3 border-b border-navy-border py-4 text-xl font-medium text-navy-text active:text-accent-brand"
+                  className="flex items-center gap-3 border-b border-navy-border py-4 text-xl font-medium text-navy-text active:text-accent"
                 >
                   <PlatformIcon platform={p.key} className="h-5 w-5 text-navy-dim" />
                   {p.label}
@@ -94,7 +94,7 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
               href={instagramUrl}
               target="_blank"
               rel="noreferrer noopener"
-              className="flex items-center justify-center gap-2 rounded-full border border-accent-brand/40 py-3.5 text-[15px] font-medium text-accent-brand"
+              className="flex items-center justify-center gap-2 rounded-full border border-accent/40 py-3.5 text-[15px] font-medium text-accent"
             >
               Auf Instagram folgen
             </a>

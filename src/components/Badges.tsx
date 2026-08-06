@@ -11,7 +11,7 @@ const CATEGORY_TONE: Record<Category, string> = {
 
 // Varianten für Navy-Flächen (Hero, dunkle Bänder).
 const CATEGORY_TONE_DARK: Record<Category, string> = {
-  breaking: "text-accent-brand border-accent-brand/50 bg-accent-brand/10",
+  breaking: "text-accent border-accent/50 bg-accent/10",
   news: "text-navy-muted border-white/20 bg-white/[0.06]",
   leaks: "text-[#F5B942] border-[#F5B942]/40 bg-[#F5B942]/10",
   reviews: "text-navy-muted border-white/20 bg-white/[0.06]",

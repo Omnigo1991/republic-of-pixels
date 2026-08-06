@@ -39,14 +39,14 @@ export function Logo({
       {withWordmark &&
         (inline ? (
           <span className="font-bold tracking-tight text-text-primary text-[19px] sm:text-[22px] leading-none">
-            REPUBLIC <span className="text-accent-brand">OF PIXELS</span>
+            REPUBLIC <span className="text-accent">OF PIXELS</span>
           </span>
         ) : (
           <span className="font-bold leading-none">
             <span className="block text-[16px] sm:text-[17px] tracking-tight text-text-primary">
               REPUBLIC
             </span>
-            <span className="block text-[10px] sm:text-[11px] text-accent-brand tracking-[0.3em] mt-1">
+            <span className="block text-[10px] sm:text-[11px] text-accent tracking-[0.3em] mt-1">
               OF PIXELS
             </span>
           </span>

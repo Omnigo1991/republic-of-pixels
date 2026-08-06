@@ -39,11 +39,11 @@ export function ReleaseRadar() {
         {upcoming.map((r) => {
           const inner = (
             <div className="flex h-full items-center gap-4 rounded-2xl border border-border-subtle bg-surface-card p-4 transition-all duration-300 hover:bg-surface-hover">
-              <div className="flex h-14 w-14 shrink-0 flex-col items-center justify-center rounded-xl border border-accent-brand/30 bg-accent-brand/[0.08]">
-                <span className="text-lg font-bold leading-none text-accent-brand">
+              <div className="flex h-14 w-14 shrink-0 flex-col items-center justify-center rounded-xl border border-accent/30 bg-accent/[0.08]">
+                <span className="text-lg font-bold leading-none text-accent">
                   {r.date.slice(8, 10)}
                 </span>
-                <span className="mt-0.5 text-[10px] font-semibold uppercase tracking-wide text-accent-brand/80">
+                <span className="mt-0.5 text-[10px] font-semibold uppercase tracking-wide text-accent/80">
                   {new Date(r.date + "T12:00:00").toLocaleDateString("de-DE", { month: "short" })}
                 </span>
               </div>
