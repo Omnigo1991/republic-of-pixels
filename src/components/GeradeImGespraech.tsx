@@ -4,17 +4,20 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { getSupabase } from "@/lib/supabase";
 import { getArticleBySlug } from "@/lib/articles";
+import { splitTitle } from "@/lib/format";
 import { PixelDivider } from "./PixelDivider";
 
-interface TrendTag {
-  tag: string;
+interface TrendArtikel {
+  slug: string;
+  titel: string;
   kommentare: number;
 }
 
-// Trending-Tags der letzten 24 Std., berechnet aus echten Kommentaren
-// (keine neue Infrastruktur nötig — nutzt die bestehende comments-Tabelle).
+// Artikel mit den meisten neuen Kommentaren der letzten 24 Std. — pro
+// Artikel gezählt (nicht pro Tag), damit die Zahl beim Anklicken exakt
+// nachvollziehbar ist.
 export function GeradeImGespraech() {
-  const [tags, setTags] = useState<TrendTag[] | null>(null);
+  const [artikel, setArtikel] = useState<TrendArtikel[] | null>(null);
 
   useEffect(() => {
     const supabase = getSupabase();
@@ -30,23 +33,20 @@ export function GeradeImGespraech() {
         for (const row of data ?? []) {
           proArtikel.set(row.article_slug, (proArtikel.get(row.article_slug) ?? 0) + 1);
         }
-        const proTag = new Map<string, number>();
-        for (const [slug, anzahl] of proArtikel) {
-          const artikel = getArticleBySlug(slug);
-          if (!artikel) continue;
-          for (const tag of artikel.tags) {
-            proTag.set(tag, (proTag.get(tag) ?? 0) + anzahl);
-          }
-        }
-        const sortiert = [...proTag.entries()]
-          .map(([tag, kommentare]) => ({ tag, kommentare }))
+        const liste = [...proArtikel.entries()]
+          .map(([slug, kommentare]) => {
+            const a = getArticleBySlug(slug);
+            if (!a) return null;
+            return { slug, titel: splitTitle(a.title, a.tags).headline, kommentare };
+          })
+          .filter((x): x is TrendArtikel => x !== null)
           .sort((a, b) => b.kommentare - a.kommentare)
           .slice(0, 6);
-        setTags(sortiert);
+        setArtikel(liste);
       });
   }, []);
 
-  if (!tags || tags.length === 0) return null;
+  if (!artikel || artikel.length === 0) return null;
 
   return (
     <section aria-labelledby="gespraech-heading" className="py-10">
@@ -55,14 +55,14 @@ export function GeradeImGespraech() {
       </h2>
       <PixelDivider />
       <div className="flex flex-wrap gap-2.5">
-        {tags.map((t) => (
+        {artikel.map((a) => (
           <Link
-            key={t.tag}
-            href={`/suche?q=${encodeURIComponent(t.tag)}`}
-            className="inline-flex items-center gap-2 rounded-full border border-border-default bg-surface-card px-4 py-2 text-sm transition-colors hover:border-accent/50 hover:bg-surface-hover"
+            key={a.slug}
+            href={`/artikel/${a.slug}#kommentare-heading`}
+            className="inline-flex max-w-full items-center gap-2 rounded-full border border-border-default bg-surface-card px-4 py-2 text-sm transition-colors hover:border-accent/50 hover:bg-surface-hover"
           >
-            <span className="font-medium text-text-primary">{t.tag}</span>
-            <span className="text-accent">{t.kommentare} {t.kommentare === 1 ? "Kommentar" : "Kommentare"}</span>
+            <span className="truncate font-medium text-text-primary">{a.titel}</span>
+            <span className="shrink-0 text-accent">{a.kommentare} {a.kommentare === 1 ? "Kommentar" : "Kommentare"}</span>
           </Link>
         ))}
       </div>
