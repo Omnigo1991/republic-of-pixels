@@ -5,6 +5,7 @@ import Link from "next/link";
 import type { Article } from "@/lib/types";
 import { ArticleMedia } from "./ArticleMedia";
 import { CategoryPill } from "./Badges";
+import { PixelDivider } from "./PixelDivider";
 import { splitTitle } from "@/lib/format";
 
 // Einzeilige Slider-Leiste (Betreiber-Vorgabe 04.08.2026, play3-Vorbild):
@@ -45,7 +46,7 @@ export function PopularSection({ articles }: { articles: Article[] }) {
 
   return (
     <section aria-labelledby="popular-heading" className="py-10">
-      <div className="mb-6 flex items-center justify-between">
+      <div className="mb-3 flex items-center justify-between">
         <h2 id="popular-heading" className="text-xl font-semibold tracking-tight text-text-primary">
           Beliebt bei Lesern
         </h2>
@@ -55,6 +56,7 @@ export function PopularSection({ articles }: { articles: Article[] }) {
           <SliderArrow direction="next" onClick={() => scrollByCard(1)} disabled={!canNext} />
         </div>
       </div>
+      <PixelDivider />
 
       <div
         ref={trackRef}

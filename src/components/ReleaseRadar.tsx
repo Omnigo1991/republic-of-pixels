@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Platform } from "@/lib/types";
 import { PlatformIcon } from "./PlatformIcons";
+import { PixelDivider } from "./PixelDivider";
 import releasesData from "@/content/releases.json";
 
 interface ReleaseEntry {
@@ -27,12 +28,13 @@ export function ReleaseRadar() {
 
   return (
     <section aria-labelledby="radar-heading" className="py-10">
-      <div className="mb-6 flex items-baseline justify-between">
+      <div className="mb-3 flex items-baseline justify-between">
         <h2 id="radar-heading" className="text-xl font-semibold tracking-tight text-text-primary">
           Release-Radar
         </h2>
         <span className="text-xs text-text-tertiary">Die nächsten Termine</span>
       </div>
+      <PixelDivider />
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {upcoming.map((r) => {
           const inner = (

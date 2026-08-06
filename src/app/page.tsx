@@ -4,6 +4,7 @@ import { PopularSection } from "@/components/PopularSection";
 import { NewsListe } from "@/components/NewsListe";
 import { CategoryChipBar } from "@/components/CategoryChipBar";
 import { ReleaseRadar } from "@/components/ReleaseRadar";
+import { PixelDivider } from "@/components/PixelDivider";
 import { Reveal } from "@/components/Reveal";
 import { Masthead } from "@/components/Masthead";
 
@@ -41,9 +42,10 @@ export default function HomePage() {
             <h2 className="mb-2 text-xl font-semibold tracking-tight text-text-primary">
               Alle News
             </h2>
-            <p className="mb-6 text-sm text-text-tertiary">
+            <p className="mb-3 text-sm text-text-tertiary">
               Chronologisch, neueste zuerst
             </p>
+            <PixelDivider />
           </Reveal>
           <NewsListe articles={chronological} />
         </section>

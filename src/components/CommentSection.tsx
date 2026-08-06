@@ -5,6 +5,7 @@ import Link from "next/link";
 import type { Session } from "@supabase/supabase-js";
 import { getSupabase, type Kommentar, type Profil } from "@/lib/supabase";
 import { AnmeldeDialog, NicknameWahl } from "./AuthDialog";
+import { PixelDivider } from "./PixelDivider";
 import { MASTER_NICKNAME, MASTER_RANG } from "@/lib/ranking";
 
 // Echtes Kommentarsystem (ersetzt die frühere Demo-Attrappe).
@@ -126,7 +127,7 @@ export function CommentSection({ articleSlug }: { articleSlug: string }) {
 
   return (
     <section aria-labelledby="kommentare-heading" className="mt-4">
-      <div className="mb-6 flex items-center justify-between">
+      <div className="mb-3 flex items-center justify-between">
         <h2 id="kommentare-heading" className="text-xl font-semibold tracking-tight text-text-primary">
           Kommentare{" "}
           <span className="text-text-tertiary">
@@ -149,6 +150,7 @@ export function CommentSection({ articleSlug }: { articleSlug: string }) {
           </button>
         )}
       </div>
+      <PixelDivider />
 
       {session && !profil && !laden && <NicknameWahl onFertig={neuLadenNachProfil} />}
 

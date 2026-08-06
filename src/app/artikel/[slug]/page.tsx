@@ -16,6 +16,7 @@ import { ShareButtons } from "@/components/ShareButtons";
 import { CommentSection } from "@/components/CommentSection";
 import { ArticleReactions } from "@/components/ArticleReactions";
 import { ArticleCard } from "@/components/ArticleCard";
+import { PixelDivider } from "@/components/PixelDivider";
 import { formatDateTime, splitTitle } from "@/lib/format";
 import { Masthead } from "@/components/Masthead";
 
@@ -158,9 +159,10 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
 
       {related.length > 0 && (
         <section className="mx-auto max-w-content px-4 sm:px-6 lg:px-8 py-16">
-          <h2 className="mb-6 text-xl font-semibold tracking-tight text-text-primary">
+          <h2 className="mb-3 text-xl font-semibold tracking-tight text-text-primary">
             Ähnliche Artikel
           </h2>
+          <PixelDivider />
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {related.map((a) => (
               <ArticleCard key={a.slug} article={a} />

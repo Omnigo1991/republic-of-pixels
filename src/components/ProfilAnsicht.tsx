@@ -13,6 +13,7 @@ import {
   rangFuer,
 } from "@/lib/ranking";
 import { splitTitle } from "@/lib/format";
+import { PixelDivider } from "./PixelDivider";
 
 interface LetzterKommentar {
   id: number;
@@ -202,9 +203,10 @@ export function ProfilAnsicht({ nickname }: { nickname: string }) {
       )}
 
       {/* Letzte Kommentare */}
-      <h2 className="mt-12 mb-4 text-xl font-semibold tracking-tight text-text-primary">
+      <h2 className="mt-12 mb-3 text-xl font-semibold tracking-tight text-text-primary">
         Letzte Kommentare
       </h2>
+      <PixelDivider />
       {letzte.length === 0 && (
         <p className="text-sm text-text-tertiary">Noch keine Kommentare geschrieben.</p>
       )}
