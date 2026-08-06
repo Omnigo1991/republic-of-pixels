@@ -38,12 +38,13 @@ import a33 from "@/content/articles/project-zomboid-spielerrekord-update-2026.js
 import a34 from "@/content/articles/resident-evil-veronica-remake-2-millionen-wishlists.json";
 import a35 from "@/content/articles/roblox-kurssturz-discovery-algorithmus-2026.json";
 import a36 from "@/content/articles/sony-disc-aus-2028-david-jaffe-kritik.json";
-import a37 from "@/content/articles/sony-tariff-rueckerstattung-ps5-preis-2026.json";
-import a38 from "@/content/articles/walking-dead-streets-of-survival-release.json";
-import a39 from "@/content/articles/xbox-game-pass-lineup-august-2026.json";
-import a40 from "@/content/articles/xbox-helix-abwaertskompatibilitaet-leak-2026.json";
-import a41 from "@/content/articles/xbox-platinum-trophy-aequivalent-2026.json";
-import a42 from "@/content/articles/xbox-preiserhoehung-europa-2026.json";
-import a43 from "@/content/articles/xenoblade-chronicles-2-switch-2-edition-bugs-update.json";
+import a37 from "@/content/articles/sony-ps5-warnhinweis-disc-aufkleber-2028.json";
+import a38 from "@/content/articles/sony-tariff-rueckerstattung-ps5-preis-2026.json";
+import a39 from "@/content/articles/walking-dead-streets-of-survival-release.json";
+import a40 from "@/content/articles/xbox-game-pass-lineup-august-2026.json";
+import a41 from "@/content/articles/xbox-helix-abwaertskompatibilitaet-leak-2026.json";
+import a42 from "@/content/articles/xbox-platinum-trophy-aequivalent-2026.json";
+import a43 from "@/content/articles/xbox-preiserhoehung-europa-2026.json";
+import a44 from "@/content/articles/xenoblade-chronicles-2-switch-2-edition-bugs-update.json";
 
-export const ALL_ARTICLES = [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22, a23, a24, a25, a26, a27, a28, a29, a30, a31, a32, a33, a34, a35, a36, a37, a38, a39, a40, a41, a42, a43] as unknown as Article[];
+export const ALL_ARTICLES = [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22, a23, a24, a25, a26, a27, a28, a29, a30, a31, a32, a33, a34, a35, a36, a37, a38, a39, a40, a41, a42, a43, a44] as unknown as Article[];
