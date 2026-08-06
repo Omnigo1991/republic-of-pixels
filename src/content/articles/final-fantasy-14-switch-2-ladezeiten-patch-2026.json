@@ -1,0 +1,106 @@
+{
+  "slug": "final-fantasy-14-switch-2-ladezeiten-patch-2026",
+  "title": "Final Fantasy 14 auf Switch 2: Patch gegen lange Ladezeiten angekündigt",
+  "subtitle": "Square Enix hat die Ursache für die Verzögerungen identifiziert und arbeitet an einer Lösung.",
+  "excerpt": "Square Enix reagiert auf Beschwerden über lange Ladezeiten bei Final Fantasy 14 auf der Nintendo Switch 2 und kündigt ein Update an, das sich bereits in der Testphase befindet.",
+  "seoTitle": "Final Fantasy 14 Switch 2: Patch gegen Ladezeiten",
+  "metaDescription": "Square Enix kündigt für Final Fantasy 14 auf der Switch 2 ein Update gegen lange Ladezeiten an. Die Ursache wurde identifiziert.",
+  "category": "news",
+  "platforms": [
+    "nintendo"
+  ],
+  "tags": [
+    "Final Fantasy 14",
+    "Switch 2",
+    "Square Enix",
+    "MMORPG",
+    "Patch"
+  ],
+  "tldr": [
+    "Square Enix arbeitet an einem Patch gegen lange Ladezeiten bei Final Fantasy 14 auf der Switch 2",
+    "Betroffen sind vor allem instanzierte Inhalte mit vielen gleichzeitig anwesenden Charakteren",
+    "Die aktualisierte Version befindet sich laut Square Enix bereits in der Testphase",
+    "Ein konkretes Datum für die Veröffentlichung des Updates wurde nicht genannt"
+  ],
+  "whyItMatters": "Die Switch-2-Version von Final Fantasy 14 gilt als wichtiger Test dafür, wie gut sich grosse MMOs auf Nintendos neuer Konsole umsetzen lassen. Ein zügig behobenes Ladezeiten-Problem stärkt das Vertrauen in künftige Portierungen.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Square Enix hat ein Update für die Switch-2-Version von Final Fantasy 14 angekündigt, das lange Ladezeiten beheben soll. Die Umsetzung des MMORPGs für Nintendos neue Konsole erschien Anfang der Woche und erfordert unter anderem ein separates Abonnement, sofern bereits auf einer anderen Plattform gespielt wird. Nintendo Switch Online wird für den Zugriff hingegen nicht benötigt."
+    },
+    {
+      "type": "embed",
+      "platform": "reddit",
+      "url": "https://www.reddit.com/r/ffxiv/comments/1vfah3c/comment/p1o9cji/"
+    },
+    {
+      "type": "heading",
+      "text": "Ursache in instanzierten Inhalten gefunden"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nach Beschwerden aus der Community, bei denen teils ein schwarzer Bildschirm während des Ladevorgangs zu sehen war, hat Square Enix auf der offiziellen Webseite Stellung genommen und die Ursache benannt."
+    },
+    {
+      "type": "quote",
+      "text": "Unsere Nachforschungen haben bestätigt: Wenn ihr einen instanziierten Inhalt betretet, während ihr von vielen Charakteren umgeben seid, dauert das Laden der Daten länger als gewöhnlich. Dieses Problem bleibt bestehen, bis ihr die Instanz wieder verlasst.",
+      "attribution": "Square Enix"
+    },
+    {
+      "type": "paragraph",
+      "text": "Laut dem Unternehmen wurden spezifische Fälle identifiziert, in denen das erneute Laden von Daten und das Leeren des Caches ungewöhnlich viel Zeit beansprucht. Diese Prozesse seien nötig, um ein fehlerfreies Rendering zu gewährleisten."
+    },
+    {
+      "type": "quote",
+      "text": "Wir haben diese Prozesse daher optimiert, um selbst unter solchen Bedingungen schnellere Ladezeiten zu garantieren. Die aktualisierte Version befindet sich bereits im Test.",
+      "attribution": "Square Enix"
+    },
+    {
+      "type": "heading",
+      "text": "Portierung kommt bei Fans bisher gut an"
+    },
+    {
+      "type": "paragraph",
+      "text": "Abgesehen von den Ladezeiten fällt das Feedback zur Switch-2-Version überwiegend positiv aus. Mehrere Spielerinnen und Spieler vergleichen die Umsetzung direkt mit der Version für Valves Steam Deck – und sehen dabei die Switch 2 vorne."
+    },
+    {
+      "type": "quote",
+      "text": "Die Switch-Version ist ein riesiges Upgrade gegenüber dem Steam Deck. Es läuft auf der Switch 2 zwar nur minimal flüssiger, aber das grössere und hochauflösendere Display der Switch 2 macht einen gigantischen Unterschied.",
+      "attribution": "ein Nutzer im Community-Feedback"
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ein konkretes Datum für die Veröffentlichung des Patches hat Square Enix nicht genannt. Da die Ursache bereits identifiziert und eine Lösung im Test ist, dürfte sich das Problem in absehbarer Zeit zumindest deutlich abschwächen. Für die Switch-2-Version, die als Prüfstein für die Umsetzbarkeit grosser Online-Rollenspiele auf der Konsole gilt, wäre eine zügige Behebung ein wichtiges Signal."
+    }
+  ],
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-06T10:03:10.212Z",
+  "readingTimeMinutes": 1,
+  "heroVariant": "particles",
+  "sources": [
+    {
+      "title": "Final Fantasy 14: Square Enix kündigt Patch für lästiges Ladezeiten-Problem auf der Switch 2 an",
+      "url": "https://www.eurogamer.de/final-fantasy-14-switch-2-patch-ladezeiten",
+      "publisher": "Eurogamer.de"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/final-fantasy-14-switch-2-ladezeiten-patch-2026.webp",
+    "alt": "Final Fantasy 14 auf Switch 2: Patch gegen lange Ladezeiten angekündigt",
+    "credit": "Bild: Eurogamer.de",
+    "sourceUrl": "https://www.eurogamer.de/final-fantasy-14-switch-2-patch-ladezeiten"
+  },
+  "relatedSlugs": [
+    "nintendo-switch-2-verkaufszahlen-q1-fy2027",
+    "resident-evil-veronica-remake-2-millionen-wishlists",
+    "xenoblade-chronicles-2-switch-2-edition-bugs-update"
+  ]
+}
