@@ -225,7 +225,7 @@ export function ProfilAnsicht({ nickname }: { nickname: string }) {
       {/* Alle Ränge */}
       {!istMaster && (
         <div className="mt-6 rounded-2xl border border-border-subtle bg-surface-card p-5">
-          <div className="overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <div className="overflow-x-auto pt-2 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             <div className="grid min-w-[420px] grid-cols-5">
               {RAENGE.map((r, i) => {
                 const erreicht = punkte >= r.ab;
