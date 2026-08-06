@@ -89,27 +89,35 @@ Redaktionelles Profil:
 - "Republic of Pixels" ist ein Markenname und wird NIEMALS mit Bindestrichen verbunden (kein "Republic-of-Pixels-Redaktion" o. Ä.) — bei Wortverbindungen umschreiben, z. B. "Redaktion von Republic of Pixels"
 - Fakten stammen ausschliesslich aus dem gelieferten Quellmaterial — nichts erfinden, keine Zahlen oder Zitate ergänzen, die dort nicht stehen`;
 
-// Titel der zuletzt veröffentlichten Artikel — verhindert bei stündlichen Läufen,
-// dass dieselbe Story erneut aufgegriffen wird, wenn eine weitere Quelle später
-// darüber berichtet (deren Feed-Eintrag hat einen neuen, unbekannten GUID).
+// Zuletzt veröffentlichte Artikel (Titel + Tags) — verhindert bei den häufigen
+// Läufen, dass dieselbe Story erneut aufgegriffen wird, wenn eine weitere
+// Quelle später darüber berichtet (deren Feed-Eintrag hat einen neuen,
+// unbekannten GUID) oder Claude den Titel beim erneuten Verfassen anders
+// formuliert. Kein künstliches Slice-Limit mehr auf die Trefferliste — das
+// hatte bei mehr als 25 Artikeln im 72h-Fenster ältere Duplikate unsichtbar
+// gemacht (Ursache des GTA-6/Netflix-Doppelartikels). Tags werden mitgegeben,
+// damit Claude auch bei abweichender Formulierung erkennt, dass es dieselbe
+// Story ist — Titelvergleich allein reicht bei umformulierten Meldungen nicht.
 function recentPublishedTitles(hours = 72) {
   const cutoff = Date.now() - hours * 3600000;
-  const titles = [];
+  const entries = [];
   for (const f of readdirSync(ARTICLES_DIR).filter((f) => f.endsWith(".json"))) {
     try {
       const a = JSON.parse(readFileSync(join(ARTICLES_DIR, f), "utf8"));
-      if (new Date(a.publishedAt).getTime() > cutoff) titles.push(a.title);
+      if (new Date(a.publishedAt).getTime() > cutoff) {
+        entries.push({ title: a.title, tags: a.tags ?? [] });
+      }
     } catch {
       // unlesbare Datei ignorieren
     }
   }
-  return titles.slice(-25);
+  return entries.slice(-150);
 }
 
 async function selectCandidates(candidates) {
   const published = recentPublishedTitles();
   const publishedBlock = published.length
-    ? `\nBereits von uns veröffentlicht (diese Storys NICHT erneut auswählen, auch nicht aus anderer Quelle):\n${published.map((t) => `- ${t}`).join("\n")}\n`
+    ? `\nBereits von uns veröffentlicht (diese Storys NICHT erneut auswählen, auch nicht aus anderer Quelle oder mit anderem Titel — vergleiche auch inhaltlich/thematisch anhand der Tags, nicht nur den Titelwortlaut):\n${published.map((p) => `- ${p.title}${p.tags.length ? ` [${p.tags.join(", ")}]` : ""}`).join("\n")}\n`
     : "";
   const list = candidates
     .map(
