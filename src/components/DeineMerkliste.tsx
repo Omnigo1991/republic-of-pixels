@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import type { Session } from "@supabase/supabase-js";
 import { getSupabase } from "@/lib/supabase";
 import { getAllArticles } from "@/lib/articles";
-import { PixelDivider } from "./PixelDivider";
+import { SectionDivider } from "./SectionDivider";
 
 interface Eintrag {
   tag: string;
@@ -92,7 +92,7 @@ export function DeineMerkliste() {
       <h2 id="merkliste-heading" className="mb-3 text-xl font-semibold tracking-tight text-text-primary">
         Deine Merkliste
       </h2>
-      <PixelDivider />
+      <SectionDivider />
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
         {eintraege.map((e) => (
           <div

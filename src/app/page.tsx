@@ -6,7 +6,7 @@ import { CategoryChipBar } from "@/components/CategoryChipBar";
 import { ReleaseRadar } from "@/components/ReleaseRadar";
 import { GeradeImGespraech } from "@/components/GeradeImGespraech";
 import { DeineMerkliste } from "@/components/DeineMerkliste";
-import { PixelDivider } from "@/components/PixelDivider";
+import { SectionDivider } from "@/components/SectionDivider";
 import { Reveal } from "@/components/Reveal";
 import { Masthead } from "@/components/Masthead";
 
@@ -47,7 +47,7 @@ export default function HomePage() {
               </h2>
               <span className="text-xs text-text-tertiary">Chronologisch, neueste zuerst</span>
             </div>
-            <PixelDivider />
+            <SectionDivider />
           </Reveal>
           <NewsListe articles={chronological} />
         </section>

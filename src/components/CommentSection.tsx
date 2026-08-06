@@ -5,7 +5,7 @@ import Link from "next/link";
 import type { Session } from "@supabase/supabase-js";
 import { getSupabase, type Kommentar, type Profil } from "@/lib/supabase";
 import { AnmeldeDialog, NicknameWahl } from "./AuthDialog";
-import { PixelDivider } from "./PixelDivider";
+import { SectionDivider } from "./SectionDivider";
 import { MASTER_NICKNAME, MASTER_RANG } from "@/lib/ranking";
 
 // Echtes Kommentarsystem (ersetzt die frühere Demo-Attrappe).
@@ -150,7 +150,7 @@ export function CommentSection({ articleSlug }: { articleSlug: string }) {
           </button>
         )}
       </div>
-      <PixelDivider />
+      <SectionDivider />
 
       {session && !profil && !laden && <NicknameWahl onFertig={neuLadenNachProfil} />}
 

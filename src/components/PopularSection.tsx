@@ -5,7 +5,7 @@ import Link from "next/link";
 import type { Article } from "@/lib/types";
 import { ArticleMedia } from "./ArticleMedia";
 import { CategoryPill } from "./Badges";
-import { PixelDivider } from "./PixelDivider";
+import { SectionDivider } from "./SectionDivider";
 import { splitTitle } from "@/lib/format";
 
 // Einzeilige Slider-Leiste (Betreiber-Vorgabe 04.08.2026, play3-Vorbild):
@@ -56,7 +56,7 @@ export function PopularSection({ articles }: { articles: Article[] }) {
           <SliderArrow direction="next" onClick={() => scrollByCard(1)} disabled={!canNext} />
         </div>
       </div>
-      <PixelDivider />
+      <SectionDivider />
 
       <div
         ref={trackRef}

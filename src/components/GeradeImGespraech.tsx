@@ -5,7 +5,7 @@ import Link from "next/link";
 import { getSupabase } from "@/lib/supabase";
 import { getArticleBySlug } from "@/lib/articles";
 import { splitTitle } from "@/lib/format";
-import { PixelDivider } from "./PixelDivider";
+import { SectionDivider } from "./SectionDivider";
 
 interface TrendArtikel {
   slug: string;
@@ -53,7 +53,7 @@ export function GeradeImGespraech() {
       <h2 id="gespraech-heading" className="mb-3 text-xl font-semibold tracking-tight text-text-primary">
         Gerade im Gespräch
       </h2>
-      <PixelDivider />
+      <SectionDivider />
       <div className="flex flex-wrap gap-2.5">
         {artikel.map((a) => (
           <Link
