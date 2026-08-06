@@ -3,7 +3,14 @@
 const CATEGORIES = ["breaking", "news", "leaks", "reviews"];
 const PLATFORMS = ["pc", "playstation", "xbox", "nintendo"];
 const HERO_VARIANTS = ["circuit", "controller", "particles", "waveform", "grid"];
-const BLOCK_TYPES = ["paragraph", "heading", "quote", "list"];
+const BLOCK_TYPES = ["paragraph", "heading", "quote", "list", "embed"];
+const REVIEW_LABELS = [
+  "Essenziell",
+  "Klare Empfehlung",
+  "Empfehlenswert",
+  "Für den Sale vormerken",
+  "Nicht empfohlen",
+];
 
 export function validateArticle(a, existingSlugs) {
   const errors = [];
@@ -37,7 +44,26 @@ export function validateArticle(a, existingSlugs) {
     }
   }
   need(Array.isArray(a.sources) && a.sources.length >= 1 && a.sources.every((s) => s?.title && /^https?:\/\//.test(s?.url ?? "")), "sources: mindestens eine gültige Quelle mit URL");
-  need(a.review === null || (a.review && typeof a.review.verdict === "string"), "review ungültig");
+  if (a.category === "reviews") {
+    const r = a.review;
+    need(
+      !!r &&
+        REVIEW_LABELS.includes(r.label) &&
+        Array.isArray(r.strengths) &&
+        r.strengths.length >= 2 &&
+        Array.isArray(r.weaknesses) &&
+        r.weaknesses.length >= 1 &&
+        typeof r.forWhom === "string" &&
+        r.forWhom.length >= 15 &&
+        typeof r.verdict === "string" &&
+        r.verdict.length >= 50 &&
+        typeof r.recommendation === "string" &&
+        r.recommendation.length >= 10,
+      "review: bei category=reviews vollständig erforderlich (label/strengths/weaknesses/forWhom/verdict/recommendation)"
+    );
+  } else {
+    need(a.review === null, "review muss null sein ausser bei category=reviews");
+  }
   if (a.seoTitle !== undefined) need(typeof a.seoTitle === "string" && a.seoTitle.length <= 70, "seoTitle zu lang (>70)");
   if (a.metaDescription !== undefined) need(typeof a.metaDescription === "string" && a.metaDescription.length <= 165, "metaDescription zu lang (>165)");
 

@@ -128,11 +128,12 @@ Aufgaben:
 2. Wähle die maximal ${MAX_ARTICLES_PER_RUN} relevantesten Cluster für unser Magazin aus. Kriterien: Nachrichtenwert für deutschsprachige Gamer:innen, Aktualität, Substanz. Ausdrücklich erwünscht sind auch Hardware- und Konsolen-Themen mit Gaming-Relevanz: kommende Konsolen und Leaks dazu (z. B. PlayStation 6, nächste Xbox/Project Helix, Switch-Nachfolger), GPUs/CPUs fürs Gaming, Handhelds. NICHT erwünscht: reine Deals-/Gewinnspiel-/Guide-Meldungen, Kleinst-Hardware ohne Gaming-Bezug (Peripherie-Restposten, Büro-Hardware), Meldungen über einzelne Streamer.
 3. Pro ausgewähltem Cluster bestimme:
    - "indices": alle zugehörigen Kandidaten-Indizes, den faktenreichsten zuerst
-   - "category": "breaking" (nur bei wirklich grossen Nachrichten), "news" oder "leaks"
+   - "category": "breaking" (nur bei wirklich grossen Nachrichten), "news", "leaks" oder "reviews"
+   - "reviews" NUR wählen, wenn der Kandidat selbst ein Test/eine Review eines bereits veröffentlichten Spiels ist (Titel/Anriss enthält klar erkennbar eine Wertung/ein Testurteil, z. B. "review", "test", "im Test") — NICHT für News über ein Spiel oder Ankündigungen
    - "platforms": Teilmenge von ["pc","playstation","xbox","nintendo"]
    - "isLeakOrRumor": true/false
    - "priority": 1 (höchste) bis ${MAX_ARTICLES_PER_RUN}
-   - "depth": "kurz" (Routinemeldung, wenig Substanz), "standard" (normale News) oder "lang" (grosse Nachricht mit viel Substanz und Einordnungsbedarf, z. B. Übernahmen, grosse Ankündigungen, Branchenbeben)
+   - "depth": "kurz" (Routinemeldung, wenig Substanz), "standard" (normale News) oder "lang" (grosse Nachricht mit viel Substanz und Einordnungsbedarf, z. B. Übernahmen, grosse Ankündigungen, Branchenbeben, Tests)
 
 Antworte NUR mit JSON, ohne Einleitung und ohne Kommentar — das erste Zeichen deiner Antwort muss "{" sein: {"selected":[{"indices":[...],"category":"...","platforms":[...],"isLeakOrRumor":...,"priority":...,"depth":"..."}]}
 Wenn nichts den Kriterien genügt, antworte {"selected":[]}.`;
@@ -151,6 +152,11 @@ Wenn nichts den Kriterien genügt, antworte {"selected":[]}.`;
 }
 
 async function generateArticle(cluster, clusterItems, sourceTexts, slugs) {
+  const istReview = cluster.category === "reviews";
+  // Tests brauchen Substanz für Stärken/Schwächen — nie als "kurz" generieren,
+  // selbst wenn die Auswahl das fälschlich so eingestuft hat.
+  const depth = istReview && cluster.depth === "kurz" ? "standard" : cluster.depth;
+
   const sourcesBlock = clusterItems
     .map((it, i) => {
       const text = sourceTexts[i];
@@ -158,17 +164,34 @@ async function generateArticle(cluster, clusterItems, sourceTexts, slugs) {
     })
     .join("\n\n---\n\n");
 
+  const reviewHinweis = istReview
+    ? `\n- Dies ist eine Testzusammenfassung: Das "review"-Feld fasst das Urteil der zitierten Quelle(n) zusammen — erfinde KEINE eigenen, unabhängigen Spielerfahrungen. Formuliere "verdict" so, dass klar wird, dass es die Einordnung der Kritik wiedergibt (z. B. "Die Kritik bewertet …").`
+    : "";
+
+  const reviewFeld = istReview
+    ? `,
+  "review": {
+    "label": "einer von genau diesen fünf Werten: Essenziell | Klare Empfehlung | Empfehlenswert | Für den Sale vormerken | Nicht empfohlen — entsprechend dem Gesamturteil der Quelle",
+    "strengths": ["2–4 Stärken laut Quelle"],
+    "weaknesses": ["1–3 Schwächen laut Quelle"],
+    "forWhom": "1 Satz: für wen sich das Spiel eignet",
+    "verdict": "2–3 Sätze Gesamteinschätzung, gestützt auf die zitierte Kritik",
+    "recommendation": "1 Satz Kauf-/Wartenempfehlung"
+  }`
+    : `,
+  "review": null`;
+
   const prompt = `Verfasse auf Basis des folgenden Quellmaterials einen eigenständigen deutschen Magazin-Artikel. Der Artikel darf keine Übersetzung und keine Paraphrase der Quelle sein, sondern eine eigene journalistische Aufbereitung der Fakten.
 
 ${sourcesBlock}
 
 Vorgaben:
-- Kategorie: ${cluster.category}${cluster.isLeakOrRumor ? " (als unbestätigt kennzeichnen!)" : ""}
+- Kategorie: ${cluster.category}${cluster.isLeakOrRumor ? " (als unbestätigt kennzeichnen!)" : ""}${reviewHinweis}
 - Umfang: ${
-    { kurz: "250–350", standard: "350–550", lang: "550–750" }[cluster.depth] ?? "350–550"
+    { kurz: "250–350", standard: "350–550", lang: "550–750" }[depth] ?? "350–550"
   } Wörter im body — die Länge muss dem Nachrichtenwert entsprechen, kein Aufblähen
 - Struktur: Einstieg mit dem Kern der Nachricht, ${
-    cluster.depth === "lang" ? "3–4" : "2–3"
+    depth === "lang" ? "3–4" : "2–3"
   } Zwischenüberschriften, am Ende eine kurze Einordnung
 - Bereits vergebene Slugs (nicht wiederverwenden): ${[...slugs].slice(-40).join(", ")}
 
@@ -186,7 +209,7 @@ Antworte NUR mit einem JSON-Objekt mit exakt diesen Feldern:
   "tldr": ["3–4 Stichpunkte mit den Kernfakten"],
   "whyItMatters": "2–3 Sätze: Warum ist das für Gamer:innen relevant?",
   "body": [{"type":"paragraph","text":"..."},{"type":"heading","text":"..."},{"type":"list","items":["..."]},{"type":"quote","text":"nur echte Zitate aus der Quelle","attribution":"..."}],
-  "isLeakOrRumor": ${cluster.isLeakOrRumor}
+  "isLeakOrRumor": ${cluster.isLeakOrRumor}${reviewFeld}
 }
 Hinweis zu body: quote-Blöcke nur verwenden, wenn die Quelle ein wörtliches Zitat enthält.`;
 
@@ -214,7 +237,7 @@ Hinweis zu body: quote-Blöcke nur verwenden, wenn die Quelle ein wörtliches Zi
       url: it.link,
       publisher: it.feedName,
     })),
-    review: null,
+    review: istReview ? (draft.review ?? null) : null,
     image: null,
   };
 }
