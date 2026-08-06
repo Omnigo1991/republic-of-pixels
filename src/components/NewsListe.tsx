@@ -4,10 +4,10 @@ import { useState } from "react";
 import type { Article } from "@/lib/types";
 import { ArticleListItem } from "./ArticleListItem";
 
-// "Alle News" zeigt zunächst 12 Einträge; der Rest lässt sich per
-// "Mehr anzeigen" nachladen (Betreiber-Vorgabe 05.08.2026).
-const SICHTBAR_START = 12;
-const SCHRITT = 12;
+// "Alle News" zeigt zunächst 10 Einträge; der Rest lässt sich per
+// "Mehr anzeigen" nachladen (Betreiber-Vorgabe 06.08.2026).
+const SICHTBAR_START = 10;
+const SCHRITT = 10;
 
 export function NewsListe({ articles }: { articles: Article[] }) {
   const [sichtbar, setSichtbar] = useState(SICHTBAR_START);

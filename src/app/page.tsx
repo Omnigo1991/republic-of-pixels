@@ -33,9 +33,6 @@ export default function HomePage() {
 
         <div className="h-px w-full bg-border-subtle" />
 
-        <GeradeImGespraech />
-        <DeineMerkliste />
-
         <Reveal>
           <ReleaseRadar />
         </Reveal>
@@ -54,6 +51,11 @@ export default function HomePage() {
           </Reveal>
           <NewsListe articles={chronological} />
         </section>
+
+        <div className="h-px w-full bg-border-subtle" />
+
+        <GeradeImGespraech />
+        <DeineMerkliste />
       </div>
     </>
   );
