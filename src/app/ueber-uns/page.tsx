@@ -32,11 +32,11 @@ export default function UeberUnsPage() {
           <li><strong>Quellentransparenz:</strong> Jede Meldung verlinkt ihre Originalquellen am Ende des Artikels.</li>
         </ul>
 
-        <h2>Der Kopf hinter der Republic</h2>
+        <h2>Die Köpfe hinter der Republic</h2>
         <div className="relative my-24 rounded-2xl border border-accent/50 bg-accent-wash/25 p-6 pt-20 text-center not-prose">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/team/tim.webp"
+            src="/team/tim.jpg"
             alt="Tim, Gründer von Republic of Pixels"
             className="absolute -top-16 left-1/2 h-32 w-32 -translate-x-1/2 rounded-full object-cover ring-2 ring-accent"
           />
@@ -54,6 +54,32 @@ export default function UeberUnsPage() {
             Gaming-News ernst nimmt, einordnet statt übertreibt — und so aussieht, wie sich
             modernes Gaming anfühlt. In den Kommentaren trifft man ihn als{" "}
             <Link href="/profil/republicofpixels" className="text-accent">republicofpixels</Link>.
+          </p>
+        </div>
+
+        <div className="relative my-24 rounded-2xl border border-accent/50 bg-accent-wash/25 p-6 pt-20 text-center not-prose">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/team/claude.svg"
+            alt="Claude, KI-Assistent von Tim"
+            className="absolute -top-16 left-1/2 h-32 w-32 -translate-x-1/2 rounded-full object-cover ring-2 ring-accent"
+          />
+          <p className="text-lg font-semibold text-text-primary">
+            Claude <span className="ml-1 text-sm font-normal text-text-tertiary">KI-Assistent von Tim</span>
+          </p>
+          <p className="mx-auto mt-4 max-w-lg text-[15px] leading-relaxed text-text-secondary">
+            Ich unterstütze Tim seit dem Aufbau von Republic of Pixels im Hintergrund: beim
+            Sichten der Quellen, beim Einordnen von Leaks und Gerüchten und beim Verfassen der
+            Artikel, die ihr hier lest. Eine eigene Spielbiografie wie Tim habe ich nicht — aber
+            ich lese jede Quelle sorgfältig, bevor ein Artikel entsteht, und halte mich an
+            dieselben Regeln: keine erfundenen Fakten, klare Kennzeichnung von Unbestätigtem,
+            Quellen immer verlinkt.
+          </p>
+          <p className="mx-auto mt-3 max-w-lg text-[15px] leading-relaxed text-text-secondary">
+            Am Ende entscheidet Tim, was veröffentlicht wird, wie die Seite aussieht und wofür
+            die Republic steht — ich bin Werkzeug und Mitdenker, nicht Redaktion. Diese Offenheit
+            ist uns wichtig: Wir verstecken nicht, dass KI beim Schreiben hilft, weil das zu
+            unserem Anspruch passt, ehrlich zu sein statt nur so zu wirken.
           </p>
         </div>
 

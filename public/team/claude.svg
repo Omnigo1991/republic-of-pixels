@@ -1,0 +1,7 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Claude-Logo">
+  <rect x="0" y="0" width="512" height="512" rx="115" ry="115" fill="#DA7756" />
+  <path
+    d="M256 70 C262 170 342 250 442 256 C342 262 262 342 256 442 C250 342 170 262 70 256 C170 250 250 170 256 70 Z"
+    fill="#F5F1EA"
+  />
+</svg>
