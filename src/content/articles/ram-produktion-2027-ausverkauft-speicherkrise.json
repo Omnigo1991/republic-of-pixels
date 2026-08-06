@@ -1,0 +1,100 @@
+{
+  "slug": "ram-produktion-2027-ausverkauft-speicherkrise",
+  "title": "RAM-Produktion für 2027 bereits ausverkauft: Preiskrise droht bis 2028",
+  "subtitle": "Samsung, Micron und SK Hynix haben laut einem Branchenbericht ihre Fertigungskapazitäten für die kommenden zwei Jahre bereits vollständig vergeben.",
+  "excerpt": "Ein Bericht aus Taiwan legt nahe, dass die drei grössten Speicherhersteller ihre gesamte Produktion für 2026 und 2027 verkauft haben. Für Gamer bedeutet das: teure RAM- und SSD-Preise auf unbestimmte Zeit.",
+  "seoTitle": "RAM-Krise: Produktion bis 2027 ausverkauft, Preise steigen weiter",
+  "metaDescription": "Samsung, Micron und SK Hynix haben ihre RAM-Kapazitäten laut Bericht bis 2027 verkauft. Was das für PC-Hardware-Preise bis 2028 bedeutet.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "tags": [
+    "RAM",
+    "Speicherkrise",
+    "Samsung",
+    "Micron",
+    "SK Hynix",
+    "Hardware-Preise"
+  ],
+  "tldr": [
+    "Laut einem Bericht der taiwanischen Zeitung DigiTimes haben Samsung, Micron und SK Hynix ihre DRAM- und HBM-Produktion für 2026 und 2027 bereits vollständig verkauft.",
+    "NAND-Speicher (Basis für SSDs) ist etwas weniger knapp, soll aber ebenfalls bis Ende des Monats ausverkauft sein.",
+    "Samsung hat selbst eingeräumt, dass die Preise über das gesamte Jahr 2027 weiter steigen werden; Valve rechnet ebenfalls mit einer Verschärfung der Lage.",
+    "Der chinesische Hersteller CXMT gilt als möglicher Ausweg, wird aber bislang nur von wenigen Herstellern und nur für den asiatischen Markt genutzt."
+  ],
+  "whyItMatters": "Wer in den nächsten Jahren einen PC bauen, aufrüsten oder eine neue Grafikkarte kaufen möchte, muss sich auf anhaltend hohe Preise einstellen. Auch Konsolenhersteller wie Valve sind von der Knappheit betroffen, was sich auf Verfügbarkeit und Kosten von Geräten wie dem Steam Deck auswirkt.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Die Hoffnung auf eine baldige Entspannung bei den Preisen für Arbeitsspeicher dürfte sich erledigt haben. Einem Bericht der taiwanischen Fachzeitung DigiTimes zufolge, der teilweise von TweakTown ins Englische übertragen wurde, haben die drei grössten Speicherhersteller der Welt – Samsung, Micron und SK Hynix – ihre Produktionskapazitäten nicht nur für 2026, sondern bereits für das gesamte Jahr 2027 verkauft. Berufen wird sich dabei auf ungenannte Branchen-Insider. Damit wäre der grossflächige Nachschub an neuen RAM-Chips faktisch bis 2028 verplant."
+    },
+    {
+      "type": "heading",
+      "text": "DRAM und HBM restlos vergeben"
+    },
+    {
+      "type": "paragraph",
+      "text": "Besonders betroffen sind laut dem Bericht DRAM- und HBM-Speicher. DRAM ist jene Speicherart, die in klassischen Arbeitsspeicher-Modulen, aktuellen Gaming-Grafikkarten und hochwertigen SSDs zum Einsatz kommt – also in weiten Teilen der PC-Hardware, die Spielerinnen und Spieler regelmässig kaufen. Bei NAND-Speicher, der Grundlage vieler SSDs, sei die Lage minimal entspannter, da hier noch Restkapazitäten für 2027 verfügbar seien. Allerdings sollen auch diese laut dem Bericht noch vor Ende des laufenden Monats ausverkauft sein, wodurch selbst DRAM-lose SSDs voraussichtlich für weitere zwei Jahre teuer bleiben dürften."
+    },
+    {
+      "type": "list",
+      "items": [
+        "DRAM- und HBM-Kapazitäten von Samsung, Micron und SK Hynix für 2026 und 2027 bereits verkauft",
+        "NAND-Speicher etwas weniger knapp, soll aber ebenfalls bis Ende des Monats ausverkauft sein",
+        "Auch die Produktion klassischer mechanischer Festplatten ist laut Bericht bereits weit im Voraus vergeben",
+        "Samsung, Micron und SK Hynix sind zugleich Beklagte in einer aktuellen US-Klage wegen mutmasslicher Preisabsprachen"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Samsung und Valve rechnen mit weiteren Preisschüben"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Bericht reiht sich in eine Serie schlechter Nachrichten für die ohnehin angespannte Komponentenlage ein. Samsung selbst hatte bereits eingeräumt, dass die Preise über das gesamte Jahr 2027 hinweg weiter steigen werden. Auch Valve, dessen Steam Machine und Steam Deck OLED bereits deutlich unter Lieferengpässen und Preiserhöhungen gelitten haben, geht davon aus, dass sich die Situation zunächst weiter verschärft, bevor eine Besserung eintritt."
+    },
+    {
+      "type": "heading",
+      "text": "Chinesische Hersteller als Alternative – vorerst nur in kleinem Rahmen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Als möglicher Ausweg wird häufig auf den wachsenden chinesischen Fertigungssektor verwiesen, insbesondere auf den DRAM-Hersteller CXMT, der bereits mehrere eigene Fabrikationsanlagen betreibt. Der Effekt auf den Konsumentenmarkt dürfte jedoch vorerst gering bleiben: Bislang setzen nur wenige grosse PC-Hersteller wie HP, Asus und Acer überhaupt auf CXMT-Speicher, und dies auch nur bei einer begrenzten Auswahl an Produkten für den asiatischen Markt."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Selbst wenn zusätzliche Fertigungskapazitäten – etwa aus China – in den kommenden Jahren hinzukommen, ist unklar, ob sie den Konsumentenmarkt tatsächlich entlasten. Die stark wachsende und hardwarehungrige KI-Industrie könnte zusätzliche Speicherchips ebenso leicht aufnehmen wie die bisherigen Bestände, ohne dass sich an der grundlegenden Knappheit für PC-Komponenten etwas ändert. Solange keine Anzeichen für ein Abklingen dieser Nachfrage bestehen, dürften RAM-, SSD- und Grafikkartenpreise auch über 2027 hinaus auf hohem Niveau bleiben."
+    }
+  ],
+  "isLeakOrRumor": true,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-06T11:03:10.549Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "particles",
+  "sources": [
+    {
+      "title": "The three biggest RAM makers have already sold all their 2027 output, report says, potentially stretching price woes into 2028",
+      "url": "https://www.rockpapershotgun.com/the-three-biggest-ram-makers-have-already-sold-all-their-2027-output-report-says-potentially-stretching-price-woes-into-2028",
+      "publisher": "Rock Paper Shotgun"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/ram-produktion-2027-ausverkauft-speicherkrise.webp",
+    "alt": "RAM-Produktion für 2027 bereits ausverkauft: Preiskrise droht bis 2028",
+    "credit": "Bild: Rock Paper Shotgun",
+    "sourceUrl": "https://www.rockpapershotgun.com/the-three-biggest-ram-makers-have-already-sold-all-their-2027-output-report-says-potentially-stretching-price-woes-into-2028"
+  },
+  "relatedSlugs": [
+    "dram-hbm-speicherkrise-ausverkauft-2027",
+    "grafikkarten-preise-asien-speicherkrise-2026",
+    "xbox-preiserhoehung-europa-2026"
+  ]
+}
