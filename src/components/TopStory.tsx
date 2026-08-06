@@ -12,7 +12,7 @@ export function TopStory({ article }: { article: Article }) {
       className="group grid gap-6 lg:grid-cols-2 lg:gap-10 lg:items-center"
     >
       {/* Hell-auf-Navy-Styling: Die Top-Story sitzt auf dem Marken-Navy-Band. */}
-      <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-white/10 shadow-elevated duration-500">
+      <div className="relative aspect-[16/10] overflow-hidden pixel-notch border border-white/10 shadow-elevated duration-500">
         <ArticleMedia article={article} priority sizes="(max-width: 1024px) 100vw, 50vw" className="h-full w-full transition-transform duration-700 group-hover:scale-[1.03]" />
       </div>
       <div>

@@ -108,7 +108,7 @@ function PopularCard({ article, rank }: { article: Article; rank: number }) {
     <article className="w-[280px] shrink-0 snap-start sm:w-[320px]">
       <Link
         href={`/artikel/${article.slug}`}
-        className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border-subtle bg-surface-card transition-all duration-300 hover:bg-surface-hover"
+        className="group pixel-notch flex h-full flex-col overflow-hidden border border-border-subtle bg-surface-card transition-all duration-300 hover:bg-surface-hover"
       >
         <div className="relative aspect-[16/9] overflow-hidden">
           <ArticleMedia

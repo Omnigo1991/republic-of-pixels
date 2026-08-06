@@ -39,12 +39,12 @@ export default function HomePage() {
 
         <section className="py-10">
           <Reveal>
-            <h2 className="mb-2 text-xl font-semibold tracking-tight text-text-primary">
-              Alle News
-            </h2>
-            <p className="mb-3 text-sm text-text-tertiary">
-              Chronologisch, neueste zuerst
-            </p>
+            <div className="mb-3 flex items-baseline justify-between">
+              <h2 className="text-xl font-semibold tracking-tight text-text-primary">
+                Alle News
+              </h2>
+              <span className="text-xs text-text-tertiary">Chronologisch, neueste zuerst</span>
+            </div>
             <PixelDivider />
           </Reveal>
           <NewsListe articles={chronological} />

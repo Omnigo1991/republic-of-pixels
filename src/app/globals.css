@@ -17,6 +17,15 @@ h3 {
   letter-spacing: -0.015em;
 }
 
+/* Signatur-Formsprache (Betreiber-Entscheidung 06.08.2026): genoppte
+   Ecke oben rechts statt durchgehend abgerundeter Ecken — löst den
+   Markennamen "Pixels" auch in der Kartenform ein. Ersetzt rounded-*
+   auf Artikelbild-/Kartencontainern. */
+.pixel-notch {
+  border-radius: 0;
+  clip-path: polygon(0 0, calc(100% - 16px) 0, calc(100% - 16px) 16px, 100% 16px, 100% 100%, 0 100%);
+}
+
 ::selection {
   background-color: #02f0d1;
   color: #0f0d2c;
