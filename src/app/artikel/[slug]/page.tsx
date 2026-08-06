@@ -147,7 +147,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
 
         <TldrBox items={article.tldr} />
 
-        <ArticleBody blocks={article.body} />
+        <ArticleBody blocks={article.body} inlineRelated={related[0]} />
 
         <WhyItMattersBox text={article.whyItMatters} />
 
@@ -155,7 +155,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
 
         <SourcesBox sources={article.sources} />
 
-        <WeiterlesenBox articles={related} />
+        <WeiterlesenBox articles={related.slice(1)} />
 
         <div className="my-8 flex flex-wrap items-center justify-between gap-4 border-y border-border-subtle py-6">
           <ArticleReactions articleSlug={article.slug} />

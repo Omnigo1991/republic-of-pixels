@@ -172,7 +172,7 @@ export function StatistikCockpit() {
       {zahlen && (
         <>
           {/* Echtzeit */}
-          <div className="mb-6 rounded-2xl border border-accent/35 bg-accent-wash/25 p-6">
+          <div className="mb-6 rounded-2xl border border-accent/35 bg-accent-wash/30 p-6">
             <div className="flex items-center gap-2">
               <span className="relative flex h-2.5 w-2.5">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />

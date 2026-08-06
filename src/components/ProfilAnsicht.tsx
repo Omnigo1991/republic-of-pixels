@@ -129,7 +129,7 @@ export function ProfilAnsicht({ nickname }: { nickname: string }) {
   return (
     <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
       {/* Kopf */}
-      <div className={`relative overflow-hidden rounded-2xl border p-6 shadow-card sm:p-8 ${istMaster ? "border-accent/50 bg-accent-wash/25" : "border-border-subtle bg-surface-card"}`}>
+      <div className={`relative overflow-hidden rounded-2xl border p-6 shadow-card sm:p-8 ${istMaster ? "border-accent/35 bg-accent-wash/30" : "border-border-subtle bg-surface-card"}`}>
         {!istMaster && (
           <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-accent-wash/30 to-transparent" />
         )}
@@ -179,7 +179,7 @@ export function ProfilAnsicht({ nickname }: { nickname: string }) {
 
       {/* Statistiken */}
       <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
-        <div className="rounded-2xl border border-accent/30 bg-accent-wash/20 p-5 text-center">
+        <div className="rounded-2xl border border-accent/35 bg-accent-wash/30 p-5 text-center">
           <IconStar className="mx-auto h-5 w-5 text-accent" />
           <p className="mt-2 text-2xl font-bold text-accent">{punkte}</p>
           <p className="mt-1 text-xs text-text-secondary">Punkte</p>
