@@ -39,11 +39,11 @@ export function ExternalEmbed({ platform, url }: { platform: EmbedPlatform; url:
 
   if (!geladen) {
     return (
-      <div className="my-8 rounded-2xl border border-accent/35 bg-accent-wash/30 p-6 text-center not-prose">
-        <p className="mb-2 text-[13px] font-semibold tracking-wide text-accent">
+      <div className="my-8 rounded-2xl border border-border-default bg-surface-card p-6 text-center not-prose">
+        <p className="mb-2 text-[13px] font-semibold tracking-wide text-text-tertiary">
           EXTERNER INHALT VON {meta.label.toUpperCase()}
         </p>
-        <p className="mb-4 text-sm text-text-primary">
+        <p className="mb-4 text-sm text-text-secondary">
           Beim Laden werden Daten an {meta.label} übermittelt, und {meta.label} kann Cookies setzen.
         </p>
         <button
