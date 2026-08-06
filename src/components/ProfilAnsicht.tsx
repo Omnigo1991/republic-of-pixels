@@ -235,12 +235,12 @@ export function ProfilAnsicht({ nickname }: { nickname: string }) {
                   <div key={r.name} className="relative flex flex-col items-center gap-2">
                     {i > 0 && (
                       <div
-                        className={`absolute left-0 top-[22px] h-0.5 w-1/2 -translate-y-1/2 ${erreicht ? "bg-accent/50" : "bg-border-subtle"}`}
+                        className={`absolute left-0 top-[22px] h-0.5 w-[calc(50%-26px)] -translate-y-1/2 ${erreicht ? "bg-accent/50" : "bg-border-subtle"}`}
                       />
                     )}
                     {i < RAENGE.length - 1 && (
                       <div
-                        className={`absolute right-0 top-[22px] h-0.5 w-1/2 -translate-y-1/2 ${naechsteErreicht ? "bg-accent/50" : "bg-border-subtle"}`}
+                        className={`absolute right-0 top-[22px] h-0.5 w-[calc(50%-26px)] -translate-y-1/2 ${naechsteErreicht ? "bg-accent/50" : "bg-border-subtle"}`}
                       />
                     )}
                     <div
