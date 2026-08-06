@@ -116,7 +116,7 @@ export function DeineMerkliste() {
           </div>
         ))}
 
-        <div className="relative rounded-2xl border border-dashed border-border-default p-4">
+        <div className="relative col-span-2 rounded-2xl border border-dashed border-border-default p-4 sm:col-span-1">
           <input
             value={neuesThema}
             onChange={(e) => setNeuesThema(e.target.value)}
@@ -124,7 +124,7 @@ export function DeineMerkliste() {
             onBlur={() => setTimeout(() => setVorschlaegeOffen(false), 150)}
             onKeyDown={(e) => e.key === "Enter" && hinzufuegen()}
             placeholder="Spiel/Thema hinzufügen"
-            className="w-full bg-transparent text-sm text-text-primary placeholder:text-text-tertiary focus:outline-none"
+            className="w-full min-w-0 bg-transparent text-sm text-text-primary placeholder:text-text-tertiary focus:outline-none"
           />
           <button
             onClick={() => hinzufuegen()}
