@@ -35,4 +35,14 @@ export const FEEDS = [
   { id: "golem_games", name: "Golem.de Games", url: "https://rss.golem.de/rss.php?tp=games&feed=RSS2.0", lang: "de", weight: 0.8 },
   { id: "destructoid", name: "Destructoid", url: "https://www.destructoid.com/feed/", lang: "en", weight: 0.7 },
   { id: "theverge_games", name: "The Verge Games", url: "https://www.theverge.com/rss/games/index.xml", lang: "en", weight: 0.9 },
+  // Dedizierte Review-Feeds (06.08.2026): erhöhen gezielt die Trefferquote
+  // für die "reviews"-Kategorie — jeder Eintrag hier ist bereits ein Test,
+  // nicht nur eine News über ein Spiel.
+  { id: "gamespot_reviews", name: "GameSpot", url: "https://www.gamespot.com/feeds/reviews/", lang: "en", weight: 1.0 },
+  { id: "eurogamer_reviews", name: "Eurogamer", url: "https://www.eurogamer.net/feed/reviews", lang: "en", weight: 1.0 },
+  { id: "pcgamer_reviews", name: "PC Gamer", url: "https://www.pcgamer.com/rss/reviews/", lang: "en", weight: 1.0 },
+  { id: "nintendolife_reviews", name: "Nintendo Life", url: "https://www.nintendolife.com/feeds/reviews", lang: "en", weight: 0.9 },
+  { id: "pushsquare_reviews", name: "Push Square", url: "https://www.pushsquare.com/feeds/reviews", lang: "en", weight: 0.9 },
+  { id: "purexbox_reviews", name: "Pure Xbox", url: "https://www.purexbox.com/feeds/reviews", lang: "en", weight: 0.9 },
+  { id: "ign_reviews", name: "IGN", url: "https://www.ign.com/rss/articles/feed?tags=review", lang: "en", weight: 1.0 },
 ];
