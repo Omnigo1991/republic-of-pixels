@@ -1,0 +1,98 @@
+{
+  "slug": "gears-of-war-e-day-open-beta-pvp-fan-wunsch",
+  "title": "Gears of War: E-Day – Open Beta erhält PvP-Modus auf Fan-Wunsch",
+  "subtitle": "The Coalition ergänzt die Testphase um den Versus-Modus, nachdem die Community diesen seit Längerem gefordert hatte.",
+  "excerpt": "The Coalition öffnet die Open Beta von Gears of War: E-Day zeitweise auch für den PvP-Versus-Modus. Ein Überblick über Zeitplan, Inhalte und Belohnungen.",
+  "seoTitle": "Gears of War E-Day: Open Beta bekommt PvP-Modus",
+  "metaDescription": "The Coalition erweitert die Open Beta von Gears of War: E-Day um PvP-Versus. Alle Termine, Inhalte und Belohnungen im Überblick.",
+  "category": "news",
+  "platforms": [
+    "xbox",
+    "pc"
+  ],
+  "tags": [
+    "Gears of War",
+    "E-Day",
+    "The Coalition",
+    "Open Beta",
+    "PvP",
+    "Xbox"
+  ],
+  "tldr": [
+    "Open Beta von Gears of War: E-Day startet am 6. August für Early-Access-Spieler",
+    "PvP-Versus-Modus folgt ab dem 8. August zusätzlich zum Horde-Modus",
+    "Zweite Beta-Welle vom 13. bis 17. August steht allen Spieler:innen offen",
+    "Teilnehmer:innen schalten kosmetische Belohnungen für die Vollversion frei"
+  ],
+  "whyItMatters": "Der PvP-Versus-Modus war bislang eines der am meisten diskutierten Unbekannten rund um E-Day. Dass The Coalition ihn nun kurzfristig in die Beta aufnimmt, zeigt, wie stark das Studio auf Community-Feedback reagiert.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "The Coalition hat die Beta-Pläne für Gears of War: E-Day kurzfristig erweitert. Zusätzlich zum bereits angekündigten Horde-Modus wird auch der PvP-Versus-Modus zeitweise spielbar sein – eine Reaktion auf anhaltende Forderungen aus der Community, die diesen Modus schon länger vor Release testen wollte. Die Ankündigung erfolgte über den offiziellen X-Account von Gears of War."
+    },
+    {
+      "type": "embed",
+      "platform": "twitter",
+      "url": "https://x.com/GearsofWar/status/2084718214395859406"
+    },
+    {
+      "type": "heading",
+      "text": "Zeitplan der Beta-Phasen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Open Beta startet am 6. August für alle Early-Access-Spieler, also für Vorbesteller:innen des Spiels. In den ersten beiden Tagen steht zunächst nur der Horde-Modus zur Verfügung. Ab dem 8. August kommt dann der PvP-Versus-Modus hinzu, bevor die Beta mit dem Ende des Wochenendes pausiert."
+    },
+    {
+      "type": "list",
+      "items": [
+        "6. bis 8. August: Early Access nur mit Horde-Modus",
+        "Ab 8. August: PvP-Versus-Modus zusätzlich spielbar",
+        "13. bis 17. August: Zweite Beta-Welle für alle Spieler:innen offen",
+        "Laut offizieller FAQ bieten beide Phasen identische Inhalte"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Belohnungen und Community-Reaktion"
+    },
+    {
+      "type": "paragraph",
+      "text": "Wer an der Beta teilnimmt, kann sich bereits kosmetische Anpassungen für die Vollversion des Spiels freischalten. Der PvP-Versus-Modus war für Fans der Reihe bislang ein weitgehend unbekannter Faktor, da The Coalition bisher vor allem den Horde-Modus in den Vordergrund gerückt hatte. Die Community hatte jedoch schon seit einiger Zeit gefordert, den Versus-Modus selbst anspielen zu können, bevor das Spiel vollständig erscheint."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die kurzfristige Erweiterung der Beta um den PvP-Modus deutet darauf hin, dass The Coalition auf das Feedback der Spielerschaft eingeht, statt starr an ursprünglichen Testplänen festzuhalten. Für Interessierte bedeutet das: Wer sich einen Eindruck vom vollständigen Umfang von Gears of War: E-Day verschaffen möchte, kann dies nun sowohl im Early Access als auch in der offenen zweiten Testphase tun, ohne auf einen zentralen Mehrspielermodus verzichten zu müssen."
+    }
+  ],
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-06T07:02:09.857Z",
+  "readingTimeMinutes": 1,
+  "heroVariant": "controller",
+  "sources": [
+    {
+      "title": "Gears of War: E-Day – Open Beta bietet dank Fan-Wünschen auch PvP",
+      "url": "https://www.eurogamer.de/gears-of-war-eday-beta-pvp",
+      "publisher": "Eurogamer.de"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/gears-of-war-e-day-open-beta-pvp-fan-wunsch.webp",
+    "alt": "Gears of War: E-Day – Open Beta erhält PvP-Modus auf Fan-Wunsch",
+    "credit": "Bild: Eurogamer.de",
+    "sourceUrl": "https://www.eurogamer.de/gears-of-war-eday-beta-pvp"
+  },
+  "relatedSlugs": [
+    "halo-studios-entlassungen-campaign-evolved-2026",
+    "xbox-platinum-trophy-aequivalent-2026",
+    "halo-campaign-evolved-cod-black-ops-ps5-verkaufszahlen"
+  ]
+}
