@@ -27,16 +27,22 @@ function instagramArticles(): { articles: Article[]; ausInstagram: boolean } {
   // Nur die posted-Zuordnung lesen — state.json enthält auch Pipeline-Interna
   // (u. a. Zugriffsdaten), die nie in Seiten-Props landen dürfen.
   let posted: Record<string, string> = {};
+  let unlisted: string[] = [];
   try {
     const state = JSON.parse(
       readFileSync(join(process.cwd(), "pipeline", "state.json"), "utf8")
     );
     posted = state.instagram?.posted ?? {};
+    // unlisted: Posts, die Tim auf Instagram gelöscht hat — sie bleiben im
+    // posted-Gedächtnis (verhindert erneutes Posten), erscheinen aber nicht
+    // mehr auf dieser Seite.
+    unlisted = state.instagram?.unlisted ?? [];
   } catch {
     // kein State (z. B. lokale Vorschau) → Fallback unten
   }
 
   const vonInstagram = Object.entries(posted)
+    .filter(([slug]) => !unlisted.includes(slug))
     .sort((a, b) => b[1].localeCompare(a[1]))
     .map(([slug]) => getArticleBySlug(slug))
     .filter((a): a is Article => Boolean(a))
