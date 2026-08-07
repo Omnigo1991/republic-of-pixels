@@ -1,0 +1,114 @@
+{
+  "slug": "overwatch-dmon-season-4-tank-hero-2026",
+  "title": "Overwatch: Neuer Tank D.Mon vereint Reinhardt und D.Va",
+  "subtitle": "Die von Gundam und Armored Core inspirierte Heldin startet am 11. August mit Season 4.",
+  "excerpt": "D.Mon, der neue Overwatch-Tank, kombiniert Schild und Schwert mit Mech-Technik und kann sich wie D.Va aus ihrem Mech lösen. Blizzard erklärt Kit, Balance und Designphilosophie.",
+  "seoTitle": "Overwatch D.Mon: Neuer Tank-Held ab Season 4 im Detail",
+  "metaDescription": "D.Mon startet am 11. August in Overwatch. Die Redaktion erklärt Kit, Ultimate und Balance des neuen Tank-Helden im Detail.",
+  "category": "news",
+  "platforms": [
+    "pc",
+    "playstation",
+    "xbox",
+    "nintendo"
+  ],
+  "tags": [
+    "Overwatch",
+    "D.Mon",
+    "Blizzard",
+    "Season 4",
+    "Tank-Held",
+    "MEKA Squad"
+  ],
+  "tldr": [
+    "D.Mon startet am 11. August 2026 mit Season 4 als neuer Tank-Held in Overwatch.",
+    "Ihr Kit kombiniert Schwert und Schild von Reinhardt mit Mech-Mechaniken von D.Va.",
+    "Design-Inspirationen stammen laut Blizzard von Gundam und Armored Core.",
+    "Anders als D.Va ist D.Mon technisch als eine durchgängige Einheit programmiert, nicht als zwei separate Helden."
+  ],
+  "whyItMatters": "D.Mon dürfte als flexibler Solo-Tank neue Team-Kompositionen ermöglichen und die Rolle für Neueinsteiger:innen attraktiver machen. Die Ankündigung ist zudem ein Signal, wie Blizzard technische Altlasten aus früheren Helden-Designs vermeiden will.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Blizzard hat Details zum neuen Overwatch-Tank D.Mon veröffentlicht, der am 11. August 2026 mit dem Start von Season 4 spielbar wird. Wie leitender Hero-Producer Kenny Hudson in einem Interview mit mehreren Fachmedien erklärte, verbindet die Heldin Elemente von Reinhardt und D.Va zu einem Rushdown-Tank, der laut Blizzard sowohl im Team als auch als alleiniger Solo-Tank funktioniert. Als Hauptinspirationen für Design und Bewegungsablauf nannten die Entwickler die Mecha-Reihen Gundam und Armored Core."
+    },
+    {
+      "type": "embed",
+      "platform": "reddit",
+      "url": "https://www.reddit.com/r/Overwatch/comments/g16qw3/thank_god_for_replays_i_wouldnt_even_know_how_to/"
+    },
+    {
+      "type": "heading",
+      "text": "Schild, Schwert und Fusionsgewehr"
+    },
+    {
+      "type": "paragraph",
+      "text": "D.Mon wird als 'Sword and Board'-Heldin beschrieben. Am rechten Arm ihres Mechs sitzt ein Plasmaschwert mit 60 Schadenspunkten pro Treffer und einer Reichweite von rund 5,5 Metern, am linken Arm ein Fusionsgewehr, das in Salven feuert und danach eine Abklingzeit hat. Ausserdem kann sie ein Schild mit 650 Trefferpunkten aktivieren, das kleiner als Reinhardts ausfällt, aber ähnlich funktioniert. Während der Schild aktiv ist, lässt sich mit der Fähigkeit Surging Strike ein Vorstoss ausführen, der Gegner zurückstösst."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Plasmaschwert: 60 Schaden, ca. 5,5 Meter Reichweite, etwas schneller als Reinhardts Hammer",
+        "Fusion Repeater: Salvenfeuer mit Abklingzeit für Distanzkämpfe",
+        "Schild mit 650 Trefferpunkten plus Surging Strike zum Zurückstossen von Gegnern",
+        "Treibstoffgebundene Powerslide-Bewegung für seitliches Ausweichen"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "De-Mech ohne die technischen Altlasten von D.Va"
+    },
+    {
+      "type": "paragraph",
+      "text": "Wird der Mech zerstört, kann D.Mon wie D.Va zu Fuss weiterkämpfen und dabei ein vom Mech gelöstes, tragbares Fusionsgewehr einsetzen, um ihre Ultimate-Leiste wieder aufzuladen. Anders als bei D.Va, deren Mech- und Fussgänger-Form laut einer früheren Aussage von Game Director Aaron Keller technisch wie 'ein Teller Spaghetti' verknüpft war, ist D.Mon laut Hudson im Code 'tatsächlich eine Einheit'. Das habe zwar den Aufwand für Animationen verdoppelt, mache die weitere Wartung und Erweiterung der Heldin aber deutlich einfacher."
+    },
+    {
+      "type": "heading",
+      "text": "Treibstoff als zentrales Balance-Element"
+    },
+    {
+      "type": "paragraph",
+      "text": "In frühen Testphasen sei D.Mon laut Hudson 'kind of a nuisance' gewesen, bis das Team die Balance über die Treibstoffmechanik ihrer Bewegungsfähigkeit steuerte."
+    },
+    {
+      "type": "quote",
+      "text": "When she had too much fuel and stuff like that, she would hunt people down.",
+      "attribution": "Kenny Hudson, Lead Hero Producer bei Blizzard"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ihre Ultimate-Fähigkeit Limit Break lässt D.Mon das Plasmaschwert aufladen und in einer horizontalen Bewegung ausschlagen. Getroffene Gegner erhalten dabei eine Schwäche, die den eingehenden Schaden erhöht – ähnlich wie Zenyattas Discord-Orb – während D.Mon selbst zusätzliche Überheilung erhält. Laut Hudson eignet sich der Held besonders für aggressive Team-Kompositionen, etwa in Kombination mit Lucios Tempo-Boost oder Ultimates anderer Helden, die den Debuff schnell ausnutzen können."
+    }
+  ],
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-07T19:03:20.057Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "particles",
+  "sources": [
+    {
+      "title": "Overwatch s new tank D.Mon plays like a combo of Reinhardt and D.Va, inspired by Gundam—and she can de-mech",
+      "url": "https://www.destructoid.com/overwatch-dmon-combo-reinhardt-dva-inspired-armored-core-gundam/",
+      "publisher": "Destructoid"
+    },
+    {
+      "title": "Overwatch's new mech hero is the sword-and-board sequel to D.Va, except her code isn't 'a plate of spaghetti' under the hood",
+      "url": "https://www.pcgamer.com/games/fps/overwatchs-new-mech-hero-is-the-sword-and-board-sequel-to-d-va-except-her-code-isnt-a-plate-of-spaghetti-under-the-hood/",
+      "publisher": "PC Gamer"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/overwatch-dmon-season-4-tank-hero-2026.webp",
+    "alt": "Overwatch: Neuer Tank D.Mon vereint Reinhardt und D.Va",
+    "credit": "Bild: Destructoid",
+    "sourceUrl": "https://www.destructoid.com/overwatch-dmon-combo-reinhardt-dva-inspired-armored-core-gundam/"
+  },
+  "relatedSlugs": [
+    "diablo-4-rebirth-eternal-seasonal-charaktere",
+    "diablo-4-nintendo-switch-2-leak-preis-release",
+    "diablo-4-switch-2-geruecht-erscheinungstermin-2026"
+  ]
+}
