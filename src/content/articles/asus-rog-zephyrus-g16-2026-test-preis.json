@@ -1,0 +1,119 @@
+{
+  "slug": "asus-rog-zephyrus-g16-2026-test-preis",
+  "title": "Asus ROG Zephyrus G16 (2026) im Test: starke Technik, hoher Preis",
+  "subtitle": "PC Gamer lobt Display, Akku und Verarbeitung, sieht das Notebook aber durch die Speicherkrise ins Preis-Abseits gedrängt",
+  "excerpt": "Der neue Zephyrus G16 bringt Intel-Panther-Lake-CPU, mehr GPU-Leistung und ein behobenes Lüfterproblem mit – kostet aber laut PC-Gamer-Test bis zu 4'800 Dollar.",
+  "seoTitle": "Asus ROG Zephyrus G16 (2026) Test: Preis vs. Leistung",
+  "metaDescription": "PC Gamer testet den Asus ROG Zephyrus G16 (2026): starkes OLED-Display, mehr Akku, behobenes Lüfterproblem – aber ein Preis von bis zu 4'800 Dollar.",
+  "category": "reviews",
+  "platforms": [
+    "pc"
+  ],
+  "tags": [
+    "Asus ROG Zephyrus G16",
+    "Gaming-Laptop",
+    "RTX 5080",
+    "Intel Panther Lake",
+    "Speicherkrise"
+  ],
+  "tldr": [
+    "Getestetes Modell mit 64 GB RAM und RTX 5080 kostet 4'800 Dollar, die 32-GB-Variante 4'400 Dollar",
+    "Neue Intel-Core-Ultra-9-386H-CPU (Panther Lake) und höheres GPU-Power-Limit (bis 160 W) verbessern die Leistung gegenüber 2025",
+    "Fan-noise-Problem des Vorgängers wurde laut Test behoben, OLED-Display und Akkulaufzeit überzeugen weiterhin",
+    "Razer Blade 16 (2026) mit identischem Chip ist rund 400 Dollar günstiger und laut Test die bessere Wahl zum aktuellen Preis"
+  ],
+  "whyItMatters": "Für Gamer:innen, die ein leistungsstarkes, portables 16-Zoll-Notebook suchen, zeigt der Test exemplarisch, wie stark die aktuelle Speicherkrise die Preise bei Gaming-Laptops in die Höhe treibt. Die Kaufentscheidung hängt damit stärker als früher vom Vergleich mit direkten Konkurrenzmodellen ab.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Der Asus ROG Zephyrus G16 (2026) erhält im Test von PC Gamer viel Lob für seine technischen Fortschritte, scheitert laut Redaktion aber an einem entscheidenden Punkt: dem Preis. Das getestete Modell mit 64 GB Arbeitsspeicher und Nvidia GeForce RTX 5080 wird aktuell für 4'800 Dollar gelistet, eine Variante mit 32 GB RAM und 1 TB Speicher kostet laut Best Buy immer noch 4'400 Dollar. Zum Vergleich: Das 64-GB-Modell des Vorgängers aus dem Jahr 2025 war für 3'600 Dollar erhältlich."
+    },
+    {
+      "type": "heading",
+      "text": "Neue Hardware unter bekannter Hülle"
+    },
+    {
+      "type": "paragraph",
+      "text": "Optisch unterscheidet sich der neue G16 kaum vom Vorjahresmodell, im Inneren hat Asus laut Test aber deutlich nachgelegt. Herzstück ist der neue Intel Core Ultra 9 386H auf Basis der Panther-Lake-Architektur, derselbe Chip, der auch im neuen Razer Blade 16 verbaut ist. Der 16-Kern-Prozessor teilt sich in vier Performance-, acht Efficient- und vier Low-Power-Efficient-Kerne auf. Auch die Grafikeinheit wurde angepasst: Die RTX 5080 Mobile läuft im Turbo-Modus mit einer TGP von 135 Watt, im manuellen Modus über die Armory-Crate-Software sind laut Test bis zu 160 Watt möglich – eine deutliche Steigerung gegenüber den 120 Watt des Vorgängers. Das Testgerät kam zudem mit 64 GB LPDDR5X-8533-RAM, gepaart mit einer vergleichsweise kleinen 1-TB-SSD, während das 2025er-Modell 2 TB Speicher bot."
+    },
+    {
+      "type": "heading",
+      "text": "Display, Akku und Verarbeitung überzeugen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Unverändert und laut Test weiterhin auf hohem Niveau bleiben das 16-Zoll-OLED-Display mit 2560 x 1600 Pixeln und 240 Hz, die Abmessungen sowie der 90-Wh-Akku, dem eine ausgezeichnete Laufzeit attestiert wird. Am Gehäuse hat Asus laut Test Details verbessert: Die Tastatur wurde verstärkt, um Durchbiegen zu verhindern, die Tastenkappen erhielten eine fingerabdruckresistente Beschichtung, und das Scharnier nutzt nun zwei Torsionsfedern für ein leichteres Aufklappen. Als besonders positiv wird zudem hervorgehoben, dass das frühere Lüftergeräusch-Problem des Vorgängers behoben wurde."
+    },
+    {
+      "type": "quote",
+      "text": "It's still one of the best-looking (and feeling) super-portable 16-inch gaming laptops you can buy.",
+      "attribution": "PC Gamer"
+    },
+    {
+      "type": "heading",
+      "text": "Der Preis sprengt den Rahmen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Trotz aller technischen Fortschritte fällt das Urteil beim Preis deutlich aus. Laut Test ist der Zephyrus G16 in praktisch identischer Ausstattung teurer als das Razer Blade 16 (2026), das mit demselben Panther-Lake-Chip und RTX 5080 rund 400 Dollar günstiger angeboten wird. Die Testredaktion ordnet dies explizit der aktuellen Speicherkrise zu, die Gaming-Laptops in den vergangenen Monaten besonders stark getroffen habe und laut Einschätzung kurzfristig nicht besser werden dürfte."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Stärken laut Test: bessere Leistung als das 2025er-Modell, behobenes Lüftergeräusch-Problem, weiterhin attraktives Design, hervorragendes OLED-Display",
+        "Schwächen laut Test: extrem hoher Preis, RTX 5080 im dünnen Gehäuse leistungsseitig etwas limitiert, manuelle Übertaktungsfunktion wenig überzeugend, Razer Blade 16 als preisgünstigere Alternative"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Sollte der G16 im Rahmen künftiger Rabattaktionen auf ein Preisniveau ähnlich dem Razer Blade 16 fallen, wäre die Kaufentscheidung laut Test deutlich einfacher. Zum aktuellen Preis empfiehlt die Redaktion jedoch, entweder auf Angebote zu warten oder zur günstigeren Konkurrenz zu greifen."
+    }
+  ],
+  "isLeakOrRumor": false,
+  "review": {
+    "label": "Für den Sale vormerken",
+    "strengths": [
+      "Bessere Leistung als das Vorgängermodell aus 2025",
+      "Lüftergeräusch-Problem des Vorgängers behoben",
+      "Weiterhin attraktives, portables Design",
+      "Hervorragendes 240-Hz-OLED-Display"
+    ],
+    "weaknesses": [
+      "Extrem hoher Preis von bis zu 4'800 Dollar",
+      "RTX 5080 im schlanken Gehäuse leistungsseitig etwas limitiert",
+      "Manuelle Übertaktungsfunktion überzeugt laut Test kaum"
+    ],
+    "forWhom": "Geeignet für Gamer:innen, die grossen Wert auf Portabilität und Displayqualität legen und bereit sind, für ein Premium-Chassis tief in die Tasche zu greifen.",
+    "verdict": "Die Kritik bewertet den Zephyrus G16 als technisch überzeugendes, portables Gaming-Notebook mit starkem Display und behobenem Lüfterproblem, sieht ihn aber durch den aktuellen Preis im Vergleich zum praktisch gleich ausgestatteten, günstigeren Razer Blade 16 klar im Nachteil. Ohne Preissenkung reicht die Gesamtwertung laut Test nicht für eine Top-Empfehlung.",
+    "recommendation": "Laut Test lohnt sich der Kauf vor allem dann, wenn der Preis im Rahmen von Sales auf das Niveau der Konkurrenz sinkt."
+  },
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-07T15:55:19.686Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "circuit",
+  "sources": [
+    {
+      "title": "Asus ROG Zephyrus G16 (2026) review",
+      "url": "https://www.pcgamer.com/hardware/gaming-laptops/asus-rog-zephyrus-g16-2026-review/",
+      "publisher": "PC Gamer"
+    },
+    {
+      "title": "Asus ROG Zephyrus G16 (2026) review",
+      "url": "https://www.pcgamer.com/hardware/gaming-laptops/asus-rog-zephyrus-g16-2026-review/",
+      "publisher": "PC Gamer"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/asus-rog-zephyrus-g16-2026-test-preis.webp",
+    "alt": "Asus ROG Zephyrus G16 (2026) im Test: starke Technik, hoher Preis",
+    "credit": "Bild: PC Gamer",
+    "sourceUrl": "https://www.pcgamer.com/hardware/gaming-laptops/asus-rog-zephyrus-g16-2026-review/"
+  },
+  "relatedSlugs": [
+    "ram-produktion-2027-ausverkauft-speicherkrise",
+    "dram-hbm-speicherkrise-ausverkauft-2027",
+    "grafikkarten-preise-asien-speicherkrise-2026"
+  ]
+}
