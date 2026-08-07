@@ -31,16 +31,32 @@ export async function GET(req: Request) {
   };
 
   // Rate-Limit: letzter Lauf < 170 Min → nicht erneut auslösen.
+  // WICHTIG: fail-closed. Die frühere fail-open-Variante (bei
+  // fehlgeschlagener Prüfung trotzdem dispatchen) hat den 3-Stunden-Takt
+  // ausgehebelt — der stündliche externe Ping kam ungebremst durch und
+  // die Pipeline lief weiter stündlich (entdeckt 07.08.2026). Kann die
+  // Route den letzten Lauf nicht verifizieren, löst sie NICHT aus; der
+  // GitHub-Schedule (alle 3 Std.) ist ohnehin der primäre Taktgeber.
   const lastRes = await fetch(
     `https://api.github.com/repos/${REPO}/actions/workflows/${WORKFLOW}/runs?per_page=1`,
     { headers: ghHeaders }
   );
-  if (lastRes.ok) {
-    const data = await lastRes.json();
-    const last = data.workflow_runs?.[0]?.created_at;
-    if (last && Date.now() - new Date(last).getTime() < MIN_INTERVAL_MS) {
-      return Response.json({ triggered: false, skipped: "Letzter Lauf ist jünger als 170 Minuten" });
-    }
+  if (!lastRes.ok) {
+    return Response.json({
+      triggered: false,
+      skipped: `Letzter-Lauf-Prüfung fehlgeschlagen (HTTP ${lastRes.status}) — vorsichtshalber kein Dispatch`,
+    });
+  }
+  const data = await lastRes.json();
+  const last = data.workflow_runs?.[0]?.created_at;
+  if (!last) {
+    return Response.json({
+      triggered: false,
+      skipped: "Kein bisheriger Lauf auffindbar — vorsichtshalber kein Dispatch (GitHub-Schedule übernimmt)",
+    });
+  }
+  if (Date.now() - new Date(last).getTime() < MIN_INTERVAL_MS) {
+    return Response.json({ triggered: false, skipped: "Letzter Lauf ist jünger als 170 Minuten" });
   }
 
   const res = await fetch(
