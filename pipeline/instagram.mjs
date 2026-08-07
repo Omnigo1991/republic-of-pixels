@@ -67,7 +67,7 @@ function loadArticles() {
 
 // ---------- Phase 1: prepare ----------
 
-const IG_SYSTEM = `Du bist die Social-Media-Redaktion von Republic of Pixels, einem deutschsprachigen Gaming-Magazin. Sprache: Deutsch in SCHWEIZER Rechtschreibung — NIEMALS "ß", immer "ss". Kein Clickbait, keine Emojis in Headlines. "Republic of Pixels" nie mit Bindestrichen verbinden.`;
+const IG_SYSTEM = `Du bist die Social-Media-Redaktion von Republic of Pixels, einem deutschsprachigen Gaming-Magazin, und schreibst Instagram-Posts mit einem Ziel: maximale Aufmerksamkeit und Interaktion, ohne die redaktionelle Glaubwürdigkeit zu opfern. Zuspitzen ja, lügen nie — jeder Hook muss vom Artikel gedeckt sein. Sprache: Deutsch in SCHWEIZER Rechtschreibung — NIEMALS "ß", immer "ss". Keine Emojis in Headlines. "Republic of Pixels" nie mit Bindestrichen verbinden.`;
 
 async function pickAndWriteCopy(candidates, maxPicks) {
   const list = candidates
@@ -90,8 +90,18 @@ Regeln für "headlineLines" (die Schlagzeile auf der Post-Grafik):
 - Die Zeilen müssen optisch ausbalanciert sein: keine Zeile deutlich kürzer als ihre Nachbarn (keine 2-Wort-Zeile zwischen langen Zeilen)
 - Keine Anführungszeichen um die ganze Headline
 
-Regeln für "caption": 1–2 Sätze auf Basis des Teasers, dann exakt der Satz "Ganzer Artikel über den Link in der Bio." — ein Emoji am Ende ist erlaubt.
-Regeln für "hashtags": MAXIMAL 5, abgeleitet aus den Tags plus generische wie Gaming/GamingNews/RepublicOfPixels, CamelCase, ohne #-Zeichen im JSON.
+Regeln für "caption" (Reichweiten-Aufbau, Reihenfolge zwingend):
+1. HOOK als erste Zeile (max. ~100 Zeichen): Frage, steile These oder die stärkste Zahl der Story — Instagram schneidet die Caption nach ~125 Zeichen ab, die erste Zeile entscheidet über "mehr ansehen". Kein Clickbait: Der Hook muss halten, was der Artikel liefert.
+2. Dann 1–2 Sätze Kontext auf Basis des Teasers.
+3. Dann EINE kurze Engagement-Frage an die Community (Kommentare sind das stärkste Algorithmus-Signal), z. B. "Was meint ihr: fair oder frech?" — konkret zur Story, nie generisch.
+4. Abschluss exakt: "👉 Ganzer Artikel über den Link in der Bio."
+Verboten: Engagement-Köder wie "markiere 3 Freunde", Follow-Aufrufe, Emoji-Spam (max. 2 Emojis gesamt).
+
+Regeln für "hashtags": EXAKT 5, CamelCase, ohne #-Zeichen im JSON, nach diesem Mix (Reichweite × Auffindbarkeit):
+- 1× gross/generisch: Gaming oder GamingNews
+- 1× deutschsprachige Community: GamingDeutschland, Zocken oder GamerDeutschland
+- 2× themenspezifisch aus den Tags (Spielname zuerst, z. B. GTA6, PS5, NintendoSwitch2)
+- 1× RepublicOfPixels (Marke, immer)
 
 Antworte NUR mit JSON, erstes Zeichen "{":
 {"picks":[{"index":0,"headlineLines":[[{"text":"...","cyan":false}]],"caption":"...","hashtags":["..."]}]}
