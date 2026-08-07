@@ -1,13 +1,16 @@
 export const dynamic = "force-dynamic";
 
-// Auslöser der News-Pipeline (Stand 05.08.2026):
+// Auslöser der News-Pipeline (Stand 07.08.2026, Takt: alle 3 Stunden):
 // - Vercel-Cron (täglich, Hobby-Plan) ruft mit "Authorization: Bearer <CRON_SECRET>" auf.
 // - Ein externer Gratis-Pinger (cron-job.org, stündlich) ruft mit ?key=<PING_KEY> auf.
 // Sicherheit: Vor jedem Dispatch wird der letzte Workflow-Lauf bei GitHub geprüft —
-// liegt er weniger als 50 Minuten zurück, wird übersprungen. Dadurch kann auch
-// mutwilliges Dauerfeuer auf diese URL nie mehr als ~1 Lauf pro Stunde auslösen.
+// liegt er weniger als 170 Minuten zurück, wird übersprungen. Der weiterhin
+// stündliche externe Ping verpufft dadurch wirkungslos (kein Eingriff bei
+// cron-job.org nötig), und mutwilliges Dauerfeuer auf diese URL kann nie mehr
+// als ~1 Lauf pro 3 Stunden auslösen. Der eigentliche Taktgeber ist der
+// GitHub-Actions-Schedule (news-pipeline.yml, cron "23 */3 * * *").
 const PING_KEY = "rop-hourly-x7k2m9pq4";
-const MIN_INTERVAL_MS = 50 * 60 * 1000;
+const MIN_INTERVAL_MS = 170 * 60 * 1000;
 const REPO = "Omnigo1991/republic-of-pixels";
 const WORKFLOW = "news-pipeline.yml";
 
@@ -27,7 +30,7 @@ export async function GET(req: Request) {
     "User-Agent": "rop-pipeline-trigger",
   };
 
-  // Rate-Limit: letzter Lauf < 50 Min → nicht erneut auslösen.
+  // Rate-Limit: letzter Lauf < 170 Min → nicht erneut auslösen.
   const lastRes = await fetch(
     `https://api.github.com/repos/${REPO}/actions/workflows/${WORKFLOW}/runs?per_page=1`,
     { headers: ghHeaders }
@@ -36,7 +39,7 @@ export async function GET(req: Request) {
     const data = await lastRes.json();
     const last = data.workflow_runs?.[0]?.created_at;
     if (last && Date.now() - new Date(last).getTime() < MIN_INTERVAL_MS) {
-      return Response.json({ triggered: false, skipped: "Letzter Lauf ist jünger als 50 Minuten" });
+      return Response.json({ triggered: false, skipped: "Letzter Lauf ist jünger als 170 Minuten" });
     }
   }
 

@@ -1,13 +1,15 @@
-# Fortlaufende News-Pipeline: stündliche Prüfung der RSS-Feeds, Veröffentlichung
-# sobald relevante neue Meldungen da sind (max. 2 Artikel pro Lauf). Der Push löst
-# automatisch das Vercel-Production-Deployment aus.
+# Fortlaufende News-Pipeline: Prüfung der RSS-Feeds alle 3 Stunden,
+# Veröffentlichung sobald relevante neue Meldungen da sind (max. 2 Artikel pro
+# Lauf). Der Push löst automatisch das Vercel-Production-Deployment aus.
 # Manueller Start: GitHub → Actions → "News-Pipeline" → "Run workflow".
-# Hinweis: Datei am 05.08.2026 neu gepusht, um GitHubs Schedule-Registrierung zu erzwingen.
+# Takt-Entscheidung 07.08.2026: von stündlich auf alle 3 Std. reduziert —
+# ~30 Artikel/Tag verdrängten Beiträge nach ~8 Std. von der sichtbaren
+# "Alle News"-Liste; Leser kamen nicht nach. Ziel: ~10-14 Artikel/Tag.
 name: News-Pipeline
 
 on:
   schedule:
-    - cron: "23 * * * *"
+    - cron: "23 */3 * * *"
   workflow_dispatch:
     inputs:
       max_articles:
