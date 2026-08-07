@@ -1,0 +1,87 @@
+{
+  "slug": "evercade-nexus-doom-edition-handheld-2026",
+  "title": "Evercade Nexus: Neuer Retro-Handheld erscheint in limitierter Doom Edition",
+  "subtitle": "Blaze Entertainment und Microsoft bringen im Oktober einen neuen Handheld sowie Cartridges zu Doom und Banjo-Kazooie",
+  "excerpt": "Blaze Entertainment kündigt in Zusammenarbeit mit Microsoft den Handheld Evercade Nexus an, der auch in einer auf 3'000 Stück limitierten Doom Edition erscheint. Dazu gibt es neue Cartridges zu Doom und Banjo-Kazooie.",
+  "seoTitle": "Evercade Nexus Doom Edition: Neuer Handheld im Oktober",
+  "metaDescription": "Evercade Nexus startet im Oktober mit limitierter Doom Edition. Blaze Entertainment und Microsoft bringen zudem neue Cartridges zu Doom und Banjo-Kazooie.",
+  "category": "news",
+  "platforms": [
+    "xbox"
+  ],
+  "tags": [
+    "Evercade",
+    "Doom",
+    "Banjo-Kazooie",
+    "Blaze Entertainment",
+    "Retro-Handheld",
+    "Microsoft"
+  ],
+  "tldr": [
+    "Blaze Entertainment und Microsoft bringen im Oktober den neuen Handheld Evercade Nexus auf den Markt",
+    "Eine auf 3'000 Stück limitierte Doom Edition mit Cartridge und Zubehör kostet 239,99 Euro",
+    "Die Doom Collection und das Banjo-Kazooie Double Pack erscheinen separat für je 29,99 Euro",
+    "Der Handheld verfügt über ein 5,89 Zoll IPS-Display, zwei Analog-Sticks und drahtlose EverSync-Funktion"
+  ],
+  "whyItMatters": "Für Sammler:innen und Retro-Fans ist die limitierte Doom Edition ein konkreter Anlaufpunkt, da die Stückzahl begrenzt ist und Vorbestellungen bereits laufen. Gleichzeitig zeigt die Kooperation mit Microsoft, dass klassische Marken wie Doom und Banjo-Kazooie weiterhin aktiv für neue Hardware aufbereitet werden.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Blaze Entertainment hat gemeinsam mit Microsoft eine neue Generation seiner Evercade-Handhelds vorgestellt. Im Zentrum steht der Evercade Nexus, der im Oktober regulär erscheint, sowie eine limitierte Sonderedition, die sich am Look von id Softwares Shooter-Klassiker Doom orientiert."
+    },
+    {
+      "type": "heading",
+      "text": "Doom Edition und neue Cartridges"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Evercade Nexus Doom Edition ist auf 3'000 Stück limitiert und wird als Bundle mit Cartridge, Tragetasche und weiterem Zubehör für 239,99 Euro angeboten. Vorbestellungen sind ab heute um 16 Uhr beim Händler Funstock möglich."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Die im Bundle enthaltene Doom Collection erscheint im Oktober auch einzeln und umfasst die ersten beiden Doom-Spiele, sechs zusätzliche Missionspakete sowie eine Sammlung mit Deathmatch-Levels",
+        "Besitzer:innen eines bestehenden Evercade-Geräts können die Doom Collection bereits jetzt für 29,99 Euro vorbestellen",
+        "Ebenfalls im Oktober und zum selben Preis von 29,99 Euro erscheint das Banjo-Kazooie Double Pack mit Banjo-Kazooie und Banjo-Tooie in überarbeiteter Fassung mit höherer Auflösung und Bildrate"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Technische Daten des Evercade Nexus"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Evercade Nexus setzt auf ein 5,89 Zoll grosses IPS-Display und fällt damit grösser aus als der bisherige Evercade EXP-R mit seinem 4,3 Zoll Bildschirm. Erstmals bei einem Gerät der Evercade-Reihe kommen zwei Analog-Sticks zum Einsatz, zudem unterstützt der Handheld drahtlose Kopfhörer. Über die neue EverSync-Funktion lässt sich ein Spiel im lokalen Multiplayer drahtlos mit einem weiteren Evercade Nexus teilen."
+    },
+    {
+      "type": "paragraph",
+      "text": "Mit dem Nexus erweitert Blaze Entertainment sein Handheld-Portfolio um ein leistungsfähigeres Modell, während die Kooperation mit Microsoft zeigt, dass klassische Marken wie Doom und Banjo-Kazooie weiterhin gezielt für dedizierte Retro-Hardware aufbereitet werden. Ob die limitierte Doom Edition über den Sammlermarkt hinaus Relevanz entfaltet, dürfte sich an der Nachfrage bei Funstock zeigen."
+    }
+  ],
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-07T07:02:14.552Z",
+  "readingTimeMinutes": 1,
+  "heroVariant": "waveform",
+  "sources": [
+    {
+      "title": "Evercade x Xbox: Neuer Nexus-Handheld und Spiele-Cartridge zu Doom angekündigt",
+      "url": "https://www.eurogamer.de/evercade-nexus-xbox-doom-handheld",
+      "publisher": "Eurogamer.de"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/evercade-nexus-doom-edition-handheld-2026.webp",
+    "alt": "Evercade Nexus: Neuer Retro-Handheld erscheint in limitierter Doom Edition",
+    "credit": "Bild: Eurogamer.de",
+    "sourceUrl": "https://www.eurogamer.de/evercade-nexus-xbox-doom-handheld"
+  },
+  "relatedSlugs": [
+    "halo-studios-personalabbau-nach-launch-2026",
+    "halo-studios-entlassungen-campaign-evolved-2026",
+    "xbox-helix-abwaertskompatibilitaet-leak-2026"
+  ]
+}

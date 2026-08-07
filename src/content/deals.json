@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-07T06:02:26.465Z",
+  "updatedAt": "2026-08-07T07:02:41.399Z",
   "deals": [
     {
       "appId": 460930,
@@ -24,15 +24,15 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/590e0988a2fb79f44d3e31e41fd4949eb76abc41/capsule_184x69.jpg?t=1784714077"
     },
     {
-      "appId": 1144200,
-      "title": "Ready or Not",
+      "appId": 3469450,
+      "title": "DOOM: The Dark Ages | Revelations",
       "discountPercent": 50,
-      "originalPrice": 4999,
-      "finalPrice": 2499,
+      "originalPrice": 1999,
+      "finalPrice": 999,
       "currency": "EUR",
-      "endsAt": "2026-08-09T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1144200/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1144200/2f6ca7ad511531beb421122efb376141f068ebbb/capsule_184x69.jpg?t=1781703931"
+      "endsAt": "2026-08-13T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/3469450/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3469450/8e94c2ef4bb2cb63105755d0a0fd3233f20922a5/capsule_184x69.jpg?t=1785785087"
     },
     {
       "appId": 2138330,
