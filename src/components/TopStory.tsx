@@ -12,8 +12,29 @@ export function TopStory({ article }: { article: Article }) {
       className="group grid gap-6 lg:grid-cols-2 lg:gap-10 lg:items-center"
     >
       {/* Hell-auf-Navy-Styling: Die Top-Story sitzt auf dem Marken-Navy-Band. */}
-      <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-white/10 shadow-elevated duration-500">
-        <ArticleMedia article={article} priority sizes="(max-width: 1024px) 100vw, 50vw" className="h-full w-full transition-transform duration-700 group-hover:scale-[1.03]" />
+      <div className="relative">
+        {/* Slogan-Wortmarke (Betreiber-Freigabe 07.08.2026, Verge-inspiriert):
+            liegt mit dem unteren Drittel auf der Bildoberkante und überragt
+            das Bild ab sm seitlich um je 6%. Als SVG mit textLength, damit
+            der Schriftzug bei jeder Bildbreite exakt gleich spannt — die
+            viewBox-Masse (1536 Einheiten Gesamtbreite, Teile 1059/477)
+            entsprechen der gemessenen Inter-900-Geometrie bei -0.02em. */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute left-1/2 top-0 z-10 w-full -translate-x-1/2 -translate-y-[66%] select-none sm:w-[112%]"
+        >
+          <svg viewBox="0 0 1536 100" className="w-full">
+            <text x="0" y="84" textLength="1059" lengthAdjust="spacingAndGlyphs" fontWeight="900" fontSize="100" letterSpacing="-2" fill="#F1F0F2">
+              {"WILLKOMMEN IN DER "}
+            </text>
+            <text x="1059" y="84" textLength="477" lengthAdjust="spacingAndGlyphs" fontWeight="900" fontSize="100" letterSpacing="-2" fill="#02F0D1">
+              REPUBLIC
+            </text>
+          </svg>
+        </div>
+        <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-white/10 shadow-elevated duration-500">
+          <ArticleMedia article={article} priority sizes="(max-width: 1024px) 100vw, 50vw" className="h-full w-full transition-transform duration-700 group-hover:scale-[1.03]" />
+        </div>
       </div>
       <div>
         <div className="mb-4 flex items-center gap-3">
