@@ -1,0 +1,112 @@
+{
+  "slug": "marvel-tokon-pc-release-probleme-2026",
+  "title": "Marvel Tokon: PC-Start mit Rucklern, Anti-Cheat-Fehlern belastet",
+  "subtitle": "Während die PS5-Version reibungslos läuft, kämpfen Steam-Spieler mit Performance-Einbrüchen, Startproblemen und fehlender Linux-Unterstützung.",
+  "excerpt": "Marvel Tokon: Fighting Souls läuft auf PS5 stabil, doch der PC-Release sorgt für gemischte Steam-Wertungen. Ruckler, Anti-Cheat-Probleme und fehlender Linux-Support trüben den Start.",
+  "seoTitle": "Marvel Tokon: PC-Release mit Performance-Problemen",
+  "metaDescription": "Marvel Tokon: Fighting Souls läuft auf PS5 stabil, doch PC-Spieler kämpfen mit Rucklern, Anti-Cheat-Fehlern und fehlendem Linux-Support beim Steam-Release.",
+  "category": "news",
+  "platforms": [
+    "pc",
+    "playstation"
+  ],
+  "tags": [
+    "Marvel Tokon",
+    "Arc System Works",
+    "PC",
+    "PS5",
+    "Anti-Cheat",
+    "Crossplay"
+  ],
+  "tldr": [
+    "Marvel Tokon: Fighting Souls läuft auf PS5 stabil, auf Steam steht das Spiel aktuell bei einer ausgeglichenen Wertung.",
+    "PC-Spieler berichten von Rucklern, langen Startproblemen durch die Anti-Cheat-Software und fehlender Linux-Unterstützung.",
+    "Rollback-Netcode wird durch Framedrops beeinträchtigt, weshalb manche PS5-Spielende Crossplay mit dem PC deaktivieren.",
+    "Arc System Works hat die Probleme bestätigt und untersucht sie laut eigener Aussage aktiv."
+  ],
+  "whyItMatters": "Der PC-Start zeigt erneut Muster früherer Sony-PC-Portierungen: Ein technisch solider Konsolentitel wird durch mangelnde Optimierung, restriktive Anti-Cheat-Lösungen und fehlende Linux-Kompatibilität auf dem PC ausgebremst. Für ein Online-Kampfspiel mit Crossplay wiegen diese Probleme besonders schwer, da sie die Netcode-Qualität für alle Plattformen beeinträchtigen können.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Marvel Tokon: Fighting Souls, das neue 4v4-Tag-Kampfspiel von Arc System Works, ist veröffentlicht worden. Auf der PS5 läuft der Titel offenbar reibungslos, doch der parallele Steam-Release sorgt für gemischte Reaktionen. Die Nutzerwertung auf Steam liegt derzeit bei 'ausgeglichen', wobei sich die Kritik nahezu ausschliesslich auf technische Probleme bezieht und nicht auf das Kampfsystem selbst."
+    },
+    {
+      "type": "embed",
+      "platform": "twitter",
+      "url": "https://twitter.com/marveltokon/status/2085615110685372648"
+    },
+    {
+      "type": "heading",
+      "text": "Anti-Cheat und Ruckler als Hauptkritikpunkte"
+    },
+    {
+      "type": "paragraph",
+      "text": "Mehrere Steam-Reviews beschreiben bereits Probleme beim Starten des Spiels. Die erforderliche Anti-Cheat-Software soll in manchen Fällen zu einem schwarzen Fenster und stark erhöhter CPU-Auslastung führen."
+    },
+    {
+      "type": "quote",
+      "text": "Die Anti-Cheat-Software führt in ein komplett schwarzes Fenster und taktet meine CPU bis zum Anschlag hoch. Ganz zu schweigen davon, dass das PlayStation PC SDK mehrfach versucht, im Hintergrund zu starten.",
+      "attribution": "Steam-Nutzer Lameme14"
+    },
+    {
+      "type": "paragraph",
+      "text": "Auch nach erfolgreichem Start berichten Spielende von kurzen, aber folgenreichen Framerate-Einbrüchen, die selbst auf Systemen auftreten, welche die empfohlenen Anforderungen deutlich übertreffen. Besonders in Online-Matches wirken sich diese Ruckler aus: Der Rollback-Netcode passt den Kampf bei Frameverlust sofort an, damit beide Spielenden dasselbe Bild sehen. Ruckelt ein Gegner, leidet dadurch auch die eigene Partie – unabhängig davon, wie stabil die eigene Hardware läuft. Deshalb wird auf PS5-Seite mittlerweile teils empfohlen, Crossplay mit dem PC zu deaktivieren, um die Netcode-Konsistenz zu wahren."
+    },
+    {
+      "type": "heading",
+      "text": "Fehlender Linux-Support blockiert Steam Deck und Steam Machine"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ein weiterer Kritikpunkt betrifft die fehlende Linux-Kompatibilität, wodurch das Spiel weder auf dem Steam Deck noch auf Valves neuer Steam Machine läuft."
+    },
+    {
+      "type": "quote",
+      "text": "Dieses Spiel verhält sich aus absolut keinem Grund extrem feindselig gegenüber Linux-Spielern. Es gibt nicht nur Präzedenzfälle, dass eigentlich jedes Fighting Game (ausser denen von Riot) unter Linux läuft. Auch ArcSys-Spiele und von Sony gepublishte Titel funktionieren dort normalerweise tadellos.",
+      "attribution": "Steam-Nutzer Vestige"
+    },
+    {
+      "type": "paragraph",
+      "text": "Wer das Spiel dennoch auf einer Steam Machine spielen möchte, benötigt laut Producer Karim Jovian ein zusätzliches Windows-Boot-Laufwerk. Zudem ist Marvel Tokon aktuell in über 100 Ländern auf PC gar nicht käuflich, da die für den Kauf verpflichtende PSN-Anbindung dort nicht offiziell unterstützt wird."
+    },
+    {
+      "type": "paragraph",
+      "text": "Arc System Works hat auf das Feedback reagiert und in sozialen Medien mitgeteilt, das Team untersuche die gemeldeten Probleme aktiv. Eine konkrete Zeitangabe für Fixes gibt es bislang nicht."
+    },
+    {
+      "type": "paragraph",
+      "text": "Der holprige PC-Start wiegt besonders schwer, da die offene Beta im Vorfeld – trotz eines temporären PSN-Ausfalls – positiv aufgenommen wurde. Ob Arc System Works die Performance-Probleme zeitnah beheben kann, dürfte massgeblich darüber entscheiden, wie sich die PC-Community des Spiels langfristig entwickelt."
+    }
+  ],
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-07T13:03:36.251Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "controller",
+  "sources": [
+    {
+      "title": "Marvel Tokon Launches to Mixed Reviews on PC, PS5 Players Encouraged to Disable Crossplay",
+      "url": "https://www.pushsquare.com/news/2026/08/marvel-tokon-launches-to-mixed-reviews-on-pc-ps5-players-encouraged-to-disable-crossplay",
+      "publisher": "Push Square"
+    },
+    {
+      "title": "Marvel Tokon: Fighting Souls hat zum Release mit PC-Problemen zu kämpfen",
+      "url": "https://www.eurogamer.de/marvel-tokon-pc-release-probleme",
+      "publisher": "Eurogamer.de"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/marvel-tokon-pc-release-probleme-2026.webp",
+    "alt": "Marvel Tokon: PC-Start mit Rucklern, Anti-Cheat-Fehlern belastet",
+    "credit": "Bild: Push Square",
+    "sourceUrl": "https://www.pushsquare.com/news/2026/08/marvel-tokon-launches-to-mixed-reviews-on-pc-ps5-players-encouraged-to-disable-crossplay"
+  },
+  "relatedSlugs": [
+    "helldivers-2-level-cap-300-2026",
+    "guild-wars-3-spielbare-voelker-erweiterung-2026",
+    "phantom-blade-zero-fertigstellung-praesentation-2026"
+  ]
+}
