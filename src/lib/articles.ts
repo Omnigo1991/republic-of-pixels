@@ -24,6 +24,36 @@ export function getTopStory(): Article {
   return flagged ?? getAllArticles()[0];
 }
 
+// "Beliebt bei Lesern" mit ECHTEN Aufrufzahlen (Betreiber-Wunsch 07.08.2026):
+// liest die aggregierte 7-Tage-Ansicht artikel_aufrufe (Supabase-View über
+// page_views, nur Slug + Anzahl). Der Abruf passiert beim Build — die
+// Startseite wird bei jedem Pipeline-Deploy (~alle 3 Std.) neu gebaut, die
+// Rangliste bleibt also aktuell. Fällt bei jedem Fehler lautlos auf die
+// bisherige Logik (neueste Artikel) zurück.
+export async function getPopularArticlesLive(limit = 5): Promise<Article[]> {
+  try {
+    const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+    if (!url || !key) return getPopularArticles(limit);
+    const res = await fetch(
+      `${url}/rest/v1/artikel_aufrufe?select=slug,aufrufe&order=aufrufe.desc&limit=40`,
+      { headers: { apikey: key, Authorization: `Bearer ${key}` } }
+    );
+    if (!res.ok) return getPopularArticles(limit);
+    const rows: { slug: string; aufrufe: number }[] = await res.json();
+    const ranked = rows
+      .map((r) => getArticleBySlug(r.slug))
+      .filter((a): a is Article => Boolean(a));
+    if (ranked.length === 0) return getPopularArticles(limit);
+    const fill = getAllArticles().filter(
+      (a) => !ranked.some((r) => r.slug === a.slug)
+    );
+    return [...ranked, ...fill].slice(0, limit);
+  } catch {
+    return getPopularArticles(limit);
+  }
+}
+
 export function getPopularArticles(limit = 5): Article[] {
   const ranked = ALL_ARTICLES.filter((a) => a.popularityRank !== null).sort(
     (a, b) => (a.popularityRank as number) - (b.popularityRank as number)

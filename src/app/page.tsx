@@ -1,4 +1,4 @@
-import { getTopStory, getPopularArticles, getChronological } from "@/lib/articles";
+import { getTopStory, getPopularArticlesLive, getChronological } from "@/lib/articles";
 import { TopStory } from "@/components/TopStory";
 import { PopularSection } from "@/components/PopularSection";
 import { NewsListe } from "@/components/NewsListe";
@@ -11,9 +11,9 @@ import { SectionDivider } from "@/components/SectionDivider";
 import { Reveal } from "@/components/Reveal";
 import { Masthead } from "@/components/Masthead";
 
-export default function HomePage() {
+export default async function HomePage() {
   const topStory = getTopStory();
-  const popular = getPopularArticles(8);
+  const popular = await getPopularArticlesLive(8);
   const chronological = getChronological(topStory.slug);
 
   return (
