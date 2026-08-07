@@ -9,6 +9,9 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/admin", "/einstellungen"],
       },
     ],
-    sitemap: "https://www.republicofpixels.com/sitemap.xml",
+    sitemap: [
+      "https://www.republicofpixels.com/sitemap.xml",
+      "https://www.republicofpixels.com/news-sitemap.xml",
+    ],
   };
 }

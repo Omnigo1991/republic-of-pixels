@@ -45,6 +45,20 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.svg",
   },
+  // Google-Discover-Voraussetzung: Ohne "max-image-preview: large" zeigt
+  // Google nur Mini-Thumbnails — grosse Vorschaubilder sind aber praktisch
+  // die Eintrittskarte für Discover-Ausspielung.
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   verification: {
     google: "wxFhSG7MVW86RVD2rwUL7avrhlhj7NI1AbBdhr1SAGs",
   },
