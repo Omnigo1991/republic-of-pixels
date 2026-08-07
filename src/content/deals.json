@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-07T06:02:26.465Z",
+  "updatedAt": "2026-08-07T15:35:19.912Z",
   "deals": [
     {
       "appId": 460930,
@@ -10,7 +10,18 @@
       "currency": "EUR",
       "endsAt": "2026-08-16T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/460930/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460930/068505b164cb0af9bd49aa0627c1dae4831d149b/capsule_184x69.jpg?t=1786036748"
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460930/ff701838255b7081bdbed2a30892e5eb4d1bbe1d/capsule_184x69_alt_assets_0_german.jpg?t=1786116240"
+    },
+    {
+      "appId": 2231380,
+      "title": "Tom Clancy's Ghost Recon® Breakpoint",
+      "discountPercent": 95,
+      "originalPrice": 5999,
+      "finalPrice": 299,
+      "currency": "EUR",
+      "endsAt": "2026-08-16T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/2231380/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2231380/c3198d3208113c6ea52ff68f2ccda869a3716f94/capsule_184x69.jpg?t=1786026109"
     },
     {
       "appId": 1091500,
@@ -22,17 +33,6 @@
       "endsAt": "2026-08-10T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/1091500/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/590e0988a2fb79f44d3e31e41fd4949eb76abc41/capsule_184x69.jpg?t=1784714077"
-    },
-    {
-      "appId": 1144200,
-      "title": "Ready or Not",
-      "discountPercent": 50,
-      "originalPrice": 4999,
-      "finalPrice": 2499,
-      "currency": "EUR",
-      "endsAt": "2026-08-09T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1144200/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1144200/2f6ca7ad511531beb421122efb376141f068ebbb/capsule_184x69.jpg?t=1781703931"
     },
     {
       "appId": 2138330,

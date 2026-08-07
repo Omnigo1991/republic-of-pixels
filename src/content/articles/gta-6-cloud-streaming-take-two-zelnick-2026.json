@@ -1,0 +1,102 @@
+{
+  "slug": "gta-6-cloud-streaming-take-two-zelnick-2026",
+  "title": "Take-Two-Chef Zelnick sieht Cloud-Zukunft für GTA 6",
+  "subtitle": "Strauss Zelnick rechnet binnen drei Jahren mit latenzarmem Spielestreaming und lässt eine Cloud-Version von GTA 6 anklingen.",
+  "excerpt": "Take-Two-CEO Strauss Zelnick erwartet innerhalb von drei Jahren kommerzielles Cloud-Gaming mit niedriger Latenz und deutet damit indirekt eine Streaming-Fassung von GTA 6 an.",
+  "seoTitle": "GTA 6 Cloud-Gaming: Take-Two-Chef Zelnick mit Prognose",
+  "metaDescription": "Take-Two-CEO Strauss Zelnick sieht binnen drei Jahren kommerzielles Cloud-Streaming kommen und lässt eine Version von GTA 6 dafür offen.",
+  "category": "news",
+  "platforms": [
+    "pc",
+    "playstation",
+    "xbox"
+  ],
+  "tags": [
+    "GTA 6",
+    "Take-Two",
+    "Cloud Gaming",
+    "Strauss Zelnick",
+    "Rockstar Games"
+  ],
+  "tldr": [
+    "Take-Two-CEO Strauss Zelnick erwartet innerhalb von drei Jahren kommerzielles Cloud-Streaming mit niedriger Latenz.",
+    "Er verweist auf Fortschritte bei Hyperscaler- und Edge-Netzwerken sowie ein nicht genanntes Projekt für ein grosses Edge-Netzwerk in den USA.",
+    "Zu einer konkreten Cloud-Version von GTA 6 äusserte sich Zelnick nicht und verwies auf Rockstar Games.",
+    "Der PC-Anteil an gleichzeitig veröffentlichten Spielen sei laut Zelnick von 1-2 Prozent vor 20 Jahren auf heute 40-50 Prozent gestiegen."
+  ],
+  "whyItMatters": "Sollte sich Zelnicks Einschätzung bewahrheiten, könnte GTA 6 künftig auch auf Geräten spielbar sein, die bislang nicht als Spielemaschinen gelten. Für Spieler:innen mit älterer oder schwächerer Hardware wäre das relevant, auch wenn Take-Two selbst betont, dass daraus nicht automatisch höhere Verkaufszahlen resultieren.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Take-Two-Chef Strauss Zelnick hat im Rahmen eines Analystengesprächs zum jüngsten Finanzquartal des Unternehmens Andeutungen gemacht, die auch für die Zukunft von GTA 6 relevant sein könnten. Auf Nachfrage zur Marke Grand Theft Auto sprach er allgemein über die Perspektiven von Cloud-Gaming und erklärte, dass Streaming letztlich dazu führen könne, dass sich jedes Spiel wie ein Mobile-Titel nutzen lasse. Zu einer konkreten Cloud-Fassung von GTA 6 wollte sich Zelnick nicht äussern und verwies stattdessen auf Entwicklerstudio Rockstar Games."
+    },
+    {
+      "type": "heading",
+      "text": "Latenz als zentrale Hürde"
+    },
+    {
+      "type": "paragraph",
+      "text": "Kern von Zelnicks Aussagen ist eine Prognose zum technischen Reifegrad von Spielestreaming. Bislang scheiterten kommerzielle Cloud-Angebote regelmässig an spürbaren Verzögerungen zwischen Eingabe und Bildreaktion, da Spiele auf entfernten Servern berechnet und Bild sowie Ton erst zurück zum Nutzer übertragen werden müssen. Take-Two war in der Vergangenheit selbst an Googles inzwischen eingestellten Dienst Stadia beteiligt, äusserte damals aber bereits Bedenken wegen der Latenz."
+    },
+    {
+      "type": "quote",
+      "text": "Ich glaube, dass wir innerhalb von drei Jahren kommerzielles Streaming haben werden",
+      "attribution": "Strauss Zelnick, CEO Take-Two Interactive"
+    },
+    {
+      "type": "paragraph",
+      "text": "Zelnick begründet seine Einschätzung mit technischen Fortschritten bei den Netzwerken grosser Cloudanbieter sowie bei Edge Computing, das Serverkapazitäten näher an die Nutzer verlagert und dadurch Übertragungswege verkürzt. Zudem erwähnte er ein nicht näher benanntes Projekt, das derzeit an einem grossen Edge-Netzwerk in den USA arbeite und das Latenzproblem adressieren könnte."
+    },
+    {
+      "type": "heading",
+      "text": "Verzehnfachte Basis ohne verzehnfachten Umsatz"
+    },
+    {
+      "type": "paragraph",
+      "text": "Laut Zelnick könnten durch funktionierendes Cloud-Streaming Geräte zu Spielemaschinen werden, die bislang keine waren, wodurch sich die effektiv installierte Basis theoretisch verzehnfachen liesse. Gleichzeitig dämpfte er die Erwartungen an daraus resultierende Umsätze: Besonders aktive Spielerinnen und Spieler besässen ohnehin bereits Konsolen oder Gaming-PCs, weshalb Take-Two nicht von einer proportionalen Umsatzsteigerung ausgehe."
+    },
+    {
+      "type": "heading",
+      "text": "PC gewinnt an Bedeutung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Neben Cloud-Gaming ordnete Zelnick auch die Rolle des PCs neu ein. Während dieser bei gleichzeitig für Konsole und PC veröffentlichten Spielen vor 20 Jahren nur 1 bis 2 Prozent der Verkäufe ausgemacht habe, liege der Anteil heute bei vergleichbaren Veröffentlichungen bei 40 bis 50 Prozent, mit weiter steigender Tendenz. Als Gründe nannte er die weite Verbreitung von PCs, die problemlose Nutzung mit Controllern sowie deren generelle Eignung als Spielemaschine."
+    },
+    {
+      "type": "paragraph",
+      "text": "GTA 6 erscheint zunächst am 19. November 2026 für PlayStation 5 und Xbox Series X/S. Ob und wann eine Cloud-Version oder eine PC-Fassung folgt, liess Zelnick offen. Seine Aussagen sind als allgemeine Markteinschätzung des Take-Two-Managements zu verstehen und keine offizielle Ankündigung von Rockstar Games."
+    }
+  ],
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-07T15:34:43.410Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "grid",
+  "sources": [
+    {
+      "title": "Strauss Zelnick: Take-Two deutet Cloud-Gaming-Version von GTA 6 an",
+      "url": "https://www.golem.de/news/strauss-zelnick-take-two-deutet-cloud-gaming-version-von-gta-6-an-2608-211725.html",
+      "publisher": "Golem.de Games"
+    },
+    {
+      "title": "Take-Two CEO Says Streaming Could Soon Make Expensive Consoles Matter Less",
+      "url": "https://www.gamespot.com/articles/take-two-ceo-says-streaming-could-soon-make-expensive-consoles-matter-less/",
+      "publisher": "GameSpot"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/gta-6-cloud-streaming-take-two-zelnick-2026.webp",
+    "alt": "Take-Two-Chef Zelnick sieht Cloud-Zukunft für GTA 6",
+    "credit": "Bild: Golem.de Games",
+    "sourceUrl": "https://www.golem.de/news/strauss-zelnick-take-two-deutet-cloud-gaming-version-von-gta-6-an-2608-211725.html"
+  },
+  "relatedSlugs": [
+    "take-two-prognose-8-2-milliarden-gta6-digital",
+    "gta-6-take-two-release-datum-bestaetigt-2026",
+    "gta-6-extended-look-netflix-premiere-2026"
+  ]
+}
