@@ -1,0 +1,119 @@
+{
+  "slug": "demons-souls-prototyp-first-person-leak-2026",
+  "title": "Demon's Souls: Prototyp-Aufnahmen zeigen verworfene Ego-Perspektive",
+  "subtitle": "Eine 2007 gezeigte Präsentation von Japan Studio offenbart frühe Design-Entscheidungen, die es nie ins fertige Spiel schafften.",
+  "excerpt": "Der Dataminer Lance McDonald hat unveröffentlichtes Material aus der Entwicklung von Demon's Souls gezeigt, das eine geplante Ego-Perspektive und verworfene Gegner belegt.",
+  "seoTitle": "Demon's Souls Prototyp: Verworfene Ego-Perspektive entdeckt",
+  "metaDescription": "Neu entdecktes Prototyp-Material zu Demon's Souls zeigt eine geplante Ego-Perspektive, verworfene Gegner und einen South-Park-Verweis aus dem Jahr 2007.",
+  "category": "leaks",
+  "platforms": [
+    "playstation"
+  ],
+  "tags": [
+    "Demon's Souls",
+    "FromSoftware",
+    "Lance McDonald",
+    "Japan Studio",
+    "Leak",
+    "PlayStation"
+  ],
+  "tldr": [
+    "Dataminer Lance McDonald veröffentlichte am 7. August 2026 Prototyp-Footage aus einer Präsentation von 2007",
+    "Frühe Version erlaubte offenbar einen Wechsel zwischen Ego- und Third-Person-Perspektive, ein Lock-on-System existierte noch nicht",
+    "Verworfene Elemente umfassen schlangenköpfige Gegner, ein gewöhnliches Krokodil und eine fixe Third-Person-Kamera nach Vorbild von Oblivion",
+    "Die Präsentation enthält einen Verweis auf eine South-Park-Episode zur Abgrenzung von MMORPG-Klischees"
+  ],
+  "whyItMatters": "Für Fans der Souls-Reihe liefert der Fund seltene Einblicke in die frühe Designphase eines der einflussreichsten Action-RPGs überhaupt. Die Aufnahmen zeigen, wie stark sich Kamerasystem und Kampfmechanik noch kurz vor der finalen Fassung veränderten, was Rückschlüsse auf die Entwicklungsphilosophie von FromSoftware erlaubt.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Der bekannte Dataminer Lance McDonald hat am 7. August 2026 bislang unveröffentlichtes Material zur Entwicklung von Demon's Souls öffentlich gemacht. Die Aufnahmen und Präsentationsfolien stammen ursprünglich von GameShare IV, einer internen Veranstaltung von Sony Computer Entertainment in Tokio, bei der Studios im Mai 2007 laufende Projekte vorstellten. Die Präsentation wurde damals von Daisuke Ishidate gehalten, der zu dieser Zeit für Japan Studio tätig war. Für die nun veröffentlichte Aufbereitung liess sich McDonald von John Linneman von Digital Foundry unterstützen."
+    },
+    {
+      "type": "embed",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=qVK_rc-tnGY"
+    },
+    {
+      "type": "heading",
+      "text": "Ego-Perspektive und eine Kamera nach Oblivion-Vorbild"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die als PowerPoint-Datei erstellte Präsentation von Japan Studio PD#3 trug bereits den Arbeitstitel Demon's Souls, der bis zur Veröffentlichung 2009 unverändert blieb. Das gezeigte Gameplay-Material offenbart jedoch deutliche Unterschiede zum finalen Spiel: Neben der bekannten Third-Person-Ansicht mit freier Kamera liess sich in der Prototypfassung offenbar zwischen Ego- und Third-Person-Perspektive wechseln. Die Third-Person-Kamera war zudem ursprünglich fest ausgerichtet und folgte der Blickrichtung der Spielfigur, während der linke Stick für seitliche Ausweichbewegungen und Rückschritte genutzt wurde. Laut McDonald war diese Anlehnung an das Steuerungsschema von The Elder Scrolls 4: Oblivion bewusst gewählt."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ein Lock-on-System, das die Souls-Reihe später prägen sollte, existierte in dieser frühen Fassung noch nicht. Auch der Bosskampf gegen den Demon God wirkt in den Aufnahmen wie ein tatsächlicher Kampf und nicht wie die weitgehend inszenierte Sequenz, die es letztlich in die Verkaufsversion schaffte."
+    },
+    {
+      "type": "heading",
+      "text": "Verworfene Gegner und ein South-Park-Verweis"
+    },
+    {
+      "type": "paragraph",
+      "text": "Das Material zeigt zudem Kreaturen, die es nicht ins fertige Spiel schafften. Dazu zählen humanoide Gegner mit Schlangenköpfen, die später in abgewandelter Form in Dark Souls-Schauplätzen wie Sen's Fortress auftauchten, sowie ein schlichtes Krokodil ohne besondere Fähigkeiten. Das Geistersystem, das FromSoftware letztlich beibehielt und das in nachfolgenden Souls-Titeln wiederkehrt, war hingegen bereits Teil der Präsentation."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Schlangenköpfige Gegner, später abgewandelt in Dark Souls",
+        "Ein gewöhnliches Krokodil ohne besondere Merkmale",
+        "Fixe Third-Person-Kamera mit Steuerung nach Oblivion-Vorbild",
+        "Geistersystem, das in späteren Souls-Titeln erhalten blieb"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Eines der auffälligsten Details hat nichts mit Spielmechanik zu tun: In einem Abschnitt über den Unterschied zwischen Solo- und MMORPG-Spielern verwendete Japan Studio einen Screenshot aus der South-Park-Episode 'Make Love, Not Warcraft', die einen übergewichtigen, von World of Warcraft besessenen Eric Cartman zeigt."
+    },
+    {
+      "type": "quote",
+      "text": "ruined castles, lone wastelands, and other cursed locations",
+      "attribution": "Aus der Original-Präsentation von Japan Studio PD#3, 2007"
+    },
+    {
+      "type": "paragraph",
+      "text": "Laut der Präsentation diente die Grafik als Beispiel für ein 'stereotypisches Bild von MMORPG-Spielern', das man durch die Kombination von Offline- und Online-Rollenspielelementen bewusst vermeiden wollte. Der Content-Creator Illusory Wall wies zudem darauf hin, dass in den Aufnahmen ab Minute 6:10 ein Tutorial-Bereich zu sehen ist, der zwar aus dem finalen Spiel entfernt, dessen Position aber offenbar bis heute in den Spieldateien auffindbar, wenn auch nicht zugänglich ist."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Weder Sony noch FromSoftware haben sich bislang offiziell zu dem Material geäussert, weshalb Herkunft und exakter Entstehungskontext der Aufnahmen nicht unabhängig bestätigt sind. McDonald selbst machte keine Angaben dazu, wie er an das fast zwei Jahrzehnte alte Material gelangte. Die Aufnahmen fügen sich damit in eine Reihe früherer Funde des Dataminers ein, der zuletzt auch unveröffentlichte Inhalte aus Elden Ring aufgedeckt hatte."
+    }
+  ],
+  "isLeakOrRumor": true,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-07T23:19:08.032Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "grid",
+  "sources": [
+    {
+      "title": "Newly Discovered Demon's Souls Prototype Footage Shows Scrapped First-Person Option",
+      "url": "https://www.ign.com/articles/newly-discovered-demons-souls-prototype-footage-shows-scrapped-first-person-option",
+      "publisher": "IGN"
+    },
+    {
+      "title": "Unearthed Demon s Souls Prototype Footage Reveals FromSoftware s Original First-Person Take On The Souls Formula",
+      "url": "https://kotaku.com/demons-souls-from-software-prototype-first-person-2000722570",
+      "publisher": "Kotaku"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/demons-souls-prototyp-first-person-leak-2026.webp",
+    "alt": "Demon's Souls: Prototyp-Aufnahmen zeigen verworfene Ego-Perspektive",
+    "credit": "Bild: IGN",
+    "sourceUrl": "https://www.ign.com/articles/newly-discovered-demons-souls-prototype-footage-shows-scrapped-first-person-option"
+  },
+  "relatedSlugs": [
+    "sony-ps5-warnhinweis-disc-aufkleber-2028",
+    "diablo-4-nintendo-switch-2-leak-preis-release",
+    "diablo-4-switch-2-geruecht-erscheinungstermin-2026"
+  ]
+}
