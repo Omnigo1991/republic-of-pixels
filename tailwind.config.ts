@@ -1,8 +1,11 @@
 import type { Config } from "tailwindcss";
 
-// Design-Tokens "A1 Neutral Pur" (Betreiber-Entscheidung 05.08.2026 abends):
-// mathematisch neutrales Graphit (R=G=B, null Farbstich) — Bilder wie
-// kalibriert, Cyan #02F0D1 als einziger Akzent mit maximaler Wirkung.
+// Design-Tokens "Logo-Navy" (Betreiber-Entscheidung 07.08.2026): sehr
+// dunkles Navy, abgeleitet aus der Markenfarbe hinter dem R im Logo
+// (#0F0D2C) — bindet die ganze Seite ans Logo-Farbpaar Navy + Cyan und
+// gibt Kacheln spürbar mehr Präsenz als das vorherige neutrale Graphit
+// ("A1 Neutral Pur", #141414/#1B1B1B), bei dem Karten und Hintergrund
+// nur 7 Stufen auseinanderlagen.
 const config: Config = {
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   darkMode: "class",
@@ -17,17 +20,17 @@ const config: Config = {
     extend: {
       colors: {
         bg: {
-          base: "#141414",
-          elevated: "#191919",
+          base: "#0C0B1A",
+          elevated: "#121126",
         },
         surface: {
-          card: "#1B1B1B",
-          hover: "#232323",
+          card: "#16152B",
+          hover: "#1E1D38",
         },
         border: {
-          subtle: "#262626",
-          default: "#333333",
-          strong: "#474747",
+          subtle: "#262347",
+          default: "#33305C",
+          strong: "#45416E",
         },
         accent: {
           DEFAULT: "#02F0D1",
@@ -47,9 +50,9 @@ const config: Config = {
         // Marken-Navy-Band (Header/Hero/Footer) — minimal heller als bg.base,
         // damit die Zonen sich subtil absetzen.
         navy: {
-          DEFAULT: "#191919",
-          raised: "#1F1F1F",
-          border: "#262626",
+          DEFAULT: "#0F0E20",
+          raised: "#171632",
+          border: "#262347",
           text: "#F1F0F2",
           muted: "#A9A9A9",
           dim: "#7D7D7D",
