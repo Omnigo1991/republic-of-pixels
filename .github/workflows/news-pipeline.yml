@@ -27,7 +27,9 @@ permissions:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    # 40 statt 30: Die Instagram-Publish-Phase wartet bis zu 6 Min. pro Post
+    # auf das Vercel-Deployment der Grafik.
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
 
@@ -38,6 +40,21 @@ jobs:
 
       - name: Dependencies installieren
         run: npm ci
+
+      # Chromium für den Instagram-Grafik-Renderer. Playwright wird bewusst
+      # NUR hier installiert (--no-save, nicht in package.json): als normale
+      # Dependency würde sein Postinstall bei jedem Vercel-Deploy ~120 MB
+      # Browser herunterladen und alle Deploys ausbremsen.
+      - name: Playwright-Browser cachen
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-chromium-${{ runner.os }}
+
+      - name: Playwright bereitstellen
+        run: |
+          npm install --no-save playwright
+          npx playwright install --with-deps chromium
 
       - name: Pipeline ausführen
         env:
@@ -50,10 +67,19 @@ jobs:
         # unveränderte Deals lösen keinen Commit/Deploy aus.
         run: node pipeline/deals.mjs
 
+      - name: Instagram-Posts vorbereiten (Auswahl, Texte, Grafiken)
+        # Phase 1 des Autopostings: schreibt Grafiken nach public/social/
+        # (werden mit committet und von Vercel gehostet) und die Publish-
+        # Aufträge nach .ig-queue.json (gitignored, nur für Phase 2 unten).
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+        run: node pipeline/instagram.mjs prepare
+
       - name: Neue Artikel oder Deals erkennen
         id: changes
         run: |
-          if git status --porcelain src/content/articles src/content/deals.json | grep -q .; then
+          if git status --porcelain src/content/articles src/content/deals.json public/social | grep -q .; then
             echo "new=true" >> "$GITHUB_OUTPUT"
           else
             echo "new=false" >> "$GITHUB_OUTPUT"
@@ -79,6 +105,7 @@ jobs:
           # Der Bilder-Ordner existiert nur, wenn mindestens ein Bild geladen wurde.
           git add src/content/articles src/content/deals.json pipeline/state.json src/lib/articles.generated.ts
           if [ -d public/images/articles ]; then git add public/images/articles; fi
+          if [ -d public/social ]; then git add public/social; fi
           if git diff --cached --quiet; then
             echo "Keine neuen Artikel oder Deals in diesem Lauf."
             exit 0
@@ -91,3 +118,11 @@ jobs:
           fi
           git pull --rebase --autostash origin main
           git push origin main
+
+      - name: Instagram-Posts veröffentlichen
+        # Phase 2: wartet, bis Vercel die Grafiken ausliefert, und publiziert
+        # dann über die Instagram-API. Läuft nach dem Push; ein Fehlschlag
+        # hier bricht den Workflow nicht ab (Skript loggt nur).
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+        run: node pipeline/instagram.mjs publish

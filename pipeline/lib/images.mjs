@@ -58,6 +58,17 @@ async function optimizeAndSave(buffer, slug, publicDir) {
     .resize(1600, 900, { fit: "cover", position: "attention" })
     .webp({ quality: 80 })
     .toFile(file);
+
+  // Zusätzlich ein natives 4:5-Hochformat (1080×1350) aus dem ORIGINAL-
+  // Buffer — fürs Instagram-Autoposting. Ein nachträglicher Zuschnitt aus
+  // dem 1600×900-Derivat nutzt nur einen 720px-Streifen und wird beim
+  // Hochskalieren sichtbar unscharf (von Tim am Testpost vom 07.08.2026
+  // bemängelt); das Original liefert die volle Quellauflösung.
+  await sharp(buffer)
+    .resize(1080, 1350, { fit: "cover", position: "attention" })
+    .webp({ quality: 84 })
+    .toFile(join(dir, `${slug}-portrait.webp`));
+
   return `/images/articles/${slug}.webp`;
 }
 
