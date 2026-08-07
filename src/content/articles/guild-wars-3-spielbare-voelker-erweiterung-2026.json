@@ -1,0 +1,101 @@
+{
+  "slug": "guild-wars-3-spielbare-voelker-erweiterung-2026",
+  "title": "Guild Wars 3: ArenaNet lässt Tür für weitere spielbare Völker offen",
+  "subtitle": "Ein neuer Entwickler-Blogpost bestätigt vier Startvölker und deutet an, wie das Spiel technisch auf spätere Erweiterungen vorbereitet wird.",
+  "excerpt": "ArenaNet hat in einem Blogpost die vier spielbaren Völker von Guild Wars 3 bestätigt und erklärt, wie das System für zukünftige Ergänzungen ausgelegt ist.",
+  "seoTitle": "Guild Wars 3: Weitere spielbare Völker künftig möglich",
+  "metaDescription": "ArenaNet erklärt in einem Blogpost die vier Startvölker von Guild Wars 3 und wie das Spiel für spätere zusätzliche Spezies vorbereitet wird.",
+  "category": "news",
+  "platforms": [
+    "pc",
+    "playstation"
+  ],
+  "tags": [
+    "Guild Wars 3",
+    "ArenaNet",
+    "MMO",
+    "PC",
+    "PS5"
+  ],
+  "tldr": [
+    "ArenaNet hat einen Blogpost zu den spielbaren Völkern in Guild Wars 3 veröffentlicht.",
+    "Zum Start sind Menschen, Asura, Kodan und ein bislang unbekanntes viertes Volk spielbar.",
+    "Das Spiel soll technisch so aufgebaut sein, dass weitere Völker nachträglich ergänzt werden können.",
+    "Einzige Einschränkung laut ArenaNet: Spezies mit extremer Körperform benötigen zu viel individuellen Aufwand."
+  ],
+  "whyItMatters": "Für Fans der Reihe ist die Nachricht relevant, weil Guild Wars 2 seit seinem Release bei denselben fünf Völkern geblieben ist. Die Ankündigung eröffnet die Möglichkeit, dass beliebte Spezies wie die Charr langfristig doch noch ihren Weg in Guild Wars 3 finden.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "ArenaNet hat einen neuen Entwickler-Blogpost veröffentlicht, der Klarheit über die spielbaren Völker in Guild Wars 3 schafft – und gleichzeitig Raum für Spekulationen lässt. Der Beitrag mit dem Titel 'Our Approach to Playable Species in Guild Wars 3' legt zunächst fest, welche vier Völker zum Launch zur Verfügung stehen werden."
+    },
+    {
+      "type": "embed",
+      "platform": "reddit",
+      "url": "https://www.reddit.com/r/GuildWars3/comments/1u9snal/kodans_dont_fulfil_the_brutish_ugly_fantasy_like/"
+    },
+    {
+      "type": "heading",
+      "text": "Vier Völker zum Start, ein Rätsel bleibt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Menschen und Asura kennt man bereits aus den Vorgängerspielen. Neu ist hingegen, dass die Kodan – die bärenähnliche Spezies, die bislang bei Fans als Wunschvolk galt – erstmals spielbar sein werden. Welches vierte Volk das Aufgebot komplettiert, verrät ArenaNet vorerst nicht. Weitere Details zu den einzelnen Spezies sollen laut Blogpost ab kommender Woche schrittweise veröffentlicht werden."
+    },
+    {
+      "type": "heading",
+      "text": "System für künftige Erweiterungen ausgelegt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der interessanteste Teil des Blogposts findet sich im Abschnitt 'Designing for Future Flexibility'. Dort erklärt ArenaNet, dass Guild Wars 3 technisch so gebaut wird, dass sich zusätzliche spielbare Völker später ergänzen lassen. Für die Guild-Wars-Community ist das keine Nebensächlichkeit: Guild Wars 2 ist seit seinem Release bei denselben fünf Rassen geblieben. Ob alle fünf zurückkehren, ist offen – Charr etwa, ein fester Bestandteil von Guild Wars 1 und spielbare Rasse in Guild Wars 2, fehlten im Ankündigungstrailer von Guild Wars 3, was in Teilen der Community für Diskussionen sorgte."
+    },
+    {
+      "type": "paragraph",
+      "text": "Laut Blogpost gibt es allerdings eine technische Grenze für mögliche Ergänzungen."
+    },
+    {
+      "type": "quote",
+      "text": "The only exception would be a species with an extreme body silhouette that would require extensive, unique custom support that can't leverage the systems we've built. For example, playable Forgotten, with their four arms and serpentine body, are not a viable option.",
+      "attribution": "ArenaNet, Entwickler-Blogpost"
+    },
+    {
+      "type": "heading",
+      "text": "Kein spielmechanischer Vorteil durch Volkswahl"
+    },
+    {
+      "type": "paragraph",
+      "text": "ArenaNet betont zudem, dass keines der spielbaren Völker einen spürbaren spielmechanischen Vorteil gegenüber den anderen haben wird. Die Wahl der Spezies dient laut Studio ausschliesslich dem Ausdruck der eigenen Spielfigur, nicht der Optimierung von Statuswerten."
+    },
+    {
+      "type": "paragraph",
+      "text": "Einordnung: Konkrete Zusagen zu einzelnen Rückkehrern wie Charr oder Zwergen macht ArenaNet im Blogpost nicht. Die Ankündigung, das System offen für spätere Ergänzungen zu gestalten, ist jedoch ein erstes Signal an die Community, dass die Völkerauswahl von Guild Wars 3 über die vier Startvölker hinaus wachsen könnte."
+    }
+  ],
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-07T00:02:57.638Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "waveform",
+  "sources": [
+    {
+      "title": "More playable species might be coming to Guild Wars 3 later down the line, according to latest developer blog post",
+      "url": "https://www.eurogamer.net/guild-wars-3-more-playable-races-blog-post",
+      "publisher": "Eurogamer"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/guild-wars-3-spielbare-voelker-erweiterung-2026.webp",
+    "alt": "Guild Wars 3: ArenaNet lässt Tür für weitere spielbare Völker offen",
+    "credit": "Bild: Eurogamer",
+    "sourceUrl": "https://www.eurogamer.net/guild-wars-3-more-playable-races-blog-post"
+  },
+  "relatedSlugs": [
+    "phantom-blade-zero-fertigstellung-praesentation-2026",
+    "marvel-rivals-season-9-5-speicherplatz-reduktion",
+    "monster-hunter-wilds-prologue-demo-2026"
+  ]
+}
