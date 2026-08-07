@@ -1,0 +1,93 @@
+{
+  "slug": "silent-hill-2-remake-update-1-07-ps5-pro-2026",
+  "title": "Silent Hill 2 Remake: Update 1.07 verbessert Bildqualität auf PS5 Pro",
+  "subtitle": "Der neue Patch behebt Flackern und Bildrauschen, bringt aber einen Schatten-Bug im Performance-Modus mit sich.",
+  "excerpt": "Konami hat Update 1.07 für das Silent Hill 2 Remake veröffentlicht. Es verbessert die Bildqualität auf PS5 und PS5 Pro deutlich, sorgt im Performance-Modus jedoch für fehlerhafte Schattendarstellung.",
+  "seoTitle": "Silent Hill 2 Remake: Update 1.07 für PS5 Pro veröffentlicht",
+  "metaDescription": "Update 1.07 verbessert die Bildqualität von Silent Hill 2 Remake auf PS5 Pro, bringt aber einen neuen Schatten-Bug im Performance-Modus mit sich.",
+  "category": "news",
+  "platforms": [
+    "playstation"
+  ],
+  "tags": [
+    "Silent Hill 2",
+    "Bloober Team",
+    "PS5 Pro",
+    "Konami",
+    "PSSR"
+  ],
+  "tldr": [
+    "Konami hat Update 1.07 für das Silent Hill 2 Remake veröffentlicht",
+    "Bildqualität, Nebeldarstellung und visuelle Artefakte wurden auf PS5 und PS5 Pro verbessert",
+    "Ein neuer Bug lässt Schatten im Performance-Modus fehlerhaft und zu dunkel erscheinen",
+    "Als Workaround bleibt aktuell nur der Qualitätsmodus mit 30 Bildern pro Sekunde"
+  ],
+  "whyItMatters": "Das Silent Hill 2 Remake gehörte zu den ersten Titeln, die Sonys PSSR-Upscaling nutzten, hatte damit aber von Anfang an technische Probleme. Der neue Patch zeigt, wie schwierig die Feinabstimmung solcher KI-Technologien bleibt, selbst Monate nach dem Launch.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Konami hat das Update 1.07 für das Remake von Silent Hill 2 veröffentlicht. Der rund sechs Gigabyte grosse Patch verbessert die Bildqualität sowohl auf der PS5 als auch auf der PS5 Pro und adressiert damit Probleme, die seit dem Release im November 2024 bestanden. Auf der PS5 Pro hatte der Horrortitel beim Einsatz von Sonys KI-Upscaler PSSR mit Flimmern, Rauschen und instabilen Bildraten zu kämpfen, weshalb Bloober Team die Technologie vorübergehend durch die auf der Standard-PS5 verwendete Lösung TSR ersetzt hatte."
+    },
+    {
+      "type": "heading",
+      "text": "Verbesserungen im Detail"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Verbesserte Performance sowohl im Performance- als auch im Qualitätsmodus",
+        "Überarbeitete Darstellung des Nebels",
+        "Behobene visuelle Fehler bei verschiedenen Assets",
+        "Beseitigte Grafikartefakte während Bewegungen",
+        "Insgesamt verbesserte visuelle Qualität"
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "Zudem behebt der Patch das Flackern von Schatten und reduziert bestimmte visuelle Artefakte, die bei Bewegungen auftreten können.",
+      "attribution": "Konami"
+    },
+    {
+      "type": "paragraph",
+      "text": "Erste Rückmeldungen von Spielenden bestätigen, dass sich die Bildqualität auf der PS5 Pro nach der Installation des Updates spürbar verbessert hat."
+    },
+    {
+      "type": "heading",
+      "text": "Neuer Bug im Performance-Modus"
+    },
+    {
+      "type": "paragraph",
+      "text": "Trotz der Verbesserungen bringt Update 1.07 auch einen neuen Fehler mit sich. Im Performance-Modus werden Schatten offenbar fehlerhaft dargestellt, was zu deutlich zu dunklen Bildbereichen und einem Verlust von Details führt. Wer den Fehler umgehen möchte, muss derzeit auf den Qualitätsmodus ausweichen, in dem die fehlerhaften Schatten laut Betroffenen nicht auftreten. Dieser Modus läuft allerdings mit 30 Bildern pro Sekunde statt der höheren Bildrate des Performance-Modus. Konami hat sich bislang nicht zu dem Problem geäussert, weshalb offen bleibt, wann ein weiterer Patch Abhilfe schafft."
+    },
+    {
+      "type": "paragraph",
+      "text": "Das Update zeigt, dass Konami und Bloober Team weiterhin an der technischen Feinabstimmung des Remakes arbeiten, insbesondere im Zusammenspiel mit der PS5-Pro-Hardware. Gleichzeitig macht der neue Bug deutlich, dass die Behebung eines Problems auf dieser Plattform offenbar nicht ohne Nebenwirkungen an anderer Stelle gelingt."
+    }
+  ],
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-07T09:02:06.241Z",
+  "readingTimeMinutes": 1,
+  "heroVariant": "controller",
+  "sources": [
+    {
+      "title": "Silent Hill 2 Remake: Update 1.07 verbessert Bildqualität auf PS5 Pro – doch ein Bug sorgt für Frust",
+      "url": "https://www.play3.de/2026/08/07/silent-hill-2-remake-update-1-07-verbessert-bildqualitaet-auf-ps5-pro-doch-ein-bug-sorgt-fuer-frust/",
+      "publisher": "play3.de"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/silent-hill-2-remake-update-1-07-ps5-pro-2026.webp",
+    "alt": "Silent Hill 2 Remake: Update 1.07 verbessert Bildqualität auf PS5 Pro",
+    "credit": "Bild: play3.de",
+    "sourceUrl": "https://www.play3.de/2026/08/07/silent-hill-2-remake-update-1-07-verbessert-bildqualitaet-auf-ps5-pro-doch-ein-bug-sorgt-fuer-frust/"
+  },
+  "relatedSlugs": [
+    "ps5-pro-pssr-2-0-standardeinstellung-beta-update",
+    "octopath-traveler-3-asano-jubilaeum-update-2026",
+    "final-fantasy-7-revelation-gamescom-onl-2026"
+  ]
+}
