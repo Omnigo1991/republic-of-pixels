@@ -37,9 +37,14 @@ export async function GET(req: Request) {
   // die Pipeline lief weiter stündlich (entdeckt 07.08.2026). Kann die
   // Route den letzten Lauf nicht verifizieren, löst sie NICHT aus; der
   // GitHub-Schedule (alle 3 Std.) ist ohnehin der primäre Taktgeber.
+  // cache: "no-store" ist hier ESSENZIELL: Next.js cached fetch()-Antworten
+  // in Route-Handlern standardmässig im Data Cache — ohne no-store verglich
+  // der Guard gegen eine eingefrorene, tagealte "letzter Lauf"-Antwort und
+  // liess deshalb jeden Ping durch (die eigentliche Wurzel des
+  // Stunden-Takt-Bugs vom 07.08.2026).
   const lastRes = await fetch(
     `https://api.github.com/repos/${REPO}/actions/workflows/${WORKFLOW}/runs?per_page=1`,
-    { headers: ghHeaders }
+    { headers: ghHeaders, cache: "no-store" }
   );
   if (!lastRes.ok) {
     return Response.json({
