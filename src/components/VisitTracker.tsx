@@ -12,6 +12,12 @@ export function VisitTracker() {
 
   useEffect(() => {
     try {
+      // Eigene Aufrufe verfälschen die Statistik nicht (Tim, 07.08.2026):
+      // - localhost = Entwicklung/Previews → nie zählen
+      // - rop_intern = Redaktionsgerät (wird beim Öffnen des Statistik-
+      //   Cockpits gesetzt) → nie zählen
+      if (location.hostname === "localhost") return;
+      if (localStorage.getItem("rop_intern")) return;
       let visitor = localStorage.getItem("rop_vid");
       if (!visitor) {
         visitor = crypto.randomUUID();

@@ -24,6 +24,18 @@ interface Kennzahlen {
 
 export function StatistikCockpit() {
   const supabase = useMemo(() => getSupabase(), []);
+
+  // Wer das Cockpit öffnet, ist Redaktion: Gerät dauerhaft als intern
+  // markieren — der VisitTracker zählt es ab jetzt nicht mehr mit
+  // (eigene Aufrufe verfälschen sonst die Statistik; Tim, 07.08.2026).
+  useEffect(() => {
+    try {
+      localStorage.setItem("rop_intern", "1");
+    } catch {
+      // Ohne localStorage kein Ausschluss möglich — unkritisch.
+    }
+  }, []);
+
   const [session, setSession] = useState<Session | null>(null);
   const [istMaster, setIstMaster] = useState<boolean | null>(null);
   const [zahlen, setZahlen] = useState<Kennzahlen | null>(null);

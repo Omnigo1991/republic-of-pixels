@@ -240,11 +240,17 @@ Hinweis zu body: quote-Blöcke nur verwenden, wenn die Quelle ein wörtliches Zi
     publishedAt: new Date().toISOString(),
     readingTimeMinutes: Math.max(1, Math.round(words / 220)),
     heroVariant: HERO_VARIANTS[parseInt(hashId(draft.slug ?? primary.link), 16) % HERO_VARIANTS.length],
-    sources: clusterItems.slice(0, 2).map((it) => ({
-      title: it.title,
-      url: it.link,
-      publisher: it.feedName,
-    })),
+    // Dedupe nach URL: Zwei Feed-Items desselben Clusters können auf
+    // denselben Beitrag zeigen — der erzeugte Artikel listete die Quelle
+    // dann doppelt (von Tim am 07.08.2026 bemerkt).
+    sources: clusterItems
+      .filter((it, i, arr) => arr.findIndex((o) => o.link === it.link) === i)
+      .slice(0, 2)
+      .map((it) => ({
+        title: it.title,
+        url: it.link,
+        publisher: it.feedName,
+      })),
     review: istReview ? (draft.review ?? null) : null,
     image: null,
   };

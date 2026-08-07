@@ -82,11 +82,23 @@ export function ReviewBox({ review }: { review: Review }) {
 }
 
 export function SourcesBox({ sources }: { sources: Source[] }) {
+  // Doppelte Quellen ausfiltern (gleiche URL): ältere Artikel enthalten
+  // teils zweimal denselben Eintrag, wenn zwei Feed-Items desselben
+  // Clusters auf denselben Beitrag zeigten.
+  const unique = sources.filter(
+    (s, i) => sources.findIndex((o) => o.url === s.url) === i
+  );
+  // Eingeklappt statt offener Block (Betreiber-Wunsch 07.08.2026): Die
+  // Quellen bleiben einen Klick entfernt transparent, ziehen aber keine
+  // Aufmerksamkeit mehr vom Artikel ab.
   return (
-    <div className="my-8 rounded-2xl border border-border-subtle p-6">
-      <p className="mb-3 text-[13px] font-semibold tracking-wide text-text-tertiary">QUELLEN</p>
-      <ul className="flex flex-col gap-2">
-        {sources.map((s, i) => (
+    <details className="group my-8 rounded-2xl border border-border-subtle">
+      <summary className="flex cursor-pointer list-none items-center justify-between px-5 py-3.5 text-[13px] font-semibold tracking-wide text-text-tertiary transition-colors hover:text-text-secondary [&::-webkit-details-marker]:hidden">
+        <span>QUELLEN ({unique.length})</span>
+        <ChevronIcon className="h-4 w-4 transition-transform duration-200 group-open:rotate-180" />
+      </summary>
+      <ul className="flex flex-col gap-2 px-5 pb-4">
+        {unique.map((s, i) => (
           <li key={i} className="text-sm">
             <a
               href={s.url}
@@ -100,7 +112,15 @@ export function SourcesBox({ sources }: { sources: Source[] }) {
           </li>
         ))}
       </ul>
-    </div>
+    </details>
+  );
+}
+
+function ChevronIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+      <path d="m6 9 6 6 6-6" />
+    </svg>
   );
 }
 
