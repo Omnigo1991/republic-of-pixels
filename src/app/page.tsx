@@ -4,6 +4,7 @@ import { PopularSection } from "@/components/PopularSection";
 import { NewsListe } from "@/components/NewsListe";
 import { CategoryChipBar } from "@/components/CategoryChipBar";
 import { ReleaseRadar } from "@/components/ReleaseRadar";
+import { DealRadar } from "@/components/DealRadar";
 import { GeradeImGespraech } from "@/components/GeradeImGespraech";
 import { DeineMerkliste } from "@/components/DeineMerkliste";
 import { SectionDivider } from "@/components/SectionDivider";
@@ -37,6 +38,12 @@ export default function HomePage() {
 
         <Reveal>
           <ReleaseRadar />
+        </Reveal>
+
+        <div className="h-px w-full bg-border-subtle" />
+
+        <Reveal>
+          <DealRadar />
         </Reveal>
 
         <div className="h-px w-full bg-border-subtle" />
