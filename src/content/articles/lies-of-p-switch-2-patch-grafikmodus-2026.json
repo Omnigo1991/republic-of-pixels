@@ -1,0 +1,94 @@
+{
+  "slug": "lies-of-p-switch-2-patch-grafikmodus-2026",
+  "title": "Lies of P: Complete Edition erhält Switch-2-Update mit neuem Grafikmodus",
+  "subtitle": "Neowiz und Round8 Studio beheben Leistungsprobleme und ergänzen einen dritten Grafikmodus für den Handheld-Betrieb.",
+  "excerpt": "Kurz nach dem Switch-2-Launch von Lies of P: Complete Edition liefern Neowiz und Round8 Studio einen Patch nach, der Abstürze behebt und einen neuen 60-fps-Handheld-Modus einführt.",
+  "seoTitle": "Lies of P Switch 2: Patch bringt neuen Grafikmodus",
+  "metaDescription": "Neuer Patch für Lies of P: Complete Edition auf Switch 2 behebt Abstürze und fügt einen dritten Grafikmodus mit bis zu 60 fps im Handheld-Betrieb hinzu.",
+  "category": "news",
+  "platforms": [
+    "nintendo"
+  ],
+  "tags": [
+    "Lies of P",
+    "Switch 2",
+    "Neowiz",
+    "Round8 Studio",
+    "Patch"
+  ],
+  "tldr": [
+    "Lies of P: Complete Edition ist diese Woche für Switch 2 erschienen, zeigte im Test von Nintendo Life aber Leistungsprobleme.",
+    "Patch 1.13.1.0 fügt einen dritten Grafikmodus für den Handheld-Betrieb hinzu, der bis zu 60 fps unterstützt.",
+    "Der bisherige Modus 'Performance-orientiert' wurde in 'Ausgewogen' umbenannt, zudem wurden Fehler im 'Qualitäts-orientierten' Modus behoben.",
+    "Eine physische Version des Spiels erscheint am 2. Oktober 2026."
+  ],
+  "whyItMatters": "Für Besitzer:innen der Switch 2 verbessert der Patch die Spielbarkeit eines frisch veröffentlichten Soulslikes noch vor dem physischen Release im Oktober. Er zeigt zudem, wie Entwicklerstudios auf Performance-Kritik aus Testberichten reagieren können.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Lies of P: Complete Edition ist diese Woche für die Nintendo Switch 2 erschienen. Im Test der Redaktion von Nintendo Life wurden zwar einige Leistungsprobleme in dieser Fassung festgestellt, das Soulslike erhielt dennoch eine Wertung von neun von zehn Punkten. Nun haben die Studios Neowiz und Round8 Studio ein Update veröffentlicht, das mehrere dieser Schwächen adressiert und die Grafikoptionen im Handheld-Betrieb erweitert."
+    },
+    {
+      "type": "embed",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=4TAvpb4iRPA"
+    },
+    {
+      "type": "heading",
+      "text": "Dritter Grafikmodus für den Handheld-Betrieb"
+    },
+    {
+      "type": "paragraph",
+      "text": "Mit dem Update auf Version 1.13.1.0 erhält das Menü unter Einstellungen → Grafik im Handheld-Modus einen dritten Eintrag. Der bisherige Modus 'Performance-orientiert' wurde in 'Ausgewogen' umbenannt. An seine Stelle tritt ein neuer 'Performance-orientierter' Modus, der laut offiziellen Angaben bis zu 60 Bilder pro Sekunde unterstützt."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Abstürze in verschiedenen Situationen behoben, allgemeine Stabilität verbessert (Windows-Version)",
+        "Fehler bei der AMD-Adrenalin-Funktion 'FSR 4 Override' korrigiert",
+        "Neuer dritter Grafikmodus für den Handheld-Betrieb, bisheriger 'Performance-orientiert' heisst nun 'Ausgewogen'",
+        "Neuer 'Performance-orientierter' Modus mit bis zu 60 fps im Handheld-Betrieb",
+        "Fehler im 'Qualitäts-orientierten' Modus im Handheld-Betrieb behoben, inklusive einer in Version 1.13.2 zu niedrig gerenderten internen Auflösung",
+        "Bewegungsunschärfe lässt sich in den Gameplay-Einstellungen ein- und ausschalten, jedoch nur im TV-Modus"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Physische Version folgt im Oktober"
+    },
+    {
+      "type": "paragraph",
+      "text": "Wer lieber eine physische Kopie erwerben möchte, muss sich noch etwas gedulden: Diese Fassung von Lies of P: Complete Edition erscheint erst am 2. Oktober 2026. Bis dahin dürfte das Spiel dank weiterer Patches technisch bereits ausgereifter sein als zum digitalen Launch."
+    },
+    {
+      "type": "paragraph",
+      "text": "Der rasche Nachbesserung zeigt, dass Neowiz und Round8 Studio auf die anfängliche Kritik an der Performance reagiert haben, noch bevor die physische Version in den Handel kommt. Für Spieler:innen auf der Switch 2 bedeutet das spürbar mehr Auswahl bei der Balance zwischen Bildrate und visueller Qualität im Handheld-Betrieb."
+    }
+  ],
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-07T05:02:34.031Z",
+  "readingTimeMinutes": 1,
+  "heroVariant": "waveform",
+  "sources": [
+    {
+      "title": "Lies Of P Switch 2 Update Adds New Handheld Graphics Option And Fixes Other Issues",
+      "url": "https://www.nintendolife.com/news/2026/08/lies-of-p-switch-2-update-adds-new-handheld-graphics-option-and-fixes-other-issues",
+      "publisher": "Nintendo Life"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/lies-of-p-switch-2-patch-grafikmodus-2026.webp",
+    "alt": "Lies of P: Complete Edition erhält Switch-2-Update mit neuem Grafikmodus",
+    "credit": "Bild: Nintendo Life",
+    "sourceUrl": "https://www.nintendolife.com/news/2026/08/lies-of-p-switch-2-update-adds-new-handheld-graphics-option-and-fixes-other-issues"
+  },
+  "relatedSlugs": [
+    "final-fantasy-14-switch-2-ladezeiten-patch-2026",
+    "onimusha-way-of-the-sword-preview-release-2026",
+    "nintendo-switch-2-verkaufszahlen-q1-fy2027"
+  ]
+}
