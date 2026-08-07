@@ -6,6 +6,7 @@ import Image from "next/image";
 import { getAllArticles, getArticleBySlug } from "@/lib/articles";
 import type { Article } from "@/lib/types";
 import { formatDateTime } from "@/lib/format";
+import { Logo } from "@/components/Logo";
 
 // Link-in-Bio-Landeseite für Instagram (Betreiber-Freigabe 07.08.2026):
 // In der Instagram-Bio steht republicofpixels.com/ig — wer nach einem Post
@@ -19,7 +20,7 @@ import { formatDateTime } from "@/lib/format";
 export const metadata: Metadata = {
   title: "Aus unseren Instagram-Posts",
   description:
-    "Die Artikel hinter den Instagram-Posts von Republic of Pixels — ein Tipp genügt.",
+    "Die Artikel hinter den Instagram-Posts von Republic of Pixels — ein Klick genügt.",
   robots: { index: false, follow: true },
 };
 
@@ -65,20 +66,14 @@ export default function InstagramLandingPage() {
   return (
     <div className="mx-auto max-w-md px-4 pb-16 pt-10">
       <header className="text-center">
-        <Image
-          src="/brand/r-avatar.png"
-          alt="Republic of Pixels"
-          width={56}
-          height={56}
-          className="mx-auto rounded-2xl"
-          priority
-        />
-        <h1 className="mt-3 text-xl font-black tracking-tight text-text-primary">
-          Republic of <span className="text-accent">Pixels</span>
-        </h1>
-        <p className="mt-2 text-sm leading-relaxed text-text-tertiary">
+        {/* Exakt die Header-Wortmarke (Logo inline) — Wiedererkennung
+            zwischen Website und Instagram-Landeseite (Tim, 07.08.2026). */}
+        <div className="flex justify-center">
+          <Logo inline size="lg" />
+        </div>
+        <p className="mt-3 text-sm leading-relaxed text-text-tertiary">
           Du kommst von Instagram? Hier sind die Artikel aus unseren Posts —
-          ein Tipp genügt.
+          ein Klick genügt.
         </p>
       </header>
 
