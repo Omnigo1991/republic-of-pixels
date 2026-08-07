@@ -55,7 +55,7 @@ export function DealRadar() {
               href={d.url}
               target="_blank"
               rel="noreferrer noopener"
-              className="group flex h-full items-center gap-4 rounded-2xl border border-border-subtle bg-surface-card p-4 transition-all duration-300 hover:bg-surface-hover"
+              className="group flex h-full min-w-0 items-center gap-4 rounded-2xl border border-border-subtle bg-surface-card p-4 transition-all duration-300 hover:bg-surface-hover"
             >
               {d.image ? (
                 <div className="relative h-14 w-28 shrink-0 overflow-hidden rounded-lg border border-border-subtle">
