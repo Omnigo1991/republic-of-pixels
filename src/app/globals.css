@@ -50,7 +50,10 @@ h3 {
 .prose-rop p:where(:not(.not-prose, .not-prose *)) {
   margin-top: 1.25em;
   margin-bottom: 1.25em;
-  line-height: 1.75;
+  /* 1.65 statt 1.75 (Betreiber-Entscheidung 06.08.2026): kompakter,
+     nach Vergleichsmessung mit play3.de (dort 1.62) — 1.75 wirkte bei
+     unserer 18px-Schrift zu luftig. */
+  line-height: 1.65;
   font-size: 1.125rem;
   color: #e6e6e6;
 }
@@ -80,7 +83,7 @@ h3 {
 }
 .prose-rop li:where(:not(.not-prose, .not-prose *)) {
   margin: 0.5em 0;
-  line-height: 1.7;
+  line-height: 1.65;
 }
 .prose-rop a:where(:not(.not-prose, .not-prose *)) {
   color: #02f0d1;
