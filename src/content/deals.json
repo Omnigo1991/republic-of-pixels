@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-07T09:46:52.870Z",
+  "updatedAt": "2026-08-07T11:03:07.460Z",
   "deals": [
     {
       "appId": 460930,
@@ -11,17 +11,6 @@
       "endsAt": "2026-08-16T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/460930/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460930/068505b164cb0af9bd49aa0627c1dae4831d149b/capsule_184x69.jpg?t=1786036748"
-    },
-    {
-      "appId": 2231380,
-      "title": "Tom Clancy's Ghost Recon® Breakpoint",
-      "discountPercent": 95,
-      "originalPrice": 5999,
-      "finalPrice": 299,
-      "currency": "EUR",
-      "endsAt": "2026-08-16T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/2231380/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2231380/c3198d3208113c6ea52ff68f2ccda869a3716f94/capsule_184x69.jpg?t=1786026109"
     },
     {
       "appId": 1091500,
@@ -66,6 +55,17 @@
       "endsAt": "2026-08-18T17:00:09.000Z",
       "url": "https://store.steampowered.com/app/1478500/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1478500/44da9fb07ebe477387355d7fce29560b55125cce/capsule_184x69.jpg?t=1785911674"
+    },
+    {
+      "appId": 1368140,
+      "title": "Corsair Cove",
+      "discountPercent": 25,
+      "originalPrice": 3999,
+      "finalPrice": 2999,
+      "currency": "EUR",
+      "endsAt": "2026-08-14T17:00:09.000Z",
+      "url": "https://store.steampowered.com/app/1368140/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1368140/9317363cb16926256a8e15b2dd91eee8203e4f11/capsule_184x69.jpg?t=1785860713"
     }
   ]
 }
