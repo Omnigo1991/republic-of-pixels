@@ -6,7 +6,6 @@ import Image from "next/image";
 import { getAllArticles, getArticleBySlug } from "@/lib/articles";
 import type { Article } from "@/lib/types";
 import { formatDateTime } from "@/lib/format";
-import { Logo } from "@/components/Logo";
 
 // Link-in-Bio-Landeseite für Instagram (Betreiber-Freigabe 07.08.2026):
 // In der Instagram-Bio steht republicofpixels.com/ig — wer nach einem Post
@@ -66,12 +65,22 @@ export default function InstagramLandingPage() {
   return (
     <div className="mx-auto max-w-md px-4 pb-16 pt-10">
       <header className="text-center">
-        {/* Exakt die Header-Wortmarke (Logo inline) — Wiedererkennung
-            zwischen Website und Instagram-Landeseite (Tim, 07.08.2026). */}
-        <div className="flex justify-center">
-          <Logo inline size="lg" />
-        </div>
-        <p className="mt-3 text-sm leading-relaxed text-text-tertiary">
+        {/* Wortmarke EXAKT wie im Header (MastheadNav, nicht die veraltete
+            Logo-Komponente): Inter font-black, tracking-tight, "OF PIXELS"
+            abgesetzt — hier auf Navy in Cyan statt der 60%-Deckkraft der
+            Cyan-Leiste (Tim-Feedback 07.08.2026). */}
+        <Link
+          href="/"
+          aria-label="Republic of Pixels – Startseite"
+          className="inline-flex items-center gap-3.5"
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/brand/r-mark.png" alt="" aria-hidden="true" className="h-9 w-auto" />
+          <span className="text-[22px] font-black leading-none tracking-tight text-text-primary">
+            REPUBLIC<span className="text-accent"> OF PIXELS</span>
+          </span>
+        </Link>
+        <p className="mt-4 text-sm leading-relaxed text-text-tertiary">
           Du kommst von Instagram? Hier sind die Artikel aus unseren Posts —
           ein Klick genügt.
         </p>
