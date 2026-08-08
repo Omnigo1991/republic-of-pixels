@@ -50,9 +50,10 @@ export function TopStory({ article }: { article: Article }) {
             {kicker}
           </p>
         )}
-        {/* leading 1.15 statt 1.1: Die Punkte von Gross-Umlauten (Ü) ragten
-            bei 1.1 in die Zeile darüber (Tim, 08.08.2026, "Lies of P 2"). */}
-        <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-semibold leading-[1.15] tracking-tight text-navy-text group-hover:text-accent transition-colors">
+        {/* leading 1.18 statt 1.1: Die Punkte von Gross-Umlauten (Ü) ragten
+            bei 1.1 in die Zeile darüber (Tim, 08.08.2026, "Lies of P 2");
+            1.15 war nachgemessen noch zu knapp. */}
+        <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-semibold leading-[1.18] tracking-tight text-navy-text group-hover:text-accent transition-colors">
           {headline}
         </h1>
         <p className="mt-4 text-lg leading-relaxed text-navy-muted">{article.subtitle}</p>
