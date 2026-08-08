@@ -194,6 +194,10 @@ async function prepare() {
     (a) =>
       new Date(a.publishedAt).getTime() > cutoff &&
       !state.instagram.posted[a.slug] &&
+      // Einmal am Bild gescheitert = raus aus der Auswahl: Sonst kann
+      // dieselbe unpostbare Story in jedem Lauf erneut gewählt werden
+      // und frisst mehrere Tages-Slots (Lücke entdeckt 08.08.2026).
+      !state.instagram.uebersprungen?.[a.slug] &&
       a.image?.src
   );
 
@@ -279,7 +283,9 @@ async function prepare() {
       imagePath = portraitPathFor(article);
     }
     if (!imagePath) {
-      console.log(`  ${article.slug}: kein offizielles Bild und kein scharfes Pressebild — übersprungen`);
+      state.instagram.uebersprungen ??= {};
+      state.instagram.uebersprungen[article.slug] = new Date().toISOString();
+      console.log(`  ${article.slug}: kein offizielles Bild und kein scharfes Pressebild — übersprungen und für künftige Läufe gesperrt`);
       continue;
     }
     const badge =
@@ -376,6 +382,9 @@ async function prepare() {
   const forgetAfter = Date.now() - 30 * 86400000;
   for (const [slug, iso] of Object.entries(state.instagram.posted)) {
     if (new Date(iso).getTime() < forgetAfter) delete state.instagram.posted[slug];
+  }
+  for (const [slug, iso] of Object.entries(state.instagram.uebersprungen ?? {})) {
+    if (new Date(iso).getTime() < forgetAfter) delete state.instagram.uebersprungen[slug];
   }
 
   // Token-Pflege: Langlebige Instagram-Tokens gelten 60 Tage und werden
