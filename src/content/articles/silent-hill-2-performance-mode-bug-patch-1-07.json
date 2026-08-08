@@ -1,0 +1,130 @@
+{
+  "slug": "silent-hill-2-performance-mode-bug-patch-1-07",
+  "title": "Silent Hill 2 Remake: Konami untersucht neue Grafikfehler nach Patch 1.07",
+  "subtitle": "Das jüngste Update sollte die Bildqualität verbessern, sorgt auf PS5 und PS5 Pro aber für verwaschene Schatten und Bildfehler im Performance-Modus",
+  "excerpt": "Nach Patch 1.07 klagen Spielerinnen und Spieler über zerdrückte Schwarzwerte und Bildfehler im Performance-Modus von Silent Hill 2 Remake. Konami bestätigt Untersuchungen auf PS5 und PS5 Pro.",
+  "seoTitle": "Silent Hill 2 Remake: Konami prüft Patch-1.07-Fehler auf PS5",
+  "metaDescription": "Konami untersucht Grafikprobleme im Performance-Modus von Silent Hill 2 Remake nach Patch 1.07 auf PS5 und PS5 Pro. Alle Fakten im Überblick.",
+  "category": "news",
+  "platforms": [
+    "playstation"
+  ],
+  "tags": [
+    "Silent Hill 2 Remake",
+    "Konami",
+    "Bloober Team",
+    "PS5 Pro",
+    "Patch",
+    "Performance Mode"
+  ],
+  "tldr": [
+    "Konami bestätigt Untersuchungen zu neuen Grafikfehlern im Performance-Modus nach Patch 1.07",
+    "Betroffen sind sowohl PS5 als auch PS5 Pro, Quality Mode bleibt unangetastet",
+    "Spielerinnen und Spieler berichten von zerdrückten Schwarzwerten, Schattenflackern und Pixelfehlern",
+    "Es ist nicht das erste Bildqualitätsproblem des Remakes auf PS5 Pro seit dessen Launch"
+  ],
+  "whyItMatters": "Für Besitzerinnen und Besitzer von PS5 und PS5 Pro ist die Bildqualität im Performance-Modus ein zentrales Kaufargument – wenn ausgerechnet ein Verbesserungspatch neue Fehler einführt, schwindet das Vertrauen in künftige Updates. Der Fall zeigt zudem erneut, wie holprig die PSSR-Unterstützung auf der Pro-Konsole bei grösseren Titeln ausfallen kann.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Konami hat bestätigt, dass man neue Probleme im Performance-Modus von Silent Hill 2 Remake auf PS5 und PS5 Pro untersucht. Auslöser ist Patch 1.07, der vergangene Woche veröffentlicht wurde und laut Patch Notes eigentlich die Nebeldarstellung verbessern, Schattenflackern reduzieren, bewegungsbedingte Bildfehler verringern und die allgemeine Bildqualität auf beiden Konsolen anheben sollte."
+    },
+    {
+      "type": "embed",
+      "platform": "twitter",
+      "url": "https://x.com/KONAMIUK/status/2085744918928990317"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "1.07",
+          "label": "Patch-Version, die neue Grafikfehler einführte"
+        },
+        {
+          "value": "1 Mio.",
+          "label": "verkaufte Exemplare in unter einer Woche nach Release"
+        },
+        {
+          "value": "5/5",
+          "label": "Testnote von Eurogamer für das Remake"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Zerdrückte Schwarzwerte statt besserer Bildqualität"
+    },
+    {
+      "type": "paragraph",
+      "text": "Kurz nach Veröffentlichung des Updates häuften sich Beschwerden von Spielerinnen und Spielern. Betroffen ist ausschliesslich der Performance-Modus, während der auf 30 Bilder pro Sekunde begrenzte Quality Mode offenbar unangetastet bleibt. Konami reagierte mit einer kurzen Mitteilung auf X und erklärte, man sei sich der aktuellen Probleme im Performance-Modus auf PS5 und PS5 Pro bewusst, das Team untersuche die Ursachen und arbeite an möglichen Lösungen. Eine konkrete Zeitangabe für einen Fix nannte der Publisher nicht."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Zerdrückte, überdunkelte Schatten im Performance-Modus",
+        "Verstärktes Schattenflackern gegenüber dem Zustand vor Patch 1.07",
+        "Pixelartefakte auf der Spielfigur James in Spiegelszenen",
+        "Berichte über zusätzliche Fehler auch in zuvor funktionierenden Quality-Mode-Elementen"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Nicht das erste Problem mit PS5 Pro"
+    },
+    {
+      "type": "paragraph",
+      "text": "Es ist bereits das zweite Mal, dass die technische Umsetzung des Remakes auf Sonys Hardware ins Straucheln gerät. Schon zum Launch der PS5 Pro hatte die Unterstützung für die verbesserte Konsole erhebliche Mängel gezeigt."
+    },
+    {
+      "type": "quote",
+      "text": "Deutliche Probleme bei der Bildstabilität, die auf der Standard-PlayStation 5 nicht auftreten, sowie eine problematische Umsetzung des PSSR-Upscalings.",
+      "attribution": "Digital Foundry, technischer Test zum Launch der PS5 Pro"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ein Patch zur Behebung dieser Grafikfehler folgte damals zwei Wochen nach dem Launch der Konsole, die Probleme hielten sich jedoch so lange, dass Fans zwischenzeitlich annahmen, Bloober Team habe weitere Korrekturen aufgegeben. Erst eine Stellungnahme gegenüber Eurogamer bestätigte, dass weiterhin an Lösungen gearbeitet werde."
+    },
+    {
+      "type": "paragraph",
+      "text": "Für ein Remake, das kommerziell erfolgreich lief und von der Kritik überwiegend positiv aufgenommen wurde, ist die anhaltende Instabilität auf PS5 Pro ein wiederkehrender Schwachpunkt. Solange Konami keinen konkreten Zeitplan für einen Fix nennt, bleibt unklar, wie lange die aktuellen Bildfehler im Performance-Modus bestehen bleiben."
+    }
+  ],
+  "poll": {
+    "question": "Wie schätzt ihr Konamis Umgang mit den PS5-Pro-Problemen bei Silent Hill 2 Remake ein?",
+    "options": [
+      "Kritisch – solche Fehler sollten die QA nie passieren",
+      "Nachvollziehbar – Pro-Enhanced-Patches sind technisch komplex",
+      "Egal – ich spiele ohnehin im Quality Mode",
+      "Ich warte erst auf den nächsten Fix, bevor ich urteile"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-08T14:03:32.546Z",
+  "readingTimeMinutes": 1,
+  "heroVariant": "circuit",
+  "sources": [
+    {
+      "title": "Konami investigating Silent Hill 2 Performance Mode issues after latest PS5 patch",
+      "url": "https://www.eurogamer.net/silent-hill-2-remake-performance-mode-bugs",
+      "publisher": "Eurogamer"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/silent-hill-2-performance-mode-bug-patch-1-07.webp",
+    "alt": "Silent Hill 2 Remake: Konami untersucht neue Grafikfehler nach Patch 1.07",
+    "credit": "Bild: Eurogamer",
+    "sourceUrl": "https://www.eurogamer.net/silent-hill-2-remake-performance-mode-bugs",
+    "sourceWidth": 690,
+    "sourceHeight": 388
+  },
+  "relatedSlugs": [
+    "silent-hill-2-remake-update-1-07-ps5-pro-2026",
+    "ps5-pro-pssr-2-0-standardeinstellung-beta-update",
+    "beast-of-reincarnation-patch-story-pacing-2026"
+  ]
+}

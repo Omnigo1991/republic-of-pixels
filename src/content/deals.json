@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-08T08:23:08.296Z",
+  "updatedAt": "2026-08-08T14:03:43.908Z",
   "deals": [
     {
       "appId": 460930,
@@ -24,15 +24,15 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/590e0988a2fb79f44d3e31e41fd4949eb76abc41/capsule_184x69.jpg?t=1784714077"
     },
     {
-      "appId": 3017860,
-      "title": "DOOM: The Dark Ages",
-      "discountPercent": 67,
-      "originalPrice": 7999,
-      "finalPrice": 2639,
+      "appId": 1144200,
+      "title": "Ready or Not",
+      "discountPercent": 50,
+      "originalPrice": 4999,
+      "finalPrice": 2499,
       "currency": "EUR",
-      "endsAt": "2026-08-13T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/3017860/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3017860/187b2434c39e31d292b429884e30401312672bd6/capsule_184x69_alt_assets_2.jpg?t=1783452885"
+      "endsAt": "2026-08-09T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1144200/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1144200/2f6ca7ad511531beb421122efb376141f068ebbb/capsule_184x69.jpg?t=1781703931"
     },
     {
       "appId": 2138330,
