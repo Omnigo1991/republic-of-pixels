@@ -11,10 +11,11 @@
 //     warten, bis die Grafik auf der Produktion erreichbar ist (Vercel-
 //     Deploy), dann Container erstellen und veröffentlichen.
 //
-// Posting-Regeln (Tim, 07.08.2026): Grundtakt 2–3 Posts/Tag, Deckel 5,
-// Breaking wird immer sofort gepostet (bis zum Deckel), Nicht-Breaking nur
-// zwischen 9 und 21 Uhr Schweizer Zeit. Feed-Posts verweisen auf den Link
-// in der Bio; ein Fehlschlag hier darf NIE den Artikel-Publish blockieren.
+// Posting-Regeln (Tim, 08.08.2026): Soll 5 Posts/Tag entlang einer
+// Tageskurve (9–21 Uhr, Europe/Zurich), Deckel 6, Breaking wird immer
+// sofort gepostet (bis zum Deckel). Läuft der Tag hinter dem Soll, holt
+// ein Lauf bis zu 2 Posts nach. Feed-Posts verweisen auf den Link in der
+// Bio; ein Fehlschlag hier darf NIE den Artikel-Publish blockieren.
 import { readFileSync, writeFileSync, readdirSync, existsSync, unlinkSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -32,8 +33,10 @@ const SOCIAL_DIR = join(ROOT, "public", "social");
 const SITE = "https://www.republicofpixels.com";
 const IG_API = "https://graph.instagram.com/v23.0";
 
-const BASE_PER_DAY = 3;
-const CAP_PER_DAY = 5;
+// Tim, 08.08.2026 abends: Anspruch sind 5 Posts/Tag — der alte Grundtakt 3
+// war zu defensiv. Der Deckel (inkl. Breaking) liegt eine Stufe darüber.
+const BASE_PER_DAY = 5;
+const CAP_PER_DAY = 6;
 const QUIET_BEFORE = 9; // Nicht-Breaking erst ab 9 Uhr …
 const QUIET_AFTER = 21; // … und bis 21 Uhr (Europe/Zurich)
 const CANDIDATE_WINDOW_H = 18;
@@ -84,7 +87,7 @@ async function pickAndWriteCopy(candidates, maxPicks) {
 
 ${list}
 
-Wähle die maximal ${maxPicks} zugkräftigsten Kandidaten für Instagram aus (grosse Namen und starke Pointen zuerst; wähle WENIGER oder keinen, wenn kein Kandidat echtes Scroll-Stopp-Potenzial hat). PFLICHT: Kandidaten der Kategorie "breaking" wählst du IMMER aus. Erstelle pro Auswahl die Post-Texte.
+Wähle die ${maxPicks} zugkräftigsten Kandidaten für Instagram aus (grosse Namen und starke Pointen zuerst). Der Redaktionsplan BRAUCHT diese Posts — wähle nur dann weniger, wenn ein Kandidat redaktionell unhaltbar wäre (reines Duplikat einer schon gewählten Story, gar keine echte Neuigkeit). "Nur solide" ist KEIN Ablehnungsgrund: dann nimmst du den stärksten verfügbaren und machst per Zuspitzung das Beste daraus. PFLICHT: Kandidaten der Kategorie "breaking" wählst du IMMER aus. Erstelle pro Auswahl die Post-Texte.
 
 Regeln für "headlineLines" (die Schlagzeile auf der Post-Grafik):
 - 2–3 Zeilen, gesamthaft maximal 9 Wörter, zugespitzt auf die Kern-Pointe
@@ -116,27 +119,41 @@ Und pro Pick: "bildWahl" — die redaktionelle Bild-Entscheidung:
 
 Antworte NUR mit JSON, erstes Zeichen "{":
 {"picks":[{"index":0,"gameName":"... oder null","bildWahl":"keyart oder pressebild","headlineLines":[[{"text":"...","cyan":false}]],"caption":"...","hashtags":["..."]}]}
-Wenn nichts stark genug ist: {"picks":[]}`;
+KRITISCH — striktes JSON: Zeilenumbrüche in der Caption IMMER als \\n escapen (niemals ein roher Zeilenumbruch innerhalb eines Strings), Anführungszeichen im Text als \\" — sonst ist die Antwort unbrauchbar.
+Nur wenn ein Kandidat redaktionell unhaltbar ist, darf er fehlen; im Extremfall: {"picks":[]}`;
 
-  // Ein fehlgeschlagener Aufruf (z. B. leere Antwort) wird einmal
-  // wiederholt — genau daran scheiterte der Lauf vom 08.08. um 10:04
-  // (transienter API-Schluckauf ohne Retry). Scheitert auch der zweite
-  // Versuch, wird ohne Posts fortgefahren, damit State/Aufräumen trotzdem
-  // laufen — der nächste 3-Stunden-Lauf holt den Post nach.
+  // Drei Versuche: Am 08.08.2026 kosteten kaputte JSON-Antworten (rohe
+  // Zeilenumbrüche in Caption-Strings) trotz einmaligem Retry mehrere
+  // Tages-Slots. Der Parser repariert das inzwischen selbst; die Versuche
+  // hier fangen den Rest ab (leere Antworten, API-Schluckauf). Scheitert
+  // alles, wird ohne Posts fortgefahren (State/Aufräumen laufen weiter)
+  // und der Lauf hinterlässt eine sichtbare Warnung in GitHub Actions.
   for (let versuch = 0; ; versuch++) {
+    let raw = "";
     try {
-      const raw = await askClaude({ system: IG_SYSTEM, prompt, maxTokens: 2500 });
+      raw = await askClaude({ system: IG_SYSTEM, prompt, maxTokens: 2500 });
       const picks = parseJsonResponse(raw).picks ?? [];
-      return picks.filter(
+      const brauchbar = picks.filter(
         (p) =>
           candidates[p.index] &&
           Array.isArray(p.headlineLines) &&
           p.headlineLines.length >= 1 &&
           typeof p.caption === "string"
       );
+      if (brauchbar.length < picks.length) {
+        console.log(`  ${picks.length - brauchbar.length} Pick(s) an der Struktur-Prüfung gescheitert.`);
+      }
+      if (brauchbar.length === 0) {
+        console.log(`  Auswahl leer: Claude hat trotz ${candidates.length} Kandidaten keinen gewählt.`);
+        console.log(`::warning::Instagram: Auswahl leer trotz Kandidaten — Slot möglicherweise verloren.`);
+      }
+      return brauchbar;
     } catch (err) {
-      if (versuch >= 1) {
+      const kopf = raw.replace(/\s+/g, " ").slice(0, 160);
+      if (versuch >= 2) {
         console.log(`  IG-Auswahl endgültig fehlgeschlagen (${err.message}) — dieser Lauf postet nicht.`);
+        if (kopf) console.log(`  Antwortbeginn war: "${kopf}…"`);
+        console.log(`::warning::Instagram: Auswahl 3x gescheitert (${err.message}) — dieser Lauf postet nicht.`);
         return [];
       }
       console.log(`  IG-Auswahl fehlgeschlagen (${err.message}) — Wiederholung`);
@@ -186,17 +203,27 @@ async function prepare() {
   const slots = [];
   // Breaking geht immer, bis zum Tagesdeckel.
   slots.push(...breaking.slice(0, Math.max(0, CAP_PER_DAY - postedToday)));
-  // Nicht-Breaking: nur im Zeitfenster, nur bis zum Grundkontingent,
-  // maximal 1 pro Lauf (verteilt die Posts über den Tag).
+  // Nicht-Breaking: nur im Zeitfenster, gesteuert über eine Soll-Kurve
+  // (Umbau 08.08.2026, nachdem verlorene Läufe den Tag auf 2 Posts drückten):
+  // Der Tag soll 5 Posts gleichmässig über 9–21 Uhr verteilen. Jeder Lauf
+  // postet so viele, wie ihm die Kurve zugesteht — normal 1, bei Rückstand
+  // (z. B. nach einem gescheiterten Lauf) bis zu 2 zum Aufholen. Die
+  // Publish-Phase hält zwischen zwei Posts bewusst Abstand.
   const inWindow = hour >= QUIET_BEFORE && hour < QUIET_AFTER;
   const nonBreakingBudget = Math.max(0, BASE_PER_DAY - postedToday - slots.length);
-  const maxRegular = inWindow && nonBreakingBudget > 0 ? 1 : 0;
+  const sollBisJetzt =
+    hour >= 19 ? 5 : hour >= 17 ? 4 : hour >= 15 ? 3 : hour >= 12 ? 2 : hour >= 9 ? 1 : 0;
+  const rueckstand = Math.max(
+    0,
+    Math.min(sollBisJetzt, BASE_PER_DAY) - postedToday - slots.length
+  );
+  const maxRegular = inWindow ? Math.min(nonBreakingBudget, Math.min(2, rueckstand)) : 0;
 
   const candidates = [...slots, ...regular];
   const maxPicks = slots.length + maxRegular;
   if (candidates.length === 0 || maxPicks === 0) {
     console.log(
-      `Instagram: keine Posts geplant (heute ${postedToday} gepostet, ${fresh.length} frische Artikel, Fenster ${inWindow ? "offen" : "zu"}).`
+      `Instagram: keine Posts geplant (heute ${postedToday} gepostet, Soll bis jetzt ${sollBisJetzt}, ${fresh.length} frische Artikel, Fenster ${inWindow ? "offen" : "zu"}).`
     );
     writeFileSync(QUEUE_FILE, JSON.stringify({ token: null, posts: [] }) + "\n");
     return;
@@ -450,7 +477,13 @@ async function publish() {
     return;
   }
 
-  for (const item of queueData.posts) {
+  for (const [index, item] of queueData.posts.entries()) {
+    // Holt ein Lauf mehrere Posts nach (Aufhol-Logik), gehen sie nicht im
+    // Sekundentakt raus: 6 Minuten Abstand wirken wie redaktionelle Hand.
+    if (index > 0) {
+      console.log("Instagram: 6 Minuten Abstand bis zum nächsten Post …");
+      await new Promise((r) => setTimeout(r, 6 * 60000));
+    }
     const imageUrl = `${SITE}${item.cardRel}`;
     console.log(`Instagram: warte auf ${imageUrl} …`);
     if (!(await waitForUrl(imageUrl))) {

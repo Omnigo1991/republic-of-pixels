@@ -57,5 +57,60 @@ export function parseJsonResponse(text) {
       `Keine JSON-Struktur in der Antwort gefunden. Antwortbeginn: "${text.slice(0, 300)}"`
     );
   }
-  return JSON.parse(candidate.slice(start).trim());
+  const slice = candidate.slice(start).trim();
+  try {
+    return JSON.parse(slice);
+  } catch {
+    return JSON.parse(repariereJson(slice));
+  }
+}
+
+// Modelle schreiben gelegentlich ungültiges JSON: rohe Zeilenumbrüche mitten
+// in Strings (typisch bei mehrzeiligen Captions) oder Prosa hinter dem
+// schliessenden Objekt. Beides kostete am 08.08.2026 vier Instagram-Läufe
+// ("Unterminated string in JSON"). Diese Reparatur escapet Steuerzeichen
+// innerhalb von String-Literalen und schneidet das erste balancierte
+// Objekt/Array aus — sie kann gültiges JSON nie verschlechtern, weil rohe
+// Steuerzeichen in JSON-Strings per Spezifikation verboten sind.
+function repariereJson(text) {
+  let out = "";
+  let depth = 0;
+  let inString = false;
+  let escaped = false;
+  for (const ch of text) {
+    if (inString) {
+      if (escaped) {
+        out += ch;
+        escaped = false;
+        continue;
+      }
+      if (ch === "\\") {
+        out += ch;
+        escaped = true;
+        continue;
+      }
+      if (ch === '"') {
+        out += ch;
+        inString = false;
+        continue;
+      }
+      const code = ch.codePointAt(0);
+      if (code < 0x20) {
+        out += code === 10 ? "\\n" : code === 13 ? "" : code === 9 ? "\\t" : "";
+        continue;
+      }
+      out += ch;
+      continue;
+    }
+    if (ch === '"') {
+      inString = true;
+      out += ch;
+      continue;
+    }
+    if (ch === "{" || ch === "[") depth++;
+    if (ch === "}" || ch === "]") depth--;
+    out += ch;
+    if (depth === 0) break;
+  }
+  return out;
 }

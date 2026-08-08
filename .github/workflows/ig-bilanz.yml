@@ -1,0 +1,39 @@
+# Instagram-Tagesbilanz (08.08.2026): Läuft jeden Abend und schlägt ALARM
+# (roter Lauf → GitHub-Benachrichtigung), wenn der Tag hinter dem Posting-
+# Soll liegt. Hintergrund: Am 08.08.2026 gingen nur 2 von 5 Posts raus und
+# niemand hat es gemerkt, bis Tim selbst nachschaute — das darf nicht sein.
+# Ein roter Lauf hier heisst: Logs der News-Pipeline prüfen.
+name: Instagram-Tagesbilanz
+
+on:
+  schedule:
+    # 18:15 UTC = 20:15 Zürich im Sommer, 19:15 im Winter — beides nach dem
+    # letzten Soll-Sprung der Tageskurve (19 Uhr), also aussagekräftig.
+    - cron: "15 18 * * *"
+  workflow_dispatch:
+
+jobs:
+  bilanz:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Posts des Tages zaehlen
+        run: |
+          node -e '
+            const fs = require("fs");
+            const state = JSON.parse(fs.readFileSync("pipeline/state.json", "utf8"));
+            const zuerichTag = (d) => new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Zurich" }).format(d);
+            const heute = zuerichTag(new Date());
+            const posts = Object.entries(state.instagram?.posted ?? {}).filter(
+              ([, iso]) => zuerichTag(new Date(iso)) === heute
+            );
+            console.log(`Heute ${posts.length} Instagram-Post(s):`);
+            for (const [slug, iso] of posts) console.log(`  ${iso}  ${slug}`);
+            const SOLL = 5;
+            if (posts.length < SOLL) {
+              console.log(`::error::Instagram-Tagesbilanz: nur ${posts.length}/${SOLL} Posts heute — News-Pipeline-Logs pruefen.`);
+              process.exit(1);
+            }
+            console.log(`Soll erfuellt (${posts.length}/${SOLL}).`);
+          '
