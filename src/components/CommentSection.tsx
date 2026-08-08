@@ -282,7 +282,9 @@ function EinKommentar(props: {
           <span className={`inline-flex items-center justify-center gap-1 rounded-full border px-2 py-[3px] text-[9px] leading-none ${MASTER_RANG.klasse}`}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/brand/r-avatar-navy.png" alt="" className="h-2.5 w-2.5" />
-            <span>REDAKTION</span>
+            {/* -0.5px: pixel-gemessene Tintenkorrektur — Grossbuchstaben
+                sitzen sonst messbar unter der Pill-Mitte (08.08.2026). */}
+            <span className="-translate-y-[0.25px]">REDAKTION</span>
           </span>
         )}
         <span className="text-xs text-text-tertiary">{zeitAbstand(k.created_at)}</span>

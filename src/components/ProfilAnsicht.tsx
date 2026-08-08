@@ -159,7 +159,7 @@ export function ProfilAnsicht({ nickname }: { nickname: string }) {
                 ) : (
                   <RankIcon iconKey={rang.icon} className="h-3.5 w-3.5" />
                 )}
-                <span>{rang.name}</span>
+                <span className="-translate-y-[0.25px]">{rang.name}</span>
               </span>
             </div>
           <p className="mt-2 text-sm text-text-secondary">
