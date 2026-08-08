@@ -110,8 +110,12 @@ Regeln für "hashtags": EXAKT 5, CamelCase, ohne #-Zeichen im JSON, nach diesem 
 
 Zusätzlich pro Pick: "gameName" = der exakte offizielle Titel des Spiels, um das sich die Story dreht (für die Key-Art-Suche, z. B. "Gothic 1 Remake", "Lies of P") — oder null, wenn die Story kein einzelnes Spiel betrifft (Firmen-News, Hardware, Personalien).
 
+Und pro Pick: "bildWahl" — die redaktionelle Bild-Entscheidung:
+- "pressebild": Die Story dreht sich um etwas visuell Konkretes, das die Leser SEHEN wollen (neuer Trailer, erste Screenshots, Charakter-/Map-Enthüllung, eine bestimmte Person) → der Post zeigt das Bild aus der News.
+- "keyart": Allgemeine Meldung (Preis, Termin, Verkaufszahlen, Update-Pläne, Studio-News) → der Post zeigt offizielles Spiel-Artwork.
+
 Antworte NUR mit JSON, erstes Zeichen "{":
-{"picks":[{"index":0,"gameName":"... oder null","headlineLines":[[{"text":"...","cyan":false}]],"caption":"...","hashtags":["..."]}]}
+{"picks":[{"index":0,"gameName":"... oder null","bildWahl":"keyart oder pressebild","headlineLines":[[{"text":"...","cyan":false}]],"caption":"...","hashtags":["..."]}]}
 Wenn nichts stark genug ist: {"picks":[]}`;
 
   // Ein fehlgeschlagener Aufruf (z. B. leere Antwort) wird einmal
@@ -213,16 +217,23 @@ async function prepare() {
   for (const pick of picks.slice(0, maxPicks)) {
     const article = candidates[pick.index];
 
-    // Bild-Hierarchie (Tim, 08.08.2026 — wie seine manuellen Posts, mit
-    // Rotation nach GamePro-Vorbild gegen Bild-Wiederholung):
-    // 1. Offizielles Steam-Material des Spiels — Key Art beim ersten Post,
-    //    bei Folge-News rotierend die offiziellen Publisher-Screenshots
-    //    (Rotations-Index pro Spiel im State)
-    // 2. Pressebild der Quelle — nur mit nachweislich >=900px Quellhöhe
-    // 3. Nichts Scharfes vorhanden → kein Post (Qualität vor Lückenlosigkeit)
+    // Bild-Wahl (Tim, 08.08.2026 — redaktionell statt starrer Rangfolge):
+    // Claude entscheidet pro Story, ob die Leser das NEWS-Bild sehen wollen
+    // (Trailer, Screenshots, Personen → "pressebild") oder offizielles
+    // Spiel-Artwork passt ("keyart"). Darunter bleiben die Netze: Qualitäts-
+    // Wächter (>=900px Quellhöhe) für Pressebilder, Steam-Pool mit Rotation
+    // pro Spiel gegen Bild-Wiederholung, und die jeweils andere Quelle als
+    // Fallback. Nichts Scharfes → kein Post.
+    const presseTauglich =
+      article.image?.sourceHeight != null && article.image.sourceHeight >= 900;
     let imagePath = null;
     let credit = article.image?.credit ?? null;
-    if (pick.gameName) {
+
+    if (pick.bildWahl === "pressebild" && presseTauglich) {
+      imagePath = portraitPathFor(article);
+      console.log(`  ${article.slug}: redaktionelle Wahl Pressebild (${credit})`);
+    }
+    if (!imagePath && pick.gameName) {
       state.instagram.spielBild ??= {};
       const rotation = state.instagram.spielBild[pick.gameName.toLowerCase()] ?? 0;
       const spielBild = await holeSpielBild({
@@ -237,7 +248,7 @@ async function prepare() {
         console.log(`  ${article.slug}: offizielles Spielbild ${rotation % spielBild.poolGroesse} (${spielBild.credit})`);
       }
     }
-    if (!imagePath && article.image?.sourceHeight != null && article.image.sourceHeight >= 900) {
+    if (!imagePath && presseTauglich) {
       imagePath = portraitPathFor(article);
     }
     if (!imagePath) {
