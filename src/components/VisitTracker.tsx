@@ -23,9 +23,16 @@ export function VisitTracker() {
         visitor = crypto.randomUUID();
         localStorage.setItem("rop_vid", visitor);
       }
+      // Herkunft (Tim-Wunsch 08.08.2026): externer Referrer wird mitgespeichert
+      // (nur die Quelle, keine Personendaten) — Grundlage der "Herkunft"-
+      // Sektion im Cockpit. Interne Navigation zählt nicht als Quelle.
+      const referrer =
+        document.referrer && !document.referrer.includes(location.hostname)
+          ? document.referrer.slice(0, 300)
+          : null;
       getSupabase()
         .from("page_views")
-        .insert({ path: pathname.slice(0, 300), visitor })
+        .insert({ path: pathname.slice(0, 300), visitor, referrer })
         .then(() => {});
     } catch {
       // Tracking darf nie die Seite stören (z. B. Tabelle noch nicht angelegt)

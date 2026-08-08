@@ -20,6 +20,23 @@ interface Kennzahlen {
   echtzeitBesucher: number;
   registrierteKonten: number;
   topSeiten: { path: string; aufrufe: number }[];
+  herkunft: { quelle: string; besucher: number }[];
+}
+
+// Herkunfts-Klassifikation: der erste Aufruf eines Besuchers in den letzten
+// 7 Tagen bestimmt seine Quelle. Landet jemand ohne Referrer direkt auf /ig,
+// kam er über den Instagram-Bio-Link (In-App-Browser senden oft keinen
+// Referrer). Alte Einträge ohne referrer-Spalte zählen als "Direkt".
+function quelleVon(referrer: string | null, path: string): string {
+  const ref = (referrer ?? "").toLowerCase();
+  if (ref.includes("instagram.") || path === "/ig") return "Instagram";
+  if (ref.includes("google.")) return "Google";
+  if (ref.includes("bing.")) return "Bing";
+  if (ref.includes("duckduckgo.")) return "DuckDuckGo";
+  if (ref.includes("twitter.") || ref.includes("//t.co") || ref.includes("//x.com")) return "X";
+  if (ref.includes("reddit.")) return "Reddit";
+  if (ref) return "Andere Websites";
+  return "Direkt";
 }
 
 export function StatistikCockpit() {
@@ -103,6 +120,25 @@ export function StatistikCockpit() {
         .select("id", { count: "exact", head: true });
       if (kontenError) throw kontenError;
 
+      // Herkunft: pro Besucher zählt der erste Aufruf im 7-Tage-Fenster.
+      const { data: refRows } = await supabase
+        .from("page_views")
+        .select("visitor, referrer, path")
+        .gte("created_at", iso(jetzt - 7 * 86400000))
+        .order("created_at", { ascending: true })
+        .limit(10000);
+      const ersterBesuch = new Map<string, string>();
+      for (const r of refRows ?? []) {
+        if (!ersterBesuch.has(r.visitor)) {
+          ersterBesuch.set(r.visitor, quelleVon(r.referrer ?? null, r.path));
+        }
+      }
+      const quellen = new Map<string, number>();
+      for (const q of ersterBesuch.values()) quellen.set(q, (quellen.get(q) ?? 0) + 1);
+      const herkunft = [...quellen.entries()]
+        .sort((a, b) => b[1] - a[1])
+        .map(([quelle, besucher]) => ({ quelle, besucher }));
+
       const { data: seiten } = await supabase
         .from("page_views")
         .select("path")
@@ -126,6 +162,7 @@ export function StatistikCockpit() {
         echtzeitBesucher,
         registrierteKonten: registrierteKonten ?? 0,
         topSeiten,
+        herkunft,
       });
       setStand(new Date());
       setFehler(null);
@@ -227,6 +264,27 @@ export function StatistikCockpit() {
               <div key={k.label} className="rounded-2xl border border-border-subtle bg-surface-card p-5 text-center">
                 <p className="text-2xl font-bold text-text-primary">{k.wert.toLocaleString("de-DE")}</p>
                 <p className="mt-1 text-xs text-text-tertiary">{k.label}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Herkunft */}
+          <h2 className="mt-10 mb-4 text-xl font-semibold tracking-tight text-text-primary">
+            Herkunft der Besucher (7 Tage)
+          </h2>
+          <div className="overflow-hidden rounded-2xl border border-border-subtle">
+            {zahlen.herkunft.length === 0 && (
+              <p className="p-5 text-sm text-text-tertiary">Noch keine Daten.</p>
+            )}
+            {zahlen.herkunft.map((h, i) => (
+              <div
+                key={h.quelle}
+                className={`flex items-center justify-between gap-4 px-5 py-3 ${i % 2 === 0 ? "bg-surface-card" : "bg-bg-elevated"}`}
+              >
+                <span className="text-sm text-text-secondary">{h.quelle}</span>
+                <span className="shrink-0 text-sm font-semibold text-accent">
+                  {h.besucher.toLocaleString("de-DE")}
+                </span>
               </div>
             ))}
           </div>
