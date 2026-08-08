@@ -35,6 +35,12 @@ export function MastheadNav({ withMark = true }: { withMark?: boolean }) {
             </Link>
           </span>
         ))}
+        {/* Themen-Hubs im Hauptmenü (Leser-Audit 08.08.2026: waren
+            sonst nur über Artikel-Chips auffindbar). */}
+        <span className="mx-2.5 opacity-40">/</span>
+        <Link href="/themen" className="hover:opacity-70 transition-opacity">
+          Themen
+        </Link>
         <span className="mx-2.5 opacity-40">/</span>
       </nav>
 

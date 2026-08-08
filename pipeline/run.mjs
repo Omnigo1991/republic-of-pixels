@@ -201,6 +201,7 @@ Vorgaben:
 - Struktur: Einstieg mit dem Kern der Nachricht, ${
     depth === "lang" ? "3–4" : "2–3"
   } Zwischenüberschriften, am Ende eine kurze Einordnung
+- PFLICHT (fester Artikel-Bauplan): Direkt nach dem ersten Absatz folgt ein stats-Block {"type":"stats","items":[{"value":"...","label":"..."}]} mit den 1–3 stärksten ZAHLEN der Story (Preis, Datum, Verkaufszahl, Prozent …) — value kurz und plakativ (z. B. "80 $", "19. Nov.", "5 Mrd. $"), label ein erklärender Halbsatz. NUR Zahlen aus dem Quellmaterial, nichts erfinden. Hat die Story wirklich keine starke Zahl, lasse den Block weg.
 - Bereits vergebene Slugs (nicht wiederverwenden): ${[...slugs].slice(-40).join(", ")}
 
 Antworte NUR mit einem JSON-Objekt mit exakt diesen Feldern:
@@ -216,7 +217,8 @@ Antworte NUR mit einem JSON-Objekt mit exakt diesen Feldern:
   "tags": ["3–6 prägnante Tags, z. B. Spielname, Studio, Plattform"],
   "tldr": ["3–4 Stichpunkte mit den Kernfakten"],
   "whyItMatters": "2–3 Sätze: Warum ist das für Gamer:innen relevant?",
-  "body": [{"type":"paragraph","text":"..."},{"type":"heading","text":"..."},{"type":"list","items":["..."]},{"type":"quote","text":"nur echte Zitate aus der Quelle","attribution":"..."}],
+  "body": [{"type":"paragraph","text":"..."},{"type":"stats","items":[{"value":"...","label":"..."}]},{"type":"heading","text":"..."},{"type":"list","items":["..."]},{"type":"quote","text":"nur echte Zitate aus der Quelle","attribution":"..."}],
+  "poll": {"question":"EINE meinungsstarke, konkrete Frage zur Story für die Community (kein Ja/Nein-Langweiler, sondern die Streitfrage der Story)","options":["2–4 kurze, pointierte Antwortoptionen"]},
   "isLeakOrRumor": ${cluster.isLeakOrRumor}${reviewFeld}
 }
 Hinweis zu body: quote-Blöcke nur verwenden, wenn die Quelle ein wörtliches Zitat enthält.`;
@@ -272,6 +274,8 @@ async function proofreadArticle(article) {
     ...(article.body ?? [])
       .filter((b) => b.type !== "quote")
       .map((b) => (b.type === "list" ? (b.items ?? []).join("\n") : b.text ?? "")),
+    article.poll?.question,
+    ...(article.poll?.options ?? []),
   ]
     .filter(Boolean)
     .join("\n");
@@ -303,6 +307,10 @@ Wenn fehlerfrei: {"fixes":[]}`;
       if (typeof article[k] === "string") article[k] = fixText(article[k]);
     }
     article.tldr = (article.tldr ?? []).map(fixText);
+    if (article.poll) {
+      article.poll.question = fixText(article.poll.question);
+      article.poll.options = (article.poll.options ?? []).map(fixText);
+    }
     article.body = (article.body ?? []).map((b) =>
       b.type === "quote"
         ? b

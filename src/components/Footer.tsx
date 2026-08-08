@@ -39,6 +39,11 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link href="/themen" className="text-sm text-navy-muted hover:text-accent transition-colors">
+                  Themen
+                </Link>
+              </li>
             </ul>
           </div>
 

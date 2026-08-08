@@ -3,7 +3,7 @@
 const CATEGORIES = ["breaking", "news", "leaks", "reviews"];
 const PLATFORMS = ["pc", "playstation", "xbox", "nintendo"];
 const HERO_VARIANTS = ["circuit", "controller", "particles", "waveform", "grid"];
-const BLOCK_TYPES = ["paragraph", "heading", "quote", "list", "embed"];
+const BLOCK_TYPES = ["paragraph", "heading", "quote", "list", "embed", "stats"];
 const REVIEW_LABELS = [
   "Essenziell",
   "Klare Empfehlung",
@@ -35,11 +35,30 @@ export function validateArticle(a, existingSlugs) {
   need(Array.isArray(a.tags) && a.tags.length >= 2 && a.tags.length <= 8, "tags: 2–8 erforderlich");
   need(Array.isArray(a.tldr) && a.tldr.length >= 2 && a.tldr.length <= 5, "tldr: 2–5 Punkte erforderlich");
   need(typeof a.whyItMatters === "string" && a.whyItMatters.length >= 50, "whyItMatters fehlt/zu kurz");
+  if (a.poll != null) {
+    need(
+      typeof a.poll.question === "string" &&
+        a.poll.question.length >= 10 &&
+        Array.isArray(a.poll.options) &&
+        a.poll.options.length >= 2 &&
+        a.poll.options.length <= 4 &&
+        a.poll.options.every((o) => typeof o === "string" && o.length > 0),
+      "poll: question + 2–4 options nötig"
+    );
+  }
   need(Array.isArray(a.body) && a.body.length >= 4, "body: mindestens 4 Blöcke");
   if (Array.isArray(a.body)) {
     for (const [i, b] of a.body.entries()) {
       need(BLOCK_TYPES.includes(b?.type), `body[${i}]: type ungültig`);
       if (b?.type === "list") need(Array.isArray(b.items) && b.items.length > 0, `body[${i}]: list ohne items`);
+      else if (b?.type === "stats")
+        need(
+          Array.isArray(b.items) &&
+            b.items.length >= 1 &&
+            b.items.length <= 3 &&
+            b.items.every((s) => typeof s?.value === "string" && s.value.length > 0 && typeof s?.label === "string" && s.label.length > 0),
+          `body[${i}]: stats braucht 1–3 items mit value+label`
+        );
       else need(typeof b?.text === "string" && b.text.length > 0, `body[${i}]: text fehlt`);
     }
   }

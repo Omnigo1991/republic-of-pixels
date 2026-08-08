@@ -69,6 +69,28 @@ export function ArticleBody({
           case "embed":
             rendered = <ExternalEmbed key={i} platform={block.platform} url={block.url} />;
             break;
+          case "stats":
+            // Zahlen-Kacheln (Artikel-Bauplan 08.08.2026): die stärksten
+            // Zahlen der Story als visuelle Unterbrechung der Textstrecke.
+            rendered = (
+              <div
+                key={i}
+                className={`not-prose my-8 grid gap-3 ${block.items.length === 1 ? "grid-cols-1" : block.items.length === 2 ? "grid-cols-2" : "grid-cols-1 sm:grid-cols-3"}`}
+              >
+                {block.items.map((s, j) => (
+                  <div
+                    key={j}
+                    className="rounded-2xl border border-accent/35 bg-accent-wash/30 px-5 py-6 text-center"
+                  >
+                    <p className="text-3xl font-black tracking-tight text-accent sm:text-4xl">
+                      {s.value}
+                    </p>
+                    <p className="mt-2 text-[13px] leading-snug text-text-secondary">{s.label}</p>
+                  </div>
+                ))}
+              </div>
+            );
+            break;
           default:
             rendered = null;
         }

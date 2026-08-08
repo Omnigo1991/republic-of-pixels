@@ -13,6 +13,7 @@ import { PlatformIcon } from "@/components/PlatformIcons";
 import { ArticleBody } from "@/components/ArticleBody";
 import { TldrBox, WhyItMattersBox, ReviewBox, SourcesBox } from "@/components/ArticleBoxes";
 import { WeiterlesenBox } from "@/components/WeiterlesenBox";
+import { PollBox } from "@/components/PollBox";
 import { ShareButtons } from "@/components/ShareButtons";
 import { CommentSection } from "@/components/CommentSection";
 import { ArticleReactions } from "@/components/ArticleReactions";
@@ -121,7 +122,14 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
         <p className="mt-4 text-lg leading-relaxed text-text-secondary">{article.subtitle}</p>
 
         <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 border-y border-border-subtle py-4 text-sm text-text-tertiary">
-          <span className="font-medium text-text-secondary">{article.author}</span>
+          {/* Autorenzeile klickbar in Cyan (Leser-Audit 08.08.2026):
+              führt zu "Die Köpfe hinter der Republic" — Vertrauen + E-E-A-T. */}
+          <Link
+            href="/ueber-uns"
+            className="font-medium text-accent transition-opacity hover:opacity-80"
+          >
+            {article.author}
+          </Link>
           <span>{formatDateTime(article.publishedAt)}</span>
           <span>{article.readingTimeMinutes} Min. Lesezeit</span>
         </div>
@@ -149,6 +157,10 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
         <TldrBox items={article.tldr} />
 
         <ArticleBody blocks={article.body} inlineRelated={related[0]} />
+
+        {/* Fester Bauplan-Platz der Community-Umfrage (08.08.2026):
+            direkt nach der Textstrecke, vor der Einordnung. */}
+        {article.poll && <PollBox articleSlug={article.slug} poll={article.poll} />}
 
         <WhyItMattersBox text={article.whyItMatters} />
 

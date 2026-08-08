@@ -18,10 +18,13 @@ export function TopStory({ article }: { article: Article }) {
             das Bild ab sm seitlich um je 6%. Als SVG mit textLength, damit
             der Schriftzug bei jeder Bildbreite exakt gleich spannt — die
             viewBox-Masse (1536 Einheiten Gesamtbreite, Teile 1059/477)
-            entsprechen der gemessenen Inter-900-Geometrie bei -0.02em. */}
+            entsprechen der gemessenen Inter-900-Geometrie bei -0.02em.
+            Überhang (112%) erst ab lg: Zwischen 640 und 1024px füllt das
+            Bild die volle Breite — der Überhang erzeugte dort 21px
+            Horizontal-Überlauf (Leser-Audit 08.08.2026). */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute left-1/2 top-0 z-10 w-full -translate-x-1/2 -translate-y-[66%] select-none sm:w-[112%] [filter:drop-shadow(0_2px_3px_rgba(6,5,16,0.9))_drop-shadow(0_6px_18px_rgba(6,5,16,0.55))]"
+          className="pointer-events-none absolute left-1/2 top-0 z-10 w-full -translate-x-1/2 -translate-y-[66%] select-none lg:w-[112%] [filter:drop-shadow(0_2px_3px_rgba(6,5,16,0.9))_drop-shadow(0_6px_18px_rgba(6,5,16,0.55))]"
         >
           <svg viewBox="0 0 1536 100" className="w-full">
             <text x="0" y="84" textLength="1059" lengthAdjust="spacingAndGlyphs" fontWeight="900" fontSize="100" letterSpacing="-2" fill="#F1F0F2">

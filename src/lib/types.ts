@@ -30,7 +30,16 @@ export type BodyBlock =
   | { type: "heading"; text: string }
   | { type: "quote"; text: string; attribution?: string }
   | { type: "list"; items: string[] }
-  | { type: "embed"; platform: EmbedPlatform; url: string };
+  | { type: "embed"; platform: EmbedPlatform; url: string }
+  // Zahlen-Kacheln (Artikel-Bauplan 08.08.2026): die 2–3 stärksten Zahlen
+  // der Story als visuelle Kacheln nach dem Einstieg.
+  | { type: "stats"; items: { value: string; label: string }[] };
+
+// Community-Umfrage zur Story (fester Bauplan-Bestandteil ab 08.08.2026).
+export interface Poll {
+  question: string;
+  options: string[];
+}
 
 export interface Review {
   label: ReviewLabel;
@@ -66,6 +75,8 @@ export interface Article {
   body: BodyBlock[];
   sources: Source[];
   review: Review | null;
+  /** Community-Umfrage zur Story (Artikel ab 08.08.2026; ältere ohne). */
+  poll?: Poll | null;
   relatedSlugs?: string[];
 }
 

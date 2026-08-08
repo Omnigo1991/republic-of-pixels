@@ -71,6 +71,13 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
                   {c.key === "breaking" && <span className="h-2 w-2 rounded-full bg-accent animate-pulseDot" />}
                 </Link>
               ))}
+              <Link
+                href="/themen"
+                onClick={() => setOpen(false)}
+                className="flex items-center justify-between border-b border-navy-border py-4 text-xl font-medium text-navy-text active:text-accent"
+              >
+                Themen
+              </Link>
             </nav>
 
             <p className="mb-3 text-[12px] font-semibold tracking-[0.2em] text-navy-dim">

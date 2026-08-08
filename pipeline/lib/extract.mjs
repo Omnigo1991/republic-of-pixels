@@ -30,9 +30,16 @@ export async function extractArticleText(url, { maxChars = 9000, timeoutMs = 200
     const redditUrl = html.match(
       /https?:\/\/(?:www\.)?reddit\.com\/r\/[A-Za-z0-9_]+\/comments\/[a-z0-9]+\/[^"'\s<>]*/
     )?.[0];
-    const youtubeId = html.match(
-      /<iframe[^>]+src=["']https?:\/\/(?:www\.)?youtube(?:-nocookie)?\.com\/embed\/([A-Za-z0-9_-]{11})/i
-    )?.[1];
+    // Auch lazy-geladene Player erfassen (data-src) sowie das embedUrl-Feld
+    // aus JSON-LD/VideoObject — viele Quellseiten laden YouTube erst beim
+    // Scrollen, das Iframe-src allein verpasste deren Trailer (08.08.2026).
+    const youtubeId =
+      html.match(
+        /<iframe[^>]+(?:src|data-src)=["']https?:\/\/(?:www\.)?youtube(?:-nocookie)?\.com\/embed\/([A-Za-z0-9_-]{11})/i
+      )?.[1] ??
+      html.match(
+        /"embedUrl"\s*:\s*"https?:\/\/(?:www\.)?youtube(?:-nocookie)?\.com\/embed\/([A-Za-z0-9_-]{11})/i
+      )?.[1];
     const embed = tweetUrl
       ? { platform: "twitter", url: tweetUrl }
       : redditUrl
