@@ -221,7 +221,7 @@ Antworte NUR mit einem JSON-Objekt mit exakt diesen Feldern:
   "poll": {"question":"EINE meinungsstarke, konkrete Frage zur Story für die Community (kein Ja/Nein-Langweiler, sondern die Streitfrage der Story)","options":["2–4 kurze, pointierte Antwortoptionen"]},
   "isLeakOrRumor": ${cluster.isLeakOrRumor}${reviewFeld}
 }
-Hinweis zu body: quote-Blöcke nur verwenden, wenn die Quelle ein wörtliches Zitat enthält.`;
+Hinweis zu body: quote-Blöcke nur verwenden, wenn die Quelle ein wörtliches Zitat enthält. Zitate werden IMMER auf DEUTSCH wiedergegeben (Tim-Vorgabe 08.08.2026 — nicht alle Leser:innen können gut Englisch): fremdsprachige Originale präzise und neutral übersetzen, nichts zuspitzen oder weglassen; attribution bleibt die Person/Quelle.`;
 
   const raw = await askClaude({ system: EDITORIAL_SYSTEM, prompt, maxTokens: 8000 });
   // Sicherheitsnetz Schweizer Rechtschreibung: ß kommt nie auf die Seite.
