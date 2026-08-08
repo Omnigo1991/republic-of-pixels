@@ -20,6 +20,7 @@ import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { askClaude, parseJsonResponse } from "./lib/claude.mjs";
 import { renderInstagramCard } from "./lib/instagram-card.mjs";
+import { renderInstagramReel } from "./lib/instagram-reel.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const STATE_FILE = join(ROOT, "pipeline", "state.json");
@@ -90,12 +91,13 @@ Regeln für "headlineLines" (die Schlagzeile auf der Post-Grafik):
 - Die Zeilen müssen optisch ausbalanciert sein: keine Zeile deutlich kürzer als ihre Nachbarn (keine 2-Wort-Zeile zwischen langen Zeilen)
 - Keine Anführungszeichen um die ganze Headline
 
-Regeln für "caption" (Reichweiten-Aufbau, Reihenfolge zwingend):
-1. HOOK als erste Zeile (max. ~100 Zeichen): Frage, steile These oder die stärkste Zahl der Story — Instagram schneidet die Caption nach ~125 Zeichen ab, die erste Zeile entscheidet über "mehr ansehen". Kein Clickbait: Der Hook muss halten, was der Artikel liefert.
-2. Dann 1–2 Sätze Kontext auf Basis des Teasers.
-3. Dann EINE kurze Engagement-Frage an die Community (Kommentare sind das stärkste Algorithmus-Signal), z. B. "Was meint ihr: fair oder frech?" — konkret zur Story, nie generisch.
-4. Abschluss exakt: "👉 Ganzer Artikel über den Link in der Bio."
-Verboten: Engagement-Köder wie "markiere 3 Freunde", Follow-Aufrufe, Emoji-Spam (max. 2 Emojis gesamt).
+Regeln für "caption" (Ziel: maximale Neugier → Website-Besuch; Reihenfolge zwingend):
+1. HOOK als erste Zeile (max. ~100 Zeichen): Frage, steile These oder die stärkste Zahl — Instagram schneidet nach ~125 Zeichen ab, die erste Zeile entscheidet über "mehr ansehen". Der Hook öffnet eine Wissenslücke, die erst der Artikel schliesst.
+2. Dann 1–2 Sätze Kontext, die die SPANNUNG ERHÖHEN, ohne die Auflösung zu verraten: Das interessanteste Detail (die Begründung, die Konsequenz, das überraschende Zitat) bleibt bewusst im Artikel. Wer nur die Caption liest, muss das Gefühl haben, das Beste noch nicht zu wissen.
+3. NEUGIER-BRÜCKE: ein kurzer Satz, der konkret benennt, WAS im Artikel wartet, ohne es zu spoilern (z. B. "Warum ausgerechnet ein Konkurrenzprodukt sein stärkstes Argument ist — steht im Artikel.").
+4. Dann EINE kurze Engagement-Frage an die Community (Kommentare sind das stärkste Algorithmus-Signal) — konkret zur Story, nie generisch.
+5. Abschluss exakt: "👉 Ganzer Artikel über den Link in der Bio."
+GRENZE: Zuspitzen und Spannung ja — aber der Artikel MUSS liefern, was die Caption verspricht. Kein "Du glaubst nie…"-Clickbait, keine falschen Versprechen, keine reisserischen Auslassungen bei ernsten Themen (Entlassungen etc.). Verboten bleiben: "markiere 3 Freunde", Follow-Aufrufe, Emoji-Spam (max. 2 Emojis gesamt).
 
 Regeln für "hashtags": EXAKT 5, CamelCase, ohne #-Zeichen im JSON, nach diesem Mix (Reichweite × Auffindbarkeit):
 - 1× gross/generisch: Gaming oder GamingNews
@@ -133,16 +135,27 @@ async function prepare() {
   const state = loadState();
   const { day, hour } = zurich();
 
+  // Tageszähler für den Reel/Bild-Wechsel der normalen Posts.
+  if (state.instagram.wechsel?.day !== day) {
+    state.instagram.wechsel = { day, nichtBreaking: 0 };
+  }
+
   const postedToday = Object.values(state.instagram.posted).filter(
     (iso) => zurich(new Date(iso)).day === day
   ).length;
 
   const cutoff = Date.now() - CANDIDATE_WINDOW_H * 3600000;
+  // Qualitäts-Wächter (Tim, 08.08.2026): Nur Artikel posten, deren
+  // Original-Bild mindestens ~Full-HD-Höhe hat — schwächere Quellen würden
+  // beim 4:5-Zuschnitt sichtbar matschig. Ältere Artikel ohne gespeicherte
+  // Auflösung sind übergangsweise zugelassen (Feld existiert erst seit heute).
+  const MIN_QUELLHOEHE = 900;
   const fresh = loadArticles().filter(
     (a) =>
       new Date(a.publishedAt).getTime() > cutoff &&
       !state.instagram.posted[a.slug] &&
-      a.image?.src
+      a.image?.src &&
+      (a.image.sourceHeight == null || a.image.sourceHeight >= MIN_QUELLHOEHE)
   );
 
   const breaking = fresh.filter((a) => a.category === "breaking");
@@ -188,19 +201,54 @@ async function prepare() {
     }
     const badge =
       article.category === "breaking" ? "BREAKING" : article.category === "reviews" ? "REVIEW" : null;
-    const cardRel = `/social/ig-${article.slug}.jpg`;
-    try {
-      await renderInstagramCard({
-        headlineLines: pick.headlineLines,
-        badge,
-        imagePath,
-        credit: article.image?.credit ?? null,
-        outPath: join(ROOT, "public", cardRel),
-        chromium,
-      });
-    } catch (err) {
-      console.log(`  ${article.slug}: Grafik fehlgeschlagen (${err.message}) — übersprungen`);
-      continue;
+
+    // Format-Regeln (Tim, 08.08.2026):
+    // - BREAKING wird IMMER als Reel gepostet und zählt nicht für den
+    //   Wechsel (beeinflusst die Reihenfolge der normalen Posts nicht).
+    // - Normale Posts wechseln strikt 50/50: Reel, Bild, Reel … (saubere
+    //   A/B-Datenpunkte; Tageszähler im State).
+    // Schlägt das Reel-Rendering fehl, greift lautlos das Bild — ein Post
+    // geht nie verloren.
+    const istBreaking = article.category === "breaking";
+    let alsReel;
+    if (istBreaking) {
+      alsReel = true;
+    } else {
+      alsReel = state.instagram.wechsel.nichtBreaking % 2 === 0;
+      state.instagram.wechsel.nichtBreaking++;
+    }
+    let cardRel = null;
+    if (alsReel) {
+      const reelRel = `/social/ig-${article.slug}.mp4`;
+      try {
+        await renderInstagramReel({
+          headlineLines: pick.headlineLines,
+          badge,
+          imagePath,
+          credit: article.image?.credit ?? null,
+          outPath: join(ROOT, "public", reelRel),
+          chromium,
+        });
+        cardRel = reelRel;
+      } catch (err) {
+        console.log(`  ${article.slug}: Reel fehlgeschlagen (${err.message}) — Bild-Fallback`);
+      }
+    }
+    if (!cardRel) {
+      cardRel = `/social/ig-${article.slug}.jpg`;
+      try {
+        await renderInstagramCard({
+          headlineLines: pick.headlineLines,
+          badge,
+          imagePath,
+          credit: article.image?.credit ?? null,
+          outPath: join(ROOT, "public", cardRel),
+          chromium,
+        });
+      } catch (err) {
+        console.log(`  ${article.slug}: Grafik fehlgeschlagen (${err.message}) — übersprungen`);
+        continue;
+      }
     }
 
     const hashtags = (pick.hashtags ?? [])
@@ -346,13 +394,23 @@ async function publish() {
       continue;
     }
     try {
-      const container = await igPost("/me/media", {
-        image_url: imageUrl,
-        caption: item.caption,
-        access_token: token,
-      });
-      // Container-Verarbeitung abwarten (Bild-Download durch Instagram).
-      for (let i = 0; i < 12; i++) {
+      const istReel = item.cardRel.endsWith(".mp4");
+      const container = await igPost(
+        "/me/media",
+        istReel
+          ? {
+              media_type: "REELS",
+              video_url: imageUrl,
+              caption: item.caption,
+              share_to_feed: "true",
+              access_token: token,
+            }
+          : { image_url: imageUrl, caption: item.caption, access_token: token }
+      );
+      // Container-Verarbeitung abwarten — Videos brauchen deutlich länger
+      // als Bilder (Transkodierung durch Instagram, bis zu ~3 Minuten).
+      const versuche = istReel ? 36 : 12;
+      for (let i = 0; i < versuche; i++) {
         const st = await fetch(
           `${IG_API}/${container.id}?fields=status_code&access_token=${encodeURIComponent(token)}`
         ).then((r) => r.json());
@@ -364,7 +422,7 @@ async function publish() {
         creation_id: container.id,
         access_token: token,
       });
-      console.log(`  ✓ Gepostet: ${item.slug} (Media-ID ${published.id})`);
+      console.log(`  ✓ Gepostet (${istReel ? "Reel" : "Bild"}): ${item.slug} (Media-ID ${published.id})`);
     } catch (err) {
       console.log(`  ✗ Post fehlgeschlagen für ${item.slug}: ${err.message}`);
     }

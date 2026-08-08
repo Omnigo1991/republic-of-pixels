@@ -51,9 +51,13 @@ jobs:
           path: ~/.cache/ms-playwright
           key: playwright-chromium-${{ runner.os }}
 
-      - name: Playwright bereitstellen
+      - name: Playwright und ffmpeg bereitstellen
+        # Beide bewusst --no-save (nicht in package.json): Playwrights und
+        # ffmpeg-statics Postinstall-Downloads würden sonst jeden
+        # Vercel-Deploy ausbremsen. ffmpeg-static liefert das Binary für
+        # den Reel-Renderer.
         run: |
-          npm install --no-save playwright
+          npm install --no-save playwright ffmpeg-static
           npx playwright install --with-deps chromium
 
       - name: Pipeline ausführen

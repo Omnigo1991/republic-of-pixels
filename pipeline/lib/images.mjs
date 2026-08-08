@@ -69,7 +69,9 @@ async function optimizeAndSave(buffer, slug, publicDir) {
     .webp({ quality: 84 })
     .toFile(join(dir, `${slug}-portrait.webp`));
 
-  return `/images/articles/${slug}.webp`;
+  // Original-Auflösung mitgeben: Qualitäts-Wächter fürs Social-Posting
+  // (Tim, 08.08.2026 — schwach aufgelöste Bilder schaden dem Auftritt).
+  return { src: `/images/articles/${slug}.webp`, sourceWidth: meta.width ?? null, sourceHeight: meta.height ?? null };
 }
 
 // Hauptfunktion: liefert ein ArticleImage-Objekt oder null (→ Placeholder).
@@ -94,12 +96,14 @@ export async function acquireImage({ slug, items, altText, publicDir }) {
   for (const candidate of candidates) {
     try {
       const buf = await download(candidate.url);
-      const src = await optimizeAndSave(buf, slug, publicDir);
+      const { src, sourceWidth, sourceHeight } = await optimizeAndSave(buf, slug, publicDir);
       return {
         src,
         alt: altText,
         credit: `Bild: ${candidate.feedName}`,
         sourceUrl: candidate.link,
+        sourceWidth,
+        sourceHeight,
       };
     } catch (err) {
       console.log(`  Bild: ${candidate.label} unbrauchbar (${err.message})`);

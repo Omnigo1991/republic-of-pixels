@@ -102,7 +102,7 @@ export async function renderInstagramCard({
     padding:12px 32px 11px 38px; border-radius:999px; background:rgba(12,11,26,0.55); }
   .logo { position:absolute; left:50%; transform:translateX(-50%); bottom:${G}px; height:${LOGO_H}px; }
   .label { position:absolute; left:40px; bottom:30px; font-family:'Inter',sans-serif;
-    font-weight:700; font-size:14px; letter-spacing:0.14em; text-transform:uppercase;
+    font-weight:900; font-size:14px; letter-spacing:0.14em; text-transform:uppercase;
     color:rgba(255,255,255,0.32); }
 </style></head><body>
   <div class="bild"><img src="file://${imagePath}"></div>
