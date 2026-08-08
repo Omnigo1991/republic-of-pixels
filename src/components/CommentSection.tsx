@@ -275,18 +275,15 @@ function EinKommentar(props: {
         ) : (
           <span className="text-sm font-semibold text-text-primary">Unbekannt</span>
         )}
-        {/* Gleiche Zentrier-Rezeptur wie der Profil-Badge (leading-none +
-            justify-center + Text im Span) — ohne sie sass der Text auf
-            Mobile nicht mittig in der Pill (Tim, 08.08.2026). */}
+        {/* EXAKT die Profil-Badge-Rezeptur (von Tim auf dem iPhone als
+            korrekt bestätigt, 08.08.2026) — eine Bauweise überall statt
+            einer Mini-Variante mit eigener Sub-Pixel-Physik: Die 9px-
+            Version renderte in iOS-Safari anders als im Test-Chromium. */}
         {k.profiles?.nickname === MASTER_NICKNAME && (
-          <span className={`inline-flex items-center justify-center gap-1 rounded-full border px-2 py-[3px] text-[9px] leading-none ${MASTER_RANG.klasse}`}>
+          <span className={`inline-flex items-center justify-center gap-1.5 rounded-full border px-3.5 py-[5px] text-[11px] leading-none ${MASTER_RANG.klasse}`}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/brand/r-avatar-navy.png" alt="" className="h-2.5 w-2.5 translate-y-[0.75px]" />
-            {/* Text-Box exakt so hoch wie das Icon (h-2.5) und selbst
-                flex-zentriert: Icon- und Text-Mitte fallen konstruktions-
-                bedingt zusammen — auf jeder Geräteauflösung (Tim-Ansatz
-                08.08.2026; Sub-Pixel-Nudges scheiterten am DPR-Rounding). */}
-            <span className="flex h-2.5 items-center">REDAKTION</span>
+            <img src="/brand/r-avatar-navy.png" alt="" className="h-3.5 w-3.5" />
+            <span className="flex h-3.5 items-center">REDAKTION</span>
           </span>
         )}
         <span className="text-xs text-text-tertiary">{zeitAbstand(k.created_at)}</span>
