@@ -1,9 +1,17 @@
+// Zeitzone IMMER explizit (08.08.2026): Der Vercel-Server rendert in UTC —
+// ohne timeZone standen auf statisch gebauten Seiten UTC-Zeiten (2 Std.
+// falsch), und in Client-Komponenten entstanden Hydration-Fehler, weil der
+// Browser die Zeiten in Lokalzeit neu berechnete. Redaktionszeit ist
+// Europe/Zurich — für alle Besucher einheitlich.
+const ZEITZONE = "Europe/Zurich";
+
 export function formatDate(iso: string): string {
   const d = new Date(iso);
   return new Intl.DateTimeFormat("de-DE", {
     day: "2-digit",
     month: "long",
     year: "numeric",
+    timeZone: ZEITZONE,
   }).format(d);
 }
 
@@ -13,10 +21,12 @@ export function formatDateTime(iso: string): string {
     day: "2-digit",
     month: "long",
     year: "numeric",
+    timeZone: ZEITZONE,
   }).format(d);
   const time = new Intl.DateTimeFormat("de-DE", {
     hour: "2-digit",
     minute: "2-digit",
+    timeZone: ZEITZONE,
   }).format(d);
   return `${date} · ${time} Uhr`;
 }
