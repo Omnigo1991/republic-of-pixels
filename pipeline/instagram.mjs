@@ -109,15 +109,30 @@ Antworte NUR mit JSON, erstes Zeichen "{":
 {"picks":[{"index":0,"headlineLines":[[{"text":"...","cyan":false}]],"caption":"...","hashtags":["..."]}]}
 Wenn nichts stark genug ist: {"picks":[]}`;
 
-  const raw = await askClaude({ system: IG_SYSTEM, prompt, maxTokens: 2500 });
-  const picks = parseJsonResponse(raw).picks ?? [];
-  return picks.filter(
-    (p) =>
-      candidates[p.index] &&
-      Array.isArray(p.headlineLines) &&
-      p.headlineLines.length >= 1 &&
-      typeof p.caption === "string"
-  );
+  // Ein fehlgeschlagener Aufruf (z. B. leere Antwort) wird einmal
+  // wiederholt — genau daran scheiterte der Lauf vom 08.08. um 10:04
+  // (transienter API-Schluckauf ohne Retry). Scheitert auch der zweite
+  // Versuch, wird ohne Posts fortgefahren, damit State/Aufräumen trotzdem
+  // laufen — der nächste 3-Stunden-Lauf holt den Post nach.
+  for (let versuch = 0; ; versuch++) {
+    try {
+      const raw = await askClaude({ system: IG_SYSTEM, prompt, maxTokens: 2500 });
+      const picks = parseJsonResponse(raw).picks ?? [];
+      return picks.filter(
+        (p) =>
+          candidates[p.index] &&
+          Array.isArray(p.headlineLines) &&
+          p.headlineLines.length >= 1 &&
+          typeof p.caption === "string"
+      );
+    } catch (err) {
+      if (versuch >= 1) {
+        console.log(`  IG-Auswahl endgültig fehlgeschlagen (${err.message}) — dieser Lauf postet nicht.`);
+        return [];
+      }
+      console.log(`  IG-Auswahl fehlgeschlagen (${err.message}) — Wiederholung`);
+    }
+  }
 }
 
 function portraitPathFor(article) {
