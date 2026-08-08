@@ -161,16 +161,17 @@ async function prepare() {
 
   const cutoff = Date.now() - CANDIDATE_WINDOW_H * 3600000;
   // Qualitäts-Wächter (Tim, 08.08.2026): Nur Artikel posten, deren
-  // Original-Bild mindestens ~Full-HD-Höhe hat — schwächere Quellen würden
-  // beim 4:5-Zuschnitt sichtbar matschig. Ältere Artikel ohne gespeicherte
-  // Auflösung sind übergangsweise zugelassen (Feld existiert erst seit heute).
+  // Original-Bild NACHWEISLICH mindestens ~Full-HD-Höhe hat. Die anfängliche
+  // Übergangsregel (Artikel ohne gespeicherte Auflösung erlaubt) ist
+  // gestrichen — das matschige Demon's-Souls-Reel kam genau daher.
   const MIN_QUELLHOEHE = 900;
   const fresh = loadArticles().filter(
     (a) =>
       new Date(a.publishedAt).getTime() > cutoff &&
       !state.instagram.posted[a.slug] &&
       a.image?.src &&
-      (a.image.sourceHeight == null || a.image.sourceHeight >= MIN_QUELLHOEHE)
+      a.image.sourceHeight != null &&
+      a.image.sourceHeight >= MIN_QUELLHOEHE
   );
 
   const breaking = fresh.filter((a) => a.category === "breaking");
