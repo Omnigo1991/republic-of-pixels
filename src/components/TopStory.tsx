@@ -50,10 +50,12 @@ export function TopStory({ article }: { article: Article }) {
             {kicker}
           </p>
         )}
-        {/* leading 1.18 statt 1.1: Die Punkte von Gross-Umlauten (Ü) ragten
-            bei 1.1 in die Zeile darüber (Tim, 08.08.2026, "Lies of P 2");
-            1.15 war nachgemessen noch zu knapp. */}
-        <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-semibold leading-[1.18] tracking-tight text-navy-text group-hover:text-accent transition-colors">
+        {/* Zeilenhöhe PRO Grösse via Schrägstrich-Syntax: text-4xl bringt
+            eine eigene line-height (40px) mit, die ein separates leading-*
+            in der Kaskade nicht zuverlässig überschreibt — die Ü-Punkte
+            ragten dadurch in die Zeile darüber (Tim, 08.08.2026, gemessen:
+            computed 0.909 statt 1.18). */}
+        <h1 className="text-3xl/[1.18] sm:text-4xl/[1.18] lg:text-[2.75rem]/[1.18] font-semibold tracking-tight text-navy-text group-hover:text-accent transition-colors">
           {headline}
         </h1>
         <p className="mt-4 text-lg leading-relaxed text-navy-muted">{article.subtitle}</p>
