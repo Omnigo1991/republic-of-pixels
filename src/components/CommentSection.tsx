@@ -281,7 +281,7 @@ function EinKommentar(props: {
         {k.profiles?.nickname === MASTER_NICKNAME && (
           <span className={`inline-flex items-center justify-center gap-1 rounded-full border px-2 py-[3px] text-[9px] leading-none ${MASTER_RANG.klasse}`}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/brand/r-avatar-navy.png" alt="" className="h-2.5 w-2.5" />
+            <img src="/brand/r-avatar-navy.png" alt="" className="h-2.5 w-2.5 translate-y-[0.75px]" />
             {/* Text-Box exakt so hoch wie das Icon (h-2.5) und selbst
                 flex-zentriert: Icon- und Text-Mitte fallen konstruktions-
                 bedingt zusammen — auf jeder Geräteauflösung (Tim-Ansatz
