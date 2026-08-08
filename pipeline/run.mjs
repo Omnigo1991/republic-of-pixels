@@ -256,6 +256,69 @@ Hinweis zu body: quote-Blöcke nur verwenden, wenn die Quelle ein wörtliches Zi
   };
 }
 
+// Korrekturlese-Pass (Betreiber-Vorgabe 08.08.2026, Anlass: "Erdgebnis"
+// statt "Ergebnis" im Cloud-Gaming-Artikel): Ein separater, eng geführter
+// Claude-Durchgang sucht NUR Tippfehler/Buchstabendreher — keine
+// Stiländerungen. Wörtliche Zitate (quote-Blöcke) bleiben unangetastet,
+// ebenso Slug, URLs und Quellen. Schlägt der Pass fehl, erscheint der
+// Artikel unkorrigiert (Korrektur darf den Publish nie blockieren).
+async function proofreadArticle(article) {
+  const pruefText = [
+    article.title,
+    article.subtitle,
+    article.excerpt,
+    ...(article.tldr ?? []),
+    article.whyItMatters,
+    ...(article.body ?? [])
+      .filter((b) => b.type !== "quote")
+      .map((b) => (b.type === "list" ? (b.items ?? []).join("\n") : b.text ?? "")),
+  ]
+    .filter(Boolean)
+    .join("\n");
+
+  const prompt = `Korrekturlesen — finde AUSSCHLIESSLICH echte Fehler: Tippfehler, Buchstabendreher, Rechtschreib- und Grammatikfehler. KEINE Stil- oder Formulierungsänderungen. SCHWEIZER Rechtschreibung ist vorgegeben: "ss" statt "ß" ist KORREKT und kein Fehler. Eigennamen (Spiele, Firmen, Personen) nie "korrigieren".
+
+TEXT:
+${pruefText}
+
+Antworte NUR mit JSON, erstes Zeichen "{": {"fixes":[{"falsch":"exakter fehlerhafter Ausschnitt (mind. ganzes Wort)","richtig":"Korrektur"}]}
+Wenn fehlerfrei: {"fixes":[]}`;
+
+  try {
+    const raw = await askClaude({ system: EDITORIAL_SYSTEM, prompt, maxTokens: 1200 });
+    const fixes = (parseJsonResponse(raw).fixes ?? []).filter(
+      (f) =>
+        typeof f.falsch === "string" &&
+        typeof f.richtig === "string" &&
+        f.falsch.length >= 4 &&
+        f.falsch !== f.richtig
+    );
+    if (fixes.length === 0) return article;
+
+    const fixText = (s) => {
+      for (const f of fixes) s = s.replaceAll(f.falsch, f.richtig);
+      return s;
+    };
+    for (const k of ["title", "subtitle", "excerpt", "seoTitle", "metaDescription", "whyItMatters"]) {
+      if (typeof article[k] === "string") article[k] = fixText(article[k]);
+    }
+    article.tldr = (article.tldr ?? []).map(fixText);
+    article.body = (article.body ?? []).map((b) =>
+      b.type === "quote"
+        ? b
+        : {
+            ...b,
+            ...(typeof b.text === "string" ? { text: fixText(b.text) } : {}),
+            ...(Array.isArray(b.items) ? { items: b.items.map(fixText) } : {}),
+          }
+    );
+    console.log(`  Korrektur: ${fixes.map((f) => `${f.falsch}→${f.richtig}`).join(", ")}`);
+  } catch (err) {
+    console.log(`  Korrekturlesen übersprungen (${err.message})`);
+  }
+  return article;
+}
+
 async function main() {
   console.log(`Pipeline-Lauf ${new Date().toISOString()} (max. ${MAX_ARTICLES_PER_RUN} Artikel)`);
   const state = loadState();
@@ -318,6 +381,7 @@ async function main() {
         continue;
       }
 
+      article = await proofreadArticle(article);
       article.relatedSlugs = pickRelatedSlugs(article);
 
       // Eingebetteter Tweet/Reddit-Post der Quelle (z. B. das Foto eines

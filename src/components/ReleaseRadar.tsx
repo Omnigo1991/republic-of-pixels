@@ -3,6 +3,7 @@ import type { Platform } from "@/lib/types";
 import { PlatformIcon } from "./PlatformIcons";
 import { SectionDivider } from "./SectionDivider";
 import releasesData from "@/content/releases.json";
+import { getThema, themaSlug } from "@/lib/themen";
 
 interface ReleaseEntry {
   title: string;
@@ -59,8 +60,17 @@ export function ReleaseRadar() {
               </div>
             </div>
           );
-          return r.articleSlug ? (
-            <Link key={r.title} href={`/artikel/${r.articleSlug}`} className="min-w-0">
+          // Link-Priorität (Tim-Feedback 08.08.2026): redaktionell gesetzter
+          // Artikel > Themen-Hub des Spiels (entsteht automatisch ab 3
+          // Artikeln) > kein Link, solange wir nichts dazu haben.
+          const hub = !r.articleSlug ? getThema(themaSlug(r.title)) : undefined;
+          const href = r.articleSlug
+            ? `/artikel/${r.articleSlug}`
+            : hub
+              ? `/thema/${hub.slug}`
+              : null;
+          return href ? (
+            <Link key={r.title} href={href} className="min-w-0">
               {inner}
             </Link>
           ) : (
