@@ -20,6 +20,7 @@ import { ArticleCard } from "@/components/ArticleCard";
 import { SectionDivider } from "@/components/SectionDivider";
 import { formatDateTime, splitTitle } from "@/lib/format";
 import { Masthead } from "@/components/Masthead";
+import { themenFuerArtikel } from "@/lib/themen";
 
 export function generateStaticParams() {
   return getAllArticles().map((a) => ({ slug: a.slug }));
@@ -154,6 +155,31 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
         {article.review && <ReviewBox review={article.review} />}
 
         <SourcesBox sources={article.sources} />
+
+        {/* Themen-Hubs (SEO-Baustein 08.08.2026): Tags mit eigener Hub-Seite
+            werden klickbar — gebündelte interne Verlinkung pro Spiel/Thema. */}
+        {(() => {
+          const themen = themenFuerArtikel(article);
+          if (themen.length === 0) return null;
+          return (
+            <div className="my-8">
+              <p className="mb-3 text-[13px] font-semibold tracking-wide text-text-tertiary">
+                MEHR ZU DIESEN THEMEN
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {themen.map((t) => (
+                  <Link
+                    key={t.slug}
+                    href={`/thema/${t.slug}`}
+                    className="inline-flex items-center rounded-full border border-border-subtle bg-surface-card px-3.5 py-1.5 text-sm font-semibold text-text-primary transition-colors hover:border-accent/50 hover:bg-surface-hover"
+                  >
+                    {t.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          );
+        })()}
 
         <WeiterlesenBox articles={related.slice(1)} />
 

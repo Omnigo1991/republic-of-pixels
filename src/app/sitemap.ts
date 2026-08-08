@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getAllArticles, CATEGORY_NAV, PLATFORM_NAV } from "@/lib/articles";
+import { getAlleThemen } from "@/lib/themen";
 
 const SITE_URL = "https://www.republicofpixels.com";
 
@@ -17,6 +18,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  const themenPages: MetadataRoute.Sitemap = [
+    { url: `${SITE_URL}/themen`, changeFrequency: "daily", priority: 0.6 },
+    ...getAlleThemen().map((t) => ({
+      url: `${SITE_URL}/thema/${t.slug}`,
+      changeFrequency: "daily" as const,
+      priority: 0.7,
+    })),
+  ];
+
   const articlePages: MetadataRoute.Sitemap = getAllArticles().map((a) => ({
     url: `${SITE_URL}/artikel/${a.slug}`,
     lastModified: a.publishedAt,
@@ -24,5 +34,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
-  return [...staticPages, ...categoryPages, ...articlePages];
+  return [...staticPages, ...categoryPages, ...themenPages, ...articlePages];
 }

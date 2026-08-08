@@ -36,7 +36,11 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   const label =
     CATEGORY_NAV.find((c) => c.key === params.slug)?.label ??
     PLATFORM_NAV.find((p) => p.key === params.slug)?.label;
-  return { title: label ?? "Kategorie" };
+  return {
+    title: label ?? "Kategorie",
+    // Canonical gegen Host-Duplikate (Google-Meldung 08.08.2026).
+    alternates: { canonical: `/kategorie/${params.slug}` },
+  };
 }
 
 export default function CategoryPage({ params }: { params: { slug: string } }) {

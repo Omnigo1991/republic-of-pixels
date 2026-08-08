@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { getTopStory, getPopularArticlesLive, getChronological } from "@/lib/articles";
 import { TopStory } from "@/components/TopStory";
 import { PopularSection } from "@/components/PopularSection";
@@ -10,6 +11,12 @@ import { DeineMerkliste } from "@/components/DeineMerkliste";
 import { SectionDivider } from "@/components/SectionDivider";
 import { Reveal } from "@/components/Reveal";
 import { Masthead } from "@/components/Masthead";
+
+// Canonical gegen Host-Duplikate (Google-Meldung 08.08.2026): die
+// Startseite deklariert ihre Originaladresse explizit.
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default async function HomePage() {
   const topStory = getTopStory();
