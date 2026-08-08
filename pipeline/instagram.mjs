@@ -18,9 +18,11 @@
 import { readFileSync, writeFileSync, readdirSync, existsSync, unlinkSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { tmpdir } from "node:os";
 import { askClaude, parseJsonResponse } from "./lib/claude.mjs";
 import { renderInstagramCard } from "./lib/instagram-card.mjs";
 import { renderInstagramReel } from "./lib/instagram-reel.mjs";
+import { holeSpielBild } from "./lib/keyart.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const STATE_FILE = join(ROOT, "pipeline", "state.json");
@@ -91,13 +93,14 @@ Regeln für "headlineLines" (die Schlagzeile auf der Post-Grafik):
 - Die Zeilen müssen optisch ausbalanciert sein: keine Zeile deutlich kürzer als ihre Nachbarn (keine 2-Wort-Zeile zwischen langen Zeilen)
 - Keine Anführungszeichen um die ganze Headline
 
-Regeln für "caption" (Ziel: maximale Neugier → Website-Besuch; Reihenfolge zwingend):
-1. HOOK als erste Zeile (max. ~100 Zeichen): Frage, steile These oder die stärkste Zahl — Instagram schneidet nach ~125 Zeichen ab, die erste Zeile entscheidet über "mehr ansehen". Der Hook öffnet eine Wissenslücke, die erst der Artikel schliesst.
-2. Dann 1–2 Sätze Kontext, die die SPANNUNG ERHÖHEN, ohne die Auflösung zu verraten: Das interessanteste Detail (die Begründung, die Konsequenz, das überraschende Zitat) bleibt bewusst im Artikel. Wer nur die Caption liest, muss das Gefühl haben, das Beste noch nicht zu wissen.
-3. NEUGIER-BRÜCKE: ein kurzer Satz, der konkret benennt, WAS im Artikel wartet, ohne es zu spoilern (z. B. "Warum ausgerechnet ein Konkurrenzprodukt sein stärkstes Argument ist — steht im Artikel.").
-4. Dann EINE kurze Engagement-Frage an die Community (Kommentare sind das stärkste Algorithmus-Signal) — konkret zur Story, nie generisch.
+Regeln für "caption" (Stimme: leidenschaftlicher Gaming-Account mit Puls — nicht Pressemitteilung; Ziel bleibt Neugier → Website-Besuch; Reihenfolge zwingend):
+1. HOOK als erste Zeile (max. ~100 Zeichen): emotional und zugespitzt, MIT 1–2 passenden Emojis (🔥 😔 👀 🚨 🤯 …) — Instagram schneidet nach ~125 Zeichen ab. Der Hook öffnet eine Wissenslücke, die erst der Artikel schliesst.
+2. Dann 2–4 kurze FAKTEN-ZEILEN ALS EMOJI-BULLETS: Jede Zeile beginnt mit einem thematisch passenden Emoji (📉 📸 🛠️ 💰 📅 ⚔️ 🎮 …) und bringt einen knackigen Fakt. Spannung erhöhen — das interessanteste Detail (Begründung, Konsequenz, Überraschung) bleibt bewusst im Artikel.
+3. NEUGIER-BRÜCKE: ein kurzer Satz, der konkret benennt, WAS im Artikel wartet, ohne es zu spoilern — 👀 am Ende erlaubt.
+4. Dann EINE kurze Engagement-Frage an die Community (Kommentare sind das stärkste Algorithmus-Signal) — konkret zur Story, nie generisch, direkt in der "ihr"-Form.
 5. Abschluss exakt: "👉 Ganzer Artikel über den Link in der Bio."
-GRENZE: Zuspitzen und Spannung ja — aber der Artikel MUSS liefern, was die Caption verspricht. Kein "Du glaubst nie…"-Clickbait, keine falschen Versprechen, keine reisserischen Auslassungen bei ernsten Themen (Entlassungen etc.). Verboten bleiben: "markiere 3 Freunde", Follow-Aufrufe, Emoji-Spam (max. 2 Emojis gesamt).
+Emojis gesamt 4–8, als visuelle Struktur — kein Spam, keine Emoji-Ketten mitten im Satz.
+GRENZE: Zuspitzen und Spannung ja — aber der Artikel MUSS liefern, was die Caption verspricht. Kein "Du glaubst nie…"-Clickbait, keine falschen Versprechen; bei ernsten Themen (Entlassungen, Schicksale) gedämpfte Emojis (😔 statt 🔥) und kein reisserischer Ton. Verboten bleiben: "markiere 3 Freunde", Follow-Aufrufe.
 
 Regeln für "hashtags": EXAKT 5, CamelCase, ohne #-Zeichen im JSON, nach diesem Mix (Reichweite × Auffindbarkeit):
 - 1× gross/generisch: Gaming oder GamingNews
@@ -105,8 +108,10 @@ Regeln für "hashtags": EXAKT 5, CamelCase, ohne #-Zeichen im JSON, nach diesem 
 - 2× themenspezifisch aus den Tags (Spielname zuerst, z. B. GTA6, PS5, NintendoSwitch2)
 - 1× RepublicOfPixels (Marke, immer)
 
+Zusätzlich pro Pick: "gameName" = der exakte offizielle Titel des Spiels, um das sich die Story dreht (für die Key-Art-Suche, z. B. "Gothic 1 Remake", "Lies of P") — oder null, wenn die Story kein einzelnes Spiel betrifft (Firmen-News, Hardware, Personalien).
+
 Antworte NUR mit JSON, erstes Zeichen "{":
-{"picks":[{"index":0,"headlineLines":[[{"text":"...","cyan":false}]],"caption":"...","hashtags":["..."]}]}
+{"picks":[{"index":0,"gameName":"... oder null","headlineLines":[[{"text":"...","cyan":false}]],"caption":"...","hashtags":["..."]}]}
 Wenn nichts stark genug ist: {"picks":[]}`;
 
   // Ein fehlgeschlagener Aufruf (z. B. leere Antwort) wird einmal
@@ -160,18 +165,15 @@ async function prepare() {
   ).length;
 
   const cutoff = Date.now() - CANDIDATE_WINDOW_H * 3600000;
-  // Qualitäts-Wächter (Tim, 08.08.2026): Nur Artikel posten, deren
-  // Original-Bild NACHWEISLICH mindestens ~Full-HD-Höhe hat. Die anfängliche
-  // Übergangsregel (Artikel ohne gespeicherte Auflösung erlaubt) ist
-  // gestrichen — das matschige Demon's-Souls-Reel kam genau daher.
-  const MIN_QUELLHOEHE = 900;
+  // Kandidaten: alle frischen, noch nicht geposteten Artikel mit Bild.
+  // Der Qualitäts-Wächter greift erst bei der Bild-Auflösung im Loop —
+  // ein Artikel mit schwachem Pressebild kann trotzdem posten, wenn es
+  // offizielle Key Art gibt (Tims Bild-Hierarchie, 08.08.2026).
   const fresh = loadArticles().filter(
     (a) =>
       new Date(a.publishedAt).getTime() > cutoff &&
       !state.instagram.posted[a.slug] &&
-      a.image?.src &&
-      a.image.sourceHeight != null &&
-      a.image.sourceHeight >= MIN_QUELLHOEHE
+      a.image?.src
   );
 
   const breaking = fresh.filter((a) => a.category === "breaking");
@@ -210,9 +212,36 @@ async function prepare() {
   const queue = [];
   for (const pick of picks.slice(0, maxPicks)) {
     const article = candidates[pick.index];
-    const imagePath = portraitPathFor(article);
+
+    // Bild-Hierarchie (Tim, 08.08.2026 — wie seine manuellen Posts, mit
+    // Rotation nach GamePro-Vorbild gegen Bild-Wiederholung):
+    // 1. Offizielles Steam-Material des Spiels — Key Art beim ersten Post,
+    //    bei Folge-News rotierend die offiziellen Publisher-Screenshots
+    //    (Rotations-Index pro Spiel im State)
+    // 2. Pressebild der Quelle — nur mit nachweislich >=900px Quellhöhe
+    // 3. Nichts Scharfes vorhanden → kein Post (Qualität vor Lückenlosigkeit)
+    let imagePath = null;
+    let credit = article.image?.credit ?? null;
+    if (pick.gameName) {
+      state.instagram.spielBild ??= {};
+      const rotation = state.instagram.spielBild[pick.gameName.toLowerCase()] ?? 0;
+      const spielBild = await holeSpielBild({
+        gameName: pick.gameName,
+        rotation,
+        outPath: join(tmpdir(), `rop-keyart-${article.slug}.jpg`),
+      });
+      if (spielBild) {
+        imagePath = spielBild.pfad;
+        credit = spielBild.credit;
+        state.instagram.spielBild[pick.gameName.toLowerCase()] = rotation + 1;
+        console.log(`  ${article.slug}: offizielles Spielbild ${rotation % spielBild.poolGroesse} (${spielBild.credit})`);
+      }
+    }
+    if (!imagePath && article.image?.sourceHeight != null && article.image.sourceHeight >= 900) {
+      imagePath = portraitPathFor(article);
+    }
     if (!imagePath) {
-      console.log(`  ${article.slug}: kein Bild — übersprungen`);
+      console.log(`  ${article.slug}: kein offizielles Bild und kein scharfes Pressebild — übersprungen`);
       continue;
     }
     const badge =
@@ -241,7 +270,7 @@ async function prepare() {
           headlineLines: pick.headlineLines,
           badge,
           imagePath,
-          credit: article.image?.credit ?? null,
+          credit,
           outPath: join(ROOT, "public", reelRel),
           chromium,
         });
@@ -257,7 +286,7 @@ async function prepare() {
           headlineLines: pick.headlineLines,
           badge,
           imagePath,
-          credit: article.image?.credit ?? null,
+          credit,
           outPath: join(ROOT, "public", cardRel),
           chromium,
         });
