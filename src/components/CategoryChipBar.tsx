@@ -11,14 +11,17 @@ export function CategoryChipBar({ active }: { active?: string }) {
         {items.map((item) => {
           const href = item.key === "alle" ? "/" : `/kategorie/${item.key}`;
           const isActive = active === item.key;
+          // Einheitliche Pill-Rezeptur (Badge-Audit 08.08.2026): inline-flex
+          // + leading-none zentriert exakt; der aktive Chip trägt einen
+          // transparenten Rand, damit alle Chips gleich hoch sind.
           return (
             <Link
               key={item.key}
               href={href}
-              className={`shrink-0 rounded-full px-4 py-1.5 text-[13px] font-medium whitespace-nowrap transition-colors ${
+              className={`inline-flex shrink-0 items-center justify-center rounded-full border px-4 py-1.5 text-[13px] font-medium leading-none whitespace-nowrap transition-colors ${
                 isActive
-                  ? "bg-accent text-bg-base"
-                  : "bg-surface-card text-text-secondary border border-border-subtle"
+                  ? "border-transparent bg-accent text-bg-base"
+                  : "border-border-subtle bg-surface-card text-text-secondary"
               }`}
             >
               {item.label}

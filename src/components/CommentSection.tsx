@@ -275,11 +275,14 @@ function EinKommentar(props: {
         ) : (
           <span className="text-sm font-semibold text-text-primary">Unbekannt</span>
         )}
+        {/* Gleiche Zentrier-Rezeptur wie der Profil-Badge (leading-none +
+            justify-center + Text im Span) — ohne sie sass der Text auf
+            Mobile nicht mittig in der Pill (Tim, 08.08.2026). */}
         {k.profiles?.nickname === MASTER_NICKNAME && (
-          <span className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[9px] ${MASTER_RANG.klasse}`}>
+          <span className={`inline-flex items-center justify-center gap-1 rounded-full border px-2 py-[3px] text-[9px] leading-none ${MASTER_RANG.klasse}`}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/brand/r-avatar-navy.png" alt="" className="h-2.5 w-2.5" />
-            REDAKTION
+            <span>REDAKTION</span>
           </span>
         )}
         <span className="text-xs text-text-tertiary">{zeitAbstand(k.created_at)}</span>
