@@ -1,0 +1,130 @@
+{
+  "slug": "nvidia-rtx-5090-mainboard-bundles-taiwan-2026",
+  "title": "RTX 5090 nur im Paket: Händler in Taiwan bündeln Grafikkarte mit acht Mainboards",
+  "subtitle": "Auf der Plattform PChome24h gibt es Nvidias Flaggschiff nur noch zusammen mit Ladenhütern wie Mainboards, Netzteilen und Mittelklasse-GPUs",
+  "excerpt": "In Taiwan verkauft die Plattform PChome24h die RTX 5090 nur noch in Kombi-Paketen mit bis zu acht Mainboards und weiteren Komponenten – ein Zeichen für die angespannte Lage im PC-Markt.",
+  "seoTitle": "RTX 5090: Taiwan-Händler bündelt GPU mit 8 Mainboards",
+  "metaDescription": "PChome24h verkauft die RTX 5090 in Taiwan nur noch mit umfangreichen Bundles aus Mainboards, Netzteilen und weiteren Komponenten. Was hinter dem Trend steckt.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "tags": [
+    "RTX 5090",
+    "Nvidia",
+    "Grafikkarten",
+    "PC-Hardware",
+    "Speicherkrise",
+    "Taiwan"
+  ],
+  "tldr": [
+    "PChome24h in Taiwan verkauft die RTX 5090 nur in Bundles mit mehreren Mainboards, Netzteilen und Mittelklasse-GPUs",
+    "Ein Bundle enthält gleich acht Mainboards zum Gesamtpreis von rund 7'482 US-Dollar",
+    "Die Aktion gilt als Reaktion auf die aktuelle Speicherkrise, die den PC-Markt weltweit belastet",
+    "Analysten rechnen erst ab 2029 mit einer Erholung des Marktes für PC-Bauteile"
+  ],
+  "whyItMatters": "Wer aktuell einen PC bauen oder aufrüsten will, bekommt die Auswirkungen der Speicherkrise direkt zu spüren – Bundle-Zwänge wie in Taiwan könnten ein Vorbote für andere Märkte sein. Für Gamer:innen zeigt sich damit, wie stark KI-getriebene Nachfrage die Preise und Verfügbarkeit von Gaming-Hardware verzerrt.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Wer in Taiwan derzeit eine Nvidia RTX 5090 kaufen will, kommt kaum an einem Zwangspaket vorbei. Auf der E-Commerce-Plattform PChome24h werden mehrere Varianten der High-End-Grafikkarte ausschliesslich zusammen mit einer teils absurden Menge an Zubehör verkauft – darunter Mainboards, Netzteile, Prozessoren und sogar zusätzliche Mittelklasse-Grafikkarten. Der Hardware-Analyst Uniko's Hardware hat vier dieser Kombis auf X dokumentiert, die Modelle von Asus, Gigabyte und MSI betreffen."
+    },
+    {
+      "type": "embed",
+      "platform": "twitter",
+      "url": "https://twitter.com/cantworkitout/status/2085765166185247101"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "8 Mainboards",
+          "label": "in einem einzigen Gigabyte-Bundle mit der Aorus RTX 5090 Master enthalten"
+        },
+        {
+          "value": "7'482 $",
+          "label": "Gesamtpreis dieses Bundles bei einem Wiederverkaufswert von rund 7'220 $"
+        },
+        {
+          "value": "2029",
+          "label": "Jahr, ab dem sich der PC-Markt laut Marktforschern wieder erholen soll"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Was in den Paketen steckt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Bundles variieren stark, folgen aber demselben Muster: Eine RTX 5090 wird mit Komponenten aufgefüllt, die offenbar schwer verkäuflich sind. Die vier von Uniko's Hardware dokumentierten Kombinationen im Überblick:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Asus ROG Astral RTX 5090 Combo (248'990 NTD, rund 7'721 $): GPU plus vier Asus Dual Radeon RX 9060 XT",
+        "Gigabyte Aorus RTX 5090 Master Combo (241'290 NTD, rund 7'482 $): GPU plus zwei B860M-, ein X870E- und fünf B850M-Mainboards sowie ein Netzteil",
+        "MSI RTX 5090 Gaming Trio OC Combo (274'090 NTD, rund 8'499 $): GPU plus drei MSI X870E Carbon, zwei B650M-Mainboards und ein Ryzen 9 9950X3D",
+        "Gigabyte Aorus RTX 5090 AI Box Combo (267'090 NTD, rund 8'282 $): externe GPU-Box plus ein X870E-Mainboard, zwei RTX 5060 und drei weitere Mainboards"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Ladenhüter als Preis für die Grafikkarte"
+    },
+    {
+      "type": "paragraph",
+      "text": "In seiner Analyse rechnete Uniko's Hardware am Beispiel des MSI-Bundles vor, wie sich der Preis zusammensetzt."
+    },
+    {
+      "type": "quote",
+      "text": "Kauf eine 5090, bekomme sieben Mainboards gratis dazu? Schauen wir uns das MSI-5090-Gaming-Trio-Bundle an, das für 274'090 NTD (rund 8'500 US-Dollar) angeboten wird. Enthalten sind: die 5090, drei MSI X870E Carbon (42'606 NTD), zwei MSI B650M Gaming Plus WiFi (8'580 NTD) und ein AMD 9950X3D (24'150 NTD).",
+      "attribution": "Uniko's Hardware auf X"
+    },
+    {
+      "type": "paragraph",
+      "text": "Laut Tom's Hardware ist das Muster typisch für Händler, die schwer verkäufliche Ware loswerden wollen: Indem sie sie an ein begehrtes Produkt wie die RTX 5090 koppeln, binden sie Kapital frei, das sonst in unverkäuflichen Lagerbeständen feststecken würde. Die grosse Zahl an Mainboards und Mittelklasse-GPUs in den Paketen deutet darauf hin, dass diese Komponenten sich derzeit nur schwer eigenständig verkaufen lassen."
+    },
+    {
+      "type": "paragraph",
+      "text": "Hintergrund ist die anhaltende, KI-getriebene Speicherkrise, die Preise für Arbeitsspeicher und Grafikkarten weltweit nach oben treibt. Mehrere Marktforschungsunternehmen gehen laut Tom's Hardware davon aus, dass der PC-Markt in diesem Jahr zweistellig schrumpfen wird, wobei das Einsteigersegment am stärksten betroffen ist. Eine Erholung wird demnach erst ab 2029 erwartet."
+    }
+  ],
+  "poll": {
+    "question": "Wie würdet ihr auf ein Zwangs-Bundle wie dieses reagieren, wenn es die einzige Möglichkeit wäre, eine RTX 5090 zu bekommen?",
+    "options": [
+      "Kaufen und die Zusatzteile weiterverkaufen",
+      "Kaufen und die Teile für ein zweites System nutzen",
+      "Auf ein anderes Modell oder eine andere Marke ausweichen",
+      "Den Kauf komplett verschieben"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-08T19:51:05.788Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "grid",
+  "sources": [
+    {
+      "title": "Nvidia RTX 5090 ships in bizarre 8-motherboard bundle — retailers hold GPUs hostage similar to the crypto boom",
+      "url": "https://www.tomshardware.com/pc-components/gpus/nvidia-rtx-5090-ships-in-bizarre-8-motherboard-bundle-retailers-hold-gpus-hostage-similar-to-the-crypto-boom",
+      "publisher": "Tom's Hardware"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/nvidia-rtx-5090-mainboard-bundles-taiwan-2026.webp",
+    "alt": "RTX 5090 nur im Paket: Händler in Taiwan bündeln Grafikkarte mit acht Mainboards",
+    "credit": "Bild: Tom's Hardware",
+    "sourceUrl": "https://www.tomshardware.com/pc-components/gpus/nvidia-rtx-5090-ships-in-bizarre-8-motherboard-bundle-retailers-hold-gpus-hostage-similar-to-the-crypto-boom",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "grafikkarten-preise-asien-speicherkrise-2026",
+    "geforce-now-august-2026-neuzugaenge",
+    "ram-produktion-2027-ausverkauft-speicherkrise"
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "slug": "square-enix-google-ki-qa-testing-2026",
+  "title": "Square Enix lässt Google-KI künftig Spiele testen",
+  "subtitle": "Gemini soll Spiele selbstständig durchspielen und Fehler erkennen – Square Enix hat dafür sogar staatliche Unterstützung erhalten",
+  "excerpt": "Square Enix setzt bei der Qualitätssicherung künftig auf Googles KI-Modell Gemini. Die Software soll Spiele eigenständig spielen und testen – mit Rückendeckung des japanischen Staates.",
+  "seoTitle": "Square Enix: Google-KI übernimmt QA-Testing",
+  "metaDescription": "Square Enix kooperiert mit Google, um Qualitätssicherung in der Spieleentwicklung per KI zu automatisieren. Details zum Gemini-Einsatz und der Kritik daran.",
+  "category": "news",
+  "platforms": [
+    "pc",
+    "playstation",
+    "xbox",
+    "nintendo"
+  ],
+  "tags": [
+    "Square Enix",
+    "Google",
+    "Künstliche Intelligenz",
+    "Gemini",
+    "QA-Testing",
+    "Final Fantasy"
+  ],
+  "tldr": [
+    "Square Enix kooperiert mit Google, um QA-Testing mit dem KI-Modell Gemini zu automatisieren",
+    "Die KI soll Bildschirminhalte analysieren, Spielsituationen verstehen und selbstständig Eingaben tätigen",
+    "Bestätigt wurde die Neuausrichtung am Event Google Cloud Next Tokyo '26",
+    "Das japanische Wirtschaftsministerium unterstützt das Projekt institutionell"
+  ],
+  "whyItMatters": "Nachdem KI bereits in Grafik und Programmierung Einzug gehalten hat, rückt mit dem QA-Testing ein weiterer zentraler Bereich der Spieleentwicklung ins Visier. Für Spielerinnen und Spieler stellt sich die Frage, ob automatisierte Tests künftig die Qualität von Releases beeinflussen.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Square Enix, einer der grössten japanischen Spielepublisher, arbeitet künftig mit Google zusammen, um die Qualitätssicherung in der Spieleentwicklung stärker zu automatisieren. Wie das japanische Fachmagazin Automaton berichtet, setzt der Konzern bereits verstärkt auf Googles KI-Modell Gemini, um QA-Tests zu beschleunigen. Bestätigt wurde diese Neuausrichtung vergangene Woche am Event Google Cloud Next Tokyo '26."
+    },
+    {
+      "type": "heading",
+      "text": "KI soll ganze Spiele durchspielen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Laut Square Enix ist die eingesetzte KI in der Lage, den Bildschirm zu analysieren, die jeweilige Spielsituation zu verstehen und darauf basierend eigenständig Eingaben über die In-Game-Steuerung vorzunehmen. Damit kann die Software theoretisch ganze Spiele durchspielen, statt nur einzelne Textbausteine oder Dialoge zu prüfen. Ein Video, das diese Fähigkeiten am Event demonstriert haben soll, wurde nach Angaben von Destructoid gezeigt, war zum Zeitpunkt der Berichterstattung aber nicht öffentlich auffindbar."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Die KI analysiert Bildschirminhalte in Echtzeit",
+        "Sie erkennt und interpretiert Veränderungen im laufenden Spielgeschehen",
+        "Sie kann eigenständig Eingaben über die Spielsteuerung tätigen",
+        "Ziel ist eine vollständige Automatisierung repetitiver QA-Aufgaben"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Keine Chat-KI, sondern ein Spieler"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Unternehmensführung von Square Enix betonte, dass eine reine Chat-KI nie das Ziel gewesen sei. Stattdessen habe man eine Lösung gesucht, die das Spiel tatsächlich wahrnimmt und versteht."
+    },
+    {
+      "type": "quote",
+      "text": "Wir wollten eine KI, die die Fähigkeit hat, die Klänge des Spiels zu hören, die feinen Veränderungen auf dem Bildschirm zu beobachten und die Situation vollständig zu verstehen.",
+      "attribution": "Square-Enix-Unternehmensführung, zitiert nach Automaton"
+    },
+    {
+      "type": "heading",
+      "text": "Staatliche Rückendeckung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Automaton weist zudem darauf hin, dass Square Enix für die Entwicklung einer automatisierten, KI-gestützten QA-Plattform Unterstützung vom japanischen Ministerium für Wirtschaft, Handel und Industrie erhalten hat. Das Projekt geniesst damit nicht nur unternehmensinterne Priorität, sondern auch institutionelle Rückendeckung auf staatlicher Ebene. Als Begründung für den verstärkten KI-Einsatz nennt Square Enix die in den vergangenen Jahren spürbar gestiegene Arbeitsbelastung der eigenen Entwicklerinnen und Entwickler. Automatisiertes Testing solle Ressourcen für kreative Aufgaben freisetzen und die Belastung durch besonders eintönige Arbeitsschritte reduzieren."
+    },
+    {
+      "type": "heading",
+      "text": "Kritik an der Entwicklung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Destructoid-Autor Andrej Barovic äussert in seinem Bericht Zweifel an dieser Argumentation. Zwar sei QA-Testing tatsächlich oft repetitiv und bestehe häufig aus dem wiederholten Ausführen derselben Handlungen, doch befürchtet er, dass KI-Systeme insbesondere kleinteilige Probleme übersehen könnten, die menschlichen Testerinnen und Testern auffallen würden. Zudem sei nicht auszuschliessen, dass fehlerhafte KI-Ergebnisse zusätzlichen Aufwand für Entwicklerteams verursachen, statt sie zu entlasten."
+    }
+  ],
+  "poll": {
+    "question": "Wie steht ihr dazu, dass KI künftig QA-Tests in der Spieleentwicklung übernimmt?",
+    "options": [
+      "Sinnvoll, wenn es Entwickler entlastet",
+      "Gefahr für Qualität bei Releases",
+      "Nur okay, wenn Menschen die Ergebnisse prüfen",
+      "Grundsätzlich problematisch für die Branche"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-08T19:50:17.859Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "controller",
+  "sources": [
+    {
+      "title": "After programmers and artists, QA testers are next: Google s new AI can play and test in-development games, and some publishers are all over it",
+      "url": "https://www.destructoid.com/ai-qa-program/",
+      "publisher": "Destructoid"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/square-enix-google-ki-qa-testing-2026.webp",
+    "alt": "Square Enix lässt Google-KI künftig Spiele testen",
+    "credit": "Bild: Destructoid",
+    "sourceUrl": "https://www.destructoid.com/ai-qa-program/",
+    "sourceWidth": 1200,
+    "sourceHeight": 675
+  },
+  "relatedSlugs": [
+    "octopath-traveler-3-asano-jubilaeum-update-2026",
+    "final-fantasy-7-revelation-gamescom-onl-2026",
+    "final-fantasy-14-switch-2-ladezeiten-patch-2026"
+  ]
+}
