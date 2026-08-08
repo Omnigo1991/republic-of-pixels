@@ -313,7 +313,15 @@ async function prepare() {
       .join(" ");
     const caption = `${pick.caption}\n${hashtags}`.replaceAll("ß", "ss");
 
-    queue.push({ slug: article.slug, cardRel, caption });
+    // Alt-Text (Barrierefreiheit + Instagram-Suche, 08.08.2026):
+    // beschreibt die Post-Grafik deterministisch aus Headline und
+    // Bildnachweis — die API nimmt ihn nur bei Bild-Posts an.
+    const headlineText = pick.headlineLines
+      .map((zeile) => zeile.map((s) => s.text).join(" "))
+      .join(" ");
+    const altText = `Nachrichtengrafik von Republic of Pixels: «${headlineText}» (${credit ?? "Symbolbild"})`.slice(0, 950);
+
+    queue.push({ slug: article.slug, cardRel, caption, altText });
     // Optimistisch als gepostet markieren: verhindert Doppel-Posts selbst
     // dann, wenn die Publish-Phase später fehlschlägt (bewusster Trade-off:
     // lieber ein verlorener Post als ein doppelter).
@@ -461,7 +469,14 @@ async function publish() {
               share_to_feed: "true",
               access_token: token,
             }
-          : { image_url: imageUrl, caption: item.caption, access_token: token }
+          : {
+              image_url: imageUrl,
+              caption: item.caption,
+              // alt_text: seit 2025 von der API für Bild-Posts unterstützt
+              // (Reels laut Doku uneinheitlich — dort weggelassen).
+              ...(item.altText ? { alt_text: item.altText } : {}),
+              access_token: token,
+            }
       );
       // Container-Verarbeitung abwarten — Videos brauchen deutlich länger
       // als Bilder (Transkodierung durch Instagram, bis zu ~3 Minuten).

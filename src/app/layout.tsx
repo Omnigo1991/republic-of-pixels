@@ -64,10 +64,36 @@ export const metadata: Metadata = {
   },
 };
 
+// Marken-Verknüpfung für Suchmaschinen (08.08.2026): sameAs verbindet die
+// Website mit unseren offiziellen Social-Profilen zu EINER Marke im
+// Knowledge Graph — stärkt Marken-Suche und E-E-A-T.
+const organisationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsMediaOrganization",
+  name: "Republic of Pixels",
+  url: SITE_URL,
+  logo: {
+    "@type": "ImageObject",
+    url: `${SITE_URL}/brand/r-mark-navy.png`,
+    width: 401,
+    height: 464,
+  },
+  sameAs: [
+    "https://www.instagram.com/republicofpixels/",
+    "https://x.com/republic_pixels",
+    "https://www.tiktok.com/@republicofpixels",
+  ],
+};
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="de" className={inter.variable}>
       <body className="min-h-screen bg-bg-base font-sans antialiased">
+        <script
+          type="application/ld+json"
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organisationJsonLd) }}
+        />
         {/* Masthead wird pro Seitentyp gerendert (Masthead.tsx: brand/section/slim). */}
         <main>{children}</main>
         <Footer />
