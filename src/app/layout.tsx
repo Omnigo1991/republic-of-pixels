@@ -51,7 +51,11 @@ export const metadata: Metadata = {
   // generisches Browser-Symbol statt unserer Marke. SVG allein genügt dort
   // nicht, es braucht PNG.
   icons: {
+    // favicon.ico ZUERST: Safari (macOS wie iOS) greift für das Symbol im
+    // Teilen-Menü darauf zurück und ignoriert SVG-Favicons — fehlte die
+    // Datei, zeigte es den generischen Kompass (Tim, 09.08.2026).
     icon: [
+      { url: "/favicon.ico", sizes: "16x16 32x32 48x48" },
       { url: "/favicon.svg", type: "image/svg+xml" },
       { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
     ],
