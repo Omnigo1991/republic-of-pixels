@@ -1,0 +1,131 @@
+{
+  "slug": "bettervr-mod-breath-of-the-wild-vr-2026",
+  "title": "BetterVR-Mod macht aus Breath of the Wild eine vollwertige VR-Erfahrung",
+  "subtitle": "Nach Tausenden Stunden Reverse-Engineering bringt Modder Crementif Zeldas Wii-U-Klassiker in ein VR-Headset — Mario Kart 8 soll folgen",
+  "excerpt": "Modder Crementif hat eine neue Version der BetterVR-Mod veröffentlicht, die The Legend of Zelda: Breath of the Wild via Cemu-Emulator in den vollen VR-Modus mit 6DOF und Handtracking verwandelt. Ein Mario Kart 8 VR-Port ist bereits angekündigt.",
+  "seoTitle": "BetterVR: Breath of the Wild als vollwertiges VR-Erlebnis",
+  "metaDescription": "BetterVR-Mod bringt Breath of the Wild in VR: 6DOF, Handtracking, Roomscale. Nach Tausenden Stunden Reverse-Engineering folgt nun Mario Kart 8.",
+  "category": "news",
+  "platforms": [
+    "nintendo",
+    "pc"
+  ],
+  "tags": [
+    "BetterVR",
+    "Breath of the Wild",
+    "Cemu",
+    "Nintendo",
+    "VR",
+    "Mario Kart 8"
+  ],
+  "tldr": [
+    "Modder Crementif hat eine neue, deutlich verbesserte Version der BetterVR-Mod für The Legend of Zelda: Breath of the Wild veröffentlicht",
+    "Die Mod läuft über den Cemu-Emulator und bietet vollständiges 6DOF-Tracking, Roomscale-Support sowie Hand- und Armanimationen",
+    "Ein VR-Port für Mario Kart 8 wurde bereits angeteasert",
+    "Geplant sind zudem Mehrspieler-Support, ein grosses Performance-Update und Linux-Unterstützung"
+  ],
+  "whyItMatters": "Die Mod zeigt, wie weit Community-Reverse-Engineering mittlerweile reicht, um Nintendo-Titel ohne offizielle VR-Unterstützung technisch nachzurüsten. Gleichzeitig bleibt unklar, wie lange Nintendo ein solches Projekt toleriert, da frühere Mods für dasselbe Spiel bereits entfernt wurden.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Der Modder Crementif hat eine neue Version seiner BetterVR-Mod veröffentlicht, die The Legend of Zelda: Breath of the Wild über den Cemu-Emulator in eine vollwertige VR-Erfahrung verwandelt. Die aktuelle Fassung bringt spürbare Verbesserungen gegenüber den bisherigen Updates und enthält zugleich eine Ankündigung: Ein VR-Port für Mario Kart 8 ist in Arbeit."
+    },
+    {
+      "type": "embed",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=2n_AeiX4sp0"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "1000e Stunden",
+          "label": "investierte Crementif ins Reverse-Engineering des unfertigen Wii-U-Codes"
+        },
+        {
+          "value": "20 Updates",
+          "label": "seit dem Launch der ersten BetterVR-Version vor rund sieben Monaten"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Vulkan-Layer und ein Umweg über D3D12"
+    },
+    {
+      "type": "paragraph",
+      "text": "Technisch setzt BetterVR auf einen Vulkan-Layer, der sich zwischen den Cemu-Emulator und die Grafikkarte schaltet. Dadurch lässt sich das fertig gerenderte Bild des Spiels abfangen, bevor es auf dem Bildschirm erscheint, und stattdessen an ein VR-Headset weiterleiten. Da das für VR gängige OpenXR-System mit diesem Abfangmechanismus nicht direkt kompatibel ist, musste Crementif einen Umweg schaffen: Das Bild wird über eine andere Rendering-Schnittstelle, D3D12, geleitet, mit der OpenXR problemlos kommunizieren kann. Damit aus einem einfach abgefangenen, flachen Bild ein echtes stereoskopisches 3D-Erlebnis wird, war zusätzlich ein tiefer Eingriff in den eigentlichen Spielcode nötig, der ursprünglich für den PowerPC-Prozessor der Wii U geschrieben wurde."
+    },
+    {
+      "type": "quote",
+      "text": "Meta beziehungsweise Oculus Link bietet eine schreckliche Bildinterpolation, die das Spiel deutlich schlechter aussehen lässt, als es tatsächlich läuft.",
+      "attribution": "Crementif, Modder von BetterVR"
+    },
+    {
+      "type": "heading",
+      "text": "Funktionsumfang und geplante Erweiterungen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die derzeitige Version von BetterVR bietet bereits ein umfangreiches Funktionspaket. Dazu zählen vollständiges stereoskopisches Rendering mit sechs Freiheitsgraden (6DOF), Roomscale-Support, animierte Hände und Arme sowie die Möglichkeit, Waffen, Fackeln und sogar Bokoblin-Arme im Kampf zu führen. Über Gesten lassen sich Waffen ausrüsten und werfen, Bewegungssteuerung erlaubt zudem das Lösen von Rätseln oder das Entfachen von Feuer direkt per Handbewegung. Da die Mod ausschliesslich den Programmcode und nicht die Spieldaten verändert, bleibt die Kompatibilität zu den meisten anderen Mods erhalten. Ein optionaler Third-Person-Modus rundet das Angebot ab."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Mehrspieler-Support, portiert auf die neue Cemu-Version, Synchronisation aber noch offen",
+        "Grosses Performance-Update mit überarbeitetem Stereo-Rendering und Fehlerbehebungen",
+        "Linux-Unterstützung",
+        "Beidhändiges Führen von Waffen (Dual-Wielding)"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "BetterVR nutzt den offenen OpenXR-Standard, der von den meisten grösseren Headsets wie Valve Index, HTC Vive, Meta Quest oder Windows-Mixed-Reality-Geräten unterstützt wird. Vorkonfigurierte Controller-Belegungen existieren aktuell allerdings nur für Oculus-Touch-Controller, wobei laut Crementif eigene OpenXR-Zuordnungen über SteamVR oder andere Anwendungen möglich sein sollten. Meta-Quest-Nutzerinnen und -Nutzer wird empfohlen, für die Verbindung ALVR, Virtual Desktop oder Steam Link statt Meta/Oculus Link zu verwenden, um Bildprobleme durch schlechte Frame-Interpolation zu vermeiden."
+    },
+    {
+      "type": "heading",
+      "text": "Ungewisse Zukunft für das Fanprojekt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bemerkenswert an BetterVR ist der Aufwand hinter den Kulissen: Da Breath of the Wild auf einer weitgehend undokumentierten, eigens entwickelten Engine läuft, musste Crementif die Funktionsweise des Spiels über Tausende Stunden hinweg von Grund auf rekonstruieren, unterstützt von einem inoffiziellen, unvollständigen Dekompilierungsprojekt. Angesichts früherer Fälle, in denen Nintendo Mod-Projekte für dasselbe Spiel wie etwa einen Mehrspieler-Mod entfernen liess, bleibt offen, wie lange BetterVR in seiner aktuellen Form bestehen kann."
+    }
+  ],
+  "poll": {
+    "question": "Wie beurteilt ihr Community-Mods wie BetterVR, die alte Nintendo-Spiele in VR verwandeln?",
+    "options": [
+      "Beeindruckende Fanarbeit, die unterstützt gehört",
+      "Technisch faszinierend, aber rechtlich riskant",
+      "Interessant, aber nur für VR-Enthusiasten relevant",
+      "Nintendo sollte das offiziell selbst anbieten"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-09T08:50:39.060Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "waveform",
+  "sources": [
+    {
+      "title": "BetterVR Mod Transforms Nintendo’s Breath of the Wild into Full VR after 1,000s of Hours Reverse-Engineering Zelda’s Engine",
+      "url": "https://wccftech.com/bettervr-mod-breath-of-the-wild-vr-reverse-engineering/",
+      "publisher": "Wccftech"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/bettervr-mod-breath-of-the-wild-vr-2026.webp",
+    "alt": "BetterVR-Mod macht aus Breath of the Wild eine vollwertige VR-Erfahrung",
+    "credit": "Bild: Wccftech",
+    "sourceUrl": "https://wccftech.com/bettervr-mod-breath-of-the-wild-vr-reverse-engineering/",
+    "sourceWidth": 1456,
+    "sourceHeight": 819
+  },
+  "relatedSlugs": [
+    "nintendo-q1-fy2027-gewinn-zollrueckerstattung",
+    "nintendo-switch-2-verkaufszahlen-q1-fy2027",
+    "pokemon-tcg-japanische-staatsbuerger-only-2026"
+  ]
+}
