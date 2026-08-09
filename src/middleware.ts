@@ -9,9 +9,23 @@ import type { NextRequest } from "next/server";
 // localhost bleibt für die Entwicklung unangetastet.
 const CANONICAL_HOST = "www.republicofpixels.com";
 
+// Eigene Aufrufe (Fund 09.08.2026): Die Weiche kannte nur das Wort
+// "localhost". Next.js holt Bilder für den Optimierer aber intern nach —
+// mal über 127.0.0.1 oder ::1, mal ganz ohne Host-Kopfzeile. Diese
+// Aufrufe galten als fremder Host und wurden auf die Produktivdomain
+// umgeleitet; der Optimierer bekam eine Umleitung statt eines Bildes und
+// in der lokalen Vorschau blieb JEDES Artikelfoto leer. In der Produktion
+// kommen diese Hosts nicht vor, die Kanonisierung bleibt unberührt.
+const ENTWICKLUNGS_HOSTS = ["", "localhost", "127.0.0.1", "[::1]", "::1", "0.0.0.0"];
+
+function istEntwicklung(host: string) {
+  const ohnePort = host.replace(/:\d+$/, "");
+  return ENTWICKLUNGS_HOSTS.includes(ohnePort);
+}
+
 export function middleware(req: NextRequest) {
   const host = req.headers.get("host") ?? "";
-  if (host === CANONICAL_HOST || host.startsWith("localhost")) {
+  if (host === CANONICAL_HOST || istEntwicklung(host)) {
     return NextResponse.next();
   }
   const ziel = new URL(req.nextUrl.pathname + req.nextUrl.search, `https://${CANONICAL_HOST}`);
