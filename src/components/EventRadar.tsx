@@ -19,12 +19,17 @@ interface RadarEvent {
 // Event-Radar: Messen, Showcases und Directs mit Countdown und Status
 // (Tim-Freigabe 09.08.2026, Skizze VORSCHAU-event-radar). Datenquelle:
 // src/content/events.json, redaktionell gepflegt; vergangene Events fallen
-// über dateEnd automatisch raus. Status-Pills: FIXIERT (Cyan) / ERWARTET
-// (dezent) / GERÜCHT (gestrichelt = "noch nicht fest").
+// über dateEnd automatisch raus.
+// Status-Pills tragen EXAKT die CategoryPill-Rezeptur aus Badges.tsx
+// (Tims Konsistenz-Vorgabe 09.08.2026: eine Pillen-Bauart auf der ganzen
+// Seite). Töne: FIXIERT = Accent wie Breaking, ERWARTET = neutral wie
+// News, GERÜCHT = Warning wie die Leaks-Pille (gleiche Bedeutung).
+const PILL_REZEPT =
+  "inline-flex items-center rounded-full border px-2.5 py-1 text-[11px] font-semibold tracking-wide";
 const PILL: Record<EventStatus, { label: string; klasse: string }> = {
-  fixiert: { label: "FIXIERT", klasse: "border-accent text-accent" },
-  erwartet: { label: "ERWARTET", klasse: "border-text-tertiary/60 text-text-secondary" },
-  geruecht: { label: "GERÜCHT", klasse: "border-dashed border-text-tertiary/60 text-text-tertiary" },
+  fixiert: { label: "FIXIERT", klasse: "text-accent border-accent/40 bg-accent/10" },
+  erwartet: { label: "ERWARTET", klasse: "text-text-secondary border-border-default bg-text-primary/[0.03]" },
+  geruecht: { label: "GERÜCHT", klasse: "text-warning border-warning/40 bg-warning/10" },
 };
 
 // Kalendertag-Differenz in Zürich (UTC-Mitternacht-Fallen vermeiden —
@@ -50,12 +55,8 @@ export function EventRadar() {
   const countdown = hero?.dateStart ? tageBis(hero.dateStart) : null;
   const heroHub = hero?.thema ? getThema(hero.thema) : undefined;
 
-  const pill = (status: EventStatus, extra = "") => (
-    <span
-      className={`inline-flex items-center justify-center rounded-full border-2 px-3 py-[3px] text-[10px] font-black leading-none tracking-[0.18em] ${PILL[status].klasse} ${extra}`}
-    >
-      {PILL[status].label}
-    </span>
+  const pill = (status: EventStatus) => (
+    <span className={`${PILL_REZEPT} ${PILL[status].klasse}`}>{PILL[status].label}</span>
   );
 
   return (
@@ -71,19 +72,19 @@ export function EventRadar() {
         <div className="mb-4 flex flex-col items-start gap-5 rounded-2xl border border-accent/30 bg-accent/[0.05] p-5 sm:flex-row sm:items-center sm:gap-8 sm:p-6">
           {countdown !== null && (
             <div className="shrink-0 text-center sm:min-w-[130px]">
-              <div className="font-display text-5xl font-black leading-none tracking-tight text-accent">
+              <div className="text-5xl font-bold leading-none tracking-tight text-accent">
                 {countdown === 0 ? "Heute" : countdown}
               </div>
-              <div className="mt-1.5 text-[10px] font-black uppercase tracking-[0.2em] text-text-tertiary">
+              <div className="mt-1.5 text-[11px] font-bold uppercase tracking-wider text-text-tertiary">
                 {countdown === 0 ? "Es geht los" : countdown === 1 ? "Tag bis zum Start" : "Tage bis zum Start"}
               </div>
             </div>
           )}
           <div className="min-w-0">
-            <span className="inline-flex items-center justify-center rounded-full border-2 border-accent px-3 py-[3px] text-[10px] font-black leading-none tracking-[0.18em] text-accent">
+            <span className={`${PILL_REZEPT} text-accent border-accent/40 bg-accent/10`}>
               NÄCHSTES EVENT
             </span>
-            <p className="mt-2.5 font-display text-2xl font-bold tracking-tight text-text-primary">
+            <p className="mt-2.5 text-2xl font-semibold tracking-tight text-text-primary">
               {hero.name}
             </p>
             <p className="mt-1 text-sm text-text-secondary">
@@ -108,7 +109,7 @@ export function EventRadar() {
             className="flex h-full min-w-0 flex-col rounded-2xl border border-border-subtle bg-surface-card p-4 transition-all duration-300 hover:bg-surface-hover"
           >
             <p
-              className={`text-[11px] font-extrabold uppercase tracking-[0.14em] ${e.status === "fixiert" ? "text-accent" : "text-text-tertiary"}`}
+              className={`text-[12px] font-bold uppercase tracking-wider ${e.status === "fixiert" ? "text-accent" : "text-text-tertiary"}`}
             >
               {e.dateLabel}
             </p>

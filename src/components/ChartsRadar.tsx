@@ -26,14 +26,11 @@ export function ChartsRadar() {
 
   // Trend aus Steams Wochenvergleich: 0 = letzte Woche nicht in den Charts.
   const trend = (g: ChartGame) => {
-    if (!g.lastWeekRank)
-      return <span className="text-[12px] font-extrabold text-amber-300">NEU</span>;
+    if (!g.lastWeekRank) return <span className="text-xs font-bold text-warning">NEU</span>;
     const delta = g.lastWeekRank - g.steamRank;
-    if (delta > 0)
-      return <span className="text-[12px] font-extrabold text-accent">▲ {delta}</span>;
-    if (delta < 0)
-      return <span className="text-[12px] font-extrabold text-rose-400">▼ {-delta}</span>;
-    return <span className="text-[12px] font-extrabold text-text-tertiary">—</span>;
+    if (delta > 0) return <span className="text-xs font-bold text-accent">▲ {delta}</span>;
+    if (delta < 0) return <span className="text-xs font-bold text-error">▼ {-delta}</span>;
+    return <span className="text-xs font-bold text-text-tertiary">—</span>;
   };
 
   const podium = games.slice(0, 3);
@@ -74,7 +71,7 @@ export function ChartsRadar() {
               </div>
             )}
             <div className="relative p-4">
-              <span className="absolute -top-5 left-3 font-display text-4xl font-black italic leading-none text-accent [text-shadow:0_2px_12px_rgba(12,11,26,0.9)]">
+              <span className="absolute -top-5 left-3 text-4xl font-bold leading-none tracking-tight text-accent [text-shadow:0_2px_12px_rgba(12,11,26,0.9)]">
                 {g.rank}
               </span>
               <div className="flex items-start justify-between gap-3 pl-9">
@@ -99,8 +96,8 @@ export function ChartsRadar() {
             rel="noreferrer noopener"
             className={`group flex items-center gap-4 px-5 py-3 transition-colors hover:bg-surface-hover ${i > 0 ? "border-t border-border-subtle" : ""}`}
           >
-            <span className="w-6 text-[15px] font-black text-text-tertiary">{g.rank}</span>
-            <p className="min-w-0 flex-1 truncate text-[14px] font-semibold text-text-primary group-hover:text-accent transition-colors">
+            <span className="w-6 text-[15px] font-bold text-text-tertiary">{g.rank}</span>
+            <p className="min-w-0 flex-1 truncate text-[15px] font-semibold text-text-primary group-hover:text-accent transition-colors">
               {g.name}
             </p>
             <span className="text-sm tabular-nums text-text-secondary">
