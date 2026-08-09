@@ -190,7 +190,7 @@ export function PixelRaten() {
           Pixel-Raten
         </h2>
         <span className="text-xs text-text-tertiary">
-          Das tägliche Rätsel · #{raetsel.nummer} · jede Nacht neu
+          Das tägliche Rätsel · jede Nacht neu
         </span>
       </div>
       <SectionDivider />
