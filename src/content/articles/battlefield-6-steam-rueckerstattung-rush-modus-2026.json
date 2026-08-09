@@ -1,0 +1,120 @@
+{
+  "slug": "battlefield-6-steam-rueckerstattung-rush-modus-2026",
+  "title": "Battlefield 6: Steam erstattet Spieler nach 470 Stunden wegen gestrichener Modi",
+  "subtitle": "Die Entfernung des Rush-Modus brachte einem Vielspieler eine volle Rückerstattung seiner Phantom Edition ein.",
+  "excerpt": "Ein Battlefield-6-Spieler erhielt trotz rund 470 gespielter Stunden eine volle Rückerstattung von Steam – weil EA mehrere Spielmodi, darunter Rush, aus dem Shooter entfernt hat.",
+  "seoTitle": "Battlefield 6: Steam-Refund nach 470 Stunden wegen Rush",
+  "metaDescription": "Battlefield 6: Ein Spieler erhielt nach 470 Stunden eine volle Steam-Rückerstattung, nachdem EA mehrere Spielmodi wie Rush entfernt hatte.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "tags": [
+    "Battlefield 6",
+    "EA",
+    "Steam",
+    "Rush-Modus",
+    "Refund"
+  ],
+  "tldr": [
+    "Ein Battlefield-6-Spieler erhielt nach rund 470 Spielstunden eine vollständige Rückerstattung von Steam.",
+    "Grund war die Entfernung mehrerer Spielmodi, darunter King of the Hill, Squad Deathmatch und Rush.",
+    "Der Kauf betraf die Phantom Edition für rund 100 US-Dollar, erworben am Launch-Tag.",
+    "Der Steam-Support bestätigte laut dem Nutzer, dass die Entfernung der Modi problematisch sei."
+  ],
+  "whyItMatters": "Der Fall zeigt, dass Steam auch bei sehr hoher Spielzeit Ausnahmen von seiner üblichen Rückerstattungspolitik machen kann, wenn Publisher zentrale Inhalte nachträglich streichen. Für Spieler von Live-Service-Titeln ist das ein seltenes Beispiel dafür, dass sich fehlende Inhaltstreue tatsächlich finanziell auswirken kann.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Ein Spieler von Battlefield 6 hat auf Reddit berichtet, dass Steam ihm nach rund 470 Spielstunden eine vollständige Rückerstattung gewährt hat. Auslöser war die Entfernung mehrerer Spielmodi durch Entwickler EA, darunter Rush – jener Modus, in dem der Nutzer laut eigenen Angaben die meiste Zeit verbracht hatte."
+    },
+    {
+      "type": "embed",
+      "platform": "reddit",
+      "url": "https://www.reddit.com/r/Battlefield/comments/1vi90wa/steam_just_fully_rfunded_me_for_battlefield_6/"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "470 Std.",
+          "label": "Spielzeit vor der Rückerstattung"
+        },
+        {
+          "value": "100 $",
+          "label": "Kaufpreis der Phantom Edition am Launch-Tag"
+        },
+        {
+          "value": "3 Modi",
+          "label": "entfernte Spielmodi, darunter Rush"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Rush als Auslöser"
+    },
+    {
+      "type": "paragraph",
+      "text": "Laut dem Reddit-Beitrag waren bereits die Entfernungen von King of the Hill und Squad Deathmatch für den Spieler ärgerlich, die Streichung von Rush habe für ihn jedoch das Mass überschritten. Als Beleg legte der Nutzer dem Steam-Support die offizielle Website von Battlefield 6 vor, auf der die entfernten Modi weiterhin beworben wurden – parallel zu den Ankündigungen ihrer Streichung."
+    },
+    {
+      "type": "list",
+      "items": [
+        "King of the Hill – bereits zuvor entfernt",
+        "Squad Deathmatch – bereits zuvor entfernt",
+        "Rush – Hauptgrund für die Rückerstattung laut Spieler"
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "Ich war verärgert, als King of the Hill und Squad Deathmatch entfernt wurden. Aber die Entfernung von Rush ist etwas, das ich nicht hinnehmen werde. Es ist der Modus, in dem ich mit Abstand die meiste Zeit verbracht habe.",
+      "attribution": "Reddit-Nutzer ExplorEverythingOnce laut Destructoid"
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Nutzer erklärte, der zuständige Support-Mitarbeiter habe eingeräumt, dass die Vorgehensweise nicht korrekt sei, worauf die volle Erstattung des Kaufpreises der Phantom Edition erfolgte. Das Entfernen von Spielmodi wird bei Battlefield 6 offenbar wiederholt eingesetzt, um Probleme beim Matchmaking zu adressieren – seit dem Launch vor knapp einem Jahr wurden laut dem Bericht bereits mehrere Modi gestrichen. Der Fall bleibt ein Einzelbeispiel, zeigt aber, dass Steams Rückerstattungsrichtlinien in begründeten Ausnahmefällen auch jenseits der üblichen Zeit- und Stundenlimits greifen können."
+    }
+  ],
+  "poll": {
+    "question": "Sollte Steam Rückerstattungen auch nach hunderten Spielstunden gewähren, wenn Publisher zentrale Spielmodi entfernen?",
+    "options": [
+      "Ja, unabhängig von der Spielzeit",
+      "Nein, Steam sollte hier strenger bleiben",
+      "Nur wenn der Modus zentraler Kaufgrund war",
+      "Kommt auf den Einzelfall an"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-09T19:57:18.619Z",
+  "readingTimeMinutes": 1,
+  "heroVariant": "waveform",
+  "sources": [
+    {
+      "title": "A Battlefield 6 player got a Steam refund after 500 hours of play—for a very specific reason",
+      "url": "https://www.destructoid.com/battlefield-6-player-refunded-after-500-in-game-hours/",
+      "publisher": "Destructoid"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/battlefield-6-steam-rueckerstattung-rush-modus-2026.webp",
+    "alt": "Battlefield 6: Steam erstattet Spieler nach 470 Stunden wegen gestrichener Modi",
+    "credit": "Bild: Destructoid",
+    "sourceUrl": "https://www.destructoid.com/battlefield-6-player-refunded-after-500-in-game-hours/",
+    "sourceWidth": 1600,
+    "sourceHeight": 900
+  },
+  "relatedSlugs": [
+    "gears-of-war-e-day-beta-steam-rekord-2026",
+    "ea-ceo-andrew-wilson-verguetung-2026-77-millionen",
+    "assassins-creed-black-flag-resynced-ps5-verkaufszahlen-2026"
+  ]
+}
