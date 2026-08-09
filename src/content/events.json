@@ -1,0 +1,55 @@
+{
+  "_hinweis": "Event-Radar-Termine, redaktionell gepflegt (Claude aktualisiert bei bestätigten Terminen aus der News-Pipeline). status: fixiert = offiziell bestätigt, erwartet = Branchen-Routine ohne offiziellen Termin, geruecht = unbestätigte Berichte. hero: true = Kandidat für die grosse Countdown-Karte (nächster künftiger Hero gewinnt). dateEnd steuert das automatische Ausblenden nach dem Event.",
+  "events": [
+    {
+      "name": "gamescom 2026",
+      "status": "fixiert",
+      "hero": true,
+      "dateStart": "2026-08-26",
+      "dateEnd": "2026-08-30",
+      "dateLabel": "26.–30. August",
+      "beschreibung": "Die grösste Spielemesse der Welt in der Koelnmesse — mit Opening Night Live am 25. August, 20:00 Uhr.",
+      "thema": "gamescom"
+    },
+    {
+      "name": "Opening Night Live",
+      "status": "fixiert",
+      "dateStart": "2026-08-25",
+      "dateEnd": "2026-08-25",
+      "dateLabel": "25. August · 20:00 Uhr",
+      "beschreibung": "Geoff Keighleys Show zum gamescom-Auftakt — traditionell voller Weltpremieren."
+    },
+    {
+      "name": "Tokyo Game Show 2026",
+      "status": "fixiert",
+      "dateStart": "2026-09-17",
+      "dateEnd": "2026-09-21",
+      "dateLabel": "17.–21. September",
+      "beschreibung": "Japans grösste Messe, zum 30. Jubiläum erstmals fünf Tage — Makuhari Messe, Chiba."
+    },
+    {
+      "name": "PlayStation State of Play",
+      "status": "erwartet",
+      "dateStart": null,
+      "dateEnd": "2026-09-30",
+      "dateLabel": "September (erwartet)",
+      "beschreibung": "Sony zeigt üblicherweise im September die Herbst-Lineups — ein offizieller Termin steht aus."
+    },
+    {
+      "name": "Nintendo Direct",
+      "status": "geruecht",
+      "dateStart": null,
+      "dateEnd": "2026-09-30",
+      "dateLabel": "September (Gerücht)",
+      "beschreibung": "Mehrere Insider rechnen mit einer grossen Direct zur Weihnachtsplanung — unbestätigt."
+    },
+    {
+      "name": "The Game Awards 2026",
+      "status": "erwartet",
+      "dateStart": null,
+      "dateEnd": "2026-12-15",
+      "dateLabel": "Dezember 2026",
+      "beschreibung": "Preisverleihung und Premieren-Feuerwerk zum Jahresabschluss in Los Angeles — Termin folgt."
+    }
+  ]
+}

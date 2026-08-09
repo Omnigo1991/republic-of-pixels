@@ -71,6 +71,11 @@ jobs:
         # unveränderte Deals lösen keinen Commit/Deploy aus.
         run: node pipeline/deals.mjs
 
+      - name: Charts-Radar aktualisieren (Steam-Wochencharts)
+        # Schreibt src/content/charts.json nur montags (bzw. wenn die Datei
+        # fehlt oder älter als 8 Tage ist) — Wochen-Charts, kein Dauerlauf.
+        run: node pipeline/charts.mjs
+
       - name: Instagram-Posts vorbereiten (Auswahl, Texte, Grafiken)
         # Phase 1 des Autopostings: schreibt Grafiken nach public/social/
         # (werden mit committet und von Vercel gehostet) und die Publish-
@@ -83,7 +88,7 @@ jobs:
       - name: Neue Artikel oder Deals erkennen
         id: changes
         run: |
-          if git status --porcelain src/content/articles src/content/deals.json public/social | grep -q .; then
+          if git status --porcelain src/content/articles src/content/deals.json src/content/charts.json public/social | grep -q .; then
             echo "new=true" >> "$GITHUB_OUTPUT"
           else
             echo "new=false" >> "$GITHUB_OUTPUT"
@@ -107,7 +112,7 @@ jobs:
           # articles.generated.ts wird vom prebuild-Schritt neu erzeugt und muss
           # mit committet werden, sonst blockiert die Änderung den Rebase.
           # Der Bilder-Ordner existiert nur, wenn mindestens ein Bild geladen wurde.
-          git add src/content/articles src/content/deals.json pipeline/state.json src/lib/articles.generated.ts
+          git add src/content/articles src/content/deals.json src/content/charts.json pipeline/state.json src/lib/articles.generated.ts
           if [ -d public/images/articles ]; then git add public/images/articles; fi
           if [ -d public/social ]; then git add public/social; fi
           if git diff --cached --quiet; then

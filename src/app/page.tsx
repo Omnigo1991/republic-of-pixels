@@ -6,6 +6,8 @@ import { NewsListe } from "@/components/NewsListe";
 import { CategoryChipBar } from "@/components/CategoryChipBar";
 import { ReleaseRadar } from "@/components/ReleaseRadar";
 import { DealRadar } from "@/components/DealRadar";
+import { ChartsRadar } from "@/components/ChartsRadar";
+import { EventRadar } from "@/components/EventRadar";
 import { GeradeImGespraech } from "@/components/GeradeImGespraech";
 import { DeineMerkliste } from "@/components/DeineMerkliste";
 import { SectionDivider } from "@/components/SectionDivider";
@@ -67,6 +69,18 @@ export default async function HomePage() {
           </Reveal>
           <NewsListe articles={chronological} />
         </section>
+
+        <div className="h-px w-full bg-border-subtle" />
+
+        <Reveal>
+          <ChartsRadar />
+        </Reveal>
+
+        <div className="h-px w-full bg-border-subtle" />
+
+        <Reveal>
+          <EventRadar />
+        </Reveal>
 
         <div className="h-px w-full bg-border-subtle" />
 
