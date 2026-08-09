@@ -16,7 +16,13 @@
 // sofort gepostet (bis zum Deckel). Läuft der Tag hinter dem Soll, holt
 // ein Lauf bis zu 2 Posts nach. Feed-Posts verweisen auf den Link in der
 // Bio; ein Fehlschlag hier darf NIE den Artikel-Publish blockieren.
-import { readFileSync, writeFileSync, readdirSync, existsSync, unlinkSync } from "node:fs";
+import {
+  readFileSync,
+  writeFileSync,
+  readdirSync,
+  existsSync,
+  unlinkSync,
+} from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { tmpdir } from "node:os";
@@ -43,11 +49,17 @@ const CANDIDATE_WINDOW_H = 18;
 const CARD_RETENTION_DAYS = 3;
 
 const zurich = (date = new Date()) => ({
-  day: new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Zurich" }).format(date),
+  day: new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Zurich" }).format(
+    date,
+  ),
   // parseInt statt Number: de-CH formatiert Stunden als "20 Uhr".
   hour: parseInt(
-    new Intl.DateTimeFormat("de-CH", { timeZone: "Europe/Zurich", hour: "numeric", hourCycle: "h23" }).format(date),
-    10
+    new Intl.DateTimeFormat("de-CH", {
+      timeZone: "Europe/Zurich",
+      hour: "numeric",
+      hourCycle: "h23",
+    }).format(date),
+    10,
   ),
 });
 
@@ -61,7 +73,9 @@ function loadState() {
 
 function loadArticles() {
   const out = [];
-  for (const f of readdirSync(ARTICLES_DIR).filter((f) => f.endsWith(".json"))) {
+  for (const f of readdirSync(ARTICLES_DIR).filter((f) =>
+    f.endsWith(".json"),
+  )) {
     try {
       out.push(JSON.parse(readFileSync(join(ARTICLES_DIR, f), "utf8")));
     } catch {
@@ -79,7 +93,7 @@ async function pickAndWriteCopy(candidates, maxPicks) {
   const list = candidates
     .map(
       (a, i) =>
-        `${i} | ${a.category} | ${a.title} | Tags: ${(a.tags ?? []).join(", ")} | ${a.excerpt}`
+        `${i} | ${a.category} | ${a.title} | Tags: ${(a.tags ?? []).join(", ")} | ${a.excerpt}`,
     )
     .join("\n");
 
@@ -138,25 +152,37 @@ Nur wenn ein Kandidat redaktionell unhaltbar ist, darf er fehlen; im Extremfall:
           candidates[p.index] &&
           Array.isArray(p.headlineLines) &&
           p.headlineLines.length >= 1 &&
-          typeof p.caption === "string"
+          typeof p.caption === "string",
       );
       if (brauchbar.length < picks.length) {
-        console.log(`  ${picks.length - brauchbar.length} Pick(s) an der Struktur-Prüfung gescheitert.`);
+        console.log(
+          `  ${picks.length - brauchbar.length} Pick(s) an der Struktur-Prüfung gescheitert.`,
+        );
       }
       if (brauchbar.length === 0) {
-        console.log(`  Auswahl leer: Claude hat trotz ${candidates.length} Kandidaten keinen gewählt.`);
-        console.log(`::warning::Instagram: Auswahl leer trotz Kandidaten — Slot möglicherweise verloren.`);
+        console.log(
+          `  Auswahl leer: Claude hat trotz ${candidates.length} Kandidaten keinen gewählt.`,
+        );
+        console.log(
+          `::warning::Instagram: Auswahl leer trotz Kandidaten — Slot möglicherweise verloren.`,
+        );
       }
       return brauchbar;
     } catch (err) {
       const kopf = raw.replace(/\s+/g, " ").slice(0, 160);
       if (versuch >= 2) {
-        console.log(`  IG-Auswahl endgültig fehlgeschlagen (${err.message}) — dieser Lauf postet nicht.`);
+        console.log(
+          `  IG-Auswahl endgültig fehlgeschlagen (${err.message}) — dieser Lauf postet nicht.`,
+        );
         if (kopf) console.log(`  Antwortbeginn war: "${kopf}…"`);
-        console.log(`::warning::Instagram: Auswahl 3x gescheitert (${err.message}) — dieser Lauf postet nicht.`);
+        console.log(
+          `::warning::Instagram: Auswahl 3x gescheitert (${err.message}) — dieser Lauf postet nicht.`,
+        );
         return [];
       }
-      console.log(`  IG-Auswahl fehlgeschlagen (${err.message}) — Wiederholung`);
+      console.log(
+        `  IG-Auswahl fehlgeschlagen (${err.message}) — Wiederholung`,
+      );
     }
   }
 }
@@ -182,7 +208,7 @@ async function prepare() {
   }
 
   const postedToday = Object.values(state.instagram.posted).filter(
-    (iso) => zurich(new Date(iso)).day === day
+    (iso) => zurich(new Date(iso)).day === day,
   ).length;
 
   const cutoff = Date.now() - CANDIDATE_WINDOW_H * 3600000;
@@ -198,7 +224,7 @@ async function prepare() {
       // dieselbe unpostbare Story in jedem Lauf erneut gewählt werden
       // und frisst mehrere Tages-Slots (Lücke entdeckt 08.08.2026).
       !state.instagram.uebersprungen?.[a.slug] &&
-      a.image?.src
+      a.image?.src,
   );
 
   const breaking = fresh.filter((a) => a.category === "breaking");
@@ -214,153 +240,213 @@ async function prepare() {
   // (z. B. nach einem gescheiterten Lauf) bis zu 2 zum Aufholen. Die
   // Publish-Phase hält zwischen zwei Posts bewusst Abstand.
   const inWindow = hour >= QUIET_BEFORE && hour < QUIET_AFTER;
-  const nonBreakingBudget = Math.max(0, BASE_PER_DAY - postedToday - slots.length);
+  const nonBreakingBudget = Math.max(
+    0,
+    BASE_PER_DAY - postedToday - slots.length,
+  );
   const sollBisJetzt =
-    hour >= 19 ? 5 : hour >= 17 ? 4 : hour >= 15 ? 3 : hour >= 12 ? 2 : hour >= 9 ? 1 : 0;
+    hour >= 19
+      ? 5
+      : hour >= 17
+        ? 4
+        : hour >= 15
+          ? 3
+          : hour >= 12
+            ? 2
+            : hour >= 9
+              ? 1
+              : 0;
   const rueckstand = Math.max(
     0,
-    Math.min(sollBisJetzt, BASE_PER_DAY) - postedToday - slots.length
+    Math.min(sollBisJetzt, BASE_PER_DAY) - postedToday - slots.length,
   );
-  const maxRegular = inWindow ? Math.min(nonBreakingBudget, Math.min(2, rueckstand)) : 0;
+  const maxRegular = inWindow
+    ? Math.min(nonBreakingBudget, Math.min(2, rueckstand))
+    : 0;
 
   const candidates = [...slots, ...regular];
   const maxPicks = slots.length + maxRegular;
   if (candidates.length === 0 || maxPicks === 0) {
     console.log(
-      `Instagram: keine Posts geplant (heute ${postedToday} gepostet, Soll bis jetzt ${sollBisJetzt}, ${fresh.length} frische Artikel, Fenster ${inWindow ? "offen" : "zu"}).`
+      `Instagram: keine Posts geplant (heute ${postedToday} gepostet, Soll bis jetzt ${sollBisJetzt}, ${fresh.length} frische Artikel, Fenster ${inWindow ? "offen" : "zu"}).`,
     );
-    writeFileSync(QUEUE_FILE, JSON.stringify({ token: null, posts: [] }) + "\n");
+    writeFileSync(
+      QUEUE_FILE,
+      JSON.stringify({ token: null, posts: [] }) + "\n",
+    );
     return;
   }
 
-  console.log(`Instagram: bis zu ${maxPicks} Post(s) aus ${candidates.length} Kandidaten …`);
-  const picks = await pickAndWriteCopy(candidates, maxPicks);
-
-  // Beim Kürzen aufs Kontingent haben Breaking-Picks immer Vorrang.
-  picks.sort((a, b) => {
-    const ab = candidates[a.index]?.category === "breaking" ? 0 : 1;
-    const bb = candidates[b.index]?.category === "breaking" ? 0 : 1;
-    return ab - bb;
-  });
+  console.log(
+    `Instagram: bis zu ${maxPicks} Post(s) aus ${candidates.length} Kandidaten …`,
+  );
 
   const { chromium } = await import("playwright");
   const queue = [];
-  for (const pick of picks.slice(0, maxPicks)) {
-    const article = candidates[pick.index];
-
-    // Bild-Wahl (Tim, 08.08.2026 — redaktionell statt starrer Rangfolge):
-    // Claude entscheidet pro Story, ob die Leser das NEWS-Bild sehen wollen
-    // (Trailer, Screenshots, Personen → "pressebild") oder offizielles
-    // Spiel-Artwork passt ("keyart"). Darunter bleiben die Netze: Qualitäts-
-    // Wächter (>=900px Quellhöhe) für Pressebilder, Steam-Pool mit Rotation
-    // pro Spiel gegen Bild-Wiederholung, und die jeweils andere Quelle als
-    // Fallback. Nichts Scharfes → kein Post.
-    const presseTauglich =
-      article.image?.sourceHeight != null && article.image.sourceHeight >= 900;
-    let imagePath = null;
-    let credit = article.image?.credit ?? null;
-
-    if (pick.bildWahl === "pressebild" && presseTauglich) {
-      imagePath = portraitPathFor(article);
-      console.log(`  ${article.slug}: redaktionelle Wahl Pressebild (${credit})`);
+  // Ersatz-Runden (09.08.2026, nach dem 10:03-Lauf): Scheitert ein
+  // gewählter Kandidat an der Bild-Prüfung, verfiel vorher der ganze
+  // Slot — der Lauf fragt jetzt mit den übrigen Kandidaten nach, bis das
+  // Kontingent steht oder der Pool leer ist (max. 3 Auswahl-Runden).
+  const bereitsVersucht = new Set();
+  for (let runde = 0; runde < 3 && queue.length < maxPicks; runde++) {
+    const pool = candidates.filter((a) => !bereitsVersucht.has(a.slug));
+    if (pool.length === 0) break;
+    const offen = maxPicks - queue.length;
+    if (runde > 0) {
+      console.log(
+        `Instagram: Ersatz-Runde ${runde} — ${offen} Slot(s) offen, ${pool.length} Kandidaten übrig.`,
+      );
     }
-    if (!imagePath && pick.gameName) {
-      state.instagram.spielBild ??= {};
-      const rotation = state.instagram.spielBild[pick.gameName.toLowerCase()] ?? 0;
-      const spielBild = await holeSpielBild({
-        gameName: pick.gameName,
-        rotation,
-        outPath: join(tmpdir(), `rop-keyart-${article.slug}.jpg`),
-      });
-      if (spielBild) {
-        imagePath = spielBild.pfad;
-        credit = spielBild.credit;
-        state.instagram.spielBild[pick.gameName.toLowerCase()] = rotation + 1;
-        console.log(`  ${article.slug}: offizielles Spielbild ${rotation % spielBild.poolGroesse} (${spielBild.credit})`);
+    const picks = await pickAndWriteCopy(pool, offen);
+    if (picks.length === 0) break;
+
+    // Beim Kürzen aufs Kontingent haben Breaking-Picks immer Vorrang.
+    picks.sort((a, b) => {
+      const ab = pool[a.index]?.category === "breaking" ? 0 : 1;
+      const bb = pool[b.index]?.category === "breaking" ? 0 : 1;
+      return ab - bb;
+    });
+
+    for (const pick of picks.slice(0, offen)) {
+      const article = pool[pick.index];
+      bereitsVersucht.add(article.slug);
+
+      // Bild-Wahl (Tim, 08.08.2026 — redaktionell statt starrer Rangfolge):
+      // Claude entscheidet pro Story, ob die Leser das NEWS-Bild sehen wollen
+      // (Trailer, Screenshots, Personen → "pressebild") oder offizielles
+      // Spiel-Artwork passt ("keyart"). Darunter bleiben die Netze: Qualitäts-
+      // Wächter (>=900px Quellhöhe) für Pressebilder, Steam-Pool mit Rotation
+      // pro Spiel gegen Bild-Wiederholung, und die jeweils andere Quelle als
+      // Fallback. Nichts Scharfes → kein Post.
+      const presseTauglich =
+        article.image?.sourceHeight != null &&
+        article.image.sourceHeight >= 900;
+      let imagePath = null;
+      let credit = article.image?.credit ?? null;
+
+      if (pick.bildWahl === "pressebild" && presseTauglich) {
+        imagePath = portraitPathFor(article);
+        console.log(
+          `  ${article.slug}: redaktionelle Wahl Pressebild (${credit})`,
+        );
       }
-    }
-    if (!imagePath && presseTauglich) {
-      imagePath = portraitPathFor(article);
-    }
-    if (!imagePath) {
-      state.instagram.uebersprungen ??= {};
-      state.instagram.uebersprungen[article.slug] = new Date().toISOString();
-      console.log(`  ${article.slug}: kein offizielles Bild und kein scharfes Pressebild — übersprungen und für künftige Läufe gesperrt`);
-      continue;
-    }
-    const badge =
-      article.category === "breaking" ? "BREAKING" : article.category === "reviews" ? "REVIEW" : null;
-
-    // Format-Regeln (Tim, 08.08.2026):
-    // - BREAKING wird IMMER als Reel gepostet und zählt nicht für den
-    //   Wechsel (beeinflusst die Reihenfolge der normalen Posts nicht).
-    // - Normale Posts wechseln strikt 50/50: Reel, Bild, Reel … (saubere
-    //   A/B-Datenpunkte; Tageszähler im State).
-    // Schlägt das Reel-Rendering fehl, greift lautlos das Bild — ein Post
-    // geht nie verloren.
-    const istBreaking = article.category === "breaking";
-    let alsReel;
-    if (istBreaking) {
-      alsReel = true;
-    } else {
-      alsReel = state.instagram.wechsel.nichtBreaking % 2 === 0;
-      state.instagram.wechsel.nichtBreaking++;
-    }
-    let cardRel = null;
-    if (alsReel) {
-      const reelRel = `/social/ig-${article.slug}.mp4`;
-      try {
-        await renderInstagramReel({
-          headlineLines: pick.headlineLines,
-          badge,
-          imagePath,
-          credit,
-          outPath: join(ROOT, "public", reelRel),
-          chromium,
+      if (!imagePath && pick.gameName) {
+        state.instagram.spielBild ??= {};
+        const rotation =
+          state.instagram.spielBild[pick.gameName.toLowerCase()] ?? 0;
+        const spielBild = await holeSpielBild({
+          gameName: pick.gameName,
+          rotation,
+          outPath: join(tmpdir(), `rop-keyart-${article.slug}.jpg`),
         });
-        cardRel = reelRel;
-      } catch (err) {
-        console.log(`  ${article.slug}: Reel fehlgeschlagen (${err.message}) — Bild-Fallback`);
+        if (spielBild) {
+          imagePath = spielBild.pfad;
+          credit = spielBild.credit;
+          state.instagram.spielBild[pick.gameName.toLowerCase()] = rotation + 1;
+          console.log(
+            `  ${article.slug}: offizielles Spielbild ${rotation % spielBild.poolGroesse} (${spielBild.credit})`,
+          );
+        }
       }
-    }
-    if (!cardRel) {
-      cardRel = `/social/ig-${article.slug}.jpg`;
-      try {
-        await renderInstagramCard({
-          headlineLines: pick.headlineLines,
-          badge,
-          imagePath,
-          credit,
-          outPath: join(ROOT, "public", cardRel),
-          chromium,
-        });
-      } catch (err) {
-        console.log(`  ${article.slug}: Grafik fehlgeschlagen (${err.message}) — übersprungen`);
+      if (!imagePath && presseTauglich) {
+        imagePath = portraitPathFor(article);
+      }
+      if (!imagePath) {
+        state.instagram.uebersprungen ??= {};
+        state.instagram.uebersprungen[article.slug] = new Date().toISOString();
+        console.log(
+          `  ${article.slug}: kein offizielles Bild und kein scharfes Pressebild — übersprungen und für künftige Läufe gesperrt`,
+        );
         continue;
       }
+      const badge =
+        article.category === "breaking"
+          ? "BREAKING"
+          : article.category === "reviews"
+            ? "REVIEW"
+            : null;
+
+      // Format-Regeln (Tim, 08.08.2026):
+      // - BREAKING wird IMMER als Reel gepostet und zählt nicht für den
+      //   Wechsel (beeinflusst die Reihenfolge der normalen Posts nicht).
+      // - Normale Posts wechseln strikt 50/50: Reel, Bild, Reel … (saubere
+      //   A/B-Datenpunkte; Tageszähler im State).
+      // Schlägt das Reel-Rendering fehl, greift lautlos das Bild — ein Post
+      // geht nie verloren.
+      const istBreaking = article.category === "breaking";
+      let alsReel;
+      if (istBreaking) {
+        alsReel = true;
+      } else {
+        alsReel = state.instagram.wechsel.nichtBreaking % 2 === 0;
+        state.instagram.wechsel.nichtBreaking++;
+      }
+      let cardRel = null;
+      if (alsReel) {
+        const reelRel = `/social/ig-${article.slug}.mp4`;
+        try {
+          await renderInstagramReel({
+            headlineLines: pick.headlineLines,
+            badge,
+            imagePath,
+            credit,
+            outPath: join(ROOT, "public", reelRel),
+            chromium,
+          });
+          cardRel = reelRel;
+        } catch (err) {
+          console.log(
+            `  ${article.slug}: Reel fehlgeschlagen (${err.message}) — Bild-Fallback`,
+          );
+        }
+      }
+      if (!cardRel) {
+        cardRel = `/social/ig-${article.slug}.jpg`;
+        try {
+          await renderInstagramCard({
+            headlineLines: pick.headlineLines,
+            badge,
+            imagePath,
+            credit,
+            outPath: join(ROOT, "public", cardRel),
+            chromium,
+          });
+        } catch (err) {
+          console.log(
+            `  ${article.slug}: Grafik fehlgeschlagen (${err.message}) — übersprungen`,
+          );
+          continue;
+        }
+      }
+
+      const hashtags = (pick.hashtags ?? [])
+        .slice(0, 5)
+        .map((h) => `#${String(h).replace(/[^\p{L}\p{N}]/gu, "")}`)
+        .join(" ");
+      const caption = `${pick.caption}\n${hashtags}`.replaceAll("ß", "ss");
+
+      // Alt-Text (Barrierefreiheit + Instagram-Suche, 08.08.2026):
+      // beschreibt die Post-Grafik deterministisch aus Headline und
+      // Bildnachweis — die API nimmt ihn nur bei Bild-Posts an.
+      const headlineText = pick.headlineLines
+        .map((zeile) => zeile.map((s) => s.text).join(" "))
+        .join(" ");
+      const altText =
+        `Nachrichtengrafik von Republic of Pixels: «${headlineText}» (${credit ?? "Symbolbild"})`.slice(
+          0,
+          950,
+        );
+
+      queue.push({ slug: article.slug, cardRel, caption, altText });
+      // Optimistisch als gepostet markieren: verhindert Doppel-Posts selbst
+      // dann, wenn die Publish-Phase später fehlschlägt (bewusster Trade-off:
+      // lieber ein verlorener Post als ein doppelter).
+      state.instagram.posted[article.slug] = new Date().toISOString();
+      state.instagram.cards[cardRel] = new Date().toISOString();
+      console.log(
+        `  ✓ Grafik gerendert: ${cardRel}${badge ? ` [${badge}]` : ""}`,
+      );
     }
-
-    const hashtags = (pick.hashtags ?? [])
-      .slice(0, 5)
-      .map((h) => `#${String(h).replace(/[^\p{L}\p{N}]/gu, "")}`)
-      .join(" ");
-    const caption = `${pick.caption}\n${hashtags}`.replaceAll("ß", "ss");
-
-    // Alt-Text (Barrierefreiheit + Instagram-Suche, 08.08.2026):
-    // beschreibt die Post-Grafik deterministisch aus Headline und
-    // Bildnachweis — die API nimmt ihn nur bei Bild-Posts an.
-    const headlineText = pick.headlineLines
-      .map((zeile) => zeile.map((s) => s.text).join(" "))
-      .join(" ");
-    const altText = `Nachrichtengrafik von Republic of Pixels: «${headlineText}» (${credit ?? "Symbolbild"})`.slice(0, 950);
-
-    queue.push({ slug: article.slug, cardRel, caption, altText });
-    // Optimistisch als gepostet markieren: verhindert Doppel-Posts selbst
-    // dann, wenn die Publish-Phase später fehlschlägt (bewusster Trade-off:
-    // lieber ein verlorener Post als ein doppelter).
-    state.instagram.posted[article.slug] = new Date().toISOString();
-    state.instagram.cards[cardRel] = new Date().toISOString();
-    console.log(`  ✓ Grafik gerendert: ${cardRel}${badge ? ` [${badge}]` : ""}`);
   }
 
   // Alte Karten aufräumen (Repo schlank halten): gerenderte Grafiken werden
@@ -381,10 +467,14 @@ async function prepare() {
   // aus dem Kandidatenfenster).
   const forgetAfter = Date.now() - 30 * 86400000;
   for (const [slug, iso] of Object.entries(state.instagram.posted)) {
-    if (new Date(iso).getTime() < forgetAfter) delete state.instagram.posted[slug];
+    if (new Date(iso).getTime() < forgetAfter)
+      delete state.instagram.posted[slug];
   }
-  for (const [slug, iso] of Object.entries(state.instagram.uebersprungen ?? {})) {
-    if (new Date(iso).getTime() < forgetAfter) delete state.instagram.uebersprungen[slug];
+  for (const [slug, iso] of Object.entries(
+    state.instagram.uebersprungen ?? {},
+  )) {
+    if (new Date(iso).getTime() < forgetAfter)
+      delete state.instagram.uebersprungen[slug];
   }
 
   // Token-Pflege: Langlebige Instagram-Tokens gelten 60 Tage und werden
@@ -393,14 +483,15 @@ async function prepare() {
   // Secret dient dann nur noch als Bootstrap. Publish nutzt den State-Token,
   // falls vorhanden (via Queue-Datei, damit die Phase ohne State-Commit
   // auskommt).
-  const effectiveToken = state.instagram.token?.value ?? process.env.IG_ACCESS_TOKEN;
+  const effectiveToken =
+    state.instagram.token?.value ?? process.env.IG_ACCESS_TOKEN;
   const lastCheck = state.instagram.tokenCheckedAt
     ? new Date(state.instagram.tokenCheckedAt).getTime()
     : 0;
   if (effectiveToken && Date.now() - lastCheck > 7 * 86400000) {
     try {
       const res = await fetch(
-        `${IG_API.replace("/v23.0", "")}/refresh_access_token?grant_type=ig_refresh_token&access_token=${encodeURIComponent(effectiveToken)}`
+        `${IG_API.replace("/v23.0", "")}/refresh_access_token?grant_type=ig_refresh_token&access_token=${encodeURIComponent(effectiveToken)}`,
       );
       const data = await res.json();
       if (res.ok && data.access_token) {
@@ -408,23 +499,41 @@ async function prepare() {
         if (data.access_token !== process.env.IG_ACCESS_TOKEN) {
           state.instagram.token = {
             value: data.access_token,
-            expiresAt: new Date(Date.now() + (data.expires_in ?? 0) * 1000).toISOString(),
+            expiresAt: new Date(
+              Date.now() + (data.expires_in ?? 0) * 1000,
+            ).toISOString(),
           };
         }
-        console.log("Instagram: Token verlängert (gültig bis " +
-          new Date(Date.now() + (data.expires_in ?? 0) * 1000).toISOString().slice(0, 10) + ").");
+        console.log(
+          "Instagram: Token verlängert (gültig bis " +
+            new Date(Date.now() + (data.expires_in ?? 0) * 1000)
+              .toISOString()
+              .slice(0, 10) +
+            ").",
+        );
       } else {
-        console.log(`Instagram: Token-Verlängerung fehlgeschlagen (${data.error?.message ?? res.status}).`);
+        console.log(
+          `Instagram: Token-Verlängerung fehlgeschlagen (${data.error?.message ?? res.status}).`,
+        );
       }
     } catch (err) {
-      console.log(`Instagram: Token-Verlängerung fehlgeschlagen (${err.message}).`);
+      console.log(
+        `Instagram: Token-Verlängerung fehlgeschlagen (${err.message}).`,
+      );
     }
   }
 
-  writeFileSync(STATE_FILE, JSON.stringify(loadStateMerge(state), null, 2) + "\n");
+  writeFileSync(
+    STATE_FILE,
+    JSON.stringify(loadStateMerge(state), null, 2) + "\n",
+  );
   writeFileSync(
     QUEUE_FILE,
-    JSON.stringify({ token: state.instagram.token?.value ?? null, posts: queue }, null, 2) + "\n"
+    JSON.stringify(
+      { token: state.instagram.token?.value ?? null, posts: queue },
+      null,
+      2,
+    ) + "\n",
   );
   console.log(`Instagram: ${queue.length} Post(s) vorbereitet.`);
 }
@@ -496,7 +605,9 @@ async function publish() {
     const imageUrl = `${SITE}${item.cardRel}`;
     console.log(`Instagram: warte auf ${imageUrl} …`);
     if (!(await waitForUrl(imageUrl))) {
-      console.log(`  Grafik nicht erreichbar (Deploy zu langsam?) — Post entfällt: ${item.slug}`);
+      console.log(
+        `  Grafik nicht erreichbar (Deploy zu langsam?) — Post entfällt: ${item.slug}`,
+      );
       continue;
     }
     try {
@@ -518,24 +629,27 @@ async function publish() {
               // (Reels laut Doku uneinheitlich — dort weggelassen).
               ...(item.altText ? { alt_text: item.altText } : {}),
               access_token: token,
-            }
+            },
       );
       // Container-Verarbeitung abwarten — Videos brauchen deutlich länger
       // als Bilder (Transkodierung durch Instagram, bis zu ~3 Minuten).
       const versuche = istReel ? 36 : 12;
       for (let i = 0; i < versuche; i++) {
         const st = await fetch(
-          `${IG_API}/${container.id}?fields=status_code&access_token=${encodeURIComponent(token)}`
+          `${IG_API}/${container.id}?fields=status_code&access_token=${encodeURIComponent(token)}`,
         ).then((r) => r.json());
         if (st.status_code === "FINISHED") break;
-        if (st.status_code === "ERROR") throw new Error("Container-Verarbeitung fehlgeschlagen");
+        if (st.status_code === "ERROR")
+          throw new Error("Container-Verarbeitung fehlgeschlagen");
         await new Promise((r) => setTimeout(r, 5000));
       }
       const published = await igPost("/me/media_publish", {
         creation_id: container.id,
         access_token: token,
       });
-      console.log(`  ✓ Gepostet (${istReel ? "Reel" : "Bild"}): ${item.slug} (Media-ID ${published.id})`);
+      console.log(
+        `  ✓ Gepostet (${istReel ? "Reel" : "Bild"}): ${item.slug} (Media-ID ${published.id})`,
+      );
     } catch (err) {
       console.log(`  ✗ Post fehlgeschlagen für ${item.slug}: ${err.message}`);
     }
