@@ -90,9 +90,12 @@ export function DeineMerkliste() {
 
   return (
     <section aria-labelledby="merkliste-heading" className="py-10">
-      <h2 id="merkliste-heading" className="mb-3 text-xl font-semibold tracking-tight text-text-primary">
-        Deine Merkliste
-      </h2>
+      <div className="mb-3 flex items-baseline justify-between">
+        <h2 id="merkliste-heading" className="text-xl font-semibold tracking-tight text-text-primary">
+          Deine Merkliste
+        </h2>
+        <span className="text-xs text-text-tertiary">Themen, die du verfolgst</span>
+      </div>
       <SectionDivider />
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
         {eintraege.map((e) => (
