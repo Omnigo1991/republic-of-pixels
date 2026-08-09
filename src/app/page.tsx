@@ -9,6 +9,7 @@ import { DealRadar } from "@/components/DealRadar";
 import { ChartsRadar } from "@/components/ChartsRadar";
 import { EventRadar } from "@/components/EventRadar";
 import { GeradeImGespraech } from "@/components/GeradeImGespraech";
+import { PixelRaten } from "@/components/PixelRaten";
 import { DeineMerkliste } from "@/components/DeineMerkliste";
 import { SectionDivider } from "@/components/SectionDivider";
 import { Reveal } from "@/components/Reveal";
@@ -124,6 +125,9 @@ export default async function HomePage() {
         </Reveal>
         <Reveal>
           <DeineMerkliste />
+        </Reveal>
+        <Reveal>
+          <PixelRaten />
         </Reveal>
       </div>
     </>

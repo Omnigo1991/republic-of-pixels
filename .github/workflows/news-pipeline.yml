@@ -76,6 +76,15 @@ jobs:
         # fehlt oder älter als 8 Tage ist) — Wochen-Charts, kein Dauerlauf.
         run: node pipeline/charts.mjs
 
+      - name: Pixel-Raten erzeugen (tägliches Rätsel)
+        # Erzeugt einmal pro Tag (Europe/Zurich) das Rätsel samt fünf
+        # Schärfe-Stufen-Bildern; existiert das heutige schon, tut der
+        # Schritt nichts. Braucht die Twitch-Secrets für IGDB-Artwork.
+        env:
+          TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
+          TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
+        run: node pipeline/pixelraten.mjs
+
       - name: Instagram-Posts vorbereiten (Auswahl, Texte, Grafiken)
         # Phase 1 des Autopostings: schreibt Grafiken nach public/social/
         # (werden mit committet und von Vercel gehostet) und die Publish-
@@ -92,7 +101,7 @@ jobs:
       - name: Neue Artikel oder Deals erkennen
         id: changes
         run: |
-          if git status --porcelain src/content/articles src/content/deals.json src/content/charts.json public/social | grep -q .; then
+          if git status --porcelain src/content/articles src/content/deals.json src/content/charts.json src/content/pixelraten.json public/social public/images/pixelraten | grep -q .; then
             echo "new=true" >> "$GITHUB_OUTPUT"
           else
             echo "new=false" >> "$GITHUB_OUTPUT"
@@ -116,7 +125,8 @@ jobs:
           # articles.generated.ts wird vom prebuild-Schritt neu erzeugt und muss
           # mit committet werden, sonst blockiert die Änderung den Rebase.
           # Der Bilder-Ordner existiert nur, wenn mindestens ein Bild geladen wurde.
-          git add src/content/articles src/content/deals.json src/content/charts.json pipeline/state.json src/lib/articles.generated.ts
+          git add src/content/articles src/content/deals.json src/content/charts.json src/content/pixelraten.json pipeline/state.json src/lib/articles.generated.ts
+          if [ -d public/images/pixelraten ]; then git add public/images/pixelraten; fi
           if [ -d public/images/articles ]; then git add public/images/articles; fi
           if [ -d public/social ]; then git add public/social; fi
           if git diff --cached --quiet; then
