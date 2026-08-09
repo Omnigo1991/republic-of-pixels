@@ -361,7 +361,25 @@ async function prepare() {
       // Marken-Design für starke Storys ohne brauchbares Bild (Hardware/
       // Branche/Personalien). Immer als BILD gepostet (kein Ken-Burns auf
       // Typografie) und ohne Einfluss auf den Reel/Bild-Wechsel.
+      //
+      // HÖCHSTENS EINE PRO TAG (Nachbesserung 09.08. abends): Am ersten
+      // Tag landeten zwei Typo-Karten direkt hintereinander im Feed — sie
+      // sehen einander sehr ähnlich und lassen das Profil eintönig wirken.
+      // Ist das Tageskontingent weg, wird die Story übersprungen und der
+      // Lauf holt sich per Ersatz-Runde eine mit echtem Bildmaterial.
       const alsTypoKarte = !imagePath;
+      state.instagram.typo ??= {};
+      const typoHeute = Object.values(state.instagram.typo).filter(
+        (iso) => zurich(new Date(iso)).day === day,
+      ).length;
+      if (alsTypoKarte && typoHeute >= 1) {
+        state.instagram.uebersprungen ??= {};
+        state.instagram.uebersprungen[article.slug] = new Date().toISOString();
+        console.log(
+          `  ${article.slug}: kein Bildmaterial und Typo-Karte heute schon genutzt — übersprungen`,
+        );
+        continue;
+      }
       const badge =
         article.category === "breaking"
           ? "BREAKING"
@@ -403,6 +421,7 @@ async function prepare() {
             chromium,
           });
           credit = "Republic of Pixels";
+          state.instagram.typo[article.slug] = new Date().toISOString();
           console.log(`  ${article.slug}: Typo-Karte (kein Bildmaterial verfügbar)`);
         } catch (err) {
           state.instagram.uebersprungen ??= {};

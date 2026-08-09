@@ -39,17 +39,28 @@ function tokens(s) {
   return String(s).toLowerCase().split(/[^a-z0-9]+/).filter(Boolean);
 }
 
-// Namens-Abgleich auf GANZWORT-Basis: Der frühere Zeichen-startsWith liess
-// "grand theft auto vi" auf "grand theft auto VICE city" passen und lieferte
-// am 09.08.2026 Vice-City-Artwork für eine GTA-6-Anfrage. Jetzt gilt: Die
-// kürzere Namensform muss Wort für Wort der Anfang der längeren sein
-// (deckt Exakt-Treffer und Editions-Zusätze wie "… V Legacy" weiter ab).
-function namensTreffer(a, b) {
+// Namens-Abgleich auf GANZWORT-Basis mit Rangfolge (09.08.2026 abends
+// erweitert): Vorher musste der kürzere Name der ANFANG des längeren sein —
+// damit fiel "Oblivion Remastered" gegen "The Elder Scrolls IV: Oblivion
+// Remastered" durch, obwohl das Artwork vorhanden war, und die Story landete
+// unnötig auf einer Typo-Karte. Jetzt zählt auch eine zusammenhängende
+// Wortfolge irgendwo im Titel — aber schlechter bewertet, damit bei mehreren
+// Kandidaten der genauere gewinnt.
+// Rang 0 = identisch, 1 = Anfang, 2 = enthaltene Wortfolge, null = kein Treffer.
+// Weiterhin sicher: "grand theft auto vi" trifft NICHT auf "… vice city",
+// weil "vi" und "vice" verschiedene Wörter sind.
+function trefferRang(a, b) {
   const ta = tokens(a);
   const tb = tokens(b);
+  if (ta.length === 0 || tb.length === 0) return null;
   const kurz = ta.length <= tb.length ? ta : tb;
   const lang = kurz === ta ? tb : ta;
-  return kurz.length > 0 && kurz.every((t, i) => t === lang[i]);
+  if (ta.length === tb.length && ta.every((t, i) => t === tb[i])) return 0;
+  if (kurz.every((t, i) => t === lang[i])) return 1;
+  for (let start = 1; start + kurz.length <= lang.length; start++) {
+    if (kurz.every((t, i) => t === lang[start + i])) return 2;
+  }
+  return null;
 }
 
 function exaktGleich(a, b) {
@@ -73,9 +84,13 @@ async function steamPool(gameName) {
     { headers: { "User-Agent": UA }, signal: AbortSignal.timeout(15000) }
   ).then((r) => r.json());
 
-  // Strenger Abgleich: exakt oder Ganzwort-Präfix — sonst landet das
-  // Material des falschen Spiels auf dem Post.
-  const treffer = (suche.items ?? []).find((it) => namensTreffer(gameName, it.name));
+  // Bester Treffer nach Rang; bei Gleichstand gewinnt Steams eigene
+  // Relevanz-Reihenfolge (verhindert, dass etwa "Turok 3: Shadow of
+  // Oblivion Remastered" das gesuchte Oblivion verdrängt).
+  const treffer = (suche.items ?? [])
+    .map((it, i) => ({ it, rang: trefferRang(gameName, it.name), i }))
+    .filter((k) => k.rang !== null)
+    .sort((a, b) => a.rang - b.rang || a.i - b.i)[0]?.it;
   if (!treffer) return null;
 
   // Details: Screenshots + Publisher (ein Aufruf für beides).
@@ -138,7 +153,7 @@ async function igdbPool(gameName) {
   // alles, Hauptspiel (category 0) schlägt Bundles/DLC/Mods, mehr
   // Artwork schlägt weniger (Fan-Einträge wie "BotW Randomizer" von
   // Drittpersonen fallen so zuverlässig durch).
-  const kandidaten = (Array.isArray(spiele) ? spiele : []).filter((s) => namensTreffer(gameName, s.name));
+  const kandidaten = (Array.isArray(spiele) ? spiele : []).filter((s) => trefferRang(gameName, s.name) !== null);
   if (kandidaten.length === 0) return null;
   kandidaten.sort((a, b) => {
     const ea = exaktGleich(gameName, a.name) ? 0 : 1;
@@ -188,25 +203,26 @@ export async function holeSpielBild({ gameName, rotation = 0, outPath }) {
     if (!pool) return null;
 
     const { eintraege, publisher, spielKey } = pool;
-    const wahl = eintraege[rotation % eintraege.length];
 
+    // Ab der Rotations-Position ALLE Pool-Einträge durchgehen, bis einer
+    // lädt und den Qualitäts-Wächter besteht (Fix 09.08.2026 abends):
+    // Vorher wurde bei einem Fehlschlag nur das Cover als Rettung probiert
+    // — hat ein Spiel wie "Oblivion Remastered" gar kein Steam-Cover (404),
+    // blieben die sechs vorhandenen Screenshots ungenutzt und die Story
+    // landete unnötig auf einer Typo-Karte.
     let buffer = null;
-    for (const url of wahl) {
-      buffer = await laden(url);
-      if (buffer && buffer.length >= 20000) break;
-      buffer = null;
-    }
-    // Gewählter Eintrag nicht ladbar → erster Eintrag (Key Art/Cover) als Rettung.
-    if (!buffer) {
-      for (const url of eintraege[0]) {
-        buffer = await laden(url);
-        if (buffer && buffer.length >= 20000) break;
-        buffer = null;
+    for (let n = 0; n < eintraege.length && !buffer; n++) {
+      const eintrag = eintraege[(rotation + n) % eintraege.length];
+      for (const url of eintrag) {
+        const kandidat = await laden(url);
+        if (!kandidat || kandidat.length < 20000) continue;
+        const meta = await sharp(kandidat).metadata();
+        if ((meta.height ?? 0) < 900) continue;
+        buffer = kandidat;
+        break;
       }
     }
     if (!buffer) return null;
-    const meta = await sharp(buffer).metadata();
-    if ((meta.height ?? 0) < 900) return null;
     await writeFile(outPath, buffer);
 
     return {
