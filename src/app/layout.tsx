@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import { Footer } from "@/components/Footer";
 import { VisitTracker } from "@/components/VisitTracker";
+import { TeilenKnopf } from "@/components/TeilenKnopf";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -97,6 +98,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {/* Masthead wird pro Seitentyp gerendert (Masthead.tsx: brand/section/slim). */}
         <main>{children}</main>
         <Footer />
+        {/* Teilt immer die aktuelle Seite (Tim, 09.08.2026) — deshalb im
+            Layout und nicht pro Seite. */}
+        <TeilenKnopf />
         <VisitTracker />
         <Analytics />
       </body>
