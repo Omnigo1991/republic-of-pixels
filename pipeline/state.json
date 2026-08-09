@@ -1865,7 +1865,23 @@
     "b343535708c39316": "2026-08-09T04:52:13.394Z",
     "f81b69f9ca30a594": "2026-08-09T04:52:13.394Z",
     "47b377c95c166e90": "2026-08-09T04:52:13.394Z",
-    "2e0b6d73a4c5076d": "2026-08-09T04:52:13.394Z"
+    "2e0b6d73a4c5076d": "2026-08-09T04:52:13.394Z",
+    "b8722ee2396ca628": "2026-08-09T08:03:44.850Z",
+    "00d3aa524f48fc6b": "2026-08-09T08:03:44.850Z",
+    "d63a06b60ec430af": "2026-08-09T08:03:44.850Z",
+    "643802bd368633a7": "2026-08-09T08:03:44.850Z",
+    "479c339d6058d1e6": "2026-08-09T08:03:44.850Z",
+    "54c109fd06f1e4da": "2026-08-09T08:03:44.850Z",
+    "9d5f1ec1009d8f47": "2026-08-09T08:03:44.850Z",
+    "a8fbd8b6c57bc55e": "2026-08-09T08:03:44.850Z",
+    "ced2626a9dcd1b12": "2026-08-09T08:03:44.850Z",
+    "d82cb8ab7994b781": "2026-08-09T08:03:44.850Z",
+    "26dab0208a758137": "2026-08-09T08:03:44.850Z",
+    "21f8512de9f05229": "2026-08-09T08:03:44.850Z",
+    "4896dae994bb74ae": "2026-08-09T08:03:44.850Z",
+    "4610e56f8910adf8": "2026-08-09T08:03:44.850Z",
+    "598d400347b40b1b": "2026-08-09T08:03:44.850Z",
+    "5a4c80cab73e1201": "2026-08-09T08:03:44.850Z"
   },
   "instagram": {
     "posted": {
@@ -1881,14 +1897,17 @@
       "gta-6-preis-80-dollar-zelnick-schnaeppchen-2026"
     ],
     "wechsel": {
-      "day": "2026-08-08",
-      "nichtBreaking": 2
+      "day": "2026-08-09",
+      "nichtBreaking": 0
     },
     "tokenCheckedAt": "2026-08-08T08:23:33.168Z",
     "token": {
       "value": "IGAAQ9UX5JEQpBZAGFLQ0pGWDNZATE5QSUwwSlVna3JhZAlZAnYkRZAMkhOeVRzSDl6T3NZAVWlNdGx4d1oxeDBpVGRfcThXN1NfM3QwU0RZAa2ppOWx2V2VhMTdELURGT3B5S09MYUZAPQU9iTXptSzhyeFRxeVVR",
       "expiresAt": "2026-10-06T18:29:59.168Z"
     },
-    "spielBild": {}
+    "spielBild": {},
+    "uebersprungen": {
+      "br1-infinite-echtgeld-kills-unbestaetigt-2026": "2026-08-09T08:04:01.341Z"
+    }
   }
 }

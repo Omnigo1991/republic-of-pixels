@@ -1,0 +1,124 @@
+{
+  "slug": "oblivion-remastered-switch-2-gameplay-leak-2026",
+  "title": "Oblivion Remastered für Switch 2: Gameplay-Leak vor Release aufgetaucht",
+  "subtitle": "Offenbar kursieren bereits physische Exemplare, bevor The Elder Scrolls IV: Oblivion Remastered offiziell für die Switch 2 erscheint.",
+  "excerpt": "Kurz vor dem offiziellen Verkaufsstart sind angeblich erste physische Exemplare von Oblivion Remastered für die Switch 2 im Umlauf. Videos zeigen technische Details zu Auflösung und Framerate.",
+  "seoTitle": "Oblivion Remastered Switch 2: Gameplay-Leak vor Release",
+  "metaDescription": "Vor dem Release am 11. August kursieren angeblich erste Switch-2-Exemplare von Oblivion Remastered. Ein Leak zeigt Auflösung, Framerate und Umfang.",
+  "category": "leaks",
+  "platforms": [
+    "nintendo"
+  ],
+  "tags": [
+    "Oblivion Remastered",
+    "Nintendo Switch 2",
+    "Bethesda",
+    "Leak",
+    "The Elder Scrolls"
+  ],
+  "tldr": [
+    "Angeblich sind bereits physische Exemplare von Oblivion Remastered für Switch 2 im Umlauf",
+    "Zwei Gameplay-Videos mit insgesamt rund zehn Minuten Material kursieren online",
+    "Docked-Modus läuft laut Leak in 1080p, Handheld-Modus in 900p, jeweils mit DLSS-Unterstützung",
+    "Zielbildrate liegt bei 30 fps, offizieller Release ist für den 11. August 2026 angesetzt"
+  ],
+  "whyItMatters": "Für Switch-2-Besitzer:innen ist die technische Umsetzung von Oblivion Remastered ein wichtiger Gradmesser dafür, wie gut aufwendige Unreal-Engine-5-Titel auf der Konsole laufen. Da es sich um unbestätigtes Leak-Material handelt, sollten die gezeigten Werte bis zum offiziellen Release mit Vorsicht behandelt werden.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Wenige Tage vor dem offiziellen Verkaufsstart von The Elder Scrolls IV: Oblivion Remastered für die Nintendo Switch 2 sind offenbar bereits erste physische Exemplare im Umlauf. Aus diesem Umstand resultiert nun frühes Gameplay-Material, das Einblicke in die technische Umsetzung der Portierung gibt. Zu sehen sind zwei Videos mit einer Gesamtlänge von rund zehn Minuten, die sowohl den Dock- als auch den Handheld-Modus der Konsole abdecken. Da es sich um Leak-Material und nicht um offiziell von Bethesda oder Nintendo bestätigte Aufnahmen handelt, gelten die gezeigten Werte bis zum Release als unbestätigt."
+    },
+    {
+      "type": "embed",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=d7BHw0U4MzU"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "11. Aug. 2026",
+          "label": "Offizieller Release-Termin der Switch-2-Version"
+        },
+        {
+          "value": "1080p",
+          "label": "Auflösung im Dock-Modus laut Leak (900p im Handheld)"
+        },
+        {
+          "value": "~10 Min.",
+          "label": "Länge des kursierenden Gameplay-Materials"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Auflösung und Framerate im Detail"
+    },
+    {
+      "type": "paragraph",
+      "text": "Laut dem geleakten Material läuft Oblivion Remastered im Dock-Modus der Switch 2 mit einer Auflösung von 1080p, im Handheld-Betrieb sinkt sie auf 900p. In beiden Fällen soll DLSS zum Einsatz kommen, um die Bildqualität zu stützen. Als Zielbildrate wird durchgehend eine Framerate von 30 Bildern pro Sekunde angestrebt. Die Neuauflage des 2006 erschienenen Originals basiert auf der Unreal Engine 5, was insbesondere auf einer Hybridkonsole wie der Switch 2 eine technische Herausforderung darstellt."
+    },
+    {
+      "type": "heading",
+      "text": "Umfang und enthaltene Inhalte"
+    },
+    {
+      "type": "paragraph",
+      "text": "Inhaltlich bringt die Switch-2-Fassung den vollständigen Umfang der Neuauflage mit. Spieler:innen erschaffen ihre eigene Figur aus einem breiten Spektrum an Rollen, vom Krieger über den Attentäter bis zum Zauberer, und kämpfen mit Schwertern oder Magie gegen die Daedra-Invasion in Tamriel. Neben dem Basisspiel sind die beiden Story-Erweiterungen sowie mehrere ursprünglich separat erhältliche Zusatzinhalte enthalten."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Story-Erweiterungen: Shivering Isles und Knights of the Nine",
+        "Fighter's Stronghold, Spell Tomes, Vile Lair",
+        "Mehrune's Razor, The Thieves Den, Wizard's Tower",
+        "Orrery und Horse Armor Pack"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bis zur offiziellen Veröffentlichung am 11. August 2026 bleiben die im Leak gezeigten technischen Werte unbestätigt. Sollten sich Auflösung, Framerate und DLSS-Einsatz jedoch bestätigen, würde die Switch-2-Version zeigen, wie Bethesda den Spagat zwischen Unreal-Engine-5-Optik und der eingeschränkteren Hardware der Hybridkonsole löst."
+    }
+  ],
+  "poll": {
+    "question": "Wie wichtig ist euch die technische Umsetzung von Oblivion Remastered auf der Switch 2?",
+    "options": [
+      "Sehr wichtig, ich spiele nur unterwegs im Handheld-Modus",
+      "Wichtig, aber stabile 30 fps reichen mir",
+      "Eher egal, Hauptsache das Spiel läuft überhaupt",
+      "Ich warte auf Tests vor dem Kauf"
+    ]
+  },
+  "isLeakOrRumor": true,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-09T08:03:38.025Z",
+  "readingTimeMinutes": 1,
+  "heroVariant": "waveform",
+  "sources": [
+    {
+      "title": "The Elder Scrolls 4: Oblivion Remastered – Erstes Switch-2-Gameplay kurz vor Release aufgetaucht",
+      "url": "https://www.eurogamer.de/oblivion-remastered-switch-2-gameplay-leak",
+      "publisher": "Eurogamer.de"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/oblivion-remastered-switch-2-gameplay-leak-2026.webp",
+    "alt": "Oblivion Remastered für Switch 2: Gameplay-Leak vor Release aufgetaucht",
+    "credit": "Bild: Eurogamer.de",
+    "sourceUrl": "https://www.eurogamer.de/oblivion-remastered-switch-2-gameplay-leak",
+    "sourceWidth": 690,
+    "sourceHeight": 388
+  },
+  "relatedSlugs": [
+    "diablo-4-nintendo-switch-2-leak-preis-release",
+    "diablo-4-switch-2-port-leak-september-2026",
+    "diablo-4-switch-2-geruecht-erscheinungstermin-2026"
+  ]
+}

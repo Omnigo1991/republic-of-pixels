@@ -1,0 +1,129 @@
+{
+  "slug": "company-of-heroes-definitive-edition-relic-2026",
+  "title": "Company of Heroes: Definitive Edition bringt 64-Bit-Upgrade zum 20. Jubiläum",
+  "subtitle": "Relic Entertainment modernisiert den RTS-Klassiker technisch, lässt Spielgefühl und raue Optik aber bewusst unangetastet",
+  "excerpt": "Zum 20-jährigen Bestehen von Company of Heroes veröffentlicht Relic Entertainment eine Definitive Edition mit 64-Bit-Architektur, überarbeiteter Grafik und Komfortfunktionen für alle drei Kampagnen.",
+  "seoTitle": "Company of Heroes Definitive Edition: 64-Bit-Update zum Jubiläum",
+  "metaDescription": "Relic Entertainment erklärt im Interview, wie die Definitive Edition von Company of Heroes technisch modernisiert wird, ohne das Original zu verwässern.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "tags": [
+    "Company of Heroes",
+    "Relic Entertainment",
+    "Definitive Edition",
+    "Strategiespiel",
+    "PC"
+  ],
+  "tldr": [
+    "Company of Heroes wird im September 20 Jahre alt, Relic Entertainment feiert mit einer Definitive Edition",
+    "Die Neuauflage enthält Basisspiel plus die Erweiterungen Opposing Fronts und Tales of Valor, also drei Kampagnen",
+    "Kernstück ist die Umstellung von 32-Bit auf 64-Bit-Architektur, dazu kommen überarbeitete Beleuchtung, Wasser und Ultrawide-Support",
+    "Neue Komfortfunktionen wie Auto-Reinforce und Global Unit Control greifen laut Studio nicht ins ursprüngliche Spielgefühl ein"
+  ],
+  "whyItMatters": "Für Strategiefans ist die Definitive Edition die erste Gelegenheit, den 2006 erschienenen Genre-Meilenstein offiziell auf aktueller Hardware und mit moderner 64-Bit-Architektur zu spielen. Gleichzeitig zeigt das Projekt, wie Relic mit Nostalgie und Modding-Community bei der Modernisierung eines zwei Jahrzehnte alten Codes umgeht.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Im September feiert Company of Heroes seinen 20. Geburtstag, und Relic Entertainment nutzt den Anlass für eine Definitive Edition des RTS-Klassikers. Die Neuauflage bündelt das Basisspiel mit den beiden Erweiterungen Opposing Fronts und Tales of Valor und bringt damit drei Kampagnen sowie zahlreiche Skirmish- und Multiplayer-Karten mit. Ein vollwertiges Remake ist es nicht, wie Executive Producer Denise Christie, Design Lead Will Ward und Art Lead Roland Longpre im Gespräch mit Eurogamer.de betonen. Stattdessen soll das Original technisch für aktuelle Systeme fit gemacht werden, ohne an seinem Kern zu rütteln."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "20 Jahre",
+          "label": "Company of Heroes feiert im September Jubiläum"
+        },
+        {
+          "value": "3 Kampagnen",
+          "label": "Basisspiel plus Opposing Fronts und Tales of Valor in der Definitive Edition"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "64-Bit als grösste technische Hürde"
+    },
+    {
+      "type": "paragraph",
+      "text": "Laut Christie war die Umstellung von der ursprünglich 32-Bit-basierten Essence Engine auf eine 64-Bit-Architektur der aufwendigste Teil des gesamten Projekts. Fast zwanzig Jahre gewachsener Code brachte Speicherlimits, veraltete Pointer-Grössen und Abhängigkeiten mit sich, mit denen moderne Hardware nichts mehr anfangen kann. Eine zweite Herausforderung war die Kompatibilität mit Community-Mods, die über zwei Jahrzehnte auf der alten Architektur entstanden sind. Relic arbeitete deshalb bereits vor dem Release eng mit Moddern zusammen, um Problemstellen frühzeitig zu identifizieren – ein Vorgehen, das sich laut Studio bereits bei Dawn of War: Definitive Edition bewährt habe. Wer eigene Inhalte weiterverwenden will, muss sie dennoch selbst für 64-Bit anpassen."
+    },
+    {
+      "type": "heading",
+      "text": "Komfortfunktionen statt Eingriff ins Spielgefühl"
+    },
+    {
+      "type": "paragraph",
+      "text": "Neu hinzu kommen Funktionen wie Auto-Reinforce und Global Unit Control, die laut Christie bei der Community bereits gut ankommen. Sie sollen administrative Nebenaufgaben abnehmen, damit sich Spielerinnen und Spieler auf die taktischen Gefechte konzentrieren können. Am eigentlichen Gameplay ändere sich dadurch nichts, so Christie."
+    },
+    {
+      "type": "quote",
+      "text": "Company of Heroes hat 2006 nicht nur ein Franchise begründet, sondern die kompletten Erwartungen an Strategiespiele auf den Kopf gestellt.",
+      "attribution": "Denise Christie, Executive Producer bei Relic Entertainment"
+    },
+    {
+      "type": "heading",
+      "text": "Überarbeitete Optik ohne Verlust der Atmosphäre"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Überarbeitete Beleuchtung, Schatten und Wasserreflexionen",
+        "Dynamische Vegetation und transparente Wassereffekte",
+        "Verbessertes SSAO sowie höher aufgelöste Bodentexturen",
+        "Höhere Sichtweite in Zwischensequenzen und Ultrawide-Support"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Art Lead Roland Longpre betont, dass keine der neuen Rendering-Techniken dem Original etwas wegnehme – man habe nichts streichen müssen, um Platz für die Verbesserungen zu schaffen. Die höhere Sichtweite gelte zudem nur ausserhalb aktiver Gefechte und habe keinen Einfluss auf Missionen oder Matches. Auch Ultrawide-Support verändere weder Territorium-Mechaniken noch Einheitenverhalten oder Kampfsystem, das kompetitive Balancing bleibe vollständig unangetastet."
+    },
+    {
+      "type": "quote",
+      "text": "Der ursprüngliche Artstyle und die düstere Stimmung bleiben unter jeder dieser Verbesserungen zu 100 Prozent intakt.",
+      "attribution": "Roland Longpre, Art Lead bei Relic Entertainment"
+    },
+    {
+      "type": "paragraph",
+      "text": "Mit der Definitive Edition positioniert Relic den ersten Teil der Reihe erneut als technisches und spielerisches Fundament des Franchise, während parallel Company of Heroes 3 weiterentwickelt wird. Ob die Balance aus Bewahrung und Modernisierung aufgeht, wird sich zeigen, sobald die Community die 64-Bit-Version und die neuen Komfortfunktionen im Detail testen kann."
+    }
+  ],
+  "poll": {
+    "question": "Was ist bei einer Definitive Edition eines RTS-Klassikers wichtiger?",
+    "options": [
+      "Technisches Fundament wie 64-Bit-Upgrade und Stabilität",
+      "Komfortfunktionen wie Auto-Reinforce und Global Unit Control",
+      "Grafische Überarbeitung bei Beleuchtung und Wasser",
+      "Das Original möglichst unangetastet lassen"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-09T08:02:56.035Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "controller",
+  "sources": [
+    {
+      "title": "Company of Heroes: Entwickler verraten, wie die Definitive Edition den Strategie-Hit modernisiert",
+      "url": "https://www.eurogamer.de/company-heroes-definitive-edition-interview",
+      "publisher": "Eurogamer.de"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/company-of-heroes-definitive-edition-relic-2026.webp",
+    "alt": "Company of Heroes: Definitive Edition bringt 64-Bit-Upgrade zum 20. Jubiläum",
+    "credit": "Bild: Eurogamer.de",
+    "sourceUrl": "https://www.eurogamer.de/company-heroes-definitive-edition-interview",
+    "sourceWidth": 690,
+    "sourceHeight": 388
+  },
+  "relatedSlugs": [
+    "marvel-tokon-pc-release-probleme-2026",
+    "helldivers-2-level-cap-300-2026",
+    "guild-wars-3-spielbare-voelker-erweiterung-2026"
+  ]
+}
