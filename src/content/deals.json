@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-09T08:03:45.978Z",
+  "updatedAt": "2026-08-09T11:07:28.131Z",
   "deals": [
     {
       "appId": 460930,
@@ -35,6 +35,17 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3017860/187b2434c39e31d292b429884e30401312672bd6/capsule_184x69_alt_assets_2.jpg?t=1783452885"
     },
     {
+      "appId": 1144200,
+      "title": "Ready or Not",
+      "discountPercent": 50,
+      "originalPrice": 4999,
+      "finalPrice": 2499,
+      "currency": "EUR",
+      "endsAt": "2026-08-09T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1144200/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1144200/2f6ca7ad511531beb421122efb376141f068ebbb/capsule_184x69.jpg?t=1781703931"
+    },
+    {
       "appId": 2138330,
       "title": "Cyberpunk 2077: Phantom Liberty",
       "discountPercent": 40,
@@ -55,17 +66,6 @@
       "endsAt": "2026-08-20T17:00:32.000Z",
       "url": "https://store.steampowered.com/app/2950790/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2950790/922472560f653fd897313ab7a10dd86b018d373f/capsule_184x69.jpg?t=1786028313"
-    },
-    {
-      "appId": 1478500,
-      "title": "Big Walk",
-      "discountPercent": 25,
-      "originalPrice": 1899,
-      "finalPrice": 1424,
-      "currency": "EUR",
-      "endsAt": "2026-08-18T17:00:09.000Z",
-      "url": "https://store.steampowered.com/app/1478500/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1478500/44da9fb07ebe477387355d7fce29560b55125cce/capsule_184x69.jpg?t=1785911674"
     }
   ]
 }

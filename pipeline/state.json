@@ -1885,26 +1885,52 @@
     "8f7342f8d300a551": "2026-08-09T08:18:32.901Z",
     "2f1341e524f8df23": "2026-08-09T08:18:32.901Z",
     "b985d192aea5e061": "2026-08-09T08:18:32.901Z",
-    "873e260483d78e06": "2026-08-09T08:50:48.367Z"
+    "873e260483d78e06": "2026-08-09T08:50:48.367Z",
+    "693fe3f3b5765731": "2026-08-09T11:07:27.183Z",
+    "92005febf2c07bd7": "2026-08-09T11:07:27.183Z",
+    "260297cb688caa35": "2026-08-09T11:07:27.183Z",
+    "501e10a7aa7aec0b": "2026-08-09T11:07:27.183Z",
+    "877308dfa76b5ecf": "2026-08-09T11:07:27.183Z",
+    "5b5c173e9805afa0": "2026-08-09T11:07:27.183Z",
+    "846439cfc9520cdd": "2026-08-09T11:07:27.183Z",
+    "8bbe4379ac17ec2c": "2026-08-09T11:07:27.183Z",
+    "5dc82ec2286e0206": "2026-08-09T11:07:27.183Z",
+    "276b57374d99dbd0": "2026-08-09T11:07:27.183Z",
+    "fcd3c6450dd2bf5a": "2026-08-09T11:07:27.183Z",
+    "0847c32dafc1f6b1": "2026-08-09T11:07:27.183Z",
+    "25c8b2aa3fd97aa0": "2026-08-09T11:07:27.183Z",
+    "6ef41b474e7094f9": "2026-08-09T11:07:27.183Z",
+    "29448a63647e22dd": "2026-08-09T11:07:27.183Z",
+    "5514da4d1edb0223": "2026-08-09T11:07:27.183Z",
+    "dff1862481ee0b84": "2026-08-09T11:07:27.183Z",
+    "ead192129d5cb7f4": "2026-08-09T11:07:27.183Z",
+    "3e7e5a7c1979c0b9": "2026-08-09T11:07:27.183Z",
+    "58d473fb0889f81f": "2026-08-09T11:07:27.183Z",
+    "7e75fca060690a15": "2026-08-09T11:07:27.183Z",
+    "de21ae5518134a8f": "2026-08-09T11:07:27.183Z",
+    "6a284a028d88a026": "2026-08-09T11:07:27.183Z",
+    "b00f77a96cf02d1c": "2026-08-09T11:07:27.183Z"
   },
   "instagram": {
     "posted": {
       "gta-6-preis-80-dollar-zelnick-schnaeppchen-2026": "2026-08-07T18:38:07.000Z",
       "demons-souls-prototyp-first-person-leak-2026": "2026-08-08T08:23:32.270Z",
       "gothic-1-remake-post-launch-plaene-2026": "2026-08-08T11:05:04.593Z",
-      "red-dead-redemption-2-87-millionen-verkaeufe-2026": "2026-08-09T08:51:40.826Z"
+      "red-dead-redemption-2-87-millionen-verkaeufe-2026": "2026-08-09T08:51:40.826Z",
+      "roblox-aktiensturz-spielerschwund-2026": "2026-08-09T11:07:53.264Z"
     },
     "cards": {
       "/social/ig-demons-souls-prototyp-first-person-leak-2026.mp4": "2026-08-08T08:23:32.270Z",
       "/social/ig-gothic-1-remake-post-launch-plaene-2026.jpg": "2026-08-08T11:05:04.593Z",
-      "/social/ig-red-dead-redemption-2-87-millionen-verkaeufe-2026.mp4": "2026-08-09T08:51:40.826Z"
+      "/social/ig-red-dead-redemption-2-87-millionen-verkaeufe-2026.mp4": "2026-08-09T08:51:40.826Z",
+      "/social/ig-roblox-aktiensturz-spielerschwund-2026.jpg": "2026-08-09T11:07:53.264Z"
     },
     "unlisted": [
       "gta-6-preis-80-dollar-zelnick-schnaeppchen-2026"
     ],
     "wechsel": {
       "day": "2026-08-09",
-      "nichtBreaking": 1
+      "nichtBreaking": 2
     },
     "tokenCheckedAt": "2026-08-08T08:23:33.168Z",
     "token": {
@@ -1912,7 +1938,8 @@
       "expiresAt": "2026-10-06T18:29:59.168Z"
     },
     "spielBild": {
-      "red dead redemption 2": 2
+      "red dead redemption 2": 2,
+      "roblox": 1
     },
     "uebersprungen": {
       "br1-infinite-echtgeld-kills-unbestaetigt-2026": "2026-08-09T08:04:01.341Z",
