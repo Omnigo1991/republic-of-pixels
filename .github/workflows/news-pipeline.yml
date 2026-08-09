@@ -140,6 +140,9 @@ jobs:
         # Publish-Fehler ("API access blocked", Deploy-Timeout …) dürfen
         # keine Tages-Slots verbrennen: ig-unmark.mjs nimmt die optimistische
         # Markierung zurück, ein späterer Lauf versucht die Story erneut.
+        # if: always() — läuft auch, wenn der Publish-Schritt den Lauf rot
+        # gefärbt hat (Sofort-Alarm per GitHub-Mail).
+        if: always()
         run: |
           node pipeline/ig-unmark.mjs
           if ! git diff --quiet pipeline/state.json; then

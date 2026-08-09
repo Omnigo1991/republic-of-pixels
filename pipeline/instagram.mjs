@@ -675,8 +675,14 @@ async function publish() {
   if (fehlgeschlagen.length > 0) {
     writeFileSync(FAILED_FILE, JSON.stringify(fehlgeschlagen, null, 2) + "\n");
     console.log(
-      `::warning::Instagram: ${fehlgeschlagen.length} Post(s) fehlgeschlagen — Slots werden zurückgegeben (ig-unmark).`,
+      `::error::Instagram: ${fehlgeschlagen.length} Post(s) fehlgeschlagen — Slots werden zurückgegeben (ig-unmark).`,
     );
+    // Lauf ROT färben (Tims Einwand 09.08.2026: er musste aktiv nachfragen,
+    // um den API-Ausfall zu bemerken): Der rote Status löst SOFORT eine
+    // GitHub-Mail aus statt erst der Tagesbilanz um 20:15. Gefahrlos, weil
+    // die Artikel zu diesem Zeitpunkt längst gepusht sind; der Entsperr-
+    // Schritt läuft dank if:always() trotzdem.
+    process.exitCode = 1;
   }
 }
 
