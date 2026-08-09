@@ -83,6 +83,10 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          # IGDB-Zugang (Konsolen-Artwork, 09.08.2026) — ohne die Secrets
+          # wird die IGDB-Stufe einfach übersprungen.
+          TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
+          TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
         run: node pipeline/instagram.mjs prepare
 
       - name: Neue Artikel oder Deals erkennen

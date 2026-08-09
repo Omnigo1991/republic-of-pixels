@@ -13,3 +13,4 @@ out/
 # Instagram-Publish-Queue (Übergabe zwischen Workflow-Steps, nie committen)
 .ig-queue.json
 .ig-failed.json
+.twitch.env

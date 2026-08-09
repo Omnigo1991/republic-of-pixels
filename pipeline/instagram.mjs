@@ -29,6 +29,7 @@ import { tmpdir } from "node:os";
 import { askClaude, parseJsonResponse } from "./lib/claude.mjs";
 import { renderInstagramCard } from "./lib/instagram-card.mjs";
 import { renderInstagramReel } from "./lib/instagram-reel.mjs";
+import { renderTypoCard } from "./lib/instagram-typo.mjs";
 import { holeSpielBild } from "./lib/keyart.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -356,14 +357,11 @@ async function prepare() {
       if (!imagePath && presseTauglich) {
         imagePath = portraitPathFor(article);
       }
-      if (!imagePath) {
-        state.instagram.uebersprungen ??= {};
-        state.instagram.uebersprungen[article.slug] = new Date().toISOString();
-        console.log(
-          `  ${article.slug}: kein offizielles Bild und kein scharfes Pressebild — übersprungen und für künftige Läufe gesperrt`,
-        );
-        continue;
-      }
+      // Letzte Stufe (Tim-Freigabe 09.08.2026): Typo-Karte — reines
+      // Marken-Design für starke Storys ohne brauchbares Bild (Hardware/
+      // Branche/Personalien). Immer als BILD gepostet (kein Ken-Burns auf
+      // Typografie) und ohne Einfluss auf den Reel/Bild-Wechsel.
+      const alsTypoKarte = !imagePath;
       const badge =
         article.category === "breaking"
           ? "BREAKING"
@@ -380,14 +378,42 @@ async function prepare() {
       // geht nie verloren.
       const istBreaking = article.category === "breaking";
       let alsReel;
-      if (istBreaking) {
+      if (alsTypoKarte) {
+        alsReel = false;
+      } else if (istBreaking) {
         alsReel = true;
       } else {
         alsReel = state.instagram.wechsel.nichtBreaking % 2 === 0;
         state.instagram.wechsel.nichtBreaking++;
       }
       let cardRel = null;
-      if (alsReel) {
+      if (alsTypoKarte) {
+        cardRel = `/social/ig-${article.slug}.jpg`;
+        const KICKER = {
+          breaking: "BREAKING",
+          leaks: "LEAK",
+          reviews: "REVIEW",
+          news: "GAMING-NEWS",
+        };
+        try {
+          await renderTypoCard({
+            headlineLines: pick.headlineLines,
+            kicker: KICKER[article.category] ?? "GAMING-NEWS",
+            outPath: join(ROOT, "public", cardRel),
+            chromium,
+          });
+          credit = "Republic of Pixels";
+          console.log(`  ${article.slug}: Typo-Karte (kein Bildmaterial verfügbar)`);
+        } catch (err) {
+          state.instagram.uebersprungen ??= {};
+          state.instagram.uebersprungen[article.slug] = new Date().toISOString();
+          console.log(
+            `  ${article.slug}: Typo-Karte fehlgeschlagen (${err.message}) — übersprungen und gesperrt`,
+          );
+          continue;
+        }
+      }
+      if (!cardRel && alsReel) {
         const reelRel = `/social/ig-${article.slug}.mp4`;
         try {
           await renderInstagramReel({
@@ -447,9 +473,9 @@ async function prepare() {
         cardRel,
         caption,
         altText,
-        // Für die Slot-Rückgabe bei Publish-Fehlern: nur Nicht-Breaking
-        // hat den Wechsel-Zähler erhöht.
-        nichtBreaking: !istBreaking,
+        // Für die Slot-Rückgabe bei Publish-Fehlern: nur Posts, die den
+        // Wechsel-Zähler erhöht haben (Typo-Karten zählen nicht mit).
+        nichtBreaking: !istBreaking && !alsTypoKarte,
       });
       // Optimistisch als gepostet markieren: verhindert Doppel-Posts selbst
       // dann, wenn die Publish-Phase später fehlschlägt (bewusster Trade-off:
