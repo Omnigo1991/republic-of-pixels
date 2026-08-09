@@ -49,6 +49,14 @@ export default async function HomePage() {
 
         <div className="h-px w-full bg-border-subtle" />
 
+        <Reveal>
+          <div className="pt-12 sm:pt-16">
+            <p className="text-3xl font-black uppercase tracking-tight text-text-primary sm:text-4xl lg:text-5xl">
+              News aus der <span className="text-accent">Republic</span>
+            </p>
+          </div>
+        </Reveal>
+
         <section className="py-10">
           <Reveal>
             <div className="mb-3 flex items-baseline justify-between">
@@ -63,6 +71,14 @@ export default async function HomePage() {
         </section>
 
         <div className="h-px w-full bg-border-subtle" />
+
+        <Reveal>
+          <div className="pt-12 sm:pt-16">
+            <p className="text-3xl font-black uppercase tracking-tight text-text-primary sm:text-4xl lg:text-5xl">
+              Die <span className="text-accent">Republic</span>-Radare
+            </p>
+          </div>
+        </Reveal>
 
         <Reveal>
           <ReleaseRadar />
@@ -87,6 +103,14 @@ export default async function HomePage() {
         </Reveal>
 
         <div className="h-px w-full bg-border-subtle" />
+
+        <Reveal>
+          <div className="pt-12 sm:pt-16">
+            <p className="text-3xl font-black uppercase tracking-tight text-text-primary sm:text-4xl lg:text-5xl">
+              Deine <span className="text-accent">Republic</span>
+            </p>
+          </div>
+        </Reveal>
 
         <GeradeImGespraech />
         <DeineMerkliste />
