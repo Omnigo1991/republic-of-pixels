@@ -23,6 +23,19 @@ interface Fortschritt {
 
 const MAX_VERSUCHE = 5;
 
+// Serien-Symbol — gleiche Bauart wie die Profil-Icons (24er-Raster,
+// gefüllte Silhouette, currentColor). Ersetzt das 🔥-Emoji (Tim,
+// 09.08.2026). Bewusst ein BLITZ statt einer Flamme: Drei Flammen-
+// Entwürfe lasen sich bei 14 px allesamt als Wassertropfen, der Blitz
+// ist auf jeder Grösse eindeutig und passt zur kantigen Pixel-Sprache.
+function IconBlitz({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+      <path d="M13.5 1.5 5 13.2h5.2L9.4 22.5 19 10.3h-5.4z" />
+    </svg>
+  );
+}
+
 const normalisiert = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "");
 
 function ladeFortschritt(): Fortschritt {
@@ -285,7 +298,10 @@ export function PixelRaten() {
           <div className="mt-auto flex flex-wrap items-center justify-between gap-3 pt-4">
             {serie > 0 ? (
               <span className="inline-flex items-center gap-1.5 rounded-full border border-accent/40 bg-accent/10 px-2.5 py-1 text-[11px] font-semibold tracking-wide text-accent">
-                🔥 {serie === 1 ? "1 Tag" : `${serie} Tage`} in Folge gelöst
+                <IconBlitz className="h-3.5 w-3.5" />
+                <span className="flex h-3.5 items-center">
+                  {serie === 1 ? "1 Tag" : `${serie} Tage`} in Folge gelöst
+                </span>
               </span>
             ) : (
               <span className="text-xs text-text-tertiary">Löse das Rätsel und starte deine Serie</span>
