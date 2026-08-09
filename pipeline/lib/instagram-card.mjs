@@ -24,19 +24,88 @@ const LOGO = join(ROOT, "public", "brand", "r-mark.png");
 const G = 60;
 const LOGO_H = 60;
 
-// Helligkeit (0..1) des Bildbereichs, über dem die Headline liegt
-// (unteres Drittel, horizontal mittig). Grundlage des Kontrast-Wächters.
-async function headlineZoneLuminance(imagePath) {
-  const { width, height } = await sharp(imagePath).metadata();
-  const region = {
-    left: Math.round(width * 0.1),
-    top: Math.round(height * 0.6),
-    width: Math.round(width * 0.8),
-    height: Math.round(height * 0.32),
+// MOTIV-SUCHER (Tim, 09.08.2026 — RDR2-Post): Steam-Cover tragen den
+// Spieltitel fast immer im unteren Drittel, also genau dort, wo unsere
+// Headline sitzt — zwei Schriften übereinander sind unlesbar. Statt stur
+// die Bildmitte zu nehmen, probiert der Renderer mehrere senkrechte
+// Ausschnitte durch und wählt den, bei dem die Kopfzeilen-Zone am
+// RUHIGSTEN ist (wenig Struktur = kein Logo, kein Gesicht, keine Kante).
+// Die Bild-Hierarchie bleibt davon unberührt — es geht nur darum, WIE
+// ein gewähltes Bild im 4:5-Fenster liegt.
+//
+// Rückgabe: { position } in Prozent für object-position, { luminanz } und
+// { unruhe } der gewählten Zone (Grundlage des Kontrast-Wächters).
+export async function besterAusschnitt(imagePath) {
+  const { width = 0, height = 0 } = await sharp(imagePath).metadata();
+  if (!width || !height) return { position: 50, luminanz: 0, unruhe: 0 };
+
+  // So gross wird das Bild im 1080×1350-Fenster (object-fit: cover).
+  const skala = Math.max(1080 / width, 1350 / height);
+  const sichtbarH = Math.min(height, Math.round(1350 / skala));
+  const sichtbarB = Math.min(width, Math.round(1080 / skala));
+  const spielraum = height - sichtbarH; // senkrecht verschiebbar
+
+  // Kopfzeilen-Zone im fertigen Post: von 56 % bis 92 % der Höhe.
+  const zoneOben = Math.round(sichtbarH * 0.56);
+  const zoneHoehe = Math.max(8, Math.round(sichtbarH * 0.36));
+  const links = Math.round((width - sichtbarB) / 2 + sichtbarB * 0.08);
+  const breite = Math.max(8, Math.round(sichtbarB * 0.84));
+
+  const messen = async (versatz) => {
+    // WICHTIG (Fund 09.08.2026): sharp .stats() misst IMMER das
+    // Eingangsbild und ignoriert ein vorangestelltes .extract() — der
+    // Ausschnitt muss erst materialisiert werden. Der frühere
+    // Kontrast-Wächter hatte genau diesen Fehler und mass seit jeher das
+    // gesamte Bild statt der Zone hinter der Headline.
+    const ausschnitt = await sharp(imagePath)
+      .extract({
+        left: links,
+        top: Math.min(Math.max(0, versatz + zoneOben), height - zoneHoehe),
+        width: breite,
+        height: zoneHoehe,
+      })
+      .toBuffer();
+    const stats = await sharp(ausschnitt).stats();
+    const [r, g, b] = stats.channels;
+    const luminanz = (0.2126 * r.mean + 0.7152 * g.mean + 0.0722 * b.mean) / 255;
+    // Standardabweichung = wie viel Struktur/Kontrast in der Zone steckt.
+    const unruhe = (r.stdev + g.stdev + b.stdev) / 3 / 255;
+    return { luminanz, unruhe };
   };
-  const stats = await sharp(imagePath).extract(region).stats();
-  const [r, g, b] = stats.channels.map((c) => c.mean / 255);
-  return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+
+  if (spielraum <= 2) {
+    const m = await messen(0);
+    return { position: 50, ...m };
+  }
+
+  let beste = null;
+  for (const anteil of [0, 0.2, 0.35, 0.5, 0.65, 0.8, 1]) {
+    const versatz = Math.round(spielraum * anteil);
+    const m = await messen(versatz);
+    // Ruhe zählt am stärksten, Helligkeit leicht mit; die Bildmitte
+    // bekommt einen kleinen Bonus, damit wir nur bei echtem Gewinn
+    // vom gewohnten Ausschnitt abweichen.
+    const strafe = m.unruhe * 2.2 + m.luminanz * 0.5 + Math.abs(anteil - 0.5) * 0.06;
+    if (!beste || strafe < beste.strafe) beste = { strafe, anteil, ...m };
+  }
+  return { position: Math.round(beste.anteil * 100), luminanz: beste.luminanz, unruhe: beste.unruhe };
+}
+
+// Kontrast-Wächter in drei Stufen: heller ODER unruhiger Hintergrund →
+// der Verlauf beginnt früher und deckt stärker. Helligkeits-Schwelle
+// empirisch (Testbilder 07.08.2026); die Unruhe-Schwelle kam am 09.08.2026
+// dazu, weil auch ein dunkles Bild durch Strukturen (Logo, Kanten) unter
+// der Schrift stören kann. Stufe 2 deckt fast vollständig ab — für Cover,
+// deren Titel selbst im besten Ausschnitt noch in die Kopfzeilen-Zone ragt.
+// Beitrag und Reel teilen sich diese Funktion, damit beide Formate eines
+// Artikels identisch aussehen.
+export function verlauf(luminanz, unruhe) {
+  const stufe = luminanz > 0.6 || unruhe > 0.28 ? 2 : luminanz > 0.45 || unruhe > 0.18 ? 1 : 0;
+  return [
+    "linear-gradient(to bottom, rgba(12,11,26,0) 48%, rgba(12,11,26,0.62) 72%, rgba(12,11,26,0.96) 90%, #0C0B1A 100%)",
+    "linear-gradient(to bottom, rgba(12,11,26,0) 40%, rgba(12,11,26,0.78) 66%, rgba(12,11,26,0.97) 88%, #0C0B1A 100%)",
+    "linear-gradient(to bottom, rgba(12,11,26,0) 32%, rgba(12,11,26,0.62) 50%, rgba(12,11,26,0.93) 66%, rgba(12,11,26,0.995) 80%, #0C0B1A 92%)",
+  ][stufe];
 }
 
 function escapeHtml(s) {
@@ -70,13 +139,8 @@ export async function renderInstagramCard({
   outPath, // absoluter Zielpfad (.jpg)
   chromium, // playwright.chromium (injiziert, damit der Import zentral bleibt)
 }) {
-  const lum = await headlineZoneLuminance(imagePath);
-  // Kontrast-Wächter: heller Hintergrund → Verlauf beginnt früher und
-  // deckt stärker. Schwellwert empirisch (Testbilder 07.08.2026).
-  const strong = lum > 0.45;
-  const grad = strong
-    ? "linear-gradient(to bottom, rgba(12,11,26,0) 40%, rgba(12,11,26,0.78) 66%, rgba(12,11,26,0.97) 88%, #0C0B1A 100%)"
-    : "linear-gradient(to bottom, rgba(12,11,26,0) 48%, rgba(12,11,26,0.62) 72%, rgba(12,11,26,0.96) 90%, #0C0B1A 100%)";
+  const { position, luminanz, unruhe } = await besterAusschnitt(imagePath);
+  const grad = verlauf(luminanz, unruhe);
 
   const badgeHtml = badge
     ? `<div class="badge">${escapeHtml(badge)}</div>`
@@ -89,7 +153,7 @@ export async function renderInstagramCard({
   * { margin:0; padding:0; box-sizing:border-box; }
   body { width:1080px; height:1350px; background:#0C0B1A; overflow:hidden; position:relative; }
   .bild { position:absolute; inset:0; }
-  .bild img { width:100%; height:100%; object-fit:cover; display:block; }
+  .bild img { width:100%; height:100%; object-fit:cover; object-position:50% ${position}%; display:block; }
   .bild::after { content:""; position:absolute; inset:0; background:${grad}; }
   .stapel { position:absolute; left:60px; right:60px; bottom:${G + LOGO_H + G}px;
     display:flex; flex-direction:column; align-items:center; gap:30px; }
