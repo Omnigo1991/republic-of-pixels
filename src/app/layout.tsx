@@ -38,13 +38,24 @@ export const metadata: Metadata = {
     locale: "de_DE",
     siteName: "Republic of Pixels",
     url: SITE_URL,
+    // Ohne Vorschaubild zeigen WhatsApp, Telegram und Co. beim Teilen der
+    // Startseite nur grauen Text (09.08.2026).
+    images: [{ url: "/og-default.jpg", width: 1200, height: 630, alt: "Republic of Pixels" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@republicofpixels",
   },
+  // Icons für Teilen-Menüs und Startbildschirm (09.08.2026): iOS zeigt im
+  // nativen Teilen-Menü das apple-touch-icon — fehlt es, erscheint ein
+  // generisches Browser-Symbol statt unserer Marke. SVG allein genügt dort
+  // nicht, es braucht PNG.
   icons: {
-    icon: "/favicon.svg",
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
   // Google-Discover-Voraussetzung: Ohne "max-image-preview: large" zeigt
   // Google nur Mini-Thumbnails — grosse Vorschaubilder sind aber praktisch
