@@ -13,8 +13,10 @@ import { FliegerIcon, KanalIcon, kanaeleFuer, nativTeilen, type Kanal } from "./
 export function TeilenKnopf() {
   const pfad = usePathname();
   const [offen, setOffen] = useState(false);
+  const [sichtbar, setSichtbar] = useState(true);
   const [kopiert, setKopiert] = useState<string | null>(null);
   const huelle = useRef<HTMLDivElement>(null);
+  const letzteHoehe = useRef(0);
 
   // Adresse und Titel erst im Browser lesen (SSR kennt sie nicht).
   const adresse = () => (typeof window === "undefined" ? "" : window.location.href);
@@ -23,6 +25,30 @@ export function TeilenKnopf() {
   useEffect(() => {
     setOffen(false);
   }, [pfad]);
+
+  // Beim Lesen (runterscrollen) tritt der Knopf zurück, beim Hochscrollen
+  // und oben auf der Seite ist er da (Tim, 09.08.2026): Nutzen bleibt,
+  // die Aufdringlichkeit verschwindet.
+  useEffect(() => {
+    letzteHoehe.current = window.scrollY;
+    let wartet = false;
+    const aufScroll = () => {
+      if (wartet) return;
+      wartet = true;
+      requestAnimationFrame(() => {
+        const jetzt = window.scrollY;
+        const runter = jetzt > letzteHoehe.current;
+        // Kleine Bewegungen ignorieren, damit er nicht flackert.
+        if (Math.abs(jetzt - letzteHoehe.current) > 6) {
+          setSichtbar(!runter || jetzt < 160);
+          letzteHoehe.current = jetzt;
+        }
+        wartet = false;
+      });
+    };
+    window.addEventListener("scroll", aufScroll, { passive: true });
+    return () => window.removeEventListener("scroll", aufScroll);
+  }, []);
 
   useEffect(() => {
     if (!offen) return;
@@ -123,7 +149,11 @@ export function TeilenKnopf() {
         onClick={teilen}
         aria-label="Diese Seite teilen"
         aria-expanded={offen}
-        className={`fixed bottom-5 right-5 z-50 h-[52px] w-[52px] items-center justify-center rounded-full border border-accent/35 bg-bg-elevated/85 text-accent backdrop-blur transition-colors hover:border-accent/60 hover:bg-surface-hover sm:bottom-6 sm:right-6 sm:flex ${offen ? "hidden" : "flex"}`}
+        className={`fixed bottom-5 right-5 z-50 h-[52px] w-[52px] items-center justify-center rounded-full border border-accent/35 bg-bg-elevated/85 text-accent backdrop-blur transition-all duration-300 hover:border-accent/60 hover:bg-surface-hover sm:bottom-6 sm:right-6 sm:flex ${offen ? "hidden" : "flex"} ${
+          sichtbar || offen
+            ? "translate-y-0 opacity-100"
+            : "pointer-events-none translate-y-4 opacity-0"
+        }`}
       >
         <FliegerIcon />
       </button>
