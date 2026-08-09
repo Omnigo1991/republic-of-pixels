@@ -165,7 +165,7 @@ export function PixelRaten() {
     const quadrate = tipps
       .map((_, i) => (geloest && i === tipps.length - 1 ? "🟩" : "🟥"))
       .join("");
-    const text = `Pixel-Raten #${raetsel.nummer}: ${quadrate} — ${
+    const text = `Pixel-Raten: ${quadrate} — ${
       geloest ? `gelöst in ${tipps.length} ${tipps.length === 1 ? "Versuch" : "Versuchen"}` : "heute nicht geknackt"
     }\nDas tägliche Gaming-Rätsel auf republicofpixels.com`;
     try {
