@@ -39,20 +39,12 @@ export default async function HomePage() {
 
       <CategoryChipBar active="alle" />
       <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
+        {/* Sektions-Dramaturgie (Tim-Freigabe 09.08.2026): erst die
+            Nachrichten (Kernprodukt), dann der Blick nach vorn (Release +
+            Event als Paar), dann der Puls (Charts), dann das Portemonnaie
+            (Deals) — Community und Persönliches als Abschluss. */}
         <Reveal>
           <PopularSection articles={popular} />
-        </Reveal>
-
-        <div className="h-px w-full bg-border-subtle" />
-
-        <Reveal>
-          <ReleaseRadar />
-        </Reveal>
-
-        <div className="h-px w-full bg-border-subtle" />
-
-        <Reveal>
-          <DealRadar />
         </Reveal>
 
         <div className="h-px w-full bg-border-subtle" />
@@ -73,13 +65,25 @@ export default async function HomePage() {
         <div className="h-px w-full bg-border-subtle" />
 
         <Reveal>
-          <ChartsRadar />
+          <ReleaseRadar />
         </Reveal>
 
         <div className="h-px w-full bg-border-subtle" />
 
         <Reveal>
           <EventRadar />
+        </Reveal>
+
+        <div className="h-px w-full bg-border-subtle" />
+
+        <Reveal>
+          <ChartsRadar />
+        </Reveal>
+
+        <div className="h-px w-full bg-border-subtle" />
+
+        <Reveal>
+          <DealRadar />
         </Reveal>
 
         <div className="h-px w-full bg-border-subtle" />
