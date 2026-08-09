@@ -1,19 +1,19 @@
 {
-  "datum": "2026-08-09",
-  "nummer": 1,
-  "loesung": "Subnautica",
+  "datum": "2026-08-10",
+  "nummer": 2,
+  "loesung": "Slay the Spire",
   "akzeptiert": [
-    "subnautica"
+    "slaythespire"
   ],
   "hinweise": [
-    "Erschienen 2018 · Survival",
-    "Unterwasser"
+    "Erschienen 2019 · Deckbuilder",
+    "Roguelike-Karten"
   ],
   "bilder": [
-    "/images/pixelraten/2026-08-09-s1.jpg",
-    "/images/pixelraten/2026-08-09-s2.jpg",
-    "/images/pixelraten/2026-08-09-s3.jpg",
-    "/images/pixelraten/2026-08-09-s4.jpg",
-    "/images/pixelraten/2026-08-09-s5.jpg"
+    "/images/pixelraten/2026-08-10-s1.jpg",
+    "/images/pixelraten/2026-08-10-s2.jpg",
+    "/images/pixelraten/2026-08-10-s3.jpg",
+    "/images/pixelraten/2026-08-10-s4.jpg",
+    "/images/pixelraten/2026-08-10-s5.jpg"
   ]
 }
