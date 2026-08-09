@@ -299,10 +299,21 @@ Wenn fehlerfrei: {"fixes":[]}`;
     );
     if (fixes.length === 0) return article;
 
+    // Typsicher (Fix 09.08.2026): Stats-Kacheln haben Objekt-Einträge
+    // ({value, label}) — ein replaceAll auf Objekten liess das gesamte
+    // Korrekturlesen bei jedem Artikel mit Zahlen-Kacheln still scheitern
+    // ("s.replaceAll is not a function").
     const fixText = (s) => {
+      if (typeof s !== "string") return s;
       for (const f of fixes) s = s.replaceAll(f.falsch, f.richtig);
       return s;
     };
+    const fixItem = (it) =>
+      typeof it === "string"
+        ? fixText(it)
+        : it && typeof it === "object"
+          ? { ...it, ...(typeof it.label === "string" ? { label: fixText(it.label) } : {}) }
+          : it;
     for (const k of ["title", "subtitle", "excerpt", "seoTitle", "metaDescription", "whyItMatters"]) {
       if (typeof article[k] === "string") article[k] = fixText(article[k]);
     }
@@ -317,7 +328,7 @@ Wenn fehlerfrei: {"fixes":[]}`;
         : {
             ...b,
             ...(typeof b.text === "string" ? { text: fixText(b.text) } : {}),
-            ...(Array.isArray(b.items) ? { items: b.items.map(fixText) } : {}),
+            ...(Array.isArray(b.items) ? { items: b.items.map(fixItem) } : {}),
           }
     );
     console.log(`  Korrektur: ${fixes.map((f) => `${f.falsch}→${f.richtig}`).join(", ")}`);
