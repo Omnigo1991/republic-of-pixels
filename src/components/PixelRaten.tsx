@@ -23,6 +23,12 @@ interface Fortschritt {
 
 const MAX_VERSUCHE = 5;
 
+// Untergrenze für die Community-Zeile (Tim, 09.08.2026): Bei einem einzigen
+// Teilnehmer stünde dort "von 100 % der Republic gelöst" — das liest sich
+// leer statt souverän und untergräbt genau den Vergleich, wegen dem die
+// Zeile existiert. Unter fünf Teilnehmern bleibt sie darum unsichtbar.
+const MIN_TEILNEHMER = 5;
+
 // Serien-Symbol — gleiche Bauart wie die Profil-Icons (24er-Raster,
 // gefüllte Silhouette, currentColor). Ersetzt das 🔥-Emoji (Tim,
 // 09.08.2026). Bewusst ein BLITZ statt einer Flamme: Drei Flammen-
@@ -82,11 +88,11 @@ export function PixelRaten() {
     // bleibt die Zeile einfach weg.
     supabase
       .from("pixelraten_statistik")
-      .select("geloest_prozent, schnitt_versuche")
+      .select("teilnehmer, geloest_prozent, schnitt_versuche")
       .eq("datum", raetsel.datum)
       .maybeSingle()
       .then(({ data, error }) => {
-        if (!error && data) {
+        if (!error && data && (data.teilnehmer ?? 0) >= MIN_TEILNEHMER) {
           setStatistik({ prozent: data.geloest_prozent ?? 0, schnitt: data.schnitt_versuche ?? 0 });
         }
       });
