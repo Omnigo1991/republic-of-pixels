@@ -136,15 +136,18 @@ if (!spiel) {
   process.exit(0);
 }
 
-// Fünf Schärfe-Stufen als Mosaik: winzig herunterrechnen, grob hochskalieren.
-// Stufe 5 bleibt bewusst leicht verpixelt — die volle Auflösung gäbe bei
-// Cover-Artworks den Titel-Schriftzug preis.
+// Schärfe-Stufen als Mosaik: winzig herunterrechnen, grob hochskalieren.
+// Die LETZTE Stufe ist bewusst voll scharf (Fix 09.08.2026, Tims
+// Beobachtung): Sie erscheint erst im fünften und letzten Versuch — dort
+// gehört eine faire Chance hin. Der frühere Grund fürs Weichzeichnen
+// (Titel-Schriftzug auf Cover-Artworks) entfiel mit der Umstellung auf
+// Screenshots.
 mkdirSync(BILDER_DIR, { recursive: true });
 const datum = zuerichTag();
-const STUFEN = [14, 22, 34, 54, 88];
+const MOSAIK_STUFEN = [14, 22, 34, 54];
 const bilder = [];
-for (let i = 0; i < STUFEN.length; i++) {
-  const w = STUFEN[i];
+for (let i = 0; i < MOSAIK_STUFEN.length; i++) {
+  const w = MOSAIK_STUFEN[i];
   const h = Math.round(w * 1.25);
   const winzig = await sharp(rohBild).resize(w, h, { fit: "cover" }).toBuffer();
   const rel = `/images/pixelraten/${datum}-s${i + 1}.jpg`;
@@ -154,6 +157,12 @@ for (let i = 0; i < STUFEN.length; i++) {
     .toFile(join(ROOT, "public", rel));
   bilder.push(rel);
 }
+const relScharf = `/images/pixelraten/${datum}-s${MOSAIK_STUFEN.length + 1}.jpg`;
+await sharp(rohBild)
+  .resize(648, 810, { fit: "cover" })
+  .jpeg({ quality: 88 })
+  .toFile(join(ROOT, "public", relScharf));
+bilder.push(relScharf);
 
 // Alte Rätsel-Bilder aufräumen (3 Tage Behalt).
 const behalteAb = new Date(Date.now() - 3 * 86400000).toISOString().slice(0, 10);
