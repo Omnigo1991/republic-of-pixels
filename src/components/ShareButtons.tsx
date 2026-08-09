@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { KanalIcon, kanaeleFuer, nativTeilen, type Kanal } from "./TeilenKanaele";
+import { KanalIcon, kanaeleFuer, type Kanal } from "./TeilenKanaele";
 
 // Teilen-Reihe am Artikelende — bewusst BEHALTEN (Tim-Entscheid
 // 09.08.2026): Sie steht im Moment der höchsten Teilen-Bereitschaft,
@@ -11,11 +11,9 @@ import { KanalIcon, kanaeleFuer, nativTeilen, type Kanal } from "./TeilenKanaele
 export function ShareButtons({ title }: { title: string }) {
   const [url, setUrl] = useState("");
   const [kopiert, setKopiert] = useState<string | null>(null);
-  const [nativDa, setNativDa] = useState(false);
 
   useEffect(() => {
     setUrl(window.location.href);
-    setNativDa(typeof navigator !== "undefined" && !!navigator.share);
   }, []);
 
   async function kanalOeffnen(kanal: Kanal) {
@@ -36,17 +34,9 @@ export function ShareButtons({ title }: { title: string }) {
     <div className="flex flex-wrap items-center gap-2">
       <span className="mr-1 text-xs font-semibold tracking-wide text-text-tertiary">TEILEN</span>
 
-      {/* Wo das Gerät ein eigenes Teilen-Menü hat, führt der erste Knopf
-          direkt dorthin — mit allen installierten Apps. */}
-      {nativDa && (
-        <button
-          onClick={() => nativTeilen(url, title)}
-          className="inline-flex items-center gap-1.5 rounded-full border border-accent/50 px-3.5 py-1.5 text-[13px] font-semibold leading-none text-accent transition-colors hover:bg-accent/10"
-        >
-          Menü öffnen
-        </button>
-      )}
-
+      {/* Kein zusätzlicher "Menü öffnen"-Knopf (Tim, 09.08.2026): Das
+          native Teilen-Menü erreicht man über den schwebenden Knopf —
+          hier zählen die direkten Kanäle. */}
       {kanaeleFuer(url, title).map((k) => (
         <button
           key={k.key}
