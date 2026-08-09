@@ -46,18 +46,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@republicofpixels",
   },
-  // Icons für Teilen-Menüs und Startbildschirm (09.08.2026): iOS zeigt im
-  // nativen Teilen-Menü das apple-touch-icon — fehlt es, erscheint ein
-  // generisches Browser-Symbol statt unserer Marke. SVG allein genügt dort
-  // nicht, es braucht PNG.
+  // Icons (09.08.2026): iOS und macOS brauchen für Teilen-Menü und
+  // Startbildschirm PNG bzw. ICO — ein SVG-Favicon allein genügt dort
+  // nicht. Bewusst OHNE SVG-Deklaration: unseres ist nicht quadratisch
+  // (401×464) und im hellen Modus dunkelblau auf transparent, Safari
+  // bevorzugt es aber vor allen anderen und kommt damit nicht klar.
   icons: {
-    // Nur ICO und PNG (09.08.2026, dritter Anlauf beim Kompass-Problem):
-    // Safari bevorzugt SVG-Favicons, unseres ist aber NICHT quadratisch
-    // (401×464) und im hellen Modus dunkelblau auf transparent — damit
-    // kommt das Teilen-Menü nicht klar und zeigt sein Ersatzsymbol. Ohne
-    // SVG-Deklaration bleibt die ICO-Datei die einzige Wahl.
-    // Der -Anhang zwingt Safari, seinen Icon-Zwischenspeicher zu
-    // verwerfen — sonst hält es tagelang am alten Zustand fest.
     icon: [
       { url: "/favicon.ico", sizes: "16x16 32x32 48x48" },
       { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
