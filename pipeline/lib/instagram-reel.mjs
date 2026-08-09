@@ -109,10 +109,15 @@ export async function renderInstagramReel({
   const frames = DAUER_S * FPS;
   // Ken-Burns: Bild deckend hochskalieren (Reserve für den Zoom), dann
   // langsamer zentrierter Zoom auf 1080×1350 — das 4:5-Format der Karte.
+  // Farbraum-Fix (09.08.2026, Tims Cyan-Beobachtung): Ohne explizite
+  // Matrix wandelt swscale RGB nach der alten TV-Norm BT.601, Player
+  // interpretieren 1080p aber als BT.709 — das verschob das Marken-Cyan
+  // sichtbar. Jetzt: Umwandlung erzwungen nach BT.709 + Kennzeichnung im
+  // Container, damit jeder Player identisch dekodiert.
   const filter =
     `[0:v]scale=-2:1700,` +
     `zoompan=z='1+0.10*on/${frames}':x='(iw-iw/zoom)/2':y='(ih-ih/zoom)/2':d=${frames}:s=1080x1350:fps=${FPS}[bg];` +
-    `[bg][1:v]overlay=0:0:format=auto,format=yuv420p[v]`;
+    `[bg][1:v]overlay=0:0:format=auto,scale=out_color_matrix=bt709:out_range=tv,format=yuv420p[v]`;
 
   try {
     execFileSync(
@@ -126,6 +131,7 @@ export async function renderInstagramReel({
         "-map", "[v]", "-map", "2:a",
         "-t", String(DAUER_S),
         "-c:v", "libx264", "-preset", "medium", "-crf", "21",
+        "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709",
         "-c:a", "aac", "-b:a", "64k", "-shortest",
         "-movflags", "+faststart",
         outPath,
