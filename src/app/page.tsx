@@ -58,6 +58,10 @@ export default async function HomePage() {
         </Reveal>
 
         <section className="py-10">
+          {/* Kompletter Sektionsinhalt in EINER Reveal-Hülle (Bugfix
+              09.08.2026): Vorher stand die NewsListe ausserhalb — die
+              Artikel waren sofort da, während ihre eigene Überschrift noch
+              auf den Scroll-Trigger wartete. */}
           <Reveal>
             <div className="mb-3 flex items-baseline justify-between">
               <h2 className="text-xl font-semibold tracking-tight text-text-primary">
@@ -66,8 +70,8 @@ export default async function HomePage() {
               <span className="text-xs text-text-tertiary">Chronologisch, neueste zuerst</span>
             </div>
             <SectionDivider />
+            <NewsListe articles={chronological} />
           </Reveal>
-          <NewsListe articles={chronological} />
         </section>
 
         <div className="h-px w-full bg-border-subtle" />
@@ -112,8 +116,15 @@ export default async function HomePage() {
           </div>
         </Reveal>
 
-        <GeradeImGespraech />
-        <DeineMerkliste />
+        {/* Einblendungs-Audit 09.08.2026: auch die Community-Sektionen
+            tragen die Reveal-Hülle — vorher sprangen sie als einzige ohne
+            Animation ins Bild. */}
+        <Reveal>
+          <GeradeImGespraech />
+        </Reveal>
+        <Reveal>
+          <DeineMerkliste />
+        </Reveal>
       </div>
     </>
   );
