@@ -1890,8 +1890,7 @@
     "posted": {
       "gta-6-preis-80-dollar-zelnick-schnaeppchen-2026": "2026-08-07T18:38:07.000Z",
       "demons-souls-prototyp-first-person-leak-2026": "2026-08-08T08:23:32.270Z",
-      "gothic-1-remake-post-launch-plaene-2026": "2026-08-08T11:05:04.593Z",
-      "red-dead-redemption-2-87-millionen-verkaeufe-2026": "2026-08-09T08:19:00.546Z"
+      "gothic-1-remake-post-launch-plaene-2026": "2026-08-08T11:05:04.593Z"
     },
     "cards": {
       "/social/ig-demons-souls-prototyp-first-person-leak-2026.mp4": "2026-08-08T08:23:32.270Z",
@@ -1903,7 +1902,7 @@
     ],
     "wechsel": {
       "day": "2026-08-09",
-      "nichtBreaking": 1
+      "nichtBreaking": 0
     },
     "tokenCheckedAt": "2026-08-08T08:23:33.168Z",
     "token": {

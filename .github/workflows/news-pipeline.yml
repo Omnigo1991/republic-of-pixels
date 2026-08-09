@@ -135,3 +135,18 @@ jobs:
         env:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
         run: node pipeline/instagram.mjs publish
+
+      - name: Fehlgeschlagene Posts entsperren (Slots zurückgeben)
+        # Publish-Fehler ("API access blocked", Deploy-Timeout …) dürfen
+        # keine Tages-Slots verbrennen: ig-unmark.mjs nimmt die optimistische
+        # Markierung zurück, ein späterer Lauf versucht die Story erneut.
+        run: |
+          node pipeline/ig-unmark.mjs
+          if ! git diff --quiet pipeline/state.json; then
+            git config user.name "RoP News-Pipeline"
+            git config user.email "actions@github.com"
+            git add pipeline/state.json
+            git commit -m "IG: fehlgeschlagene Posts entsperrt (Slots zurückgegeben)"
+            git pull --rebase --autostash origin main
+            git push origin main
+          fi

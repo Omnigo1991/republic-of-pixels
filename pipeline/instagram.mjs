@@ -34,6 +34,11 @@ import { holeSpielBild } from "./lib/keyart.mjs";
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const STATE_FILE = join(ROOT, "pipeline", "state.json");
 const QUEUE_FILE = join(ROOT, ".ig-queue.json");
+// Fehlgeschlagene Publishes (09.08.2026, "API access blocked"-Vorfall):
+// publish schreibt sie hierhin, der Workflow-Schritt "entsperren" gibt die
+// Slots via pipeline/ig-unmark.mjs zurück — sonst verbrennt jeder Ausfall
+// einen Tages-Slot (optimistische Markierung gegen Doppelposts).
+const FAILED_FILE = join(ROOT, ".ig-failed.json");
 const ARTICLES_DIR = join(ROOT, "src", "content", "articles");
 const SOCIAL_DIR = join(ROOT, "public", "social");
 const SITE = "https://www.republicofpixels.com";
@@ -437,7 +442,15 @@ async function prepare() {
           950,
         );
 
-      queue.push({ slug: article.slug, cardRel, caption, altText });
+      queue.push({
+        slug: article.slug,
+        cardRel,
+        caption,
+        altText,
+        // Für die Slot-Rückgabe bei Publish-Fehlern: nur Nicht-Breaking
+        // hat den Wechsel-Zähler erhöht.
+        nichtBreaking: !istBreaking,
+      });
       // Optimistisch als gepostet markieren: verhindert Doppel-Posts selbst
       // dann, wenn die Publish-Phase später fehlschlägt (bewusster Trade-off:
       // lieber ein verlorener Post als ein doppelter).
@@ -595,6 +608,8 @@ async function publish() {
     return;
   }
 
+  const fehlgeschlagen = [];
+
   for (const [index, item] of queueData.posts.entries()) {
     // Holt ein Lauf mehrere Posts nach (Aufhol-Logik), gehen sie nicht im
     // Sekundentakt raus: 6 Minuten Abstand wirken wie redaktionelle Hand.
@@ -608,6 +623,7 @@ async function publish() {
       console.log(
         `  Grafik nicht erreichbar (Deploy zu langsam?) — Post entfällt: ${item.slug}`,
       );
+      fehlgeschlagen.push({ slug: item.slug, nichtBreaking: item.nichtBreaking === true });
       continue;
     }
     try {
@@ -652,7 +668,15 @@ async function publish() {
       );
     } catch (err) {
       console.log(`  ✗ Post fehlgeschlagen für ${item.slug}: ${err.message}`);
+      fehlgeschlagen.push({ slug: item.slug, nichtBreaking: item.nichtBreaking === true });
     }
+  }
+
+  if (fehlgeschlagen.length > 0) {
+    writeFileSync(FAILED_FILE, JSON.stringify(fehlgeschlagen, null, 2) + "\n");
+    console.log(
+      `::warning::Instagram: ${fehlgeschlagen.length} Post(s) fehlgeschlagen — Slots werden zurückgegeben (ig-unmark).`,
+    );
   }
 }
 
