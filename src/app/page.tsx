@@ -51,7 +51,7 @@ export default async function HomePage() {
 
         <Reveal>
           <div className="pt-12 sm:pt-16">
-            <p className="text-xl font-black uppercase tracking-tight text-text-primary sm:text-3xl lg:text-4xl">
+            <p className="text-[length:calc((100vw-32px)*0.0651)] font-black uppercase leading-none tracking-[-0.02em] text-text-primary sm:text-[length:calc((100vw-48px)*0.0651)] lg:text-[length:calc((min(100vw,1280px)-104px)*0.036458)]">
               News aus der <span className="text-accent">Republic</span>
             </p>
           </div>
@@ -74,7 +74,7 @@ export default async function HomePage() {
 
         <Reveal>
           <div className="pt-12 sm:pt-16">
-            <p className="text-xl font-black uppercase tracking-tight text-text-primary sm:text-3xl lg:text-4xl">
+            <p className="text-[length:calc((100vw-32px)*0.0651)] font-black uppercase leading-none tracking-[-0.02em] text-text-primary sm:text-[length:calc((100vw-48px)*0.0651)] lg:text-[length:calc((min(100vw,1280px)-104px)*0.036458)]">
               Die <span className="text-accent">Republic</span>-Radare
             </p>
           </div>
@@ -106,7 +106,7 @@ export default async function HomePage() {
 
         <Reveal>
           <div className="pt-12 sm:pt-16">
-            <p className="text-xl font-black uppercase tracking-tight text-text-primary sm:text-3xl lg:text-4xl">
+            <p className="text-[length:calc((100vw-32px)*0.0651)] font-black uppercase leading-none tracking-[-0.02em] text-text-primary sm:text-[length:calc((100vw-48px)*0.0651)] lg:text-[length:calc((min(100vw,1280px)-104px)*0.036458)]">
               Deine <span className="text-accent">Republic</span>
             </p>
           </div>
