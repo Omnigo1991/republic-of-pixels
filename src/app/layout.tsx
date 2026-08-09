@@ -51,15 +51,19 @@ export const metadata: Metadata = {
   // generisches Browser-Symbol statt unserer Marke. SVG allein genügt dort
   // nicht, es braucht PNG.
   icons: {
-    // favicon.ico ZUERST: Safari (macOS wie iOS) greift für das Symbol im
-    // Teilen-Menü darauf zurück und ignoriert SVG-Favicons — fehlte die
-    // Datei, zeigte es den generischen Kompass (Tim, 09.08.2026).
+    // Nur ICO und PNG (09.08.2026, dritter Anlauf beim Kompass-Problem):
+    // Safari bevorzugt SVG-Favicons, unseres ist aber NICHT quadratisch
+    // (401×464) und im hellen Modus dunkelblau auf transparent — damit
+    // kommt das Teilen-Menü nicht klar und zeigt sein Ersatzsymbol. Ohne
+    // SVG-Deklaration bleibt die ICO-Datei die einzige Wahl.
+    // Der ?v=2-Anhang zwingt Safari, seinen Icon-Zwischenspeicher zu
+    // verwerfen — sonst hält es tagelang am alten Zustand fest.
     icon: [
-      { url: "/favicon.ico", sizes: "16x16 32x32 48x48" },
-      { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.ico?v=2", sizes: "16x16 32x32 48x48" },
+      { url: "/favicon-32.png?v=2", sizes: "32x32", type: "image/png" },
     ],
-    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+    shortcut: [{ url: "/favicon.ico?v=2" }],
+    apple: [{ url: "/apple-touch-icon.png?v=2", sizes: "180x180", type: "image/png" }],
   },
   // Google-Discover-Voraussetzung: Ohne "max-image-preview: large" zeigt
   // Google nur Mini-Thumbnails — grosse Vorschaubilder sind aber praktisch
