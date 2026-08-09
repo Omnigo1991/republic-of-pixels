@@ -1,0 +1,121 @@
+{
+  "slug": "direct-die-wasserkuehlung-rtx-2060-super-mod",
+  "title": "Modder pumpt Kühlwasser direkt auf blankes GPU-Silizium",
+  "subtitle": "Ohne Metall-Waterblock erreicht ein selbstgebauter 3D-Druck-Kühler bei einer RTX 2060 Super Lasttemperaturen von 28 Grad",
+  "excerpt": "Der Hardware-Bastler TrashBench hat eine Grafikkarte ohne klassischen Waterblock gekühlt und die Flüssigkeit direkt über die nackte GPU-Silizium-Oberfläche geleitet. Trotz anfänglicher Lecks sind die Temperaturwerte bemerkenswert.",
+  "seoTitle": "Direct-Die-Kühlung: Wasser direkt auf GPU-Silizium gepumpt",
+  "metaDescription": "TrashBench kühlt eine RTX 2060 Super ohne Metall-Waterblock direkt auf dem Silizium und misst 28 Grad Lasttemperatur trotz mehrerer Leckagen im Testprozess.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "tags": [
+    "RTX 2060 Super",
+    "Wasserkühlung",
+    "GPU-Modding",
+    "DIY-Hardware",
+    "3D-Druck"
+  ],
+  "tldr": [
+    "TrashBench entwickelte einen 3D-gedruckten Kühlblock, der Wasser direkt auf die blanke GPU-Silizium-Oberfläche pumpt, ohne Metall-Waterblock",
+    "Erste Tests mit einer defekten RTX 3060 verursachten Lecks, die mit Nagellack und Epoxidharz abgedichtet wurden",
+    "Im Heaven-Benchmark erreichte eine RTX 2060 Super 28 Grad Lasttemperatur, verglichen mit 70 Grad beim Stockkühler und 36 Grad bei einer AiO-Lösung",
+    "Ein Zusatztest mit einem Intel i5-7600K zeigte, dass die Grösse der Kühlkammer entscheidend für die Wirksamkeit ist"
+  ],
+  "whyItMatters": "Der Versuch zeigt experimentell, wie viel Kühlpotenzial im direkten Kontakt zwischen Flüssigkeit und Chip steckt, auch wenn die Methode für den Alltagsgebrauch ungeeignet bleibt. Für Enthusiasten im Extreme-Cooling-Bereich liefert das Projekt konkrete Vergleichswerte und zeigt zugleich die praktischen Risiken solcher Eigenbauten auf.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Der australische Hardware-Bastler und YouTuber TrashBench hat mit einem ungewöhnlichen Experiment für Aufsehen gesorgt: Statt auf einer Grafikkarte einen klassischen Metall-Waterblock aufzusetzen, liess er Kühlflüssigkeit direkt über die blanke Silizium-Oberfläche der GPU strömen. Ein eigens per 3D-Druck gefertigter Block ersetzt dabei die sonst übliche Metallplatte vollständig. Getestet wurde die Methode zunächst an einer defekten RTX 3060, bevor eine funktionsfähige RTX 2060 Super zum Einsatz kam."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "28 °C",
+          "label": "Lasttemperatur der RTX 2060 Super mit direkter Wasserkühlung im Heaven-Benchmark"
+        },
+        {
+          "value": "70 °C",
+          "label": "Lasttemperatur mit dem originalen Stockkühler"
+        },
+        {
+          "value": "36 °C",
+          "label": "Lasttemperatur mit einer aufgesetzten AiO-Kühlung"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Lecks als ständiger Begleiter"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Weg zum funktionierenden Aufbau war holprig. Um Kurzschlüsse durch Wasserkontakt zu verhindern, überzog TrashBench alle oberflächenmontierten Bauteile neben der GPU mit Nagellack. Der 3D-gedruckte Block wurde mit Dichtungen, Unterlegscheiben und Schlauchklemmen befestigt und über die ursprüngliche Halteklammer des Luftkühlers fixiert. Der erste Testlauf leckte trotzdem, weshalb Epoxidharz zum Abdichten des Blocks und später auch der Schlauchanschlüsse nötig wurde. Erst danach liess sich ein dichter Prototyp realisieren."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Erste Machbarkeitstests mit einer nicht mehr funktionsfähigen RTX 3060",
+        "Abdichtung empfindlicher Bauteile mit Nagellack",
+        "Zusätzliche Versiegelung mit Epoxidharz nach anfänglichen Lecks",
+        "Einsatz eines PCIe-Riser-Kabels, um Lecks von der Hauptplatine fernzuhalten",
+        "Zusatztest mit auf -28 °C gekühlter Flüssigkeit"
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "Auf der Suche nach dem perfekten Waterblock habe ich mir überlegt: Wozu brauchen wir überhaupt Metall? Warum können wir das Wasser nicht einfach direkt über das blanke Silizium pumpen? Für mich ergibt das Sinn.",
+      "attribution": "TrashBench"
+    },
+    {
+      "type": "heading",
+      "text": "Kammergrösse als Flaschenhals"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nach erfolgreichen Läufen mit einer GTX 980 folgte der eigentliche Härtetest mit der RTX 2060 Super, bei dem sich auch die Wahl des 3D-Druckmaterials als relevant erwies: Manche Materialien liessen an den Kanten Wasser durch, andere waren leicht porös. Zusätzlich prüfte TrashBench die Methode an einem Intel i5-7600K, bewusst gewählt, weil der Prozessor laut eigener Aussage nicht besonders hitzeempfindlich sei und ein Ausfall keinen grossen Verlust darstelle. Dieser CPU-Test verdeutlichte am klarsten, dass die Grösse der Kühlkammer über die Wirksamkeit der Methode entscheidet."
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Zahlen sprechen für das Prinzip der direkten Kühlung, solange Langzeitdichtheit gewährleistet werden kann. Als reproduzierbare Alltagslösung taugt der Aufbau jedoch nicht, dafür ist die Leckagegefahr zu real. Für die Extreme-Cooling-Szene liefert das Experiment aber einen konkreten Anhaltspunkt dafür, wie viel thermisches Potenzial im direkten Kontakt zwischen Kühlmittel und Chip tatsächlich steckt."
+    }
+  ],
+  "poll": {
+    "question": "Würdet ihr eine Grafikkarte mit direkter Wasserkühlung auf dem blanken Silizium betreiben?",
+    "options": [
+      "Ja, für maximale Temperaturen riskiere ich das",
+      "Nein, das Leckrisiko ist mir zu hoch",
+      "Nur an einer alten Karte zum Testen",
+      "Ich warte auf einen fertigen Kommerzansatz"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-09T14:21:56.236Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "circuit",
+  "sources": [
+    {
+      "title": "Modder pumps liquid directly over bare GPU silicon via 3D-printed block — drops RTX 2060 Super load temps to 28°C despite initial leaks",
+      "url": "https://www.tomshardware.com/pc-components/liquid-cooling/modder-pumps-liquid-directly-over-bare-gpu-silicon-via-3d-printed-block-drops-rtx-2060-super-load-temps-to-28-c-despite-initial-leaks",
+      "publisher": "Tom's Hardware"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/direct-die-wasserkuehlung-rtx-2060-super-mod.webp",
+    "alt": "Modder pumpt Kühlwasser direkt auf blankes GPU-Silizium",
+    "credit": "Bild: Tom's Hardware",
+    "sourceUrl": "https://www.tomshardware.com/pc-components/liquid-cooling/modder-pumps-liquid-directly-over-bare-gpu-silicon-via-3d-printed-block-drops-rtx-2060-super-load-temps-to-28-c-despite-initial-leaks",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "gta-6-netflix-extended-look-premiere-2026",
+    "roblox-aktiensturz-spielerschwund-2026",
+    "bettervr-mod-breath-of-the-wild-vr-2026"
+  ]
+}
