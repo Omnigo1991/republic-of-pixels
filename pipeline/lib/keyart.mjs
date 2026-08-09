@@ -16,6 +16,23 @@ function normalisiert(s) {
   return String(s).toLowerCase().replace(/[^a-z0-9]+/g, "");
 }
 
+function tokens(s) {
+  return String(s).toLowerCase().split(/[^a-z0-9]+/).filter(Boolean);
+}
+
+// Namens-Abgleich auf GANZWORT-Basis: Der frühere Zeichen-startsWith liess
+// "grand theft auto vi" auf "grand theft auto VICE city" passen und lieferte
+// am 09.08.2026 Vice-City-Artwork für eine GTA-6-Anfrage. Jetzt gilt: Die
+// kürzere Namensform muss Wort für Wort der Anfang der längeren sein
+// (deckt Exakt-Treffer und Editions-Zusätze wie "… V Legacy" weiter ab).
+function namensTreffer(a, b) {
+  const ta = tokens(a);
+  const tb = tokens(b);
+  const kurz = ta.length <= tb.length ? ta : tb;
+  const lang = kurz === ta ? tb : ta;
+  return kurz.length > 0 && kurz.every((t, i) => t === lang[i]);
+}
+
 async function laden(url, timeoutMs = 20000) {
   const res = await fetch(url, {
     headers: { "User-Agent": UA },
@@ -34,13 +51,9 @@ export async function holeSpielBild({ gameName, rotation = 0, outPath }) {
       { headers: { "User-Agent": UA }, signal: AbortSignal.timeout(15000) }
     ).then((r) => r.json());
 
-    const wunsch = normalisiert(gameName);
-    const treffer = (suche.items ?? []).find((it) => {
-      const n = normalisiert(it.name);
-      // Strenger Abgleich: exakt oder klare Teilmenge — sonst landet das
-      // Material des falschen Spiels auf dem Post.
-      return n === wunsch || n.startsWith(wunsch) || wunsch.startsWith(n);
-    });
+    // Strenger Abgleich: exakt oder Ganzwort-Präfix — sonst landet das
+    // Material des falschen Spiels auf dem Post.
+    const treffer = (suche.items ?? []).find((it) => namensTreffer(gameName, it.name));
     if (!treffer) return null;
 
     // Details: Screenshots + Publisher (ein Aufruf für beides).
