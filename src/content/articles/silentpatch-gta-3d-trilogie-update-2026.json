@@ -1,0 +1,134 @@
+{
+  "slug": "silentpatch-gta-3d-trilogie-update-2026",
+  "title": "SilentPatch: Grösstes Update für die GTA-3D-Trilogie bringt über 100 Fixes",
+  "subtitle": "Der Fanpatch für GTA 3, Vice City und San Andreas restauriert rund 100 verloren geglaubte Dialogzeilen und behebt jahrzehntealte Bugs.",
+  "excerpt": "SilentPatch erhält sein bislang grösstes Update: Über 100 Fixes beheben Bugs in den PC-Versionen von GTA 3, Vice City und San Andreas – inklusive rund 100 restaurierter Dialogzeilen in San Andreas.",
+  "seoTitle": "SilentPatch-Update: 100+ Fixes für GTA-3D-Trilogie",
+  "metaDescription": "Der Fanpatch SilentPatch bekommt sein grösstes Update: Über 100 Fixes für GTA 3, Vice City und San Andreas, inklusive rund 100 restaurierter Dialogzeilen.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "tags": [
+    "GTA San Andreas",
+    "GTA Vice City",
+    "GTA 3",
+    "SilentPatch",
+    "Modding"
+  ],
+  "tldr": [
+    "SilentPatch erhält sein bislang grösstes Update mit über 100 Fixes für die PC-Versionen von GTA 3, Vice City und San Andreas.",
+    "Rund 100 zuvor unzugängliche Dialogzeilen in San Andreas wurden dank behobener Codefehler wieder hörbar gemacht.",
+    "CJs Kampfsprüche beim Schiessen funktionieren nun auch mit Maus und Tastatur, nicht mehr nur mit Controller.",
+    "Weitere Fixes betreffen Grafik, NPC-Verhalten und jahrzehntealte, sehr spezifische Bugs in allen drei Spielen."
+  ],
+  "whyItMatters": "Für Fans der 3D-Ära von Grand Theft Auto ist SilentPatch seit Jahren die inoffizielle Referenzlösung, um die technisch mangelhaften PC-Portierungen überhaupt sauber spielbar zu machen. Das Update zeigt, wie viel Detailarbeit eine Community-Initiative in ein über 20 Jahre altes Spiel stecken kann.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "SilentPatch, der seit Jahren wichtigste inoffizielle Fanpatch für die PC-Versionen von Grand Theft Auto 3, Vice City und San Andreas, hat sein bislang umfangreichstes Update erhalten. Über 100 einzelne Fixes beheben nicht nur seit Langem bekannte technische Mängel der drei Spiele, sondern machen auch Inhalte zugänglich, die durch Programmierfehler im Originalcode nie zu hören waren."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "100+",
+          "label": "einzelne Fixes im neuen SilentPatch-Update für die GTA-3D-Trilogie"
+        },
+        {
+          "value": "100",
+          "label": "restaurierte Dialogzeilen in GTA San Andreas"
+        },
+        {
+          "value": "15+",
+          "label": "bislang ungenutzte Sprüche des Ammu-Nation-Verkäufers"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Verlorene Dialogzeilen zurück im Spiel"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der auffälligste Teil des Updates betrifft San Andreas: Rund 100 Sprachzeilen, die aufgrund von Tippfehlern im Code nie ausgelöst wurden, sind nun wieder hörbar. Manche Zeilen waren nur unter bestimmten Bedingungen fehlerhaft – etwa die Kampfsprüche von CJ, die bislang ausschliesslich beim Spielen mit Controller funktionierten. Mit dem Update lösen sie nun auch beim Zielen und Schiessen mit Maus und Tastatur aus."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Fussgänger führen nun Gespräche über das Wetter.",
+        "Kriminelle erhalten eigene Sprüche fürs Weglaufen.",
+        "CJ hat spezifische Zeilen für die Übernahme einzelner Stadtviertel.",
+        "Mehr Dialogzeilen bei Interaktionen mit Sexarbeiterinnen.",
+        "Zusätzliche Verspottungen zwischen rivalisierenden Gangs.",
+        "Polizisten kündigen an, wenn sie das Ziel umstellt haben oder Deckungsfeuer brauchen.",
+        "Ein eigenes Grunzgeräusch, wenn eine Figur mit Farbe besprüht wird.",
+        "Mehr Ladenbesitzer reagieren verbal auf Überfälle."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Fehlerbehebungen jenseits der Sprachausgabe"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Lens Flares und Hitzeflimmern skalieren nun korrekt mit der Bildschirmauflösung.",
+        "NPCs können Scharfschützengewehre und Panzerfäuste nun richtig einsetzen.",
+        "Polizisten schiessen nicht mehr seitlich gehalten im 'Gangster-Stil'.",
+        "Vögel spawnen wieder korrekt in der Spielwelt.",
+        "Strassensperren sind nun richtig ausgerichtet.",
+        "Boote können in der Garage abgestellt werden, ohne das Spiel zum Absturz zu bringen.",
+        "Ein Bug, der den Himmel über San Andreas bei Regen um 20 Uhr rot färbte, wurde behoben.",
+        "Eine Explosion in Fort Carson, ausgelöst durch ein fehlerhaft in einer Einfahrt spawnendes Flugzeug, gehört der Vergangenheit an.",
+        "In GTA 3 laufen Strassengangster nun in Formation statt orientierungslos umherzuirren – ein Fehler, der sogar in der PS2-Version bestand."
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "Am bemerkenswertesten: Der Ammu-Nation-Verkäufer hatte über fünfzehn Dialogzeilen für dieses Ereignis, die allesamt bisher ungenutzt waren!",
+      "attribution": "Patch Notes zu SilentPatch"
+    },
+    {
+      "type": "paragraph",
+      "text": "SilentPatch war schon zuvor eine praktisch unverzichtbare Ergänzung, um die PC-Portierungen der 3D-Ära spielbar zu machen – etwa weil das freie Umsehen mit der Maus im Original defekt war. Mit dem neuen Update unterstreicht das Modding-Projekt erneut, wie viel Sorgfalt in die Fehlerbehebung eines über 20 Jahre alten Spiels investiert werden kann, während die ursprünglichen Ports diese Detailarbeit vermissen liessen."
+    }
+  ],
+  "poll": {
+    "question": "Welcher SilentPatch-Fix überzeugt euch am meisten?",
+    "options": [
+      "Restaurierte Dialogzeilen in San Andreas",
+      "Fix für CJs Schiess-Sprüche mit Maus und Tastatur",
+      "Behobene Grafikbugs bei Lens Flare und Hitzeflimmern",
+      "Gangster laufen in GTA 3 endlich in Formation"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-09T04:51:16.035Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "circuit",
+  "sources": [
+    {
+      "title": "The GTA 3D trilogy fanpatch has its biggest update, with over 100 new fixes including restored dialogue for San Andreas",
+      "url": "https://www.pcgamer.com/games/grand-theft-auto/the-gta-3d-trilogy-fanpatch-has-its-biggest-update-with-over-100-new-fixes-including-restored-dialogue-for-san-andreas/",
+      "publisher": "PC Gamer"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/silentpatch-gta-3d-trilogie-update-2026.webp",
+    "alt": "SilentPatch: Grösstes Update für die GTA-3D-Trilogie bringt über 100 Fixes",
+    "credit": "Bild: PC Gamer",
+    "sourceUrl": "https://www.pcgamer.com/games/grand-theft-auto/the-gta-3d-trilogy-fanpatch-has-its-biggest-update-with-over-100-new-fixes-including-restored-dialogue-for-san-andreas/",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "red-dead-redemption-2-87-millionen-verkaeufe-2026",
+    "thq-nordic-29-spiele-in-entwicklung-2026",
+    "nvidia-rtx-5090-mainboard-bundles-taiwan-2026"
+  ]
+}
