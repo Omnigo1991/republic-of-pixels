@@ -51,7 +51,7 @@ export default async function HomePage() {
 
         <Reveal>
           <div className="pt-12 sm:pt-16">
-            <p className="text-3xl font-black uppercase tracking-tight text-text-primary sm:text-4xl lg:text-5xl">
+            <p className="text-xl font-black uppercase tracking-tight text-text-primary sm:text-3xl lg:text-4xl">
               News aus der <span className="text-accent">Republic</span>
             </p>
           </div>
@@ -74,7 +74,7 @@ export default async function HomePage() {
 
         <Reveal>
           <div className="pt-12 sm:pt-16">
-            <p className="text-3xl font-black uppercase tracking-tight text-text-primary sm:text-4xl lg:text-5xl">
+            <p className="text-xl font-black uppercase tracking-tight text-text-primary sm:text-3xl lg:text-4xl">
               Die <span className="text-accent">Republic</span>-Radare
             </p>
           </div>
@@ -106,7 +106,7 @@ export default async function HomePage() {
 
         <Reveal>
           <div className="pt-12 sm:pt-16">
-            <p className="text-3xl font-black uppercase tracking-tight text-text-primary sm:text-4xl lg:text-5xl">
+            <p className="text-xl font-black uppercase tracking-tight text-text-primary sm:text-3xl lg:text-4xl">
               Deine <span className="text-accent">Republic</span>
             </p>
           </div>
