@@ -2039,7 +2039,38 @@
     "5744c8dada4ddfef": "2026-08-10T05:03:54.906Z",
     "f83074d9aac6adff": "2026-08-10T05:53:50.482Z",
     "df611c2a57ee6ea8": "2026-08-10T05:53:50.482Z",
-    "3b525442e75f0f1d": "2026-08-10T05:53:50.482Z"
+    "3b525442e75f0f1d": "2026-08-10T05:53:50.482Z",
+    "d295368ab3ca4d1b": "2026-08-10T09:03:59.868Z",
+    "0093ea3143049506": "2026-08-10T09:03:59.868Z",
+    "c9f5939c650bc1b7": "2026-08-10T09:03:59.868Z",
+    "fcbc661ffa539a51": "2026-08-10T09:03:59.868Z",
+    "42a40a9514a7c754": "2026-08-10T09:03:59.868Z",
+    "995197be7c7054fb": "2026-08-10T09:03:59.868Z",
+    "47945970bcdd6f00": "2026-08-10T09:03:59.868Z",
+    "2b3f8e3a404397fc": "2026-08-10T09:03:59.868Z",
+    "02b2b9fbacfa58a8": "2026-08-10T09:03:59.868Z",
+    "e7e5e8aeddacdfaf": "2026-08-10T09:03:59.868Z",
+    "638e91fd1a324219": "2026-08-10T09:03:59.868Z",
+    "c50c8cb3120733b2": "2026-08-10T09:03:59.868Z",
+    "87d771b59f582883": "2026-08-10T09:03:59.868Z",
+    "6fea93134a299f05": "2026-08-10T09:03:59.868Z",
+    "1729179a37e87e9b": "2026-08-10T09:03:59.868Z",
+    "25e4ffb676e14024": "2026-08-10T09:03:59.868Z",
+    "2b22737cae3e107d": "2026-08-10T09:03:59.868Z",
+    "8f979f540ae54ae4": "2026-08-10T09:03:59.868Z",
+    "feb1692725f4eacd": "2026-08-10T09:03:59.868Z",
+    "eaca30b81bedb08c": "2026-08-10T09:03:59.868Z",
+    "9a709716fc696acf": "2026-08-10T09:03:59.868Z",
+    "46c92b89285977fe": "2026-08-10T09:03:59.868Z",
+    "cc630213ae1f4a20": "2026-08-10T09:03:59.868Z",
+    "9f5444b6e0dca884": "2026-08-10T09:03:59.868Z",
+    "d1bf05b2426aa877": "2026-08-10T09:03:59.868Z",
+    "556400a096e64194": "2026-08-10T09:03:59.868Z",
+    "34305b25a821b95a": "2026-08-10T09:03:59.868Z",
+    "a8b8d68d82a40313": "2026-08-10T09:03:59.868Z",
+    "0df4bd41f37488b4": "2026-08-10T09:03:59.868Z",
+    "bb51d26cbc666225": "2026-08-10T09:03:59.868Z",
+    "3733d0a82348ab5d": "2026-08-10T09:03:59.868Z"
   },
   "instagram": {
     "posted": {
@@ -2050,7 +2081,8 @@
       "roblox-aktiensturz-spielerschwund-2026": "2026-08-09T11:07:53.264Z",
       "gta-6-netflix-extended-look-premiere-2026": "2026-08-09T14:04:43.725Z",
       "blizzard-top-performing-studio-xbox-leak-2026": "2026-08-09T17:10:53.034Z",
-      "oblivion-remastered-switch-2-gameplay-leak-2026": "2026-08-09T17:10:55.573Z"
+      "oblivion-remastered-switch-2-gameplay-leak-2026": "2026-08-09T17:10:55.573Z",
+      "battlefield-6-steam-rueckerstattung-rush-modus-2026": "2026-08-10T09:04:29.813Z"
     },
     "cards": {
       "/social/ig-demons-souls-prototyp-first-person-leak-2026.mp4": "2026-08-08T08:23:32.270Z",
@@ -2060,14 +2092,15 @@
       "/social/ig-gta-6-netflix-extended-look-premiere-2026.mp4": "2026-08-09T14:04:43.725Z",
       "/social/ig-blizzard-top-performing-studio-xbox-leak-2026.jpg": "2026-08-09T17:10:53.034Z",
       "/social/ig-oblivion-remastered-switch-2-gameplay-leak-2026.jpg": "2026-08-09T17:10:55.573Z",
-      "/social/ig-oblivion-remastered-switch-2-bild.jpg": "2026-08-09T18:41:44.544Z"
+      "/social/ig-oblivion-remastered-switch-2-bild.jpg": "2026-08-09T18:41:44.544Z",
+      "/social/ig-battlefield-6-steam-rueckerstattung-rush-modus-2026.mp4": "2026-08-10T09:04:29.813Z"
     },
     "unlisted": [
       "gta-6-preis-80-dollar-zelnick-schnaeppchen-2026"
     ],
     "wechsel": {
-      "day": "2026-08-09",
-      "nichtBreaking": 3
+      "day": "2026-08-10",
+      "nichtBreaking": 1
     },
     "tokenCheckedAt": "2026-08-08T08:23:33.168Z",
     "token": {
@@ -2076,12 +2109,14 @@
     },
     "spielBild": {
       "red dead redemption 2": 2,
-      "roblox": 1
+      "roblox": 1,
+      "battlefield 6": 1
     },
     "uebersprungen": {
       "br1-infinite-echtgeld-kills-unbestaetigt-2026": "2026-08-09T08:04:01.341Z",
       "bettervr-mod-breath-of-the-wild-vr-2026": "2026-08-09T08:51:11.052Z"
-    }
+    },
+    "typo": {}
   },
   "pixelraten": {
     "nummer": 2,
