@@ -354,6 +354,17 @@ async function prepare() {
           );
         }
       }
+      // NICHT ENTFERNEN (Tims Rückfrage 09.08.2026): Dieser Schritt lockert
+      // die redaktionelle VORLIEBE, niemals die Qualitätsprüfung — er kann
+      // also nie etwas Unscharfes durchlassen. Er wirkt nur in einem der
+      // beiden Fälle, und das ist Absicht:
+      //   Redaktion wollte "keyart", es gibt aber keines → das scharfe
+      //     Pressebild rettet den Post (sonst Typo-Karte oder, weil davon
+      //     nur EINE pro Tag erlaubt ist, gar kein Post — genau so ist die
+      //     Oblivion-Story am 09.08. auf einer Typo-Karte gelandet).
+      //   Redaktion wollte "pressebild", es war aber zu klein → presseTauglich
+      //     wird oben EINMAL berechnet und ändert sich hier nicht mehr, die
+      //     Bedingung scheitert erneut. Läuft bewusst ins Leere.
       if (!imagePath && presseTauglich) {
         imagePath = portraitPathFor(article);
       }
