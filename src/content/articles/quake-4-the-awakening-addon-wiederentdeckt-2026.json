@@ -1,0 +1,119 @@
+{
+  "slug": "quake-4-the-awakening-addon-wiederentdeckt-2026",
+  "title": "Verschollenes Quake-4-Addon nach 20 Jahren auf alter Festplatte entdeckt",
+  "subtitle": "Ein Entwickler fand einen weit fortgeschrittenen Build von The Awakening auf einem gebraucht gekauften PC und lud ihn zur Archivierung auf GitHub hoch",
+  "excerpt": "Auf der Festplatte eines gebraucht gekauften Rechners ist ein rund 20 Jahre verschollener Entwicklungsstand der eingestellten Quake-4-Erweiterung The Awakening aufgetaucht. Eine offizielle Bestätigung durch Activision fehlt bislang.",
+  "seoTitle": "Quake 4: The Awakening — Addon nach 20 Jahren wiederentdeckt",
+  "metaDescription": "Verschollenes Quake-4-Addon The Awakening taucht nach 20 Jahren auf einer alten Festplatte auf. Der Fund ist unbestätigt, gilt aber als sehr wahrscheinlich echt.",
+  "category": "leaks",
+  "platforms": [
+    "pc"
+  ],
+  "tags": [
+    "Quake 4",
+    "The Awakening",
+    "Ritual Entertainment",
+    "Activision",
+    "Leak"
+  ],
+  "tldr": [
+    "Entwickler Justin Marshall fand Dateien der eingestellten Quake-4-Erweiterung The Awakening auf der Festplatte eines gebraucht gekauften PCs",
+    "Die Erweiterung soll laut einem ehemaligen Ritual-Entwickler zu rund 95 Prozent fertig gewesen sein, bevor Activision sie einstellte",
+    "Marshall lud den Fund am 6. August zur Archivierung auf GitHub hoch, die Community arbeitet seither an einer Rekonstruktion",
+    "Eine offizielle Bestätigung durch Activision liegt bislang nicht vor, Indizien sprechen aber für die Echtheit des Materials"
+  ],
+  "whyItMatters": "Für die Community bedeutet der Fund einen seltenen Einblick in ein nahezu fertiges, aber nie veröffentlichtes Stück Spielegeschichte. Solche Wiederentdeckungen zeigen zudem, wie viel Material grosser Publisher über die Jahre verloren geht oder nur durch Zufall erhalten bleibt.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Quake 4 sollte einst mit der Erweiterung The Awakening fortgesetzt werden. Activision stellte das Projekt jedoch vor der Veröffentlichung ein, obwohl die Entwicklung offenbar schon weit fortgeschritten war. Rund 20 Jahre später ist ein grosser Teil dieses Entwicklungsstands überraschend wieder aufgetaucht – auf der Festplatte eines gebraucht gekauften Computers. Der Fund ist bislang nicht offiziell bestätigt, gilt aber aufgrund mehrerer Indizien als sehr wahrscheinlich echt."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "95 %",
+          "label": "geschätzter Fertigstellungsgrad laut einem ehemaligen Ritual-Entwickler"
+        },
+        {
+          "value": "20 Jahre",
+          "label": "seit der Einstellung von The Awakening durch Activision"
+        },
+        {
+          "value": "6. Aug.",
+          "label": "Datum des ersten GitHub-Uploads durch den Entdecker"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Fund auf einer gebraucht gekauften Festplatte"
+    },
+    {
+      "type": "paragraph",
+      "text": "Entdeckt hat den Entwicklungsstand der Spieleentwickler Justin Marshall, der unter anderem an XCOM 2, The Evil Within, Dead Island 2 und mehreren Teilen von The Dark Pictures Anthology mitgearbeitet hat. Marshall zufolge lagen die Dateien auf der Festplatte eines älteren Rechners, den er über Amazon erworben hatte. Er veröffentlichte den Fund wenige Tage später auf GitHub, um ihn zur Archivierung zu sichern. Bei den Daten handelt es sich um einen Entwicklungsstand von Quake 4: The Awakening, das seinerzeit bei Ritual Entertainment entstand, dem Studio hinter SiN. Activision zog das Projekt jedoch vor der Veröffentlichung zurück, obwohl es Aussagen eines ehemaligen Ritual-Mitarbeiters zufolge bereits zu rund 95 Prozent fertiggestellt gewesen sein soll."
+    },
+    {
+      "type": "heading",
+      "text": "Rekonstruierte Engine, aber kein vollständiger Spielcode"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nach dem ersten Upload am 6. August wurde das Repository innerhalb weniger Tage mehrfach erweitert. Unter anderem checkte Marshall eine rekonstruierte Variante der für The Awakening verwendeten Quake-4-Engine ein und behob Fehler bei Benutzeroberfläche, Effekten und Waffen. Möglich wurde die Rekonstruktion durch eine im Alpha-Build enthaltene PDB-Datei, die Debug-Informationen zur Zuordnung von kompiliertem Code enthält. Für den eigentlichen Spielcode der Erweiterung lag eine solche Datei allerdings nicht vor, weshalb der im Repository enthaltene Code laut Marshall lediglich dem regulären Quake 4 entspricht. Zum Spielen des Fundes ist die rekonstruierte Engine zudem nicht zwingend nötig: Benötigt wird eine reguläre Version von Quake 4, die weiterhin über Steam erhältlich ist."
+    },
+    {
+      "type": "heading",
+      "text": "Echtheit wahrscheinlich, Bestätigung fehlt"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Konfigurationsdateien im Fund tragen die Namen damaliger Ritual-Mitarbeiter, darunter Richard „Levelord“ Gray und Michael „RomSteady“ Russell",
+        "Russell hatte bereits zuvor öffentlich über die Entwicklung von The Awakening gesprochen",
+        "Eine offizielle Bestätigung durch Activision liegt bislang nicht vor",
+        "Der Entwicklungsstand ist bereits spielbar und zeigt mehrere Abschnitte samt bislang unveröffentlichten Inhalten, weist aber noch unfertige Elemente und Fehler auf"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Eine offizielle Veröffentlichung von The Awakening ist mit dem Fund nicht verbunden, und solange Activision sich nicht dazu äussert, bleibt die Herkunft des Materials formal unbestätigt. Für Fans der Serie ist es dennoch ein seltener Fall: Nach rund zwei Jahrzehnten ist ein grosser Teil einer eingestellten Erweiterung erstmals öffentlich zugänglich, und die Community hat bereits begonnen, das Repository weiter zu ergänzen und zu korrigieren."
+    }
+  ],
+  "poll": {
+    "question": "Wie sollte mit dem wiederentdeckten Quake-4-Addon umgegangen werden?",
+    "options": [
+      "Activision sollte The Awakening offiziell fertigstellen und veröffentlichen",
+      "Die Community sollte das Projekt eigenständig weiterentwickeln",
+      "Der Fund sollte nur als historisches Archivmaterial bewahrt werden",
+      "Activision sollte sich gar nicht weiter damit befassen"
+    ]
+  },
+  "isLeakOrRumor": true,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-10T05:53:37.000Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "grid",
+  "sources": [
+    {
+      "title": "Nach 20 Jahren: Eingestelltes Quake-4-Addon taucht auf Festplatte auf",
+      "url": "https://www.computerbase.de/news/gaming/nach-20-jahren-eingestelltes-quake-4-addon-taucht-auf-festplatte-auf.98772/",
+      "publisher": "ComputerBase"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/quake-4-the-awakening-addon-wiederentdeckt-2026.webp",
+    "alt": "Verschollenes Quake-4-Addon nach 20 Jahren auf alter Festplatte entdeckt",
+    "credit": "Bild: ComputerBase",
+    "sourceUrl": "https://www.computerbase.de/news/gaming/nach-20-jahren-eingestelltes-quake-4-addon-taucht-auf-festplatte-auf.98772/",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "oblivion-remastered-switch-2-gameplay-leak-2026",
+    "demons-souls-prototyp-first-person-leak-2026",
+    "diablo-4-nintendo-switch-2-leak-preis-release"
+  ]
+}
