@@ -2390,7 +2390,11 @@
     "0e9997accb3fdcc5": "2026-08-10T18:26:59.988Z",
     "d02dc520fb58880e": "2026-08-10T18:26:59.988Z",
     "9057fdfe547990aa": "2026-08-10T18:26:59.988Z",
-    "adc643c890f55498": "2026-08-10T18:26:59.988Z"
+    "adc643c890f55498": "2026-08-10T18:26:59.988Z",
+    "2e52d96ff7490125": "2026-08-10T18:50:12.912Z",
+    "33e54b6cf2f0a08b": "2026-08-10T18:50:12.912Z",
+    "46be76c278ff594d": "2026-08-10T18:50:12.912Z",
+    "96c15a5d4aa6cbcb": "2026-08-10T18:50:12.912Z"
   },
   "instagram": {
     "posted": {
@@ -2404,7 +2408,9 @@
       "oblivion-remastered-switch-2-gameplay-leak-2026": "2026-08-09T17:10:55.573Z",
       "battlefield-6-steam-rueckerstattung-rush-modus-2026": "2026-08-10T09:04:29.813Z",
       "asobi-remote-play-ps-plus-cloud-streaming-steam-deck": "2026-08-10T10:49:25.911Z",
-      "aliens-fireteam-elite-switch-cloud-abschaltung-2026": "2026-08-10T14:03:57.059Z"
+      "aliens-fireteam-elite-switch-cloud-abschaltung-2026": "2026-08-10T14:03:57.059Z",
+      "final-fantasy-9-remake-gestoppt-leak-2026": "2026-08-10T18:50:52.446Z",
+      "god-of-war-serie-ryan-hurst-abschied-kratos-2026": "2026-08-10T18:50:56.256Z"
     },
     "cards": {
       "/social/ig-demons-souls-prototyp-first-person-leak-2026.mp4": "2026-08-08T08:23:32.270Z",
@@ -2417,14 +2423,16 @@
       "/social/ig-oblivion-remastered-switch-2-bild.jpg": "2026-08-09T18:41:44.544Z",
       "/social/ig-battlefield-6-steam-rueckerstattung-rush-modus-2026.mp4": "2026-08-10T09:04:29.813Z",
       "/social/ig-asobi-remote-play-ps-plus-cloud-streaming-steam-deck.jpg": "2026-08-10T10:49:25.911Z",
-      "/social/ig-aliens-fireteam-elite-switch-cloud-abschaltung-2026.jpg": "2026-08-10T14:03:57.060Z"
+      "/social/ig-aliens-fireteam-elite-switch-cloud-abschaltung-2026.jpg": "2026-08-10T14:03:57.060Z",
+      "/social/ig-final-fantasy-9-remake-gestoppt-leak-2026.mp4": "2026-08-10T18:50:52.446Z",
+      "/social/ig-god-of-war-serie-ryan-hurst-abschied-kratos-2026.jpg": "2026-08-10T18:50:56.256Z"
     },
     "unlisted": [
       "gta-6-preis-80-dollar-zelnick-schnaeppchen-2026"
     ],
     "wechsel": {
       "day": "2026-08-10",
-      "nichtBreaking": 2
+      "nichtBreaking": 4
     },
     "tokenCheckedAt": "2026-08-08T08:23:33.168Z",
     "token": {
@@ -2435,7 +2443,9 @@
       "red dead redemption 2": 2,
       "roblox": 1,
       "battlefield 6": 1,
-      "aliens: fireteam elite": 1
+      "aliens: fireteam elite": 1,
+      "final fantasy ix": 1,
+      "god of war": 1
     },
     "uebersprungen": {
       "br1-infinite-echtgeld-kills-unbestaetigt-2026": "2026-08-09T08:04:01.341Z",
