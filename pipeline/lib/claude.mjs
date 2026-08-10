@@ -34,10 +34,27 @@ export async function askClaude({ system, prompt, maxTokens = 8000, retries = 2 
         throw new Error(`Claude API HTTP ${res.status}: ${await res.text()}`);
       }
       const data = await res.json();
-      return data.content
+      const text = (data.content ?? [])
         .filter((b) => b.type === "text")
         .map((b) => b.text)
         .join("");
+      // LEERE ANTWORT ZÄHLT ALS FEHLVERSUCH (Fund 10.08.2026): Die API kann
+      // mit Status 200 und leerem Inhalt antworten. Bisher galt das als
+      // Erfolg — die leere Zeichenkette lief weiter bis zum JSON-Parser, der
+      // abbrach und den GESAMTEN Lauf beendete. Am 10.08. kostete das den
+      // 19:38-Lauf und damit zwei Posts, weil der nächste planmässige Lauf
+      // erst nach Fensterschluss kam. Jetzt wird stattdessen wiederholt.
+      if (!text.trim()) {
+        lastError = new Error(
+          `Claude API lieferte eine leere Antwort (stop_reason: ${data.stop_reason ?? "unbekannt"})`,
+        );
+        if (attempt < retries) {
+          await new Promise((r) => setTimeout(r, 10000 * (attempt + 1)));
+          continue;
+        }
+        throw lastError;
+      }
+      return text;
     } catch (err) {
       lastError = err;
       if (attempt < retries) await new Promise((r) => setTimeout(r, 10000));
