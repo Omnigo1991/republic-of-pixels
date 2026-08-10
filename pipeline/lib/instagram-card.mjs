@@ -73,6 +73,25 @@ export async function besterAusschnitt(imagePath) {
     return { luminanz, unruhe };
   };
 
+  // SCHNITT-WÄCHTER (Tim, 10.08.2026 — Aliens-Post): Der Sucher bewertete
+  // nur die Ruhe HINTER der Headline und wusste nicht, was er am oberen
+  // Bildrand zerschneidet. Beim Aliens-Cover gewann Position 100 % mit
+  // 3 % ruhigerer Kopfzone — und sägte dafür mitten durch den Schriftzug.
+  // Jetzt wird zusätzlich gemessen, wie viel Struktur direkt an der
+  // Oberkante des Ausschnitts liegt: viel Struktur = wir schneiden durch
+  // ein Logo, ein Gesicht, eine Kante. Nur die Oberkante zählt — die
+  // Unterkante verschwindet ohnehin unter dem dunklen Verlauf.
+  const schnittBand = Math.max(6, Math.round(sichtbarH * 0.05));
+  const schnittkante = async (versatz) => {
+    if (versatz <= 1) return 0; // Oberkante = Bildkante, es wird nichts zerschnitten
+    const ausschnitt = await sharp(imagePath)
+      .extract({ left: links, top: versatz, width: breite, height: schnittBand })
+      .toBuffer();
+    const stats = await sharp(ausschnitt).stats();
+    const [r, g, b] = stats.channels;
+    return (r.stdev + g.stdev + b.stdev) / 3 / 255;
+  };
+
   if (spielraum <= 2) {
     const m = await messen(0);
     return { position: 50, ...m };
@@ -82,10 +101,13 @@ export async function besterAusschnitt(imagePath) {
   for (const anteil of [0, 0.2, 0.35, 0.5, 0.65, 0.8, 1]) {
     const versatz = Math.round(spielraum * anteil);
     const m = await messen(versatz);
-    // Ruhe zählt am stärksten, Helligkeit leicht mit; die Bildmitte
-    // bekommt einen kleinen Bonus, damit wir nur bei echtem Gewinn
-    // vom gewohnten Ausschnitt abweichen.
-    const strafe = m.unruhe * 2.2 + m.luminanz * 0.5 + Math.abs(anteil - 0.5) * 0.06;
+    const schnitt = await schnittkante(versatz);
+    // Ein zerschnittenes Logo sticht sofort ins Auge, eine minim unruhigere
+    // Kopfzone nicht — darum wiegt der Schnitt am schwersten. Danach Ruhe
+    // hinter der Headline, dann Helligkeit; die Bildmitte bekommt einen
+    // kleinen Bonus, damit wir nur bei echtem Gewinn abweichen.
+    const strafe =
+      schnitt * 2.0 + m.unruhe * 2.2 + m.luminanz * 0.5 + Math.abs(anteil - 0.5) * 0.06;
     if (!beste || strafe < beste.strafe) beste = { strafe, anteil, ...m };
   }
   return { position: Math.round(beste.anteil * 100), luminanz: beste.luminanz, unruhe: beste.unruhe };
