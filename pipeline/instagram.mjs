@@ -151,7 +151,11 @@ Nur wenn ein Kandidat redaktionell unhaltbar ist, darf er fehlen; im Extremfall:
   for (let versuch = 0; ; versuch++) {
     let raw = "";
     try {
-      raw = await askClaude({ system: IG_SYSTEM, prompt, maxTokens: 2500 });
+      // 2500 war zu knapp (10.08.2026): Bei zwei Posts mit Headline, Bildunter-
+      // schrift und Hashtags brach die Antwort mitten im Satz ab, das JSON war
+      // unlesbar und der Lauf postete nichts. Tritt nur sporadisch auf, weil es
+      // an der Textlaenge haengt — darum grosszuegig statt knapp bemessen.
+      raw = await askClaude({ system: IG_SYSTEM, prompt, maxTokens: 8000 });
       const picks = parseJsonResponse(raw).picks ?? [];
       const brauchbar = picks.filter(
         (p) =>

@@ -71,6 +71,21 @@ export async function askClaude({ system, prompt, maxTokens = 8000, retries = 2 
       // abbrach und den GESAMTEN Lauf beendete. Am 10.08. kostete das den
       // 19:38-Lauf und damit zwei Posts, weil der nächste planmässige Lauf
       // erst nach Fensterschluss kam. Jetzt wird stattdessen wiederholt.
+      // ABGESCHNITTENE ANTWORT (Fund 10.08.2026): Reicht das Token-Budget
+      // nicht, liefert die API eine gueltige, aber MITTENDRIN abgebrochene
+      // Antwort — das JSON ist dann unlesbar ("Unterminated string"). Das
+      // kostete am 10.08. zwei Posts und war schwer zu finden, weil der
+      // Fehler erst beim Parser auftauchte. stop_reason sagt es direkt.
+      if (data.stop_reason === "max_tokens") {
+        lastError = new Error(
+          `Claude API brach die Antwort ab (Token-Budget ${maxTokens} erschoepft) — Budget erhoehen`,
+        );
+        if (attempt < retries) {
+          await new Promise((r) => setTimeout(r, 5000));
+          continue;
+        }
+        throw lastError;
+      }
       if (!text.trim()) {
         lastError = new Error(
           `Claude API lieferte eine leere Antwort (stop_reason: ${data.stop_reason ?? "unbekannt"})`,
