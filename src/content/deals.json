@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-10T14:03:35.992Z",
+  "updatedAt": "2026-08-10T18:14:09.080Z",
   "deals": [
     {
       "appId": 460930,
@@ -13,17 +13,6 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460930/ff701838255b7081bdbed2a30892e5eb4d1bbe1d/capsule_184x69_alt_assets_0_german.jpg?t=1786116240"
     },
     {
-      "appId": 1091500,
-      "title": "Cyberpunk 2077",
-      "discountPercent": 70,
-      "originalPrice": 5999,
-      "finalPrice": 1799,
-      "currency": "EUR",
-      "endsAt": "2026-08-10T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1091500/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/590e0988a2fb79f44d3e31e41fd4949eb76abc41/capsule_184x69.jpg?t=1784714077"
-    },
-    {
       "appId": 3527290,
       "title": "PEAK",
       "discountPercent": 50,
@@ -33,17 +22,6 @@
       "endsAt": "2026-08-18T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/3527290/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3527290/1844964d7a353e50eb3cc979ea922729d8c1b0ad/capsule_184x69.jpg?t=1775581133"
-    },
-    {
-      "appId": 2138330,
-      "title": "Cyberpunk 2077: Phantom Liberty",
-      "discountPercent": 40,
-      "originalPrice": 2999,
-      "finalPrice": 1799,
-      "currency": "EUR",
-      "endsAt": "2026-08-10T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/2138330/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2138330/3d2b6a051a7e2fc4ff654d95d6876c24d6dda13d/capsule_184x69.jpg?t=1784713876"
     },
     {
       "appId": 2950790,
@@ -66,6 +44,28 @@
       "endsAt": "2026-08-18T17:00:09.000Z",
       "url": "https://store.steampowered.com/app/1478500/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1478500/44da9fb07ebe477387355d7fce29560b55125cce/capsule_184x69.jpg?t=1785911674"
+    },
+    {
+      "appId": 1368140,
+      "title": "Corsair Cove",
+      "discountPercent": 25,
+      "originalPrice": 3999,
+      "finalPrice": 2999,
+      "currency": "EUR",
+      "endsAt": "2026-08-14T17:00:09.000Z",
+      "url": "https://store.steampowered.com/app/1368140/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1368140/9317363cb16926256a8e15b2dd91eee8203e4f11/capsule_184x69.jpg?t=1785860713"
+    },
+    {
+      "appId": 1067360,
+      "title": "Pax Autocratica",
+      "discountPercent": 17,
+      "originalPrice": 2999,
+      "finalPrice": 2489,
+      "currency": "EUR",
+      "endsAt": "2026-08-24T17:00:04.000Z",
+      "url": "https://store.steampowered.com/app/1067360/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1067360/84425c82428a91fe38e283efbc6a7afedb1d0332/capsule_184x69.jpg?t=1786382900"
     }
   ]
 }

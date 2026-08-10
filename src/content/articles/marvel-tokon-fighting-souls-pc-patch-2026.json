@@ -1,0 +1,130 @@
+{
+  "slug": "marvel-tokon-fighting-souls-pc-patch-2026",
+  "title": "Marvel Tōkon: Fighting Souls bekommt ersten PC-Patch nach Startproblemen",
+  "subtitle": "Vier Tage nach dem holprigen Launch liefert Arc System Works ein 10-GB-Update für die PC-Fassung.",
+  "excerpt": "Nach massiver Kritik an Rucklern und hoher CPU-Auslastung hat Arc System Works für Marvel Tōkon: Fighting Souls einen ersten grossen PC-Patch veröffentlicht – die Reaktionen der Community sind durchwachsen.",
+  "seoTitle": "Marvel Tōkon: Fighting Souls – erster PC-Patch gegen Ruckler",
+  "metaDescription": "Arc System Works patcht Marvel Tōkon: Fighting Souls nach PC-Beschwerden über Ruckler und CPU-Last. Die wichtigsten Änderungen im Überblick.",
+  "category": "news",
+  "platforms": [
+    "pc",
+    "playstation"
+  ],
+  "tags": [
+    "Marvel Tōkon: Fighting Souls",
+    "Arc System Works",
+    "PC",
+    "PlayStation 5",
+    "Patch",
+    "Fighting Games"
+  ],
+  "tldr": [
+    "Marvel Tōkon: Fighting Souls erschien am 6. August 2026 für PS5 und PC",
+    "Die PC-Version litt seit Start unter Rucklern, hoher CPU-Last und Frame-Drops",
+    "Arc System Works veröffentlichte am 10. August ein 10-GB-Update mit gezielten Fixes",
+    "Reaktionen der Community sind gemischt, ein Linux-Support fehlt weiterhin"
+  ],
+  "whyItMatters": "Der holprige PC-Start eines stark beachteten Fighting Games zeigt, wie entscheidend stabile Performance beim Launch gerade in kompetitiven Online-Titeln ist. Für Spieler:innen entscheidet der Patch mit darüber, ob sich rund um Marvel Tōkon eine verlässliche PC-Community etablieren kann.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Marvel Tōkon: Fighting Souls ist seit dem 6. August 2026 für PlayStation 5 und PC erhältlich. Während die Konsolenfassung laut übereinstimmenden Berichten reibungslos läuft, sorgte die PC-Version von Beginn an für Frust: Ruckler, unregelmässige Bildraten und eine ungewöhnlich hohe CPU-Auslastung machten sowohl offline als auch online Matches zeitweise unspielbar. Selbst der bekannte Fighting-Game-Szenekopf Maximilian Dood soll das Spiel nach massiven Rucklern und Lags deinstalliert haben. Vier Tage nach Release reagierte Entwickler Arc System Works und veröffentlichte den ersten grösseren Patch, der gezielt auf die PC-Probleme zugeschnitten ist."
+    },
+    {
+      "type": "embed",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=rJqTurD4cew"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "6. Aug.",
+          "label": "Launch von Marvel Tōkon: Fighting Souls für PS5 und PC"
+        },
+        {
+          "value": "10. Aug.",
+          "label": "Erster grosser PC-Patch, vier Tage nach Release"
+        },
+        {
+          "value": "10 GB",
+          "label": "Downloadgrösse des Updates für die PC-Fassung"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Was der Patch verändert"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Reduzierte CPU-Auslastung beim Spielstart sowie durch periodische Audioverarbeitung während Matches",
+        "Behebung eines Fehlers, bei dem wiederholte Prüfungen auf verfügbare Audiogeräte plötzliche Performance-Einbrüche auslösten",
+        "Fix für Bildratenabfälle bei bestimmten Auflösungseinstellungen",
+        "Korrektur, dass individuelle Kostüm- und Farbeinstellungen nach einem Neustart auf Standard zurückgesetzt wurden",
+        "Behobene Bedienungsfehler in der Online-Lobby, bei denen Angriffstasten nach Anzeige-Umstellung nicht mehr reagierten",
+        "Aufforderung zum Shader-Aufwärmen sowie verbesserte automatische Grafikprofil-Erkennung"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Durchwachsene Reaktionen aus der Community"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Patch wurde noch während laufender Serverwartung ausgerollt, sodass Spielerinnen und Spieler die Änderungen zunächst im Offline-Modus testen konnten. Die ersten Rückmeldungen fielen überwiegend positiv aus, mehrere Nutzer berichteten von spürbar geringerer Verzögerung und flüssigerem Verhalten. Andere Spielerinnen und Spieler mit ohnehin leistungsstarken Systemen bemerkten hingegen kaum einen Unterschied, da bei ihnen schon vor dem Update keine gravierenden Einbrüche auftraten. Besonders deutlich waren die Probleme laut Berichten vor dem Patch im Online-Modus zu spüren."
+    },
+    {
+      "type": "quote",
+      "text": "In Online-Partien erlebte ich häufig Matches gegen andere PC-Spieler, die durch massive Verlangsamungen und fünf oder mehr Rollback-Frames komplett unspielbar waren.",
+      "attribution": "Francesco De Meo, Wccftech"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ob der Patch dieses Online-Problem endgültig löst, lässt sich unmittelbar nach Veröffentlichung noch nicht abschliessend beurteilen. Arc System Works kündigte zudem ein verbessertes Backend-Crash-Reporting an, um künftige Probleme schneller zu identifizieren. Unverändert bleibt indes das Fehlen eines offiziellen Linux-Supports, den Teile der PC-Community seit Launch einfordern. Der Fall zeigt exemplarisch, wie stark sich der Erfolg eines Fighting-Game-Launches an der technischen Stabilität der PC-Fassung entscheidet – gerade weil Online-Matches ohne stabile Framerate schnell an Wettbewerbsfähigkeit verlieren."
+    }
+  ],
+  "poll": {
+    "question": "Wie bewertet ihr den Umgang von Arc System Works mit den PC-Problemen bei Marvel Tōkon?",
+    "options": [
+      "Schnelle Reaktion, Patch löst die Probleme",
+      "Guter Ansatz, aber es braucht noch mehr Fixes",
+      "Zu spät, der Ersteindruck ist schon beschädigt",
+      "Ich warte auf Linux-Support, bevor ich urteile"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-10T18:13:57.149Z",
+  "readingTimeMinutes": 1,
+  "heroVariant": "controller",
+  "sources": [
+    {
+      "title": "Sony and Arc System Works Patched MARVEL Tōkon: Fighting Souls, After PC Players Revolted Over Broken 60 FPS Performance",
+      "url": "https://wccftech.com/sony-arc-system-works-patched-marvel-tokon-fighting-souls-pc-broken-performance/",
+      "publisher": "Wccftech"
+    },
+    {
+      "title": "Marvel Tokon Update Improves PC Performance After Rough Launch—Full Patch Notes",
+      "url": "https://insider-gaming.com/marvel-tokon-update-improves-pc-performance-after-rough-launch-full-patch-notes/",
+      "publisher": "Insider Gaming"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/marvel-tokon-fighting-souls-pc-patch-2026.webp",
+    "alt": "Marvel Tōkon: Fighting Souls bekommt ersten PC-Patch nach Startproblemen",
+    "credit": "Bild: Wccftech",
+    "sourceUrl": "https://wccftech.com/sony-arc-system-works-patched-marvel-tokon-fighting-souls-pc-broken-performance/",
+    "sourceWidth": 1456,
+    "sourceHeight": 819
+  },
+  "relatedSlugs": [
+    "marvel-tokon-pc-release-probleme-2026",
+    "beast-of-reincarnation-update-1-0-7-2026",
+    "no-mans-sky-zehn-jahre-jubilaeum-2026"
+  ]
+}
