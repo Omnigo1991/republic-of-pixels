@@ -1,19 +1,20 @@
 {
-  "datum": "2026-08-10",
-  "nummer": 2,
-  "loesung": "Slay the Spire",
+  "datum": "2026-08-11",
+  "nummer": 3,
+  "loesung": "BioShock Infinite",
   "akzeptiert": [
-    "slaythespire"
+    "bioshockinfinite",
+    "bioshockinfinite"
   ],
   "hinweise": [
-    "Erschienen 2019 · Deckbuilder",
-    "Roguelike-Karten"
+    "Erschienen 2013 · Shooter",
+    "Stadt in den Wolken"
   ],
   "bilder": [
-    "/images/pixelraten/2026-08-10-s1.jpg",
-    "/images/pixelraten/2026-08-10-s2.jpg",
-    "/images/pixelraten/2026-08-10-s3.jpg",
-    "/images/pixelraten/2026-08-10-s4.jpg",
-    "/images/pixelraten/2026-08-10-s5.jpg"
+    "/images/pixelraten/2026-08-11-s1.jpg",
+    "/images/pixelraten/2026-08-11-s2.jpg",
+    "/images/pixelraten/2026-08-11-s3.jpg",
+    "/images/pixelraten/2026-08-11-s4.jpg",
+    "/images/pixelraten/2026-08-11-s5.jpg"
   ]
 }

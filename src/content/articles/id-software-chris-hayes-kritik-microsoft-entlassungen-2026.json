@@ -1,0 +1,105 @@
+{
+  "slug": "id-software-chris-hayes-kritik-microsoft-entlassungen-2026",
+  "title": "id-Software-Entwickler: Massenentlassungen machen Spiele schlechter",
+  "subtitle": "Lead-Programmierer Chris Hayes wirft Microsoft und der Branche fehlendes Verständnis für kreative Prozesse vor",
+  "excerpt": "Chris Hayes von id Software kritisiert im Interview die Entlassungspolitik von Microsoft: Wer Teams zerschlägt, verhindert Lernprozesse und nimmt Entwicklerinnen und Entwicklern die Motivation, sich für ihre Spiele einzusetzen.",
+  "seoTitle": "id Software: Kritik an Microsofts Entlassungspolitik",
+  "metaDescription": "id-Software-Entwickler Chris Hayes erklärt, warum Microsofts Massenentlassungen laut ihm die Qualität von Spielen und die Motivation der Teams beschädigen.",
+  "category": "news",
+  "platforms": [
+    "pc",
+    "xbox"
+  ],
+  "tags": [
+    "id Software",
+    "Microsoft",
+    "Xbox",
+    "Entlassungen",
+    "Tango Gameworks",
+    "Games-Industrie"
+  ],
+  "tldr": [
+    "id-Software-Entwickler Chris Hayes äussert im Interview mit dem YouTube-Kanal Auf ein Bier deutliche Kritik an Microsofts Entlassungspolitik",
+    "Er sagt, wiederholte Massenentlassungen zerstören eingespielte Teams und verhindern, dass Studios aus Fehlern lernen",
+    "Als Beispiel nennt er Tango Gameworks, das trotz des erfolgreichen Starts von Hi-Fi Rush geschlossen wurde",
+    "Hayes ist weiterhin bei Microsoft beschäftigt und sieht die gesamte Branche als ungesund an"
+  ],
+  "whyItMatters": "Wenn Studios nach jedem Release fürchten müssen, zerschlagen zu werden, verändert das die Art, wie Spiele entstehen – mit direkten Folgen für Qualität und Vielfalt des Angebots. Für Spielerinnen und Spieler erklärt das auch, warum sich viele aktuelle Grossproduktionen zunehmend uninspiriert anfühlen.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Chris Hayes, leitender Services-Programmierer bei id Software, hat in einem Interview mit dem YouTube-Kanal Auf ein Bier scharfe Kritik an der Personalpolitik von Microsoft geübt. Die wiederholten Massenentlassungen im Xbox-Umfeld seien nicht nur ein kurzfristiges Problem für betroffene Studios, sondern schwächten die gesamte Games-Industrie nachhaltig. Hayes, der weiterhin für Microsoft arbeitet, weitete seine Kritik dabei über die jüngste Entlassungsrunde bei Xbox hinaus aus und beschrieb ein grundsätzliches Missverständnis grosser Publisher gegenüber kreativer Arbeit."
+    },
+    {
+      "type": "heading",
+      "text": "Eingespielte Teams als Erfolgsfaktor"
+    },
+    {
+      "type": "paragraph",
+      "text": "Laut Hayes liegt die Qualität eines Spiels massgeblich darin begründet, wie gut ein Team über Zeit zusammengewachsen ist. Gemeinsame Erfahrung und eingespielte Arbeitsweisen liessen sich nicht einfach durch neues Personal ersetzen, selbst wenn dieses formal die gleiche Anzahl Arbeitsstunden liefere. Grosse Unternehmen wie Microsoft würden zwar gerne mit den 'grossartigen IPs und Studios' werben, die sie besitzen, verstünden aber nicht, dass sie deren Wert durch genau diese Praxis regelmässig selbst zerstören."
+    },
+    {
+      "type": "quote",
+      "text": "Wenn du einen Fehler machst, ist das der letzte Fehler, den du als Team machst. Dieses Team ist dann fertig. Also lernt niemand mehr, niemand wächst mehr, und im Ergebnis haben Einzelne keinen Anreiz mehr, sich zu engagieren.",
+      "attribution": "Chris Hayes, id Software"
+    },
+    {
+      "type": "heading",
+      "text": "Fehlerkultur als verlorenes Versprechen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Hayes erinnert daran, dass frühere Übernahmen – erst von ZeniMax, dann von Microsoft – ausdrücklich mit dem Argument beworben wurden, dass Studios innerhalb eines grösseren Konzerns Rückschläge verkraften könnten, ohne dass dies das Ende bedeute. Genau dieses Sicherheitsnetz sei inzwischen aber verschwunden. Als Beispiel nennt er Tango Gameworks: Trotz des kommerziell erfolgreichen Starts von Hi-Fi Rush wurde das Studio von Microsoft geschlossen. Für Hayes zeigt dieser Fall, dass selbst nachweisbarer Erfolg keinen Schutz mehr bietet."
+    },
+    {
+      "type": "paragraph",
+      "text": "Diese Entwicklung verändere laut Hayes auch das Verhalten der verbliebenen Entwicklerinnen und Entwickler grundlegend. Wer davon ausgehen müsse, kurz nach Veröffentlichung eines Spiels entlassen zu werden, verinnerliche irgendwann, dass eigenes Engagement entweder verschwendet oder nicht belohnt werde. Früher sei es üblich gewesen, dass sich Teams voll mit dem jeweiligen Projekt identifizierten – dieses Gefühl schwinde zunehmend."
+    },
+    {
+      "type": "quote",
+      "text": "Viele Gamer merken es, auch wenn sie es nicht genau benennen können: Da stimmt etwas nicht. Die Industrie ist nicht gesund.",
+      "attribution": "Chris Hayes, id Software"
+    },
+    {
+      "type": "paragraph",
+      "text": "Hayes räumt ein, dass makroökonomische Faktoren und die Konkurrenz um Aufmerksamkeit reale Herausforderungen für die Branche darstellen. Der Kern des Problems liege für ihn aber darin, dass an der Spitze der grossen Unternehmen niemand langfristig denke, um eine gesunde Industrie zu erhalten."
+    }
+  ],
+  "poll": {
+    "question": "Wer trägt aus eurer Sicht die grösste Verantwortung für die aktuelle Entlassungswelle in der Games-Industrie?",
+    "options": [
+      "Konzernführungen wie Microsoft",
+      "Der Markt und Investorendruck insgesamt",
+      "Fehlende Regulierung der Branche",
+      "Die Studios selbst durch schlechte Planung"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-10T23:21:33.753Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "circuit",
+  "sources": [
+    {
+      "title": "id Software dev says mass layoffs like Microsoft's are weakening the games industry, because developers 'don't have the incentive to care anymore'",
+      "url": "https://www.pcgamer.com/gaming-industry/id-software-dev-says-mass-layoffs-like-microsofts-are-weakening-the-games-industry-because-developers-dont-have-the-incentive-to-care-anymore/",
+      "publisher": "PC Gamer"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/id-software-chris-hayes-kritik-microsoft-entlassungen-2026.webp",
+    "alt": "id-Software-Entwickler: Massenentlassungen machen Spiele schlechter",
+    "credit": "Bild: PC Gamer",
+    "sourceUrl": "https://www.pcgamer.com/gaming-industry/id-software-dev-says-mass-layoffs-like-microsofts-are-weakening-the-games-industry-because-developers-dont-have-the-incentive-to-care-anymore/",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "id-software-chris-hays-xbox-kritik-2026",
+    "halo-studios-personalabbau-nach-launch-2026",
+    "halo-studios-entlassungen-campaign-evolved-2026"
+  ]
+}
