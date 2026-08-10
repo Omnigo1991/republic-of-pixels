@@ -1,0 +1,124 @@
+{
+  "slug": "the-duskbloods-network-test-teilnahme-pruefen-2026",
+  "title": "The Duskbloods: So seht ihr, ob ihr am Network-Test teilnehmen dürft",
+  "subtitle": "FromSoftware macht den Auswahlstatus für den limitierten Switch-2-Test ab sofort einsehbar",
+  "excerpt": "Wer sich im Juli für den Network-Test von The Duskbloods angemeldet hat, kann jetzt auf der offiziellen Webseite prüfen, ob er zu den ausgewählten Teilnehmenden gehört.",
+  "seoTitle": "The Duskbloods Network-Test: Teilnahmestatus prüfen",
+  "metaDescription": "FromSoftware öffnet die Statusabfrage für den Network-Test von The Duskbloods. So findet ihr heraus, ob ihr dabei seid, und wann der Test startet.",
+  "category": "news",
+  "platforms": [
+    "nintendo"
+  ],
+  "tags": [
+    "The Duskbloods",
+    "FromSoftware",
+    "Nintendo Switch 2",
+    "Network-Test"
+  ],
+  "tldr": [
+    "Wer sich im Juli registriert hat, kann jetzt auf der offiziellen Webseite den Auswahlstatus für den Network-Test von The Duskbloods einsehen",
+    "Login erfolgt über den Nintendo-Account, das Ergebnis fällt binär aus: ausgewählt oder nicht ausgewählt",
+    "Am 18. August um 15:00 Uhr (deutsche Zeit) wird auf derselben Seite ein Einlösecode für den Nintendo-Shop bereitgestellt",
+    "Der eigentliche Test läuft vom 21. bis 24. August in fünf Zeitfenstern"
+  ],
+  "whyItMatters": "The Duskbloods ist das erste neue Projekt der Elden-Ring- und Bloodborne-Macher seit Jahren und zugleich ein wichtiger Titel für die Switch 2. Der Network-Test liefert einen der ersten öffentlichen Eindrücke, bevor Nintendo und FromSoftware sich auf ein Erscheinungsdatum festlegen.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "FromSoftware hat die nächste Hürde für Interessierte an The Duskbloods aufgestellt: Wer sich im Juli für den ersten Network-Test des Spiels registriert hat, kann ab sofort auf der offiziellen Webseite nachsehen, ob er tatsächlich zu den ausgewählten Teilnehmenden gehört. Der Test war von Beginn an streng limitiert, eine Anmeldung garantierte also keinen Platz."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "18. Aug.",
+          "label": "Ab diesem Datum wird der Einlösecode für ausgewählte Teilnehmende bereitgestellt"
+        },
+        {
+          "value": "21.–24. Aug.",
+          "label": "Zeitraum, in dem der Network-Test tatsächlich stattfindet"
+        },
+        {
+          "value": "5",
+          "label": "Separate Zeitfenster, in die der Test aufgeteilt ist"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "So prüft ihr euren Status"
+    },
+    {
+      "type": "paragraph",
+      "text": "Um herauszufinden, ob man dabei ist, führt der Weg über die offizielle Webseite zum Network-Test. Dort öffnet man das Drei-Striche-Menü oben rechts und loggt sich mit dem eigenen Nintendo-Account ein. Das Ergebnis fällt denkbar knapp aus: Entweder erscheint die Meldung, dass man für die Teilnahme ausgewählt wurde, oder die Nachricht, dass dies nicht der Fall ist. Weitere Funktionen bietet die Seite momentan nicht, sie sollte aber als Lesezeichen aufbewahrt werden. Am 18. August um 15:00 Uhr deutscher Zeit müssen ausgewählte Nutzerinnen und Nutzer erneut dorthin zurückkehren, um einen Code abzuholen, der anschliessend auf der Nintendo-Webseite eingelöst werden kann."
+    },
+    {
+      "type": "heading",
+      "text": "Zeitplan für die Testphase"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der eigentliche Network-Test beginnt einige Tage nach der Code-Ausgabe und läuft vom 21. bis zum 24. August, verteilt auf fünf einzelne Sessions."
+    },
+    {
+      "type": "list",
+      "items": [
+        "21. August (Freitag), 12:00–16:00 Uhr (MESZ)",
+        "22. August (Samstag), 4:00–8:00 Uhr (MESZ)",
+        "22. August (Samstag), 20:00–0:00 Uhr (MESZ)",
+        "23. August (Sonntag), 12:00–16:00 Uhr (MESZ)",
+        "24. August (Montag), 4:00–8:00 Uhr (MESZ)"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ein konkretes Erscheinungsdatum für The Duskbloods haben weder Nintendo noch FromSoftware bislang genannt, ein Release noch in diesem Jahr gilt aber weiterhin als wahrscheinlich. Es ist denkbar, dass sich beide Unternehmen erst nach Auswertung der Rückmeldungen aus dem Network-Test auf ein festes Datum festlegen wollen. Für die Community ist der Test damit mehr als eine reine Marketingmassnahme: Er dürfte massgeblich mitbestimmen, wann und in welchem Zustand das Spiel letztlich erscheint."
+    }
+  ],
+  "poll": {
+    "question": "Was haltet ihr von der strengen Limitierung des Duskbloods-Network-Tests?",
+    "options": [
+      "Sinnvoll, um die Server gezielt zu testen",
+      "Zu kompliziert für ein einfaches Community-Feedback",
+      "Macht mich neugieriger auf das Spiel",
+      "Ist mir egal, ich warte auf den Release"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-10T10:48:55.238Z",
+  "readingTimeMinutes": 1,
+  "heroVariant": "particles",
+  "sources": [
+    {
+      "title": "The Duskbloods: So prüft ihr, ob ihr für den streng limitierten Network-Test ausgewählt wurdet",
+      "url": "https://www.eurogamer.de/the-duskbloods-network-test-status",
+      "publisher": "Eurogamer.de"
+    },
+    {
+      "title": "You can now check if you've been selected for The Duskbloods network test - here's how",
+      "url": "https://www.eurogamer.net/the-duskbloods-check-network-test-access",
+      "publisher": "Eurogamer"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/the-duskbloods-network-test-teilnahme-pruefen-2026.webp",
+    "alt": "The Duskbloods: So seht ihr, ob ihr am Network-Test teilnehmen dürft",
+    "credit": "Bild: Eurogamer.de",
+    "sourceUrl": "https://www.eurogamer.de/the-duskbloods-network-test-status",
+    "sourceWidth": 690,
+    "sourceHeight": 388
+  },
+  "relatedSlugs": [
+    "nintendo-kostenlose-reparatur-erdbeben-kumamoto-2026",
+    "nintendo-q1-fy2027-gewinn-zollrueckerstattung",
+    "nintendo-switch-2-releasefenster-bestaetigt-2026"
+  ]
+}

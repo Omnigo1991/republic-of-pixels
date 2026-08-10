@@ -1,0 +1,134 @@
+{
+  "slug": "beast-of-reincarnation-update-1-0-7-2026",
+  "title": "Beast of Reincarnation: Erster grosser Patch flickt Kamera und Balance",
+  "subtitle": "Game Freaks Action-RPG erhält mit Update 1.0.7 zahlreiche technische Fixes, während die Kritik an der Story vorerst bleibt",
+  "excerpt": "Nach durchwachsenem Start liefert Game Freak mit Patch 1.0.7 Fixes für Kamera, Text und Balance sowie DLSS-4.5- und FSR4-Support. Die Story-Pacing-Kritik bleibt vorerst nur teilweise adressiert.",
+  "seoTitle": "Beast of Reincarnation Update 1.0.7: Alle Änderungen im Überblick",
+  "metaDescription": "Game Freak veröffentlicht Patch 1.0.7 für Beast of Reincarnation mit Kamera-, Balance- und DLSS-4.5-Fixes. Die Story-Kritik bleibt vorerst bestehen.",
+  "category": "news",
+  "platforms": [
+    "pc",
+    "playstation",
+    "xbox"
+  ],
+  "tags": [
+    "Beast of Reincarnation",
+    "Game Freak",
+    "Action-RPG",
+    "Patch",
+    "DLSS",
+    "FSR4"
+  ],
+  "tldr": [
+    "Game Freak veröffentlicht Patch 1.0.7 für Beast of Reincarnation, rund eine Woche nach dem Launch",
+    "Fixes betreffen Kamera, Textgrösse, Cutscene-Standard, Parry-Fenster und Boss-Balance",
+    "Story-Pacing wurde nur leicht angepasst, weitere Verbesserungen sind angekündigt",
+    "PC-Version erhält neu Unterstützung für DLSS 4.5 und FSR4"
+  ],
+  "whyItMatters": "Beast of Reincarnation ist Game Freaks erster grosser Schritt weg von Pokémon, und der holprige Start belastet den Ruf des Studios. Wie schnell und wie gründlich die technischen und narrativen Probleme behoben werden, entscheidet mit, ob sich das Action-RPG langfristig etablieren kann.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Game Freak hat für Beast of Reincarnation das erste grosse Update seit dem Launch veröffentlicht. Patch 1.0.7 setzt das Spiel auf PC, PlayStation 5, Xbox Series X und Xbox Series S fort, nachdem die Startphase von technischen Problemen und durchwachsenen Steam-Bewertungen geprägt war. Nutzer:innen bezeichneten das Action-RPG dort unter anderem als «schlecht und lächerlich», wobei vor allem Kamera, Gameplay und Geschichte im Fokus der Kritik standen."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "1.0.7",
+          "label": "Versionsnummer des ersten grossen Patches nach dem Launch"
+        },
+        {
+          "value": "1 Woche",
+          "label": "Zeitspanne zwischen Launch und dem ersten Patch-Versprechen"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Kamera, Text und Balance im Fokus"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Diverse Anpassungen an der Spielkamera, sowohl in als auch ausserhalb von Kämpfen",
+        "Angepasste Textgrösse im gesamten Spiel, weitere Anpassungen sind geplant",
+        "Der Standard für Cutscenes wechselt von «Cinematic» zu «Performance», wodurch Zwischensequenzen nicht mehr automatisch mit 24 Bildern pro Sekunde laufen",
+        "Die Interaktions-Taste lässt sich neu frei belegen",
+        "Anpassung des Parierfensters, wenn Hauptfigur Emma während des Blockens Schaden erhält",
+        "Balance-Anpassungen an Bossgegnern über alle Schwierigkeitsgrade sowie an regulären Gegnern im Normal-Modus"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Story-Pacing nur leicht verbessert"
+    },
+    {
+      "type": "paragraph",
+      "text": "Beim zentralen Kritikpunkt Story-Tempo bleibt der Patch vorsichtiger. Laut den Patch-Notes wurden Affinitäts-Gespräche, die zuvor mehrfach hintereinander ausgelöst werden konnten, auf ein Vorkommen pro Tag begrenzt."
+    },
+    {
+      "type": "quote",
+      "text": "Weitere Updates sind geplant, um das Erlebnis bei Zwischensequenzen zusätzlich zu verbessern.",
+      "attribution": "Aus den offiziellen Patch-Notes zu Beast of Reincarnation"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ob damit auch eine Möglichkeit kommt, Cutscenes vollständig zu überspringen, ist offen – aktuell lassen sich nur sehr wenige Zwischensequenzen skippen. Game Freak kündigt zudem an, dass mehrere weitere Patches folgen und Anpassungen basierend auf Spieler-Feedback fortlaufend erfolgen sollen, darunter die von der Community gewünschte Implementierung von DLSS 4 respektive 4.5 und FSR4."
+    },
+    {
+      "type": "heading",
+      "text": "PC-Version erhält Upscaler-Support"
+    },
+    {
+      "type": "paragraph",
+      "text": "Für die PC-Fassung bringt Patch 1.0.7 direkt Unterstützung für Nvidias DLSS 4.5 und AMDs FSR4 mit. Die Implementierung der Upscaler war im Launch-Zustand des Spiels praktisch nicht funktionsfähig, weshalb die Nachbesserung als deutliche Verbesserung für PC-Spielerinnen und -Spieler gilt."
+    },
+    {
+      "type": "paragraph",
+      "text": "Insgesamt adressiert Update 1.0.7 einen grossen Teil der technischen Startprobleme von Beast of Reincarnation, lässt die inhaltliche Kritik an der Geschichte jedoch vorerst nur teilweise verstummen. Game Freak hat weitere Patches angekündigt – ob diese das Bild auf Steam, wo das Spiel weiterhin als «gemischt» bewertet wird, spürbar drehen, bleibt abzuwarten."
+    }
+  ],
+  "poll": {
+    "question": "Reicht Patch 1.0.7, um den holprigen Start von Beast of Reincarnation zu kompensieren?",
+    "options": [
+      "Ja, die technischen Fixes sind das Wichtigste",
+      "Nein, ohne bessere Story bleibt es Durchschnitt",
+      "Ich warte erst weitere Patches ab",
+      "Ich habe das Spiel nicht gekauft"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-10T10:48:09.139Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "waveform",
+  "sources": [
+    {
+      "title": "Beast of Reincarnation's first update is here, and it aims to fix story issues and more as \"Mixed\" Steam reviews dub Game Freak's new action RPG \"bad and laughable\"",
+      "url": "https://www.gamesradar.com/games/action-rpg/beast-of-reincarnations-first-update-is-here-and-it-aims-to-fix-story-issues-and-more-as-mixed-steam-reviews-dub-game-freaks-new-action-rpg-bad-and-laughable/",
+      "publisher": "GamesRadar"
+    },
+    {
+      "title": "Beast of Reincarnation Gets NVIDIA DLSS 4.5 and AMD FSR 4.0 Support, But Promised Story Improvements Disappoint",
+      "url": "https://wccftech.com/beast-of-reincarnation-nvidia-dlss-4-5-fsr-4-story-improvements-disappoint/",
+      "publisher": "Wccftech"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/beast-of-reincarnation-update-1-0-7-2026.webp",
+    "alt": "Beast of Reincarnation: Erster grosser Patch flickt Kamera und Balance",
+    "credit": "Bild: GamesRadar",
+    "sourceUrl": "https://www.gamesradar.com/games/action-rpg/beast-of-reincarnations-first-update-is-here-and-it-aims-to-fix-story-issues-and-more-as-mixed-steam-reviews-dub-game-freaks-new-action-rpg-bad-and-laughable/",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "beast-of-reincarnation-patch-story-pacing-2026",
+    "xbox-game-pass-lineup-august-2026",
+    "silent-hill-2-performance-mode-bug-patch-1-07"
+  ]
+}
