@@ -33,7 +33,34 @@ export async function askClaude({ system, prompt, maxTokens = 8000, retries = 2 
       if (!res.ok) {
         throw new Error(`Claude API HTTP ${res.status}: ${await res.text()}`);
       }
-      const data = await res.json();
+      // ROHTEXT ZUERST (Nachbesserung 10.08.2026): Beim 20:10-Lauf kam die
+      // Antwort mit Status 200 und LEEREM RUMPF — res.json() scheiterte
+      // selbst ("Unexpected end of JSON input"), also noch bevor die
+      // Leer-Prüfung weiter unten greifen konnte. Darum wird der Rumpf jetzt
+      // als Text gelesen und erst danach ausgewertet. Beide Fälle (leerer
+      // Rumpf, unlesbares JSON) gelten als Fehlversuch und werden wiederholt.
+      const roh = await res.text();
+      if (!roh.trim()) {
+        lastError = new Error(`Claude API lieferte einen leeren Rumpf (HTTP ${res.status})`);
+        if (attempt < retries) {
+          await new Promise((r) => setTimeout(r, 10000 * (attempt + 1)));
+          continue;
+        }
+        throw lastError;
+      }
+      let data;
+      try {
+        data = JSON.parse(roh);
+      } catch {
+        lastError = new Error(
+          `Claude API lieferte unlesbares JSON (HTTP ${res.status}): ${roh.slice(0, 200)}`,
+        );
+        if (attempt < retries) {
+          await new Promise((r) => setTimeout(r, 10000 * (attempt + 1)));
+          continue;
+        }
+        throw lastError;
+      }
       const text = (data.content ?? [])
         .filter((b) => b.type === "text")
         .map((b) => b.text)
