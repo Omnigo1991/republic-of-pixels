@@ -1,0 +1,125 @@
+{
+  "slug": "xbox-store-altersverifikation-australien-2026",
+  "title": "Microsoft führt Altersverifikation für Xbox Store in Australien ein",
+  "subtitle": "Ab August 2026 müssen Nutzer:innen in Australien ihr Alter belegen, um Spiele ab 18 Jahren im Microsoft Store und Xbox Store zu kaufen.",
+  "excerpt": "Microsoft verschickt E-Mails an australische Kund:innen: Ab August 2026 ist für den Kauf von R18+-Titeln im Xbox Store eine Altersverifikation per Ausweis, Kreditkarte oder Selfie-Scan nötig.",
+  "seoTitle": "Xbox Store: Altersverifikation in Australien ab August 2026",
+  "metaDescription": "Microsoft führt in Australien eine Altersverifikation für R18+-Spiele im Xbox Store ein. Details zu Fristen, Methoden und der Kritik an solchen Systemen.",
+  "category": "news",
+  "platforms": [
+    "xbox"
+  ],
+  "tags": [
+    "Xbox",
+    "Microsoft",
+    "Altersverifikation",
+    "Australien",
+    "Datenschutz",
+    "VerifyMy"
+  ],
+  "tldr": [
+    "Microsoft verlangt ab August 2026 eine Altersverifikation für R18+-Käufe im Microsoft Store und Xbox Store in Australien.",
+    "Verifiziert werden kann per E-Mail-Check, Selfie-Altersschätzung, Kreditkarte oder amtlichem Ausweis, abgewickelt vom Londoner Anbieter VerifyMy.",
+    "Ähnliche Vorschriften gelten bereits in Australien, Grossbritannien und 25 US-Bundesstaaten.",
+    "Steam und PlayStation haben in Australien bislang keine vergleichbar strengen Massnahmen umgesetzt."
+  ],
+  "whyItMatters": "Microsoft ist damit die erste grosse Konsolenplattform, die in Australien auf verpflichtende Altersnachweise setzt. Für Spielerinnen und Spieler bedeutet das potenziell mehr Hürden beim Kauf und neue Fragen zum Umgang mit sensiblen Daten wie Ausweisdokumenten oder Gesichtsscans.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Microsoft hat australische Nutzer:innen per E-Mail darüber informiert, dass ab August 2026 für den Kauf oder Zugriff auf Spiele und Apps mit der Alterseinstufung 18+ eine Verifikation des Alters nötig wird. Betroffen sind sowohl der Microsoft Store als auch der Xbox Store, über den sich neben Konsolentiteln auch PC-Spiele beziehen lassen. Die Massnahme soll australische Vorschriften zum Jugendschutz erfüllen."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "August 2026",
+          "label": "Start der Verifikationspflicht für R18+-Inhalte"
+        },
+        {
+          "value": "70'000",
+          "label": "kompromittierte amtliche Ausweisdokumente durch ein Discord-Datenleck 2025"
+        },
+        {
+          "value": "25",
+          "label": "US-Bundesstaaten mit vergleichbaren Altersverifikationsvorschriften"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Verifikation per Selfie, Ausweis oder Kreditkarte"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Verifikation über eine E-Mail-basierte Prüfung",
+        "Gesichtsbasierte Altersschätzung per Selfie-Scan",
+        "Bestätigung über eine Kreditkarte",
+        "Amtlicher Ausweis, etwa Führerschein oder Pass"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Die technische Abwicklung übernimmt das Londoner Unternehmen VerifyMy. In der E-Mail an die Kundschaft schreibt Microsoft dazu:"
+    },
+    {
+      "type": "quote",
+      "text": "Ab August 2026 müsst ihr euer Alter bestätigen, bevor ihr Apps und Spiele mit der Alterseinstufung 18+ im Microsoft Store und Xbox Store kaufen oder darauf zugreifen könnt, um die australischen Vorschriften zu erfüllen.",
+      "attribution": "Microsoft, E-Mail an Nutzer:innen"
+    },
+    {
+      "type": "heading",
+      "text": "Kritik an Verifikationsanbietern wächst"
+    },
+    {
+      "type": "paragraph",
+      "text": "Altersverifikationssoftware steht seit Anfang des Jahres verstärkt unter Beobachtung. Sicherheitsforscher hatten im Februar Hinweise darauf gefunden, dass der weit verbreitete Anbieter Persona, der unter anderem von Roblox, Twitch und VRChat genutzt wird, nicht nur nachlässig mit Nutzerdaten umgeht, sondern auch deutlich mehr Daten erhebt als für eine reine Altersprüfung nötig wäre. Discord hatte ein solches System zuvor testweise bei britischen Nutzer:innen eingesetzt. Ein separates Datenleck bei Discord im Jahr 2025 führte dazu, dass rund 70'000 amtliche Ausweisdokumente kompromittiert wurden. Solche Vorfälle nähren Befürchtungen, dass Altersverifikation unter dem Deckmantel des Jugendschutzes vor allem zu mehr Überwachung und Datensammlung führt."
+    },
+    {
+      "type": "heading",
+      "text": "Steam und PlayStation ziehen noch nicht nach"
+    },
+    {
+      "type": "paragraph",
+      "text": "Australien und Grossbritannien haben seit Anfang 2026 verschärfte Anforderungen an die Altersverifikation eingeführt, ebenso 25 US-Bundesstaaten. Microsoft ist mit dem neuen Verfahren aber die erste grosse Konsolenplattform, die in Australien konkret nachzieht. Steam hat dort bislang keine strengeren Prüfmechanismen implementiert, auch PlayStation zeigt sich bei diesem Thema bisher zurückhaltend. Ob und wann andere Anbieter dem Beispiel Microsofts folgen, ist offen."
+    }
+  ],
+  "poll": {
+    "question": "Wie bewertet ihr die neue Altersverifikationspflicht im Xbox Store?",
+    "options": [
+      "Sinnvoller Schritt für den Jugendschutz",
+      "Zu invasiv – Risiko für Datenschutz",
+      "Nur akzeptabel, wenn alle Plattformen mitziehen",
+      "Betrifft mich nicht, ist mir egal"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-10T05:03:41.554Z",
+  "readingTimeMinutes": 1,
+  "heroVariant": "circuit",
+  "sources": [
+    {
+      "title": "Australians must now prove their age to buy R18+ games on the Xbox store",
+      "url": "https://www.pcgamer.com/gaming-industry/australians-must-now-prove-their-age-to-buy-r18-games-on-the-xbox-store/",
+      "publisher": "PC Gamer"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/xbox-store-altersverifikation-australien-2026.webp",
+    "alt": "Microsoft führt Altersverifikation für Xbox Store in Australien ein",
+    "credit": "Bild: PC Gamer",
+    "sourceUrl": "https://www.pcgamer.com/gaming-industry/australians-must-now-prove-their-age-to-buy-r18-games-on-the-xbox-store/",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "blizzard-top-performing-studio-xbox-leak-2026",
+    "disc-produktion-ps5-xbox-geheimnis-2026",
+    "halo-studios-personalabbau-nach-launch-2026"
+  ]
+}
