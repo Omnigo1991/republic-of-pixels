@@ -1,0 +1,145 @@
+{
+  "slug": "steam-hardware-ceva-datenleck-europa-2026",
+  "title": "Cyberangriff auf Logistikpartner CEVA legt Kundendaten von Steam-Käufern offen",
+  "subtitle": "Valve informiert europäische Käufer von Steam Machine und Steam Controller über ein Datenleck bei Versanddienstleister CEVA Logistics",
+  "excerpt": "Ein Cyberangriff auf Valves europäischen Logistikpartner CEVA hat Namen, Adressen und Telefonnummern von Steam-Hardware-Käufern offengelegt. Passwörter und Zahlungsdaten sind laut Valve nicht betroffen.",
+  "seoTitle": "Steam-Hardware: CEVA-Datenleck betrifft europäische Käufer",
+  "metaDescription": "Valve warnt europäische Käufer von Steam Machine und Controller: Logistikpartner CEVA wurde gehackt, Adressdaten sind kompromittiert. Passwörter bleiben sicher.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "tags": [
+    "Valve",
+    "Steam",
+    "Steam Machine",
+    "Steam Controller",
+    "Datenleck",
+    "CEVA Logistics"
+  ],
+  "tldr": [
+    "CEVA Logistics, Valves Versandpartner für Steam-Hardware in Europa, wurde zwischen dem 29. Juli und 1. August 2026 gehackt.",
+    "Betroffen sind Namen, Adressen, Telefonnummern, E-Mail-Adressen sowie Art und Preis der bestellten Hardware.",
+    "Passwörter, Steam Guard-Codes und Zahlungsdaten sind laut Valve nicht kompromittiert.",
+    "Nur Bestellungen der letzten rund 90 Tage sind betroffen, da CEVA Daten so lange speichert."
+  ],
+  "whyItMatters": "Wer in Europa eine Steam Machine oder einen Steam Controller bestellt hat, muss mit gezielten Phishing-Versuchen rechnen, die echte Bestelldaten nutzen. Der Vorfall zeigt zudem, wie stark auch grosse Plattformbetreiber von der Sicherheit ihrer Logistikpartner abhängen.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Valve hat europäische Käufer von Steam-Hardware per E-Mail darüber informiert, dass persönliche Daten bei einem Cyberangriff auf den Logistikpartner CEVA Logistics kompromittiert wurden. CEVA ist für den Versand von Steam Machine und Steam Controller in Europa zuständig und wurde nach eigenen Angaben zwischen dem 29. Juli und dem 1. August 2026 angegriffen. Valve teilt mit, erst am 7. August von dem Vorfall erfahren zu haben. Die Information wurde zunächst über Nutzerposts auf ResetEra und Reddit bekannt, bevor Valve seinerseits Betroffene direkt kontaktierte."
+    },
+    {
+      "type": "embed",
+      "platform": "reddit",
+      "url": "https://www.reddit.com/r/Steam/comments/1vkgegu/eu_cyber_attack_hit_ceva_logistics_steams/"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "29. Juli – 1. Aug.",
+          "label": "Zeitraum des Cyberangriffs auf CEVA Logistics"
+        },
+        {
+          "value": "7. Aug.",
+          "label": "Datum, an dem Valve nach eigenen Angaben vom Vorfall erfuhr"
+        },
+        {
+          "value": "90 Tage",
+          "label": "Speicherfrist von CEVA, die den betroffenen Bestellzeitraum definiert"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Welche Daten betroffen sind"
+    },
+    {
+      "type": "paragraph",
+      "text": "Weil CEVA für den physischen Versand von Hardware Zugriff auf Lieferdaten benötigt, konnten die Angreifer laut Valve auf einen konkreten Datensatz zugreifen, der an Hardware-Bestellungen gebunden ist."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Vollständiger Name",
+        "Strasse, Postleitzahl und Ort",
+        "Land",
+        "Telefonnummer",
+        "E-Mail-Adresse (dieselbe, die mit dem Steam-Konto verknüpft ist)",
+        "Art und Preis des bestellten Produkts"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Was Valve als sicher bezeichnet"
+    },
+    {
+      "type": "paragraph",
+      "text": "Valve betont, dass CEVA zu keinem Zeitpunkt Zugriff auf Zahlungsdaten, Steam-Passwörter, Steam Guard-Codes oder sonstige kontobezogene Informationen hatte. Betroffen sind ausschliesslich Kundinnen und Kunden, deren Hardware-Bestellung innerhalb der letzten rund 90 Tage lag, da dies der Zeitraum ist, für den CEVA Daten speichert. Ein Passwortwechsel oder andere Anpassungen an den Kontoeinstellungen seien deshalb nicht nötig."
+    },
+    {
+      "type": "paragraph",
+      "text": "Gleichzeitig warnt Valve, dass Betroffene mit Phishing-Versuchen per E-Mail, SMS oder Telefon rechnen müssen, die sich auf die eigene Hardware-Bestellung beziehen und dabei unter Umständen die eigene Adresse zurückspiegeln, um seriös zu wirken. Solche Nachrichten könnten nach einer „Bestätigung“, einer kleinen Liefer- oder Zollgebühr oder einem Login zur „Verifizierung“ der Bestellung fragen."
+    },
+    {
+      "type": "quote",
+      "text": "Steam Support läuft ausschliesslich über help.steampowered.com und niemals über E-Mail, Steam-Chat oder Discord.",
+      "attribution": "Aus Valves E-Mail an betroffene Kundinnen und Kunden"
+    },
+    {
+      "type": "heading",
+      "text": "Unklarheiten beim Zeitpunkt der Meldung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Während Valve angibt, erst am 7. August von dem Angriff erfahren zu haben, berichtete das niederländische Medium NOS, dass zwei andere Unternehmen, Bol und De Bijenkorf, bereits am 1. August über den Vorfall bei CEVA informiert wurden. Wie diese Diskrepanz zustande kommt, ist bislang nicht geklärt. Weder Valve noch CEVA haben bisher eine offizielle öffentliche Stellungnahme veröffentlicht, stattdessen erfolgt die Kommunikation direkt per E-Mail an betroffene Kundinnen und Kunden. CEVA habe laut Valve die kompromittierten Systeme mittlerweile isoliert, offline genommen und externe Ermittler für die Aufklärung hinzugezogen. Valve erklärte zudem, man dränge CEVA auf ein vollständiges Bild von Umfang und Vorgehensweise des Angriffs und informiere derzeit die Datenschutzbehörden aller betroffenen Länder."
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Vorfall macht deutlich, dass Sicherheitslücken nicht immer bei der Plattform selbst entstehen müssen, sondern auch über Drittanbieter in die Wertschöpfungskette gelangen können. Für betroffene Käufer bleibt vor allem eines wichtig: Anfragen, die eine Zahlung, ein Login oder eine „Verifizierung“ der Bestellung verlangen, stammen nicht von Valve oder Steam."
+    }
+  ],
+  "poll": {
+    "question": "Wie reagiert ihr auf das CEVA-Datenleck bei Steam-Hardware-Bestellungen?",
+    "options": [
+      "Kein grosses Problem, solange Passwörter sicher sind",
+      "Ich bin besorgt wegen möglicher Phishing-Versuche",
+      "Vertrauen in Valves externe Logistikpartner ist erschüttert",
+      "Ich erwarte mehr Transparenz von Valve zum Zeitablauf"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-10T14:02:50.357Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "particles",
+  "sources": [
+    {
+      "title": "Valve Warns European Steam Hardware Buyers That Their Addresses Leaked after Shipping Partner CEVA Got Hit by a Cyberattack",
+      "url": "https://wccftech.com/valve-steam-hardware-europe-ceva-cyberattack-data-leak/",
+      "publisher": "Wccftech"
+    },
+    {
+      "title": "Valve User Data Leaks In Cyber Attack On European Supplier",
+      "url": "https://kotaku.com/steam-machine-and-controller-user-data-leaks-after-valves-european-supplier-gets-hit-with-cyber-attack-2000722955",
+      "publisher": "Kotaku"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/steam-hardware-ceva-datenleck-europa-2026.webp",
+    "alt": "Cyberangriff auf Logistikpartner CEVA legt Kundendaten von Steam-Käufern offen",
+    "credit": "Bild: Wccftech",
+    "sourceUrl": "https://wccftech.com/valve-steam-hardware-europe-ceva-cyberattack-data-leak/",
+    "sourceWidth": 1456,
+    "sourceHeight": 819
+  },
+  "relatedSlugs": [
+    "division-resurgence-steam-start-mixed-reviews-2026",
+    "battlefield-6-steam-rueckerstattung-rush-modus-2026",
+    "gears-of-war-e-day-beta-steam-rekord-2026"
+  ]
+}
