@@ -1,0 +1,116 @@
+{
+  "slug": "division-resurgence-steam-start-mixed-reviews-2026",
+  "title": "The Division Resurgence startet auf Steam mit durchwachsenem Echo",
+  "subtitle": "Nutzer:innen kritisieren Bugs, Belohnungssystem und Mikrotransaktionen des Free-to-play-Loot-Shooters.",
+  "excerpt": "Der mobile Free-to-play-Ableger von The Division ist seit diesem Monat auch auf Steam erhältlich – und trifft dort auf durchwachsene Kritik wegen Bugs und Mikrotransaktionen.",
+  "seoTitle": "The Division Resurgence: Steam-Start mit 46% positiv",
+  "metaDescription": "The Division Resurgence startet auf Steam durchwachsen: Kritik an Mikrotransaktionen, Bugs und mageren Belohnungen. Alle Fakten im Überblick.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "tags": [
+    "The Division Resurgence",
+    "Ubisoft",
+    "Steam",
+    "Free-to-play",
+    "Loot-Shooter"
+  ],
+  "tldr": [
+    "The Division Resurgence ist seit diesem Monat auf Steam erhältlich, zuvor bereits seit April über Ubisoft Connect verfügbar.",
+    "Die Steam-Bewertungen fallen mit 46% positiv als \"durchwachsen\" aus.",
+    "Kritisiert werden Login-Probleme, Maus-Bugs sowie das Verhältnis von Belohnungen zu Mikrotransaktionen.",
+    "Loot ist an eine begrenzte Anzahl täglicher Missionen gebunden, bei Wiederholungen sinken Erfahrung und Belohnungen deutlich."
+  ],
+  "whyItMatters": "Der Fall zeigt, wie ein ursprünglich für Mobilgeräte konzipiertes Free-to-play-Konzept auf ein PC-Publikum trifft, das andere Massstäbe an Loot-Shooter anlegt. Für Fans der Division-Reihe ist relevant, ob Ubisoft das Monetarisierungsmodell nachbessert oder Resurgence als eigenständiges Nebenprodukt bestehen lässt.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Tom Clancy's The Division Resurgence, ursprünglich für Mobilgeräte entwickelt, ist seit April über Ubisoft Connect auf dem PC erhältlich und seit diesem Monat auch auf Steam vertreten. Der Start auf der Plattform von Valve fällt jedoch durchwachsen aus: Nutzer:innen bewerten den kostenlosen Loot-Shooter mehrheitlich kritisch und bemängeln unter anderem Login-Probleme, fehlerhafte Maussteuerung sowie ein Missverhältnis zwischen mageren Belohnungen und aggressiven Mikrotransaktionen."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "46%",
+          "label": "positive Steam-Bewertungen seit dem Launch auf der Plattform"
+        },
+        {
+          "value": "April",
+          "label": "PC-Start über Ubisoft Connect, vor dem Steam-Release"
+        },
+        {
+          "value": "4–5",
+          "label": "tägliche Missionen mit vollen Belohnungen laut Spielerkritik"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Kritik an Mikromanagement und Belohnungssystem"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Gesamtwertung auf Steam wird als \"durchwachsen\" eingestuft, nur 46% der Reviews sind positiv",
+        "Spieler:innen berichten von Login-Problemen und Fehlern bei der Maussteuerung",
+        "Loot ist an tägliche Aufgaben gekoppelt, die nur wenige Male pro Tag mit voller Belohnung absolvierbar sind",
+        "Erfahrungspunkte und Belohnungen werden bei wiederholten Missionen stark reduziert"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Bekanntes Setting aus der Division-Reihe"
+    },
+    {
+      "type": "paragraph",
+      "text": "Wie die Hauptspiele der Reihe schickt Resurgence Spielende als Mitglied der Strategic Homeland Division ins von der \"Green Flu\"-Epidemie heimgesuchte New York. Schauplätze wie Liberty Island und die New Yorker Börse sind Teil der Spielwelt, die Belohnungen dafür fallen laut Kritiken jedoch überschaubar aus – etwa in Form leicht variierender Mützen und Baseballkappen."
+    },
+    {
+      "type": "quote",
+      "text": "Es als 'Slop' zu bezeichnen, ist eine Beleidigung für echten Slop. Ich habe koreanische Gacha-Spiele mit weniger Mikrotransaktionen gesehen als hier. Das ist selbst für ein Free-to-play-Spiel unseriös. Es hat das ablenkendste, verworrenste, absichtlich überkomplizierte und schlecht durchdachte UI- und Menüdesign, das ich je in einem Videospiel gesehen habe. Man verbringt mehr Zeit mit Mikromanagement als mit dem eigentlichen Spielen der Missionen.",
+      "attribution": "Steam-Nutzerrezension"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ubisoft setzt mit Resurgence auf ein Free-to-play-Modell mit mobilem Ursprung, doch der Steam-Start zeigt, dass dieses Monetarisierungskonzept bei einem PC-Publikum, das mit The Division und The Division 2 vertraut ist, auf Widerstand stösst. Für die Marke dürfte das ambivalente Echo eine Belastungsprobe sein."
+    }
+  ],
+  "poll": {
+    "question": "Wie bewertet ihr Free-to-play-Ableger etablierter Marken wie The Division Resurgence?",
+    "options": [
+      "Faires Modell, solange das Grundspiel gratis bleibt",
+      "Mikrotransaktionen gehen hier zu weit",
+      "Lieber bei Division 1/2 bleiben",
+      "Noch unentschieden"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-10T02:03:52.793Z",
+  "readingTimeMinutes": 1,
+  "heroVariant": "grid",
+  "sources": [
+    {
+      "title": "Free-to-play Division game launches on Steam to mixed reviews: 'Calling it slop disrespects actual slop'",
+      "url": "https://www.pcgamer.com/games/third-person-shooter/free-to-play-division-game-launches-on-steam-to-mixed-reviews-calling-it-slop-disrespects-actual-slop/",
+      "publisher": "PC Gamer"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/division-resurgence-steam-start-mixed-reviews-2026.webp",
+    "alt": "The Division Resurgence startet auf Steam mit durchwachsenem Echo",
+    "credit": "Bild: PC Gamer",
+    "sourceUrl": "https://www.pcgamer.com/games/third-person-shooter/free-to-play-division-game-launches-on-steam-to-mixed-reviews-calling-it-slop-disrespects-actual-slop/",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "assassins-creed-black-flag-resynced-ps5-verkaufszahlen-2026",
+    "battlefield-6-steam-rueckerstattung-rush-modus-2026",
+    "gears-of-war-e-day-beta-steam-rekord-2026"
+  ]
+}
