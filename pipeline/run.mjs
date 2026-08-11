@@ -12,8 +12,6 @@ import { FEEDS } from "./feeds.mjs";
 import { fetchAllFeeds } from "./lib/rss.mjs";
 import { askClaude, parseJsonResponse } from "./lib/claude.mjs";
 import { extractArticleText } from "./lib/extract.mjs";
-import { schreibeThemenRadar, passtZumAuftrag } from "./lib/themenradar.mjs";
-import { holeAuftrag, erledigeAuftrag } from "./lib/auftraege.mjs";
 import { waehleEinbettungen, gehtUmBewegtbild } from "./lib/embeds.mjs";
 import { acquireImage } from "./lib/images.mjs";
 import { validateArticle } from "./lib/validate.mjs";
@@ -117,7 +115,7 @@ function recentPublishedTitles(hours = 72) {
   return entries.slice(-150);
 }
 
-async function selectCandidates(candidates, auftrag) {
+async function selectCandidates(candidates) {
   const published = recentPublishedTitles();
   const publishedBlock = published.length
     ? `\nBereits von uns veröffentlicht (diese Storys NICHT erneut auswählen, auch nicht aus anderer Quelle oder mit anderem Titel — vergleiche auch inhaltlich/thematisch anhand der Tags, nicht nur den Titelwortlaut):\n${published.map((p) => `- ${p.title}${p.tags.length ? ` [${p.tags.join(", ")}]` : ""}`).join("\n")}\n`
@@ -129,18 +127,10 @@ async function selectCandidates(candidates, auftrag) {
     )
     .join("\n");
 
-  // BEVORZUGUNG, KEINE ABKUERZUNG (Tim, 11.08.2026): Der Auftrag aus dem
-  // Story-Radar sagt nur, WELCHES Thema Vorrang hat — alle Qualitaetsregeln
-  // darunter gelten unveraendert. Kommt das Thema in der Liste gar nicht vor,
-  // wird der Hinweis schlicht ignoriert.
-  const auftragBlock = auftrag
-    ? `\nVORRANG: Die Redaktion hat dieses Thema ausdruecklich angefordert. Findest du es in der Liste, waehle es als ERSTEN Cluster — sofern es unsere Qualitaetskriterien erfuellt. Steht es nicht in der Liste, ignoriere diesen Hinweis vollstaendig:\n- ${auftrag.titel}\n`
-    : "";
-
   const prompt = `Hier ist die Liste neuer Gaming-Meldungen aus unseren Quell-Feeds (Format: Index | Quelle | Alter | Titel | Anriss):
 
 ${list}
-${publishedBlock}${auftragBlock}
+${publishedBlock}
 
 Aufgaben:
 1. Erkenne Duplikate: Meldungen zur selben Nachricht bilden einen Cluster (Indizes zusammenfassen).
@@ -357,16 +347,9 @@ async function main() {
   console.log("1/5 Feeds abrufen …");
   const results = await fetchAllFeeds(FEEDS);
   const cutoff = Date.now() - MAX_CANDIDATE_AGE_H * 3600000;
-  // Fuer den Story-Radar zaehlen ALLE aktuellen Meldungen, auch die in
-  // frueheren Laeufen gesehenen (Tim-Test 11.08.2026): Sonst schrumpft die
-  // Themenliste mit jedem Lauf, weil bekannte Meldungen herausfallen — das
-  // Thema selbst ist deswegen ja nicht verschwunden. Genau deshalb war Tims
-  // angeklicktes Zelda-Thema nach dem Neuladen weg.
-  const alleAktuellen = results
+  const candidates = results
     .flatMap((r) => r.items)
-    .filter((it) => it.publishedAt && it.publishedAt.getTime() > cutoff);
-
-  const candidates = alleAktuellen
+    .filter((it) => it.publishedAt && it.publishedAt.getTime() > cutoff)
     .filter((it) => !state.seen[hashId(it.guid)])
     // Bei 26 Feeds: nur die 150 neuesten Kandidaten in die Auswahl geben,
     // damit der Auswahl-Prompt fokussiert bleibt.
@@ -374,12 +357,6 @@ async function main() {
     .slice(0, 150);
 
   console.log(`2/5 ${candidates.length} neue Kandidaten (Fenster ${MAX_CANDIDATE_AGE_H}h)`);
-
-  // STORY-RADAR (Tim, 11.08.2026): Auswertung der Kandidaten, BEVOR die
-  // Auswahl sie verwirft. Bewusst hier und nicht in selectCandidates —
-  // dieser Aufruf ist rein additiv und kann die Artikel-Erzeugung nicht
-  // beeinflussen; die Funktion faengt eigene Fehler ab.
-  schreibeThemenRadar(alleAktuellen);
   if (candidates.length === 0) {
     console.log("Nichts Neues — Lauf beendet.");
     return;
@@ -391,10 +368,7 @@ async function main() {
   }
 
   console.log("3/5 Auswahl & Clustering (Claude) …");
-  // Hoechstens EIN Auftrag pro Lauf — zwanzig Klicks im Cockpit fluten die
-  // Seite nicht. holeAuftrag() wirft nie und liefert im Zweifel null.
-  let auftrag = await holeAuftrag();
-  const selected = (await selectCandidates(candidates, auftrag))
+  const selected = (await selectCandidates(candidates))
     .filter((s) => Array.isArray(s.indices) && s.indices.every((i) => candidates[i]))
     .sort((a, b) => a.priority - b.priority)
     .slice(0, MAX_ARTICLES_PER_RUN);
@@ -480,21 +454,6 @@ async function main() {
       slugs.add(article.slug);
       publishedSlugs.push(article.slug);
       published++;
-      // Auftrag abhaken, sobald IRGENDEIN Artikel entstanden ist. Bewusst
-      // grosszuegig: Ein nicht abgehakter Auftrag wuerde beim naechsten Lauf
-      // erneut Vorrang bekommen und koennte sich festfressen. Er verfaellt
-      // ohnehin nach 24 Stunden.
-      // NUR ABHAKEN, WENN ES WIRKLICH DAS THEMA WAR (Tim-Test 11.08.2026):
-      // Vorher galt der Auftrag als erledigt, sobald IRGENDEIN Artikel
-      // entstand. Beim ersten echten Test verschwand Tims Zelda-Wunsch
-      // lautlos, weil in diesem Lauf Oblivion und Battlefield geschrieben
-      // wurden. Passt nichts, bleibt der Auftrag offen — der naechste Lauf
-      // versucht es erneut, und nach 24 Stunden verfaellt er ohnehin.
-      if (auftrag && passtZumAuftrag(auftrag.titel, article.title)) {
-        await erledigeAuftrag(auftrag.id);
-        console.log(`  Auftrag #${auftrag.id} erfuellt.`);
-        auftrag = null;
-      }
       console.log(`  ✓ Veröffentlicht: ${article.slug} (${check.wordCount} Wörter)`);
     } catch (err) {
       console.log(`  Fehler bei "${label}": ${err.message} — Cluster übersprungen`);

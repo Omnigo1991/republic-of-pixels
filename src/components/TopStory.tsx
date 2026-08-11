@@ -39,7 +39,7 @@ export function TopStory({ article }: { article: Article }) {
           <ArticleMedia article={article} priority sizes="(max-width: 1024px) 100vw, 50vw" className="h-full w-full transition-transform duration-700 group-hover:scale-[1.03]" />
         </div>
       </div>
-      <div>
+      <div className="mt-8 lg:mt-14">
         <div className="mb-4 flex items-center gap-3">
           <CategoryPill category={article.category} onDark />
           <span className="text-xs text-navy-dim">{formatDateTime(article.publishedAt)}</span>
