@@ -1,0 +1,128 @@
+{
+  "slug": "wow-patch-12-1-klassen-aenderungen-2026",
+  "title": "WoW: Patch 12.1 „Fluch von Ula'tek“ krempelt fast jede Klasse um",
+  "subtitle": "Mit dem Start der zweiten Season von World of Warcraft: Midnight erhalten alle 13 Klassen teils drastische Balance-Anpassungen.",
+  "excerpt": "Patch 12.1 bringt für World of Warcraft nicht nur neuen Content, sondern auch weitreichende Klassenänderungen – von generften Rufern bis zu massiv verstärkten automatischen Angriffen bei Jägern und Todesrittern.",
+  "seoTitle": "WoW Patch 12.1: Alle Klassen-Änderungen im Überblick",
+  "metaDescription": "Patch 12.1 „Fluch von Ula'tek“ startet für World of Warcraft mit umfassenden Balance-Anpassungen an allen Klassen. Die wichtigsten Änderungen im Überblick.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "tags": [
+    "World of Warcraft",
+    "Blizzard",
+    "Patch 12.1",
+    "MMORPG",
+    "Klassenbalance"
+  ],
+  "tldr": [
+    "Patch 12.1 „Fluch von Ula'tek“ startet am 12.08.2026 und leitet die zweite Season von WoW: Midnight ein",
+    "Nahezu alle 13 Klassen erhalten Balance-Anpassungen, viele davon fokussieren Leistung ausserhalb grosser Cooldowns",
+    "Auffällige Einzeländerungen: automatische Angriffe von Todesritter-Blutbestien werden um 1400 % verstärkt, Jäger erhalten bis zu 720 % mehr Schaden auf Auto-Attacken",
+    "Rufer werden bei einer Kontrollfähigkeit im Dungeon-Content abgeschwächt, während mehrere Heiler-Spezialisierungen mehr Flexibilität erhalten"
+  ],
+  "whyItMatters": "Für Spielerinnen und Spieler entscheidet ein solcher Patch oft darüber, welche Klasse und Spezialisierung im kommenden Content konkurrenzfähig bleibt. Wer seinen Charakter langfristig plant oder einen Klassenwechsel erwägt, findet in den Änderungen konkrete Anhaltspunkte für die neue Season.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Mit dem Ende der ersten Season von World of Warcraft: Midnight steht der nächste grosse Schritt bevor: Patch 12.1 mit dem Beinamen „Fluch von Ula'tek“ bringt nicht nur ein neues Gebiet, einen neuen Dungeon und einen neuen Raid, sondern greift auch tief in die Balance sämtlicher Klassen ein. Blizzard passt dabei praktisch jede der 13 Klassen an, wobei sich ein klares Muster zeigt: Viele Spezialisierungen sollen künftig auch ausserhalb ihrer grossen Cooldowns konkurrenzfähig sein, während die Spitzenleistung während dieser Fenster in manchen Fällen sinkt."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "12.08.2026",
+          "label": "Starttermin von Patch 12.1 und der zweiten Season von WoW: Midnight"
+        },
+        {
+          "value": "1400 %",
+          "label": "Stärkere automatische Angriffe der Blutbestie bei Todesritter-San'layn-Talenten"
+        },
+        {
+          "value": "720 %",
+          "label": "Boost auf automatische Angriffe bei Jägern, je nach Spezialisierung leicht abweichend"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Nahkampf- und Fernkampfklassen im Umbruch"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Todesritter: Frost-Fähigkeitsschaden sinkt pauschal um 10 %, einzelne Zauber werden dafür deutlich verstärkt; Unheilig verliert Stärke bei grossen Cooldowns zugunsten einer effizienteren Rotation",
+        "Dämonenjäger: Neuer Waffentyp Dolche verfügbar, besonders relevant für Verschlinger; Rachsucht erhält einen neu sortierten Talentbaum mit mehr Schaden und Eigenheilung",
+        "Jäger: Massiver Boost auf automatische Angriffe ausserhalb grosser Cooldowns; Treffsicherheit verliert unbeliebte Talente, Überleben erhält neue Talente mit stark erhöhter kritischer Trefferchance",
+        "Krieger: Verwunden wird je nach Spezialisierung überarbeitet, Furor kann Wirbelwind nun auch gegen Einzelziele sinnvoll einsetzen"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Heiler und Zauberwirker erhalten mehr Auswahl"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Druiden: Grossflächige Anpassungen an fast allen Zaubern, mehrere Talente vollständig überarbeitet – Ziel ist ein rundlicherer Spielstil",
+        "Paladine: Heilig erhält sinnvollere Talentauswahl bei mehr Schaden, Schutz baut leichter Bedrohung auf, Vergelter wird sowohl bei Schaden als auch Heilung gestärkt",
+        "Priester: Disziplin löst den Leerenschild leichter aus, Schatten erhält neue AoE-Optionen, verliert aber einen Teil der Wahnsinn-Generierung",
+        "Schamanen: Wiederherstellung bekommt zahlreiche Talent-Anpassungen für mehr Spielstil-Vielfalt, Elementar und Verstärker verlieren an Stärke während Cooldowns, gewinnen aber ausserhalb davon"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Rufer verlieren Kontrollstärke im Dungeon"
+    },
+    {
+      "type": "paragraph",
+      "text": "Eine der auffälligsten Änderungen betrifft die Rufer-Klasse: Verstärker-Rufer können Gegner künftig nicht mehr in schneller Abfolge mehrfach hochschleudern und dadurch unterbrechen, was ihre Effektivität in Dungeons spürbar reduziert. Im Gegenzug erhält Verwüstung mehr Schaden und ein überarbeitetes Apex-Talent, während Bewahrung-Rufer den Traumatem flexibler einsetzen können: Die Sofortheilung sinkt, die Heilung über Zeit wird dafür deutlich verstärkt."
+    },
+    {
+      "type": "paragraph",
+      "text": "Auch Magier, Mönche, Schurken und Hexenmeister erhalten zahlreiche kleinere Eingriffe, etwa bei Schadenswerten, Ressourcenmechaniken oder Bugfixes im Zusammenspiel mit bestimmten Fähigkeiten. Die vollständigen technischen Patch Notes zu allen Klassen sind separat einsehbar."
+    },
+    {
+      "type": "paragraph",
+      "text": "Insgesamt zeigt Patch 12.1, wie stark Blizzard weiterhin an der Feinjustierung der Klassenbalance arbeitet, statt nur neue Inhalte nachzuliefern. Für die Community dürfte vor allem die Rufer-Änderung Diskussionsstoff liefern, während die teils drastischen Prozentwerte bei Auto-Attacken zeigen, wie granular einzelne Werte inzwischen angepasst werden."
+    }
+  ],
+  "poll": {
+    "question": "Welche Klassen-Änderung in Patch 12.1 wiegt für euch am schwersten?",
+    "options": [
+      "Der Rufer-Nerf beim Hochschleudern in Dungeons",
+      "Die massiven Auto-Attack-Boosts bei Jägern und Todesrittern",
+      "Die grossflächige Druiden-Überarbeitung",
+      "Keine davon betrifft meinen Main wirklich"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-11T04:55:24.051Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "grid",
+  "sources": [
+    {
+      "title": "WoW: Patch Notes 12.1 – So ändert sich eure Klasse",
+      "url": "https://mein-mmo.de/wow-patch-notes-klassen-aenderungen/",
+      "publisher": "MeinMMO"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/wow-patch-12-1-klassen-aenderungen-2026.webp",
+    "alt": "WoW: Patch 12.1 „Fluch von Ula'tek“ krempelt fast jede Klasse um",
+    "credit": "Bild: MeinMMO",
+    "sourceUrl": "https://mein-mmo.de/wow-patch-notes-klassen-aenderungen/",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "overwatch-battle-pass-ueberarbeitung-season-4-2026",
+    "blizzard-xbox-studios-bestes-jahr-2026",
+    "blizzard-top-performing-studio-xbox-leak-2026"
+  ]
+}
