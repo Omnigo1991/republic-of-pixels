@@ -13,6 +13,7 @@ import { fetchAllFeeds } from "./lib/rss.mjs";
 import { askClaude, parseJsonResponse } from "./lib/claude.mjs";
 import { extractArticleText } from "./lib/extract.mjs";
 import { schreibeThemenRadar } from "./lib/themenradar.mjs";
+import { holeAuftrag, erledigeAuftrag } from "./lib/auftraege.mjs";
 import { waehleEinbettungen, gehtUmBewegtbild } from "./lib/embeds.mjs";
 import { acquireImage } from "./lib/images.mjs";
 import { validateArticle } from "./lib/validate.mjs";
@@ -116,7 +117,7 @@ function recentPublishedTitles(hours = 72) {
   return entries.slice(-150);
 }
 
-async function selectCandidates(candidates) {
+async function selectCandidates(candidates, auftrag) {
   const published = recentPublishedTitles();
   const publishedBlock = published.length
     ? `\nBereits von uns veröffentlicht (diese Storys NICHT erneut auswählen, auch nicht aus anderer Quelle oder mit anderem Titel — vergleiche auch inhaltlich/thematisch anhand der Tags, nicht nur den Titelwortlaut):\n${published.map((p) => `- ${p.title}${p.tags.length ? ` [${p.tags.join(", ")}]` : ""}`).join("\n")}\n`
@@ -128,10 +129,18 @@ async function selectCandidates(candidates) {
     )
     .join("\n");
 
+  // BEVORZUGUNG, KEINE ABKUERZUNG (Tim, 11.08.2026): Der Auftrag aus dem
+  // Story-Radar sagt nur, WELCHES Thema Vorrang hat — alle Qualitaetsregeln
+  // darunter gelten unveraendert. Kommt das Thema in der Liste gar nicht vor,
+  // wird der Hinweis schlicht ignoriert.
+  const auftragBlock = auftrag
+    ? `\nVORRANG: Die Redaktion hat dieses Thema ausdruecklich angefordert. Findest du es in der Liste, waehle es als ERSTEN Cluster — sofern es unsere Qualitaetskriterien erfuellt. Steht es nicht in der Liste, ignoriere diesen Hinweis vollstaendig:\n- ${auftrag.titel}\n`
+    : "";
+
   const prompt = `Hier ist die Liste neuer Gaming-Meldungen aus unseren Quell-Feeds (Format: Index | Quelle | Alter | Titel | Anriss):
 
 ${list}
-${publishedBlock}
+${publishedBlock}${auftragBlock}
 
 Aufgaben:
 1. Erkenne Duplikate: Meldungen zur selben Nachricht bilden einen Cluster (Indizes zusammenfassen).
@@ -375,7 +384,10 @@ async function main() {
   }
 
   console.log("3/5 Auswahl & Clustering (Claude) …");
-  const selected = (await selectCandidates(candidates))
+  // Hoechstens EIN Auftrag pro Lauf — zwanzig Klicks im Cockpit fluten die
+  // Seite nicht. holeAuftrag() wirft nie und liefert im Zweifel null.
+  let auftrag = await holeAuftrag();
+  const selected = (await selectCandidates(candidates, auftrag))
     .filter((s) => Array.isArray(s.indices) && s.indices.every((i) => candidates[i]))
     .sort((a, b) => a.priority - b.priority)
     .slice(0, MAX_ARTICLES_PER_RUN);
@@ -461,6 +473,14 @@ async function main() {
       slugs.add(article.slug);
       publishedSlugs.push(article.slug);
       published++;
+      // Auftrag abhaken, sobald IRGENDEIN Artikel entstanden ist. Bewusst
+      // grosszuegig: Ein nicht abgehakter Auftrag wuerde beim naechsten Lauf
+      // erneut Vorrang bekommen und koennte sich festfressen. Er verfaellt
+      // ohnehin nach 24 Stunden.
+      if (auftrag) {
+        await erledigeAuftrag(auftrag.id);
+        auftrag = null;
+      }
       console.log(`  ✓ Veröffentlicht: ${article.slug} (${check.wordCount} Wörter)`);
     } catch (err) {
       console.log(`  Fehler bei "${label}": ${err.message} — Cluster übersprungen`);
