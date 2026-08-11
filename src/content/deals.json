@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-11T15:45:36.638Z",
+  "updatedAt": "2026-08-11T19:04:05.838Z",
   "deals": [
     {
       "appId": 460930,
@@ -13,17 +13,6 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460930/ff701838255b7081bdbed2a30892e5eb4d1bbe1d/capsule_184x69_alt_assets_0_german.jpg?t=1786116240"
     },
     {
-      "appId": 1222140,
-      "title": "Detroit: Become Human",
-      "discountPercent": 80,
-      "originalPrice": 3999,
-      "finalPrice": 799,
-      "currency": "EUR",
-      "endsAt": "2026-08-17T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1222140/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222140/capsule_184x69.jpg?t=1667468479"
-    },
-    {
       "appId": 3527290,
       "title": "PEAK",
       "discountPercent": 50,
@@ -32,18 +21,18 @@
       "currency": "EUR",
       "endsAt": "2026-08-18T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/3527290/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3527290/1844964d7a353e50eb3cc979ea922729d8c1b0ad/capsule_184x69.jpg?t=1775581133"
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3527290/e8f91974f9a7469500fe1aed44a62c9467d328c9/capsule_184x69_alt_assets_3.jpg?t=1786470571"
     },
     {
-      "appId": 2950790,
-      "title": "IRON NEST: Heavy Turret Simulator",
-      "discountPercent": 25,
-      "originalPrice": 1999,
-      "finalPrice": 1499,
+      "appId": 2358720,
+      "title": "Black Myth: Wukong",
+      "discountPercent": 30,
+      "originalPrice": 5999,
+      "finalPrice": 4199,
       "currency": "EUR",
-      "endsAt": "2026-08-20T17:00:32.000Z",
-      "url": "https://store.steampowered.com/app/2950790/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2950790/922472560f653fd897313ab7a10dd86b018d373f/capsule_184x69.jpg?t=1786366652"
+      "endsAt": "2026-08-25T16:00:00.000Z",
+      "url": "https://store.steampowered.com/app/2358720/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2358720/b7f722ddd5e23503f598586aa3700dd4d827bb2d/capsule_184x69.jpg?t=1760601605"
     },
     {
       "appId": 1478500,
@@ -57,15 +46,26 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1478500/44da9fb07ebe477387355d7fce29560b55125cce/capsule_184x69.jpg?t=1785911674"
     },
     {
-      "appId": 1368140,
-      "title": "Corsair Cove",
+      "appId": 2950790,
+      "title": "IRON NEST: Heavy Turret Simulator",
       "discountPercent": 25,
-      "originalPrice": 3999,
-      "finalPrice": 2999,
+      "originalPrice": 1999,
+      "finalPrice": 1499,
       "currency": "EUR",
-      "endsAt": "2026-08-14T17:00:09.000Z",
-      "url": "https://store.steampowered.com/app/1368140/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1368140/9317363cb16926256a8e15b2dd91eee8203e4f11/capsule_184x69.jpg?t=1785860713"
+      "endsAt": "2026-08-20T17:00:32.000Z",
+      "url": "https://store.steampowered.com/app/2950790/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2950790/922472560f653fd897313ab7a10dd86b018d373f/capsule_184x69.jpg?t=1786366652"
+    },
+    {
+      "appId": 1067360,
+      "title": "Pax Autocratica",
+      "discountPercent": 17,
+      "originalPrice": 2999,
+      "finalPrice": 2489,
+      "currency": "EUR",
+      "endsAt": "2026-08-24T17:00:04.000Z",
+      "url": "https://store.steampowered.com/app/1067360/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1067360/0e2383a66d23ea67d7b9618a3a53fa52ca5db032/capsule_184x69.jpg?t=1786398295"
     }
   ]
 }
