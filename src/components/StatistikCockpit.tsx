@@ -4,7 +4,6 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import type { Session } from "@supabase/supabase-js";
 import { getSupabase } from "@/lib/supabase";
 import { Wachstumskurve, type Tageswert } from "./Wachstumskurve";
-import { StoryRadar } from "./StoryRadar";
 import { MASTER_NICKNAME } from "@/lib/ranking";
 
 // Redaktions-Cockpit: eigene, cookielose Besucherstatistik aus page_views
@@ -306,14 +305,6 @@ export function StatistikCockpit() {
             <span className="text-xs text-text-tertiary">Letzte 30 Tage</span>
           </div>
           <Wachstumskurve daten={zahlen.verlauf} />
-
-          {/* Story-Radar — die Luecke zwischen dem, was in unseren Quellen
-              passiert, und dem, was bei uns steht. */}
-          <div className="mt-10 mb-4 flex items-baseline justify-between gap-4">
-            <h2 className="text-xl font-semibold tracking-tight text-text-primary">Story-Radar</h2>
-            <span className="shrink-0 text-xs text-text-tertiary">Was gerade hochkocht</span>
-          </div>
-          <StoryRadar />
 
           {/* Herkunft */}
           <h2 className="mt-10 mb-4 text-xl font-semibold tracking-tight text-text-primary">

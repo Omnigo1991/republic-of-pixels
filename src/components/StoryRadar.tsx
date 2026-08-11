@@ -1,7 +1,9 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import type { Session } from "@supabase/supabase-js";
 import { getSupabase } from "@/lib/supabase";
+import { MASTER_NICKNAME } from "@/lib/ranking";
 import radar from "@/content/themenradar.json";
 
 // STORY-RADAR (Tim, 11.08.2026) — internes Redaktionswerkzeug, nur im
@@ -31,6 +33,32 @@ interface Thema {
 
 export function StoryRadar() {
   const supabase = useMemo(() => getSupabase(), []);
+
+  // EIGENE ABSICHERUNG (Tim, 11.08.2026): Der Radar hat jetzt eine eigene
+  // Seite statt im Statistik-Cockpit zu sitzen — ein Redaktionswerkzeug
+  // gehoert nicht in die Besucherstatistik. Damit braucht er auch seine
+  // eigene Zugangspruefung, dieselbe wie das Cockpit.
+  const [session, setSession] = useState<Session | null>(null);
+  const [istMaster, setIstMaster] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data }) => setSession(data.session));
+    const { data: sub } = supabase.auth.onAuthStateChange((_e, s) => setSession(s));
+    return () => sub.subscription.unsubscribe();
+  }, [supabase]);
+
+  useEffect(() => {
+    if (!session) {
+      setIstMaster(null);
+      return;
+    }
+    supabase
+      .from("profiles")
+      .select("nickname")
+      .eq("id", session.user.id)
+      .maybeSingle()
+      .then(({ data }) => setIstMaster(data?.nickname === MASTER_NICKNAME));
+  }, [session, supabase]);
   const themen = (radar.themen ?? []) as Thema[];
   const [gesendet, setGesendet] = useState<Record<string, "laeuft" | "ok" | "fehler">>({});
 
@@ -45,6 +73,21 @@ export function StoryRadar() {
       hinweise: t.beispiele.map((b) => b.titel).join(" | ").slice(0, 1000),
     });
     setGesendet((g) => ({ ...g, [t.titel]: error ? "fehler" : "ok" }));
+  }
+
+  if (!session || istMaster === false) {
+    return (
+      <p className="rounded-2xl border border-border-subtle bg-surface-card p-5 text-sm text-text-tertiary">
+        Dieser Bereich ist der Redaktion vorbehalten.
+      </p>
+    );
+  }
+  if (istMaster === null) {
+    return (
+      <p className="rounded-2xl border border-border-subtle bg-surface-card p-5 text-sm text-text-tertiary">
+        Zugang wird geprüft …
+      </p>
+    );
   }
 
   if (themen.length === 0) {
