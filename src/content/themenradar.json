@@ -1,235 +1,37 @@
 {
-  "stand": "2026-08-11T18:59:53.495Z",
+  "stand": "2026-08-11T19:44:53.493Z",
   "themen": [
     {
-      "titel": "15 years later, delisted Lord of the Rings action RPG resurfaces with a remastered version on PS5, Switch 2, Xbox Series X, and PC",
-      "quellen": 8,
-      "meldungen": 8,
-      "stundenSeitErster": 2.3,
-      "tempo": 3.5,
-      "quellenNamen": [
-        "gamesradar",
-        "nintendolife",
-        "insidergaming",
-        "ign",
-        "purexbox"
-      ],
-      "beispiele": [
-        {
-          "titel": "15 years later, delisted Lord of the Rings action RPG resurfaces with a remastered version on PS5, Switch 2, Xbox Series X, and PC",
-          "link": "https://www.gamesradar.com/games/action-rpg/15-years-later-delisted-lord-of-the-rings-action-rpg-resurfaces-with-a-remastered-version-on-ps5-switch-2-xbox-series-x-and-pc/"
-        },
-        {
-          "titel": "The Lord Of The Rings: War In The North Shadow-Drops On Switch 1 & 2",
-          "link": "https://www.nintendolife.com/news/2026/08/the-lord-of-the-rings-war-in-the-north-shadow-drops-on-switch-1-and-2"
-        },
-        {
-          "titel": "Lord of the Rings War in the North Legacy Edition Shadow Dropped",
-          "link": "https://insider-gaming.com/lord-of-the-rings-war-in-the-north-legacy-edition-shadow-dropped/"
-        }
-      ],
-      "abgedeckt": true
-    },
-    {
-      "titel": "Believe the hype for Wardogs, possibly the next great multiplayer FPS",
+      "titel": "Images of a 40th Anniversary Legend of Zelda Switch 2 and Pro Controller have reportedly leaked",
       "quellen": 2,
       "meldungen": 2,
-      "stundenSeitErster": 0.6,
-      "tempo": 3.1,
+      "stundenSeitErster": 3.5,
+      "tempo": 0.6,
       "quellenNamen": [
-        "pcgamer",
-        "pcgamer_reviews"
-      ],
-      "beispiele": [
-        {
-          "titel": "Believe the hype for Wardogs, possibly the next great multiplayer FPS",
-          "link": "https://www.pcgamer.com/games/fps/believe-the-hype-for-wardogs-possibly-the-next-great-multiplayer-fps/"
-        },
-        {
-          "titel": "Believe the hype for Wardogs, possibly the next great multiplayer FPS",
-          "link": "https://www.pcgamer.com/games/fps/believe-the-hype-for-wardogs-possibly-the-next-great-multiplayer-fps/"
-        }
-      ],
-      "abgedeckt": false
-    },
-    {
-      "titel": "Zelda: Ocarina Of Time Remake Release Date Announcement Creeps Closer, As Nintendo Switch 2 Limited Edition Design Leaks Online",
-      "quellen": 8,
-      "meldungen": 8,
-      "stundenSeitErster": 3.4,
-      "tempo": 2.3,
-      "quellenNamen": [
-        "ign",
-        "kotaku",
-        "gamespot",
-        "gamesradar",
-        "vgc"
-      ],
-      "beispiele": [
-        {
-          "titel": "The Legend of Zelda 40th Anniversary Nintendo Switch 2 Console Images Reportedly Leak",
-          "link": "https://www.ign.com/articles/the-legend-of-zelda-40th-anniversary-nintendo-switch-2-console-images-reportedly-leak"
-        },
-        {
-          "titel": "Looks Like The Nintendo Switch 2 Is Getting A Fancy Zelda-themed Special Edition Console And Controller",
-          "link": "https://kotaku.com/nintendo-switch-2-zelda-special-40th-anniversary-pro-controller-2000723454"
-        },
-        {
-          "titel": "First Switch 2 Special Edition Might Celebrate Zelda s 40th Anniversary, If Leaks Are Hy-Real",
-          "link": "https://www.gamespot.com/articles/first-switch-2-special-edition-might-celebrate-zeldas-40th-anniversary-if-leaks-are-hy-real/"
-        }
-      ],
-      "abgedeckt": false
-    },
-    {
-      "titel": "Marvel's Wolverine PS5 console won't come with a disc drive, but PlayStation will happily sell you a standalone cover kit with disc drive parts",
-      "quellen": 6,
-      "meldungen": 6,
-      "stundenSeitErster": 4.2,
-      "tempo": 1.4,
-      "quellenNamen": [
-        "wccftech",
-        "eurogamer_de",
-        "gamespot",
-        "ign",
-        "play3"
-      ],
-      "beispiele": [
-        {
-          "titel": "Sony Unveils a Limited Edition Battle Yellow PS5 for Marvel’s Wolverine, with His Claws Slashing Straight Through the Console Shell",
-          "link": "https://wccftech.com/sony-limited-edition-battle-yellow-ps5-marvels-wolverine/"
-        },
-        {
-          "titel": "PS5 im gelben Marvel's Wolverine Design: Neue Limited Edition macht den Herbst bunter",
-          "link": "https://www.eurogamer.de/marvels-wolverine-ps5-limited-edition-gelb"
-        },
-        {
-          "titel": "Marvel s Wolverine Has Given Us Sony s Best-Looking PS5 Ever",
-          "link": "https://www.gamespot.com/articles/marvel-wolverine-has-given-us-sony-best-looking-ps5-ever/"
-        }
-      ],
-      "abgedeckt": true
-    },
-    {
-      "titel": "7 Of Deadpool’s Best Fighting Game References In Marvel Tōkon: Fighting Souls",
-      "quellen": 4,
-      "meldungen": 4,
-      "stundenSeitErster": 3.2,
-      "tempo": 1.2,
-      "quellenNamen": [
-        "ign_reviews",
-        "polygon",
-        "kotaku",
-        "destructoid"
-      ],
-      "beispiele": [
-        {
-          "titel": "Marvel Tokon: Fighting Souls Review",
-          "link": "https://www.ign.com/articles/marvel-tokon-fighting-souls-review"
-        },
-        {
-          "titel": "Marvel Tokon’s Anime Style Is Great, but Its Lack of Fashion Stinks",
-          "link": "https://www.polygon.com/marvel-tokon-fighting-souls-costume-color-variety/"
-        },
-        {
-          "titel": "7 Of Deadpool’s Best Fighting Game References In Marvel Tōkon: Fighting Souls",
-          "link": "https://kotaku.com/marvel-tokon-fighting-souls-deadpool-references-evo-2000723422"
-        }
-      ],
-      "abgedeckt": true
-    },
-    {
-      "titel": "Supermassive Games are the latest studio to announce layoff plans, with 75 jobs at risk just three months after Directive 8020 launch",
-      "quellen": 4,
-      "meldungen": 4,
-      "stundenSeitErster": 3.7,
-      "tempo": 1.1,
-      "quellenNamen": [
-        "wccftech",
-        "rps",
-        "pcgamer",
-        "pcgamer_reviews"
-      ],
-      "beispiele": [
-        {
-          "titel": "Supermassive Games Cuts 75 Jobs in Third Layoff Round as Directive 8020 Fails to Break Out",
-          "link": "https://wccftech.com/supermassive-games-cuts-75-jobs-directive-8020/"
-        },
-        {
-          "titel": "Supermassive Games are the latest studio to announce layoff plans, with 75 jobs at risk just three months after Directive 8020 launch",
-          "link": "https://www.rockpapershotgun.com/supermassive-games-are-the-latest-studio-to-announce-layoff-plans-with-75-jobs-at-risk-just-three-months-after-directive-8020-launch"
-        },
-        {
-          "titel": "3 months after the release of Directive 8020, Supermassive Games is laying off even more people",
-          "link": "https://www.pcgamer.com/gaming-industry/3-months-after-the-release-of-directive-8020-supermassive-games-is-laying-off-even-more-people/"
-        }
-      ],
-      "abgedeckt": false
-    },
-    {
-      "titel": "Saber CEO hides jab at Randy Pitchford in game trailer as payback for Pitchford dumping on Embracer: 'Without Embracer, Randy is performing magic tricks at birthday parties for a living'",
-      "quellen": 3,
-      "meldungen": 3,
-      "stundenSeitErster": 2.7,
-      "tempo": 1.1,
-      "quellenNamen": [
-        "pcgamer",
-        "pcgamer_reviews",
+        "vgc",
         "insidergaming"
       ],
       "beispiele": [
         {
-          "titel": "Saber CEO hides jab at Randy Pitchford in game trailer as payback for Pitchford dumping on Embracer: 'Without Embracer, Randy is performing magic tricks at birthday parties for a living'",
-          "link": "https://www.pcgamer.com/games/saber-ceo-hides-jab-at-randy-pitchford-in-game-trailer-as-payback-for-pitchford-dumping-on-embracer-without-embracer-randy-is-performing-magic-tricks-at-birthday-parties-for-a-living/"
+          "titel": "Images of a 40th Anniversary Legend of Zelda Switch 2 and Pro Controller have reportedly leaked",
+          "link": "https://www.videogameschronicle.com/news/images-of-a-40th-anniversary-legend-of-zelda-switch-2-and-pro-controller-have-reportedly-leaked/"
         },
         {
-          "titel": "Saber CEO hides jab at Randy Pitchford in game trailer as payback for Pitchford dumping on Embracer: 'Without Embracer, Randy is performing magic tricks at birthday parties for a living'",
-          "link": "https://www.pcgamer.com/games/saber-ceo-hides-jab-at-randy-pitchford-in-game-trailer-as-payback-for-pitchford-dumping-on-embracer-without-embracer-randy-is-performing-magic-tricks-at-birthday-parties-for-a-living/"
-        },
-        {
-          "titel": "Saber CEO Confirms Rideshare Stimulator Takes Dig at Randy Pitchford",
-          "link": "https://insider-gaming.com/saber-ceo-confirms-rideshare-stimulator-takes-dig-at-randy-pitchford/"
-        }
-      ],
-      "abgedeckt": false
-    },
-    {
-      "titel": "Where to Buy the Pokémon First Partner Illustration TCG Collection (Series 3)",
-      "quellen": 3,
-      "meldungen": 3,
-      "stundenSeitErster": 3,
-      "tempo": 1,
-      "quellenNamen": [
-        "kotaku",
-        "polygon",
-        "ign"
-      ],
-      "beispiele": [
-        {
-          "titel": "Pokémon Ruby And Sapphire Defined Pokémon As We Know It Today",
-          "link": "https://kotaku.com/pokemon-ruby-and-sapphire-defined-pokemon-today-2000722588"
-        },
-        {
-          "titel": "All small and large lost relics list in Pokémon Pokopia",
-          "link": "https://www.polygon.com/pokemon-pokopia-large-lost-relics-small-list-how-to-get/"
-        },
-        {
-          "titel": "Where to Buy the Pokémon First Partner Illustration TCG Collection (Series 3)",
-          "link": "https://www.ign.com/articles/where-to-buy-pokemon-first-partner-illustration-tcg-collection-series-3"
+          "titel": "The Legend of Zelda 40th Anniversary Switch 2 Console Pro Controller Designs Leak",
+          "link": "https://insider-gaming.com/the-legend-of-zelda-40th-anniversary-console-controller-leaks/"
         }
       ],
       "abgedeckt": true
     },
     {
       "titel": "Much-wishlisted 100-player shooter Wardogs gets an early access release date and promises refunds for anyone unhappy with the closed beta",
-      "quellen": 3,
-      "meldungen": 3,
-      "stundenSeitErster": 3,
-      "tempo": 1,
+      "quellen": 2,
+      "meldungen": 2,
+      "stundenSeitErster": 3.7,
+      "tempo": 0.5,
       "quellenNamen": [
         "eurogamer",
-        "insidergaming",
-        "eurogamer_de"
+        "insidergaming"
       ],
       "beispiele": [
         {
@@ -239,79 +41,253 @@
         {
           "titel": "WARDOGS Launching In Early Access In September Following Successful Closed Test",
           "link": "https://insider-gaming.com/wardogs-early-access-release-date-revealed/"
+        }
+      ],
+      "abgedeckt": false
+    },
+    {
+      "titel": "New gameplay: Star Wars Zero Company is the XCOM revival we ve been looking for",
+      "quellen": 2,
+      "meldungen": 2,
+      "stundenSeitErster": 5.7,
+      "tempo": 0.3,
+      "quellenNamen": [
+        "eurogamer",
+        "vgc"
+      ],
+      "beispiele": [
+        {
+          "titel": "Star Wars: Zero Company will be brilliant because XCOM is brilliant",
+          "link": "https://www.eurogamer.net/star-wars-zero-company-preview-xcom"
         },
         {
-          "titel": "Wardogs startet bald in den Early Access: Entwickler nennen 10 Gründe, den Shooter nicht zu kaufen",
-          "link": "https://www.eurogamer.de/wardogs-early-access-steam-release"
+          "titel": "New gameplay: Star Wars Zero Company is the XCOM revival we ve been looking for",
+          "link": "https://www.videogameschronicle.com/features/new-gameplay-star-wars-zero-company-is-the-xcom-revival-weve-been-looking-for/"
         }
       ],
       "abgedeckt": true
     },
     {
-      "titel": "Luke Skywalker and Captain America Will Officially Join Forces in New Star Wars-Marvel Crossover",
+      "titel": "Dark Pictures Anthology studio Supermassive Games is laying off up to 75 staff to ensure sustainability",
       "quellen": 2,
       "meldungen": 2,
-      "stundenSeitErster": 2.1,
-      "tempo": 1,
+      "stundenSeitErster": 6.8,
+      "tempo": 0.3,
       "quellenNamen": [
-        "polygon",
-        "kotaku"
+        "gematsu",
+        "vgc"
       ],
       "beispiele": [
         {
-          "titel": "Luke Skywalker and Captain America Will Officially Join Forces in New Star Wars-Marvel Crossover",
-          "link": "https://www.polygon.com/new-marvel-and-star-wars-crossover-finally-brings-darth-vader-face-to-face-with-doctor-doom/"
+          "titel": "Supermassive Games to lay off up to 75 employees",
+          "link": "https://www.gematsu.com/2026/08/supermassive-games-to-lay-off-up-to-75-employees"
         },
         {
-          "titel": "The First Official Crossover Between Marvel And Star Wars Is Happening Next Year",
-          "link": "https://kotaku.com/the-first-official-crossover-between-marvel-and-star-wars-is-happening-next-year-2000723451"
+          "titel": "Dark Pictures Anthology studio Supermassive Games is laying off up to 75 staff to ensure sustainability",
+          "link": "https://www.videogameschronicle.com/news/dark-pictures-anthology-studio-supermassive-games-is-laying-off-up-to-75-staff-to-ensure-sustainability/"
         }
       ],
       "abgedeckt": false
     },
     {
-      "titel": "In a fascinating use of free will, Old School RuneScape player spent 4,304 hours catching 275,196 shrimp and 257,064 anchovies to max out his fishing skill in the worst way possible",
+      "titel": "Persona 4 Revival producer says remakes of Persona 1 and 2 are something we should definitely do",
       "quellen": 2,
       "meldungen": 2,
-      "stundenSeitErster": 2.2,
-      "tempo": 0.9,
+      "stundenSeitErster": 8.2,
+      "tempo": 0.2,
       "quellenNamen": [
-        "pcgamer",
-        "pcgamer_reviews"
+        "gematsu",
+        "vgc"
       ],
       "beispiele": [
         {
-          "titel": "In a fascinating use of free will, Old School RuneScape player spent 4,304 hours catching 275,196 shrimp and 257,064 anchovies to max out his fishing skill in the worst way possible",
-          "link": "https://www.pcgamer.com/games/mmo/in-a-fascinating-use-of-free-will-old-school-runescape-player-spent-4-304-hours-catching-catching-275-196-shrimp-and-257-064-anchovies-to-max-out-his-fishing-skill-in-the-worst-way-possible/"
+          "titel": "Persona 4 Revival New Features trailer",
+          "link": "https://www.gematsu.com/2026/08/persona-4-revival-new-features-trailer"
         },
         {
-          "titel": "In a fascinating use of free will, Old School RuneScape player spent 4,304 hours catching 275,196 shrimp and 257,064 anchovies to max out his fishing skill in the worst way possible",
-          "link": "https://www.pcgamer.com/games/mmo/in-a-fascinating-use-of-free-will-old-school-runescape-player-spent-4-304-hours-catching-catching-275-196-shrimp-and-257-064-anchovies-to-max-out-his-fishing-skill-in-the-worst-way-possible/"
+          "titel": "Persona 4 Revival producer says remakes of Persona 1 and 2 are something we should definitely do",
+          "link": "https://www.videogameschronicle.com/news/persona-4-revival-producer-says-remakes-of-persona-1-and-2-are-something-atlus-should-definitely-do/"
+        }
+      ],
+      "abgedeckt": true
+    },
+    {
+      "titel": "Sonic the Hedgehog Is Confirmed to Be Speeding into Fortnite in Upcoming Season",
+      "quellen": 2,
+      "meldungen": 2,
+      "stundenSeitErster": 8.5,
+      "tempo": 0.2,
+      "quellenNamen": [
+        "vgc",
+        "pushsquare"
+      ],
+      "beispiele": [
+        {
+          "titel": "Fortnite confirms that Sonic is coming to its next season, Override",
+          "link": "https://www.videogameschronicle.com/news/fortnite-confirms-that-sonic-is-coming-to-its-next-season-override/"
+        },
+        {
+          "titel": "Sonic the Hedgehog Is Confirmed to Be Speeding into Fortnite in Upcoming Season",
+          "link": "https://www.pushsquare.com/news/2026/08/sonic-the-hedgehog-is-confirmed-to-be-speeding-into-fortnite-in-upcoming-season"
         }
       ],
       "abgedeckt": false
     },
     {
-      "titel": "Mark Zuckerberg's rambling AI manifesto is 6,434 words of high-handed platitudes and dubious conclusions",
-      "quellen": 2,
-      "meldungen": 2,
-      "stundenSeitErster": 2.5,
-      "tempo": 0.8,
+      "titel": "The Lord of the Rings: War in the North Legacy Edition now available for PS5, Xbox Series, Switch 2, Switch, and PC",
+      "quellen": 3,
+      "meldungen": 8,
+      "stundenSeitErster": 27.7,
+      "tempo": 0.1,
       "quellenNamen": [
-        "pcgamer",
-        "pcgamer_reviews"
+        "insidergaming",
+        "pushsquare",
+        "gematsu"
       ],
       "beispiele": [
         {
-          "titel": "Mark Zuckerberg's rambling AI manifesto is 6,434 words of high-handed platitudes and dubious conclusions",
-          "link": "https://www.pcgamer.com/software/ai/mark-zuckerbergs-rambling-ai-manifesto-is-6-434-words-of-high-handed-platitudes-and-dubious-conclusions/"
+          "titel": "Lord of the Rings War in the North Legacy Edition Shadow Dropped",
+          "link": "https://insider-gaming.com/lord-of-the-rings-war-in-the-north-legacy-edition-shadow-dropped/"
         },
         {
-          "titel": "Mark Zuckerberg's rambling AI manifesto is 6,434 words of high-handed platitudes and dubious conclusions",
-          "link": "https://www.pcgamer.com/software/ai/mark-zuckerbergs-rambling-ai-manifesto-is-6-434-words-of-high-handed-platitudes-and-dubious-conclusions/"
+          "titel": "PS3 Lord of the Rings Action RPG War in the North Suddenly Returns, Remaster Out Now on PS5",
+          "link": "https://www.pushsquare.com/news/2026/08/ps3-lord-of-the-rings-action-rpg-war-in-the-north-suddenly-returns-remaster-out-now-on-ps5"
+        },
+        {
+          "titel": "The Lord of the Rings: War in the North Legacy Edition now available for PS5, Xbox Series, Switch 2, Switch, and PC",
+          "link": "https://www.gematsu.com/2026/08/the-lord-of-the-rings-war-in-the-north-legacy-edition-now-available-for-ps5-xbox-series-switch-2-switch-and-pc"
+        }
+      ],
+      "abgedeckt": true
+    },
+    {
+      "titel": "Marvel s Wolverine Limited Edition PS5 Consoles, Controllers Announced, Pre-Orders Next Week",
+      "quellen": 3,
+      "meldungen": 4,
+      "stundenSeitErster": 25.7,
+      "tempo": 0.1,
+      "quellenNamen": [
+        "gematsu",
+        "pushsquare",
+        "vgc"
+      ],
+      "beispiele": [
+        {
+          "titel": "Marvel s Wolverine Limited Edition PS5 console bundle and accessories announced",
+          "link": "https://www.gematsu.com/2026/08/marvels-wolverine-limited-edition-ps5-console-bundle-and-accessories-announced"
+        },
+        {
+          "titel": "Marvel s Wolverine Limited Edition PS5 Consoles, Controllers Announced, Pre-Orders Next Week",
+          "link": "https://www.pushsquare.com/news/2026/08/marvels-wolverine-limited-edition-ps5-consoles-controllers-announced-pre-orders-next-week"
+        },
+        {
+          "titel": "PlayStation reveals limited edition Wolverine PS5 console, controllers and console covers",
+          "link": "https://www.videogameschronicle.com/news/playstation-reveals-limited-edition-wolverine-ps5-console-controllers-and-console-covers/"
         }
       ],
       "abgedeckt": false
+    },
+    {
+      "titel": "Big Walk strides to sales success, passing an impressive milestone in under one week",
+      "quellen": 3,
+      "meldungen": 3,
+      "stundenSeitErster": 26.6,
+      "tempo": 0.1,
+      "quellenNamen": [
+        "pushsquare",
+        "eurogamer",
+        "gematsu"
+      ],
+      "beispiele": [
+        {
+          "titel": "PS Plus Big Walk Hits Big Sales, Surpasses 1 Million Copies Sold in Under a Week",
+          "link": "https://www.pushsquare.com/news/2026/08/ps-plus-big-walk-hits-big-sales-surpasses-1-million-copies-sold-in-under-a-week"
+        },
+        {
+          "titel": "Big Walk strides to sales success, passing an impressive milestone in under one week",
+          "link": "https://www.eurogamer.net/big-walk-sales-house-house-panic"
+        },
+        {
+          "titel": "Big Walk sales top one million",
+          "link": "https://www.gematsu.com/2026/08/big-walk-sales-top-one-million"
+        }
+      ],
+      "abgedeckt": false
+    },
+    {
+      "titel": "\"I'm sure you're going to watch it because everyone is\" - GTA 6 premiering on Netflix represents Rockstar \"trying new things\", says Take-Two boss",
+      "quellen": 3,
+      "meldungen": 4,
+      "stundenSeitErster": 33.4,
+      "tempo": 0.1,
+      "quellenNamen": [
+        "gamestar",
+        "pushsquare",
+        "eurogamer"
+      ],
+      "beispiele": [
+        {
+          "titel": "GTA 6 - Ein bekannter Darsteller aus GTA 5 hat sich auf 60 verschiedene Rollen für GTA 6 beworben, aber Rockstar hat ihn eiskalt geghostet",
+          "link": "https://www.gamestar.de/artikel/gta-5-schauspieler-in-gta-6-abgelehnt,3457851.html"
+        },
+        {
+          "titel": "Guide: GTA 6 Netflix Extended Look: When and How to Watch",
+          "link": "https://www.pushsquare.com/guides/gta-6-netflix-extended-look-when-and-how-to-watch"
+        },
+        {
+          "titel": "GTA 1 war der Urknall - Rückblicks-Video zum ersten Serienteil",
+          "link": "https://www.gamestar.de/videos/gta-1-war-der-urknall-rueckblicks-video-zum-ersten-serienteil,141781.html"
+        }
+      ],
+      "abgedeckt": true
+    },
+    {
+      "titel": "Marvel's Spider-Man 2 just had its biggest sales boost in years thanks to Brand New Day",
+      "quellen": 2,
+      "meldungen": 2,
+      "stundenSeitErster": 20.2,
+      "tempo": 0.1,
+      "quellenNamen": [
+        "eurogamer",
+        "pushsquare"
+      ],
+      "beispiele": [
+        {
+          "titel": "Marvel's Spider-Man 2 just had its biggest sales boost in years thanks to Brand New Day",
+          "link": "https://www.eurogamer.net/spider-man-2-brand-new-day-film-sales-boost"
+        },
+        {
+          "titel": "Spider-Man 2 s PS5 Sales Have Exploded After Brand New Day s Box Office Blowout",
+          "link": "https://www.pushsquare.com/news/2026/08/spider-man-2s-ps5-sales-have-exploded-after-brand-new-days-box-office-blowout"
+        }
+      ],
+      "abgedeckt": true
+    },
+    {
+      "titel": "I've seen much more of 1666: Amsterdam, and the witchy game by the creator of Assassin's Creed has some surprising ideas",
+      "quellen": 2,
+      "meldungen": 3,
+      "stundenSeitErster": 27.7,
+      "tempo": 0.1,
+      "quellenNamen": [
+        "gematsu",
+        "eurogamer"
+      ],
+      "beispiele": [
+        {
+          "titel": "1666: Amsterdam launches in Early Access on August 25",
+          "link": "https://www.gematsu.com/2026/08/1666-amsterdam-launches-in-early-access-on-august-25"
+        },
+        {
+          "titel": "Assassin's Creed creator's dark and witchy action game 1666: Amsterdam is out in early access sooner than we expected",
+          "link": "https://www.eurogamer.net/amsterdam-1666-early-access-release-date"
+        },
+        {
+          "titel": "I've seen much more of 1666: Amsterdam, and the witchy game by the creator of Assassin's Creed has some surprising ideas",
+          "link": "https://www.eurogamer.net/1666-amsterdam-impressions-patrice-desilets"
+        }
+      ],
+      "abgedeckt": true
     }
   ]
 }
