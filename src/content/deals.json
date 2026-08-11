@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-10T23:21:42.497Z",
+  "updatedAt": "2026-08-11T08:04:50.843Z",
   "deals": [
     {
       "appId": 460930,
@@ -24,15 +24,26 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222140/capsule_184x69.jpg?t=1667468479"
     },
     {
-      "appId": 3527290,
-      "title": "PEAK",
-      "discountPercent": 50,
-      "originalPrice": 749,
-      "finalPrice": 374,
+      "appId": 699130,
+      "title": "World War Z",
+      "discountPercent": 75,
+      "originalPrice": 2999,
+      "finalPrice": 749,
       "currency": "EUR",
-      "endsAt": "2026-08-18T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/3527290/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3527290/1844964d7a353e50eb3cc979ea922729d8c1b0ad/capsule_184x69.jpg?t=1775581133"
+      "endsAt": "2026-08-23T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/699130/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/699130/bc262c3fd0b77d064cae97471f4218a8f1f34495/capsule_184x69.jpg?t=1781783964"
+    },
+    {
+      "appId": 4421010,
+      "title": "Bills Must Be Paid",
+      "discountPercent": 30,
+      "originalPrice": 699,
+      "finalPrice": 489,
+      "currency": "EUR",
+      "endsAt": "2026-08-12T17:00:05.000Z",
+      "url": "https://store.steampowered.com/app/4421010/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4421010/f05b830114ae149d5c1cbdb4b80ed60a6c74dc74/capsule_184x69.jpg?t=1786185422"
     },
     {
       "appId": 2950790,
@@ -55,17 +66,6 @@
       "endsAt": "2026-08-18T17:00:09.000Z",
       "url": "https://store.steampowered.com/app/1478500/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1478500/44da9fb07ebe477387355d7fce29560b55125cce/capsule_184x69.jpg?t=1785911674"
-    },
-    {
-      "appId": 1368140,
-      "title": "Corsair Cove",
-      "discountPercent": 25,
-      "originalPrice": 3999,
-      "finalPrice": 2999,
-      "currency": "EUR",
-      "endsAt": "2026-08-14T17:00:09.000Z",
-      "url": "https://store.steampowered.com/app/1368140/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1368140/9317363cb16926256a8e15b2dd91eee8203e4f11/capsule_184x69.jpg?t=1785860713"
     }
   ]
 }
