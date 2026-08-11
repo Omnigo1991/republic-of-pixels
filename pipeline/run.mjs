@@ -12,7 +12,7 @@ import { FEEDS } from "./feeds.mjs";
 import { fetchAllFeeds } from "./lib/rss.mjs";
 import { askClaude, parseJsonResponse } from "./lib/claude.mjs";
 import { extractArticleText } from "./lib/extract.mjs";
-import { schreibeThemenRadar } from "./lib/themenradar.mjs";
+import { schreibeThemenRadar, passtZumAuftrag } from "./lib/themenradar.mjs";
 import { holeAuftrag, erledigeAuftrag } from "./lib/auftraege.mjs";
 import { waehleEinbettungen, gehtUmBewegtbild } from "./lib/embeds.mjs";
 import { acquireImage } from "./lib/images.mjs";
@@ -357,9 +357,16 @@ async function main() {
   console.log("1/5 Feeds abrufen …");
   const results = await fetchAllFeeds(FEEDS);
   const cutoff = Date.now() - MAX_CANDIDATE_AGE_H * 3600000;
-  const candidates = results
+  // Fuer den Story-Radar zaehlen ALLE aktuellen Meldungen, auch die in
+  // frueheren Laeufen gesehenen (Tim-Test 11.08.2026): Sonst schrumpft die
+  // Themenliste mit jedem Lauf, weil bekannte Meldungen herausfallen — das
+  // Thema selbst ist deswegen ja nicht verschwunden. Genau deshalb war Tims
+  // angeklicktes Zelda-Thema nach dem Neuladen weg.
+  const alleAktuellen = results
     .flatMap((r) => r.items)
-    .filter((it) => it.publishedAt && it.publishedAt.getTime() > cutoff)
+    .filter((it) => it.publishedAt && it.publishedAt.getTime() > cutoff);
+
+  const candidates = alleAktuellen
     .filter((it) => !state.seen[hashId(it.guid)])
     // Bei 26 Feeds: nur die 150 neuesten Kandidaten in die Auswahl geben,
     // damit der Auswahl-Prompt fokussiert bleibt.
@@ -372,7 +379,7 @@ async function main() {
   // Auswahl sie verwirft. Bewusst hier und nicht in selectCandidates —
   // dieser Aufruf ist rein additiv und kann die Artikel-Erzeugung nicht
   // beeinflussen; die Funktion faengt eigene Fehler ab.
-  schreibeThemenRadar(candidates);
+  schreibeThemenRadar(alleAktuellen);
   if (candidates.length === 0) {
     console.log("Nichts Neues — Lauf beendet.");
     return;
@@ -477,8 +484,15 @@ async function main() {
       // grosszuegig: Ein nicht abgehakter Auftrag wuerde beim naechsten Lauf
       // erneut Vorrang bekommen und koennte sich festfressen. Er verfaellt
       // ohnehin nach 24 Stunden.
-      if (auftrag) {
+      // NUR ABHAKEN, WENN ES WIRKLICH DAS THEMA WAR (Tim-Test 11.08.2026):
+      // Vorher galt der Auftrag als erledigt, sobald IRGENDEIN Artikel
+      // entstand. Beim ersten echten Test verschwand Tims Zelda-Wunsch
+      // lautlos, weil in diesem Lauf Oblivion und Battlefield geschrieben
+      // wurden. Passt nichts, bleibt der Auftrag offen — der naechste Lauf
+      // versucht es erneut, und nach 24 Stunden verfaellt er ohnehin.
+      if (auftrag && passtZumAuftrag(auftrag.titel, article.title)) {
         await erledigeAuftrag(auftrag.id);
+        console.log(`  Auftrag #${auftrag.id} erfuellt.`);
         auftrag = null;
       }
       console.log(`  ✓ Veröffentlicht: ${article.slug} (${check.wordCount} Wörter)`);

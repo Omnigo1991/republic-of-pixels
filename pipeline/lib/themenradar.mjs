@@ -92,6 +92,13 @@ function schonAbgedeckt(clusterWorte, artikel) {
   });
 }
 
+// Passt ein veroeffentlichter Artikel zum angeforderten Thema? Gleiche
+// Wortlogik wie beim Clustern — damit ein Auftrag nur dann als erledigt
+// gilt, wenn wirklich DAS Thema geschrieben wurde.
+export function passtZumAuftrag(auftragTitel, artikelTitel) {
+  return gehoertZusammen(tokens(auftragTitel), tokens(artikelTitel));
+}
+
 export function baueThemenRadar(candidates) {
   const artikel = veroeffentlichteTitel();
   const jetzt = Date.now();
