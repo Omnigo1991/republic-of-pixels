@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-11T09:48:07.939Z",
+  "updatedAt": "2026-08-11T13:04:09.799Z",
   "deals": [
     {
       "appId": 460930,
@@ -35,15 +35,15 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/699130/bc262c3fd0b77d064cae97471f4218a8f1f34495/capsule_184x69.jpg?t=1781783964"
     },
     {
-      "appId": 1703340,
-      "title": "The Stanley Parable: Ultra Deluxe",
-      "discountPercent": 65,
-      "originalPrice": 2199,
-      "finalPrice": 769,
+      "appId": 4421010,
+      "title": "Bills Must Be Paid",
+      "discountPercent": 30,
+      "originalPrice": 699,
+      "finalPrice": 489,
       "currency": "EUR",
-      "endsAt": "2026-08-17T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1703340/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1703340/capsule_184x69.jpg?t=1712065263"
+      "endsAt": "2026-08-12T17:00:05.000Z",
+      "url": "https://store.steampowered.com/app/4421010/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4421010/f05b830114ae149d5c1cbdb4b80ed60a6c74dc74/capsule_184x69.jpg?t=1786185422"
     },
     {
       "appId": 2950790,

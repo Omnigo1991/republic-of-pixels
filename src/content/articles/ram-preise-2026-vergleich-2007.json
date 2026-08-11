@@ -1,0 +1,129 @@
+{
+  "slug": "ram-preise-2026-vergleich-2007",
+  "title": "RAM-Preise 2026: Zurück auf dem Niveau von 2007",
+  "subtitle": "Ein Preisvergleich zeigt, wie stark die aktuelle Speicherkrise die Kosten für Gaming-PCs in die Höhe treibt.",
+  "excerpt": "Ein Vergleich von RAM-Kits aus dem Jahr 2007 mit aktuellen DDR5-Preisen zeigt: Für eine ordentliche Ausstattung zahlt man heute rund viermal so viel wie noch vor einem Jahr.",
+  "seoTitle": "RAM-Preise 2026 vs. 2007: So teuer ist Arbeitsspeicher geworden",
+  "metaDescription": "RAM-Kits kosten 2026 wieder so viel pro GB wie 2007. Ein Preisvergleich zeigt, wie stark die globale Speicherkrise Gaming-PCs verteuert.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "tags": [
+    "RAM",
+    "DDR5",
+    "Speicherkrise",
+    "PC-Hardware",
+    "Arbeitsspeicher"
+  ],
+  "tldr": [
+    "Software-Experte Daniel Lemire vergleicht historische RAM-Preise und sieht 20 Jahre Preisentwicklung zunichtegemacht.",
+    "Ein 32-GB-DDR5-Kit kostet aktuell rund 500 US-Dollar, ein 16-GB-Kit rund 250 US-Dollar.",
+    "2007 kostete ein vergleichbar 'gutes' 4-GB-Kit im Angebot nur etwa 100 US-Dollar.",
+    "Verglichen mit 2025 hat sich der Preis für schnelles 32-GB-RAM etwa vervierfacht."
+  ],
+  "whyItMatters": "Wer aktuell einen Gaming-PC zusammenstellt oder aufrüstet, spürt die globale Speicherkrise direkt im Portemonnaie. Der Vergleich zeigt, dass RAM derzeit real so teuer ist wie vor fast 20 Jahren — ein Ausreisser in einer Branche, die eigentlich seit Jahrzehnten günstiger wird.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Die aktuelle globale Speicherknappheit treibt die Preise für Arbeitsspeicher seit Monaten nach oben, ausgelöst unter anderem durch den enormen Bedarf für KI-Rechenzentren. Der Softwareentwickler und Performance-Experte Daniel Lemire hat diese Entwicklung nun historisch eingeordnet: Auf X schrieb er, Computerspeicher sei über Jahrzehnte exponentiell günstiger geworden, doch aktuell sei diese Entwicklung um rund 20 Jahre zurückgeworfen worden. Pro Speichereinheit koste RAM inzwischen etwa so viel wie im Jahr 2007. Das Fachmagazin PC Gamer hat diese Aussage mit konkreten Kit-Preisen aus 2007 und 2026 überprüft."
+    },
+    {
+      "type": "embed",
+      "platform": "twitter",
+      "url": "https://x.com/lemire/status/2085001028617879853"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "500 $",
+          "label": "Preis für ein aktuelles 32-GB-DDR5-Kit"
+        },
+        {
+          "value": "100 $",
+          "label": "Preis für ein 4-GB-Kit im Angebot im Jahr 2007"
+        },
+        {
+          "value": "4x",
+          "label": "So viel mehr kostet vergleichbares RAM heute gegenüber 2025"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "So teuer war RAM 2007"
+    },
+    {
+      "type": "paragraph",
+      "text": "2007 galten 4 GB Arbeitsspeicher (2x 2 GB DDR2-800) als obere Mittelklasse, viele Nutzer:innen begnügten sich damals mit 2 GB (2x 1 GB), was für ein 32-Bit-Windows ausreichte. Laut damaligen Forumseinträgen kosteten gute Angebote für 4-GB-Kits rund 100 US-Dollar, 2-GB-Kits gab es für etwa 60 US-Dollar, mit Rabatt sogar für 45 US-Dollar. Umgerechnet ergibt das für die grössere Kapazität etwa 25 US-Dollar pro GB, für die gängigere Kapazität rund 30 US-Dollar pro GB."
+    },
+    {
+      "type": "heading",
+      "text": "Der Blick auf 2026"
+    },
+    {
+      "type": "paragraph",
+      "text": "Heute liegt der Preis pro GB für brauchbar spezifiziertes DDR5 bei etwa 15 bis 16 US-Dollar — sowohl bei 16-GB- als auch bei 32-GB-Kits. Ein solides 32-GB-Kit (2x 16 GB) kostet aktuell rund 500 US-Dollar, ein 16-GB-Kit etwa 250 US-Dollar. Rein nach Preis pro GB betrachtet ist Arbeitsspeicher damit weiterhin günstiger als 2007. Aussagekräftiger ist laut PC Gamer aber der Vergleich, was eine für Gaming-PCs typische Speichermenge insgesamt kostet: 2007 waren das 2 oder 4 GB, heute sind es 16 oder eher 32 GB."
+    },
+    {
+      "type": "heading",
+      "text": "Warum der Vergleich hinkt — und wo er zutrifft"
+    },
+    {
+      "type": "paragraph",
+      "text": "Für eine 'gute' Ausstattung mussten 2007 nur 65 bis 100 US-Dollar investiert werden, inflationsbereinigt entspricht das etwa 100 bis 160 US-Dollar heutiger Kaufkraft. Aktuell sind für die vergleichbare Einordnung 250 bis 500 US-Dollar nötig. Besonders deutlich wird die Verzerrung im Vergleich zum Vorjahr: Noch vor der Speicherkrise kostete ein schnelles 32-GB-Kit rund 100 bis 150 US-Dollar — also ungefähr so viel, wie 2007 für 4 GB verlangt wurde, bei achtfacher Kapazität. Genau dieser Fortschritt sei nun rückgängig gemacht worden, so die Einschätzung."
+    },
+    {
+      "type": "quote",
+      "text": "Auf historischer Basis ist Computerspeicher seit Jahrzehnten exponentiell günstiger geworden. Aber wir haben gerade rund 20 Jahre Fortschritt zunichtegemacht. Arbeitsspeicher ist pro Einheit etwa so teuer wie 2007.",
+      "attribution": "Daniel Lemire, Softwareentwickler und Performance-Experte"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nicht jede Rechnung fällt gleich drastisch aus, doch der Trend ist eindeutig: Wer heute im Vergleich zum Vorjahr eine ähnliche RAM-Ausstattung kauft, zahlt laut den Berechnungen von PC Gamer etwa das Vierfache. Die grundsätzliche Preis-pro-GB-Entwicklung ist zwar nicht vollständig auf den Stand von 2007 zurückgefallen, doch für Gamer:innen, die konkret aufrüsten oder einen neuen PC zusammenstellen wollen, macht das kaum einen Unterschied — die Anschaffungskosten für Arbeitsspeicher sind so hoch wie seit langem nicht mehr."
+    }
+  ],
+  "poll": {
+    "question": "Wie reagiert ihr auf die aktuellen RAM-Preise?",
+    "options": [
+      "Ich warte mit dem Kauf, bis die Preise wieder sinken",
+      "Ich kaufe trotzdem, auch wenn es weh tut",
+      "Ich reduziere meine geplante Kapazität",
+      "Betrifft mich nicht, mein System reicht noch"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-11T13:04:00.922Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "controller",
+  "sources": [
+    {
+      "title": "A researcher says 'we just undid about 20 years of progress' when it comes to memory prices, so I broke out my calculator and compared actual RAM kits from 2007 to 2026",
+      "url": "https://www.pcgamer.com/hardware/memory/a-researcher-says-we-just-undid-about-20-years-of-progress-when-it-comes-to-memory-prices-so-i-broke-out-my-calculator-and-compared-actual-ram-kits-from-2007-to-2026/",
+      "publisher": "PC Gamer"
+    },
+    {
+      "title": "RAM-Preise wie vor 2007: Experte meint, 20 Jahre Fortschritt wurden zunichtegemacht",
+      "url": "https://www.eurogamer.de/ram-preise-ki-boom-vergleich-2007",
+      "publisher": "Eurogamer.de"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/ram-preise-2026-vergleich-2007.webp",
+    "alt": "RAM-Preise 2026: Zurück auf dem Niveau von 2007",
+    "credit": "Bild: PC Gamer",
+    "sourceUrl": "https://www.pcgamer.com/hardware/memory/a-researcher-says-we-just-undid-about-20-years-of-progress-when-it-comes-to-memory-prices-so-i-broke-out-my-calculator-and-compared-actual-ram-kits-from-2007-to-2026/",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "nvidia-rtx-5090-mainboard-bundles-taiwan-2026",
+    "ram-produktion-2027-ausverkauft-speicherkrise",
+    "dram-hbm-speicherkrise-ausverkauft-2027"
+  ]
+}
