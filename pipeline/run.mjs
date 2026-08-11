@@ -12,6 +12,7 @@ import { FEEDS } from "./feeds.mjs";
 import { fetchAllFeeds } from "./lib/rss.mjs";
 import { askClaude, parseJsonResponse } from "./lib/claude.mjs";
 import { extractArticleText } from "./lib/extract.mjs";
+import { waehleEinbettungen, gehtUmBewegtbild } from "./lib/embeds.mjs";
 import { acquireImage } from "./lib/images.mjs";
 import { validateArticle } from "./lib/validate.mjs";
 import { pingIndexNow } from "./lib/indexnow.mjs";
@@ -386,6 +387,7 @@ async function main() {
         sourceTexts.push(ex.text);
         it.ogImage = ex.ogImage;
         it.embed = ex.embed;
+        it.embeds = ex.embeds;
       }
 
       let article = await generateArticle(cluster, items, sourceTexts, slugs);
@@ -403,14 +405,37 @@ async function main() {
       article = await proofreadArticle(article);
       article.relatedSlugs = pickRelatedSlugs(article);
 
-      // Eingebetteter Tweet/Reddit-Post der Quelle (z. B. das Foto eines
-      // Leaks) wird direkt nach dem einleitenden Absatz platziert — die KI
-      // erzeugt die URL nicht selbst, um Tippfehler/Fehlzuordnungen zu
-      // vermeiden.
-      const embed = items.find((it) => it.embed)?.embed;
-      if (embed) {
-        article.body.splice(1, 0, { type: "embed", platform: embed.platform, url: embed.url });
-        console.log(`  Embed: ${embed.platform}`);
+      // Einbettungen der Quelle (Trailer, Tweet eines Leaks, Reddit-Thread)
+      // direkt nach dem einleitenden Absatz — die KI erzeugt die URLs nicht
+      // selbst, um Tippfehler und Fehlzuordnungen zu vermeiden.
+      //
+      // NACH GEGENSTAND STATT NACH RANGFOLGE (Tim, 11.08.2026): Vorher galt
+      // stur X vor Reddit vor YouTube. Da auf Nachrichtenseiten fast immer
+      // ein X-Link steht, verdrängte er den Trailer auch dann, wenn die
+      // Meldung vom Trailer handelte — geprüft an sechs Video-Storys: vier
+      // ganz ohne Einbettung, eine mit Tweet statt Video. Handelt die Story
+      // von Bewegtbild, gewinnt jetzt das Video; sonst bleibt es beim Tweet
+      // als Beleg. Beides zusammen ist erlaubt, wenn beides vorliegt: erst
+      // ansehen, dann die Quelle dazu.
+      // VORERST NUR EINE EINBETTUNG (Tim, 11.08.2026): waehleEinbettungen()
+      // liefert die vollständige Rangfolge, wir nehmen aber nur die erste.
+      // Grund: Zwei Zustimmungsboxen direkt untereinander wirken schwerfällig
+      // — beide sehen gleich aus, bevor der Leser klickt. Die Auswahl ist der
+      // Gewinn, das Doppel wäre nur ein Extra. Sobald die Optik dafür steht,
+      // genügt es, diese Begrenzung zu lockern.
+      // Platzierung unverändert: direkt nach dem Einleitungsabsatz.
+      const [einbettung] = waehleEinbettungen(
+        article,
+        items.map((it) => it.embeds ?? {}),
+      );
+      if (einbettung) {
+        article.body.splice(1, 0, {
+          type: "embed",
+          platform: einbettung.platform,
+          url: einbettung.url,
+        });
+        const art = gehtUmBewegtbild(article) ? " (Bewegtbild-Story)" : "";
+        console.log(`  Embed: ${einbettung.platform}${art}`);
       }
 
       console.log("  Bild beschaffen (Feed/Quelle) …");
