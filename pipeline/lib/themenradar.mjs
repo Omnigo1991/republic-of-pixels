@@ -149,10 +149,15 @@ export function baueThemenRadar(candidates) {
       // Tempo = Quellen pro Stunde. Sieben Quellen in 40 Minuten sind ein
       // anderes Signal als sieben Quellen über zwei Tage.
       const tempo = g.quellen.size / spanneStunden;
-      // Längster Titel als Bezeichnung — er trägt meist die meiste Information.
-      const titel = g.meldungen
-        .map((m) => m.title)
-        .sort((a, b) => b.length - a.length)[0];
+      // DEUTSCHE SCHLAGZEILE BEVORZUGEN (Tim, 11.08.2026): Die Titel kommen
+      // unveraendert aus den Quell-Feeds, und die meisten davon sind
+      // englischsprachig. Meldet eine unserer deutschen Quellen dasselbe
+      // Thema, nehmen wir deren Schlagzeile — das kostet nichts und liest
+      // sich fuer die Redaktion deutlich schneller. Innerhalb der Sprache
+      // gewinnt der laengste Titel, er traegt meist die meiste Information.
+      const nachLaenge = (a, b) => b.title.length - a.title.length;
+      const deutsche = g.meldungen.filter((m) => m.lang === "de").sort(nachLaenge);
+      const titel = (deutsche[0] ?? [...g.meldungen].sort(nachLaenge)[0]).title;
       return {
         titel,
         quellen: g.quellen.size,

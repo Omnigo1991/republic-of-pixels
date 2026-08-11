@@ -21,9 +21,16 @@ export default function StoryRadarSeite() {
           <span className="shrink-0 text-xs text-text-tertiary">Was gerade hochkocht</span>
         </div>
         <p className="mb-6 max-w-2xl text-sm text-text-secondary">
-          Themen, über die unsere Quellen gerade berichten — und ob wir sie schon haben. Ein Klick
-          auf „Nachziehen" legt das Thema in die Warteschlange; der nächste Pipeline-Lauf greift es
-          bevorzugt auf.
+          Themen, über die unsere Quellen gerade berichten — und ob wir sie schon haben. Der Wert
+          rechts ist das <strong className="font-semibold text-text-primary">Tempo</strong>: wie
+          viele Quellen pro Stunde das Thema aufgreifen. Vier Quellen in einer Stunde sind ein
+          anderes Signal als vier Quellen über zwei Tage. Die Schlagzeilen stammen unverändert aus
+          den Quellen.
+        </p>
+        <p className="mb-6 max-w-2xl text-sm text-text-secondary">
+          Ein Klick auf „Nachziehen" legt das Thema in die Warteschlange; der nächste Pipeline-Lauf
+          greift es bevorzugt auf — höchstens einen Auftrag pro Lauf, und Aufträge verfallen nach
+          24 Stunden.
         </p>
         <StoryRadar />
       </div>

@@ -114,15 +114,21 @@ export function StoryRadar() {
               </p>
             </div>
 
-            {/* Tempo als Balken: Quellen pro Stunde, gedeckelt bei 5 */}
-            <div className="flex shrink-0 items-center gap-3">
-              <div className="h-1.5 w-24 overflow-hidden rounded-full bg-border-subtle">
+            {/* Tempo: Quellen pro Stunde. Das frühere "+3.1" las sich wie
+                eine Veränderung — es ist aber ein Messwert (Tim, 11.08.2026). */}
+            <div
+              className="flex shrink-0 items-center gap-3"
+              title={`${t.quellen} Quellen in ${t.stundenSeitErster} Stunden`}
+            >
+              <div className="h-1.5 w-20 overflow-hidden rounded-full bg-border-subtle">
                 <span
                   className="block h-full rounded-full bg-accent"
                   style={{ width: `${Math.min(100, (t.tempo / 5) * 100)}%` }}
                 />
               </div>
-              <span className="w-10 text-right text-xs font-bold text-accent">+{t.tempo}</span>
+              <span className="w-20 text-right text-xs font-semibold text-accent">
+                {t.tempo.toLocaleString("de-CH", { maximumFractionDigits: 1 })} Quellen/Std.
+              </span>
             </div>
 
             <div className="shrink-0">
