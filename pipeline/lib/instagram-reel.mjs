@@ -4,7 +4,12 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { execFileSync } from "node:child_process";
 import sharp from "sharp";
-import { besterAusschnitt, verlauf } from "./instagram-card.mjs";
+import {
+  besterAusschnitt,
+  verlauf,
+  headlineHtml as kartenHeadlineHtml,
+  schriftEinpassenQuelle,
+} from "./instagram-card.mjs";
 
 // Instagram-Reel-Renderer (Motion-Graphic, 08.08.2026): 1080×1350 (4:5), 5 s,
 // 30 fps — Artikelbild mit langsamem Ken-Burns-Zoom, darüber ein statisches
@@ -31,15 +36,12 @@ function escapeHtml(s) {
   return String(s).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
 }
 
-function headlineHtml(headlineLines) {
-  return headlineLines
-    .map((line) =>
-      line
-        .map((seg) => (seg.cyan ? `<span class="cy">${escapeHtml(seg.text)}</span>` : escapeHtml(seg.text)))
-        .join(" ")
-    )
-    .join("<br>");
-}
+// Eigene Fassung war ein Duplikat der Karten-Version und hatte deren
+// Umbruch-Problem geerbt (Fund 11.08.2026 beim Nachbau der vier Posts): Die
+// Sperre gegen heimliche Zeilenumbrüche galt nur für Bild-Posts, während
+// rund die Hälfte unserer Beiträge Reels sind. Jetzt teilen sich beide
+// Renderer dieselbe Ausgabe und dieselbe Einpassung.
+const headlineHtml = kartenHeadlineHtml;
 
 async function renderOverlay({ headlineLines, badge, credit, chromium, pngPath, grad }) {
   const badgeHtml = badge ? `<div class="badge">${escapeHtml(badge)}</div>` : "";
@@ -65,6 +67,7 @@ async function renderOverlay({ headlineLines, badge, credit, chromium, pngPath, 
   .titel { font-family:'Inter',sans-serif; font-weight:900; text-transform:uppercase;
     text-align:center; font-size:64px; line-height:1.18; letter-spacing:-0.015em;
     color:#FFFFFF; text-shadow:0 3px 18px rgba(0,0,0,0.5); }
+  .titel .zeile { display:block; white-space:nowrap; }
   .titel .cy { color:#02F0D1; }
   .badge { border:3.5px solid #02F0D1; color:#02F0D1; font-family:'Inter',sans-serif;
     font-weight:900; font-size:28px; letter-spacing:0.22em; text-transform:uppercase;
@@ -87,6 +90,10 @@ async function renderOverlay({ headlineLines, badge, credit, chromium, pngPath, 
     const page = await browser.newPage({ viewport: { width: 1080, height: 1350 } });
     await page.goto(`file://${htmlFile}`, { waitUntil: "networkidle" });
     await page.waitForTimeout(400);
+    // Gleiche Einpassung wie bei der Bild-Karte: keine Zeile bricht um,
+    // stattdessen wird die Schrift verkleinert.
+    await page.evaluate(`(${schriftEinpassenQuelle().toString()})(430)`);
+    await page.waitForTimeout(80);
     await page.screenshot({ path: pngPath, omitBackground: true });
   } finally {
     await browser.close();
