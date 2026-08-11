@@ -1,0 +1,47 @@
+{
+  "stand": "2026-08-11T18:38:27.749Z",
+  "dienste": [
+    {
+      "id": "psn",
+      "name": "PlayStation Network",
+      "plattform": "PlayStation",
+      "zustand": "online",
+      "detail": "Alle Dienste"
+    },
+    {
+      "id": "xbox",
+      "name": "Xbox Live",
+      "plattform": "Xbox",
+      "zustand": "online",
+      "detail": "Alle Dienste"
+    },
+    {
+      "id": "nintendo",
+      "name": "Nintendo Switch Online",
+      "plattform": "Nintendo",
+      "zustand": "online",
+      "detail": "Wartung geplant am 17.08."
+    },
+    {
+      "id": "fortnite",
+      "name": "Fortnite",
+      "plattform": "Epic Games",
+      "zustand": "online",
+      "detail": "Alle Dienste"
+    },
+    {
+      "id": "valorant",
+      "name": "Valorant",
+      "plattform": "Riot (Europa)",
+      "zustand": "online",
+      "detail": "EU-Server"
+    },
+    {
+      "id": "destiny2",
+      "name": "Destiny 2",
+      "plattform": "Bungie",
+      "zustand": "online",
+      "detail": "Alle Plattformen"
+    }
+  ]
+}

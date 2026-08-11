@@ -14,3 +14,6 @@ out/
 .ig-queue.json
 .ig-failed.json
 .twitch.env
+
+# Störungs-Warteschlange: Auftrag an die Pipeline, kein Seiteninhalt
+pipeline/stoerungen.json

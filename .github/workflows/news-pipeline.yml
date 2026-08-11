@@ -76,6 +76,15 @@ jobs:
         # fehlt oder älter als 8 Tage ist) — Wochen-Charts, kein Dauerlauf.
         run: node pipeline/charts.mjs
 
+      - name: Server-Status prüfen (Störungs-Wächter)
+        # Fragt die offiziellen Statusquellen ab und erkennt NEUE Störungen.
+        # Der Radar ist als Leser-Feature schwach (Downdetector besetzt diese
+        # Suchanfragen), als Artikel-Auslöser aber stark: Wir sind eine
+        # Nachrichtenseite, und eine Störung binnen Minuten zu melden ist
+        # genau unser Geschwindigkeitsvorteil. Ein Fehler hier darf den Lauf
+        # nicht abbrechen — Nachrichten sind wichtiger als der Status.
+        run: node pipeline/serverstatus.mjs || true
+
       - name: Pixel-Raten erzeugen (tägliches Rätsel)
         # Erzeugt einmal pro Tag (Europe/Zurich) das Rätsel samt fünf
         # Schärfe-Stufen-Bildern; existiert das heutige schon, tut der
