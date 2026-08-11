@@ -113,7 +113,10 @@ export async function renderTypoCard({ headlineLines, kicker, outPath, chromium 
     const einpassung = await page.evaluate(() => {
       const titel = document.querySelector(".headline");
       const zeilen = [...titel.querySelectorAll(".zeile")];
-      const breite = titel.clientWidth * 0.96;
+      // 90 % statt 96 % (Tim, 11.08.2026): gleiche Begründung wie bei der
+      // Bild-Karte — randnaher Text wirkt im Feed gedrängt. Ergibt rund
+      // 12 % Rand je Seite, passend zur Bild-Karte.
+      const breite = titel.clientWidth * 0.9;
       let groesse = parseFloat(getComputedStyle(titel).fontSize);
       // TEXTBREITE PER RANGE MESSEN (Fund 11.08.2026): scrollWidth liefert
       // bei einem Block-Element die Container-Breite, nicht die Textbreite —

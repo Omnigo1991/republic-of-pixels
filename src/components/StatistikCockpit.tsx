@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import type { Session } from "@supabase/supabase-js";
 import { getSupabase } from "@/lib/supabase";
+import { Wachstumskurve, type Tageswert } from "./Wachstumskurve";
 import { MASTER_NICKNAME } from "@/lib/ranking";
 
 // Redaktions-Cockpit: eigene, cookielose Besucherstatistik aus page_views
@@ -21,6 +22,7 @@ interface Kennzahlen {
   registrierteKonten: number;
   topSeiten: { path: string; aufrufe: number }[];
   herkunft: { quelle: string; besucher: number }[];
+  verlauf: Tageswert[];
 }
 
 // Herkunfts-Klassifikation: der erste Aufruf eines Besuchers in den letzten
@@ -151,6 +153,36 @@ export function StatistikCockpit() {
         .slice(0, 10)
         .map(([path, aufrufe]) => ({ path, aufrufe }));
 
+      // WACHSTUMSKURVE (Tim, 11.08.2026): Tagesverlauf der letzten 30 Tage.
+      // Kein neues Tracking noetig — die Zeitstempel lagen schon vor, sie
+      // wurden nur nie nach Tagen gruppiert.
+      const { data: verlaufRows } = await supabase
+        .from("page_views")
+        .select("created_at, visitor")
+        .gte("created_at", iso(jetzt - 30 * 86400000))
+        .limit(20000);
+      const tagesSchluessel = (d: Date) =>
+        new Intl.DateTimeFormat("sv-SE", { timeZone: "Europe/Zurich" }).format(d);
+      const eimer = new Map<string, { aufrufe: number; besucher: Set<string> }>();
+      for (let i = 29; i >= 0; i--) {
+        eimer.set(tagesSchluessel(new Date(jetzt - i * 86400000)), {
+          aufrufe: 0,
+          besucher: new Set(),
+        });
+      }
+      for (const r of verlaufRows ?? []) {
+        const k = tagesSchluessel(new Date(r.created_at as string));
+        const e = eimer.get(k);
+        if (!e) continue;
+        e.aufrufe += 1;
+        e.besucher.add(r.visitor as string);
+      }
+      const verlauf: Tageswert[] = [...eimer.entries()].map(([tag, e]) => ({
+        tag,
+        aufrufe: e.aufrufe,
+        besucher: e.besucher.size,
+      }));
+
       setZahlen({
         heute,
         tage7,
@@ -163,6 +195,7 @@ export function StatistikCockpit() {
         registrierteKonten: registrierteKonten ?? 0,
         topSeiten,
         herkunft,
+        verlauf,
       });
       setStand(new Date());
       setFehler(null);
@@ -267,6 +300,14 @@ export function StatistikCockpit() {
               </div>
             ))}
           </div>
+
+          {/* Wachstum — die Kurve steht bewusst direkt unter den Kennzahlen:
+              Sie ist das Erste, was in einem Werbegespräch gezeigt wird. */}
+          <div className="mt-10 mb-4 flex items-baseline justify-between">
+            <h2 className="text-xl font-semibold tracking-tight text-text-primary">Wachstum</h2>
+            <span className="text-xs text-text-tertiary">Letzte 30 Tage</span>
+          </div>
+          <Wachstumskurve daten={zahlen.verlauf} />
 
           {/* Herkunft */}
           <h2 className="mt-10 mb-4 text-xl font-semibold tracking-tight text-text-primary">

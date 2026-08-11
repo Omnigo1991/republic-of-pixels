@@ -169,10 +169,12 @@ export function schriftEinpassenQuelle() {
     const titel = document.querySelector(".titel");
     if (!titel) return { groesse: null, passt: true };
     const zeilen = [...titel.querySelectorAll(".zeile")];
-    // 96 % der verfügbaren Breite: Die längste Zeile soll den Satzspiegel
-    // nicht bis auf den letzten Pixel ausreizen — randberührender Text wirkt
-    // gedrängt, auch wenn er formal passt.
-    const breite = titel.clientWidth * 0.96;
+    // 80 % der verfügbaren Breite (Tim, 11.08.2026): Mit 96 % blieben nur
+    // 79 px Rand auf 1080 px Breite, gut 7 % — im Feed wirkte das gedrängt
+    // ("gewurstelt"). Der Faktor wurde EMPIRISCH bestimmt, nicht gerechnet:
+    // gemessen am fertigen Bild ergibt 0.86 = 99 px, 0.80 = 131 px und
+    // 0.76 = 155 px Rand. 0.80 trifft die angepeilten 12 % je Seite.
+    const breite = titel.clientWidth * 0.80;
     let groesse = parseFloat(getComputedStyle(titel).fontSize);
     const MIN = 38;
     // TEXTBREITE PER RANGE MESSEN (Fund 11.08.2026): scrollWidth liefert bei
