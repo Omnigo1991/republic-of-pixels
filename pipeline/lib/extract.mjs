@@ -49,10 +49,16 @@ export async function extractArticleText(url, { maxChars = 9000, timeoutMs = 200
     // es ein Teilen-Knopf —, gewann X praktisch immer und verdrängte den
     // Trailer selbst dort, wo die Meldung vom Trailer handelte. Die Auswahl
     // trifft jetzt run.mjs, wo der Artikelgegenstand bekannt ist.
-    const tweetUrl = html.match(
+    // NUR IM ARTIKELRUMPF SUCHEN (Tims Fund 11.08.2026): Bisher wurde der
+    // GESAMTE Quelltext durchsucht — also auch "Das könnte dich auch
+    // interessieren"-Kästen, Seitenspalten und Fussbereiche. Ein Tweet über
+    // ein ganz anderes Spiel gewann so mühelos, und im Artikel stand eine
+    // Einbettung, die nicht zur Meldung passte. Dieselbe Beschränkung galt
+    // schon für verlinkte Videos; die Ungleichbehandlung war ein Versehen.
+    const tweetUrl = rumpf.match(
       /https?:\/\/(?:twitter\.com|x\.com)\/[A-Za-z0-9_]+\/status\/\d+/
     )?.[0];
-    const redditUrl = html.match(
+    const redditUrl = rumpf.match(
       /https?:\/\/(?:www\.)?reddit\.com\/r\/[A-Za-z0-9_]+\/comments\/[a-z0-9]+\/[^"'\s<>]*/
     )?.[0];
     // Echte Player zuerst: <iframe> (auch lazy per data-src) und das
