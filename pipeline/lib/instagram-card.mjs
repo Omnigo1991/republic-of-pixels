@@ -139,18 +139,60 @@ function escapeHtml(s) {
 
 // headlineLines: Array von Zeilen; jede Zeile ist ein Array von Segmenten
 // { text, cyan } — die Struktur kommt von Claude, das HTML bauen wir selbst.
-function headlineHtml(headlineLines) {
+// JEDE ZEILE UNUMBRECHBAR (Tim, 11.08.2026): Vorher wurden die Zeilen mit
+// <br> aneinandergehängt und durften umbrechen. Eine zu lange Zeile wurde
+// dadurch heimlich zu zweien — so entstand beim Halloween-Post der Bruch
+// "WEGEN MARIHUANA-" / "MECHANIK" mit einem einzelnen Wort auf der letzten
+// Zeile. Jetzt steht jede Zeile in einem eigenen Block mit nowrap; passt sie
+// nicht, wird die Schrift verkleinert (siehe schriftEinpassen) statt
+// umgebrochen. Die Zeilenzahl der Grafik entspricht damit IMMER der, die die
+// Redaktion vorgegeben hat.
+export function headlineHtml(headlineLines) {
   return headlineLines
-    .map((line) =>
-      line
-        .map((seg) =>
-          seg.cyan
-            ? `<span class="cy">${escapeHtml(seg.text)}</span>`
-            : escapeHtml(seg.text)
-        )
-        .join(" ")
+    .map(
+      (line) =>
+        `<span class="zeile">${line
+          .map((seg) =>
+            seg.cyan
+              ? `<span class="cy">${escapeHtml(seg.text)}</span>`
+              : escapeHtml(seg.text)
+          )
+          .join(" ")}</span>`
     )
-    .join("<br>");
+    .join("");
+}
+
+// Verkleinert die Schlagzeile so weit, bis jede Zeile in die Breite passt
+// und der Block die Höhenvorgabe einhält. Wird im Seitenkontext ausgeführt.
+export function schriftEinpassenQuelle() {
+  return (maxHoehe) => {
+    const titel = document.querySelector(".titel");
+    if (!titel) return { groesse: null, passt: true };
+    const zeilen = [...titel.querySelectorAll(".zeile")];
+    // 96 % der verfügbaren Breite: Die längste Zeile soll den Satzspiegel
+    // nicht bis auf den letzten Pixel ausreizen — randberührender Text wirkt
+    // gedrängt, auch wenn er formal passt.
+    const breite = titel.clientWidth * 0.96;
+    let groesse = parseFloat(getComputedStyle(titel).fontSize);
+    const MIN = 38;
+    // TEXTBREITE PER RANGE MESSEN (Fund 11.08.2026): scrollWidth liefert bei
+    // einem Block-Element die Container-Breite statt der Textbreite — die
+    // Bedingung wäre nie erfüllbar und die Schrift würde immer bis zum
+    // Anschlag schrumpfen, auch bei kurzen Schlagzeilen.
+    const textBreite = (el) => {
+      const r = document.createRange();
+      r.selectNodeContents(el);
+      return r.getBoundingClientRect().width;
+    };
+    const passt = () =>
+      zeilen.every((z) => textBreite(z) <= breite + 0.5) &&
+      (!maxHoehe || titel.getBoundingClientRect().height <= maxHoehe);
+    while (!passt() && groesse > MIN) {
+      groesse -= 1;
+      titel.style.fontSize = `${groesse}px`;
+    }
+    return { groesse, passt: passt(), zeilen: zeilen.length };
+  };
 }
 
 export async function renderInstagramCard({
@@ -182,6 +224,7 @@ export async function renderInstagramCard({
   .titel { font-family:'Inter',sans-serif; font-weight:900; text-transform:uppercase;
     text-align:center; font-size:64px; line-height:1.18; letter-spacing:-0.015em;
     color:#FFFFFF; text-shadow:0 3px 18px rgba(0,0,0,0.5); }
+  .titel .zeile { display:block; white-space:nowrap; }
   .titel .cy { color:#02F0D1; }
   .badge { border:3.5px solid #02F0D1; color:#02F0D1; font-family:'Inter',sans-serif;
     font-weight:900; font-size:28px; letter-spacing:0.22em; text-transform:uppercase;
@@ -209,6 +252,19 @@ export async function renderInstagramCard({
     });
     await page.goto(`file://${htmlFile}`, { waitUntil: "networkidle" });
     await page.waitForTimeout(400);
+
+    // Schrift einpassen, BEVOR die Tintenkompensation misst — sonst rechnet
+    // sie mit der alten Grösse. Höhenvorgabe 430 px: Damit bleibt der obere
+    // Bildteil in jedem Fall sichtbar und der Block drängt sich nie ans Logo.
+    const einpassung = await page.evaluate(
+      `(${schriftEinpassenQuelle().toString()})(430)`,
+    );
+    if (!einpassung.passt) {
+      console.log(
+        `  Hinweis: Schlagzeile passt auch bei ${einpassung.groesse}px nicht vollständig (${einpassung.zeilen} Zeilen)`,
+      );
+    }
+    await page.waitForTimeout(80);
 
     // Tintenkompensation: Der optische Abstand Schriftkante→Logo muss den
     // Box-Abstand um den unsichtbaren Unterlängen-Raum korrigieren.

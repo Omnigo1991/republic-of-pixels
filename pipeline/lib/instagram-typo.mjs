@@ -25,17 +25,21 @@ function escapeHtml(s) {
 }
 
 function headlineHtml(headlineLines) {
+  // Jede Zeile ein eigener Block mit nowrap — nie heimlich umbrechen, sondern
+  // die Schrift verkleinern (siehe unten). Gleiche Regel wie bei der
+  // Bild-Karte, Begründung dort.
   return headlineLines
-    .map((line) =>
-      line
-        .map((seg) =>
-          seg.cyan
-            ? `<span class="cy">${escapeHtml(seg.text)}</span>`
-            : escapeHtml(seg.text)
-        )
-        .join(" ")
+    .map(
+      (line) =>
+        `<span class="zeile">${line
+          .map((seg) =>
+            seg.cyan
+              ? `<span class="cy">${escapeHtml(seg.text)}</span>`
+              : escapeHtml(seg.text)
+          )
+          .join(" ")}</span>`
     )
-    .join("<br>");
+    .join("");
 }
 
 export async function renderTypoCard({ headlineLines, kicker, outPath, chromium }) {
@@ -59,8 +63,18 @@ export async function renderTypoCard({ headlineLines, kicker, outPath, chromium 
   body { width:2160px; height:2700px; background:#0C0B1A; font-family:'Inter',-apple-system,sans-serif; position:relative; overflow:hidden; }
   .glow { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:1800px; height:1800px; background:radial-gradient(circle, rgba(2,240,209,0.07) 0%, rgba(2,240,209,0) 62%); }
   .wasserzeichen { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:1500px; opacity:0.045; }
-  .kicker { position:absolute; left:50%; top:37%; transform:translateX(-50%); font-weight:700; font-size:30px; letter-spacing:0.26em; color:rgba(255,255,255,0.4); white-space:nowrap; }
-  .headline { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:1840px; text-align:center; font-weight:900; font-size:152px; line-height:1.16; letter-spacing:-0.015em; color:#fff; text-transform:uppercase; }
+  /* KOPFZEILE UND SCHLAGZEILE GESTAPELT (Tim, 11.08.2026): Die Kopfzeile sass
+     auf festen 37 %, die Schlagzeile wuchs von der Mitte aus in BEIDE
+     Richtungen — bei vier Zeilen lief sie zwangsläufig in die Kopfzeile
+     hinein. Genau das passierte beim id-Software-Post: "MASSENENTLASSUNGEN"
+     stand mitten in "[ GAMING-NEWS // 11.08.2026 ]". Beide stehen jetzt in
+     einem gemeinsamen, mittig zentrierten Stapel mit festem Abstand; ein
+     Überschreiben ist damit baulich ausgeschlossen. */
+  .satz { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
+    width:1840px; display:flex; flex-direction:column; align-items:center; gap:64px; }
+  .kicker { font-weight:700; font-size:30px; letter-spacing:0.26em; color:rgba(255,255,255,0.4); white-space:nowrap; }
+  .headline { width:100%; text-align:center; font-weight:900; font-size:152px; line-height:1.16; letter-spacing:-0.015em; color:#fff; text-transform:uppercase; }
+  .headline .zeile { display:block; white-space:nowrap; }
   .headline .cy { color:#02F0D1; }
   .klammer-ol { position:absolute; left:200px; top:600px; width:200px; height:200px; border-left:36px solid #02F0D1; border-top:36px solid #02F0D1; }
   .pixel-ol-a { position:absolute; left:460px; top:564px; width:52px; height:52px; background:#02F0D1; }
@@ -76,8 +90,10 @@ export async function renderTypoCard({ headlineLines, kicker, outPath, chromium 
   <img class="wasserzeichen" src="${logoUrl}" alt="">
   <div class="klammer-ol"></div><div class="pixel-ol-a"></div><div class="pixel-ol-b"></div>
   <div class="klammer-ur"></div><div class="pixel-ur-a"></div><div class="pixel-ur-b"></div>
-  <div class="kicker">[ ${escapeHtml(kicker ?? "GAMING-NEWS")} // ${datum} ]</div>
-  <div class="headline">${headlineHtml(headlineLines)}</div>
+  <div class="satz">
+    <div class="kicker">[ ${escapeHtml(kicker ?? "GAMING-NEWS")} // ${datum} ]</div>
+    <div class="headline">${headlineHtml(headlineLines)}</div>
+  </div>
   <img class="logo" src="${logoUrl}" alt="">
 </body>
 </html>`;
@@ -91,6 +107,36 @@ export async function renderTypoCard({ headlineLines, kicker, outPath, chromium 
     const page = await browser.newPage({ viewport: { width: 2160, height: 2700 } });
     await page.goto(pathToFileURL(htmlPath).href, { waitUntil: "networkidle" });
     await page.waitForTimeout(300);
+    // Schrift einpassen: keine Zeile darf über die Satzbreite hinauslaufen,
+    // der Block nicht höher als 1500 px werden (2160×2700-Raster) — sonst
+    // gerät er den Klammern und dem Logo zu nahe.
+    const einpassung = await page.evaluate(() => {
+      const titel = document.querySelector(".headline");
+      const zeilen = [...titel.querySelectorAll(".zeile")];
+      const breite = titel.clientWidth * 0.96;
+      let groesse = parseFloat(getComputedStyle(titel).fontSize);
+      // TEXTBREITE PER RANGE MESSEN (Fund 11.08.2026): scrollWidth liefert
+      // bei einem Block-Element die Container-Breite, nicht die Textbreite —
+      // die Bedingung war damit immer unerfüllbar und die Schrift schrumpfte
+      // jedes Mal bis zum Anschlag, auch bei kurzen Schlagzeilen.
+      const textBreite = (el) => {
+        const r = document.createRange();
+        r.selectNodeContents(el);
+        return r.getBoundingClientRect().width;
+      };
+      const passt = () =>
+        zeilen.every((z) => textBreite(z) <= breite + 0.5) &&
+        titel.getBoundingClientRect().height <= 1500;
+      while (!passt() && groesse > 88) {
+        groesse -= 2;
+        titel.style.fontSize = `${groesse}px`;
+      }
+      return { groesse, passt: passt() };
+    });
+    if (!einpassung.passt) {
+      console.log(`  Hinweis: Typo-Schlagzeile passt auch bei ${einpassung.groesse}px nicht ganz`);
+    }
+    await page.waitForTimeout(80);
     const shot = await page.screenshot({ type: "png" });
     await sharp(shot).resize(1080, 1350).jpeg({ quality: 90 }).toFile(outPath);
   } finally {

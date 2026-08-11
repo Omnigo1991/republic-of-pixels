@@ -31,6 +31,7 @@ import { renderInstagramCard } from "./lib/instagram-card.mjs";
 import { renderInstagramReel } from "./lib/instagram-reel.mjs";
 import { renderTypoCard } from "./lib/instagram-typo.mjs";
 import { holeSpielBild } from "./lib/keyart.mjs";
+import { pruefeHeadline } from "./lib/headline.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const STATE_FILE = join(ROOT, "pipeline", "state.json");
@@ -157,17 +158,28 @@ Nur wenn ein Kandidat redaktionell unhaltbar ist, darf er fehlen; im Extremfall:
       // an der Textlaenge haengt — darum grosszuegig statt knapp bemessen.
       raw = await askClaude({ system: IG_SYSTEM, prompt, maxTokens: 8000 });
       const picks = parseJsonResponse(raw).picks ?? [];
-      const brauchbar = picks.filter(
-        (p) =>
-          candidates[p.index] &&
-          Array.isArray(p.headlineLines) &&
-          p.headlineLines.length >= 1 &&
-          typeof p.caption === "string",
-      );
-      if (brauchbar.length < picks.length) {
-        console.log(
-          `  ${picks.length - brauchbar.length} Pick(s) an der Struktur-Prüfung gescheitert.`,
-        );
+      // SCHLAGZEILEN-WÄCHTER (Tim, 11.08.2026): Die Regeln standen bisher nur
+      // im Prompt; geprüft wurde nur, ob überhaupt eine Zeile da ist. Am
+      // 11.08. verletzten drei von vier Posts die Regel und niemand fing es
+      // auf. Jetzt entscheidet der Code — ein Vorschlag mit zu vielen Zeilen,
+      // zu vielen Wörtern oder einer Waisen-Zeile wird verworfen und in der
+      // nächsten Auswahl-Runde neu angefordert.
+      const brauchbar = [];
+      for (const p of picks) {
+        if (!candidates[p.index] || typeof p.caption !== "string") {
+          console.log(`  Pick verworfen: Struktur unvollständig.`);
+          continue;
+        }
+        const pruefung = pruefeHeadline(p.headlineLines);
+        if (!pruefung.ok) {
+          console.log(
+            `  Pick verworfen (Schlagzeile): ${pruefung.fehler.join("; ")} — "${(p.headlineLines ?? [])
+              .map((z) => (Array.isArray(z) ? z.map((s) => s?.text).join(" ") : ""))
+              .join(" / ")}"`,
+          );
+          continue;
+        }
+        brauchbar.push(p);
       }
       if (brauchbar.length === 0) {
         console.log(
