@@ -46,11 +46,15 @@ export function pruefeHeadline(headlineLines) {
     fehler.push("leere Zeile");
   }
 
-  // Waisen-Zeile: ein einzelnes Wort neben deutlich längeren Zeilen wirkt
-  // wie ein Versehen — genau das passierte mit "AN" im Kamiya-Post.
+  // Waisen-Zeile: ein KURZES einzelnes Wort neben längeren Zeilen wirkt wie
+  // ein Versehen — genau das passierte mit "AN" im Kamiya-Post. Ein LANGES
+  // Einzelwort ist dagegen ein bewusster Schlag ("MASSENENTLASSUNGEN") und
+  // bleibt erlaubt; die erste Fassung dieser Regel verbot beides und hätte
+  // gute Schlagzeilen mitgerissen.
   const laengste = Math.max(...proZeile.map((w) => w.length));
-  if (proZeile.length > 1 && proZeile.some((w) => w.length === 1) && laengste >= 3) {
-    fehler.push("Ein-Wort-Zeile neben deutlich längeren Zeilen");
+  const kurzeWaise = proZeile.some((w) => w.length === 1 && w[0].length < 8);
+  if (proZeile.length > 1 && kurzeWaise && laengste >= 2) {
+    fehler.push("kurzes Einzelwort auf eigener Zeile");
   }
 
   // Zwei zusammengeklebte Schlagzeilen: Der Kamiya-Post trug "Kamiya deutet
