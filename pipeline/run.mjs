@@ -12,6 +12,7 @@ import { FEEDS } from "./feeds.mjs";
 import { fetchAllFeeds } from "./lib/rss.mjs";
 import { askClaude, parseJsonResponse } from "./lib/claude.mjs";
 import { extractArticleText } from "./lib/extract.mjs";
+import { schreibeThemenRadar } from "./lib/themenradar.mjs";
 import { waehleEinbettungen, gehtUmBewegtbild } from "./lib/embeds.mjs";
 import { acquireImage } from "./lib/images.mjs";
 import { validateArticle } from "./lib/validate.mjs";
@@ -357,6 +358,12 @@ async function main() {
     .slice(0, 150);
 
   console.log(`2/5 ${candidates.length} neue Kandidaten (Fenster ${MAX_CANDIDATE_AGE_H}h)`);
+
+  // STORY-RADAR (Tim, 11.08.2026): Auswertung der Kandidaten, BEVOR die
+  // Auswahl sie verwirft. Bewusst hier und nicht in selectCandidates —
+  // dieser Aufruf ist rein additiv und kann die Artikel-Erzeugung nicht
+  // beeinflussen; die Funktion faengt eigene Fehler ab.
+  schreibeThemenRadar(candidates);
   if (candidates.length === 0) {
     console.log("Nichts Neues — Lauf beendet.");
     return;
