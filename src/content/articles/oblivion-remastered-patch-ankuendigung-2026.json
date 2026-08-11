@@ -1,0 +1,142 @@
+{
+  "slug": "oblivion-remastered-patch-ankuendigung-2026",
+  "title": "Oblivion Remastered: Bethesda kündigt Patch nach über einem Jahr Stille an",
+  "subtitle": "Die frisch erschienene Nintendo-Switch-2-Fassung liefert die Grundlage für Optimierungen, die nun auch auf andere Plattformen kommen sollen.",
+  "excerpt": "Nach mehr als einem Jahr ohne Update bestätigt Bethesda einen Patch für The Elder Scrolls IV: Oblivion Remastered. Basis sind Optimierungen aus der neuen Nintendo-Switch-2-Version.",
+  "seoTitle": "Oblivion Remastered: Bethesda kündigt Patch an",
+  "metaDescription": "Bethesda bestätigt einen Patch für Oblivion Remastered, basierend auf Optimierungen der neuen Nintendo-Switch-2-Version des Spiels.",
+  "category": "news",
+  "platforms": [
+    "pc",
+    "playstation",
+    "xbox",
+    "nintendo"
+  ],
+  "tags": [
+    "Oblivion Remastered",
+    "Bethesda",
+    "Nintendo Switch 2",
+    "PC",
+    "Patch"
+  ],
+  "tldr": [
+    "Bethesda bestätigt einen kommenden Patch für Oblivion Remastered, seit Juli 2025 gab es kein Update auf PC",
+    "Grundlage sind Optimierungen aus der neu erschienenen Nintendo-Switch-2-Version",
+    "Digital Foundry dokumentierte wiederholt Performance-Probleme, darunter sinkende Framerate bei längerer Spielzeit",
+    "Über 9 Millionen Spielende laut Bethesda, Steam-Bewertungen zuletzt aber nur noch \"gemischt\""
+  ],
+  "whyItMatters": "Für alle, die Oblivion Remastered auf PC oder Konsole spielen, ist die Ankündigung die erste konkrete Reaktion auf monatelange Kritik an Performance-Problemen. Die Community wartet seit über einem Jahr auf eine Lösung für Framerate-Einbrüche und ein mutmassliches Speicherleck.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Bethesda hat bestätigt, dass ein Patch für The Elder Scrolls IV: Oblivion Remastered in Arbeit ist. Die Ankündigung fällt zeitlich mit dem Release der Nintendo-Switch-2-Version zusammen, deren technische Optimierungen laut Studio nun auch auf andere Plattformen übertragen werden sollen. Für PC-Spielende ist das eine lang erwartete Nachricht: Seit Juli 2025 hat das Remake kein Update mehr erhalten, obwohl es weiterhin mit Performance-Problemen kämpft."
+    },
+    {
+      "type": "embed",
+      "platform": "twitter",
+      "url": "https://x.com/BethesdaStudios/status/2087193201249522113"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "Juli 2025",
+          "label": "letztes Update für Oblivion Remastered auf PC"
+        },
+        {
+          "value": "9 Mio.",
+          "label": "Spielende laut Bethesda seit Release"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Bekannte Probleme seit dem Launch"
+    },
+    {
+      "type": "paragraph",
+      "text": "Das Remake, das Bethesda mit Unterstützung von Virtuos auf Basis der Unreal Engine 5 umgesetzt hat, litt laut mehreren technischen Analysen von Digital Foundry von Beginn an unter Rucklern in der offenen Welt, unregelmässiger Framerate und einer Leistung, die mit zunehmender Spielzeit spürbar nachliess – ein Hinweis auf ein mögliches Speicherleck. Eine erneute Untersuchung im Mai 2026 bestätigte laut Digital Foundry weitgehend dieselben Schwächen."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Ruckler und Hitches beim Erkunden der offenen Welt",
+        "Unregelmässige Framerate über längere Spielsitzungen",
+        "Verschlechterung der Performance mit zunehmender Spielzeit",
+        "Zuletzt nur noch \"gemischte\" Nutzerbewertungen auf Steam"
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "Abandonware. Es gibt weiterhin offensichtliche Bugs und Performance-Probleme. Sie haben nach dem Release zweimal aktualisiert, und jetzt nähern wir uns einem Jahr ohne irgendetwas.",
+      "attribution": "Steam-Nutzerbewertung"
+    },
+    {
+      "type": "heading",
+      "text": "Bethesdas Statement und Reaktionen"
+    },
+    {
+      "type": "paragraph",
+      "text": "In einem Tweet erklärte Bethesda, man habe das Feedback der Community gehört und arbeite an einer Lösung, ohne bereits ein konkretes Datum zu nennen."
+    },
+    {
+      "type": "quote",
+      "text": "Wir haben euer Feedback gehört, das einen zusätzlichen Patch für Oblivion Remastered fordert. Die Nintendo-Switch-2-Version des Spiels enthält eine Reihe von Optimierungen, die wir auf andere Plattformen bringen möchten – wir werden mehr mitteilen, sobald wir können.",
+      "attribution": "Bethesda, offizieller Tweet"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Reaktionen in der Community fielen trotz der vagen Formulierung überwiegend positiv aus. Auf dem Oblivion-Subreddit äusserte sich ein Fan sowohl erleichtert als auch skeptisch über den langen Zeitraum ohne Kommunikation."
+    },
+    {
+      "type": "quote",
+      "text": "Es ist unglaublich, dass sie über ein Jahr lang gar nichts dazu gesagt haben, aber ich bin froh, endlich etwas zu hören. Das hier muss substanziell ausfallen.",
+      "attribution": "Nutzerkommentar, r/oblivion"
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Kommerziell gilt Oblivion Remastered als Erfolg: Bethesda-Entwicklungschef Todd Howard sagte im Dezember, das Studio sei \"really, really pleased\" mit dem Abschneiden des Spiels gewesen. Umso auffälliger wirkt die über einjährige Pause zwischen Updates, während bekannte technische Mängel bestehen blieben. Ob der angekündigte Patch die seit Release kritisierten Probleme tatsächlich behebt, bleibt offen – Bethesda hat weder ein Datum noch einen konkreten Umfang der Änderungen genannt."
+    }
+  ],
+  "poll": {
+    "question": "Wie bewertet ihr Bethesdas Umgang mit den Performance-Problemen von Oblivion Remastered?",
+    "options": [
+      "Zu spät, aber immerhin kommt etwas",
+      "Über ein Jahr Stille ist inakzeptabel",
+      "Verständlich, solange der Patch die Probleme wirklich löst",
+      "Interessiert mich nicht, ich spiele auf Switch 2"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-11T20:00:01.580Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "controller",
+  "sources": [
+    {
+      "title": "Bethesda Finally Confirms The Elder Scrolls IV: Oblivion Remastered Patch Is Coming",
+      "url": "https://www.ign.com/articles/bethesda-finally-confirms-the-elder-scrolls-iv-oblivion-remastered-patch-is-coming",
+      "publisher": "IGN"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/oblivion-remastered-patch-ankuendigung-2026.webp",
+    "alt": "Oblivion Remastered: Bethesda kündigt Patch nach über einem Jahr Stille an",
+    "credit": "Bild: IGN",
+    "sourceUrl": "https://www.ign.com/articles/bethesda-finally-confirms-the-elder-scrolls-iv-oblivion-remastered-patch-is-coming",
+    "sourceWidth": 1917,
+    "sourceHeight": 1080
+  },
+  "relatedSlugs": [
+    "oblivion-remastered-switch-2-gameplay-leak-2026",
+    "oblivion-remastered-kein-remake-bethesda-2026",
+    "marvel-tokon-fighting-souls-pc-patch-2026"
+  ]
+}
