@@ -45,11 +45,11 @@
     },
     {
       "name": "The Game Awards 2026",
-      "status": "erwartet",
-      "dateStart": null,
-      "dateEnd": "2026-12-15",
-      "dateLabel": "Dezember 2026",
-      "beschreibung": "Preisverleihung und Premieren-Feuerwerk zum Jahresabschluss in Los Angeles — Termin folgt."
+      "status": "fixiert",
+      "dateStart": "2026-12-10",
+      "dateEnd": "2026-12-10",
+      "dateLabel": "10. Dezember",
+      "beschreibung": "Die Preisverleihung des Jahres mit zahlreichen Weltpremieren — Termin von Geoff Keighley bestätigt."
     }
   ]
 }

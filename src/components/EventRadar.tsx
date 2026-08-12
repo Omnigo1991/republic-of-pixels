@@ -43,9 +43,19 @@ function tageBis(iso: string): number {
 
 export function EventRadar() {
   const heute = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Zurich" }).format(new Date());
-  const events = (eventsData.events as RadarEvent[]).filter(
-    (e) => !e.dateEnd || e.dateEnd >= heute
-  );
+  // STATUS AUS DEN DATEN ABLEITEN (Tim, 12.08.2026): Der Status war ein
+  // eigenes Feld, das man beim Eintragen eines bestätigten Termins vergessen
+  // konnte — genau das war bei den Game Awards passiert: Termin am 11.08.
+  // von Geoff Keighley bestätigt, bei uns stand weiter "ERWARTET". Ein
+  // konkretes Startdatum IST die Bestätigung; steht eines da, gilt der
+  // Termin als fixiert, egal was im Statusfeld steht. Damit kann die Pille
+  // dem Datum nicht mehr widersprechen. "Gerücht" bleibt eine bewusste
+  // redaktionelle Einschätzung und wird nicht überschrieben.
+  const events = (eventsData.events as RadarEvent[])
+    .filter((e) => !e.dateEnd || e.dateEnd >= heute)
+    .map((e) =>
+      e.dateStart && e.status !== "geruecht" ? { ...e, status: "fixiert" as const } : e
+    );
   if (events.length === 0) return null;
 
   const hero =

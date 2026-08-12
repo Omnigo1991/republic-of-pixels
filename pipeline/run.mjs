@@ -197,10 +197,10 @@ ${sourcesBlock}
 Vorgaben:
 - Kategorie: ${cluster.category}${cluster.isLeakOrRumor ? " (als unbestätigt kennzeichnen!)" : ""}${reviewHinweis}
 - Umfang: ${
-    { kurz: "250–350", standard: "350–550", lang: "550–750" }[depth] ?? "350–550"
-  } Wörter im body — die Länge muss dem Nachrichtenwert entsprechen, kein Aufblähen
+    { kurz: "400–500", standard: "550–700", lang: "750–950" }[depth] ?? "550–700"
+  } Wörter im body — die Länge muss dem Nachrichtenwert entsprechen, aber NICHT durch Wiederholungen oder Floskeln gestreckt werden. Mehr Länge heisst mehr SUBSTANZ: Vorgeschichte, Einordnung, Folgen für Spielerinnen und Spieler, Bezug zu früheren Ereignissen
 - Struktur: Einstieg mit dem Kern der Nachricht, ${
-    depth === "lang" ? "3–4" : "2–3"
+    depth === "lang" ? "4–5" : "3–4"
   } Zwischenüberschriften, am Ende eine kurze Einordnung
 - PFLICHT (fester Artikel-Bauplan): Direkt nach dem ersten Absatz folgt ein stats-Block {"type":"stats","items":[{"value":"...","label":"..."}]} mit den 1–3 stärksten ZAHLEN der Story (Preis, Datum, Verkaufszahl, Prozent …) — value kurz und plakativ (z. B. "80 $", "19. Nov.", "5 Mrd. $"), label ein erklärender Halbsatz. NUR Zahlen aus dem Quellmaterial, nichts erfinden. Hat die Story wirklich keine starke Zahl, lasse den Block weg.
 - Bereits vergebene Slugs (nicht wiederverwenden): ${[...slugs].slice(-40).join(", ")}

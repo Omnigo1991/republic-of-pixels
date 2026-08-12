@@ -90,7 +90,15 @@ export function validateArticle(a, existingSlugs) {
     .map((b) => (b.type === "list" ? (b.items ?? []).join(" ") : b.text ?? ""))
     .join(" ")
     .split(/\s+/).length;
-  need(wordCount >= 250, `Artikel zu kurz (${wordCount} Wörter, min. 250)`);
+  // MINDESTLÄNGE ANGEHOBEN (Tim, 12.08.2026, gemäss Masterplan): Der Median
+  // lag bei 339 Wörtern, 41 von 144 Artikeln unter 300 — für Google zu dünn,
+  // und wenige Wörter bieten wenige Anknüpfungspunkte für Suchanfragen. Die
+  // etablierten deutschen Gaming-Seiten liegen bei 400 bis 800. Untergrenze
+  // darum von 250 auf 350; die Zielkorridore im Generierungs-Prompt liegen
+  // deutlich darüber (400–500 / 550–700 / 750–950). Bewusst nicht höher
+  // angesetzt: Die Grenze soll Ausreisser abfangen, nicht brauchbare kurze
+  // Meldungen verwerfen — ein verworfener Artikel ist teurer als ein knapper.
+  need(wordCount >= 350, `Artikel zu kurz (${wordCount} Wörter, min. 350)`);
 
   return { ok: errors.length === 0, errors, wordCount };
 }

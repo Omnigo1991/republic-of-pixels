@@ -81,6 +81,15 @@ jobs:
         # fehlt oder älter als 8 Tage ist) — Wochen-Charts, kein Dauerlauf.
         run: node pipeline/charts.mjs
 
+      - name: Event-Wächter (bestätigte Termine melden)
+        # Meldet, wenn Quellen einen Termin bestätigen, der bei uns noch als
+        # "erwartet" oder "Gerücht" steht. Aendert NICHTS an events.json —
+        # ein Datum aus einer Schlagzeile zu lesen ist unzuverlaessig, ein
+        # falsches Datum bei einem Grossereignis waere peinlicher als ein
+        # fehlender Eintrag. Der Mensch entscheidet, der Waechter sorgt nur
+        # dafuer, dass es niemand uebersieht.
+        run: node pipeline/eventwaechter.mjs || true
+
       - name: Server-Status prüfen (Störungs-Wächter)
         # Fragt die offiziellen Statusquellen ab und erkennt NEUE Störungen.
         # Der Radar ist als Leser-Feature schwach (Downdetector besetzt diese
