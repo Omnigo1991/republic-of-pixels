@@ -32,6 +32,7 @@ import { renderInstagramReel } from "./lib/instagram-reel.mjs";
 import { renderTypoCard } from "./lib/instagram-typo.mjs";
 import { holeSpielBild } from "./lib/keyart.mjs";
 import { pruefeHeadline } from "./lib/headline.mjs";
+import { pruefeGrafik } from "./lib/abnahme.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const STATE_FILE = join(ROOT, "pipeline", "state.json");
@@ -505,6 +506,47 @@ async function prepare() {
           );
           continue;
         }
+      }
+
+      // BILD-ABNAHME VOR DER VEROEFFENTLICHUNG (Tim, 12.08.2026): Die
+      // Schranke, die diese Woche gefehlt hat. Alle bisherigen Waechter
+      // pruefen die ZUTATEN; hier wird zum ersten Mal das ERGEBNIS gemessen —
+      // tatsaechliche Zeilenzahl im Bild, Randabstand, Kontrast, Logo. Faellt
+      // die Pruefung durch, geht der Post NICHT raus: Die Story wird
+      // uebersprungen und gesperrt, die Ersatz-Runde zieht eine andere nach.
+      // Bei Reels wird das erste Bild geprueft — das Overlay ist dort
+      // identisch, ein Fehler traefe also beide Formate gleich.
+      try {
+        let pruefPfad = join(ROOT, "public", cardRel);
+        let tempBild = null;
+        if (cardRel.endsWith(".mp4")) {
+          const { default: ffmpegPath } = await import("ffmpeg-static");
+          const { execFileSync } = await import("node:child_process");
+          tempBild = join(tmpdir(), `rop-abnahme-${article.slug}.jpg`);
+          execFileSync(ffmpegPath, ["-y", "-i", pruefPfad, "-vframes", "1", tempBild], { stdio: "pipe" });
+          pruefPfad = tempBild;
+        }
+        const abnahme = await pruefeGrafik(
+          pruefPfad,
+          pick.headlineLines.length,
+          alsTypoKarte ? "typo" : "bild",
+        );
+        if (tempBild) { try { unlinkSync(tempBild); } catch {} }
+        if (!abnahme.ok) {
+          state.instagram.uebersprungen ??= {};
+          state.instagram.uebersprungen[article.slug] = new Date().toISOString();
+          console.log(
+            `::warning::Abnahme abgelehnt ${article.slug}: ${abnahme.fehler.join("; ")}`,
+          );
+          console.log(`  Messwerte: ${JSON.stringify(abnahme.messwerte)}`);
+          continue;
+        }
+        console.log(`  Abnahme bestanden (${JSON.stringify(abnahme.messwerte)})`);
+      } catch (err) {
+        // Die Abnahme selbst darf keinen Post verhindern, wenn SIE kaputt
+        // ist — sonst tauschen wir ein Qualitaetsproblem gegen einen
+        // Totalausfall. Ein Fehler hier wird gemeldet, der Post laeuft weiter.
+        console.log(`  Abnahme uebersprungen (${err.message})`);
       }
 
       const hashtags = (pick.hashtags ?? [])
