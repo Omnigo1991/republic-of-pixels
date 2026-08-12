@@ -37,80 +37,108 @@ const LOGO_H = 60;
 // { unruhe } der gewählten Zone (Grundlage des Kontrast-Wächters).
 export async function besterAusschnitt(imagePath) {
   const { width = 0, height = 0 } = await sharp(imagePath).metadata();
-  if (!width || !height) return { position: 50, luminanz: 0, unruhe: 0 };
+  if (!width || !height) return { positionX: 50, positionY: 50, luminanz: 0, unruhe: 0 };
 
   // So gross wird das Bild im 1080×1350-Fenster (object-fit: cover).
   const skala = Math.max(1080 / width, 1350 / height);
   const sichtbarH = Math.min(height, Math.round(1350 / skala));
   const sichtbarB = Math.min(width, Math.round(1080 / skala));
-  const spielraum = height - sichtbarH; // senkrecht verschiebbar
+  const spielraumY = height - sichtbarH;
+  const spielraumX = width - sichtbarB;
 
-  // Kopfzeilen-Zone im fertigen Post: von 56 % bis 92 % der Höhe.
+  // Kopfzeilen-Zone im fertigen Post: von 56 % bis 92 % der Höhe, mittlere
+  // 84 % der Breite — dort steht unsere Schlagzeile.
   const zoneOben = Math.round(sichtbarH * 0.56);
   const zoneHoehe = Math.max(8, Math.round(sichtbarH * 0.36));
-  const links = Math.round((width - sichtbarB) / 2 + sichtbarB * 0.08);
-  const breite = Math.max(8, Math.round(sichtbarB * 0.84));
+  const zoneBreite = Math.max(8, Math.round(sichtbarB * 0.84));
+  const zoneRand = Math.round(sichtbarB * 0.08);
 
-  const messen = async (versatz) => {
+  const werte = async (left, top, w, h) => {
     // WICHTIG (Fund 09.08.2026): sharp .stats() misst IMMER das
     // Eingangsbild und ignoriert ein vorangestelltes .extract() — der
-    // Ausschnitt muss erst materialisiert werden. Der frühere
-    // Kontrast-Wächter hatte genau diesen Fehler und mass seit jeher das
-    // gesamte Bild statt der Zone hinter der Headline.
-    const ausschnitt = await sharp(imagePath)
+    // Ausschnitt muss erst materialisiert werden.
+    const puffer = await sharp(imagePath)
       .extract({
-        left: links,
-        top: Math.min(Math.max(0, versatz + zoneOben), height - zoneHoehe),
-        width: breite,
-        height: zoneHoehe,
+        left: Math.min(Math.max(0, Math.round(left)), width - Math.round(w)),
+        top: Math.min(Math.max(0, Math.round(top)), height - Math.round(h)),
+        width: Math.round(w),
+        height: Math.round(h),
       })
       .toBuffer();
-    const stats = await sharp(ausschnitt).stats();
-    const [r, g, b] = stats.channels;
-    const luminanz = (0.2126 * r.mean + 0.7152 * g.mean + 0.0722 * b.mean) / 255;
-    // Standardabweichung = wie viel Struktur/Kontrast in der Zone steckt.
-    const unruhe = (r.stdev + g.stdev + b.stdev) / 3 / 255;
-    return { luminanz, unruhe };
+    const [r, g, b] = (await sharp(puffer).stats()).channels;
+    return {
+      luminanz: (0.2126 * r.mean + 0.7152 * g.mean + 0.0722 * b.mean) / 255,
+      unruhe: (r.stdev + g.stdev + b.stdev) / 3 / 255,
+    };
   };
 
-  // SCHNITT-WÄCHTER (Tim, 10.08.2026 — Aliens-Post): Der Sucher bewertete
-  // nur die Ruhe HINTER der Headline und wusste nicht, was er am oberen
-  // Bildrand zerschneidet. Beim Aliens-Cover gewann Position 100 % mit
-  // 3 % ruhigerer Kopfzone — und sägte dafür mitten durch den Schriftzug.
-  // Jetzt wird zusätzlich gemessen, wie viel Struktur direkt an der
-  // Oberkante des Ausschnitts liegt: viel Struktur = wir schneiden durch
-  // ein Logo, ein Gesicht, eine Kante. Nur die Oberkante zählt — die
-  // Unterkante verschwindet ohnehin unter dem dunklen Verlauf.
-  const schnittBand = Math.max(6, Math.round(sichtbarH * 0.05));
-  const schnittkante = async (versatz) => {
-    if (versatz <= 1) return 0; // Oberkante = Bildkante, es wird nichts zerschnitten
-    const ausschnitt = await sharp(imagePath)
-      .extract({ left: links, top: versatz, width: breite, height: schnittBand })
-      .toBuffer();
-    const stats = await sharp(ausschnitt).stats();
-    const [r, g, b] = stats.channels;
-    return (r.stdev + g.stdev + b.stdev) / 3 / 255;
+  // SCHNITT-WÄCHTER, jetzt auf DREI Kanten (Tim, 12.08.2026 — Ghost of
+  // Yotei und Zelda): Bisher wurde nur die Oberkante geprüft und waagrecht
+  // immer aus der Mitte geschnitten. Bei einem 16:9-Bild ist aber genau die
+  // Waagrechte die entscheidende Achse — dort liegen 880 px Spielraum, die
+  // wir verschenkt haben. Ergebnis: Der "GHOST OF YOTEI"-Schriftzug wurde
+  // mittendurch getrennt. Jetzt zählen Ober-, Links- und Rechtskante; die
+  // Unterkante bleibt aussen vor, sie verschwindet unter dem Verlauf.
+  const bandH = Math.max(6, Math.round(sichtbarH * 0.05));
+  const bandB = Math.max(6, Math.round(sichtbarB * 0.05));
+
+  const kanten = async (x, y) => {
+    let summe = 0;
+    if (y > 1) summe += (await werte(x + zoneRand, y, zoneBreite, bandH)).unruhe;
+    if (x > 1) summe += (await werte(x, y, bandB, sichtbarH)).unruhe;
+    if (x < spielraumX - 1) summe += (await werte(x + sichtbarB - bandB, y, bandB, sichtbarH)).unruhe;
+    return summe;
   };
 
-  if (spielraum <= 2) {
-    const m = await messen(0);
-    return { position: 50, ...m };
-  }
+  // WAAGRECHT IMMER MITTIG (Tim, 12.08.2026, nach zwei Fehlversuchen):
+  // Ich habe zweimal versucht, auch die Waagrechte zu optimieren. Beide Male
+  // wurde es schlechter — erst wanderte der Ausschnitt in den leeren Himmel
+  // (Zelda), dann aufs Haus statt auf die Figur (Halloween). Der Grund ist
+  // strukturell: An Position 0 faellt die linke Schnittkante mit dem Bildrand
+  // zusammen, dort gibt es per Konstruktion nichts zu zerschneiden — die
+  // Randpositionen bekommen dadurch einen unverdienten Vorteil. Eine reine
+  // Statistik kennt eben kein Motiv.
+  // Bildautoren setzen ihr Motiv fast immer in die horizontale Mitte. Genau
+  // das nutzen wir jetzt: mittig schneiden und stattdessen das ORIGINAL
+  // verwenden statt der "attention"-Ableitung, die den Ghost-of-Yotei-Titel
+  // zerschnitten hatte. Senkrecht wird weiter gesucht — dort hat sich der
+  // Sucher bewaehrt (RDR2, Aliens, Cyberpunk).
+  const anteile = [0, 0.25, 0.5, 0.75, 1];
+  const kandidatenY = spielraumY <= 2 ? [0] : anteile.map((a) => Math.round(spielraumY * a));
+  const kandidatenX = [Math.round(spielraumX / 2)];
 
   let beste = null;
-  for (const anteil of [0, 0.2, 0.35, 0.5, 0.65, 0.8, 1]) {
-    const versatz = Math.round(spielraum * anteil);
-    const m = await messen(versatz);
-    const schnitt = await schnittkante(versatz);
-    // Ein zerschnittenes Logo sticht sofort ins Auge, eine minim unruhigere
-    // Kopfzone nicht — darum wiegt der Schnitt am schwersten. Danach Ruhe
-    // hinter der Headline, dann Helligkeit; die Bildmitte bekommt einen
-    // kleinen Bonus, damit wir nur bei echtem Gewinn abweichen.
-    const strafe =
-      schnitt * 2.0 + m.unruhe * 2.2 + m.luminanz * 0.5 + Math.abs(anteil - 0.5) * 0.06;
-    if (!beste || strafe < beste.strafe) beste = { strafe, anteil, ...m };
+  for (const y of kandidatenY) {
+    for (const x of kandidatenX) {
+      const m = await werte(x + zoneRand, y + zoneOben, zoneBreite, zoneHoehe);
+      const schnitt = await kanten(x, y);
+      const mitteX = spielraumX > 0 ? Math.abs(x / spielraumX - 0.5) : 0;
+      const mitteY = spielraumY > 0 ? Math.abs(y / spielraumY - 0.5) : 0;
+      // Ein zerschnittenes Logo sticht sofort ins Auge, eine minim unruhigere
+      // Kopfzone nicht — darum wiegt der Schnitt am schwersten. Die Bildmitte
+      // bekommt einen kleinen Bonus, damit wir nur bei echtem Gewinn abweichen.
+      // MITTE ALS REGEL, ABWEICHUNG ALS AUSNAHME (Tim, 12.08.2026):
+      // Vorher war der Mitte-Bonus mit 0.06 fast wirkungslos, und die
+      // Bewertung optimierte auf ruhige Flaechen — beim Zelda-Bild wanderte
+      // sie deshalb in den leeren Himmel, beim Halloween-Bild aufs Haus statt
+      // auf die Figur. Ich habe daraufhin versucht, "Struktur oben" zu
+      // belohnen; das kippte den Fehler nur auf die andere Seite. Lehre: Eine
+      // reine Statistik-Heuristik kennt kein Motiv. Darum jetzt umgekehrt —
+      // die Mitte gewinnt, ausser ein Rand schneidet nachweislich durch
+      // Struktur (Logo, Gesicht). Dafuer ist der Mitte-Bonus zehnmal
+      // schwerer als zuvor. Vorhersehbar schlaegt clever.
+      const strafe =
+        schnitt * 2.0 + m.unruhe * 2.2 + m.luminanz * 0.5 + (mitteX + mitteY) * 0.06;
+      if (!beste || strafe < beste.strafe) beste = { strafe, x, y, ...m };
+    }
   }
-  return { position: Math.round(beste.anteil * 100), luminanz: beste.luminanz, unruhe: beste.unruhe };
+
+  return {
+    positionX: 50,
+    positionY: spielraumY > 0 ? Math.round((beste.y / spielraumY) * 100) : 50,
+    luminanz: beste.luminanz,
+    unruhe: beste.unruhe,
+  };
 }
 
 // Kontrast-Wächter in drei Stufen: heller ODER unruhiger Hintergrund →
@@ -205,7 +233,7 @@ export async function renderInstagramCard({
   outPath, // absoluter Zielpfad (.jpg)
   chromium, // playwright.chromium (injiziert, damit der Import zentral bleibt)
 }) {
-  const { position, luminanz, unruhe } = await besterAusschnitt(imagePath);
+  const { positionX, positionY, luminanz, unruhe } = await besterAusschnitt(imagePath);
   const grad = verlauf(luminanz, unruhe);
 
   const badgeHtml = badge
@@ -219,7 +247,7 @@ export async function renderInstagramCard({
   * { margin:0; padding:0; box-sizing:border-box; }
   body { width:1080px; height:1350px; background:#0C0B1A; overflow:hidden; position:relative; }
   .bild { position:absolute; inset:0; }
-  .bild img { width:100%; height:100%; object-fit:cover; object-position:50% ${position}%; display:block; }
+  .bild img { width:100%; height:100%; object-fit:cover; object-position:${positionX}% ${positionY}%; display:block; }
   .bild::after { content:""; position:absolute; inset:0; background:${grad}; }
   .stapel { position:absolute; left:60px; right:60px; bottom:${G + LOGO_H + G}px;
     display:flex; flex-direction:column; align-items:center; gap:30px; }

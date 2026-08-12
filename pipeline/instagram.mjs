@@ -209,8 +209,19 @@ Nur wenn ein Kandidat redaktionell unhaltbar ist, darf er fehlen; im Extremfall:
   }
 }
 
+// ORIGINAL STATT VORBESCHNITTENER ABLEITUNG (Tim, 12.08.2026 — Ghost of
+// Yotei und Zelda): Wir haben bisher die 4:5-Datei genommen, die
+// lib/images.mjs mit sharps "attention"-Strategie erzeugt. Die sucht sich
+// selbst den vermeintlich interessantesten Bereich und zoomte bei Artwork
+// mit Schriftzug daneben — beim Ghost-of-Yotei-Key-Art lief der Titel rechts
+// aus dem Bild. Schlimmer noch: Weil diese Datei exakt 4:5 ist, hatte der
+// Motiv-Sucher danach KEINEN Spielraum mehr und konnte nichts retten. Jetzt
+// bekommt er das Original — bei 16:9 sind das 880 px waagrechter Spielraum,
+// aus denen er den Ausschnitt selbst waehlt.
 function portraitPathFor(article) {
   if (!article.image?.src) return null;
+  const original = join(ROOT, "public", article.image.src);
+  if (existsSync(original)) return original;
   const rel = article.image.src.replace(/\.webp$/, "-portrait.webp");
   const abs = join(ROOT, "public", rel);
   if (existsSync(abs)) return abs;

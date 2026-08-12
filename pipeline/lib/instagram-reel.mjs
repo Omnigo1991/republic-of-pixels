@@ -117,7 +117,7 @@ export async function renderInstagramReel({
   // ffmpeg kann den Ausschnitt nicht selbst wählen, darum schneiden wir
   // das Bild vorher exakt auf 4:5 zu — der Ken-Burns-Zoom arbeitet dann
   // auf dem bereits richtig gelegten Fenster.
-  const { position, luminanz, unruhe } = await besterAusschnitt(imagePath);
+  const { positionX, positionY, luminanz, unruhe } = await besterAusschnitt(imagePath);
   const { width = 0, height = 0 } = await sharp(imagePath).metadata();
   const zuschnitt = join(tmpdir(), `rop-reel-bg-${Date.now()}.jpg`);
   if (width && height) {
@@ -126,8 +126,8 @@ export async function renderInstagramReel({
     const fensterH = Math.min(height, Math.round(1350 / skala));
     await sharp(imagePath)
       .extract({
-        left: Math.round((width - fensterB) / 2),
-        top: Math.round((height - fensterH) * (position / 100)),
+        left: Math.round((width - fensterB) * (positionX / 100)),
+        top: Math.round((height - fensterH) * (positionY / 100)),
         width: fensterB,
         height: fensterH,
       })
