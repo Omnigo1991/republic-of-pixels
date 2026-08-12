@@ -1,0 +1,134 @@
+{
+  "slug": "amd-radeon-rx-9000-preiserhoehung-2026",
+  "title": "AMD erhöht Preise der Radeon RX 9000 Serie um bis zu 20 Prozent",
+  "subtitle": "Die RX 9070 XT kostet laut neuer Richtpreisliste erstmals über 1000 US-Dollar",
+  "excerpt": "AMD hat die offiziellen Richtpreise der Radeon RX 9000 Grafikkarten für das dritte Quartal 2026 angehoben. Die RX 9070 XT verteuert sich um rund 20 Prozent, auch günstigere Modelle sind betroffen.",
+  "seoTitle": "AMD Radeon RX 9000: Preise steigen um bis zu 20 Prozent",
+  "metaDescription": "AMD hebt die Richtpreise der Radeon RX 9000 Serie an. Die RX 9070 XT kostet neu über 1000 US-Dollar, auch RX 9060 XT und RX 9070 GRE betroffen.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "tags": [
+    "AMD",
+    "Radeon RX 9070 XT",
+    "RDNA 4",
+    "Grafikkarten",
+    "Preiserhöhung",
+    "Hardware"
+  ],
+  "tldr": [
+    "AMD hebt die offiziellen MSRP/SEP-Richtpreise der Radeon RX 9000 Serie im dritten Quartal 2026 an",
+    "RX 9070 XT verteuert sich um rund 20 Prozent auf umgerechnet über 1000 US-Dollar",
+    "Auch RX 9060 XT, RX 9070 GRE und ältere Modelle wie die RX 7650 GRE sind betroffen",
+    "Die Erhöhung folgt auf ähnliche Preissprünge bei Nvidia-Grafikkarten, ausgelöst durch eine Speicherknappheit"
+  ],
+  "whyItMatters": "Für PC-Spielerinnen und -Spieler bedeutet die Erhöhung höhere Einstiegshürden beim Grafikkartenkauf, unabhängig davon, ob man auf AMD oder Nvidia setzt. Wer eine Aufrüstung plant, muss mit spürbar höheren Kosten rechnen, bevor die neuen Preise überhaupt in Europa oder Nordamerika ankommen.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "AMD hat für das dritte Quartal 2026 offiziell die Richtpreise seiner Radeon RX 9000 Grafikkarten angehoben. Betroffen sind sämtliche Modelle auf Basis der RDNA-4-Architektur sowie einige ältere, weiterhin verbreitete Karten. Die Erhöhungen bewegen sich je nach Modell zwischen 5 und rund 20 Prozent, wobei die RX 9070 XT den grössten Sprung verzeichnet."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "20%",
+          "label": "Preisanstieg bei der RX 9070 XT, der stärksten Erhöhung der Serie"
+        },
+        {
+          "value": "1037 $",
+          "label": "Neuer Richtpreis (SEP) für die RX 9070 XT statt bisher rund 830 US-Dollar"
+        },
+        {
+          "value": "207 $",
+          "label": "Aufschlag pro Karte gegenüber dem bisherigen offiziellen MSRP"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Die neuen Richtpreise im Überblick"
+    },
+    {
+      "type": "list",
+      "items": [
+        "RX 9070 XT: von rund 830 auf etwa 1037 US-Dollar (+20,01%)",
+        "RX 9070: von rund 770 auf etwa 830 US-Dollar (+7,14%)",
+        "RX 9070 GRE: von rund 592 auf etwa 680 US-Dollar (+13,05%)",
+        "RX 9060 XT 16GB: von rund 533 auf etwa 637 US-Dollar (+16,28%)",
+        "RX 9060 XT 8GB: von rund 400 auf etwa 459 US-Dollar (+12,91%)",
+        "RX 7650 GRE: von rund 350 auf etwa 370 US-Dollar (+5,60%)"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Zahlen basieren auf einer internen Preisrichtlinie, die zunächst über chinesische Grosshandelskanäle bekannt wurde und ursprünglich in chinesischer Währung (RMB) kommuniziert wurde. Auffällig ist, dass die reguläre RX 9070 durch die Erhöhung nun auf dem Niveau des alten Richtpreises der RX 9070 XT liegt, während die RX 9070 GRE wegen ihres kleineren 12-GB-Speichers unterhalb der Non-XT-Variante bleibt, obwohl ihr prozentualer Aufschlag höher ausfällt."
+    },
+    {
+      "type": "heading",
+      "text": "Speicherknappheit als Auslöser"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Preisanpassung bei AMD folgt auf ähnliche Berichte über Erhöhungen bei Nvidia-Grafikkarten, die bereits Wochen zuvor über chinesische Händler und Distributoren bekannt wurden. Als Ursache gilt eine anhaltende Knappheit bei Speicherbausteinen, die die gesamte Grafikkartenbranche betrifft. AMD konnte sich diesem Trend demnach nicht entziehen, auch wenn die ursprünglich gemeldeten Erhöhungen bei der Konkurrenz deutlicher ausfielen."
+    },
+    {
+      "type": "heading",
+      "text": "Folgen für den PC-Gaming-Markt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Für Käuferinnen und Käufer verschärft sich damit eine bereits bestehende Problematik: Viele Modelle wurden schon vor der offiziellen Anhebung über dem ursprünglichen MSRP verkauft. Mit den neuen Richtpreisen als Basis dürften die tatsächlichen Verkaufspreise im Handel nochmals steigen. Die RX 9060 XT mit 16 GB Speicher rückt durch die Erhöhung zudem preislich näher an die RX 9070 GRE heran, was die Kaufentscheidung zwischen mehr Speicher und höherer Rohleistung zusätzlich erschwert."
+    },
+    {
+      "type": "paragraph",
+      "text": "Die aktuell bekannten Preise gelten zunächst für den chinesischen Markt. Erfahrungsgemäss dauert es ein bis zwei Wochen, bis sich solche Anpassungen auch in den USA und in Europa niederschlagen. Bei den vorangegangenen Preiserhöhungen von Nvidia-Grafikkarten war dieser Effekt bereits zu beobachten."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Erhöhung bei AMD zeigt, dass die Speicherknappheit inzwischen den gesamten Grafikkartenmarkt erfasst hat und nicht auf einen Hersteller beschränkt bleibt. Für die PC-Gaming-Community dürfte das bedeuten, dass Neuanschaffungen in den kommenden Monaten teurer werden, unabhängig von der gewählten Marke oder Leistungsklasse."
+    }
+  ],
+  "poll": {
+    "question": "Wie reagiert ihr auf die Preiserhöhung bei der Radeon RX 9000 Serie?",
+    "options": [
+      "Ich kaufe trotzdem, brauche die Leistung jetzt",
+      "Ich warte auf fallende Preise oder Angebote",
+      "Ich wechsle auf ein günstigeres Modell oder eine andere Marke",
+      "Ich verzichte vorerst ganz auf ein Upgrade"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-12T09:03:06.038Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "circuit",
+  "sources": [
+    {
+      "title": "AMD Radeon RX 9000 GPUs Sees Official Price Increase of Up To 20%, As The Radeon RX 9070 XT Now Costs Over $1000",
+      "url": "https://wccftech.com/amd-radeon-rx-9000-gpus-official-price-increase-up-to-20-percent-9070-xt-over-1000-usd/",
+      "publisher": "Wccftech"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/amd-radeon-rx-9000-preiserhoehung-2026.webp",
+    "alt": "AMD erhöht Preise der Radeon RX 9000 Serie um bis zu 20 Prozent",
+    "credit": "Bild: Wccftech",
+    "sourceUrl": "https://wccftech.com/amd-radeon-rx-9000-gpus-official-price-increase-up-to-20-percent-9070-xt-over-1000-usd/",
+    "sourceWidth": 1456,
+    "sourceHeight": 819
+  },
+  "relatedSlugs": [
+    "nvidia-rtx-5090-mainboard-bundles-taiwan-2026",
+    "msi-grafikkarten-preiserhoehung-china-2026",
+    "grafikkarten-preise-asien-speicherkrise-2026"
+  ]
+}

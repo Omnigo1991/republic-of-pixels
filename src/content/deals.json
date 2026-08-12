@@ -1,28 +1,6 @@
 {
-  "updatedAt": "2026-08-12T05:52:43.713Z",
+  "updatedAt": "2026-08-12T09:04:30.233Z",
   "deals": [
-    {
-      "appId": 460930,
-      "title": "Tom Clancy's Ghost Recon® Wildlands",
-      "discountPercent": 95,
-      "originalPrice": 4999,
-      "finalPrice": 249,
-      "currency": "EUR",
-      "endsAt": "2026-08-16T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/460930/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460930/ff701838255b7081bdbed2a30892e5eb4d1bbe1d/capsule_184x69_alt_assets_0_german.jpg?t=1786116240"
-    },
-    {
-      "appId": 1222140,
-      "title": "Detroit: Become Human",
-      "discountPercent": 80,
-      "originalPrice": 3999,
-      "finalPrice": 799,
-      "currency": "EUR",
-      "endsAt": "2026-08-17T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1222140/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222140/capsule_184x69.jpg?t=1667468479"
-    },
     {
       "appId": 2358720,
       "title": "Black Myth: Wukong",
@@ -57,6 +35,17 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1478500/44da9fb07ebe477387355d7fce29560b55125cce/capsule_184x69.jpg?t=1785911674"
     },
     {
+      "appId": 553850,
+      "title": "HELLDIVERS™ 2",
+      "discountPercent": 25,
+      "originalPrice": 3999,
+      "finalPrice": 2999,
+      "currency": "EUR",
+      "endsAt": "2026-08-17T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/553850/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/553850/763e544047aa994da21d21897c3c72b2f252553c/capsule_184x69_german.jpg?t=1786525389"
+    },
+    {
       "appId": 1067360,
       "title": "Pax Autocratica",
       "discountPercent": 17,
@@ -65,7 +54,18 @@
       "currency": "EUR",
       "endsAt": "2026-08-24T17:00:04.000Z",
       "url": "https://store.steampowered.com/app/1067360/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1067360/0e2383a66d23ea67d7b9618a3a53fa52ca5db032/capsule_184x69.jpg?t=1786509181"
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1067360/0e2383a66d23ea67d7b9618a3a53fa52ca5db032/capsule_184x69.jpg?t=1786522225"
+    },
+    {
+      "appId": 3929470,
+      "title": "Warhounds",
+      "discountPercent": 15,
+      "originalPrice": 3549,
+      "finalPrice": 3016,
+      "currency": "EUR",
+      "endsAt": "2026-08-25T17:00:54.000Z",
+      "url": "https://store.steampowered.com/app/3929470/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3929470/b79bb46d900d0df7145ba66db76fab756931e68e/capsule_184x69_alt_assets_1.jpg?t=1786480353"
     }
   ]
 }
