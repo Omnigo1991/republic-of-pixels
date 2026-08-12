@@ -65,6 +65,40 @@ export function pruefeHeadline(headlineLines) {
     fehler.push("wirkt wie zwei zusammengesetzte Schlagzeilen");
   }
 
+  // UMLAUTE AUSSCHREIBEN IST VERBOTEN (Tim, 12.08.2026): Beim von Hand
+  // gebauten Zelda-Reel stand "ZURUECK" statt "ZURÜCK". Die Pipeline selbst
+  // schreibt Umlaute korrekt — der Fehler entstand, weil ich die Schlagzeile
+  // manuell getippt und dabei umschrieben habe. Geprüft wird gegen eine
+  // kurze Liste von Wörtern, die es in der ue/oe/ae-Schreibweise im
+  // Deutschen NICHT gibt; damit sind Fehlalarme bei echten Wörtern wie
+  // "Duell", "Poesie" oder "Museum" ausgeschlossen.
+  const UMSCHRIEBEN =
+    /\b(zurueck|fuer|ueber|ueber\w+|muessen|koennen|moeglich|groesse|groesser|schliessen|waehrend|naechste[rns]?|spaeter|hoeher|staerker|erklaert|gehoert|zerstoeren|endgueltig|urspruenglich|kuendigt|angekuendigt|enthuellt|verfuegbar|unterstuetzt|einfuehrung|jaehrlich|taeglich)\b/i;
+  const umschrieben = proZeile.flat().filter((w) => UMSCHRIEBEN.test(w));
+  if (umschrieben.length) {
+    fehler.push(`Umlaut ausgeschrieben: ${umschrieben.join(", ")}`);
+  }
+
+  // CYAN ENDET NICHT AUF EINEM HILFSWORT (Tim, 12.08.2026): Beim
+  // Crimson-Desert-Post war "CRIMSON DESERT WIRD" komplett cyan — das "wird"
+  // gehört aber nicht zum Spielnamen und soll weiss sein. Cyan hebt den
+  // Spielnamen und die Pointe hervor, nicht ein angehängtes Hilfsverb oder
+  // einen Artikel. Bewusst nur das ENDE geprüft und nur mit Hilfswörtern,
+  // die nie Teil eines Titels sind — Partikeln wie "an" (in "deutet Comeback
+  // an") bleiben erlaubt.
+  const HILFSWORT =
+    /^(wird|wurde|werden|ist|sind|war|waren|hat|hatte|haben|kann|kann|soll|sollen|muss|müssen|will|wollen|der|die|das|den|dem|des|ein|eine|einen|einem|und|oder|mit|von|vom|für|im|in|auf|zu|zum|zur|als|wie|bei|nach)$/i;
+  for (const zeile of headlineLines) {
+    for (const seg of zeile) {
+      if (!seg?.cyan) continue;
+      const worte = String(seg.text ?? "").trim().split(/\s+/).filter(Boolean);
+      const letztes = worte[worte.length - 1];
+      if (worte.length > 1 && letztes && HILFSWORT.test(letztes)) {
+        fehler.push(`Cyan-Hervorhebung endet auf "${letztes}"`);
+      }
+    }
+  }
+
   // Sehr lange Einzelwörter sprengen die Zeile auch nach dem Verkleinern.
   const laengstesWort = Math.max(...proZeile.flat().map((w) => w.length));
   if (laengstesWort > 24) {
