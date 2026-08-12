@@ -1,0 +1,162 @@
+{
+  "slug": "twitch-ki-training-opt-in-default-2026",
+  "title": "Twitch trainiert KI-Modelle mit Streamer-Inhalten – Opt-out nötig",
+  "subtitle": "Die neue Funktion ist standardmässig aktiviert, Twitchs Produktchef nennt den Grund dafür offen",
+  "excerpt": "Twitch nutzt Streams, VODs und mehr, um generative KI-Modelle für Amazon zu trainieren. Die Funktion ist automatisch aktiv, Kritik an Kommunikation und Standardeinstellung wächst.",
+  "seoTitle": "Twitch KI-Training: Streamer-Daten standardmässig für Amazon genutzt",
+  "metaDescription": "Twitch trainiert ohne aktive Zustimmung generative KI-Modelle mit Streamer-Inhalten für Amazon. Die Redaktion erklärt Hintergrund, Kritik und wie man sich abmeldet.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "tags": [
+    "Twitch",
+    "Amazon",
+    "Künstliche Intelligenz",
+    "Streaming",
+    "Datenschutz"
+  ],
+  "tldr": [
+    "Twitch nutzt Streams, VODs und weitere Inhalte, um generative KI-Modelle für Amazon zu trainieren",
+    "Die Funktion ist standardmässig aktiviert, Streamer:innen müssen sie aktiv deaktivieren",
+    "Twitch-Produktchef Mike Minton begründet dies damit, dass sich sonst niemand dafür entscheiden würde",
+    "Ein UserVoice-Thread mit rund 14'000 Stimmen fordert seit Mai eine Opt-out-Regelung"
+  ],
+  "whyItMatters": "Wer streamt, produziert damit unfreiwillig Trainingsmaterial für Amazons KI-Systeme – inklusive Spielinhalten, an denen Streamer:innen gar keine Rechte besitzen. Das wirft Fragen zu Persönlichkeitsrechten, Urheberrecht und dem Umgang grosser Plattformen mit Nutzerdaten auf.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Twitch hat bestätigt, dass die Plattform Inhalte aus Streams künftig nutzt, um generative KI-Modelle für den Mutterkonzern Amazon zu trainieren. Betroffen sind Streams, VODs, Kommentare und praktisch alle weiteren Inhalte, die auf der Plattform anfallen. Problematisch: Die Funktion ist für alle Nutzer:innen standardmässig aktiviert. Wer nicht möchte, dass die eigenen Inhalte in das Training einfliessen, muss aktiv widersprechen."
+    },
+    {
+      "type": "embed",
+      "platform": "twitter",
+      "url": "https://x.com/TwitchSupport/status/2087572924450455558"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "14'000",
+          "label": "Stimmen für eine Opt-out-Regelung in einem Twitch-UserVoice-Thread"
+        },
+        {
+          "value": "228",
+          "label": "Seiten umfasst die zugehörige Diskussion mittlerweile"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Bekanntgabe über einen Nebenkanal"
+    },
+    {
+      "type": "paragraph",
+      "text": "Gerüchte über ein solches Trainingsprogramm kursierten bereits seit Juli, nachdem Streamer Zach Bussey erstmals darauf aufmerksam gemacht hatte. Offiziell bestätigt wurde die Funktion jedoch erst indirekt: über einen Beitrag des Twitch-Support-Accounts auf X, der eigentlich eine Einstellungsoption zum Deaktivieren erklärte. Eine klassische Ankündigung im Twitch-Blog gab es nicht. Diese Zurückhaltung bei der Kommunikation trägt massgeblich zur aktuellen Kritik bei, da viele Nutzer:innen die Funktion erst durch Zufall entdeckten."
+    },
+    {
+      "type": "heading",
+      "text": "Offene Worte des Produktchefs"
+    },
+    {
+      "type": "paragraph",
+      "text": "Twitchs Chief Product Officer Mike Minton äusserte sich während eines Livestreams ungewöhnlich direkt zur Frage, warum die Funktion nicht als Opt-in gestaltet wurde."
+    },
+    {
+      "type": "quote",
+      "text": "Wenn es eine Opt-in-Lösung wäre, würde sich niemand dafür entscheiden.",
+      "attribution": "Mike Minton, Chief Product Officer bei Twitch"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Aussage bestätigt indirekt, dass Twitch sich der ablehnenden Haltung vieler Nutzer:innen bewusst ist. Wer die Funktion dennoch deaktivieren möchte, findet die Option in den Kontoeinstellungen."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Einstellungen öffnen und zum Reiter 'Sicherheit und Datenschutz' wechseln",
+        "Nach unten scrollen bis zum Punkt 'Training für generative KI'",
+        "Schalter deaktivieren, um der Nutzung der eigenen Inhalte zu widersprechen"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Laut Twitchs eigener FAQ betrifft das Opt-out allerdings nicht sämtliche KI-Nutzung. Auch nach der Deaktivierung dürfen Stream-Daten weiterhin für 'KI-gestützte Funktionen' wie automatische Untertitel verwendet werden – nur eben nicht mehr zum Training generativer Modelle, die neue Inhalte erzeugen können."
+    },
+    {
+      "type": "heading",
+      "text": "Widersprüchliche Kommunikation"
+    },
+    {
+      "type": "paragraph",
+      "text": "Für zusätzliche Verwirrung sorgte eine weitere Antwort des Twitch-Support-Accounts auf einen erneuten Beitrag von Zach Bussey."
+    },
+    {
+      "type": "quote",
+      "text": "Twitch trainiert keine generativen KI-Modelle mit Streamer-Inhalten.",
+      "attribution": "Twitch Support auf X"
+    },
+    {
+      "type": "paragraph",
+      "text": "Diese Aussage steht im direkten Widerspruch zur eigenen FAQ-Seite, auf der Twitch erklärt, dass etwa Audiodaten aus Streams genutzt werden können, um Sprache-zu-Text-Modelle zu verbessern – Modelle, von denen laut Twitch nicht nur die eigene Plattform, sondern der gesamte Amazon-Konzern profitiert. Die naheliegendste Erklärung: Twitch versucht möglicherweise, zwischen sich selbst und Amazon als Konzern zu unterscheiden – eine Unterscheidung ohne praktische Relevanz, da Twitch eine hundertprozentige Amazon-Tochter ist."
+    },
+    {
+      "type": "heading",
+      "text": "Folgen für Spielestudios"
+    },
+    {
+      "type": "paragraph",
+      "text": "Besonders brisant ist die Neuerung aus Sicht von Spieleentwicklerstudios, deren Titel auf Twitch gestreamt werden. Mike Futter, Mitgründer der Beratungsfirma F-Squared und zugleich Betriebsleiter beim Indie-Studio Causeway Studios, weist auf eine Konsequenz hin, die auf den ersten Blick nicht offensichtlich ist."
+    },
+    {
+      "type": "quote",
+      "text": "Was passiert, wenn eine Streamerin oder ein Streamer euer Spiel zeigt und dabei automatisch eingewilligt hat? Geht Twitch davon aus, das Recht zu haben, das Spiel eines Studios in seine KI-Verwertungsmaschine zu speisen?",
+      "attribution": "Mike Futter, F-Squared / Causeway Studios"
+    },
+    {
+      "type": "paragraph",
+      "text": "Futter geht davon aus, dass sich zahlreiche Studios in den kommenden Tagen rechtlich beraten lassen werden. Für Causeway Studios, das nach eigenen Angaben konsequent auf KI-Einsatz verzichtet, stelle die neue Regelung eine reale Bedrohung der eigenen kreativen Arbeit dar. Zudem kritisiert Futter das Timing: In einer Phase, in der die Branche auf Unterstützung angewiesen sei, wirke ein solcher Schritt seitens eines Unternehmens, das täglich von den Inhalten der Studios profitiere, feindselig."
+    },
+    {
+      "type": "paragraph",
+      "text": "Die aktuelle Kontroverse reiht sich in eine längere Liste umstrittener Entscheidungen bei Twitch ein, die in den vergangenen Jahren unter anderem Regeln zu sexuellen Inhalten, politischen Themen und einzelnen umstrittenen Begriffen betrafen. Anders als bei vielen früheren Fällen betrifft das KI-Training jedoch nicht nur Moderationsfragen, sondern direkt die wirtschaftliche Verwertung von Inhalten – mit potenziellen Folgen für Streamer:innen ebenso wie für die Studios, deren Spiele auf der Plattform gezeigt werden."
+    }
+  ],
+  "poll": {
+    "question": "Wie geht ihr mit Twitchs neuer KI-Trainingsfunktion um?",
+    "options": [
+      "Habe die Funktion sofort deaktiviert",
+      "Werde sie noch abschalten",
+      "Ist mir egal, betrifft mich nicht direkt",
+      "Denke über einen Plattformwechsel nach"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-12T23:27:07.822Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "particles",
+  "sources": [
+    {
+      "title": "Twitch under fire for new gen AI training system that harvests streamer data for Amazon, says it's on by default because 'if it was opt-in, nobody would opt in'",
+      "url": "https://www.pcgamer.com/software/ai/twitch-under-fire-for-new-gen-ai-training-system-that-harvests-streamer-data-for-amazon-says-its-on-by-default-because-if-it-was-opt-in-nobody-would-opt-in/",
+      "publisher": "PC Gamer"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/twitch-ki-training-opt-in-default-2026.webp",
+    "alt": "Twitch trainiert KI-Modelle mit Streamer-Inhalten – Opt-out nötig",
+    "credit": "Bild: PC Gamer",
+    "sourceUrl": "https://www.pcgamer.com/software/ai/twitch-under-fire-for-new-gen-ai-training-system-that-harvests-streamer-data-for-amazon-says-its-on-by-default-because-if-it-was-opt-in-nobody-would-opt-in/",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "saber-interactive-chatgpt-rideshare-stimulator-2026",
+    "black-myth-zhong-kui-kein-ki-einsatz-2026",
+    "roblox-aktiensturz-spielerschwund-2026"
+  ]
+}

@@ -1,19 +1,20 @@
 {
-  "datum": "2026-08-12",
-  "nummer": 4,
-  "loesung": "Valheim",
+  "datum": "2026-08-13",
+  "nummer": 5,
+  "loesung": "Sekiro: Shadows Die Twice",
   "akzeptiert": [
-    "valheim"
+    "sekiroshadowsdietwice",
+    "sekiro"
   ],
   "hinweise": [
-    "Erschienen 2021 · Survival",
-    "Wikinger"
+    "Erschienen 2019 · Action",
+    "Feudales Japan"
   ],
   "bilder": [
-    "/images/pixelraten/2026-08-12-s1.jpg",
-    "/images/pixelraten/2026-08-12-s2.jpg",
-    "/images/pixelraten/2026-08-12-s3.jpg",
-    "/images/pixelraten/2026-08-12-s4.jpg",
-    "/images/pixelraten/2026-08-12-s5.jpg"
+    "/images/pixelraten/2026-08-13-s1.jpg",
+    "/images/pixelraten/2026-08-13-s2.jpg",
+    "/images/pixelraten/2026-08-13-s3.jpg",
+    "/images/pixelraten/2026-08-13-s4.jpg",
+    "/images/pixelraten/2026-08-13-s5.jpg"
   ]
 }
