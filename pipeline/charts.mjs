@@ -16,9 +16,19 @@ const zuerichTag = (d = new Date()) =>
 const istMontag =
   new Intl.DateTimeFormat("en-US", { timeZone: "Europe/Zurich", weekday: "short" }).format(new Date()) === "Mon";
 
-// ISO-Kalenderwoche (für den "KW 32"-Stempel auf der Seite).
+// ISO-Kalenderwoche für den "KW 32"-Stempel auf der Seite.
+//
+// WELCHE WOCHE HIER STEHT (Tim, 12.08.2026): Steam liefert immer die
+// ABGESCHLOSSENE Woche. Am Montag geholt, decken die Zahlen die Woche davor
+// ab — der Stempel beschreibt also den Zeitraum der Daten, nicht den
+// Abrufzeitpunkt. Bisher stimmte das nur zufällig: Die Rechnung las die
+// UTC-Anteile, und der Montags-Lauf fiel auf 01:04 Zürich, was in London
+// noch Sonntag war. Wäre der Lauf um 12 Uhr gewesen, hätte dort fälschlich
+// die laufende Woche gestanden. Jetzt wird bewusst die Vorwoche in Zürcher
+// Zeit berechnet — richtig unabhängig von der Uhrzeit des Laufs.
 function isoWoche(d = new Date()) {
-  const dt = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate()));
+  const [jahr, monat, tag_] = zuerichTag(d).split("-").map(Number);
+  const dt = new Date(Date.UTC(jahr, monat - 1, tag_ - 7));
   const tag = dt.getUTCDay() || 7;
   dt.setUTCDate(dt.getUTCDate() + 4 - tag);
   const jahresanfang = new Date(Date.UTC(dt.getUTCFullYear(), 0, 1));

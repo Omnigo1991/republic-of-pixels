@@ -252,7 +252,12 @@ export function PixelRaten() {
             </p>
           )}
 
-          {!fertig && falscheTipps.length >= 2 && (
+          {/* HINWEIS SCHON NACH DEM ERSTEN FEHLVERSUCH (Tim, 12.08.2026):
+              Vorher erst nach zwei. Wer zweimal ohne jede Stütze danebenlag,
+              hatte das Rätsel meist schon aufgegeben — der Hinweis kam zu
+              spät, um noch zu helfen. Der zweite Hinweis folgt weiterhin
+              später, damit es nicht zu leicht wird. */}
+          {!fertig && falscheTipps.length >= 1 && (
             <div className="mt-3 rounded-xl border border-accent/25 bg-accent/5 px-4 py-2.5 text-sm text-text-secondary">
               <span className="font-semibold text-accent">Hinweis:</span> {raetsel.hinweise[0]}
               {falscheTipps.length >= 3 && <> · {raetsel.hinweise[1]}</>}

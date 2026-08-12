@@ -144,7 +144,14 @@ if (!spiel) {
 // Screenshots.
 mkdirSync(BILDER_DIR, { recursive: true });
 const datum = zuerichTag();
-const MOSAIK_STUFEN = [14, 22, 34, 54];
+// SCHWIERIGKEIT GELOCKERT (Tim, 12.08.2026): "Es ist zu schwer, lockere es
+// ein wenig auf. Es soll nach wie vor nicht einfach sein, aber auch nicht so
+// schwer." Vorher [14, 22, 34, 54] — die erste Stufe zeigte das Bild in
+// 14 Pixel Breite, was praktisch nur Farbflächen übrig liess und den ersten
+// Versuch zum Raten machte. Jetzt beginnt es bei 24 Pixeln: Umrisse und
+// grobe Formen sind erkennbar, Details noch nicht. Die Abstände zwischen den
+// Stufen bleiben ähnlich gross, damit jeder Fehlversuch spürbar mehr zeigt.
+const MOSAIK_STUFEN = [24, 34, 48, 68];
 const bilder = [];
 for (let i = 0; i < MOSAIK_STUFEN.length; i++) {
   const w = MOSAIK_STUFEN[i];
