@@ -1,0 +1,117 @@
+{
+  "slug": "marvels-wolverine-60-fps-basis-ps5-2026",
+  "title": "Marvel's Wolverine läuft mit 60 fps und Raytracing auf Basis-PS5",
+  "subtitle": "Insomniac Games macht den Performance-Modus erstmals zum Standard",
+  "excerpt": "Insomniac Games bestätigt: Marvel's Wolverine soll auf der Basis-PS5 durchgehend 60 Bilder pro Sekunde mit Raytracing liefern. Erstmals ist der Performance-Modus die Standardeinstellung.",
+  "seoTitle": "Marvel's Wolverine: 60 fps mit Raytracing auf Basis-PS5",
+  "metaDescription": "Insomniac Games erklärt, wie Marvel's Wolverine auf der Basis-PS5 60 fps mit Raytracing erreicht und warum der Performance-Modus erstmals Standard ist.",
+  "category": "news",
+  "platforms": [
+    "playstation"
+  ],
+  "tags": [
+    "Marvel's Wolverine",
+    "Insomniac Games",
+    "PS5",
+    "Raytracing",
+    "Performance-Modus"
+  ],
+  "tldr": [
+    "Marvel's Wolverine soll auf der Basis-PS5 mit 60 fps und aktiviertem Raytracing laufen",
+    "Erstmals macht Insomniac Games diesen Modus zum Standard statt zur nachträglichen Ergänzung",
+    "Head of Technology Mike Fitzgerald betont, das Spiel sei von Beginn an auf dieses Ziel ausgelegt worden",
+    "Zerstörbare Umgebungen sollen die Kämpfe von Logan sichtbar nachwirken lassen"
+  ],
+  "whyItMatters": "Für Spielerinnen und Spieler ohne PS5 Pro bedeutet dies, dass sie nicht zwischen Bildqualität und flüssiger Darstellung mit Raytracing wählen müssen. Das signalisiert zudem, dass Insomniac seine technische Herangehensweise an zukünftige Titel verändert.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Insomniac Games hat gegenüber IGN bestätigt, dass Marvel's Wolverine auf der Basis-PlayStation 5 mit 60 Bildern pro Sekunde bei gleichzeitig aktiviertem Raytracing laufen soll. Damit wird der Performance-Modus zum ersten Mal in der Studiogeschichte zur Standardeinstellung und nicht bloss zu einer nachträglich hinzugefügten Option."
+    },
+    {
+      "type": "embed",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=3Z42tBfBLJY"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "60 fps",
+          "label": "Zielbildrate im Standard-Performance-Modus auf Basis-PS5"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Ein neuer Ansatz für Insomniac"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bisher galt bei Insomniac Games ein bekanntes Muster: Fidelity- und Performance-Modus wurden parallel entwickelt, und die Version mit Raytracing bei hoher Bildrate entstand oft erst kurz vor Fertigstellung als zusätzliche Option. Mike Fitzgerald, Head of Technology bei Insomniac Games, beschreibt im Gespräch mit IGN, dass dieses Vorgehen bei Marvel's Wolverine bewusst umgekehrt wurde. Das Studio habe von Beginn der Entwicklung an auf dieses Leistungsziel hingearbeitet, anstatt es erst am Ende zu ergänzen."
+    },
+    {
+      "type": "quote",
+      "text": "Wir hatten immer diese Fidelity- und Performance-Modi, und dann haben wir jeweils in letzter Minute den Performance-Modus mit Raytracing hinbekommen und gedacht, das sei ziemlich gut. Für dieses Spiel haben wir von Anfang an gesagt: Wir sind zuversichtlich, dass wir das jetzt umsetzen können. Das wird ein Spiel mit 60 Bildern pro Sekunde und Raytracing, so wie es die PS5 eigentlich bieten sollte. Wir bauen das Spiel darauf und darauf hin auf. Und es ist zum ersten Mal der Standardmodus für eines unserer Spiele. Das ist wichtig für die Präsentation.",
+      "attribution": "Mike Fitzgerald, Head of Technology bei Insomniac Games"
+    },
+    {
+      "type": "heading",
+      "text": "Zerstörbare Umgebungen als Teil des Kampfsystems"
+    },
+    {
+      "type": "paragraph",
+      "text": "Neben der Bildrate ging Fitzgerald auch auf die visuelle Darstellung von Kämpfen ein. Logan gilt als Figur mit ausgeprägt destruktivem Kampfstil, und dies sollte sich sichtbar in der Spielumgebung niederschlagen. Insomniac Games wollte vermeiden, dass Spielende nach einem grösseren Gefecht gegen The Hand einen unversehrten Marktplatz verlassen, als wäre nichts geschehen."
+    },
+    {
+      "type": "quote",
+      "text": "Logan ist eine wirklich destruktive Figur. Wir wollten sicherstellen, dass man sich nach einem grossen Kampf gegen The Hand nicht das Gefühl gibt, einfach aus einem makellosen Marktplatz herauszuspazieren, in dem man sich zufällig befand.",
+      "attribution": "Mike Fitzgerald, Head of Technology bei Insomniac Games"
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Ankündigung fügt sich in eine Reihe von technischen Details ein, die Insomniac Games im Vorfeld des Release schrittweise veröffentlicht hat, darunter frühere Hinweise, dass Marvel's Wolverine auch mit Raytracing 60 fps erreichen könne. Dass dieser Modus nun explizit als Standard und nicht als optionale Zusatzfunktion beschrieben wird, deutet auf ein verändertes Entwicklungsprinzip bei Insomniac hin, bei dem Leistungsziele frühzeitig in die technische Planung einfliessen statt erst spät im Produktionsprozess adressiert zu werden. Für Spielerinnen und Spieler auf der Basis-PS5 verspricht dies eine flüssige Darstellung ohne Kompromisse bei der visuellen Qualität durch Raytracing, unabhängig davon, ob eine PS5 Pro vorhanden ist."
+    }
+  ],
+  "poll": {
+    "question": "Was ist euch bei Marvel's Wolverine auf der Basis-PS5 wichtiger?",
+    "options": [
+      "60 fps mit Raytracing als Standard",
+      "Höhere Auflösung statt Bildrate",
+      "Zerstörbare Umgebungen zählen mehr als beides",
+      "Mir ist die technische Umsetzung egal"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-13T23:02:43.398Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "grid",
+  "sources": [
+    {
+      "title": "Marvel’s Wolverine Runs at 60 FPS on Base PS5",
+      "url": "https://insider-gaming.com/marvels-wolverine-runs-at-60-fps-on-base-ps5/",
+      "publisher": "Insider Gaming"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/marvels-wolverine-60-fps-basis-ps5-2026.webp",
+    "alt": "Marvel's Wolverine läuft mit 60 fps und Raytracing auf Basis-PS5",
+    "credit": "Bild: Insider Gaming",
+    "sourceUrl": "https://insider-gaming.com/marvels-wolverine-runs-at-60-fps-on-base-ps5/",
+    "sourceWidth": 1088,
+    "sourceHeight": 612
+  },
+  "relatedSlugs": [
+    "sony-wolverine-limited-edition-ps5-2026",
+    "marvels-wolverine-insomniac-preview-2026",
+    "halo-campaign-evolved-marcus-lehto-art-kritik-2026"
+  ]
+}

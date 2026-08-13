@@ -1,20 +1,20 @@
 {
-  "datum": "2026-08-13",
-  "nummer": 5,
-  "loesung": "Sekiro: Shadows Die Twice",
+  "datum": "2026-08-14",
+  "nummer": 6,
+  "loesung": "Cyberpunk 2077",
   "akzeptiert": [
-    "sekiroshadowsdietwice",
-    "sekiro"
+    "cyberpunk2077",
+    "cyberpunk"
   ],
   "hinweise": [
-    "Erschienen 2019 · Action",
-    "Feudales Japan"
+    "Erschienen 2020 · Open World",
+    "CD Projekt Red"
   ],
   "bilder": [
-    "/images/pixelraten/2026-08-13-s1.jpg",
-    "/images/pixelraten/2026-08-13-s2.jpg",
-    "/images/pixelraten/2026-08-13-s3.jpg",
-    "/images/pixelraten/2026-08-13-s4.jpg",
-    "/images/pixelraten/2026-08-13-s5.jpg"
+    "/images/pixelraten/2026-08-14-s1.jpg",
+    "/images/pixelraten/2026-08-14-s2.jpg",
+    "/images/pixelraten/2026-08-14-s3.jpg",
+    "/images/pixelraten/2026-08-14-s4.jpg",
+    "/images/pixelraten/2026-08-14-s5.jpg"
   ]
 }

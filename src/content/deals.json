@@ -1,6 +1,17 @@
 {
-  "updatedAt": "2026-08-13T20:12:04.385Z",
+  "updatedAt": "2026-08-13T23:03:32.328Z",
   "deals": [
+    {
+      "appId": 1142710,
+      "title": "Total War: WARHAMMER III",
+      "discountPercent": 85,
+      "originalPrice": 5999,
+      "finalPrice": 899,
+      "currency": "EUR",
+      "endsAt": "2026-08-27T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1142710/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1142710/capsule_184x69.jpg?t=1786634522"
+    },
     {
       "appId": 3527290,
       "title": "PEAK",
@@ -55,17 +66,6 @@
       "endsAt": "2026-08-17T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/553850/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/553850/763e544047aa994da21d21897c3c72b2f252553c/capsule_184x69_german.jpg?t=1786525389"
-    },
-    {
-      "appId": 2542020,
-      "title": "Duskfade",
-      "discountPercent": 20,
-      "originalPrice": 2999,
-      "finalPrice": 2399,
-      "currency": "EUR",
-      "endsAt": "2026-08-27T17:00:53.000Z",
-      "url": "https://store.steampowered.com/app/2542020/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2542020/fd8911e8ecfdd361b1fd50a565d98ad526f903ff/capsule_184x69.jpg?t=1786631734"
     }
   ]
 }
