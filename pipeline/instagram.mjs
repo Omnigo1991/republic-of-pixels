@@ -31,7 +31,7 @@ import { renderInstagramCard } from "./lib/instagram-card.mjs";
 import { renderInstagramReel } from "./lib/instagram-reel.mjs";
 import { renderTypoCard } from "./lib/instagram-typo.mjs";
 import { holeSpielBild } from "./lib/keyart.mjs";
-import { pruefeHeadline } from "./lib/headline.mjs";
+import { pruefeHeadline, pruefeKicker, pruefeNotiz } from "./lib/headline.mjs";
 import { pruefeGrafik } from "./lib/abnahme.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -111,12 +111,26 @@ ${list}
 
 Wähle die ${maxPicks} zugkräftigsten Kandidaten für Instagram aus (grosse Namen und starke Pointen zuerst). Der Redaktionsplan BRAUCHT diese Posts — wähle nur dann weniger, wenn ein Kandidat redaktionell unhaltbar wäre (reines Duplikat einer schon gewählten Story, gar keine echte Neuigkeit). "Nur solide" ist KEIN Ablehnungsgrund: dann nimmst du den stärksten verfügbaren und machst per Zuspitzung das Beste daraus. PFLICHT: Kandidaten der Kategorie "breaking" wählst du IMMER aus. Erstelle pro Auswahl die Post-Texte.
 
+Die Post-Grafik hat seit 13.08.2026 drei Textebenen: KOPFZEILE (cyan, klein) — SCHLAGZEILE (gross, weiss, mit EINEM markierten Wort) — NOTIZ (handschriftlich, cyan).
+
+Regeln für "kicker" (die Kopfzeile):
+- 1–3 Wörter, GROSSBUCHSTABEN: der Gegenstand der Meldung — Spielname, Studio, Hardware oder Plattform (z. B. "CRIMSON DESERT", "CD PROJEKT", "RADEON RX 9000")
+- Der Spielname gehört HIERHIN und nicht mehr in die Schlagzeile
+
 Regeln für "headlineLines" (die Schlagzeile auf der Post-Grafik):
-- 2–3 Zeilen, gesamthaft maximal 9 Wörter, zugespitzt auf die Kern-Pointe
+- GENAU 2 Zeilen, gesamthaft maximal 8 Wörter, zugespitzt auf die Kern-Pointe
+- Sie setzt die Kopfzeile fort: "CRIMSON DESERT" + "WIRD ZUM FRANCHISE AUSGEBAUT". Wiederhole den Spielnamen NICHT.
 - Jede Zeile ist ein Array von Segmenten {"text": "...", "cyan": true/false}
-- Maximal 2 Cyan-Segmente pro Post (bevorzugt Spielname und die Pointe/Zahl)
-- Die Zeilen müssen optisch ausbalanciert sein: keine Zeile deutlich kürzer als ihre Nachbarn (keine 2-Wort-Zeile zwischen langen Zeilen)
+- GENAU EIN Segment mit "cyan": true — es wird als cyaner Markierungs-Kasten gesetzt (Textmarker). Markiere das Wort mit der Pointe, nie ein Hilfsverb oder einen Artikel.
+- Die Zeilen müssen optisch ausbalanciert sein: keine Zeile deutlich kürzer als ihre Nachbarn
 - Keine Anführungszeichen um die ganze Headline
+
+Regeln für "notiz" (die handschriftliche Zeile unter der Schlagzeile):
+- Eine REAKTION auf die Meldung, maximal 6 Wörter, normale Gross-/Kleinschreibung, kein Punkt am Ende (Fragezeichen erlaubt)
+- Sie muss eine HALTUNG haben: Einordnung, Zweifel, Vorfreude, Ernüchterung. Beispiele: "also doch kein Einzelspiel", "nur 24 Jahre gewartet", "und wer schon gekauft hat?"
+- Sie darf die Schlagzeile NICHT wiederholen und keine neuen Fakten behaupten
+- Bei ernsten Themen (Entlassungen, Todesfälle, Schicksale) ohne Pointe und ohne Ironie — dort ist sie eine Anteilnahme, kein Gag
+- Keine Emojis, keine Aufrufe ("schreibt in die Kommentare")
 
 Regeln für "caption" (Stimme: leidenschaftlicher Gaming-Account mit Puls — nicht Pressemitteilung; Ziel bleibt Neugier → Website-Besuch; Reihenfolge zwingend):
 1. HOOK als erste Zeile (max. ~100 Zeichen): emotional und zugespitzt, MIT 1–2 passenden Emojis (🔥 😔 👀 🚨 🤯 …) — Instagram schneidet nach ~125 Zeichen ab. Der Hook öffnet eine Wissenslücke, die erst der Artikel schliesst.
@@ -140,7 +154,7 @@ Und pro Pick: "bildWahl" — die redaktionelle Bild-Entscheidung:
 - "keyart": Allgemeine Meldung (Preis, Termin, Verkaufszahlen, Update-Pläne, Studio-News) → der Post zeigt offizielles Spiel-Artwork.
 
 Antworte NUR mit JSON, erstes Zeichen "{":
-{"picks":[{"index":0,"gameName":"... oder null","bildWahl":"keyart oder pressebild","headlineLines":[[{"text":"...","cyan":false}]],"caption":"...","hashtags":["..."]}]}
+{"picks":[{"index":0,"gameName":"... oder null","bildWahl":"keyart oder pressebild","kicker":"...","headlineLines":[[{"text":"...","cyan":false}]],"notiz":"...","caption":"...","hashtags":["..."]}]}
 KRITISCH — striktes JSON: Zeilenumbrüche in der Caption IMMER als \\n escapen (niemals ein roher Zeilenumbruch innerhalb eines Strings), Anführungszeichen im Text als \\" — sonst ist die Antwort unbrauchbar.
 Nur wenn ein Kandidat redaktionell unhaltbar ist, darf er fehlen; im Extremfall: {"picks":[]}`;
 
@@ -178,6 +192,16 @@ Nur wenn ein Kandidat redaktionell unhaltbar ist, darf er fehlen; im Extremfall:
               .map((z) => (Array.isArray(z) ? z.map((s) => s?.text).join(" ") : ""))
               .join(" / ")}"`,
           );
+          continue;
+        }
+        const kickerPruefung = pruefeKicker(p.kicker);
+        if (!kickerPruefung.ok) {
+          console.log(`  Pick verworfen (Kopfzeile): ${kickerPruefung.fehler.join("; ")} — "${p.kicker ?? ""}"`);
+          continue;
+        }
+        const notizPruefung = pruefeNotiz(p.notiz, p.headlineLines, p.kicker);
+        if (!notizPruefung.ok) {
+          console.log(`  Pick verworfen (Notiz): ${notizPruefung.fehler.join("; ")} — "${p.notiz ?? ""}"`);
           continue;
         }
         brauchbar.push(p);
@@ -476,6 +500,8 @@ async function prepare() {
         try {
           await renderInstagramReel({
             headlineLines: pick.headlineLines,
+            kicker: pick.kicker,
+            notiz: pick.notiz,
             badge,
             imagePath,
             credit,
@@ -494,6 +520,8 @@ async function prepare() {
         try {
           await renderInstagramCard({
             headlineLines: pick.headlineLines,
+            kicker: pick.kicker,
+            notiz: pick.notiz,
             badge,
             imagePath,
             credit,
@@ -526,9 +554,12 @@ async function prepare() {
           execFileSync(ffmpegPath, ["-y", "-i", pruefPfad, "-vframes", "1", tempBild], { stdio: "pipe" });
           pruefPfad = tempBild;
         }
+        // Erwartete Textzeilen im Bild: Auf der Marker-Karte zählen Kopfzeile
+        // und handschriftliche Notiz mit — beide sind cyan und damit hell.
+        // Auf der Typo-Karte gibt es sie nicht.
         const abnahme = await pruefeGrafik(
           pruefPfad,
-          pick.headlineLines.length,
+          alsTypoKarte ? pick.headlineLines.length : pick.headlineLines.length + 2,
           alsTypoKarte ? "typo" : "bild",
         );
         if (tempBild) { try { unlinkSync(tempBild); } catch {} }

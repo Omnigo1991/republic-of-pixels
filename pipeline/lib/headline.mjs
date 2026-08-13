@@ -11,8 +11,19 @@
 // Diese Prüfung läuft VOR dem Rendern. Fällt ein Vorschlag durch, wird er
 // verworfen und neu angefordert (die Auswahl hat dafür drei Runden).
 
-export const MAX_ZEILEN = 3;
-export const MAX_WOERTER = 9;
+// MARKER-LAYOUT (13.08.2026): Der Spielname steht jetzt in der Kopfzeile,
+// die Schlagzeile setzt ihn nur fort. Sie braucht damit weniger Platz —
+// genau 2 Zeilen, höchstens 8 Wörter. Drei Zeilen plus Kopfzeile plus Notiz
+// ergäben einen Textblock, der das halbe Bild verdeckt.
+export const MAX_ZEILEN = 2;
+export const MAX_WOERTER = 8;
+export const MAX_NOTIZ_WOERTER = 6;
+
+// Wörter, die es in der ue/oe/ae-Schreibweise im Deutschen NICHT gibt.
+// Auf Modulebene, weil Schlagzeile, Kopfzeile und Notiz dieselbe Regel
+// brauchen (vorher lag die Liste in pruefeHeadline und galt nur dort).
+const UMSCHRIEBEN =
+  /\b(zurueck|fuer|ueber|ueber\w+|muessen|koennen|moeglich|groesse|groesser|schliessen|waehrend|naechste[rns]?|spaeter|hoeher|staerker|erklaert|gehoert|zerstoeren|endgueltig|urspruenglich|kuendigt|angekuendigt|enthuellt|verfuegbar|unterstuetzt|einfuehrung|jaehrlich|taeglich|wuerde[nst]?|laeuft|haette|waere|schoen|gruen|buecher|maenner|staedte|laender|haeuser)\b/i;
 
 function woerter(zeile) {
   return zeile
@@ -33,8 +44,17 @@ export function pruefeHeadline(headlineLines) {
     return { ok: false, fehler: ["Zeilenstruktur ungültig"] };
   }
 
-  if (headlineLines.length > MAX_ZEILEN) {
-    fehler.push(`${headlineLines.length} Zeilen (erlaubt: ${MAX_ZEILEN})`);
+  if (headlineLines.length !== MAX_ZEILEN) {
+    fehler.push(`${headlineLines.length} Zeilen (nötig: genau ${MAX_ZEILEN})`);
+  }
+
+  // GENAU EINE MARKIERUNG (13.08.2026): Das cyane Segment wird jetzt als
+  // Markierungs-Kasten gesetzt. Zwei Kästen in einer Schlagzeile heben sich
+  // gegenseitig auf — markiert ist dann nichts mehr. Keiner heisst: die
+  // Karte hat keinen Blickfang.
+  const cyanZahl = headlineLines.flat().filter((s) => s?.cyan).length;
+  if (cyanZahl !== 1) {
+    fehler.push(`${cyanZahl} Markierungen (nötig: genau 1)`);
   }
 
   const proZeile = headlineLines.map(woerter);
@@ -72,8 +92,6 @@ export function pruefeHeadline(headlineLines) {
   // kurze Liste von Wörtern, die es in der ue/oe/ae-Schreibweise im
   // Deutschen NICHT gibt; damit sind Fehlalarme bei echten Wörtern wie
   // "Duell", "Poesie" oder "Museum" ausgeschlossen.
-  const UMSCHRIEBEN =
-    /\b(zurueck|fuer|ueber|ueber\w+|muessen|koennen|moeglich|groesse|groesser|schliessen|waehrend|naechste[rns]?|spaeter|hoeher|staerker|erklaert|gehoert|zerstoeren|endgueltig|urspruenglich|kuendigt|angekuendigt|enthuellt|verfuegbar|unterstuetzt|einfuehrung|jaehrlich|taeglich)\b/i;
   const umschrieben = proZeile.flat().filter((w) => UMSCHRIEBEN.test(w));
   if (umschrieben.length) {
     fehler.push(`Umlaut ausgeschrieben: ${umschrieben.join(", ")}`);
@@ -103,6 +121,66 @@ export function pruefeHeadline(headlineLines) {
   const laengstesWort = Math.max(...proZeile.flat().map((w) => w.length));
   if (laengstesWort > 24) {
     fehler.push(`Wort mit ${laengstesWort} Zeichen zu lang für eine Zeile`);
+  }
+
+  return { ok: fehler.length === 0, fehler };
+}
+
+// KOPFZEILE UND NOTIZ (Tim, 13.08.2026) — die zwei neuen Textebenen des
+// Marker-Layouts. Beide werden hier geprüft und nicht nur im Prompt
+// beschrieben; das ist die Lehre vom 11.08., als drei von vier Posts eine
+// Regel verletzten, die nur im Prompt stand.
+export function pruefeKicker(kicker) {
+  const fehler = [];
+  const t = String(kicker ?? "").trim();
+  if (!t) return { ok: false, fehler: ["fehlt"] };
+  const worte = t.split(/\s+/).filter(Boolean);
+  if (worte.length > 4) fehler.push(`${worte.length} Wörter (erlaubt: 4)`);
+  if (t.length > 30) fehler.push(`${t.length} Zeichen zu lang für die Kopfzeile`);
+  if (t.includes("ß")) fehler.push('enthält "ß"');
+  if (UMSCHRIEBEN.test(t)) fehler.push("Umlaut ausgeschrieben");
+  return { ok: fehler.length === 0, fehler };
+}
+
+export function pruefeNotiz(notiz, headlineLines = [], kicker = "") {
+  const fehler = [];
+  const t = String(notiz ?? "").trim();
+  if (!t) return { ok: false, fehler: ["fehlt"] };
+
+  const worte = t.split(/\s+/).filter(Boolean);
+  if (worte.length > MAX_NOTIZ_WOERTER) {
+    fehler.push(`${worte.length} Wörter (erlaubt: ${MAX_NOTIZ_WOERTER})`);
+  }
+  if (/\.$/.test(t) && !/\.\.\.$/.test(t)) fehler.push("endet auf einem Punkt");
+  if (t.includes("ß")) fehler.push('enthält "ß"');
+  const umschrieben = worte.filter((w) => UMSCHRIEBEN.test(w));
+  if (umschrieben.length) fehler.push(`Umlaut ausgeschrieben: ${umschrieben.join(", ")}`);
+  if (/[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}]/u.test(t)) fehler.push("enthält Emoji");
+  if (/kommentar|schreibt uns|markiert|folgt uns|link in/i.test(t)) {
+    fehler.push("ist ein Aufruf statt einer Haltung");
+  }
+
+  // KEINE WIEDERHOLUNG (der Kern der Regel): Eine Notiz, die nur die
+  // Schlagzeile nachspricht, ist Füllsel — genau das, was Tim an meinem
+  // ersten Entwurf nicht verstanden hat. Geprüft über Wort-Überlappung:
+  // Teilen sich Notiz und Schlagzeile die Mehrzahl ihrer Inhaltswörter,
+  // sagt die Notiz nichts Neues.
+  const normal = (s) =>
+    s
+      .toLowerCase()
+      .replace(/[^\p{L}\p{N}\s]/gu, "")
+      .split(/\s+/)
+      .filter((w) => w.length > 3);
+  const kopfWorte = new Set([
+    ...normal(headlineLines.flat().map((s) => s?.text ?? "").join(" ")),
+    ...normal(String(kicker ?? "")),
+  ]);
+  const notizWorte = normal(t);
+  if (notizWorte.length) {
+    const doppelt = notizWorte.filter((w) => kopfWorte.has(w)).length;
+    if (doppelt / notizWorte.length > 0.5) {
+      fehler.push("wiederholt die Schlagzeile");
+    }
   }
 
   return { ok: fehler.length === 0, fehler };

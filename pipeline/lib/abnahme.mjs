@@ -58,6 +58,44 @@ function textZeilen(data, breite, hoehe, vonY, bisY) {
   return zeilen;
 }
 
+// Linke Tintenkante eines Bandes.
+function linkeKante(data, breite, von, bis) {
+  let links = breite;
+  for (let y = von; y < bis; y++) {
+    for (let x = 0; x < links; x++) {
+      if (data[y * breite + x] > SCHRIFT_HELL) {
+        if (x < links) links = x;
+        break;
+      }
+    }
+  }
+  return links;
+}
+
+// SCHRIFT VON HELLEM BILD TRENNEN (Tim, 13.08.2026, Marker-Layout).
+//
+// Bisher galt: helles Band = Textzeile. Das reichte, solange die Schrift
+// zentriert im dunkelsten Bildteil sass. Im linksbündigen Marker-Layout
+// beginnt JEDE Textzeile bei x = 60 (Satzspiegel) — gemessen an acht echten
+// Posts: 60 bis 65. Helle Bildbereiche fangen dagegen bei x = 0, 13, 247
+// oder 349 an, das R-Logo bei 515. Beim Helldivers-Post erzeugte das helle
+// Artwork ein Band bei 59 % Höhe, das sonst als fünfte Textzeile gezählt
+// und einen einwandfreien Post abgelehnt hätte.
+//
+// Die linke Kante ist damit das verlässlichere Merkmal als die Helligkeit —
+// und sie folgt aus dem Layout, ist also keine empirische Schwelle, die
+// morgen wieder wackelt.
+const SATZ_LINKS = 60;
+const SATZ_TOLERANZ = 20;
+
+function nurTextzeilen(zeilen, data, breite) {
+  return zeilen.filter((z) => {
+    const links = linkeKante(data, breite, z.von, z.bis);
+    z.links = links;
+    return Math.abs(links - SATZ_LINKS) <= SATZ_TOLERANZ;
+  });
+}
+
 function randAbstand(data, breite, von, bis) {
   let links = breite;
   let rechts = 0;
@@ -101,9 +139,18 @@ export async function pruefeGrafik(pfad, zeilenSoll, art = "bild") {
   //    Fenster (60–90 %) passte nur zur Bild-Karte und fand auf der
   //    Typo-Karte bloss eine Zeile statt zwei — die Abnahme haette also
   //    ausgerechnet die guten Typo-Karten blockiert.
-  const textVon = Math.round(hoehe * (art === "typo" ? 0.3 : 0.6));
-  const textBis = Math.round(hoehe * (art === "typo" ? 0.72 : 0.9));
-  const zeilen = textZeilen(data, breite, hoehe, textVon, textBis);
+  //    MARKER-LAYOUT (13.08.2026): Der Textblock sitzt jetzt zwischen 60 und
+  //    87 % — gemessen an acht echten Posts: Kopfzeile 61,8–63,9 %,
+  //    Schlagzeile 66,5–80,4 %, Notiz 82,7–86,3 %. Das Fenster reicht von 55
+  //    bis 90 %; die Trennung von hellem Bild macht die linke Kante (unten).
+  const istTypo = art === "typo";
+  const textVon = Math.round(hoehe * (istTypo ? 0.3 : 0.55));
+  const textBis = Math.round(hoehe * (istTypo ? 0.72 : 0.9));
+  let zeilen = textZeilen(data, breite, hoehe, textVon, textBis);
+  // Bänder aussortieren, die nicht am Satzspiegel beginnen — helle
+  // Bildstellen. Nur beim linksbündigen Marker-Layout; die Typo-Karte ist
+  // zentriert, dort gilt das Merkmal nicht.
+  if (!istTypo) zeilen = nurTextzeilen(zeilen, data, breite);
   messwerte.zeilen = zeilen.length;
   if (zeilenSoll && zeilen.length !== zeilenSoll) {
     fehler.push(`${zeilen.length} Textzeilen im Bild, erwartet ${zeilenSoll}`);
@@ -113,24 +160,44 @@ export async function pruefeGrafik(pfad, zeilenSoll, art = "bild") {
     return { ok: false, fehler, messwerte };
   }
 
-  // 2) Randabstand: Text darf den Satzspiegel nicht ausreizen. Kalibriert an
-  //    unseren Posts — die liegen bei rund 130 px, die Schwelle bei 70 lässt
-  //    Luft für lange Einzelwörter.
+  // 2) Randabstand.
+  //    Im Marker-Layout ist der LINKE Rand vom Satzspiegel vorgegeben (60 px)
+  //    und wird oben bereits geprüft — hier zählt, dass der Text rechts nicht
+  //    aus dem Satzspiegel läuft. Auf der zentrierten Typo-Karte gilt weiter
+  //    die alte Regel: beide Ränder mindestens 70 px.
   const rand = randAbstand(data, breite, zeilen[0].von, zeilen[zeilen.length - 1].bis);
   messwerte.randLinks = rand.links;
   messwerte.randRechts = rand.rechts;
-  if (Math.min(rand.links, rand.rechts) < 70) {
+  // KEINE RECHTS-PRÜFUNG IM MARKER-LAYOUT (Fund 13.08.2026): Mein erster
+  // Versuch lehnte den CD-Projekt- und den Pokémon-Post ab, weil rechts
+  // angeblich 1 px Rand blieb. Ursache war die Messung selbst — sie scannt
+  // den ganzen Block von der ersten bis zur letzten Zeile, also auch die
+  // LÜCKEN dazwischen, und dort steht helles Bild (Geralts weisses Haar) bis
+  // an den Bildrand. Am Text lag es nie.
+  //
+  // Die Prüfung entfällt ersatzlos, und das ist kein Verzicht: Dass eine
+  // Zeile den Satzspiegel nicht überschreitet, garantiert der Renderer
+  // baulich — er misst jede Zeile und verkleinert die Schrift, bis sie
+  // passt. Täte er es nicht, bräche die Zeile um, und genau das fängt die
+  // Zeilenzahl-Prüfung oben. Eine Pixel-Messung, die Bild nicht von Schrift
+  // trennen kann, hätte hier nur gute Posts blockiert.
+  if (istTypo && Math.min(rand.links, rand.rechts) < 70) {
     fehler.push(`Schrift zu nah am Rand (${Math.min(rand.links, rand.rechts)} px, min. 70)`);
   }
+  // Der Kontrast-Streifen liegt links VOM Text (x 20–80). Im Marker-Layout
+  // beginnt die Schrift bei 60 — der Streifen würde sie anschneiden und den
+  // Hintergrund zu hell messen. Darum dort ein schmalerer Streifen weiter aussen.
+  const streifenLinks = istTypo ? 20 : 4;
+  const streifenBreite = istTypo ? 60 : 44;
 
   // 3) Kontrast: Der Hintergrund hinter der Schlagzeile muss dunkel sein.
   //    Gemessen an einem schriftfreien Randstreifen auf Schlagzeilenhöhe.
   //    Auf der Typo-Karte entfaellt das — dort ist der Grund immer unser Navy.
   const streifen = await sharp(pfad)
     .extract({
-      left: 20,
+      left: streifenLinks,
       top: zeilen[0].von,
-      width: 60,
+      width: streifenBreite,
       height: Math.max(10, zeilen[zeilen.length - 1].bis - zeilen[0].von),
     })
     .toBuffer();

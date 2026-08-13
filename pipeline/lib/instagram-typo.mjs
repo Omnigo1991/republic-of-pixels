@@ -105,7 +105,14 @@ export async function renderTypoCard({ headlineLines, kicker, outPath, chromium 
   const browser = await chromium.launch();
   try {
     const page = await browser.newPage({ viewport: { width: 2160, height: 2700 } });
-    await page.goto(pathToFileURL(htmlPath).href, { waitUntil: "networkidle" });
+    // NICHT AUF "networkidle" WARTEN (Fund 13.08.2026): Der Abruf der
+    // Google-Schriften laeuft gelegentlich in die 30-Sekunden-Grenze, und
+    // Playwright wirft dann einen Fehler — in GitHub Actions kostet das den
+    // ganzen Lauf. Zuverlaessiger und schneller: auf "load" warten und dann
+    // gezielt darauf, dass die Schriften wirklich da sind. Das ist sogar
+    // strenger, denn mit Ersatzschrift gemessene Breiten waeren falsch.
+    await page.goto(pathToFileURL(htmlPath).href, { waitUntil: "load", timeout: 60000 });
+    await page.evaluate(() => document.fonts.ready);
     await page.waitForTimeout(300);
     // Schrift einpassen: keine Zeile darf über die Satzbreite hinauslaufen,
     // der Block nicht höher als 1500 px werden (2160×2700-Raster) — sonst

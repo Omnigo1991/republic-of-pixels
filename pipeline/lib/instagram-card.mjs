@@ -193,7 +193,13 @@ export function headlineHtml(headlineLines) {
 // Verkleinert die Schlagzeile so weit, bis jede Zeile in die Breite passt
 // und der Block die Höhenvorgabe einhält. Wird im Seitenkontext ausgeführt.
 export function schriftEinpassenQuelle() {
-  return (maxHoehe) => {
+  // breitenFaktor: Anteil der Satzbreite, den eine Zeile nutzen darf.
+  // 0.80 stammt aus dem zentrierten Layout (Rand links UND rechts musste vom
+  // Text selbst kommen). Im linksbündigen Marker-Layout gibt der Satzspiegel
+  // den Rand bereits vor — dort darf die Zeile die volle Breite nutzen (1.0),
+  // sonst verschenkt sie rechts unnötig Platz und die Schrift schrumpft
+  // grundlos.
+  return (maxHoehe, breitenFaktor = 0.8) => {
     const titel = document.querySelector(".titel");
     if (!titel) return { groesse: null, passt: true };
     const zeilen = [...titel.querySelectorAll(".zeile")];
@@ -202,17 +208,40 @@ export function schriftEinpassenQuelle() {
     // ("gewurstelt"). Der Faktor wurde EMPIRISCH bestimmt, nicht gerechnet:
     // gemessen am fertigen Bild ergibt 0.86 = 99 px, 0.80 = 131 px und
     // 0.76 = 155 px Rand. 0.80 trifft die angepeilten 12 % je Seite.
-    const breite = titel.clientWidth * 0.80;
+    // Bezugsbreite ist der SATZSPIEGEL (der Stapel), nicht das Titel-Element:
+    // Ein flex-Kind kann auf Inhaltsbreite schrumpfen und waere dann sein
+    // eigener Massstab. Der groessere der beiden Werte ist immer der richtige.
+    const rahmen = Math.max(
+      titel.clientWidth,
+      titel.parentElement ? titel.parentElement.clientWidth : 0,
+    );
+    const breite = rahmen * breitenFaktor;
     let groesse = parseFloat(getComputedStyle(titel).fontSize);
     const MIN = 38;
     // TEXTBREITE PER RANGE MESSEN (Fund 11.08.2026): scrollWidth liefert bei
     // einem Block-Element die Container-Breite statt der Textbreite — die
     // Bedingung wäre nie erfüllbar und die Schrift würde immer bis zum
     // Anschlag schrumpfen, auch bei kurzen Schlagzeilen.
+    // MARKIERUNG MITMESSEN (Fund 13.08.2026, CD-Projekt-Post): Der Range
+    // liefert die Breite der TEXTKNOTEN. Der Marker-Kasten trägt aber links
+    // und rechts je 9 px Polsterung, die dabei fehlen — die Zeile "FÜNFTEL
+    // DES SIRIUS-TEAMS" galt damit als passend und lief im fertigen Bild
+    // rechts über den Rand hinaus, das letzte S war abgeschnitten.
+    // Element-Rechtecke enthalten die Polsterung; die Zeilenbreite ist darum
+    // die Spanne über Range UND alle Kind-Elemente.
     const textBreite = (el) => {
       const r = document.createRange();
       r.selectNodeContents(el);
-      return r.getBoundingClientRect().width;
+      const rr = r.getBoundingClientRect();
+      let links = rr.left;
+      let rechts = rr.right;
+      for (const kind of el.querySelectorAll("*")) {
+        const k = kind.getBoundingClientRect();
+        if (k.width === 0) continue;
+        if (k.left < links) links = k.left;
+        if (k.right > rechts) rechts = k.right;
+      }
+      return rechts - links;
     };
     const passt = () =>
       zeilen.every((z) => textBreite(z) <= breite + 0.5) &&
@@ -225,8 +254,28 @@ export function schriftEinpassenQuelle() {
   };
 }
 
+// MARKER-LAYOUT (Tim-Entscheid 13.08.2026, nach Vergleich von 17 Entwürfen).
+//
+// Was sich gegenüber dem Master-Template vom 07.08. ändert und WARUM:
+//
+// 1. LINKSBÜNDIG statt zentriert. Zentrierter Text hat keine gemeinsame
+//    Anlaufkante; das Auge muss bei jeder Zeile neu ansetzen.
+// 2. KOPFZEILE (Spiel/Studio) in Cyan über der Schlagzeile. Vorher stand der
+//    Spielname in der Schlagzeile selbst und verbrauchte Wörter.
+// 3. MARKIERUNG statt Cyan-Schrift: Das Schlüsselwort steht in einem cyanen
+//    Kasten. Cyane Schrift auf dunklem Grund ist im Feed als Daumennagel
+//    kaum vom Weiss zu unterscheiden — ein Farbblock ist es immer.
+// 4. HANDSCHRIFTLICHE NOTIZ: eine Haltung zur Meldung, kein Fliesstext.
+//    Sie ist der Grund, warum die Karte nach Redaktion aussieht und nicht
+//    nach Automat. Ohne echte Aussage wirkt sie wie Füllsel — dafür gibt es
+//    eine eigene Prüfung in headline.mjs.
+//
+// Was bleibt: 1080×1350, Verlauf ins Navy, Motiv-Sucher, Kontrast-Wächter,
+// R-Logo mittig unten mit 60 px Abstand, Bildnachweis unten links.
 export async function renderInstagramCard({
   headlineLines,
+  kicker, // Kopfzeile: Spiel, Studio oder Hardware (Grossbuchstaben)
+  notiz, // handschriftliche Reaktion auf die Meldung
   badge, // null | "BREAKING" | "REVIEW"
   imagePath, // absoluter Pfad zum 4:5-Portrait (oder 16:9-Fallback)
   credit, // z. B. "Bild: GameSpot"; null → "KI-Symbolbild"
@@ -239,33 +288,51 @@ export async function renderInstagramCard({
   const badgeHtml = badge
     ? `<div class="badge">${escapeHtml(badge)}</div>`
     : "";
+  const kickerHtml = kicker
+    ? `<div class="kicker">${escapeHtml(kicker)}</div>`
+    : "";
+  const notizHtml = notiz ? `<div class="notiz">${escapeHtml(notiz)}</div>` : "";
 
   const html = `<!doctype html><html><head><meta charset="utf-8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;900&family=Caveat:wght@700&display=swap" rel="stylesheet">
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
   body { width:1080px; height:1350px; background:#0C0B1A; overflow:hidden; position:relative; }
   .bild { position:absolute; inset:0; }
   .bild img { width:100%; height:100%; object-fit:cover; object-position:${positionX}% ${positionY}%; display:block; }
   .bild::after { content:""; position:absolute; inset:0; background:${grad}; }
-  .stapel { position:absolute; left:60px; right:60px; bottom:${G + LOGO_H + G}px;
-    display:flex; flex-direction:column; align-items:center; gap:30px; }
+  .stapel { position:absolute; left:${G}px; right:${G}px; bottom:${G + LOGO_H + G}px;
+    display:flex; flex-direction:column; align-items:flex-start; text-align:left; }
+  .badge { border:3.5px solid #02F0D1; color:#02F0D1; font-family:'Inter',sans-serif;
+    font-weight:900; font-size:24px; letter-spacing:0.22em; text-transform:uppercase;
+    padding:10px 26px 9px 32px; border-radius:999px; background:rgba(12,11,26,0.55);
+    margin-bottom:22px; }
+  .kicker { font-family:'Inter',sans-serif; font-weight:900; font-size:26px;
+    letter-spacing:0.20em; text-transform:uppercase; color:#02F0D1; margin-bottom:17px; }
+  /* ZEILENABSTAND 1.34 (nicht 1.18 wie vorher): Der Marker-Kasten hängt an
+     einem Wort INNERHALB der Zeile und beansprucht keine eigene Höhe —
+     padding vergrössert die Zeilenbox nicht. Ohne diese Luft läuft der
+     Kasten in die Zeile darunter. */
+  /* width:100% ist PFLICHT, nicht Kosmetik: In einem Flex-Stapel mit
+     align-items:flex-start schrumpft ein Block-Kind auf seine Inhaltsbreite.
+     Ohne diese Zeile mass die Einpassung die Zeile gegen sich selbst und
+     war immer zufrieden — "DES SIRIUS-TEAMS" lief rechts aus dem Bild. */
   .titel { font-family:'Inter',sans-serif; font-weight:900; text-transform:uppercase;
-    text-align:center; font-size:64px; line-height:1.18; letter-spacing:-0.015em;
+    width:100%; text-align:left; font-size:75px; line-height:1.34; letter-spacing:-0.02em;
     color:#FFFFFF; text-shadow:0 3px 18px rgba(0,0,0,0.5); }
   .titel .zeile { display:block; white-space:nowrap; }
-  .titel .cy { color:#02F0D1; }
-  .badge { border:3.5px solid #02F0D1; color:#02F0D1; font-family:'Inter',sans-serif;
-    font-weight:900; font-size:28px; letter-spacing:0.22em; text-transform:uppercase;
-    padding:12px 32px 11px 38px; border-radius:999px; background:rgba(12,11,26,0.55); }
+  .titel .cy { background:#02F0D1; color:#0C0B1A; padding:1px 9px 5px 9px;
+    text-shadow:none; }
+  .notiz { font-family:'Caveat',cursive; font-weight:700; font-size:47px; line-height:1.0;
+    color:#02F0D1; margin-top:24px; transform:rotate(-2deg); transform-origin:left center; }
   .logo { position:absolute; left:50%; transform:translateX(-50%); bottom:${G}px; height:${LOGO_H}px; }
   .label { position:absolute; left:40px; bottom:30px; font-family:'Inter',sans-serif;
     font-weight:900; font-size:14px; letter-spacing:0.14em; text-transform:uppercase;
     color:rgba(255,255,255,0.32); }
 </style></head><body>
   <div class="bild"><img src="file://${imagePath}"></div>
-  <div class="stapel">${badgeHtml}<div class="titel">${headlineHtml(headlineLines)}</div></div>
+  <div class="stapel">${badgeHtml}${kickerHtml}<div class="titel">${headlineHtml(headlineLines)}</div>${notizHtml}</div>
   <img class="logo" src="file://${LOGO}">
   <div class="label">${escapeHtml(credit || "KI-Symbolbild")}</div>
 </body></html>`;
@@ -280,14 +347,24 @@ export async function renderInstagramCard({
       viewport: { width: 1080, height: 1350 },
       deviceScaleFactor: 2,
     });
-    await page.goto(`file://${htmlFile}`, { waitUntil: "networkidle" });
+    // NICHT AUF "networkidle" WARTEN (Fund 13.08.2026): Der Abruf der
+    // Google-Schriften laeuft gelegentlich in die 30-Sekunden-Grenze, und
+    // Playwright wirft dann einen Fehler — in GitHub Actions kostet das den
+    // ganzen Lauf. Zuverlaessiger und schneller: auf "load" warten und dann
+    // gezielt darauf, dass die Schriften wirklich da sind. Das ist sogar
+    // strenger, denn mit Ersatzschrift gemessene Breiten waeren falsch.
+    await page.goto(`file://${htmlFile}`, { waitUntil: "load", timeout: 60000 });
+    await page.evaluate(() => document.fonts.ready);
     await page.waitForTimeout(400);
 
     // Schrift einpassen, BEVOR die Tintenkompensation misst — sonst rechnet
     // sie mit der alten Grösse. Höhenvorgabe 430 px: Damit bleibt der obere
     // Bildteil in jedem Fall sichtbar und der Block drängt sich nie ans Logo.
+    // Höhenvorgabe 340 px statt 430: Der Block trägt jetzt zusätzlich
+    // Kopfzeile und Notiz. Breitenfaktor 1.0, weil der Satzspiegel im
+    // linksbündigen Layout den Rand schon vorgibt.
     const einpassung = await page.evaluate(
-      `(${schriftEinpassenQuelle().toString()})(430)`,
+      `(${schriftEinpassenQuelle().toString()})(340, 1.0)`,
     );
     if (!einpassung.passt) {
       console.log(
@@ -296,23 +373,95 @@ export async function renderInstagramCard({
     }
     await page.waitForTimeout(80);
 
-    // Tintenkompensation: Der optische Abstand Schriftkante→Logo muss den
-    // Box-Abstand um den unsichtbaren Unterlängen-Raum korrigieren.
+    // ABSTÄNDE UND TINTENKOMPENSATION (Tim, 13.08.2026).
+    //
+    // Zwei Dinge in einem Durchgang, beide an der ECHTEN Tintenkante der
+    // Buchstaben gemessen statt an Element-Rechtecken: Element-Rechtecke
+    // tragen oben und unten unterschiedlich viel unsichtbare Luft (Ober-
+    // und Unterlängen, Zeilenschaltung). Als ich damit gerechnet habe, kamen
+    // am fertigen Bild 47 px oben gegen 36 px unten heraus, obwohl beide
+    // Abstände rechnerisch gleich waren. canvas.measureText liefert mit
+    // actualBoundingBoxAscent/Descent die tatsächlichen Buchstabenkanten.
+    //
+    // 1) Kopfzeile→Schlagzeile soll genauso gross wirken wie
+    //    Schlagzeile→Notiz (Tims Vorgabe am Radeon-Post).
+    // 2) Der Abstand Notiz→Logo muss optisch 60 px betragen.
     await page.evaluate(({ G, LOGO_H }) => {
       const stapel = document.querySelector(".stapel");
+      const kicker = document.querySelector(".kicker");
       const titel = document.querySelector(".titel");
-      const cs = getComputedStyle(titel);
-      const fontPx = parseFloat(cs.fontSize);
+      const notiz = document.querySelector(".notiz");
+      const zeilen = [...titel.querySelectorAll(".zeile")];
+
+      const metrik = (el, text) => {
+        const s = getComputedStyle(el);
+        const ctx = new OffscreenCanvas(10, 10).getContext("2d");
+        ctx.font = `${s.fontWeight} ${parseFloat(s.fontSize)}px ${s.fontFamily}`;
+        const m = ctx.measureText(text || "X");
+        const zh = parseFloat(s.lineHeight);
+        const kasten = m.fontBoundingBoxAscent + m.fontBoundingBoxDescent;
+        const halbeLuft = Number.isFinite(zh) ? (zh - kasten) / 2 : 0;
+        return {
+          grundlinieAb: halbeLuft + m.fontBoundingBoxAscent,
+          tinteOben: m.actualBoundingBoxAscent,
+          tinteUnten: m.actualBoundingBoxDescent,
+        };
+      };
+      const zeilenRechteck = (el) => {
+        const r = document.createRange();
+        r.selectNodeContents(el);
+        return r.getBoundingClientRect();
+      };
+
+      // Drehung der Notiz für die Messung aussetzen — sie vergrössert das
+      // Umgebungsrechteck und verfälscht die Kanten.
+      const drehung = notiz ? notiz.style.transform : null;
+      if (notiz) notiz.style.transform = "none";
+
+      // (1) Abstände angleichen
+      if (kicker && notiz && zeilen.length) {
+        const mK = metrik(kicker, kicker.textContent);
+        const kickerUnten =
+          zeilenRechteck(kicker).top + mK.grundlinieAb + mK.tinteUnten;
+
+        const mE = metrik(titel, zeilen[0].textContent);
+        const titelOben =
+          zeilenRechteck(zeilen[0]).top + mE.grundlinieAb - mE.tinteOben;
+
+        const letzte = zeilen[zeilen.length - 1];
+        const mL = metrik(titel, letzte.textContent);
+        let titelUnten =
+          zeilenRechteck(letzte).top + mL.grundlinieAb + mL.tinteUnten;
+        // Der Marker-Kasten reicht unter die Schriftlinie und zählt mit.
+        for (const k of titel.querySelectorAll(".cy")) {
+          titelUnten = Math.max(titelUnten, k.getBoundingClientRect().bottom);
+        }
+
+        const mN = metrik(notiz, notiz.textContent);
+        const notizOben =
+          notiz.getBoundingClientRect().top + mN.grundlinieAb - mN.tinteOben;
+
+        const soll = titelOben - kickerUnten;
+        const ist = notizOben - titelUnten;
+        const jetzt = parseFloat(getComputedStyle(notiz).marginTop) || 0;
+        notiz.style.marginTop = `${Math.round(jetzt + (soll - ist))}px`;
+      }
+
+      // (2) Unterkante des Stapels auf die Tintenkante des letzten Elements
+      const unten = notiz ?? titel;
+      const cs = getComputedStyle(unten);
       const lineBox = parseFloat(cs.lineHeight);
       const ctx = new OffscreenCanvas(10, 10).getContext("2d");
-      ctx.font = `900 ${fontPx}px Inter`;
-      const lastLine = titel.innerText.split("\n").pop() || "X";
-      const m = ctx.measureText(lastLine.toUpperCase());
-      const halfLeading =
+      ctx.font = `${cs.fontWeight} ${parseFloat(cs.fontSize)}px ${cs.fontFamily}`;
+      const text = (unten.innerText || "X").split("\n").pop();
+      const m = ctx.measureText(text);
+      const halbeLuft =
         (lineBox - (m.fontBoundingBoxAscent + m.fontBoundingBoxDescent)) / 2;
-      const inkOffset =
-        lineBox - (halfLeading + m.fontBoundingBoxAscent + m.actualBoundingBoxDescent);
-      stapel.style.bottom = `${G + LOGO_H + G - inkOffset}px`;
+      const tintenVersatz =
+        lineBox - (halbeLuft + m.fontBoundingBoxAscent + m.actualBoundingBoxDescent);
+      stapel.style.bottom = `${G + LOGO_H + G - tintenVersatz}px`;
+
+      if (notiz) notiz.style.transform = drehung;
     }, { G, LOGO_H });
     await page.waitForTimeout(100);
 

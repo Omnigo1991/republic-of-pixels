@@ -43,8 +43,10 @@ function escapeHtml(s) {
 // Renderer dieselbe Ausgabe und dieselbe Einpassung.
 const headlineHtml = kartenHeadlineHtml;
 
-async function renderOverlay({ headlineLines, badge, credit, chromium, pngPath, grad }) {
+async function renderOverlay({ headlineLines, kicker, notiz, badge, credit, chromium, pngPath, grad }) {
   const badgeHtml = badge ? `<div class="badge">${escapeHtml(badge)}</div>` : "";
+  const kickerHtml = kicker ? `<div class="kicker">${escapeHtml(kicker)}</div>` : "";
+  const notizHtml = notiz ? `<div class="notiz">${escapeHtml(notiz)}</div>` : "";
   // 1:1 die Beitrags-Vorlage (Tim-Vorgabe 08.08.2026, Referenz: seine
   // manuellen Reels): Das Reel IST die animierte Beitrags-Karte — gleicher
   // 4:5-Canvas (1080×1350), gleiche Elemente, Grössen, Abstände und
@@ -55,30 +57,41 @@ async function renderOverlay({ headlineLines, badge, credit, chromium, pngPath, 
   const LOGO_H = 60;
   const INK = 13.6;
   const HUB = 0;
+  // Marker-Layout wie bei der Bild-Karte (13.08.2026) — Reel und Beitrag
+  // müssen identisch aussehen, sonst zerfällt das Raster in zwei Stile.
   const html = `<!doctype html><html><head><meta charset="utf-8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;900&family=Caveat:wght@700&display=swap" rel="stylesheet">
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
   body { width:1080px; height:1350px; background:transparent; overflow:hidden; position:relative; }
   .grad { position:absolute; inset:0; background:${grad}; }
-  .stapel { position:absolute; left:60px; right:60px; bottom:${(HUB + G + LOGO_H + G - INK).toFixed(1)}px;
-    display:flex; flex-direction:column; align-items:center; gap:30px; }
+  .stapel { position:absolute; left:${G}px; right:${G}px; bottom:${(HUB + G + LOGO_H + G - INK).toFixed(1)}px;
+    display:flex; flex-direction:column; align-items:flex-start; text-align:left; }
+  .badge { border:3.5px solid #02F0D1; color:#02F0D1; font-family:'Inter',sans-serif;
+    font-weight:900; font-size:24px; letter-spacing:0.22em; text-transform:uppercase;
+    padding:10px 26px 9px 32px; border-radius:999px; background:rgba(12,11,26,0.55);
+    margin-bottom:22px; }
+  .kicker { font-family:'Inter',sans-serif; font-weight:900; font-size:26px;
+    letter-spacing:0.20em; text-transform:uppercase; color:#02F0D1; margin-bottom:17px; }
+  /* width:100% ist PFLICHT, nicht Kosmetik: In einem Flex-Stapel mit
+     align-items:flex-start schrumpft ein Block-Kind auf seine Inhaltsbreite.
+     Ohne diese Zeile mass die Einpassung die Zeile gegen sich selbst und
+     war immer zufrieden — "DES SIRIUS-TEAMS" lief rechts aus dem Bild. */
   .titel { font-family:'Inter',sans-serif; font-weight:900; text-transform:uppercase;
-    text-align:center; font-size:64px; line-height:1.18; letter-spacing:-0.015em;
+    width:100%; text-align:left; font-size:75px; line-height:1.34; letter-spacing:-0.02em;
     color:#FFFFFF; text-shadow:0 3px 18px rgba(0,0,0,0.5); }
   .titel .zeile { display:block; white-space:nowrap; }
-  .titel .cy { color:#02F0D1; }
-  .badge { border:3.5px solid #02F0D1; color:#02F0D1; font-family:'Inter',sans-serif;
-    font-weight:900; font-size:28px; letter-spacing:0.22em; text-transform:uppercase;
-    padding:12px 32px 11px 38px; border-radius:999px; background:rgba(12,11,26,0.55); }
+  .titel .cy { background:#02F0D1; color:#0C0B1A; padding:1px 9px 5px 9px; text-shadow:none; }
+  .notiz { font-family:'Caveat',cursive; font-weight:700; font-size:47px; line-height:1.0;
+    color:#02F0D1; margin-top:24px; transform:rotate(-2deg); transform-origin:left center; }
   .logo { position:absolute; left:50%; transform:translateX(-50%); bottom:${HUB + G}px; height:${LOGO_H}px; }
   .label { position:absolute; left:40px; bottom:${HUB + 30}px; font-family:'Inter',sans-serif;
     font-weight:900; font-size:14px; letter-spacing:0.14em; text-transform:uppercase;
     color:rgba(255,255,255,0.32); }
 </style></head><body>
   <div class="grad"></div>
-  <div class="stapel">${badgeHtml}<div class="titel">${headlineHtml(headlineLines)}</div></div>
+  <div class="stapel">${badgeHtml}${kickerHtml}<div class="titel">${headlineHtml(headlineLines)}</div>${notizHtml}</div>
   <img class="logo" src="file://${LOGO}">
   <div class="label">${escapeHtml(credit || "KI-Symbolbild")}</div>
 </body></html>`;
@@ -88,11 +101,66 @@ async function renderOverlay({ headlineLines, badge, credit, chromium, pngPath, 
   const browser = await chromium.launch();
   try {
     const page = await browser.newPage({ viewport: { width: 1080, height: 1350 } });
-    await page.goto(`file://${htmlFile}`, { waitUntil: "networkidle" });
+    // NICHT AUF "networkidle" WARTEN (Fund 13.08.2026): Der Abruf der
+    // Google-Schriften laeuft gelegentlich in die 30-Sekunden-Grenze, und
+    // Playwright wirft dann einen Fehler — in GitHub Actions kostet das den
+    // ganzen Lauf. Zuverlaessiger und schneller: auf "load" warten und dann
+    // gezielt darauf, dass die Schriften wirklich da sind. Das ist sogar
+    // strenger, denn mit Ersatzschrift gemessene Breiten waeren falsch.
+    await page.goto(`file://${htmlFile}`, { waitUntil: "load", timeout: 60000 });
+    await page.evaluate(() => document.fonts.ready);
     await page.waitForTimeout(400);
     // Gleiche Einpassung wie bei der Bild-Karte: keine Zeile bricht um,
     // stattdessen wird die Schrift verkleinert.
-    await page.evaluate(`(${schriftEinpassenQuelle().toString()})(430)`);
+    await page.evaluate(`(${schriftEinpassenQuelle().toString()})(340, 1.0)`);
+    await page.waitForTimeout(80);
+    // Abstände angleichen wie bei der Bild-Karte: Kopfzeile→Schlagzeile soll
+    // so gross wirken wie Schlagzeile→Notiz. Gemessen an der Tintenkante,
+    // nicht am Element-Rechteck (Begründung in instagram-card.mjs).
+    await page.evaluate(() => {
+      const kicker = document.querySelector(".kicker");
+      const titel = document.querySelector(".titel");
+      const notiz = document.querySelector(".notiz");
+      if (!kicker || !notiz || !titel) return;
+      const zeilen = [...titel.querySelectorAll(".zeile")];
+      if (!zeilen.length) return;
+      const metrik = (el, text) => {
+        const s = getComputedStyle(el);
+        const ctx = new OffscreenCanvas(10, 10).getContext("2d");
+        ctx.font = `${s.fontWeight} ${parseFloat(s.fontSize)}px ${s.fontFamily}`;
+        const m = ctx.measureText(text || "X");
+        const zh = parseFloat(s.lineHeight);
+        const kasten = m.fontBoundingBoxAscent + m.fontBoundingBoxDescent;
+        const halbeLuft = Number.isFinite(zh) ? (zh - kasten) / 2 : 0;
+        return {
+          grundlinieAb: halbeLuft + m.fontBoundingBoxAscent,
+          tinteOben: m.actualBoundingBoxAscent,
+          tinteUnten: m.actualBoundingBoxDescent,
+        };
+      };
+      const rechteck = (el) => {
+        const r = document.createRange();
+        r.selectNodeContents(el);
+        return r.getBoundingClientRect();
+      };
+      const drehung = notiz.style.transform;
+      notiz.style.transform = "none";
+      const mK = metrik(kicker, kicker.textContent);
+      const kickerUnten = rechteck(kicker).top + mK.grundlinieAb + mK.tinteUnten;
+      const mE = metrik(titel, zeilen[0].textContent);
+      const titelOben = rechteck(zeilen[0]).top + mE.grundlinieAb - mE.tinteOben;
+      const letzte = zeilen[zeilen.length - 1];
+      const mL = metrik(titel, letzte.textContent);
+      let titelUnten = rechteck(letzte).top + mL.grundlinieAb + mL.tinteUnten;
+      for (const k of titel.querySelectorAll(".cy")) {
+        titelUnten = Math.max(titelUnten, k.getBoundingClientRect().bottom);
+      }
+      const mN = metrik(notiz, notiz.textContent);
+      const notizOben = notiz.getBoundingClientRect().top + mN.grundlinieAb - mN.tinteOben;
+      const jetzt = parseFloat(getComputedStyle(notiz).marginTop) || 0;
+      notiz.style.marginTop = `${Math.round(jetzt + ((titelOben - kickerUnten) - (notizOben - titelUnten)))}px`;
+      notiz.style.transform = drehung;
+    });
     await page.waitForTimeout(80);
     await page.screenshot({ path: pngPath, omitBackground: true });
   } finally {
@@ -103,6 +171,8 @@ async function renderOverlay({ headlineLines, badge, credit, chromium, pngPath, 
 
 export async function renderInstagramReel({
   headlineLines,
+  kicker, // Kopfzeile (Spiel/Studio/Hardware)
+  notiz, // handschriftliche Reaktion
   badge,
   imagePath, // 4:5-Portrait (bevorzugt) oder 16:9-Fallback
   credit,
@@ -141,6 +211,8 @@ export async function renderInstagramReel({
   const overlayPng = join(tmpdir(), `rop-reel-ov-${Date.now()}.png`);
   await renderOverlay({
     headlineLines,
+    kicker,
+    notiz,
     badge,
     credit,
     chromium,
