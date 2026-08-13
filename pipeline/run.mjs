@@ -209,7 +209,7 @@ Antworte NUR mit einem JSON-Objekt mit exakt diesen Feldern:
 {
   "slug": "kebab-case, kurz, sprechend, ggf. mit Jahr",
   "title": "Titel, 40–80 Zeichen, informativ, kein Clickbait",
-  "subtitle": "1 Satz Unterzeile, die den Titel ergänzt",
+  "subtitle": "1 Satz Unterzeile, die den Titel ergänzt — OHNE Punkt am Ende (Fragezeichen und Ausrufezeichen sind erlaubt)",
   "excerpt": "Teaser 120–260 Zeichen für Cards und Meta-Fallback",
   "seoTitle": "max. 65 Zeichen, wichtigstes Keyword vorn",
   "metaDescription": "140–160 Zeichen, aktiv formuliert",
@@ -227,6 +227,20 @@ Hinweis zu body: quote-Blöcke nur verwenden, wenn die Quelle ein wörtliches Zi
   const raw = await askClaude({ system: EDITORIAL_SYSTEM, prompt, maxTokens: 8000 });
   // Sicherheitsnetz Schweizer Rechtschreibung: ß kommt nie auf die Seite.
   const draft = JSON.parse(JSON.stringify(parseJsonResponse(raw)).replaceAll("\u00df", "ss").replaceAll("ß", "ss"));
+
+  // UNTERZEILE OHNE SCHLUSSPUNKT (Tim, 13.08.2026): Von 172 Artikeln endeten
+  // 97 mit Punkt und 75 ohne — reiner Zufall, weil die Vorgabe im Prompt
+  // dazu schwieg. Die Unterzeile ist ein Teaser, kein Fliesstext; ohne Punkt
+  // liest sie sich leichter. Die Regel steht jetzt im Prompt UND hier: Eine
+  // Regel, die nur im Prompt steht, ist keine Regel (Lehre aus dem
+  // Schlagzeilen-Wächter vom 11.08.2026). Fragezeichen, Ausrufezeichen und
+  // Auslassungspunkte bleiben unangetastet.
+  // Abkürzungen behalten ihren Punkt — er gehört zum Wort, nicht zum Satz.
+  const ABKUERZUNG_AM_ENDE = /\b(usw|etc|u\.\s?a|o\.\s?Ä|u\.\s?Ä|ff)\.$/i;
+  if (typeof draft.subtitle === "string") {
+    const s = draft.subtitle.trim();
+    draft.subtitle = ABKUERZUNG_AM_ENDE.test(s) ? s : s.replace(/(?<!\.)\.$/, "");
+  }
 
   // Von der Pipeline kontrollierte Felder — das Modell entscheidet hier nicht.
   const words = (draft.body ?? [])

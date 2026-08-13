@@ -26,6 +26,18 @@ interface Kennzahlen {
   verlauf: Tageswert[];
 }
 
+// Rückgabezeilen der Statistik-Funktionen aus supabase/schema-v9.sql.
+interface VerlaufZeile {
+  tag: string; // YYYY-MM-DD, Zürcher Kalendertag
+  aufrufe: number;
+  besucher: number;
+}
+interface HerkunftZeile {
+  visitor: string;
+  referrer: string | null;
+  path: string;
+}
+
 // Herkunfts-Klassifikation: der erste Aufruf eines Besuchers in den letzten
 // 7 Tagen bestimmt seine Quelle. Landet jemand ohne Referrer direkt auf /ig,
 // kam er über den Instagram-Bio-Link (In-App-Browser senden oft keinen
@@ -94,16 +106,19 @@ export function StatistikCockpit() {
       if (error) throw error;
       return count ?? 0;
     }
+    // EINDEUTIGE BESUCHER ZAEHLT DIE DATENBANK (Tim, 13.08.2026).
+    // Vorher holten wir die Roh-Zeilen und zaehlten sie hier im Browser.
+    // Supabase liefert pro Abfrage aber nur begrenzt viele Zeilen aus, und
+    // ohne Sortierung die AELTESTEN — die Gesamt-Abfrage sah damit nur die
+    // ersten Tage nach dem Start und meldete WENIGER Besucher als die
+    // 7-Tage-Abfrage. Das ist rechnerisch unmoeglich und war der Beweis,
+    // dass die Abfrage nicht alle Zeilen sah. Siehe supabase/schema-v9.sql.
     async function besucher(seit?: string) {
-      // ACHTUNG Grenze: Eindeutige Besucher werden clientseitig gezaehlt,
-      // darum begrenzt das Limit die Genauigkeit. Bei rund 1500 Aufrufen
-      // unproblematisch; ab ~50 000 muss das eine Datenbank-Funktion
-      // (count distinct) uebernehmen, sonst zaehlen wir zu niedrig.
-      let q = supabase.from("page_views").select("visitor").limit(50000);
-      if (seit) q = q.gte("created_at", seit);
-      const { data, error } = await q;
+      const { data, error } = await supabase.rpc("statistik_besucher", {
+        seit: seit ?? null,
+      });
       if (error) throw error;
-      return new Set((data ?? []).map((r) => r.visitor)).size;
+      return (data as number | null) ?? 0;
     }
 
     try {
@@ -129,20 +144,19 @@ export function StatistikCockpit() {
       if (kontenError) throw kontenError;
 
       // Herkunft: pro Besucher zählt der erste Aufruf im 7-Tage-Fenster.
-      const { data: refRows } = await supabase
-        .from("page_views")
-        .select("visitor, referrer, path")
-        .gte("created_at", iso(jetzt - 7 * 86400000))
-        .order("created_at", { ascending: true })
-        .limit(10000);
-      const ersterBesuch = new Map<string, string>();
-      for (const r of refRows ?? []) {
-        if (!ersterBesuch.has(r.visitor)) {
-          ersterBesuch.set(r.visitor, quelleVon(r.referrer ?? null, r.path));
-        }
-      }
+      // Die Auswahl "erster Aufruf je Besucher" macht die Datenbank
+      // (distinct on) — vorher lief sie über eine begrenzte Zeilenmenge und
+      // sah nur die ältesten Besucher des Fensters.
+      const { data: refRows, error: refError } = await supabase.rpc(
+        "statistik_herkunft",
+        { seit: iso(jetzt - 7 * 86400000) },
+      );
+      if (refError) throw refError;
       const quellen = new Map<string, number>();
-      for (const q of ersterBesuch.values()) quellen.set(q, (quellen.get(q) ?? 0) + 1);
+      for (const r of (refRows ?? []) as HerkunftZeile[]) {
+        const q = quelleVon(r.referrer ?? null, r.path);
+        quellen.set(q, (quellen.get(q) ?? 0) + 1);
+      }
       const herkunft = [...quellen.entries()]
         .sort((a, b) => b[1] - a[1])
         .map(([quelle, besucher]) => ({ quelle, besucher }));
@@ -150,31 +164,34 @@ export function StatistikCockpit() {
       // WACHSTUMSKURVE (Tim, 11.08.2026): Tagesverlauf der letzten 30 Tage.
       // Kein neues Tracking noetig — die Zeitstempel lagen schon vor, sie
       // wurden nur nie nach Tagen gruppiert.
-      const { data: verlaufRows } = await supabase
-        .from("page_views")
-        .select("created_at, visitor")
-        .gte("created_at", iso(jetzt - 30 * 86400000))
-        .limit(20000);
+      // Auch hier zählt die Datenbank: Die alte Fassung holte 30 Tage
+      // Roh-Zeilen und gruppierte sie hier — bei begrenzter Zeilenmenge
+      // füllten sich nur die ältesten Tage, das rechte Ende der Kurve blieb
+      // leer. Die Gruppierung nach Zürcher Kalendertag macht jetzt Postgres.
+      const { data: verlaufRows, error: verlaufError } = await supabase.rpc(
+        "statistik_verlauf",
+        { von: iso(jetzt - 30 * 86400000) },
+      );
+      if (verlaufError) throw verlaufError;
       const tagesSchluessel = (d: Date) =>
         new Intl.DateTimeFormat("sv-SE", { timeZone: "Europe/Zurich" }).format(d);
-      const eimer = new Map<string, { aufrufe: number; besucher: Set<string> }>();
+      // Alle 30 Tage vorbelegen, damit Tage ohne Aufrufe als 0 in der Kurve
+      // stehen und nicht fehlen.
+      const eimer = new Map<string, { aufrufe: number; besucher: number }>();
       for (let i = 29; i >= 0; i--) {
         eimer.set(tagesSchluessel(new Date(jetzt - i * 86400000)), {
           aufrufe: 0,
-          besucher: new Set(),
+          besucher: 0,
         });
       }
-      for (const r of verlaufRows ?? []) {
-        const k = tagesSchluessel(new Date(r.created_at as string));
-        const e = eimer.get(k);
-        if (!e) continue;
-        e.aufrufe += 1;
-        e.besucher.add(r.visitor as string);
+      for (const r of (verlaufRows ?? []) as VerlaufZeile[]) {
+        if (!eimer.has(r.tag)) continue;
+        eimer.set(r.tag, { aufrufe: r.aufrufe, besucher: r.besucher });
       }
       const verlauf: Tageswert[] = [...eimer.entries()].map(([tag, e]) => ({
         tag,
         aufrufe: e.aufrufe,
-        besucher: e.besucher.size,
+        besucher: e.besucher,
       }));
 
       setZahlen({
@@ -196,7 +213,7 @@ export function StatistikCockpit() {
       setFehler(null);
     } catch {
       setFehler(
-        "Statistik-Daten nicht verfügbar — wurde schema-v4.sql schon im SQL-Editor ausgeführt?"
+        "Statistik-Daten nicht verfügbar — wurde schema-v9.sql schon im SQL-Editor ausgeführt?"
       );
     }
   }, [supabase]);
