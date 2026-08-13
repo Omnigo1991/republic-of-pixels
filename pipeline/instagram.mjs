@@ -95,6 +95,18 @@ function loadArticles() {
 
 // ---------- Phase 1: prepare ----------
 
+// Kategorie-Bezeichnungen fuer die Kopfzeile. Auf Modulebene, weil sie an
+// ZWEI Stellen gebraucht werden: als Kopfzeile der Typo-Karte und als Ersatz,
+// wenn Claude fuer die Marker-Karte keine brauchbare Kopfzeile liefert.
+// (Sie stand vorher in der Render-Schleife — mein Ersatz-Code in der Auswahl
+// haette sie dort nicht gesehen und waere beim ersten Lauf abgestuerzt.)
+const KICKER = {
+  breaking: "BREAKING",
+  leaks: "LEAK",
+  reviews: "REVIEW",
+  news: "GAMING-NEWS",
+};
+
 const IG_SYSTEM = `Du bist die Social-Media-Redaktion von Republic of Pixels, einem deutschsprachigen Gaming-Magazin, und schreibst Instagram-Posts mit einem Ziel: maximale Aufmerksamkeit und Interaktion, ohne die redaktionelle Glaubwürdigkeit zu opfern. Zuspitzen ja, lügen nie — jeder Hook muss vom Artikel gedeckt sein. Sprache: Deutsch in SCHWEIZER Rechtschreibung — NIEMALS "ß", immer "ss". Keine Emojis in Headlines. "Republic of Pixels" nie mit Bindestrichen verbinden.`;
 
 async function pickAndWriteCopy(candidates, maxPicks) {
@@ -194,15 +206,34 @@ Nur wenn ein Kandidat redaktionell unhaltbar ist, darf er fehlen; im Extremfall:
           );
           continue;
         }
+        // KOPFZEILE UND NOTIZ DÜRFEN KEINEN POST KOSTEN (13.08.2026).
+        //
+        // Die Schlagzeile wird verworfen, wenn sie die Regeln verletzt — sie
+        // ist der Post. Kopfzeile und Notiz sind dagegen Schmuck: Fehlen sie
+        // oder taugen sie nicht, wäre es absurd, deswegen die ganze Story zu
+        // streichen. Am 08.08. haben kaputte Claude-Antworten mehrere
+        // Tages-Slots gekostet; diesen Fehler wiederhole ich nicht mit einer
+        // Regel, die ich selbst gerade erst eingeführt habe.
+        //
+        // Kopfzeile: Ersatz ist der Spielname, sonst die Kategorie.
+        // Notiz: fällt ersatzlos weg — die Karte funktioniert ohne sie.
         const kickerPruefung = pruefeKicker(p.kicker);
         if (!kickerPruefung.ok) {
-          console.log(`  Pick verworfen (Kopfzeile): ${kickerPruefung.fehler.join("; ")} — "${p.kicker ?? ""}"`);
-          continue;
+          const ersatz = (p.gameName ?? KICKER[candidates[p.index]?.category] ?? "GAMING-NEWS")
+            .toString()
+            .toUpperCase()
+            .slice(0, 30);
+          console.log(
+            `  Kopfzeile ersetzt (${kickerPruefung.fehler.join("; ")}): "${p.kicker ?? ""}" → "${ersatz}"`,
+          );
+          p.kicker = ersatz;
         }
         const notizPruefung = pruefeNotiz(p.notiz, p.headlineLines, p.kicker);
         if (!notizPruefung.ok) {
-          console.log(`  Pick verworfen (Notiz): ${notizPruefung.fehler.join("; ")} — "${p.notiz ?? ""}"`);
-          continue;
+          console.log(
+            `  Notiz weggelassen (${notizPruefung.fehler.join("; ")}): "${p.notiz ?? ""}"`,
+          );
+          p.notiz = null;
         }
         brauchbar.push(p);
       }
@@ -470,12 +501,6 @@ async function prepare() {
       let cardRel = null;
       if (alsTypoKarte) {
         cardRel = `/social/ig-${article.slug}.jpg`;
-        const KICKER = {
-          breaking: "BREAKING",
-          leaks: "LEAK",
-          reviews: "REVIEW",
-          news: "GAMING-NEWS",
-        };
         try {
           await renderTypoCard({
             headlineLines: pick.headlineLines,
@@ -555,11 +580,16 @@ async function prepare() {
           pruefPfad = tempBild;
         }
         // Erwartete Textzeilen im Bild: Auf der Marker-Karte zählen Kopfzeile
-        // und handschriftliche Notiz mit — beide sind cyan und damit hell.
-        // Auf der Typo-Karte gibt es sie nicht.
+        // und Notiz mit — beide sind cyan und damit hell. Die Notiz kann
+        // fehlen (siehe Ersatz-Regel in der Auswahl), darum wird sie nur
+        // mitgezählt, wenn sie auch gesetzt wurde. Auf der Typo-Karte gibt
+        // es beide nicht.
+        const zeilenSoll = alsTypoKarte
+          ? pick.headlineLines.length
+          : pick.headlineLines.length + 1 + (pick.notiz ? 1 : 0);
         const abnahme = await pruefeGrafik(
           pruefPfad,
-          alsTypoKarte ? pick.headlineLines.length : pick.headlineLines.length + 2,
+          zeilenSoll,
           alsTypoKarte ? "typo" : "bild",
         );
         if (tempBild) { try { unlinkSync(tempBild); } catch {} }
