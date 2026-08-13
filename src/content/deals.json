@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-12T23:27:10.872Z",
+  "updatedAt": "2026-08-13T03:04:25.438Z",
   "deals": [
     {
       "appId": 460930,
@@ -22,17 +22,6 @@
       "endsAt": "2026-08-18T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/3527290/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3527290/e8f91974f9a7469500fe1aed44a62c9467d328c9/capsule_184x69_alt_assets_3.jpg?t=1786470571"
-    },
-    {
-      "appId": 2001120,
-      "title": "Split Fiction",
-      "discountPercent": 35,
-      "originalPrice": 4999,
-      "finalPrice": 3249,
-      "currency": "EUR",
-      "endsAt": "2026-08-13T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/2001120/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2001120/1988bcdc421d71cbe4c8c07940967e7a0cd752be/capsule_184x69.jpg?t=1763484567"
     },
     {
       "appId": 2358720,
@@ -66,6 +55,17 @@
       "endsAt": "2026-08-18T17:00:09.000Z",
       "url": "https://store.steampowered.com/app/1478500/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1478500/44da9fb07ebe477387355d7fce29560b55125cce/capsule_184x69.jpg?t=1785911674"
+    },
+    {
+      "appId": 553850,
+      "title": "HELLDIVERS™ 2",
+      "discountPercent": 25,
+      "originalPrice": 3999,
+      "finalPrice": 2999,
+      "currency": "EUR",
+      "endsAt": "2026-08-17T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/553850/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/553850/763e544047aa994da21d21897c3c72b2f252553c/capsule_184x69_german.jpg?t=1786525389"
     }
   ]
 }
