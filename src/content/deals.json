@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-13T05:57:31.833Z",
+  "updatedAt": "2026-08-13T09:05:44.928Z",
   "deals": [
     {
       "appId": 460930,
@@ -57,15 +57,15 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/553850/763e544047aa994da21d21897c3c72b2f252553c/capsule_184x69_german.jpg?t=1786525389"
     },
     {
-      "appId": 1067360,
-      "title": "Pax Autocratica",
-      "discountPercent": 17,
-      "originalPrice": 2999,
-      "finalPrice": 2489,
+      "appId": 1368140,
+      "title": "Corsair Cove",
+      "discountPercent": 25,
+      "originalPrice": 3999,
+      "finalPrice": 2999,
       "currency": "EUR",
-      "endsAt": "2026-08-24T17:00:04.000Z",
-      "url": "https://store.steampowered.com/app/1067360/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1067360/0e2383a66d23ea67d7b9618a3a53fa52ca5db032/capsule_184x69.jpg?t=1786526449"
+      "endsAt": "2026-08-14T17:00:09.000Z",
+      "url": "https://store.steampowered.com/app/1368140/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1368140/9317363cb16926256a8e15b2dd91eee8203e4f11/capsule_184x69.jpg?t=1785860713"
     }
   ]
 }
