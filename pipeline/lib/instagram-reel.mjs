@@ -4,6 +4,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { execFileSync } from "node:child_process";
 import sharp from "sharp";
+import { entferneBalken } from "./letterbox.mjs";
 import {
   besterAusschnitt,
   verlauf,
@@ -187,6 +188,13 @@ export async function renderInstagramReel({
   // ffmpeg kann den Ausschnitt nicht selbst wählen, darum schneiden wir
   // das Bild vorher exakt auf 4:5 zu — der Ken-Burns-Zoom arbeitet dann
   // auf dem bereits richtig gelegten Fenster.
+  // Schwarze Balken zuerst entfernen — Begründung in instagram-card.mjs.
+  const balkenfrei = await entferneBalken(imagePath);
+  if (balkenfrei.beschnitten) {
+    console.log(`  Schwarze Balken entfernt (${JSON.stringify(balkenfrei.balken)})`);
+  }
+  imagePath = balkenfrei.pfad;
+
   const { positionX, positionY, luminanz, unruhe } = await besterAusschnitt(imagePath);
   const { width = 0, height = 0 } = await sharp(imagePath).metadata();
   const zuschnitt = join(tmpdir(), `rop-reel-bg-${Date.now()}.jpg`);

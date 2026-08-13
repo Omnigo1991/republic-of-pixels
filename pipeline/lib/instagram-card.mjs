@@ -3,6 +3,7 @@ import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import sharp from "sharp";
+import { entferneBalken } from "./letterbox.mjs";
 
 // Instagram-Post-Grafik nach dem Master-Template (Betreiber-Freigabe
 // 07.08.2026, siehe auch Projektgedächtnis "instagram-master-template"):
@@ -282,6 +283,16 @@ export async function renderInstagramCard({
   outPath, // absoluter Zielpfad (.jpg)
   chromium, // playwright.chromium (injiziert, damit der Import zentral bleibt)
 }) {
+  // SCHWARZE BALKEN ZUERST (Tim, 13.08.2026 — Halo-Post): Letterbox aus
+  // Steam- und IGDB-Artwork muss weg, BEVOR der Motiv-Sucher misst — sonst
+  // rechnet er die Balken als Bildinhalt mit und der Streifen landet auf
+  // der fertigen Karte.
+  const balkenfrei = await entferneBalken(imagePath);
+  if (balkenfrei.beschnitten) {
+    console.log(`  Schwarze Balken entfernt (${JSON.stringify(balkenfrei.balken)})`);
+  }
+  imagePath = balkenfrei.pfad;
+
   const { positionX, positionY, luminanz, unruhe } = await besterAusschnitt(imagePath);
   const grad = verlauf(luminanz, unruhe);
 
