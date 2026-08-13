@@ -65,6 +65,37 @@ Daumen.
 **Personenfotos sind erwünscht.** Porträts ziehen, auch als Aufmacher für
 Firmen-News.
 
+### Nachtrag aus dem Bildtest vom 13.08.2026 abends
+
+Tim hat drei Bilder vorgegeben und die fertigen Posts beurteilt. Drei Regeln
+kamen dabei heraus, die vorher nicht scharf genug formuliert waren:
+
+**1. FIGUR SCHLÄGT LOGO.** Sind Motiv und Spiel-Schriftzug im selben Bild,
+gewinnt die Figur — und das Logo darf ganz herausfallen. Das schärft Punkt 2
+oben ("der Spiel-Schriftzug stört nicht"): Er stört nicht, wenn er ganz und
+nebenbei zu sehen ist. Ein angeschnittener Schriftzug ist schlimmer als gar
+keiner.
+
+> Anlass: Beim Zelda-Hub-Artwork steht Link links, das Logo rechts. Die
+> Mitte-Regel schnitt genau dazwischen — übrig blieben ein halber Link am
+> Bildrand und ein rotes "Z". Tims Urteil: "Positionierung sehr schlecht."
+
+**2. AUFLÖSUNG IST AUSSCHLUSSKRITERIUM, NICHT GESCHMACKSFRAGE.** Ein zu
+kleines Quellbild lässt sich durch keinen Ausschnitt retten. Das relativiert
+das "etwas lockerer" von oben: lockerer heisst ein paar Pixel unter der
+Grenze, nicht 505 statt 900.
+
+> Anlass: Das GTA-6-Bild mass 901 × 505 und wurde auf 1080 × 1350 hochgezogen.
+> Tims Urteil: "Auflösung schlecht."
+
+**3. NICHT ZU ENG SCHNEIDEN.** Die Figur soll als Ganzes wirken, nicht am
+Rand kleben oder unten im Textblock verschwinden. Ist die Quelle quadratisch
+oder hochkant, lieber die volle Breite nehmen und den freien Streifen unten
+als Navy-Fläche für den Text nutzen, statt seitlich zu beschneiden.
+
+> Anlass: Beim Bären-Bild (1024 × 1024) urteilte Tim "in Ordnung, könnte noch
+> etwas rausgezoomt werden, sodass Figur besser sichtbar ist."
+
 ## 4. Wiederholung
 
 **Innerhalb von sieben Tagen kein Motiv doppelt.** Erscheint dasselbe Spiel
