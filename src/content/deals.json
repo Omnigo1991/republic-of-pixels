@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-13T03:04:25.438Z",
+  "updatedAt": "2026-08-13T05:57:31.833Z",
   "deals": [
     {
       "appId": 460930,
@@ -11,17 +11,6 @@
       "endsAt": "2026-08-16T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/460930/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460930/ff701838255b7081bdbed2a30892e5eb4d1bbe1d/capsule_184x69_alt_assets_0_german.jpg?t=1786116240"
-    },
-    {
-      "appId": 3527290,
-      "title": "PEAK",
-      "discountPercent": 50,
-      "originalPrice": 749,
-      "finalPrice": 374,
-      "currency": "EUR",
-      "endsAt": "2026-08-18T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/3527290/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3527290/e8f91974f9a7469500fe1aed44a62c9467d328c9/capsule_184x69_alt_assets_3.jpg?t=1786470571"
     },
     {
       "appId": 2358720,
@@ -66,6 +55,17 @@
       "endsAt": "2026-08-17T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/553850/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/553850/763e544047aa994da21d21897c3c72b2f252553c/capsule_184x69_german.jpg?t=1786525389"
+    },
+    {
+      "appId": 1067360,
+      "title": "Pax Autocratica",
+      "discountPercent": 17,
+      "originalPrice": 2999,
+      "finalPrice": 2489,
+      "currency": "EUR",
+      "endsAt": "2026-08-24T17:00:04.000Z",
+      "url": "https://store.steampowered.com/app/1067360/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1067360/0e2383a66d23ea67d7b9618a3a53fa52ca5db032/capsule_184x69.jpg?t=1786526449"
     }
   ]
 }
