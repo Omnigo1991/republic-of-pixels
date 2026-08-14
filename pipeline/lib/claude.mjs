@@ -13,16 +13,24 @@ const API_URL = "https://api.anthropic.com/v1/messages";
 //   URTEIL    — Aufgaben, bei denen etwas beurteilt wird: Welche Meldung ist
 //               es wert? Welcher Ton trifft? Welcher Bildausschnitt wirkt?
 //               Wenige Aufrufe pro Tag, hoher Hebel.
-//   TEXT      — Artikel schreiben und übersetzen. Der Grossteil des
-//               Verbrauchs. Bleibt vorerst auf Sonnet, bis Tim einen direkten
-//               Vergleich beider Modelle an denselben Quellen beurteilt hat.
-//   HANDWERK  — Korrekturlesen. BEWUSST das kleinere Modell, nicht aus
+//   TEXT      — Artikel schreiben. Der Grossteil des Verbrauchs. Seit dem
+//               14.08.2026 auf Opus, nach Tims Entscheid am direkten
+//               Vergleich: Beide Modelle schrieben dieselben drei Quellen,
+//               Opus stellte in jedem Fall den Bezug zum Spielen her, wo
+//               Sonnet ihn dem Leser ueberliess. Bei einer Gaming-Seite ist
+//               das die Existenzberechtigung des Artikels.
+//               Nebenbefund derselben Messung: Der Prompt verlangt bei
+//               "standard" 550 bis 700 Woerter. Sonnet lieferte 368, 489 und
+//               499 — durchgehend zu wenig. Opus lieferte 539, 540 und 696.
+//               Das staerkere Modell haelt sich also an eine Vorgabe, die das
+//               kleinere ignoriert hat.
+//   HANDWERK  — Korrekturlesen und Uebersetzen. BEWUSST das kleinere Modell, nicht aus
 //               Sparsamkeit: Opus 5 neigt dazu, einen Auftrag auszuweiten und
 //               Dinge zu verbessern, nach denen niemand gefragt hat. Bei
 //               einem Schritt, der ausschliesslich Tippfehler finden und
 //               sonst nichts anfassen darf, ist das ein Risiko.
 export const MODELL_URTEIL = "claude-opus-5";
-export const MODELL_TEXT = "claude-sonnet-5";
+export const MODELL_TEXT = "claude-opus-5";
 export const MODELL_HANDWERK = "claude-sonnet-5";
 
 // Rückwärtskompatibler Vorgabewert für Aufrufe ohne eigene Modellangabe.

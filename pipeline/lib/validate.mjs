@@ -12,7 +12,30 @@ const REVIEW_LABELS = [
   "Nicht empfohlen",
 ];
 
-export function validateArticle(a, existingSlugs) {
+// OBERGRENZEN JE NACHRICHTENWERT (Tim, 14.08.2026).
+//
+// Der Generierungs-Prompt verlangt gestaffelte Laengen — 400–500 Woerter bei
+// einer Routinemeldung, 550–700 bei normalen News, 750–950 bei grossen
+// Nachrichten. Geprueft wurde davon bisher nur die UNTERGRENZE, und die
+// pauschal bei 350.
+//
+// Der Modellvergleich vom 14.08. hat gezeigt, wie wenig eine Prompt-Vorgabe
+// allein wert ist: Bei "standard" (Soll 550–700) lieferte das kleinere
+// Modell 368, 489 und 499 Woerter — dreimal deutlich zu wenig, und niemand
+// hat es gemerkt. Genau unsere Hausregel: Eine Regel, die nur im Prompt
+// steht, ist keine Regel.
+//
+// Die Obergrenze liegt bewusst 30 Prozent ueber dem Zielkorridor. Sie soll
+// den Ausreisser abfangen — einen Artikel, der sich mit Wiederholungen
+// aufblaeht —, nicht einen etwas ausfuehrlicheren guten Text verwerfen.
+const LAENGE = {
+  kurz: { von: 400, bis: 500 },
+  standard: { von: 550, bis: 700 },
+  lang: { von: 750, bis: 950 },
+};
+const OBERGRENZE_ZUSCHLAG = 1.3;
+
+export function validateArticle(a, existingSlugs, depth) {
   const errors = [];
   const need = (cond, msg) => {
     if (!cond) errors.push(msg);
@@ -100,5 +123,16 @@ export function validateArticle(a, existingSlugs) {
   // Meldungen verwerfen — ein verworfener Artikel ist teurer als ein knapper.
   need(wordCount >= 350, `Artikel zu kurz (${wordCount} Wörter, min. 350)`);
 
-  return { ok: errors.length === 0, errors, wordCount };
+  // Obergrenze nur, wenn der Nachrichtenwert bekannt ist. Fehlt er, bleibt es
+  // bei der Untergrenze — lieber keine Pruefung als eine geratene.
+  const korridor = LAENGE[depth];
+  if (korridor) {
+    const max = Math.round(korridor.bis * OBERGRENZE_ZUSCHLAG);
+    need(
+      wordCount <= max,
+      `Artikel zu lang (${wordCount} Wörter, max. ${max} bei "${depth}")`,
+    );
+  }
+
+  return { ok: errors.length === 0, errors, wordCount, korridor: korridor ?? null };
 }

@@ -479,11 +479,11 @@ async function main() {
       }
 
       let article = await generateArticle(cluster, items, sourceTexts, slugs);
-      let check = validateArticle(article, slugs);
+      let check = validateArticle(article, slugs, cluster.depth);
       if (!check.ok) {
         console.log(`  Validierung fehlgeschlagen (${check.errors.join("; ")}) — 1 Wiederholung`);
         article = await generateArticle(cluster, items, sourceTexts, slugs);
-        check = validateArticle(article, slugs);
+        check = validateArticle(article, slugs, cluster.depth);
       }
       if (!check.ok) {
         console.log(`  Verworfen: ${check.errors.join("; ")}`);

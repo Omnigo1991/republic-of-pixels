@@ -7,7 +7,7 @@
 import { readFileSync, writeFileSync, readdirSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
-import { askClaude, parseJsonResponse, MODELL_TEXT } from "./lib/claude.mjs";
+import { askClaude, parseJsonResponse, MODELL_HANDWERK } from "./lib/claude.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const ARTICLES_DIR = join(ROOT, "src", "content", "articles");
@@ -22,13 +22,15 @@ ${liste}
 
 Antworte NUR mit JSON, erstes Zeichen "{": {"uebersetzungen":[{"index":0,"deutsch":"..."}]}
 Wenn alle bereits deutsch sind: {"uebersetzungen":[]}`;
-  // Übersetzen ist Handwerk, kein Urteil — Sonnet reicht. Budget von 6000
-  // auf 9000: Das Nachdenken teilt sich das Budget mit der Antwort.
+  // Übersetzen ist Handwerk, kein Urteil — das kleinere Modell reicht.
+  // Bewusst MODELL_HANDWERK statt MODELL_TEXT: Seit dem 14.08.2026 laeuft
+  // der Artikeltext auf Opus, das Uebersetzen soll dort NICHT mitwandern.
+  // Budget 9000, weil sich das Nachdenken das Budget mit der Antwort teilt.
   const raw = await askClaude({
     system: SYSTEM,
     prompt,
     maxTokens: 9000,
-    model: MODELL_TEXT,
+    model: MODELL_HANDWERK,
   });
   return parseJsonResponse(raw).uebersetzungen ?? [];
 }
