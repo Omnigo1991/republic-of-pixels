@@ -1,0 +1,52 @@
+# Modell-Vergleich (14.08.2026): Schreibt dieselben aktuellen Meldungen mit
+# beiden Modellen und haengt das Ergebnis als Download an den Lauf.
+#
+# WARUM ALS WORKFLOW: Der API-Schluessel liegt hier, nicht auf Tims Laptop.
+# So braucht der Vergleich weder einen zweiten Schluessel noch einen
+# Schluessel auf einem Notebook — nur einen Klick.
+#
+# Start: GitHub → Actions → "Modell-Vergleich" → "Run workflow".
+# Es wird NICHTS veroeffentlicht: keine Artikel, kein State, kein Commit.
+name: Modell-Vergleich
+
+on:
+  workflow_dispatch:
+    inputs:
+      anzahl:
+        description: "Wie viele Meldungen vergleichen?"
+        default: "3"
+        required: false
+
+# Absichtlich nur Lesezugriff: Dieser Lauf darf nichts ins Projekt schreiben.
+permissions:
+  contents: read
+
+jobs:
+  vergleich:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Dependencies installieren
+        run: npm ci
+
+      # Kein Playwright noetig: Verglichen wird der Artikeltext, nicht die
+      # Post-Grafik.
+      - name: Vergleich ausfuehren
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          VERGLEICH_ANZAHL: ${{ github.event.inputs.anzahl || '3' }}
+        run: node pipeline/modell-vergleich.mjs
+
+      - name: Ergebnis anhaengen
+        uses: actions/upload-artifact@v4
+        with:
+          name: modell-vergleich
+          path: modell-vergleich/
+          retention-days: 14

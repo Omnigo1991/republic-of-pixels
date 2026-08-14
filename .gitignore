@@ -17,3 +17,6 @@ out/
 
 # Störungs-Warteschlange: Auftrag an die Pipeline, kein Seiteninhalt
 pipeline/stoerungen.json
+
+# Ausgabe des Modell-Vergleichs (haengt am Workflow-Lauf, nicht im Projekt)
+modell-vergleich/

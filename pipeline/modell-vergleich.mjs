@@ -1,0 +1,117 @@
+// MODELL-VERGLEICH — dieselben Quellen, zwei Modelle, nebeneinander.
+//
+// WARUM: Am 14.08.2026 haben wir die Modellwahl je Aufgabe getrennt.
+// Themenwahl und Instagram-Texte laufen seither auf dem staerkeren Modell,
+// der Artikeltext bewusst noch nicht: Er ist der groesste Kostenposten, und
+// ob das staerkere Modell dort SPUERBAR besser schreibt, wollte Tim selbst
+// beurteilen statt es mir zu glauben.
+//
+// Dieses Skript nimmt echte, aktuelle Meldungen, schreibt jede mit beiden
+// Modellen und legt die Ergebnisse nebeneinander. Es veroeffentlicht NICHTS
+// und schreibt weder State noch Artikel ins Projekt.
+//
+// Start: GitHub → Actions → "Modell-Vergleich" → "Run workflow".
+// Das Ergebnis haengt danach als Download am Lauf.
+import { writeFileSync, mkdirSync } from "node:fs";
+import { join, dirname } from "node:path";
+import { fileURLToPath } from "node:url";
+import { FEEDS } from "./feeds.mjs";
+import { fetchAllFeeds } from "./lib/rss.mjs";
+import { extractArticleText } from "./lib/extract.mjs";
+import { generateArticle } from "./run.mjs";
+import { MODELL_TEXT, MODELL_URTEIL, verbrauchBericht } from "./lib/claude.mjs";
+
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
+const AUS = join(ROOT, "modell-vergleich");
+const ANZAHL = Number(process.env.VERGLEICH_ANZAHL ?? 3);
+
+// Fliesstext aus den Body-Bloecken, damit sich die Fassungen lesen lassen
+// ohne JSON zu entziffern.
+function alsText(artikel) {
+  if (!artikel || artikel.fehler) return `(fehlgeschlagen: ${artikel?.fehler ?? "unbekannt"})`;
+  const zeilen = [`# ${artikel.title}`, "", `*${artikel.subtitle}*`, ""];
+  for (const b of artikel.body ?? []) {
+    if (b.type === "paragraph") zeilen.push(b.text, "");
+    else if (b.type === "heading") zeilen.push(`## ${b.text}`, "");
+    else if (b.type === "list") zeilen.push(...(b.items ?? []).map((i) => `- ${i}`), "");
+    else if (b.type === "quote") zeilen.push(`> ${b.text}`, `> — ${b.attribution ?? ""}`, "");
+    else if (b.type === "stats")
+      zeilen.push(...(b.items ?? []).map((s) => `**${s.value}** ${s.label}`), "");
+  }
+  zeilen.push("---", "", `**Warum es zaehlt:** ${artikel.whyItMatters ?? ""}`, "");
+  zeilen.push(`**Kurzfassung:** ${(artikel.tldr ?? []).join(" · ")}`, "");
+  return zeilen.join("\n");
+}
+
+async function main() {
+  mkdirSync(AUS, { recursive: true });
+
+  console.log("Feeds abrufen …");
+  const kandidaten = await fetchAllFeeds(FEEDS);
+  console.log(`  ${kandidaten.length} Kandidaten gefunden`);
+
+  // Bewusst OHNE Claude ausgewaehlt: Die Auswahl soll den Vergleich nicht
+  // beeinflussen, und beide Modelle sollen dieselben Quellen bekommen.
+  const auswahl = kandidaten
+    .filter((k) => k.title && k.link && (k.summary ?? "").length > 120)
+    .slice(0, ANZAHL);
+
+  const ergebnisse = [];
+  const markdown = ["# Modell-Vergleich", "", `Erstellt am ${new Date().toISOString()}`, ""];
+
+  for (const [i, item] of auswahl.entries()) {
+    console.log(`\n[${i + 1}/${auswahl.length}] ${item.title.slice(0, 70)}`);
+    let text;
+    try {
+      text = await extractArticleText(item.link);
+    } catch (err) {
+      console.log(`  Quelltext nicht lesbar (${err.message}) — uebersprungen`);
+      continue;
+    }
+    if (!text || text.length < 400) {
+      console.log("  Quelltext zu duenn — uebersprungen");
+      continue;
+    }
+
+    const cluster = {
+      indices: [0],
+      category: "news",
+      platforms: ["pc"],
+      isLeakOrRumor: false,
+      depth: "standard",
+    };
+    const eintrag = { quelle: item.title, link: item.link, varianten: {} };
+    markdown.push(`## Quelle ${i + 1}: ${item.title}`, "", `<${item.link}>`, "");
+
+    for (const modell of [MODELL_TEXT, MODELL_URTEIL]) {
+      process.stdout.write(`  ${modell} … `);
+      try {
+        // Leeres Slug-Set: Wir veroeffentlichen nicht, Doppel-Slugs sind egal.
+        const a = await generateArticle(cluster, [item], [text], new Set(), modell);
+        eintrag.varianten[modell] = a;
+        const woerter = (a.body ?? [])
+          .map((b) => b.text ?? (b.items ?? []).join(" "))
+          .join(" ")
+          .split(/\s+/)
+          .filter(Boolean).length;
+        console.log(`fertig (~${woerter} Woerter)`);
+        markdown.push(`### ${modell}`, "", alsText(a), "");
+      } catch (err) {
+        console.log(`FEHLER: ${err.message}`);
+        eintrag.varianten[modell] = { fehler: err.message };
+        markdown.push(`### ${modell}`, "", `(fehlgeschlagen: ${err.message})`, "");
+      }
+    }
+    ergebnisse.push(eintrag);
+  }
+
+  writeFileSync(join(AUS, "vergleich.json"), JSON.stringify(ergebnisse, null, 2) + "\n");
+  writeFileSync(join(AUS, "vergleich.md"), markdown.join("\n"));
+  console.log(`\n${ergebnisse.length} Quelle(n) mit je zwei Fassungen geschrieben.`);
+  verbrauchBericht();
+}
+
+main().catch((err) => {
+  console.error("Modell-Vergleich abgebrochen:", err);
+  process.exit(1);
+});
