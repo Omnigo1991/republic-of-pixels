@@ -104,6 +104,34 @@ mehrfach, rotiert der Artwork-Vorrat.
 **Ist der Vorrat erschöpft, wird von vorne rotiert** — nach vier Posts
 erinnert sich kaum jemand an das erste Bild.
 
+## 4b. Wenn das Bild nicht taugt (Tim, 14.08.2026)
+
+**Ein schlechtes Bild führt zur nächsten STORY, nicht zur Typo-Karte.** Wir
+schreiben rund 18 Artikel am Tag und brauchen 5 Posts. Fällt ein Bild durch,
+wird die nächste Meldung geprüft — der Vorrat ist da.
+
+**Höchstens 2 Typo-Karten pro Tag.** Harte Grenze, im Code gezählt wie die
+Post-Slots. Die dritte wird nicht gerendert.
+
+> Tims Vorgabe im Wortlaut: „Es soll aber nicht sein, dass wir danach nur noch
+> Typo-Karten posten weil jedes Bild abgelehnt wird. […] Wir sind keine
+> Typo-Account, sondern unser Account lebt mit Bildern, Artwork etc."
+
+**Die Typo-Karte ist ein Sonderfall, kein Auffangnetz.** Sie kommt nur zum
+Zug, wenn eine Meldung raus MUSS (Breaking) und kein taugliches Bild
+auffindbar ist. Erst wenn alle verbliebenen Kandidaten durchgefallen sind —
+nicht schon beim ersten schlechten Bild.
+
+> Korrektur meines eigenen Entwurfs: Ich hatte die Typo-Karte als Auffangnetz
+> für jedes abgelehnte Bild geplant. Bei fünf Posts täglich und einem strengen
+> Bild-Tor hätte das genau den Typo-Account erzeugt, den Tim nicht will.
+
+**Warnung statt stiller Flut.** Fällt die Annahmequote der Bilder unter rund
+30 %, ist nicht das Bildmaterial schlecht, sondern die Messlatte falsch
+gesetzt. Der Lauf muss das sichtbar melden, statt auf Typo-Karten auszuweichen.
+Rechenweg: 5 Plätze aus 18 Artikeln — unter etwa 28 % Annahme läuft der Tag
+leer.
+
 ## 5. Reel oder Standbild
 
 **Die stärkste Story des Laufs wird zum Reel.** Nicht mehr stur abwechselnd:
