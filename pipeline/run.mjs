@@ -5,7 +5,7 @@
 //   → JSON + Bild schreiben → Workflow committet & Vercel deployt.
 // DRY_RUN=1: nur Feeds + Kandidatenliste, keine API-Aufrufe, keine Schreibzugriffe.
 import { readFileSync, writeFileSync, readdirSync } from "node:fs";
-import { join, dirname } from "node:path";
+import { join, dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createHash } from "node:crypto";
 import { FEEDS } from "./feeds.mjs";
@@ -181,7 +181,11 @@ Wenn nichts den Kriterien genügt, antworte {"selected":[]}.`;
   }
 }
 
-async function generateArticle(cluster, clusterItems, sourceTexts, slugs) {
+// EXPORTIERT UND MIT WAEHLBAREM MODELL (14.08.2026): Damit laesst sich
+// derselbe Quelltext von zwei Modellen schreiben und nebeneinander lesen —
+// die Grundlage fuer Tims Entscheid, ob der Artikeltext auf das staerkere
+// Modell wechselt. Ohne Argument bleibt alles wie bisher.
+export async function generateArticle(cluster, clusterItems, sourceTexts, slugs, modell = MODELL_TEXT) {
   const istReview = cluster.category === "reviews";
   // Tests brauchen Substanz für Stärken/Schwächen — nie als "kurz" generieren,
   // selbst wenn die Auswahl das fälschlich so eingestuft hat.
@@ -253,7 +257,7 @@ Hinweis zu body: quote-Blöcke nur verwenden, wenn die Quelle ein wörtliches Zi
     system: EDITORIAL_SYSTEM,
     prompt,
     maxTokens: 12000,
-    model: MODELL_TEXT,
+    model: modell,
   });
   // Sicherheitsnetz Schweizer Rechtschreibung: ß kommt nie auf die Seite.
   const draft = JSON.parse(JSON.stringify(parseJsonResponse(raw)).replaceAll("\u00df", "ss").replaceAll("ß", "ss"));
@@ -574,7 +578,12 @@ async function main() {
   verbrauchBericht();
 }
 
-main().catch((err) => {
-  console.error("Pipeline-Abbruch:", err);
-  process.exit(1);
-});
+// NUR BEIM DIREKTEN AUFRUF STARTEN (14.08.2026): Vorher lief die ganze
+// Pipeline schon beim blossen Importieren dieser Datei — damit war keine
+// einzelne Funktion daraus pruefbar, ohne echte Artikel zu veroeffentlichen.
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  main().catch((err) => {
+    console.error("Pipeline-Abbruch:", err);
+    process.exit(1);
+  });
+}
