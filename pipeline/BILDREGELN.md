@@ -110,8 +110,11 @@ erinnert sich kaum jemand an das erste Bild.
 schreiben rund 18 Artikel am Tag und brauchen 5 Posts. Fällt ein Bild durch,
 wird die nächste Meldung geprüft — der Vorrat ist da.
 
-**Höchstens 2 Typo-Karten pro Tag.** Harte Grenze, im Code gezählt wie die
-Post-Slots. Die dritte wird nicht gerendert.
+**Höchstens 2 Typo-Karten pro Tag.** Harte Grenze.
+
+> Stand im Code: Die Pipeline erlaubt seit dem 09.08. nur EINE pro Tag, ist
+> also strenger als Tims Obergrenze. Das bleibt bewusst so — die Regel ist
+> eine Decke, kein Ziel. Wer sie auf 2 anhebt, braucht Tims Zustimmung.
 
 > Tims Vorgabe im Wortlaut: „Es soll aber nicht sein, dass wir danach nur noch
 > Typo-Karten posten weil jedes Bild abgelehnt wird. […] Wir sind keine

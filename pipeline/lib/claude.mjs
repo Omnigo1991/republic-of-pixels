@@ -132,7 +132,10 @@ export function verbrauchBericht() {
 /**
  * @param {object}  o
  * @param {string}  o.system      Systemvorgabe
- * @param {string}  o.prompt      Anfrage
+ * @param {string} [o.prompt]     Anfrage als reiner Text
+ * @param {Array}  [o.content]    Anfrage als Blöcke (Text UND Bilder). Wird
+ *                                gesetzt, wenn Claude etwas ANSCHAUEN soll —
+ *                                gebraucht vom Bild-Tor. Schliesst prompt aus.
  * @param {number} [o.maxTokens]  Obergrenze für NACHDENKEN UND ANTWORT
  *                                zusammen — siehe Hinweis unten.
  * @param {number} [o.retries]    Wiederholungen bei technischen Fehlern
@@ -144,6 +147,7 @@ export function verbrauchBericht() {
 export async function askClaude({
   system,
   prompt,
+  content,
   maxTokens = 8000,
   retries = 2,
   model = MODEL,
@@ -152,6 +156,7 @@ export async function askClaude({
 }) {
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) throw new Error("ANTHROPIC_API_KEY fehlt in der Umgebung");
+  if (!prompt && !content) throw new Error("askClaude: weder prompt noch content angegeben");
 
   // NACHDENKEN TEILT SICH DAS BUDGET MIT DER ANTWORT (Fund 14.08.2026):
   // Wir setzen den Parameter "thinking" nirgends. Bei Sonnet 5 und Opus 5
@@ -167,7 +172,7 @@ export async function askClaude({
     model,
     max_tokens: maxTokens,
     system,
-    messages: [{ role: "user", content: prompt }],
+    messages: [{ role: "user", content: content ?? prompt }],
   };
   if (effort) koerper.output_config = { effort };
 

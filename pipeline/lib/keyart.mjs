@@ -238,3 +238,60 @@ export async function holeSpielBild({ gameName, rotation = 0, outPath }) {
     return null;
   }
 }
+
+// MEHRERE KANDIDATEN STATT EINEM (Tim, 14.08.2026 — fürs Bild-Tor).
+//
+// holeSpielBild oben nimmt das ERSTE Bild, das lädt und über 900 px hoch
+// ist, und liefert es aus. Ob es das beste im Pool ist, hat nie jemand
+// verglichen — es gab nichts zum Vergleichen. Genau daran sind Tomb Raider
+// (Lara am Bildrand) und AC Black Flag (beide Figuren kaum sichtbar)
+// gescheitert: Der Pool enthielt bessere Bilder, wir haben sie nie geholt.
+//
+// Diese Fassung lädt bis zu `anzahl` Pool-Einträge herunter, damit das
+// Bild-Tor sie am fertigen Ausschnitt gegeneinander stellen kann. Die
+// Rotation bleibt erhalten (kein Motiv doppelt innerhalb einer Woche).
+export async function holeSpielBildKandidaten({
+  gameName,
+  rotation = 0,
+  anzahl = 3,
+  outPrefix,
+}) {
+  try {
+    let pool = null;
+    try {
+      pool = await steamPool(gameName);
+    } catch (err) {
+      console.log(`  Steam-Suche fehlgeschlagen (${err.message}) — versuche IGDB`);
+    }
+    if (!pool) pool = await igdbPool(gameName);
+    if (!pool) return null;
+
+    const { eintraege, publisher, spielKey } = pool;
+    const kandidaten = [];
+
+    for (let n = 0; n < eintraege.length && kandidaten.length < anzahl; n++) {
+      const index = (rotation + n) % eintraege.length;
+      for (const url of eintraege[index]) {
+        const roh = await laden(url);
+        if (!roh || roh.length < 20000) continue;
+        const meta = await sharp(roh).metadata();
+        if ((meta.height ?? 0) < 900) continue;
+        const pfad = `${outPrefix}-${index}.jpg`;
+        await writeFile(pfad, roh);
+        kandidaten.push({
+          pfad,
+          credit: `Bild: ${publisher}`,
+          herkunft: index === 0 ? "offizielles Key Art" : `offizieller Screenshot ${index}`,
+          poolIndex: index,
+        });
+        break;
+      }
+    }
+
+    if (kandidaten.length === 0) return null;
+    return { kandidaten, poolGroesse: eintraege.length, spielKey, publisher };
+  } catch (err) {
+    console.log(`  Spielbild-Suche fehlgeschlagen (${err.message})`);
+    return null;
+  }
+}

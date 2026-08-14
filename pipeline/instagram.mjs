@@ -36,7 +36,8 @@ import {
 import { renderInstagramCard } from "./lib/instagram-card.mjs";
 import { renderInstagramReel } from "./lib/instagram-reel.mjs";
 import { renderTypoCard } from "./lib/instagram-typo.mjs";
-import { holeSpielBild } from "./lib/keyart.mjs";
+import { holeSpielBildKandidaten } from "./lib/keyart.mjs";
+import { waehleBild, zaehleTorEntscheidung, torBericht } from "./lib/bildtor.mjs";
 import { pruefeHeadline, pruefeKicker, pruefeNotiz } from "./lib/headline.mjs";
 import { pruefeGrafik } from "./lib/abnahme.mjs";
 
@@ -444,44 +445,85 @@ async function prepare() {
       let imagePath = null;
       let credit = article.image?.credit ?? null;
 
+      // BILD-TOR (Tim, 14.08.2026): Statt das erste taugliche Bild zu nehmen,
+      // werden mehrere Kandidaten gesammelt, jeder auf den fertigen
+      // 4:5-Ausschnitt gebracht und dann beurteilt — Sujet, Ausschnitt,
+      // Wirkung. Siehe lib/bildtor.mjs für das Warum.
+      const kandidaten = [];
+
       if (pick.bildWahl === "pressebild" && presseTauglich) {
-        imagePath = portraitPathFor(article);
-        console.log(
-          `  ${article.slug}: redaktionelle Wahl Pressebild (${credit})`,
-        );
+        kandidaten.push({
+          pfad: portraitPathFor(article),
+          credit,
+          herkunft: "Pressebild aus der Meldung",
+        });
       }
-      if (!imagePath && pick.gameName) {
+      if (pick.gameName) {
         state.instagram.spielBild ??= {};
         const rotation =
           state.instagram.spielBild[pick.gameName.toLowerCase()] ?? 0;
-        const spielBild = await holeSpielBild({
+        const vorrat = await holeSpielBildKandidaten({
           gameName: pick.gameName,
           rotation,
-          outPath: join(tmpdir(), `rop-keyart-${article.slug}.jpg`),
+          anzahl: 3,
+          outPrefix: join(tmpdir(), `rop-keyart-${article.slug}`),
         });
-        if (spielBild) {
-          imagePath = spielBild.pfad;
-          credit = spielBild.credit;
+        if (vorrat) {
+          kandidaten.push(...vorrat.kandidaten);
           state.instagram.spielBild[pick.gameName.toLowerCase()] = rotation + 1;
-          console.log(
-            `  ${article.slug}: offizielles Spielbild ${rotation % spielBild.poolGroesse} (${spielBild.credit})`,
-          );
         }
       }
-      // NICHT ENTFERNEN (Tims Rückfrage 09.08.2026): Dieser Schritt lockert
-      // die redaktionelle VORLIEBE, niemals die Qualitätsprüfung — er kann
-      // also nie etwas Unscharfes durchlassen. Er wirkt nur in einem der
-      // beiden Fälle, und das ist Absicht:
-      //   Redaktion wollte "keyart", es gibt aber keines → das scharfe
-      //     Pressebild rettet den Post (sonst Typo-Karte oder, weil davon
-      //     nur EINE pro Tag erlaubt ist, gar kein Post — genau so ist die
-      //     Oblivion-Story am 09.08. auf einer Typo-Karte gelandet).
-      //   Redaktion wollte "pressebild", es war aber zu klein → presseTauglich
-      //     wird oben EINMAL berechnet und ändert sich hier nicht mehr, die
-      //     Bedingung scheitert erneut. Läuft bewusst ins Leere.
-      if (!imagePath && presseTauglich) {
-        imagePath = portraitPathFor(article);
+      // Redaktionelle Wahl war "keyart", es gibt aber keines: Das scharfe
+      // Pressebild darf trotzdem antreten (lockert die VORLIEBE, nie die
+      // Qualitätsprüfung — Tims Rückfrage 09.08.2026).
+      if (!kandidaten.length && presseTauglich) {
+        kandidaten.push({
+          pfad: portraitPathFor(article),
+          credit,
+          herkunft: "Pressebild aus der Meldung",
+        });
       }
+
+      if (kandidaten.length) {
+        const schlagzeile = (pick.headlineLines ?? [])
+          .map((z) => (Array.isArray(z) ? z.map((s) => s?.text ?? "").join(" ") : ""))
+          .join(" ")
+          .trim();
+        const tor = await waehleBild({
+          kandidaten,
+          schlagzeile,
+          spielName: pick.gameName ?? null,
+        });
+        zaehleTorEntscheidung(Boolean(tor.gewaehlt));
+        if (tor.gewaehlt) {
+          imagePath = tor.gewaehlt.pfad;
+          credit = tor.gewaehlt.credit ?? credit;
+        } else {
+          // KEIN AUSWEICHEN AUF DIE TYPO-KARTE (Tim, 14.08.2026): "Wir sind
+          // keine Typo-Account, sondern unser Account lebt mit Bildern."
+          // Taugt kein Bild, wird die STORY übersprungen — die Ersatz-Runde
+          // zieht die nächste nach. Bei rund 18 Artikeln täglich für 5
+          // Plätze ist der Vorrat da.
+          console.log(
+            `  ${article.slug}: übersprungen — kein taugliches Bild (${tor.grund})`,
+          );
+          continue;
+        }
+      }
+      // HIER STAND DIE PRESSEBILD-RETTUNG (09.08.–14.08.2026), mit einem
+      // "NICHT ENTFERNEN" von mir. Sie ist jetzt entfernt — bewusst.
+      //
+      // Ihr Zweck: Wollte die Redaktion Artwork, gab es aber keines, sprang
+      // das scharfe Pressebild ein, damit die Story nicht auf einer
+      // Typo-Karte landet. Dieser Zweck ist nicht verschwunden, er ist
+      // UMGEZOGEN: Das Pressebild tritt jetzt oben als Kandidat im Bild-Tor
+      // an (siehe den Block "kein Kandidat und Pressebild tauglich").
+      //
+      // Stehenlassen wäre gefährlich gewesen: An dieser Stelle hätte es das
+      // Bild-Tor UMGANGEN und ein ungeprüftes Bild in den Post gelassen —
+      // genau die Art stiller Hintertür, die uns die erste Woche gekostet
+      // hat. Erreichbar ist die Stelle ohnehin nicht mehr: Ist presseTauglich
+      // wahr, steht das Pressebild garantiert in der Kandidatenliste.
       // Letzte Stufe (Tim-Freigabe 09.08.2026): Typo-Karte — reines
       // Marken-Design für starke Storys ohne brauchbares Bild (Hardware/
       // Branche/Personalien). Immer als BILD gepostet (kein Ken-Burns auf
@@ -916,4 +958,7 @@ run()
     // Instagram darf den Artikel-Publish nie blockieren: Fehler nur loggen.
     console.error(`Instagram-${mode} fehlgeschlagen:`, err.message);
   })
-  .finally(verbrauchBericht);
+  .finally(() => {
+    torBericht();
+    verbrauchBericht();
+  });
