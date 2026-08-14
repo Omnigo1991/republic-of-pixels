@@ -5,6 +5,27 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 import sharp from "sharp";
 import { headlineHtml, schriftEinpassenQuelle } from "./instagram-card.mjs";
 
+// ┌──────────────────────────────────────────────────────────────────────┐
+// │ STATUS: NICHT EINGEBUNDEN. Diese Datei wird von nichts importiert.    │
+// │                                                                       │
+// │ Sie ist ein Entwurf, kein toter Code — Tim hat sie am 13.08.2026      │
+// │ ausdruecklich NICHT verworfen ("Die Zahlenkarten sehen eigentlich gut │
+// │ aus"), aber auch nicht freigegeben. Offen war seine Frage, ob wir     │
+// │ hier nicht doch Artwork verwenden sollten, und das "XT" der Radeon-   │
+// │ Karte, das allein auf der zweiten Zeile stand.                        │
+// │                                                                       │
+// │ WARUM DIESER KASTEN HIER STEHT: Der Umlaut-Waechter lag zwei Tage     │
+// │ fertig herum, ohne eingebunden zu sein — in dieser Zeit passierte der │
+// │ Fehler dreimal. Unfertige Bausteine sind nicht das Problem, still     │
+// │ vergessene sind es. Wer diese Datei oeffnet, weiss jetzt sofort,      │
+// │ woran sie haengt.                                                     │
+// │                                                                       │
+// │ ZUM EINBINDEN FEHLT: Tims Entscheid zur Artwork-Frage, die Behebung   │
+// │ der Waisen-Zeile, und dieselbe Abstimmung mit der Abnahme, die die    │
+// │ Typo-Karte am 14.08. einen ganzen Lauf gekostet hat (Zeilenzahl und   │
+// │ Randabstand — siehe pipeline/lib/abnahme.mjs).                        │
+// └──────────────────────────────────────────────────────────────────────┘
+//
 // ZAHLEN-KARTE (13.08.2026) — eigene Bildsprache für Meldungen ohne Motiv.
 //
 // WARUM: Unsere Artikelbilder stammen aus dem Feed der Quelle. Bei

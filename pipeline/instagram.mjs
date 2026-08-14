@@ -728,10 +728,29 @@ async function prepare() {
         }
         console.log(`  Abnahme bestanden (${JSON.stringify(abnahme.messwerte)})`);
       } catch (err) {
-        // Die Abnahme selbst darf keinen Post verhindern, wenn SIE kaputt
-        // ist — sonst tauschen wir ein Qualitaetsproblem gegen einen
-        // Totalausfall. Ein Fehler hier wird gemeldet, der Post laeuft weiter.
-        console.log(`  Abnahme uebersprungen (${err.message})`);
+        // IM ZWEIFEL NICHT POSTEN (umgestellt 14.08.2026).
+        //
+        // Hier stand bisher das Gegenteil: Stuerzt die Abnahme selbst ab,
+        // ging der Post trotzdem raus — "sonst tauschen wir ein
+        // Qualitaetsproblem gegen einen Totalausfall". Das war fuer damals
+        // richtig gedacht, passt aber nicht mehr:
+        //
+        //   - Das Bild-Tor entscheidet im selben Lauf genau umgekehrt. Zwei
+        //     gegensaetzliche Grundhaltungen in einer Kette sind kein
+        //     Standpunkt, sondern ein Versehen.
+        //   - Tims oberste Regel lautet: "Ein schwacher Post ist schlimmer
+        //     als ein fehlender." Eine abgestuerzte Abnahme heisst, dass wir
+        //     NICHT WISSEN, ob die Grafik in Ordnung ist. Sie trotzdem zu
+        //     posten, ist genau die Wette, die diese Regel verbietet.
+        //   - Die Angst vor dem Totalausfall ist entschaerft: Die
+        //     Ersatz-Runde zieht die naechste Story nach, und seit heute
+        //     steht ein Absturz als eigener Grund im Tagesregister. Faellt
+        //     die Abnahme systematisch aus, sagt es die Tagesbilanz am selben
+        //     Abend — statt dass wir einen Tag lang ungeprueft posten.
+        console.log(`  Abnahme fehlgeschlagen (${err.message}) — Post wird nicht abgesetzt`);
+        console.log(`::warning::Abnahme fehlgeschlagen fuer ${article.slug}: ${err.message}`);
+        notiere(state, GRUND.ABNAHME_KAPUTT, article.slug);
+        continue;
       }
 
       const hashtags = (pick.hashtags ?? [])

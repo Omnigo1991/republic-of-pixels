@@ -30,6 +30,7 @@ export const GRUND = {
   KEIN_BILD: "kein taugliches Bild",
   TYPO_DECKEL: "Typo-Kontingent erschöpft",
   ABNAHME: "Abnahme abgelehnt",
+  ABNAHME_KAPUTT: "Abnahme selbst fehlgeschlagen",
   RENDER: "Grafik nicht erstellbar",
   AUSWAHL_LEER: "Auswahl leer",
   NICHT_ERREICHBAR: "Grafik nicht erreichbar",
