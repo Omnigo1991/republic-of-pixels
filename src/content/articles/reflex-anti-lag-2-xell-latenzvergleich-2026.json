@@ -1,0 +1,136 @@
+{
+  "slug": "reflex-anti-lag-2-xell-latenzvergleich-2026",
+  "title": "Reflex, Anti-Lag 2 und XeLL: ComputerBase vergleicht Latenztechnologien",
+  "subtitle": "Mit dem Hardware-Sensor LDAT misst ComputerBase die komplette Eingabekette in sieben aktuellen Spielen",
+  "excerpt": "Nvidia, AMD und Intel setzen mit Reflex, Anti-Lag 2 und XeLL auf eigene Wege zur Latenzreduktion. ComputerBase hat die drei Technologien erstmals mit gleicher Hardware-Messmethode direkt gegeneinander getestet.",
+  "seoTitle": "Reflex vs. Anti-Lag 2 vs. XeLL: Latenzvergleich im Test",
+  "metaDescription": "ComputerBase misst mit dem Hardware-Sensor LDAT die Latenz von Nvidia Reflex, AMD Anti-Lag 2 und Intel XeLL in sieben Spielen und zeigt Unterschiede auf.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "tags": [
+    "Nvidia Reflex",
+    "AMD Anti-Lag 2",
+    "Intel XeLL",
+    "Latenz",
+    "PC Gaming",
+    "ComputerBase"
+  ],
+  "tldr": [
+    "ComputerBase vergleicht Nvidia Reflex, AMD Anti-Lag 2 und Intel XeLL erstmals mit identischer Hardware-Messmethode (LDAT)",
+    "Getestet wurden sieben Spiele auf drei leistungsmässig vergleichbaren Grafikkarten von Nvidia, AMD und Intel in WQHD",
+    "Anders als Reflex und Anti-Lag 2 ist XeLL laut ComputerBase potenziell herstellerunabhängig einsetzbar",
+    "AMD verknüpft Anti-Lag 2 nicht zwingend mit FSR Frame Generation, wodurch die Technologie in vielen Spielen fehlt"
+  ],
+  "whyItMatters": "Eine niedrigere Eingabeverzögerung verändert das Spielgefühl unmittelbar, besonders in schnellen Titeln und in Kombination mit Frame Generation. Wer weiss, welche Latenztechnologie auf welcher Hardware zuverlässig unterstützt wird, kann bei der nächsten GPU-Wahl und den Grafikeinstellungen gezielter entscheiden.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Mit Nvidia Reflex, AMD Anti-Lag 2 und Intel XeLL bieten inzwischen alle drei grossen Grafikkarten-Hersteller eine eigene Technologie zur Reduktion der Eingabeverzögerung an. ComputerBase hat die drei Verfahren nun erstmals unter identischen Bedingungen gegeneinander getestet und dabei nicht auf die herstellereigenen Software-Latenzanzeigen vertraut, sondern auf eine Hardware-Messung mittels Nvidia LDAT gesetzt, um die gesamte Latenzkette vom Eingabebefehl bis zur Bildausgabe auf dem Monitor zu erfassen."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "7",
+          "label": "Spiele wurden für den Vergleichstest ausgewählt"
+        },
+        {
+          "value": "3",
+          "label": "Grafikkarten-Hersteller mit eigener Latenztechnologie"
+        },
+        {
+          "value": "1,5 Jahre",
+          "label": "So lange gibt es Intel XeLL laut ComputerBase bereits"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Gleiches Prinzip, unterschiedliche Reichweite"
+    },
+    {
+      "type": "paragraph",
+      "text": "Alle drei Technologien verfolgen laut ComputerBase im Kern denselben Ansatz: Sie synchronisieren die Bildberechnung der GPU direkt mit der CPU, um Warteschlangen im Frame-Puffer zu vermeiden und dadurch den Input Lag spürbar zu senken. Der entscheidende Unterschied liegt in der Reichweite. Reflex funktioniert ausschliesslich auf Nvidia-Grafikkarten, Anti-Lag 2 nur auf AMD-Hardware. Die aktuellen Versionen von XeLL sind dagegen laut ComputerBase potenziell auf jeder Grafikkarte lauffähig, unabhängig vom Hersteller. Gemeinsam ist allen drei Verfahren zudem, dass Spiele explizit dafür angepasst werden müssen, ehe die Technologie überhaupt greifen kann."
+    },
+    {
+      "type": "heading",
+      "text": "Frame Generation als Treiber – und als Stolperstein"
+    },
+    {
+      "type": "paragraph",
+      "text": "Besonders wichtig sind latenzreduzierende Massnahmen im Zusammenspiel mit Frame Generation, da künstlich erzeugte Bilder die Eingabeverzögerung zusätzlich erhöhen können. Nvidia und Intel verknüpfen ihre Technologien konsequent mit der eigenen Frame Generation: Jedes Spiel mit DLSS Frame Generation unterstützt automatisch auch Reflex. AMD geht laut ComputerBase einen anderen Weg und koppelt Anti-Lag 2 nicht zwingend an FSR Frame Generation. Die Folge: Viele Titel mit FSR Frame Generation kommen ohne Anti-Lag 2 aus, was ComputerBase als verpasste Chance bewertet."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Nvidia Reflex ist laut ComputerBase in nahezu allen relevanten Spielen verfügbar",
+        "AMD Anti-Lag 2 fehlt trotz FSR Frame Generation immer wieder",
+        "Intel XeLL ist am seltensten vertreten, da die Technologie erst seit rund anderthalb Jahren existiert",
+        "Manche Spiele aktivieren die Latenztechnologien nur automatisch in Kombination mit Frame Generation"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Testaufbau: Sieben Spiele, drei vergleichbare Grafikkarten"
+    },
+    {
+      "type": "paragraph",
+      "text": "Für den Vergleich wählte die Redaktion sieben Spiele aus, die alle drei Technologien unterstützen und bei denen sich diese unabhängig von Frame Generation separat ein- und ausschalten lassen: Battlefield 6, Black Myth: Wukong, Death Stranding 2, Dying Light: The Beast, Halo: Campaign Evolved, Hogwarts Legacy und Marathon. Als Testhardware kamen die Nvidia GeForce RTX 5060 Ti 16 GB, die AMD Radeon RX 9060 XT 16 GB sowie die Intel Arc Pro B70 zum Einsatz, da diese drei Modelle eine vergleichbare Rohleistung bieten. Gemessen wurde in WQHD mit dem jeweiligen Upsampling-Verfahren im Quality-Modus, bei Intel im Ultra-Quality-Modus."
+    },
+    {
+      "type": "heading",
+      "text": "Hardware statt Software: Wie LDAT misst"
+    },
+    {
+      "type": "paragraph",
+      "text": "Damit die Werte der drei Hersteller überhaupt vergleichbar sind, verzichtete ComputerBase bewusst auf die jeweiligen Software-Latenzanzeigen und setzte stattdessen auf Nvidia LDAT, einen Lichtsensor, der plötzliche Helligkeitsunterschiede auf dem Bildschirm registriert. Da LDAT auch Mauseingaben simulieren kann, lässt sich die gesamte PC-Kette erfassen, vom durch LDAT ausgelösten Eingabebefehl bis zur tatsächlichen Bildausgabe auf dem Monitor. Neben der klassischen Kontrasterkennung, etwa anhand von Mündungsfeuer, nutzte die Redaktion zusätzlich eine sogenannte Flick-Bewegung: eine stets identische, von LDAT ausgelöste seitliche Mausbewegung, bei der eine grosse Kontrastdifferenz gemessen wird. ComputerBase weist ausdrücklich darauf hin, dass die gemessenen Werte nicht zwangsläufig die geringstmögliche Latenz eines Spiels widerspiegeln, da manche Titel absichtlich kleine Verzögerungen einbauen. Da jedoch stets identisch gemessen wurde, sind die Ergebnisse pro Spiel untereinander vergleichbar. Ergänzend liefern klassische FPS-Messungen zusätzlichen Kontext, da eine höhere Bildrate grundsätzlich mit einer geringeren Latenz einhergeht."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Vergleich von ComputerBase macht deutlich, dass die drei Latenztechnologien zwar auf demselben Grundprinzip beruhen, in der praktischen Verbreitung aber deutlich auseinanderklaffen. Während Reflex durch die enge Kopplung an DLSS Frame Generation nahezu flächendeckend verfügbar ist, hängt der Nutzen von Anti-Lag 2 und XeLL stärker davon ab, ob einzelne Studios die Integration überhaupt vornehmen. Für Spielerinnen und Spieler bedeutet das: Wer auf eine niedrige Eingabeverzögerung Wert legt, sollte im Grafikmenü gezielt prüfen, ob die jeweilige Technologie unabhängig von Frame Generation aktivierbar ist, statt sich allein auf die Standardeinstellungen zu verlassen."
+    }
+  ],
+  "poll": {
+    "question": "Welche Latenztechnologie überzeugt euch nach diesem Vergleich am meisten?",
+    "options": [
+      "Nvidia Reflex",
+      "AMD Anti-Lag 2",
+      "Intel XeLL",
+      "Latenz ist mir beim Spielen egal"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-14T09:03:05.462Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "circuit",
+  "sources": [
+    {
+      "title": "Reflex, Anti-Lag 2 und XeLL: Latenzmessungen, Benchmarks und Vergleiche",
+      "url": "https://www.computerbase.de/artikel/grafikkarten/reflex-anti-lag-2-xell-benchmark-vergleich.98595/",
+      "publisher": "ComputerBase"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/reflex-anti-lag-2-xell-latenzvergleich-2026.webp",
+    "alt": "Reflex, Anti-Lag 2 und XeLL: ComputerBase vergleicht Latenztechnologien",
+    "credit": "Bild: ComputerBase",
+    "sourceUrl": "https://www.computerbase.de/artikel/grafikkarten/reflex-anti-lag-2-xell-benchmark-vergleich.98595/",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "radeon-rx-7800-xt-rx-7600-fsr-4-1-nachtest",
+    "wow-gewundene-insel-schaetze-community-kritik-2026",
+    "xbox-compulsion-games-south-of-midnight-steam-publisher"
+  ]
+}
