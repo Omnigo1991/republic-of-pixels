@@ -41,6 +41,7 @@ import { waehleBild, zaehleTorEntscheidung, torBericht } from "./lib/bildtor.mjs
 import { pruefeHeadline, pruefeKicker, pruefeNotiz } from "./lib/headline.mjs";
 import { umschriebeneUmlaute } from "./lib/umlaut.mjs";
 import { pruefeGrafik } from "./lib/abnahme.mjs";
+import { notiere, laufBericht, GRUND } from "./lib/ausfall.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const STATE_FILE = join(ROOT, "pipeline", "state.json");
@@ -117,7 +118,7 @@ const KICKER = {
 
 const IG_SYSTEM = `Du bist die Social-Media-Redaktion von Republic of Pixels, einem deutschsprachigen Gaming-Magazin, und schreibst Instagram-Posts mit einem Ziel: maximale Aufmerksamkeit und Interaktion, ohne die redaktionelle Glaubwürdigkeit zu opfern. Zuspitzen ja, lügen nie — jeder Hook muss vom Artikel gedeckt sein. Sprache: Deutsch in SCHWEIZER Rechtschreibung — NIEMALS "ß", immer "ss". Keine Emojis in Headlines. "Republic of Pixels" nie mit Bindestrichen verbinden.`;
 
-async function pickAndWriteCopy(candidates, maxPicks) {
+async function pickAndWriteCopy(candidates, maxPicks, state) {
   const list = candidates
     .map(
       (a, i) =>
@@ -215,7 +216,7 @@ Nur wenn ein Kandidat redaktionell unhaltbar ist, darf er fehlen; im Extremfall:
       const brauchbar = [];
       for (const p of picks) {
         if (!candidates[p.index] || typeof p.caption !== "string") {
-          console.log(`  Pick verworfen: Struktur unvollständig.`);
+          notiere(state, GRUND.STRUKTUR);
           continue;
         }
         const pruefung = pruefeHeadline(p.headlineLines);
@@ -225,6 +226,7 @@ Nur wenn ein Kandidat redaktionell unhaltbar ist, darf er fehlen; im Extremfall:
               .map((z) => (Array.isArray(z) ? z.map((s) => s?.text).join(" ") : ""))
               .join(" / ")}"`,
           );
+          notiere(state, GRUND.SCHLAGZEILE);
           continue;
         }
         // KOPFZEILE UND NOTIZ DÜRFEN KEINEN POST KOSTEN (13.08.2026).
@@ -283,6 +285,7 @@ Nur wenn ein Kandidat redaktionell unhaltbar ist, darf er fehlen; im Extremfall:
           console.log(
             `  Pick verworfen (ausgeschriebene Umlaute): ${umlautFehler.join(", ")}`,
           );
+          notiere(state, GRUND.UMLAUTE);
           continue;
         }
         brauchbar.push(p);
@@ -294,6 +297,7 @@ Nur wenn ein Kandidat redaktionell unhaltbar ist, darf er fehlen; im Extremfall:
         console.log(
           `::warning::Instagram: Auswahl leer trotz Kandidaten — Slot möglicherweise verloren.`,
         );
+        notiere(state, GRUND.AUSWAHL_LEER);
       }
       return brauchbar;
     } catch (err) {
@@ -448,7 +452,7 @@ async function prepare() {
         `Instagram: Ersatz-Runde ${runde} — ${offen} Slot(s) offen, ${pool.length} Kandidaten übrig.`,
       );
     }
-    const picks = await pickAndWriteCopy(pool, offen);
+    const picks = await pickAndWriteCopy(pool, offen, state);
     if (picks.length === 0) break;
 
     // Beim Kürzen aufs Kontingent haben Breaking-Picks immer Vorrang.
@@ -537,6 +541,7 @@ async function prepare() {
           console.log(
             `  ${article.slug}: übersprungen — kein taugliches Bild (${tor.grund})`,
           );
+          notiere(state, GRUND.KEIN_BILD, article.slug);
           continue;
         }
       }
@@ -575,6 +580,7 @@ async function prepare() {
         console.log(
           `  ${article.slug}: kein Bildmaterial und Typo-Karte heute schon genutzt — übersprungen`,
         );
+        notiere(state, GRUND.TYPO_DECKEL, article.slug);
         continue;
       }
       const badge =
@@ -716,6 +722,7 @@ async function prepare() {
           console.log(
             `::warning::Abnahme abgelehnt ${article.slug}: ${abnahme.fehler.join("; ")}`,
           );
+          notiere(state, GRUND.ABNAHME, article.slug);
           console.log(`  Messwerte: ${JSON.stringify(abnahme.messwerte)}`);
           continue;
         }
@@ -948,7 +955,13 @@ async function publish() {
       console.log(
         `  Grafik nicht erreichbar (Deploy zu langsam?) — Post entfällt: ${item.slug}`,
       );
-      fehlgeschlagen.push({ slug: item.slug, nichtBreaking: item.nichtBreaking === true });
+      // Grund mitgeben: ig-unmark traegt ihn ins Tagesregister ein, damit
+      // die Tagesbilanz abends sagen kann, WORAN es lag.
+      fehlgeschlagen.push({
+        slug: item.slug,
+        nichtBreaking: item.nichtBreaking === true,
+        grund: GRUND.NICHT_ERREICHBAR,
+      });
       continue;
     }
     try {
@@ -993,7 +1006,11 @@ async function publish() {
       );
     } catch (err) {
       console.log(`  ✗ Post fehlgeschlagen für ${item.slug}: ${err.message}`);
-      fehlgeschlagen.push({ slug: item.slug, nichtBreaking: item.nichtBreaking === true });
+      fehlgeschlagen.push({
+        slug: item.slug,
+        nichtBreaking: item.nichtBreaking === true,
+        grund: GRUND.INSTAGRAM,
+      });
     }
   }
 
@@ -1025,6 +1042,7 @@ run()
     console.error(`Instagram-${mode} fehlgeschlagen:`, err.message);
   })
   .finally(() => {
+    laufBericht();
     torBericht();
     verbrauchBericht();
   });

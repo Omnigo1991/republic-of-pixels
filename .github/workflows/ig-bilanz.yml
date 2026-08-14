@@ -30,9 +30,30 @@ jobs:
             );
             console.log(`Heute ${posts.length} Instagram-Post(s):`);
             for (const [slug, iso] of posts) console.log(`  ${iso}  ${slug}`);
+
+            // GESCHEITERTE ANLAEUFE MIT GRUND (Tim, 14.08.2026): Bisher sagte
+            // die Bilanz nur, DASS Posts fehlen. An dem Tag fielen drei Slots
+            // an drei verschiedenen Stellen aus, und um das zu sehen, musste
+            // man die Protokolle aller acht Laeufe einzeln lesen. Jetzt steht
+            // der Grund in derselben Mail, die ohnehin kommt.
+            const ausfaelle = state.instagram?.ausfaelle?.[heute] ?? {};
+            const paare = Object.entries(ausfaelle).filter(([, n]) => n > 0);
+            const gescheitert = paare.reduce((a, [, n]) => a + n, 0);
+            if (gescheitert > 0) {
+              console.log(`Gescheiterte Anlaeufe heute: ${gescheitert}`);
+              for (const [grund, n] of paare.sort((a, b) => b[1] - a[1])) {
+                console.log(`  ${n}x  ${grund}`);
+              }
+            } else {
+              console.log("Keine gescheiterten Anlaeufe heute.");
+            }
+
             const SOLL = 5;
             if (posts.length < SOLL) {
-              console.log(`::error::Instagram-Tagesbilanz: nur ${posts.length}/${SOLL} Posts heute — News-Pipeline-Logs pruefen.`);
+              const woran = gescheitert > 0
+                ? ` Gescheiterte Anlaeufe: ${paare.map(([g, n]) => `${g} (${n})`).join(", ")}.`
+                : " Keine gescheiterten Anlaeufe verzeichnet — es fehlten schlicht Kandidaten oder Zeitfenster.";
+              console.log(`::error::Instagram-Tagesbilanz: nur ${posts.length}/${SOLL} Posts heute.${woran}`);
               process.exit(1);
             }
             console.log(`Soll erfuellt (${posts.length}/${SOLL}).`);
