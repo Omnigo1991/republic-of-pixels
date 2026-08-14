@@ -30,6 +30,15 @@ const AUSNAHMEN = new Set([
 
 const VOKALE = new Set(["a", "e", "i", "o", "u", "ä", "ö", "ü", "y"]);
 
+// FUGEN-"ue" (Fund 14.08.2026, Guide-Entwurf): In "zuerst" stossen "zu" und
+// "erst" aneinander — das "ue" ist eine Wortfuge, kein ausgeschriebenes "ü".
+// Der Waechter meldete es als Verstoss; auf Instagram haette das Wort einen
+// Post verworfen. Ein Muster dafuer gibt es nicht ohne Woerterbuch, darum
+// die gaengigen Faelle als Ausnahmen.
+for (const w of ["zuerst", "allzuerst", "zuende", "zueinander", "zuoberst", "zuunterst"]) {
+  AUSNAHMEN.add(w);
+}
+
 // NICHT ÜBER TRENNZEICHEN HINWEG PRÜFEN (Fehler 14.08.2026, ein Post).
 //
 // Die erste Fassung entfernte alle Nicht-Buchstaben aus dem Wort. Damit
