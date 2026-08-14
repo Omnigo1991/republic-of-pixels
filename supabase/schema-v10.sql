@@ -56,34 +56,3 @@ as $$
 $$;
 
 grant execute on function public.statistik_herkunft(timestamptz) to authenticated;
-
--- PRÜFZAHL FÜR DAS COCKPIT.
---
--- Die Summe der Herkunft muss exakt der Kachel "Besucher 7 Tage" entsprechen
--- — beides ist "verschiedene Besucher im selben Fenster". Damit das Cockpit
--- das selbst nachrechnen kann, ohne eine zweite Abfrage zu bauen, liefert
--- diese Funktion beide Werte aus derselben Quelle.
---
--- WARUM ÜBERHAUPT: Am 13.08. stand "Besucher 7 Tage" höher als "Besucher
--- gesamt" — rechnerisch unmöglich, und niemandem wäre es aufgefallen, wenn
--- Tim nicht hingesehen hätte. Eine Zahl, die niemand nachrechnet, ist eine
--- Zahl, der man nicht trauen kann.
-create or replace function public.statistik_pruefung(seit timestamptz)
-returns table (besucher_fenster integer, herkunft_summe integer)
-language sql
-stable
-security invoker
-set search_path = public
-as $$
-  select
-    (select count(distinct visitor)::int
-       from public.page_views where created_at >= seit),
-    (select count(*)::int from (
-       select distinct on (visitor) visitor
-       from public.page_views
-       where created_at >= seit
-       order by visitor, created_at asc
-     ) t);
-$$;
-
-grant execute on function public.statistik_pruefung(timestamptz) to authenticated;
