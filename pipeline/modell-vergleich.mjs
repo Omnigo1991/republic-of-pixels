@@ -47,8 +47,21 @@ async function main() {
   mkdirSync(AUS, { recursive: true });
 
   console.log("Feeds abrufen …");
-  const kandidaten = await fetchAllFeeds(FEEDS);
-  console.log(`  ${kandidaten.length} Kandidaten gefunden`);
+  // fetchAllFeeds liefert ein Ergebnis PRO FEED, nicht eine flache Liste von
+  // Meldungen — genau wie in run.mjs muss erst flachgeklopft werden.
+  //
+  // ZWEITER FEHLSCHLAG AM 14.08.2026: Ich hatte das Rueckgabeformat geraten
+  // statt nachzusehen. Die "33 Kandidaten" im Protokoll waren 33 FEEDS, und
+  // keiner davon hat ein Feld "title" oder "link" — also blieb die Auswahl
+  // leer. Der Lauf davor scheiterte an einer geratenen Feldbedingung. Zweimal
+  // dieselbe Ursache: geraten statt geprueft.
+  const ergebnisseFeeds = await fetchAllFeeds(FEEDS);
+  const cutoff = Date.now() - 48 * 3600000;
+  const kandidaten = ergebnisseFeeds
+    .flatMap((r) => r.items ?? [])
+    .filter((it) => it.publishedAt && it.publishedAt.getTime() > cutoff)
+    .sort((a, b) => b.publishedAt - a.publishedAt);
+  console.log(`  ${kandidaten.length} Meldungen aus den letzten 48 Stunden`);
 
   // Bewusst OHNE Claude ausgewaehlt: Die Auswahl soll den Vergleich nicht
   // beeinflussen, und beide Modelle sollen dieselben Quellen bekommen.
@@ -61,6 +74,31 @@ async function main() {
   // prueft die Schleife unten bereits.
   const auswahl = kandidaten.filter((k) => k.title && k.link);
   console.log(`  ${auswahl.length} davon mit Titel und Link`);
+
+  // TROCKENLAUF: Sammeln und Volltext pruefen, ohne Claude zu fragen. Damit
+  // laesst sich der ganze Vorlauf ohne API-Schluessel testen — genau das
+  // haette die zwei Fehlschlaege oben verhindert.
+  if (process.env.VERGLEICH_TROCKEN) {
+    console.log("\nTrockenlauf — es wird kein Text geschrieben.\n");
+    let brauchbar = 0;
+    for (const item of auswahl.slice(0, ANZAHL * 4)) {
+      let text = "";
+      try {
+        // extractArticleText liefert ein OBJEKT {ok, text, ogImage, ...},
+        // keinen String — siehe run.mjs, Zeile 474.
+        text = (await extractArticleText(item.link)).text ?? "";
+      } catch {
+        // Wie im echten Lauf: nicht abrufbar ist kein Absturz.
+      }
+      const ok = text.length >= 400;
+      if (ok) brauchbar++;
+      console.log(`  ${ok ? "OK  " : "duenn"} ${String(text.length).padStart(6)} Zeichen  ${item.title.slice(0, 60)}`);
+      if (brauchbar >= ANZAHL) break;
+    }
+    console.log(`\n${brauchbar} von ${ANZAHL} benoetigten Quellen haetten brauchbaren Volltext.`);
+    if (brauchbar < ANZAHL) process.exitCode = 1;
+    return;
+  }
 
   const ergebnisse = [];
   const markdown = ["# Modell-Vergleich", "", `Erstellt am ${new Date().toISOString()}`, ""];
@@ -76,7 +114,10 @@ async function main() {
     console.log(`\n[${i + 1}/${ANZAHL}] ${item.title.slice(0, 70)}`);
     let text;
     try {
-      text = await extractArticleText(item.link);
+      // extractArticleText liefert ein OBJEKT {ok, text, ogImage, ...},
+      // keinen String (run.mjs, Zeile 474). Ich hatte das geraten — der
+      // Rohtext waere als "[object Object]" in den Prompt gewandert.
+      text = (await extractArticleText(item.link)).text ?? "";
     } catch (err) {
       console.log(`  Quelltext nicht lesbar (${err.message}) — uebersprungen`);
       continue;
