@@ -1,0 +1,141 @@
+{
+  "slug": "gpu-preise-jahresbilanz-tracking-2026",
+  "title": "GPU-Preise nach einem Jahr Tracking: Jede Karte teurer",
+  "subtitle": "PC Gamer hat zwölf Monate lang wöchentlich die günstigsten Grafikkartenpreise erfasst — der Befund fällt eindeutig aus",
+  "excerpt": "Ein Jahr wöchentliche Preiserfassung, 14 aktuelle Grafikkarten, kein einziger Preisrückgang: Die RTX 5090 kostet mittlerweile fast das Doppelte, die Speicherkrise treibt den Rest hinterher.",
+  "seoTitle": "GPU-Preise 2026: Alle Grafikkarten teurer als vor Jahr",
+  "metaDescription": "Ein Jahr Preistracking zeigt: Alle aktuellen Grafikkarten kosten mehr als im August 2025. Die RTX 5090 legt um 83 Prozent zu, die Speicherkrise treibt den Markt.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "tags": [
+    "Grafikkarten",
+    "Nvidia",
+    "AMD",
+    "Intel Arc",
+    "Hardware-Preise",
+    "PC-Hardware"
+  ],
+  "tldr": [
+    "PC Gamer verfolgt seit dem 14. August 2025 wöchentlich die günstigsten Preise aller aktuellen Grafikkarten von Nvidia, AMD und Intel.",
+    "Nach zwölf Monaten ist keine einzige der 14 erfassten Karten günstiger geworden — die RTX 5090 stieg von 2400 auf 4400 US-Dollar.",
+    "Im Oktober 2025 waren fast alle GPUs ausser der RTX 5090 kurzzeitig zum oder unter dem UVP erhältlich.",
+    "Seit Ende der Black-Friday-Woche im November treibt die Speicherkrise die Preise wieder nach oben, beginnend bei der RTX 5080."
+  ],
+  "whyItMatters": "Die Grafikkarte ist der teuerste Einzelposten in fast jedem Spiele-PC — und der einzige, dessen Preis sich innerhalb eines Jahres im Extremfall fast verdoppelt hat. Wer aufrüsten oder neu bauen will, zahlt heute für dieselbe Leistungsklasse deutlich mehr als noch im Herbst, ohne dass eine Entspannung absehbar wäre.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Seit dem 14. August 2025 protokolliert die Redaktion von PC Gamer wöchentlich, was die jeweils günstigste lieferbare Version jeder aktuellen Grafikkarte von Nvidia, AMD und Intel kostet. Nach exakt zwölf Monaten liegt nun die Jahresbilanz vor — und sie kennt keine Ausnahme: Keine einzige der 14 erfassten Karten ist heute billiger als zu Beginn der Messreihe. Die Spanne reicht von einem moderaten Aufschlag von 2,9 Prozent bis zu einer Verdopplung im Spitzensegment."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "+83,3 %",
+          "label": "Preisanstieg der GeForce RTX 5090 binnen zwölf Monaten"
+        },
+        {
+          "value": "14",
+          "label": "erfasste Grafikkarten — keine davon wurde günstiger"
+        },
+        {
+          "value": "4400 $",
+          "label": "günstigster Neupreis der RTX 5090 im August 2026"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Was gemessen wurde — und was nicht"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Methodik ist bewusst schmal gehalten: Erfasst wird pro Woche der niedrigste Preis für eine originalverpackte Neuware bei einem seriösen Händler. Refurbished-Ware, Open-Box-Angebote und dubiose Marktplatzverkäufer fallen heraus. Damit bildet die Reihe nicht den Marktdurchschnitt ab, sondern den Betrag, den man in einer bestimmten Woche mindestens hinlegen musste, um an den gewünschten Chip zu kommen. Die tatsächlichen Durchschnittspreise lagen laut PC Gamer häufig spürbar höher — ein guter Einzeldeal bedeutet eben nicht, dass der restliche Markt mitzieht."
+    },
+    {
+      "type": "heading",
+      "text": "Die Verlierer sind Nvidias mittlere und obere Klassen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Auffällig ist die Verteilung: Am härtesten trifft es die Karten, die für viele Spielende überhaupt erst interessant sind. Die RTX 5060 Ti mit 16 GB stieg um mehr als die Hälfte, die RTX 5070 um gut ein Drittel. AMDs RX-9070-Serie kam vergleichsweise glimpflich davon — allerdings von einem ohnehin höheren Ausgangsniveau aus."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Nvidia RTX 5090: 2400 → 4400 $ (+83,3 %)",
+        "Nvidia RTX 5060 Ti 16 GB: 430 → 650 $ (+51,2 %)",
+        "Nvidia RTX 5070: 550 → 755 $ (+37,3 %)",
+        "Nvidia RTX 5070 Ti: 780 → 1030 $ (+32,1 %)",
+        "AMD RX 9060 XT 8 GB: 280 → 370 $ (+32,1 %)",
+        "AMD RX 9060 XT 16 GB: 370 → 470 $ (+27,0 %)",
+        "Intel Arc B580: 260 → 310 $ (+19,2 %)",
+        "AMD RX 9070 XT: 700 → 720 $ (+2,9 %)"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Der Oktober war das kurze Fenster"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Jahresverlauf zeigt, dass es zwischenzeitlich anders aussah. Zum Start der Messreihe im August 2025 lagen praktisch alle Karten über ihren offiziellen Preisempfehlungen — eine Mischung aus knapper Verfügbarkeit und hoher Nachfrage, die seit dem jeweiligen Launch angehalten hatte. Jede 2025 erschienene GPU teilte dieses Schicksal: wenig Startbestand, und die versprochenen Einführungspreise blieben Theorie. Im Oktober kippte das Bild kurzzeitig ins Positive, als nahezu jede Karte ausser der RTX 5090 zum oder unter dem UVP zu haben war."
+    },
+    {
+      "type": "paragraph",
+      "text": "Das Fenster schloss sich unmittelbar nach dem Ende der Black-Friday-Aktionen Ende November. Die Speicherkrise — von PC Gamer als \"RAMpocalypse\" bezeichnet — begann in den Grafikkartenmarkt durchzuschlagen. Den Anfang machte die RTX 5080, danach zog es fast die gesamte Preisleiter nach oben, und der Trend setzte sich ins neue Jahr fort. Die Wochenwerte der Datenreihe zeigen den Bruch deutlich: Wo die RTX 5080 im Herbst noch bei rund 1000 Dollar lag, waren es wenige Monate später zeitweise über 1350 Dollar."
+    },
+    {
+      "type": "quote",
+      "text": "Und ich weiss nicht, wohin das von hier aus führen soll. Positive Gedanken sind willkommen.",
+      "attribution": "PC Gamer"
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Zahlen stammen aus dem US-Markt und lassen sich nicht eins zu eins auf Europa übertragen; Steuern, Wechselkurse und Händlerstrukturen verschieben das Bild. Die Richtung ist aber überall dieselbe, weil die Ursache dieselbe ist: Speicherbausteine sind knapp und teuer, und die Nachfrage aus dem KI-Sektor konkurriert direkt mit dem Consumer-Geschäft. Für Spielende heisst das vor allem, die Erwartungshaltung zu justieren. Eine Karte der Einstiegs- und Mittelklasse, die vor einem Jahr klar unter 400 Dollar zu haben war, liegt heute oft darüber — und der klassische Ratschlag, einfach auf den nächsten Sale zu warten, hat sich in diesem Jahr als schlechter Plan erwiesen. Wer eine funktionierende GPU besitzt, fährt derzeit mit reduzierten Detailstufen und Upscaling günstiger als mit einem Upgrade."
+    }
+  ],
+  "poll": {
+    "question": "Wie geht ihr mit den aktuellen Grafikkartenpreisen um?",
+    "options": [
+      "Ich behalte meine alte Karte und drehe die Regler runter",
+      "Ich kaufe gebraucht statt neu",
+      "Ich beisse in den sauren Apfel und zahle den Aufpreis",
+      "Ich weiche auf Konsole oder Cloud aus"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-14T19:04:36.308Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "particles",
+  "sources": [
+    {
+      "title": "We've been tracking graphics card prices for exactly one year and it's never been worse than this",
+      "url": "https://www.pcgamer.com/hardware/graphics-cards/weve-been-tracking-graphics-card-prices-for-exactly-one-year-and-its-never-been-worse-than-this/",
+      "publisher": "PC Gamer"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/gpu-preise-jahresbilanz-tracking-2026.webp",
+    "alt": "GPU-Preise nach einem Jahr Tracking: Jede Karte teurer",
+    "credit": "Bild: PC Gamer",
+    "sourceUrl": "https://www.pcgamer.com/hardware/graphics-cards/weve-been-tracking-graphics-card-prices-for-exactly-one-year-and-its-never-been-worse-than-this/",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "nvidia-rtx-5090-mainboard-bundles-taiwan-2026",
+    "amd-radeon-rx-9000-preiserhoehung-2026",
+    "grafikkarten-preise-asien-speicherkrise-2026"
+  ]
+}
