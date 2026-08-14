@@ -52,15 +52,28 @@ async function main() {
 
   // Bewusst OHNE Claude ausgewaehlt: Die Auswahl soll den Vergleich nicht
   // beeinflussen, und beide Modelle sollen dieselben Quellen bekommen.
-  const auswahl = kandidaten
-    .filter((k) => k.title && k.link && (k.summary ?? "").length > 120)
-    .slice(0, ANZAHL);
+  //
+  // FILTER KORRIGIERT (14.08.2026): Die erste Fassung verlangte einen
+  // Feed-Anriss von ueber 120 Zeichen. Beim ersten echten Lauf hatte keiner
+  // der 33 Kandidaten einen so langen Anriss — das Ergebnis war leer, ohne
+  // dass irgendwo stand warum. Die Anrisslaenge war ohnehin das falsche
+  // Merkmal: Entscheidend ist, ob sich der VOLLTEXT holen laesst, und das
+  // prueft die Schleife unten bereits.
+  const auswahl = kandidaten.filter((k) => k.title && k.link);
+  console.log(`  ${auswahl.length} davon mit Titel und Link`);
 
   const ergebnisse = [];
   const markdown = ["# Modell-Vergleich", "", `Erstellt am ${new Date().toISOString()}`, ""];
 
-  for (const [i, item] of auswahl.entries()) {
-    console.log(`\n[${i + 1}/${auswahl.length}] ${item.title.slice(0, 70)}`);
+  // Solange weitersuchen, bis genug Quellen mit brauchbarem Volltext
+  // beisammen sind — ein nicht abrufbarer Artikel soll den Vergleich nicht
+  // um eine Quelle aermer machen.
+  let versuche = 0;
+  for (const item of auswahl) {
+    if (ergebnisse.length >= ANZAHL || versuche >= ANZAHL * 4) break;
+    versuche++;
+    const i = ergebnisse.length;
+    console.log(`\n[${i + 1}/${ANZAHL}] ${item.title.slice(0, 70)}`);
     let text;
     try {
       text = await extractArticleText(item.link);
@@ -108,6 +121,15 @@ async function main() {
   writeFileSync(join(AUS, "vergleich.json"), JSON.stringify(ergebnisse, null, 2) + "\n");
   writeFileSync(join(AUS, "vergleich.md"), markdown.join("\n"));
   console.log(`\n${ergebnisse.length} Quelle(n) mit je zwei Fassungen geschrieben.`);
+  // NICHT STILL LEER AUSGEHEN: Beim ersten Lauf kam eine leere Datei heraus,
+  // und der Grund stand nirgends. Ein leeres Ergebnis ist ab jetzt ein
+  // sichtbarer Fehlschlag.
+  if (ergebnisse.length === 0) {
+    console.log(
+      `::error::Modell-Vergleich leer: ${auswahl.length} Kandidaten geprueft, bei keinem war der Volltext abrufbar.`,
+    );
+    process.exitCode = 1;
+  }
   verbrauchBericht();
 }
 
