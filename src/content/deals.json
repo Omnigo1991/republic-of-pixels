@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-14T19:04:40.673Z",
+  "updatedAt": "2026-08-14T21:48:15.757Z",
   "deals": [
     {
       "appId": 1142710,
@@ -24,6 +24,17 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3527290/e8f91974f9a7469500fe1aed44a62c9467d328c9/capsule_184x69_alt_assets_3.jpg?t=1786470571"
     },
     {
+      "appId": 1941540,
+      "title": "Mafia: The Old Country",
+      "discountPercent": 40,
+      "originalPrice": 4999,
+      "finalPrice": 2999,
+      "currency": "EUR",
+      "endsAt": "2026-08-28T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1941540/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1941540/4cba4ed7de77ea84d94e22eef5cd8c9b284e5b25/capsule_184x69.jpg?t=1786743625"
+    },
+    {
       "appId": 2764460,
       "title": "Sandustry",
       "discountPercent": 35,
@@ -35,15 +46,15 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2764460/f0a29d6c91be4e91e9fa2f384dd5ae695bfd6b5b/capsule_184x69.jpg?t=1786703049"
     },
     {
-      "appId": 3091140,
-      "title": "Lootbound",
-      "discountPercent": 35,
-      "originalPrice": 1499,
-      "finalPrice": 974,
+      "appId": 2358720,
+      "title": "Black Myth: Wukong",
+      "discountPercent": 30,
+      "originalPrice": 5999,
+      "finalPrice": 4199,
       "currency": "EUR",
-      "endsAt": "2026-08-28T17:00:42.000Z",
-      "url": "https://store.steampowered.com/app/3091140/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3091140/3312fff1cb61f42b46e9b2c864ecf2d124cfd8dd/capsule_184x69.jpg?t=1786719023"
+      "endsAt": "2026-08-25T16:00:00.000Z",
+      "url": "https://store.steampowered.com/app/2358720/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2358720/b7f722ddd5e23503f598586aa3700dd4d827bb2d/capsule_184x69.jpg?t=1760601605"
     },
     {
       "appId": 1478500,
@@ -55,17 +66,6 @@
       "endsAt": "2026-08-18T17:00:09.000Z",
       "url": "https://store.steampowered.com/app/1478500/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1478500/44da9fb07ebe477387355d7fce29560b55125cce/capsule_184x69.jpg?t=1785911674"
-    },
-    {
-      "appId": 2950790,
-      "title": "IRON NEST: Heavy Turret Simulator",
-      "discountPercent": 25,
-      "originalPrice": 1999,
-      "finalPrice": 1499,
-      "currency": "EUR",
-      "endsAt": "2026-08-20T17:00:32.000Z",
-      "url": "https://store.steampowered.com/app/2950790/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2950790/922472560f653fd897313ab7a10dd86b018d373f/capsule_184x69.jpg?t=1786639727"
     }
   ]
 }
