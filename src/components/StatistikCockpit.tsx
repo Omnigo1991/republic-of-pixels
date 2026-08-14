@@ -24,6 +24,8 @@ interface Kennzahlen {
   registrierteKonten: number;
   herkunft: { quelle: string; besucher: number }[];
   verlauf: Tageswert[];
+  // Verletzte Rechenregeln (leer = alle Zahlen in sich stimmig).
+  widersprueche: string[];
 }
 
 // Rückgabezeilen der Statistik-Funktionen aus supabase/schema-v9.sql.
@@ -32,19 +34,24 @@ interface VerlaufZeile {
   aufrufe: number;
   besucher: number;
 }
+// schema-v10 liefert gruppierte Zeilen (referrer, ist_ig, besucher).
+// schema-v9 lieferte eine Zeile PRO BESUCHER (visitor, referrer, path).
+// Beide Formen werden gelesen, damit das Cockpit auch dann richtig anzeigt,
+// wenn schema-v10.sql im SQL-Editor noch nicht ausgefuehrt wurde.
 interface HerkunftZeile {
-  visitor: string;
   referrer: string | null;
-  path: string;
+  ist_ig?: boolean;
+  besucher?: number;
+  path?: string;
 }
 
 // Herkunfts-Klassifikation: der erste Aufruf eines Besuchers in den letzten
 // 7 Tagen bestimmt seine Quelle. Landet jemand ohne Referrer direkt auf /ig,
 // kam er über den Instagram-Bio-Link (In-App-Browser senden oft keinen
 // Referrer). Alte Einträge ohne referrer-Spalte zählen als "Direkt".
-function quelleVon(referrer: string | null, path: string): string {
+function quelleVon(referrer: string | null, istIg: boolean): string {
   const ref = (referrer ?? "").toLowerCase();
-  if (ref.includes("instagram.") || path === "/ig") return "Instagram";
+  if (ref.includes("instagram.") || istIg) return "Instagram";
   if (ref.includes("google.")) return "Google";
   if (ref.includes("bing.")) return "Bing";
   if (ref.includes("duckduckgo.")) return "DuckDuckGo";
@@ -144,9 +151,12 @@ export function StatistikCockpit() {
       if (kontenError) throw kontenError;
 
       // Herkunft: pro Besucher zählt der erste Aufruf im 7-Tage-Fenster.
-      // Die Auswahl "erster Aufruf je Besucher" macht die Datenbank
-      // (distinct on) — vorher lief sie über eine begrenzte Zeilenmenge und
-      // sah nur die ältesten Besucher des Fensters.
+      // AUSWAHL UND GRUPPIERUNG machen beide die Datenbank (schema-v10).
+      // Vorher kam eine Zeile pro BESUCHER in den Browser — das lief in
+      // dieselbe Zeilengrenze wie der Fehler vom 13.08., nur an anderer
+      // Stelle: Die Herkunfts-Summe blieb dann hinter der Kachel
+      // "Besucher 7 Tage" zurueck. Jetzt kommen nur noch so viele Zeilen,
+      // wie es verschiedene Referrer gibt.
       const { data: refRows, error: refError } = await supabase.rpc(
         "statistik_herkunft",
         { seit: iso(jetzt - 7 * 86400000) },
@@ -154,8 +164,11 @@ export function StatistikCockpit() {
       if (refError) throw refError;
       const quellen = new Map<string, number>();
       for (const r of (refRows ?? []) as HerkunftZeile[]) {
-        const q = quelleVon(r.referrer ?? null, r.path);
-        quellen.set(q, (quellen.get(q) ?? 0) + 1);
+        // Alte Form: ein Besucher je Zeile, Kennzeichen steckt im Pfad.
+        const istIg = r.ist_ig ?? r.path === "/ig";
+        const anzahlBesucher = r.besucher ?? 1;
+        const q = quelleVon(r.referrer ?? null, istIg);
+        quellen.set(q, (quellen.get(q) ?? 0) + anzahlBesucher);
       }
       const herkunft = [...quellen.entries()]
         .sort((a, b) => b[1] - a[1])
@@ -194,6 +207,35 @@ export function StatistikCockpit() {
         besucher: e.besucher,
       }));
 
+      // ZAHLEN RECHNEN SICH SELBST NACH (Tim, 14.08.2026).
+      //
+      // Am 13.08. stand "Besucher 7 Tage" hoeher als "Besucher gesamt" —
+      // rechnerisch unmoeglich. Aufgefallen ist es nur, weil Tim hingesehen
+      // hat. Eine Zahl, die niemand nachrechnet, ist eine Zahl, der man
+      // nicht trauen kann.
+      //
+      // Diese Regeln MUESSEN immer gelten. Wird eine verletzt, stimmt die
+      // Erhebung nicht — dann steht das sichtbar im Cockpit, statt dass wir
+      // auf das naechste Bauchgefuehl warten.
+      const herkunftSumme = herkunft.reduce((n, h) => n + h.besucher, 0);
+      const regeln: [boolean, string][] = [
+        [heute <= tage7, "Aufrufe heute groesser als 7 Tage"],
+        [tage7 <= tage30, "Aufrufe 7 Tage groesser als 30 Tage"],
+        [tage30 <= gesamt, "Aufrufe 30 Tage groesser als gesamt"],
+        [besucherHeute <= besucher7, "Besucher heute mehr als 7 Tage"],
+        [besucher7 <= besucher30, "Besucher 7 Tage mehr als 30 Tage"],
+        [besucher30 <= besucherGesamt, "Besucher 30 Tage mehr als gesamt"],
+        [besucherHeute <= heute, "mehr Besucher als Aufrufe (heute)"],
+        [besucher7 <= tage7, "mehr Besucher als Aufrufe (7 Tage)"],
+        [besucher30 <= tage30, "mehr Besucher als Aufrufe (30 Tage)"],
+        [besucherGesamt <= gesamt, "mehr Besucher als Aufrufe (gesamt)"],
+        [
+          herkunftSumme === besucher7,
+          `Herkunft zaehlt ${herkunftSumme} Besucher, die Kachel oben ${besucher7}`,
+        ],
+      ];
+      const widersprueche = regeln.filter(([ok]) => !ok).map(([, text]) => text);
+
       setZahlen({
         heute,
         tage7,
@@ -208,12 +250,19 @@ export function StatistikCockpit() {
         registrierteKonten: registrierteKonten ?? 0,
         herkunft,
         verlauf,
+        widersprueche,
       });
       setStand(new Date());
       setFehler(null);
     } catch {
+      // ALTE ZAHLEN NICHT ALS AKTUELL AUSGEBEN (Fund 14.08.2026): Bisher
+      // wurde hier nur eine Meldung gesetzt und die zuletzt geladenen Zahlen
+      // blieben unveraendert stehen — inklusive der Zeitangabe "Stand".
+      // Faellt eine Aktualisierung aus, sieht das Cockpit dann aus wie
+      // immer, nur bewegt sich nichts mehr. Genau so entsteht der Eindruck,
+      // die Zahlen wuerden "manchmal stehenbleiben".
       setFehler(
-        "Statistik-Daten nicht verfügbar — wurde schema-v9.sql schon im SQL-Editor ausgeführt?"
+        "Zahlen konnten nicht aktualisiert werden. Angezeigt wird der letzte erfolgreiche Stand — nicht der aktuelle."
       );
     }
   }, [supabase]);
@@ -260,6 +309,19 @@ export function StatistikCockpit() {
       {fehler && (
         <div className="rounded-2xl border border-warning/40 bg-warning/10 p-5 text-sm text-text-primary">
           {fehler}
+        </div>
+      )}
+
+      {zahlen && zahlen.widersprueche.length > 0 && (
+        <div className="mt-4 rounded-2xl border border-warning/60 bg-warning/10 p-5">
+          <p className="text-sm font-semibold text-text-primary">
+            Diese Zahlen widersprechen sich — bitte nicht verwenden:
+          </p>
+          <ul className="mt-2 list-disc pl-5 text-sm text-text-secondary">
+            {zahlen.widersprueche.map((w) => (
+              <li key={w}>{w}</li>
+            ))}
+          </ul>
         </div>
       )}
 
