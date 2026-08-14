@@ -39,6 +39,7 @@ import { renderTypoCard } from "./lib/instagram-typo.mjs";
 import { holeSpielBildKandidaten } from "./lib/keyart.mjs";
 import { waehleBild, zaehleTorEntscheidung, torBericht } from "./lib/bildtor.mjs";
 import { pruefeHeadline, pruefeKicker, pruefeNotiz } from "./lib/headline.mjs";
+import { umschriebeneUmlaute } from "./lib/umlaut.mjs";
 import { pruefeGrafik } from "./lib/abnahme.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -254,6 +255,35 @@ Nur wenn ein Kandidat redaktionell unhaltbar ist, darf er fehlen; im Extremfall:
             `  Notiz weggelassen (${notizPruefung.fehler.join("; ")}): "${p.notiz ?? ""}"`,
           );
           p.notiz = null;
+        }
+        // AUSGESCHRIEBENE UMLAUTE (Tim, 14.08.2026 — zum dritten Mal).
+        //
+        // "ZURUECK" statt "ZURÜCK" stand am 12.08. auf einem Post, "WUERDET"
+        // und "laeuft" in meinem Notvorrat, "ueberrascht" heute in einem
+        // Testbild. Der Wächter dafür liegt seit dem 12.08. fertig in
+        // lib/umlaut.mjs — ich habe ihn nie eingehängt. Eine Regel, die nur
+        // im Prompt steht, ist keine Regel.
+        //
+        // Geprüft wird der Text, der INS BILD gebrannt wird. Ein Fehler dort
+        // ist nach dem Posten nicht mehr korrigierbar, ohne den Beitrag zu
+        // löschen. Der Pick wird verworfen und in der nächsten Runde neu
+        // angefordert — das kostet einen Anlauf, keinen Post.
+        const bildText = [
+          p.kicker,
+          ...(p.headlineLines ?? []).flatMap((z) =>
+            Array.isArray(z) ? z.map((s) => s?.text ?? "") : [],
+          ),
+          p.notiz,
+          p.caption,
+        ]
+          .filter(Boolean)
+          .join(" ");
+        const umlautFehler = umschriebeneUmlaute(bildText);
+        if (umlautFehler.length) {
+          console.log(
+            `  Pick verworfen (ausgeschriebene Umlaute): ${umlautFehler.join(", ")}`,
+          );
+          continue;
         }
         brauchbar.push(p);
       }
@@ -577,7 +607,13 @@ async function prepare() {
         try {
           await renderTypoCard({
             headlineLines: pick.headlineLines,
-            kicker: KICKER[article.category] ?? "GAMING-NEWS",
+            kicker: pick.kicker ?? KICKER[article.category] ?? "GAMING-NEWS",
+            // Die handschriftliche Notiz steht auf JEDEM Post (BILDREGELN,
+            // Abschnitt 6) — bisher fehlte sie auf der Typo-Karte, weil das
+            // alte Design sie gar nicht vorsah.
+            notiz: pick.notiz ?? null,
+            // Steuert den Icon-Satz (breaking/leaks/reviews/news).
+            kategorie: article.category,
             outPath: join(ROOT, "public", cardRel),
             chromium,
           });

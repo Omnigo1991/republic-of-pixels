@@ -23,6 +23,7 @@ import { extractArticleText } from "./lib/extract.mjs";
 import { waehleEinbettungen, gehtUmBewegtbild } from "./lib/embeds.mjs";
 import { acquireImage } from "./lib/images.mjs";
 import { validateArticle } from "./lib/validate.mjs";
+import { umschriebeneUmlaute } from "./lib/umlaut.mjs";
 import { pingIndexNow } from "./lib/indexnow.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -256,6 +257,21 @@ Hinweis zu body: quote-Blöcke nur verwenden, wenn die Quelle ein wörtliches Zi
   });
   // Sicherheitsnetz Schweizer Rechtschreibung: ß kommt nie auf die Seite.
   const draft = JSON.parse(JSON.stringify(parseJsonResponse(raw)).replaceAll("\u00df", "ss").replaceAll("ß", "ss"));
+
+  // AUSGESCHRIEBENE UMLAUTE (Tim, 14.08.2026): "ueberrascht" statt
+  // "überrascht" und Verwandtes. Hier nur eine WARNUNG, nicht wie bei
+  // Instagram ein Verwerfen — und das ist eine bewusste Abwägung:
+  //   - Ein Artikel ist lang; die Trefferfläche für einen Fehlalarm bei
+  //     einem Eigennamen ist deutlich grösser als bei einer Schlagzeile.
+  //   - Website-Text lässt sich nachträglich korrigieren, ein geposteter
+  //     Instagram-Beitrag mit eingebranntem Text nicht.
+  // Die Warnung färbt den Lauf sichtbar, statt still durchzulassen.
+  const umlautFunde = umschriebeneUmlaute(JSON.stringify(draft));
+  if (umlautFunde.length) {
+    console.log(
+      `::warning::Ausgeschriebene Umlaute im Artikel "${draft.title ?? "?"}": ${[...new Set(umlautFunde)].slice(0, 12).join(", ")}`,
+    );
+  }
 
   // UNTERZEILE OHNE SCHLUSSPUNKT (Tim, 13.08.2026): Von 172 Artikeln endeten
   // 97 mit Punkt und 75 ohne — reiner Zufall, weil die Vorgabe im Prompt
