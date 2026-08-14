@@ -859,17 +859,39 @@ function loadStateMerge(state) {
 
 // ---------- Phase 2: publish ----------
 
+// WARTEN, BIS DIE DATEI WIRKLICH DA IST — nicht nur, bis der Server
+// irgendetwas antwortet (verschaerft 14.08.2026).
+//
+// ANLASS: Im 15:00-Lauf lehnte Instagram einen Bild-Post ab mit "Only photo
+// or video can be accepted as media type". Die Datei war zu dem Zeitpunkt
+// technisch einwandfrei (JPEG, 1080x1350, sRGB) — Instagram hat unter der
+// Adresse aber offenbar nicht das Bild bekommen.
+//
+// Die alte Pruefung fragte nur nach dem Status. Liefert Vercel waehrend des
+// Deploys eine Fehlerseite MIT Status 200 aus, galt das als "Grafik ist da"
+// und wir reichten die Seite an Instagram weiter. Jetzt muss die Antwort
+// zusaetzlich ein Bild oder Video sein und eine plausible Groesse haben.
+//
+// Das ist kein Beweis fuer die Ursache des Ausfalls — dafuer habe ich einen
+// einzigen Fall. Es schliesst aber eine reale Luecke und macht den naechsten
+// Fall lesbar: Gibt die Pruefung auf, steht jetzt im Protokoll, WAS unter
+// der Adresse lag.
 async function waitForUrl(url, maxMs = 6 * 60000) {
   const start = Date.now();
+  let letzterBefund = "keine Antwort";
   while (Date.now() - start < maxMs) {
     try {
       const res = await fetch(url, { method: "HEAD" });
-      if (res.ok) return true;
-    } catch {
-      // Netzwerkfehler → weiter warten
+      const typ = res.headers.get("content-type") ?? "";
+      const groesse = Number(res.headers.get("content-length") ?? 0);
+      if (res.ok && /^(image|video)\//i.test(typ) && groesse > 10000) return true;
+      letzterBefund = `HTTP ${res.status}, Typ "${typ || "keiner"}", ${groesse} Bytes`;
+    } catch (err) {
+      letzterBefund = `Netzwerkfehler (${err.message})`;
     }
     await new Promise((r) => setTimeout(r, 15000));
   }
+  console.log(`  Zuletzt gesehen unter ${url}: ${letzterBefund}`);
   return false;
 }
 
