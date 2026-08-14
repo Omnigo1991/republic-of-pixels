@@ -30,8 +30,26 @@ const AUSNAHMEN = new Set([
 
 const VOKALE = new Set(["a", "e", "i", "o", "u", "ä", "ö", "ü", "y"]);
 
+// NICHT ÜBER TRENNZEICHEN HINWEG PRÜFEN (Fehler 14.08.2026, ein Post).
+//
+// Die erste Fassung entfernte alle Nicht-Buchstaben aus dem Wort. Damit
+// klebten Bestandteile aneinander, die im Text getrennt stehen:
+// "GTA-6-Edition" wurde zu "gtaedition" — das "a" von GTA und das "E" von
+// Edition ergaben ein "ae", das es nie gab. Der Post wurde verworfen, der
+// Slot war weg.
+//
+// Ein Umlaut steht immer INNERHALB eines Wortteils, nie über einen
+// Bindestrich oder eine Ziffer hinweg. Also wird jedes Wort an allen
+// Nicht-Buchstaben zerlegt und jeder Teil einzeln geprüft.
 function istUmschrieben(wortRoh) {
-  const wort = wortRoh.toLowerCase().replace(/[^a-zäöüß]/g, "");
+  return String(wortRoh)
+    .toLowerCase()
+    .split(/[^a-zäöüß]+/)
+    .filter(Boolean)
+    .some(pruefeTeil);
+}
+
+function pruefeTeil(wort) {
   if (wort.length < 3) return false;
   if (AUSNAHMEN.has(wort)) return false;
 

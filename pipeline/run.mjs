@@ -266,7 +266,18 @@ Hinweis zu body: quote-Blöcke nur verwenden, wenn die Quelle ein wörtliches Zi
   //   - Website-Text lässt sich nachträglich korrigieren, ein geposteter
   //     Instagram-Beitrag mit eingebranntem Text nicht.
   // Die Warnung färbt den Lauf sichtbar, statt still durchzulassen.
-  const umlautFunde = umschriebeneUmlaute(JSON.stringify(draft));
+  // NUR DEN TEXT PRUEFEN, NICHT DAS JSON (Fehler 14.08.2026): Die erste
+  // Fassung gab JSON.stringify(draft) hinein. Satzzeichen und Feldnamen
+  // klebten dort an echte Woerter — der Lauf um 11:00 meldete drei
+  // Fehlalarme, alle aus JSON-Syntax. Gesammelt werden jetzt nur die
+  // Zeichenketten-Werte, also der Text, den Leser sehen.
+  const textStuecke = [];
+  (function sammle(x) {
+    if (typeof x === "string") textStuecke.push(x);
+    else if (Array.isArray(x)) x.forEach(sammle);
+    else if (x && typeof x === "object") Object.values(x).forEach(sammle);
+  })(draft);
+  const umlautFunde = umschriebeneUmlaute(textStuecke.join(" "));
   if (umlautFunde.length) {
     console.log(
       `::warning::Ausgeschriebene Umlaute im Artikel "${draft.title ?? "?"}": ${[...new Set(umlautFunde)].slice(0, 12).join(", ")}`,
