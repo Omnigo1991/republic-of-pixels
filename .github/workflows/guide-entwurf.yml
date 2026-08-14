@@ -1,0 +1,53 @@
+# Guide-Entwurf (14.08.2026): Erzeugt einen Ratgeber-ENTWURF als Download.
+# Es wird NICHTS veroeffentlicht — Tim liest, beurteilt, und veroeffentlicht
+# von Hand. Guides sind eine neue Inhaltssorte; nichts Neues geht ungeprueft
+# auf die Seite.
+#
+# Start: GitHub → Actions → "Guide-Entwurf" → Run workflow
+#   thema:   z. B. "Einsteigertipps zu STALKER 2 nach Update 2.0"
+#   quellen: eine oder mehrere Adressen, mit Komma getrennt (Pflicht —
+#            ohne Quelltexte schreibt das Modell aus dem Gedaechtnis)
+name: Guide-Entwurf
+
+on:
+  workflow_dispatch:
+    inputs:
+      thema:
+        description: "Worum geht es? (z. B. Einsteigertipps zu STALKER 2)"
+        required: true
+      quellen:
+        description: "Quell-Adressen, mit Komma getrennt"
+        required: true
+
+# Nur Lesezugriff — dieser Lauf darf nichts ins Projekt schreiben.
+permissions:
+  contents: read
+
+jobs:
+  entwurf:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Dependencies installieren
+        run: npm ci
+
+      - name: Entwurf erzeugen
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GUIDE_THEMA: ${{ github.event.inputs.thema }}
+          GUIDE_QUELLEN: ${{ github.event.inputs.quellen }}
+        run: node pipeline/guide-entwurf.mjs
+
+      - name: Entwurf anhaengen
+        uses: actions/upload-artifact@v4
+        with:
+          name: guide-entwurf
+          path: guide-entwurf/
+          retention-days: 14

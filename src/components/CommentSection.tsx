@@ -129,10 +129,16 @@ export function CommentSection({ articleSlug }: { articleSlug: string }) {
     <section aria-labelledby="kommentare-heading" className="mt-4">
       <div className="mb-3 flex items-center justify-between">
         <h2 id="kommentare-heading" className="text-xl font-semibold tracking-tight text-text-primary">
-          Kommentare{" "}
-          <span className="text-text-tertiary">
-            ({kommentare.filter((k) => !k.deleted).length})
-          </span>
+          Kommentare
+          {/* Die Null verstecken (Tim-Freigabe 14.08.2026): "Kommentare (0)"
+              wirkt wie ein leeres Restaurant — die Zahl erscheint erst, wenn
+              mindestens ein Kommentar da ist. Der Aufruf "schreib den
+              ersten!" weiter unten übernimmt den leeren Zustand. */}
+          {kommentare.filter((k) => !k.deleted).length > 0 && (
+            <span className="text-text-tertiary">
+              {" "}({kommentare.filter((k) => !k.deleted).length})
+            </span>
+          )}
         </h2>
         {session ? (
           <button

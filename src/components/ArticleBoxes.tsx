@@ -35,8 +35,14 @@ export function ReviewBox({ review }: { review: Review }) {
   return (
     <div className="my-10 rounded-2xl border border-border-default bg-surface-card p-6 sm:p-8">
       <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
+        {/* "DAS SAGT DIE FACHPRESSE" statt "URTEIL VON REPUBLIC OF PIXELS"
+            (Tim-Freigabe 14.08.2026): Unsere Tests fassen die Tests der
+            Fachpresse zusammen — wir spielen die Spiele nicht selbst. Der
+            Fliesstext sagt das ehrlich ("laut PC Gamer"), aber die alte
+            Überschrift behauptete ein eigenes Urteil. Die Box verspricht
+            jetzt genau das, was drinsteckt. */}
         <p className="text-[13px] font-semibold tracking-wide text-text-tertiary">
-          URTEIL VON REPUBLIC OF PIXELS
+          DAS SAGT DIE FACHPRESSE
         </p>
         <ReviewLabelBadge label={review.label} />
       </div>
