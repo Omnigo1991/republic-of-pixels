@@ -26,7 +26,13 @@ import {
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { tmpdir } from "node:os";
-import { askClaude, parseJsonResponse } from "./lib/claude.mjs";
+import {
+  askClaude,
+  parseJsonResponse,
+  verbrauchBericht,
+  ClaudeAblehnung,
+  MODELL_URTEIL,
+} from "./lib/claude.mjs";
 import { renderInstagramCard } from "./lib/instagram-card.mjs";
 import { renderInstagramReel } from "./lib/instagram-reel.mjs";
 import { renderTypoCard } from "./lib/instagram-typo.mjs";
@@ -183,7 +189,20 @@ Nur wenn ein Kandidat redaktionell unhaltbar ist, darf er fehlen; im Extremfall:
       // schrift und Hashtags brach die Antwort mitten im Satz ab, das JSON war
       // unlesbar und der Lauf postete nichts. Tritt nur sporadisch auf, weil es
       // an der Textlaenge haengt — darum grosszuegig statt knapp bemessen.
-      raw = await askClaude({ system: IG_SYSTEM, prompt, maxTokens: 8000 });
+      // URTEILSAUFGABE (Tim, 14.08.2026): Kopfzeile, Schlagzeile und Notiz
+      // sind Tonfall und Haltung, nicht Fleissarbeit — und genau hier sind
+      // in der ersten Woche acht Fehler entstanden, die Tim finden musste.
+      // Wenige Aufrufe pro Tag, hoher Hebel: darum MODELL_URTEIL.
+      //
+      // Budget von 8000 auf 12000: siehe Hinweis in claude.mjs — das
+      // Nachdenken teilt sich das Budget mit der Antwort, und Opus denkt
+      // ausführlicher als Sonnet.
+      raw = await askClaude({
+        system: IG_SYSTEM,
+        prompt,
+        maxTokens: 12000,
+        model: MODELL_URTEIL,
+      });
       const picks = parseJsonResponse(raw).picks ?? [];
       // SCHLAGZEILEN-WÄCHTER (Tim, 11.08.2026): Die Regeln standen bisher nur
       // im Prompt; geprüft wurde nur, ob überhaupt eine Zeile da ist. Am
@@ -248,6 +267,18 @@ Nur wenn ein Kandidat redaktionell unhaltbar ist, darf er fehlen; im Extremfall:
       return brauchbar;
     } catch (err) {
       const kopf = raw.replace(/\s+/g, " ").slice(0, 160);
+      // Eine Ablehnung wiederholt sich zwangsläufig: Dieselbe Anfrage würde
+      // dreimal gestellt und dreimal abgelehnt. Sofort abbrechen statt drei
+      // Versuche zu verbrennen — der Lauf postet dann nicht.
+      if (err instanceof ClaudeAblehnung) {
+        console.log(
+          `  IG-Auswahl abgelehnt (${err.kategorie ?? "ohne Kategorie"}) — dieser Lauf postet nicht.`,
+        );
+        console.log(
+          `::warning::Instagram: Auswahl von Claude abgelehnt (${err.kategorie ?? "ohne Kategorie"}) — dieser Lauf postet nicht.`,
+        );
+        return [];
+      }
       if (versuch >= 2) {
         console.log(
           `  IG-Auswahl endgültig fehlgeschlagen (${err.message}) — dieser Lauf postet nicht.`,
@@ -880,7 +911,9 @@ if (!run) {
   console.error("Aufruf: node pipeline/instagram.mjs prepare|publish");
   process.exit(1);
 }
-run().catch((err) => {
-  // Instagram darf den Artikel-Publish nie blockieren: Fehler nur loggen.
-  console.error(`Instagram-${mode} fehlgeschlagen:`, err.message);
-});
+run()
+  .catch((err) => {
+    // Instagram darf den Artikel-Publish nie blockieren: Fehler nur loggen.
+    console.error(`Instagram-${mode} fehlgeschlagen:`, err.message);
+  })
+  .finally(verbrauchBericht);

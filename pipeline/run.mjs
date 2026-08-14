@@ -10,7 +10,15 @@ import { fileURLToPath } from "node:url";
 import { createHash } from "node:crypto";
 import { FEEDS } from "./feeds.mjs";
 import { fetchAllFeeds } from "./lib/rss.mjs";
-import { askClaude, parseJsonResponse } from "./lib/claude.mjs";
+import {
+  askClaude,
+  parseJsonResponse,
+  verbrauchBericht,
+  ClaudeAblehnung,
+  MODELL_URTEIL,
+  MODELL_TEXT,
+  MODELL_HANDWERK,
+} from "./lib/claude.mjs";
 import { extractArticleText } from "./lib/extract.mjs";
 import { waehleEinbettungen, gehtUmBewegtbild } from "./lib/embeds.mjs";
 import { acquireImage } from "./lib/images.mjs";
@@ -151,9 +159,21 @@ Wenn nichts den Kriterien genügt, antworte {"selected":[]}.`;
   // einzige Schritt, an dem der ganze Lauf hängt.
   for (let attempt = 0; ; attempt++) {
     try {
-      const raw = await askClaude({ system: EDITORIAL_SYSTEM, prompt, maxTokens: 3000 });
+      // URTEILSAUFGABE (Tim, 14.08.2026): Ein einziger Aufruf entscheidet,
+      // worüber wir überhaupt schreiben. Greift der daneben, hilft das beste
+      // Schreibmodell nichts mehr. Budget von 3000 auf 6000 erhöht, weil
+      // Opus vor der Antwort länger nachdenkt und sich das Budget mit der
+      // Antwort teilt (siehe Hinweis in claude.mjs).
+      const raw = await askClaude({
+        system: EDITORIAL_SYSTEM,
+        prompt,
+        maxTokens: 6000,
+        model: MODELL_URTEIL,
+      });
       return parseJsonResponse(raw).selected ?? [];
     } catch (err) {
+      // Eine Ablehnung wiederholt sich zwangsläufig — nicht nochmal fragen.
+      if (err instanceof ClaudeAblehnung) throw err;
       if (attempt >= 1) throw err;
       console.log(`  Auswahl fehlgeschlagen (${err.message}) — Wiederholung`);
     }
@@ -224,7 +244,16 @@ Antworte NUR mit einem JSON-Objekt mit exakt diesen Feldern:
 }
 Hinweis zu body: quote-Blöcke nur verwenden, wenn die Quelle ein wörtliches Zitat enthält. Zitate werden IMMER auf DEUTSCH wiedergegeben (Tim-Vorgabe 08.08.2026 — nicht alle Leser:innen können gut Englisch): fremdsprachige Originale präzise und neutral übersetzen, nichts zuspitzen oder weglassen; attribution bleibt die Person/Quelle.`;
 
-  const raw = await askClaude({ system: EDITORIAL_SYSTEM, prompt, maxTokens: 8000 });
+  // Artikeltext bleibt vorerst auf Sonnet (MODELL_TEXT) — der Wechsel auf
+  // Opus wartet auf Tims direkten Vergleich an denselben Quellen. Budget von
+  // 8000 auf 12000 erhöht: Das Nachdenken teilt sich das Budget mit der
+  // Antwort, und genau dieser Abbruch kostete am 10.08. zwei Posts.
+  const raw = await askClaude({
+    system: EDITORIAL_SYSTEM,
+    prompt,
+    maxTokens: 12000,
+    model: MODELL_TEXT,
+  });
   // Sicherheitsnetz Schweizer Rechtschreibung: ß kommt nie auf die Seite.
   const draft = JSON.parse(JSON.stringify(parseJsonResponse(raw)).replaceAll("\u00df", "ss").replaceAll("ß", "ss"));
 
@@ -304,7 +333,21 @@ Antworte NUR mit JSON, erstes Zeichen "{": {"fixes":[{"falsch":"exakter fehlerha
 Wenn fehlerfrei: {"fixes":[]}`;
 
   try {
-    const raw = await askClaude({ system: EDITORIAL_SYSTEM, prompt, maxTokens: 1200 });
+    // HANDWERK, BEWUSST DAS KLEINERE MODELL (Tim, 14.08.2026): Dieser
+    // Schritt darf AUSSCHLIESSLICH Tippfehler finden. Opus 5 neigt dazu,
+    // einen Auftrag auszuweiten und ungefragt Formulierungen zu verbessern —
+    // hier wäre das kein Gewinn, sondern ein Risiko. Denktiefe "low", weil
+    // Rechtschreibung kein Nachdenken braucht.
+    //
+    // Budget von 1200 auf 3000: Auch bei geringer Denktiefe teilt sich das
+    // Nachdenken das Budget mit der Antwort. 1200 war dafür zu knapp.
+    const raw = await askClaude({
+      system: EDITORIAL_SYSTEM,
+      prompt,
+      maxTokens: 3000,
+      model: MODELL_HANDWERK,
+      effort: "low",
+    });
     const fixes = (parseJsonResponse(raw).fixes ?? []).filter(
       (f) =>
         typeof f.falsch === "string" &&
@@ -470,7 +513,14 @@ async function main() {
       published++;
       console.log(`  ✓ Veröffentlicht: ${article.slug} (${check.wordCount} Wörter)`);
     } catch (err) {
-      console.log(`  Fehler bei "${label}": ${err.message} — Cluster übersprungen`);
+      // Ablehnung getrennt ausweisen: Das ist kein Fehler in unserem Code,
+      // sondern eine Entscheidung des Modells (typisch bei Hack- und
+      // Leak-Themen). Der Cluster fällt weg, der Lauf geht weiter.
+      if (err instanceof ClaudeAblehnung) {
+        console.log(`  Abgelehnt bei "${label}" (${err.kategorie ?? "ohne Kategorie"}) — Cluster übersprungen`);
+      } else {
+        console.log(`  Fehler bei "${label}": ${err.message} — Cluster übersprungen`);
+      }
     }
   }
 
@@ -494,6 +544,7 @@ async function main() {
   }
 
   console.log(`5/5 Fertig: ${published} Artikel geschrieben, State aktualisiert.`);
+  verbrauchBericht();
 }
 
 main().catch((err) => {
