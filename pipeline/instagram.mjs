@@ -688,14 +688,22 @@ async function prepare() {
           execFileSync(ffmpegPath, ["-y", "-i", pruefPfad, "-vframes", "1", tempBild], { stdio: "pipe" });
           pruefPfad = tempBild;
         }
-        // Erwartete Textzeilen im Bild: Auf der Marker-Karte zählen Kopfzeile
-        // und Notiz mit — beide sind cyan und damit hell. Die Notiz kann
-        // fehlen (siehe Ersatz-Regel in der Auswahl), darum wird sie nur
-        // mitgezählt, wenn sie auch gesetzt wurde. Auf der Typo-Karte gibt
-        // es beide nicht.
-        const zeilenSoll = alsTypoKarte
-          ? pick.headlineLines.length
-          : pick.headlineLines.length + 1 + (pick.notiz ? 1 : 0);
+        // Erwartete Textzeilen im Bild: Kopfzeile und Notiz zählen mit —
+        // beide sind cyan und damit hell. Die Notiz kann fehlen (siehe
+        // Ersatz-Regel in der Auswahl), darum wird sie nur mitgezählt, wenn
+        // sie auch gesetzt wurde.
+        //
+        // FRÜHER STAND HIER EIN SONDERFALL FÜR DIE TYPO-KARTE (behoben
+        // 14.08.2026): "Auf der Typo-Karte gibt es beide nicht." Das stimmte
+        // — bis ich der Typo-Karte am selben Tag eine Kopfzeile und eine
+        // Notiz gegeben habe. Die Abnahme erwartete danach 2 Zeilen und fand
+        // 4; der 15:49-Lauf hat deswegen keinen einzigen Post abgesetzt.
+        //
+        // Beide Karten haben jetzt denselben Textaufbau, also gilt für beide
+        // dieselbe Rechnung. Wer den Aufbau einer Karte ändert, muss hier
+        // nachsehen.
+        const zeilenSoll =
+          pick.headlineLines.length + 1 + (pick.notiz ? 1 : 0);
         const abnahme = await pruefeGrafik(
           pruefPfad,
           zeilenSoll,

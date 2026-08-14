@@ -181,8 +181,18 @@ export async function pruefeGrafik(pfad, zeilenSoll, art = "bild") {
   // passt. Täte er es nicht, bräche die Zeile um, und genau das fängt die
   // Zeilenzahl-Prüfung oben. Eine Pixel-Messung, die Bild nicht von Schrift
   // trennen kann, hätte hier nur gute Posts blockiert.
-  if (istTypo && Math.min(rand.links, rand.rechts) < 70) {
-    fehler.push(`Schrift zu nah am Rand (${Math.min(rand.links, rand.rechts)} px, min. 70)`);
+  // GRENZE 50 STATT 70 (Korrektur 14.08.2026): Die alte Typo-Karte hielt
+  // ihren Satzspiegel bei 90 % der Breite, also rund 108 px Rand — 70 war
+  // dort bequem. Die neue Karte übernimmt nach Tims Vorgabe die Masse der
+  // Postvorlage: 60 px Rand. Damit KANN sie 70 nicht mehr erreichen; der
+  // 15:49-Lauf scheiterte an gemessenen 69 px.
+  //
+  // 50 lässt die 60 px Satzspiegel samt Kantenglättung durch und fängt
+  // weiterhin den Fall, auf den es ankommt: Reicht die Einpassung nicht aus
+  // (sehr lange Zeile, Schrift schon an der Untergrenze), läuft die Zeile
+  // über den Rand hinaus und die Tinte beginnt bei nahezu 0.
+  if (istTypo && Math.min(rand.links, rand.rechts) < 50) {
+    fehler.push(`Schrift zu nah am Rand (${Math.min(rand.links, rand.rechts)} px, min. 50)`);
   }
   // Der Kontrast-Streifen liegt links VOM Text (x 20–80). Im Marker-Layout
   // beginnt die Schrift bei 60 — der Streifen würde sie anschneiden und den
