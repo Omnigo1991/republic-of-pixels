@@ -32,8 +32,8 @@ export function Masthead({
 }) {
   return (
     <>
-      <div className="sticky top-0 z-50 overflow-hidden bg-accent text-[#0F0D2C]">
-        <div aria-hidden="true" className="pointer-events-none absolute inset-0 hidden lg:block">
+      <div className="sticky top-0 z-50 bg-accent text-[#0F0D2C]">
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 hidden overflow-hidden lg:block">
           {KOPF_STAUB.map((p, i) => (
             <span
               key={i}

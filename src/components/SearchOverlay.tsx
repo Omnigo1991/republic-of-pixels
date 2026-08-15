@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { getAllArticles } from "@/lib/articles";
 import { CATEGORY_LABELS } from "@/lib/types";
@@ -99,37 +99,98 @@ export function SearchPanel({
   );
 }
 
+// AUSFAHRENDES SUCHFELD (Tim, 15.08.2026): kein Pop-up-Fenster mehr —
+// ein Klick auf die Lupe faehrt das Feld direkt in der Kopfzeile aus.
+// Die Trefferliste haengt darunter als Panel, Escape und Klick daneben
+// schliessen wieder.
 export function SearchTrigger() {
   const [open, setOpen] = useState(false);
+  const [query, setQuery] = useState("");
+  const huelle = useRef<HTMLDivElement>(null);
+  const articles = useMemo(() => getAllArticles(), []);
+  const treffer = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return [];
+    return articles
+      .filter(
+        (a) =>
+          a.title.toLowerCase().includes(q) ||
+          a.excerpt.toLowerCase().includes(q) ||
+          a.tags.some((t) => t.toLowerCase().includes(q))
+      )
+      .slice(0, 6);
+  }, [articles, query]);
+
+  useEffect(() => {
+    if (!open) return;
+    const taste = (e: KeyboardEvent) => {
+      if (e.key === "Escape") { setOpen(false); setQuery(""); }
+    };
+    const klick = (e: MouseEvent) => {
+      if (huelle.current && !huelle.current.contains(e.target as Node)) setOpen(false);
+    };
+    document.addEventListener("keydown", taste);
+    document.addEventListener("mousedown", klick);
+    return () => {
+      document.removeEventListener("keydown", taste);
+      document.removeEventListener("mousedown", klick);
+    };
+  }, [open]);
+
   return (
-    <>
+    <div ref={huelle} className="relative flex items-center">
       <button
-        onClick={() => setOpen(true)}
-        aria-label="Suche öffnen"
-        className="flex h-9 w-9 items-center justify-center rounded-full bg-[rgba(15,13,44,0.12)] text-current hover:opacity-70 transition-opacity"
+        onClick={() => setOpen((o) => !o)}
+        aria-label={open ? "Suche schliessen" : "Suche öffnen"}
+        aria-expanded={open}
+        className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[rgba(15,13,44,0.12)] text-current transition-opacity hover:opacity-70"
       >
         <SearchIcon className="h-5 w-5" />
       </button>
-      {open && (
-        <div
-          className="fixed inset-0 z-[70] flex items-start justify-center bg-bg-base/80 backdrop-blur-sm px-4 pt-24 animate-fadeIn"
-          onClick={() => setOpen(false)}
-        >
-          <div
-            className="w-full max-w-xl rounded-2xl border border-border-default bg-bg-elevated p-4 shadow-elevated"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <SearchPanel onNavigate={() => setOpen(false)} />
-            <button
-              onClick={() => setOpen(false)}
-              className="mt-3 w-full rounded-xl py-2 text-sm text-text-tertiary hover:text-text-primary"
-            >
-              Schliessen (Esc)
-            </button>
-          </div>
+
+      {/* Das Feld gleitet nach LINKS ueber die Navigation, statt sie zu
+          verdraengen (sonst wird das Logo weggeschoben). */}
+      <div
+        className={`absolute right-11 top-1/2 -translate-y-1/2 overflow-hidden transition-[width,opacity] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+          open ? "w-[360px] opacity-100" : "pointer-events-none w-0 opacity-0"
+        }`}
+      >
+        <input
+          autoFocus={open}
+          type="text"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Spiele, Themen, Guides …"
+          className="h-10 w-[360px] rounded-full border-2 border-[rgba(15,13,44,0.25)] bg-white px-5 text-[14px] text-text-primary shadow-[0_4px_16px_-6px_rgba(12,11,26,0.35)] placeholder:text-text-tertiary focus:border-[rgba(15,13,44,0.45)] focus:outline-none"
+        />
+      </div>
+
+      {/* Trefferliste haengt AUSSERHALB des Animations-Containers, sonst
+          wuerde sie vom overflow-hidden abgeschnitten. */}
+      {open && query.trim() && (
+        <div className="absolute right-0 top-[52px] z-10 w-[400px] overflow-hidden rounded-2xl border border-border-subtle bg-white shadow-elevated">
+          {treffer.length === 0 ? (
+            <p className="px-4 py-4 text-sm text-text-secondary">Nichts gefunden für «{query}».</p>
+          ) : (
+            treffer.map((a) => (
+              <Link
+                key={a.slug}
+                href={`/artikel/${a.slug}`}
+                onClick={() => { setOpen(false); setQuery(""); }}
+                className="block border-b border-border-subtle px-4 py-3 last:border-b-0 hover:bg-surface-card"
+              >
+                <p className="text-[11px] font-extrabold tracking-[0.06em] text-accent">
+                  {CATEGORY_LABELS[a.category].toUpperCase()}
+                </p>
+                <p className="mt-0.5 text-[14.5px] font-bold leading-snug text-text-primary line-clamp-2">
+                  {a.title}
+                </p>
+              </Link>
+            ))
+          )}
         </div>
       )}
-    </>
+    </div>
   );
 }
 

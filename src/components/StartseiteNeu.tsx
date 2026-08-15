@@ -182,22 +182,30 @@ export function NewsletterBlock({ artikelBilder }: { artikelBilder: Article[] })
 // Sektions-Kopf im neuen Look: fette Überschrift + MEHR-Pfeil + Hinweis.
 export function SektionsKopf({
   titel,
-  mehrHref,
   hinweis,
 }: {
   titel: string;
-  mehrHref?: string;
   hinweis?: string;
 }) {
   return (
     <div className="mb-5 flex flex-wrap items-baseline gap-x-4 gap-y-1">
       <h2 className="text-[26px] font-black tracking-tight text-text-primary sm:text-[34px]">{titel}</h2>
-      {mehrHref && (
-        <Link href={mehrHref} className="text-[13px] font-extrabold tracking-[0.08em] text-accent hover:opacity-70 transition-opacity">
-          MEHR →
-        </Link>
-      )}
       {hinweis && <span className="ml-auto text-[13px] text-text-secondary">{hinweis}</span>}
+    </div>
+  );
+}
+
+// "Mehr anzeigen" als Pille unter der Sektion — EIN Muster fuer alle
+// Sektionen (Tim, 15.08.2026): kein Mini-Link mehr neben der Ueberschrift.
+export function MehrPille({ href, text = "Mehr anzeigen" }: { href: string; text?: string }) {
+  return (
+    <div className="mt-8 flex justify-center">
+      <Link
+        href={href}
+        className="rounded-full border border-accent/50 px-6 py-2.5 text-sm font-semibold text-accent transition-colors hover:bg-accent/10"
+      >
+        {text}
+      </Link>
     </div>
   );
 }

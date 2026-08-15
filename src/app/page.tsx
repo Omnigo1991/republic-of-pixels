@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getTopStory, getChronological, getByCategory } from "@/lib/articles";
 import { TopStory } from "@/components/TopStory";
 import { NewsListe } from "@/components/NewsListe";
-import { NeuesteRail, NotchKarte, TickerBand, NewsletterBlock, SektionsKopf } from "@/components/StartseiteNeu";
+import { NeuesteRail, NotchKarte, TickerBand, NewsletterBlock, SektionsKopf, MehrPille } from "@/components/StartseiteNeu";
 import { ReleaseRadar } from "@/components/ReleaseRadar";
 import { DealRadar } from "@/components/DealRadar";
 import { ChartsRadar } from "@/components/ChartsRadar";
@@ -62,7 +62,7 @@ export default async function HomePage() {
       <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
         <section id="news" className="scroll-mt-16 lg:scroll-mt-[88px] pt-14 sm:pt-16">
           <Reveal>
-            <SektionsKopf titel="Alle News" mehrHref="/kategorie/news" hinweis="Chronologisch, neueste zuerst" />
+            <SektionsKopf titel="Alle News" hinweis="Chronologisch, neueste zuerst" />
             <SectionDivider />
             <NewsListe articles={chronological} />
           </Reveal>
@@ -70,12 +70,13 @@ export default async function HomePage() {
 
         <section id="guides" className="scroll-mt-16 lg:scroll-mt-[88px] pt-14 sm:pt-16">
           <Reveal>
-            <SektionsKopf titel="Die grossen Republic-Guides" mehrHref="/guides" />
+            <SektionsKopf titel="Die grossen Republic-Guides" />
             <div className="grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-5">
               {guideReihe.map((a) => (
                 <NotchKarte key={a.slug} article={a} bildHoehe="h-[250px]" />
               ))}
             </div>
+            <MehrPille href="/guides" text="Alle Guides" />
           </Reveal>
         </section>
 
