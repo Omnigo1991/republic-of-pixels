@@ -35,8 +35,12 @@ on:
 permissions:
   contents: write
 
+# Gleiche Warteschlange wie News-Pipeline und Zitat-Uebersetzung: Alle
+# Workflows, die auf main pushen, laufen nacheinander — am 15.08.2026
+# kollidierte sonst ein Guide-Push mit dem Auto-Publish der News-Pipeline
+# (Merge-Konflikt in der generierten Artikel-Liste, Lauf abgebrochen).
 concurrency:
-  group: publish-main
+  group: news-pipeline
   cancel-in-progress: false
 
 jobs:
