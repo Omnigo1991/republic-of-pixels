@@ -7,7 +7,7 @@ export default function NotFound() {
       <Masthead />
     <div className="mx-auto flex max-w-content flex-col items-center justify-center px-4 py-32 text-center">
       <p className="text-sm font-semibold tracking-[0.2em] text-accent">404</p>
-      <h1 className="mt-4 text-3xl font-semibold tracking-tight text-text-primary">
+      <h1 className="mt-4 text-[30px] font-black tracking-tight sm:text-[36px] text-text-primary">
         Diese Seite gibt es nicht (mehr)
       </h1>
       <p className="mt-3 max-w-md text-text-secondary">

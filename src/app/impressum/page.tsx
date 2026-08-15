@@ -8,7 +8,7 @@ export default function ImpressumPage() {
     <>
       <Masthead />
     <div className="mx-auto max-w-article px-4 sm:px-6 py-14">
-      <h1 className="text-3xl font-semibold tracking-tight text-text-primary">Impressum</h1>
+      <h1 className="text-[30px] font-black tracking-tight sm:text-[36px] text-text-primary">Impressum</h1>
 
       <div className="prose-rop mt-8">
         <h2>Angaben zum Betreiber</h2>
