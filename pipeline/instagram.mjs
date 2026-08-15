@@ -1013,7 +1013,16 @@ async function publish() {
     }
     try {
       const istReel = item.cardRel.endsWith(".mp4");
-      const container = await igPost(
+      // BILD-CONTAINER MIT WIEDERHOLUNG (15.08.2026, zweiter Fall): Instagram
+      // laedt BILDER synchron beim Anlegen des Containers. Direkt nach einem
+      // Deploy kann Instagrams Abruf eine Vercel-Edge-Region erwischen, auf
+      // der der neue Stand noch nicht liegt — die 404-Seite quittiert die
+      // API mit "Only photo or video can be accepted as media type". Unsere
+      // eigene Erreichbarkeitspruefung sieht davon nichts, weil sie aus
+      // einer anderen Region prueft. Reels trifft das nie: Videos laedt
+      // Instagram asynchron und wiederholt selbst. Darum hier: bei genau
+      // diesem Fehler bis zu dreimal mit 25 Sekunden Abstand neu anlegen.
+      const containerAnlegen = () => igPost(
         "/me/media",
         istReel
           ? {
@@ -1032,6 +1041,23 @@ async function publish() {
               access_token: token,
             },
       );
+      let container;
+      for (let anlauf = 1; ; anlauf++) {
+        try {
+          container = await containerAnlegen();
+          break;
+        } catch (err) {
+          const bildAbrufFehler = /only photo or video/i.test(err.message ?? "");
+          if (!istReel && bildAbrufFehler && anlauf < 4) {
+            console.log(
+              `  Instagram konnte das Bild nicht laden (Anlauf ${anlauf}) — 25 s warten, dann neu.`,
+            );
+            await new Promise((r) => setTimeout(r, 25000));
+            continue;
+          }
+          throw err;
+        }
+      }
       // Container-Verarbeitung abwarten — Videos brauchen deutlich länger
       // als Bilder (Transkodierung durch Instagram, bis zu ~3 Minuten).
       const versuche = istReel ? 36 : 12;
