@@ -60,7 +60,7 @@ export default async function HomePage() {
       </section>
 
       <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
-        <section id="news" className="scroll-mt-24 pt-14 sm:pt-16">
+        <section id="news" className="scroll-mt-16 lg:scroll-mt-[88px] pt-14 sm:pt-16">
           <Reveal>
             <SektionsKopf titel="Alle News" mehrHref="/kategorie/news" hinweis="Chronologisch, neueste zuerst" />
             <SectionDivider />
@@ -68,7 +68,7 @@ export default async function HomePage() {
           </Reveal>
         </section>
 
-        <section id="guides" className="scroll-mt-24 pt-14 sm:pt-16">
+        <section id="guides" className="scroll-mt-16 lg:scroll-mt-[88px] pt-14 sm:pt-16">
           <Reveal>
             <SektionsKopf titel="Die grossen Republic-Guides" mehrHref="/guides" />
             <div className="grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-5">
@@ -79,7 +79,7 @@ export default async function HomePage() {
           </Reveal>
         </section>
 
-        <div id="radare" className="scroll-mt-24">
+        <div id="radare" className="scroll-mt-16 lg:scroll-mt-[88px]">
         <Reveal>
           <ReleaseRadar />
         </Reveal>

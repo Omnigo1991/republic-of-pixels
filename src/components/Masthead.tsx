@@ -25,8 +25,10 @@ export function Masthead({
           <Link href="/" aria-label="Republic of Pixels – Startseite" className="mr-auto flex items-center gap-3 lg:gap-4">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/brand/r-mark.png" alt="" aria-hidden="true" className="h-9 w-auto lg:h-12" />
-            <span className="translate-y-[1px] whitespace-nowrap text-[19px] font-black leading-none tracking-tight text-text-primary sm:text-[21px] lg:text-[28px]">
-              REPUBLIC<span className="text-accent"> OF PIXELS</span>
+            {/* Unter 420px nur "REPUBLIC" — der volle Schriftzug lief sonst
+                unter die Anmelden-Pille (Mobil-Fund 15.08.2026). */}
+            <span className="translate-y-[1px] whitespace-nowrap text-[17px] font-black leading-none tracking-tight text-text-primary sm:text-[21px] lg:text-[28px]">
+              REPUBLIC<span className="hidden text-accent min-[420px]:inline"> OF PIXELS</span>
             </span>
           </Link>
 
