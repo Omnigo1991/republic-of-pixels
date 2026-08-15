@@ -4323,7 +4323,6 @@
       "gta-6-ultimate-edition-89-prozent-vorbestellungen": "2026-08-14T09:49:50.746Z",
       "pokemon-pokopia-5-millionen-verkaeufe-switch-2": "2026-08-14T13:04:36.698Z",
       "guide-gta-6-release-preis-und-editionen-im-ueberblick": "2026-08-15T09:56:11.016Z",
-      "battlefield-6-top-gun-update-wake-island-2026": "2026-08-15T13:06:21.207Z",
       "helldivers-2-ps-plus-katalog-spielerzahl-2026": "2026-08-15T13:06:37.142Z"
     },
     "cards": {
@@ -4345,7 +4344,7 @@
     ],
     "wechsel": {
       "day": "2026-08-15",
-      "nichtBreaking": 3
+      "nichtBreaking": 2
     },
     "tokenCheckedAt": "2026-08-15T09:48:57.921Z",
     "token": {
@@ -4392,7 +4391,8 @@
       "2026-08-15": {
         "Schlagzeile regelwidrig": 5,
         "Auswahl leer": 2,
-        "kein taugliches Bild": 1
+        "kein taugliches Bild": 1,
+        "von Instagram abgelehnt": 1
       }
     }
   },
