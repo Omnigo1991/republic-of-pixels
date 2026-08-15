@@ -18,14 +18,15 @@ export function TopStory({ article }: { article: Article }) {
             <ArticleMedia article={article} priority sizes="(max-width: 1024px) 100vw, 64vw" className="h-full w-full" />
           </div>
           <div className="absolute bottom-6 left-0 max-w-[88%] sm:bottom-9">
-            {/* Zweizeilig wie im Entwurf; Innenabstand oben/unten optisch
-                gleich: Zeilenhoehe 1.3 + symmetrisches Padding, leicht
-                korrigiert um die Versalhoehe (oben wirkt sonst groesser). */}
-            <div className="inline-block bg-[#0C0B1A] px-4 pb-[15px] pt-[13px] sm:px-5 sm:pb-[19px] sm:pt-[16px]">
-              <h1 className="text-[22px]/[1.3] font-black tracking-[-0.01em] text-white sm:text-3xl/[1.3] lg:text-[36px]/[1.3]">
-                {headline}
-              </h1>
-            </div>
+            {/* Zeilenstreifen, die NAHTLOS aneinanderstossen (Tim, 15.08.):
+                Der Balken endet mit dem Text, die Flaeche bleibt durchgehend.
+                Inter malt den Inline-Hintergrund exakt 1.21em hoch; mit
+                0.18em Innenabstand pro Zeile ergibt das 1.57em — die
+                Zeilenhoehe ist exakt darauf gesetzt, kein Spalt, keine
+                Ueberlappung. */}
+            <h1 className="inline bg-[#0C0B1A] px-4 py-[0.18em] text-[22px]/[1.57] font-black tracking-[-0.01em] text-white [box-decoration-break:clone] [-webkit-box-decoration-break:clone] sm:px-5 sm:text-3xl/[1.57] lg:text-[36px]/[1.57]">
+              {headline}
+            </h1>
           </div>
         </div>
       </div>
