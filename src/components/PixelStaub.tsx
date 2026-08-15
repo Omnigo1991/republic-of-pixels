@@ -42,16 +42,23 @@ const STAUB: {
 // (z-0, Inhalt rendert darueber); Text bleibt voll lesbar, der Staub
 // wirkt wie eine feine Papierstruktur. Positionen in Prozent, fest
 // verdrahtet.
+// Nachjustiert (Tim, 15.08. spaet: "sehe keinen Staub"): 5-9% Deckkraft
+// verschwanden auf hellen Bildschirmen — jetzt 12-22% bei 4-9px, plus
+// sechs zusaetzliche Punkte. Immer noch unter dem Inhalt, Text bleibt
+// unberuehrt.
 const FLAECHE: { x: number; y: number; g: number; o: number; dauer: number }[] = [
-  { x: 8, y: 14, g: 4, o: 0.09, dauer: 64 }, { x: 15, y: 46, g: 3, o: 0.06, dauer: 72 },
-  { x: 11, y: 78, g: 5, o: 0.08, dauer: 58 }, { x: 22, y: 27, g: 3, o: 0.05, dauer: 76 },
-  { x: 27, y: 64, g: 4, o: 0.07, dauer: 66 }, { x: 34, y: 9, g: 5, o: 0.08, dauer: 60 },
-  { x: 38, y: 88, g: 3, o: 0.05, dauer: 74 }, { x: 45, y: 38, g: 4, o: 0.06, dauer: 70 },
-  { x: 52, y: 72, g: 3, o: 0.05, dauer: 78 }, { x: 57, y: 18, g: 4, o: 0.07, dauer: 62 },
-  { x: 63, y: 54, g: 5, o: 0.08, dauer: 56 }, { x: 69, y: 84, g: 3, o: 0.05, dauer: 80 },
-  { x: 74, y: 31, g: 4, o: 0.06, dauer: 68 }, { x: 81, y: 61, g: 3, o: 0.05, dauer: 75 },
-  { x: 86, y: 12, g: 5, o: 0.08, dauer: 59 }, { x: 91, y: 42, g: 4, o: 0.07, dauer: 65 },
-  { x: 95, y: 74, g: 3, o: 0.06, dauer: 71 }, { x: 48, y: 95, g: 4, o: 0.06, dauer: 63 },
+  { x: 8, y: 14, g: 6, o: 0.2, dauer: 64 }, { x: 15, y: 46, g: 4, o: 0.13, dauer: 72 },
+  { x: 11, y: 78, g: 8, o: 0.18, dauer: 58 }, { x: 22, y: 27, g: 4, o: 0.12, dauer: 76 },
+  { x: 27, y: 64, g: 6, o: 0.16, dauer: 66 }, { x: 34, y: 9, g: 7, o: 0.18, dauer: 60 },
+  { x: 38, y: 88, g: 4, o: 0.12, dauer: 74 }, { x: 45, y: 38, g: 6, o: 0.14, dauer: 70 },
+  { x: 52, y: 72, g: 4, o: 0.12, dauer: 78 }, { x: 57, y: 18, g: 6, o: 0.16, dauer: 62 },
+  { x: 63, y: 54, g: 8, o: 0.18, dauer: 56 }, { x: 69, y: 84, g: 4, o: 0.12, dauer: 80 },
+  { x: 74, y: 31, g: 6, o: 0.14, dauer: 68 }, { x: 81, y: 61, g: 4, o: 0.12, dauer: 75 },
+  { x: 86, y: 12, g: 8, o: 0.18, dauer: 59 }, { x: 91, y: 42, g: 6, o: 0.16, dauer: 65 },
+  { x: 95, y: 74, g: 4, o: 0.13, dauer: 71 }, { x: 48, y: 95, g: 6, o: 0.14, dauer: 63 },
+  { x: 5, y: 58, g: 9, o: 0.22, dauer: 54 }, { x: 19, y: 91, g: 5, o: 0.14, dauer: 69 },
+  { x: 31, y: 41, g: 5, o: 0.13, dauer: 73 }, { x: 42, y: 6, g: 6, o: 0.16, dauer: 61 },
+  { x: 60, y: 37, g: 5, o: 0.13, dauer: 77 }, { x: 88, y: 88, g: 9, o: 0.2, dauer: 55 },
 ];
 
 export function PixelStaub() {
