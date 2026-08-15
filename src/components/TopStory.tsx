@@ -1,77 +1,39 @@
 import Link from "next/link";
 import type { Article } from "@/lib/types";
 import { ArticleMedia } from "./ArticleMedia";
-import { CategoryPill } from "./Badges";
-import { formatDateTime, splitTitle } from "@/lib/format";
+import { splitTitle } from "@/lib/format";
 
+// HELL-UMBAU (15.08.2026, abgenommener Polygon-Entwurf): Der Held ist eine
+// grosse Karte mit Pixel-Treppen-Rahmen. Das Bild wird entfärbt und
+// cyan/navy getönt, darüber liegt die grosse gedrehte Quadrat-Raute (unser
+// Schmuckmotiv), die Schlagzeile steht als weisse Zeilen auf Navy-Streifen.
 export function TopStory({ article }: { article: Article }) {
-  const { kicker, headline } = splitTitle(article.title, article.tags);
+  const { headline } = splitTitle(article.title, article.tags);
   return (
-    <Link
-      href={`/artikel/${article.slug}`}
-      className="group grid gap-6 lg:grid-cols-2 lg:gap-10 lg:items-center"
-    >
-      {/* Hell-auf-Navy-Styling: Die Top-Story sitzt auf dem Marken-Navy-Band. */}
-      <div className="relative">
-        {/* Slogan-Wortmarke (Betreiber-Freigabe 07.08.2026, Verge-inspiriert):
-            liegt mit dem unteren Drittel auf der Bildoberkante und überragt
-            das Bild ab sm seitlich um je 6%. Als SVG mit textLength, damit
-            der Schriftzug bei jeder Bildbreite exakt gleich spannt — die
-            viewBox-Masse (1536 Einheiten Gesamtbreite, Teile 1059/477)
-            entsprechen der gemessenen Inter-900-Geometrie bei -0.02em.
-            Überhang (112%) erst ab lg: Zwischen 640 und 1024px füllt das
-            Bild die volle Breite — der Überhang erzeugte dort 21px
-            Horizontal-Überlauf (Leser-Audit 08.08.2026). */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute left-1/2 top-0 z-10 w-full -translate-x-1/2 -translate-y-[66%] select-none lg:w-[112%] [filter:drop-shadow(0_2px_3px_rgba(6,5,16,0.9))_drop-shadow(0_6px_18px_rgba(6,5,16,0.55))]"
-        >
-          <svg viewBox="0 0 1536 100" className="w-full">
-            <text x="0" y="84" textLength="1059" lengthAdjust="spacingAndGlyphs" fontWeight="900" fontSize="100" letterSpacing="-2" fill="#F1F0F2">
-              {"WILLKOMMEN IN DER "}
-            </text>
-            <text x="1059" y="84" textLength="477" lengthAdjust="spacingAndGlyphs" fontWeight="900" fontSize="100" letterSpacing="-2" fill="#02F0D1">
-              REPUBLIC
-            </text>
-          </svg>
+    <Link href={`/artikel/${article.slug}`} className="group block">
+      <div className="treppe-tl">
+        <div className="treppe-innen h-[420px] sm:h-[480px] lg:h-[560px]">
+          <div className="h-full w-full [&_img]:h-full [&_img]:w-full [&_img]:object-cover [&_img]:grayscale [&_img]:contrast-[1.02] [&_img]:opacity-90 transition-transform duration-700 group-hover:scale-[1.02]">
+            <ArticleMedia article={article} priority sizes="(max-width: 1024px) 100vw, 64vw" className="h-full w-full" />
+          </div>
+          {/* Cyan/Navy-Tönung über dem entfärbten Bild */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 mix-blend-multiply"
+            style={{ background: "linear-gradient(160deg, rgba(2,240,209,0.38), rgba(12,11,26,0.55))" }}
+          />
+          {/* Grosse gedrehte Quadrat-Raute */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute left-1/2 top-[44%] h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rotate-45 border-[12px] border-accent/85 mix-blend-screen sm:h-[430px] sm:w-[430px] sm:border-[16px]"
+          />
+          <div className="absolute bottom-6 left-0 max-w-[86%] sm:bottom-9">
+            <h1 className="inline bg-[rgba(6,5,16,0.88)] px-3 py-1 text-[26px] font-black leading-[1.32] tracking-[-0.01em] text-white [box-decoration-break:clone] [-webkit-box-decoration-break:clone] sm:px-4 sm:text-4xl lg:text-[42px]">
+            {headline}
+            </h1>
+          </div>
         </div>
-        <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-white/10 shadow-elevated duration-500">
-          <ArticleMedia article={article} priority sizes="(max-width: 1024px) 100vw, 50vw" className="h-full w-full transition-transform duration-700 group-hover:scale-[1.03]" />
-        </div>
-      </div>
-      <div className="mt-8 lg:mt-14">
-        <div className="mb-4 flex items-center gap-3">
-          <CategoryPill category={article.category} onDark />
-          <span className="text-xs text-navy-dim">{formatDateTime(article.publishedAt)}</span>
-          <span className="text-xs text-navy-dim">· {article.readingTimeMinutes} Min. Lesezeit</span>
-        </div>
-        {kicker && (
-          <p className="mb-2 text-sm font-bold uppercase tracking-wider text-accent">
-            {kicker}
-          </p>
-        )}
-        {/* Zeilenhöhe PRO Grösse via Schrägstrich-Syntax: text-4xl bringt
-            eine eigene line-height (40px) mit, die ein separates leading-*
-            in der Kaskade nicht zuverlässig überschreibt — die Ü-Punkte
-            ragten dadurch in die Zeile darüber (Tim, 08.08.2026, gemessen:
-            computed 0.909 statt 1.18). */}
-        <h1 className="text-3xl/[1.18] sm:text-4xl/[1.18] lg:text-[2.75rem]/[1.18] font-semibold tracking-tight text-navy-text group-hover:text-accent transition-colors">
-          {headline}
-        </h1>
-        <p className="mt-4 text-lg leading-relaxed text-navy-muted">{article.subtitle}</p>
-        <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-accent">
-          Zum Artikel
-          <ArrowIcon className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-        </span>
       </div>
     </Link>
-  );
-}
-
-function ArrowIcon({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-      <path d="M5 12h14M13 6l6 6-6 6" />
-    </svg>
   );
 }

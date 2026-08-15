@@ -5,7 +5,11 @@ import { PlatformIcon } from "./PlatformIcons";
 
 export function Footer() {
   return (
-    <footer className="mt-24 border-t border-navy-border bg-navy">
+    // Kein Aussenabstand mehr (Hell-Umbau): Auf der Startseite schliesst
+    // der Navy-Newsletter-Block direkt an — ein weisses Band dazwischen
+    // zerriss die dunkle Schlusszone. Unterseiten bringen ihren eigenen
+    // Abstand über das Seiten-Padding mit.
+    <footer className="border-t border-navy-border bg-navy">
       <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-2 gap-10 md:grid-cols-5">
           <div className="col-span-2">

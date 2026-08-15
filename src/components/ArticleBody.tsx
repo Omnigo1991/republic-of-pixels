@@ -78,14 +78,20 @@ export function ArticleBody({
                 className={`not-prose my-8 grid gap-3 ${block.items.length === 1 ? "grid-cols-1" : block.items.length === 2 ? "grid-cols-2" : "grid-cols-1 sm:grid-cols-3"}`}
               >
                 {block.items.map((s, j) => (
+                  // Navy-Kacheln mit Cyan-Zahl und Rauten-Ecke (Hell-Entwurf):
+                  // auf der hellen Seite sind die dunklen Kacheln der Blickfang.
                   <div
                     key={j}
-                    className="rounded-2xl border border-accent/35 bg-accent-wash/30 px-5 py-6 text-center"
+                    className="relative overflow-hidden rounded-xl bg-navy px-5 py-6 text-left"
                   >
+                    <div
+                      aria-hidden="true"
+                      className="pointer-events-none absolute -right-6 -top-6 h-[70px] w-[70px] rotate-45 border-[6px] border-accent/30"
+                    />
                     <p className="text-3xl font-black tracking-tight text-accent sm:text-4xl">
                       {s.value}
                     </p>
-                    <p className="mt-2 text-[13px] leading-snug text-text-secondary">{s.label}</p>
+                    <p className="mt-2 text-[13px] leading-snug text-[#A9ADC0]">{s.label}</p>
                   </div>
                 ))}
               </div>

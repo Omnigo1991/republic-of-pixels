@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { getTopStory, getPopularArticlesLive, getChronological } from "@/lib/articles";
+import { getTopStory, getChronological, getByCategory } from "@/lib/articles";
 import { TopStory } from "@/components/TopStory";
-import { PopularSection } from "@/components/PopularSection";
 import { NewsListe } from "@/components/NewsListe";
-import { CategoryChipBar } from "@/components/CategoryChipBar";
+import { NeuesteRail, NotchKarte, TickerBand, NewsletterBlock, SektionsKopf } from "@/components/StartseiteNeu";
 import { ReleaseRadar } from "@/components/ReleaseRadar";
 import { DealRadar } from "@/components/DealRadar";
 import { ChartsRadar } from "@/components/ChartsRadar";
@@ -21,69 +20,64 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
+// HELL-UMBAU (Tim-Freigabe 15.08.2026, abgenommener Polygon-Entwurf):
+// Held mit Pixel-Treppe + "Neueste"-Spalte daneben, drei beschriftete
+// Karten darunter, Guide-Kartenreihe, dann die Radare, das Cyan-Band und
+// der Navy-Newsletter-Block. "Alle News" bleibt erhalten (Kernprodukt,
+// stand nicht im Entwurf, fliegt aber nicht raus) — "Beliebt bei Lesern"
+// ist bewusst gewichen: Die Neueste-Spalte übernimmt die Aktualität.
 export default async function HomePage() {
   const topStory = getTopStory();
-  const popular = await getPopularArticlesLive(8);
   const chronological = getChronological(topStory.slug);
+  const rail = chronological.slice(0, 5);
+  const kleinreihe = chronological.slice(5, 8);
+  const guides = getByCategory("guides");
+  // Guide-Reihe: echte Guides zuerst, aufgefüllt mit den neuesten
+  // Meldungen, bis fünf Karten stehen.
+  const guideReihe = [
+    ...guides,
+    ...chronological.filter((a) => a.category !== "guides").slice(8, 8 + Math.max(0, 5 - guides.length)),
+  ].slice(0, 5);
+  const ticker = [topStory, ...chronological].slice(0, 2);
 
   return (
     <>
       <Masthead variant="brand" />
-      {/* Top-Story ohne Reveal: sofort sichtbar. Kein eigener Hintergrund mehr
-          (vorher bg-navy) — lief auf #191919 statt #141414 wie der Rest der
-          Seite und erzeugte einen sichtbaren "Cut" darunter. */}
       <section>
-        <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-          <TopStory article={topStory} />
+        <div className="mx-auto max-w-content px-4 pt-8 sm:px-6 sm:pt-10 lg:px-8">
+          <div className="grid gap-8 lg:grid-cols-[1fr_372px] lg:gap-11">
+            <div>
+              <TopStory article={topStory} />
+              <div className="mt-6 grid gap-5 sm:grid-cols-3">
+                {kleinreihe.map((a) => (
+                  <NotchKarte key={a.slug} article={a} />
+                ))}
+              </div>
+            </div>
+            <NeuesteRail articles={rail} />
+          </div>
         </div>
       </section>
 
-      <CategoryChipBar active="alle" />
       <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
-        {/* Sektions-Dramaturgie (Tim-Freigabe 09.08.2026): erst die
-            Nachrichten (Kernprodukt), dann der Blick nach vorn (Release +
-            Event als Paar), dann der Puls (Charts), dann das Portemonnaie
-            (Deals) — Community und Persönliches als Abschluss. */}
-        <Reveal>
-          <PopularSection articles={popular} />
-        </Reveal>
-
-        <div className="h-px w-full bg-border-subtle" />
-
-        <Reveal>
-          <div className="pt-12 sm:pt-16">
-            <p className="text-[length:calc((100vw-32px)*0.0651)] font-black uppercase leading-none tracking-[-0.02em] text-text-primary sm:text-[length:calc((100vw-48px)*0.0651)] lg:text-[length:calc((min(100vw,1280px)-104px)*0.036458)]">
-              News aus der <span className="text-accent">Republic</span>
-            </p>
-          </div>
-        </Reveal>
-
-        <section className="py-10">
-          {/* Kompletter Sektionsinhalt in EINER Reveal-Hülle (Bugfix
-              09.08.2026): Vorher stand die NewsListe ausserhalb — die
-              Artikel waren sofort da, während ihre eigene Überschrift noch
-              auf den Scroll-Trigger wartete. */}
+        <section className="pt-14 sm:pt-16">
           <Reveal>
-            <div className="mb-3 flex items-baseline justify-between">
-              <h2 className="text-xl font-semibold tracking-tight text-text-primary">
-                Alle News
-              </h2>
-              <span className="text-xs text-text-tertiary">Chronologisch, neueste zuerst</span>
-            </div>
+            <SektionsKopf titel="Alle News" mehrHref="/kategorie/news" hinweis="Chronologisch, neueste zuerst" />
             <SectionDivider />
             <NewsListe articles={chronological} />
           </Reveal>
         </section>
 
-        <div className="h-px w-full bg-border-subtle" />
-
-        <Reveal>
-          <div className="pt-12 sm:pt-16">
-            <p className="text-[length:calc((100vw-32px)*0.0651)] font-black uppercase leading-none tracking-[-0.02em] text-text-primary sm:text-[length:calc((100vw-48px)*0.0651)] lg:text-[length:calc((min(100vw,1280px)-104px)*0.036458)]">
-              Die <span className="text-accent">Republic</span>-Radare
-            </p>
-          </div>
-        </Reveal>
+        <section className="pt-14 sm:pt-16">
+          <Reveal>
+            <SektionsKopf titel="Die grossen Republic-Guides 🎮" mehrHref="/guides" />
+            <div className="grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-5">
+              {guideReihe.map((a) => (
+                <NotchKarte key={a.slug} article={a} hoehe="h-[210px]" />
+              ))}
+            </div>
+          </Reveal>
+        </section>
 
         <Reveal>
           <ReleaseRadar />
@@ -107,19 +101,6 @@ export default async function HomePage() {
           <DealRadar />
         </Reveal>
 
-        <div className="h-px w-full bg-border-subtle" />
-
-        <Reveal>
-          <div className="pt-12 sm:pt-16">
-            <p className="text-[length:calc((100vw-32px)*0.0651)] font-black uppercase leading-none tracking-[-0.02em] text-text-primary sm:text-[length:calc((100vw-48px)*0.0651)] lg:text-[length:calc((min(100vw,1280px)-104px)*0.036458)]">
-              Deine <span className="text-accent">Republic</span>
-            </p>
-          </div>
-        </Reveal>
-
-        {/* Einblendungs-Audit 09.08.2026: auch die Community-Sektionen
-            tragen die Reveal-Hülle — vorher sprangen sie als einzige ohne
-            Animation ins Bild. */}
         <Reveal>
           <GeradeImGespraech />
         </Reveal>
@@ -129,6 +110,11 @@ export default async function HomePage() {
         <Reveal>
           <PixelRaten />
         </Reveal>
+      </div>
+
+      <div className="mt-16">
+        <TickerBand articles={ticker} />
+        <NewsletterBlock artikelBilder={[topStory, ...kleinreihe].slice(0, 2)} />
       </div>
     </>
   );

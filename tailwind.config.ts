@@ -19,30 +19,34 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // HELL-UMBAU (Tim-Freigabe 15.08.2026 abends, "Danach kannst du
+        // bauen"): Weiss + Navy-Tinte + Cyan, Palette aus dem abgenommenen
+        // Polygon-Entwurf. Navy-Töne unten bleiben für Masthead-Text,
+        // Footer und dunkle Blöcke erhalten.
         bg: {
-          base: "#0C0B1A",
-          elevated: "#121126",
+          base: "#FFFFFF",
+          elevated: "#F7F9FC",
         },
         surface: {
-          card: "#16152B",
-          hover: "#1E1D38",
+          card: "#F1F3F7",
+          hover: "#E9EDF3",
         },
         border: {
-          subtle: "#262347",
-          default: "#33305C",
-          strong: "#45416E",
+          subtle: "#E6E9F0",
+          default: "#D4D9E4",
+          strong: "#B8BFCF",
         },
         accent: {
           DEFAULT: "#02F0D1",
           hover: "#30F3D9",
           active: "#02C5AB",
-          wash: "#0C3A43",
+          wash: "#DFF9F2",
         },
         text: {
-          primary: "#F1F0F2",
-          secondary: "#A9A9A9",
-          tertiary: "#7D7D7D",
-          disabled: "#535353",
+          primary: "#0C0B1A",
+          secondary: "#5B5F72",
+          tertiary: "#767B93",
+          disabled: "#ADB2C4",
         },
         success: "#2ED47A",
         warning: "#F5B942",
@@ -81,8 +85,8 @@ const config: Config = {
         content: "80rem",
       },
       boxShadow: {
-        card: "0 1px 0 0 rgba(255,255,255,0.03) inset, 0 8px 24px -12px rgba(0,0,0,0.5)",
-        elevated: "0 24px 60px -20px rgba(0,0,0,0.6)",
+        card: "0 1px 0 0 rgba(255,255,255,0.5) inset, 0 8px 24px -12px rgba(12,11,26,0.14)",
+        elevated: "0 24px 60px -20px rgba(12,11,26,0.2)",
         // Cyan-Glow für Hover-Zustände — Gaming-Energie, dezent dosiert.
         glow: "0 0 0 1px rgba(2,240,209,0.35), 0 10px 34px -10px rgba(2,240,209,0.35)",
         glowdark: "0 0 0 1px rgba(2,240,209,0.4), 0 14px 44px -12px rgba(2,240,209,0.28)",
