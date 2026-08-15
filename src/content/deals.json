@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-15T01:03:43.559Z",
+  "updatedAt": "2026-08-15T01:55:39.625Z",
   "deals": [
     {
       "appId": 1142710,
@@ -13,6 +13,17 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1142710/capsule_184x69.jpg?t=1786634522"
     },
     {
+      "appId": 1313140,
+      "title": "Cult of the Lamb",
+      "discountPercent": 60,
+      "originalPrice": 2299,
+      "finalPrice": 919,
+      "currency": "EUR",
+      "endsAt": "2026-08-25T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1313140/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1313140/1ac7c83bd1ce239a12d8e67b8ebc45765bb60319/capsule_184x69.jpg?t=1786554901"
+    },
+    {
       "appId": 3527290,
       "title": "PEAK",
       "discountPercent": 50,
@@ -22,17 +33,6 @@
       "endsAt": "2026-08-18T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/3527290/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3527290/e8f91974f9a7469500fe1aed44a62c9467d328c9/capsule_184x69_alt_assets_3.jpg?t=1786470571"
-    },
-    {
-      "appId": 1941540,
-      "title": "Mafia: The Old Country",
-      "discountPercent": 40,
-      "originalPrice": 4999,
-      "finalPrice": 2999,
-      "currency": "EUR",
-      "endsAt": "2026-08-28T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1941540/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1941540/9a13bbc742d1da6d7c5c5f53daeb1f46798067f7/capsule_184x69_alt_assets_3.jpg?t=1786745433"
     },
     {
       "appId": 2764460,
