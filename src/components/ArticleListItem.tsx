@@ -13,25 +13,25 @@ export function ArticleListItem({ article }: { article: Article }) {
   return (
     <Link
       href={`/artikel/${article.slug}`}
-      className="group grid grid-cols-[112px_1fr] items-start gap-4 border-b border-border-subtle py-6 first:pt-0 sm:grid-cols-[256px_1fr] sm:gap-7"
+      className="group grid grid-cols-[112px_1fr] items-center gap-4 border-b border-border-subtle py-6 first:pt-0 sm:grid-cols-[256px_1fr] sm:gap-7"
     >
       <div className="relative aspect-[4/3] w-28 self-center overflow-hidden rounded-md sm:aspect-[16/10] sm:w-64">
         <ArticleMedia article={article} sizes="(max-width: 640px) 112px, 256px" className="h-full w-full transition-transform duration-500 group-hover:scale-105" />
       </div>
       <div className="min-w-0">
-        <p className="mb-1.5 text-[12.5px] font-extrabold tracking-[0.06em] text-accent">
+        <p className="mb-2 text-[13px] font-extrabold tracking-[0.06em] text-accent">
           {relativeZeit(article.publishedAt)}
           {!istNews && (
             <span className="text-text-tertiary"> · {CATEGORY_LABELS[article.category].toUpperCase()}</span>
           )}
         </p>
-        <h3 className="text-[17px] font-extrabold leading-[1.32] text-text-primary group-hover:text-accent transition-colors line-clamp-2 sm:text-[18px]">
+        <h3 className="text-[18px] font-extrabold leading-[1.3] text-text-primary group-hover:text-accent transition-colors line-clamp-2 sm:text-[22px]">
           {article.title}
         </h3>
-        <p className="mt-1.5 hidden text-sm leading-relaxed text-text-secondary line-clamp-2 sm:block">
+        <p className="mt-2 hidden text-[15.5px] leading-relaxed text-text-secondary line-clamp-2 sm:block">
           {article.excerpt}
         </p>
-        <p className="mt-2 text-[12.5px] text-text-secondary">
+        <p className="mt-2.5 text-[13px] text-text-secondary">
           Von <b className="font-semibold text-text-primary/80">Republic of Pixels</b> · {article.readingTimeMinutes} Min.
         </p>
       </div>
