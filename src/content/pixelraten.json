@@ -1,20 +1,22 @@
 {
-  "datum": "2026-08-14",
-  "nummer": 6,
-  "loesung": "Cyberpunk 2077",
+  "datum": "2026-08-15",
+  "nummer": 7,
+  "loesung": "Age of Empires II",
   "akzeptiert": [
-    "cyberpunk2077",
-    "cyberpunk"
+    "ageofempiresii",
+    "ageofempires2",
+    "aoe2",
+    "aoe2"
   ],
   "hinweise": [
-    "Erschienen 2020 · Open World",
-    "CD Projekt Red"
+    "Erschienen 1999 · Echtzeit-Strategie",
+    "Wololo"
   ],
   "bilder": [
-    "/images/pixelraten/2026-08-14-s1.jpg",
-    "/images/pixelraten/2026-08-14-s2.jpg",
-    "/images/pixelraten/2026-08-14-s3.jpg",
-    "/images/pixelraten/2026-08-14-s4.jpg",
-    "/images/pixelraten/2026-08-14-s5.jpg"
+    "/images/pixelraten/2026-08-15-s1.jpg",
+    "/images/pixelraten/2026-08-15-s2.jpg",
+    "/images/pixelraten/2026-08-15-s3.jpg",
+    "/images/pixelraten/2026-08-15-s4.jpg",
+    "/images/pixelraten/2026-08-15-s5.jpg"
   ]
 }
