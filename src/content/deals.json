@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-15T04:02:41.126Z",
+  "updatedAt": "2026-08-15T07:09:43.417Z",
   "deals": [
     {
       "appId": 1142710,
@@ -13,15 +13,15 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1142710/capsule_184x69.jpg?t=1786634522"
     },
     {
-      "appId": 3527290,
-      "title": "PEAK",
-      "discountPercent": 50,
-      "originalPrice": 749,
-      "finalPrice": 374,
+      "appId": 1941540,
+      "title": "Mafia: The Old Country",
+      "discountPercent": 40,
+      "originalPrice": 4999,
+      "finalPrice": 2999,
       "currency": "EUR",
-      "endsAt": "2026-08-18T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/3527290/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3527290/e8f91974f9a7469500fe1aed44a62c9467d328c9/capsule_184x69_alt_assets_3.jpg?t=1786470571"
+      "endsAt": "2026-08-28T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1941540/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1941540/0533259232ecf45eb80b21e9f1f37332d94edffc/capsule_184x69_alt_assets_3_german.jpg?t=1786750937"
     },
     {
       "appId": 2764460,
