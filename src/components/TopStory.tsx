@@ -19,8 +19,8 @@ export function TopStory({ article }: { article: Article }) {
             </div>
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute inset-x-0 bottom-0 h-24"
-              style={{ background: "linear-gradient(180deg, transparent 0%, rgba(15,14,32,0.03) 35%, rgba(15,14,32,0.14) 60%, rgba(15,14,32,0.5) 82%, #0F0E20 100%)" }}
+              className="pointer-events-none absolute inset-x-0 bottom-0 h-40"
+              style={{ background: "linear-gradient(180deg, transparent 0%, rgba(15,14,32,0.02) 55%, rgba(15,14,32,0.08) 75%, rgba(15,14,32,0.28) 90%, rgba(15,14,32,0.72) 97%, #0F0E20 100%)" }}
             />
           </div>
           <div className="px-5 pb-5 pt-3 sm:px-7 sm:pb-6 sm:pt-4">

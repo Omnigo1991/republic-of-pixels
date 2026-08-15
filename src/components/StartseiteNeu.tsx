@@ -71,8 +71,8 @@ export function NotchKarte({
                 erst ganz unten satt — Artwork-Helligkeit bleibt erhalten. */}
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute inset-x-0 bottom-0 h-16"
-              style={{ background: "linear-gradient(180deg, transparent 0%, rgba(15,14,32,0.03) 35%, rgba(15,14,32,0.14) 60%, rgba(15,14,32,0.5) 82%, #0F0E20 100%)" }}
+              className="pointer-events-none absolute inset-x-0 bottom-0 h-24"
+              style={{ background: "linear-gradient(180deg, transparent 0%, rgba(15,14,32,0.02) 55%, rgba(15,14,32,0.08) 75%, rgba(15,14,32,0.28) 90%, rgba(15,14,32,0.72) 97%, #0F0E20 100%)" }}
             />
           </div>
           <div className="flex flex-1 flex-col px-3.5 pb-3 pt-2.5">
