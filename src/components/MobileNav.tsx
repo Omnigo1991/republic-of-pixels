@@ -144,9 +144,6 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
               </div>
             </nav>
 
-            <p className="mt-5 text-[12px] font-extrabold tracking-[0.22em] text-navy/55">
-              REPUBLIC OF PIXELS
-            </p>
           </aside>
         </div>,
         document.body
