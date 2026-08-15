@@ -34,12 +34,9 @@ export function NeuesteRail({ articles }: { articles: Article[] }) {
               <p className="mb-1.5 text-[12.5px] font-extrabold tracking-[0.06em] text-accent">
                 {relativeZeit(a.publishedAt)}
               </p>
-              <h3 className="text-[17px] font-extrabold leading-[1.32] text-text-primary group-hover:text-accent transition-colors">
+              <h3 className="text-[18px] font-extrabold leading-[1.32] text-text-primary group-hover:text-accent transition-colors">
                 {a.title}
               </h3>
-              <p className="mt-2 text-[12.5px] text-text-secondary">
-                Von <b className="font-semibold text-text-primary/80">Republic of Pixels</b>
-              </p>
             </div>
             <div className="relative h-[76px] w-[118px] overflow-hidden rounded-md">
               <ArticleMedia article={a} sizes="118px" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
@@ -70,11 +67,12 @@ export function NotchKarte({
             <div className="absolute inset-0 transition-transform duration-500 group-hover:scale-[1.03]">
               <ArticleMedia article={article} sizes="(max-width: 640px) 100vw, 320px" className="h-full w-full" />
             </div>
-            {/* Weicher Uebergang zur Textzone (Tim, 15.08.): nur die
-                untersten ~36px blenden nach Navy — das Artwork bleibt hell. */}
+            {/* Weicher Uebergang mit Kurve (Tim, 15.08.): oben fast nichts,
+                erst ganz unten satt — Artwork-Helligkeit bleibt erhalten. */}
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute inset-x-0 bottom-0 h-9 bg-gradient-to-b from-transparent to-[#0F0E20]"
+              className="pointer-events-none absolute inset-x-0 bottom-0 h-16"
+              style={{ background: "linear-gradient(180deg, transparent 0%, rgba(15,14,32,0.03) 35%, rgba(15,14,32,0.14) 60%, rgba(15,14,32,0.5) 82%, #0F0E20 100%)" }}
             />
           </div>
           <div className="flex flex-1 flex-col px-3.5 pb-3 pt-2.5">
@@ -85,10 +83,7 @@ export function NotchKarte({
             )}
             {/* Immer zweizeilige Titelhöhe (Tim, 15.08.): einzeilige Titel
                 liessen die Kartenreihe sonst ungleich hoch wirken. */}
-            <h3 className="min-h-[2.6em] text-[15.5px] font-extrabold leading-[1.3] text-white line-clamp-2">{headline}</h3>
-            <p className="mt-auto pt-1.5 text-[11.5px] text-[#B9BCCB]">
-              Von <b className="font-bold text-[#E7E8EF]">der Redaktion</b>
-            </p>
+            <h3 className="min-h-[2.6em] text-[16.5px] font-extrabold leading-[1.3] text-white line-clamp-2">{headline}</h3>
           </div>
         </div>
       </div>

@@ -19,7 +19,8 @@ export function TopStory({ article }: { article: Article }) {
             </div>
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute inset-x-0 bottom-0 h-12 bg-gradient-to-b from-transparent to-[#0F0E20]"
+              className="pointer-events-none absolute inset-x-0 bottom-0 h-24"
+              style={{ background: "linear-gradient(180deg, transparent 0%, rgba(15,14,32,0.03) 35%, rgba(15,14,32,0.14) 60%, rgba(15,14,32,0.5) 82%, #0F0E20 100%)" }}
             />
           </div>
           <div className="px-5 pb-5 pt-3 sm:px-7 sm:pb-6 sm:pt-4">
@@ -31,9 +32,6 @@ export function TopStory({ article }: { article: Article }) {
             <h1 className="text-[24px]/[1.25] font-black tracking-[-0.015em] text-white sm:text-[30px]/[1.25] lg:text-[34px]/[1.25]">
               {headline}
             </h1>
-            <p className="mt-2.5 text-[12.5px] text-[#B9BCCB]">
-              Von <b className="font-bold text-[#E7E8EF]">der Redaktion</b>
-            </p>
           </div>
         </div>
       </div>

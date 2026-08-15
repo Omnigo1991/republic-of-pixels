@@ -24,15 +24,13 @@ export function ArticleListItem({ article }: { article: Article }) {
           {!istNews && (
             <span className="text-text-tertiary"> · {CATEGORY_LABELS[article.category].toUpperCase()}</span>
           )}
+          <span className="text-text-tertiary"> · {article.readingTimeMinutes} MIN.</span>
         </p>
-        <h3 className="text-[18px] font-extrabold leading-[1.3] text-text-primary group-hover:text-accent transition-colors line-clamp-2 sm:text-[22px]">
+        <h3 className="text-[18px] font-extrabold leading-[1.3] text-text-primary group-hover:text-accent transition-colors line-clamp-2 sm:text-[23px]">
           {article.title}
         </h3>
         <p className="mt-2 hidden text-[15.5px] leading-relaxed text-text-secondary line-clamp-2 sm:block">
           {article.excerpt}
-        </p>
-        <p className="mt-2.5 text-[13px] text-text-secondary">
-          Von <b className="font-semibold text-text-primary/80">Republic of Pixels</b> · {article.readingTimeMinutes} Min.
         </p>
       </div>
     </Link>
