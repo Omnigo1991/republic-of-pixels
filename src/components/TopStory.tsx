@@ -3,27 +3,23 @@ import type { Article } from "@/lib/types";
 import { ArticleMedia } from "./ArticleMedia";
 import { splitTitle } from "@/lib/format";
 
-// HELD IN KARTEN-ANATOMIE (Tim, 15.08.2026 spät): dieselbe Zweiteilung
-// wie die NotchKarten — Artwork oben KOMPLETT unangetastet, weicher
-// 48px-Übergang, Navy-Textzone mit Kicker, grossem Titel und
-// Autorenzeile — nur eben in Heldengrösse.
+// HELD MIT POLYGON-SCRIM (15.08.2026, aus Polygons echtem CSS gemessen):
+// Der Verlauf sitzt NUR auf der Textbox — untere Haelfte flach 80%
+// Deckkraft, obere Haelfte laeuft auf null aus. Das Artwork selbst
+// bleibt komplett unberuehrt.
 export function TopStory({ article }: { article: Article }) {
   const { kicker, headline } = splitTitle(article.title, article.tags);
   return (
     <Link href={`/artikel/${article.slug}`} className="group block">
       <div className="treppe-tl">
-        <div className="treppe-innen flex flex-col">
-          <div className="relative h-[300px] shrink-0 overflow-hidden sm:h-[380px] lg:h-[440px] [&_img]:h-full [&_img]:w-full [&_img]:object-cover">
-            <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-[1.02]">
-              <ArticleMedia article={article} priority sizes="(max-width: 1024px) 100vw, 64vw" className="h-full w-full" />
-            </div>
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute inset-x-0 bottom-0 h-40"
-              style={{ background: "linear-gradient(180deg, transparent 0%, rgba(15,14,32,0.02) 55%, rgba(15,14,32,0.08) 75%, rgba(15,14,32,0.28) 90%, rgba(15,14,32,0.72) 97%, #0F0E20 100%)" }}
-            />
+        <div className="treppe-innen h-[430px] sm:h-[520px] lg:h-[600px]">
+          <div className="absolute inset-0 [&_img]:h-full [&_img]:w-full [&_img]:object-cover transition-transform duration-700 group-hover:scale-[1.02]">
+            <ArticleMedia article={article} priority sizes="(max-width: 1024px) 100vw, 64vw" className="h-full w-full" />
           </div>
-          <div className="px-5 pb-5 pt-3 sm:px-7 sm:pb-6 sm:pt-4">
+          <div
+            className="absolute inset-x-0 bottom-0 px-5 pb-5 pt-[104px] sm:px-7 sm:pb-6 sm:pt-[120px]"
+            style={{ background: "linear-gradient(0deg, #0F0E20 0px, #0F0E20 calc(100% - 120px), rgba(15,14,32,0.92) calc(100% - 104px), rgba(15,14,32,0.72) calc(100% - 78px), rgba(15,14,32,0.44) calc(100% - 52px), rgba(15,14,32,0.18) calc(100% - 26px), rgba(15,14,32,0) 100%)" }}
+          >
             {kicker && (
               <p className="mb-2 text-[13px] font-extrabold tracking-[0.08em] text-accent">
                 {kicker.toUpperCase()}

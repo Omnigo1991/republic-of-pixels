@@ -53,7 +53,7 @@ export function NeuesteRail({ articles }: { articles: Article[] }) {
 // eigener Navy-Zone darunter — die Standardkarte des neuen Looks.
 export function NotchKarte({
   article,
-  bildHoehe = "h-[150px]",
+  bildHoehe = "h-[280px]",
 }: {
   article: Article;
   bildHoehe?: string;
@@ -62,27 +62,21 @@ export function NotchKarte({
   return (
     <Link href={`/artikel/${article.slug}`} className="group block h-full">
       <div className="treppe-tr h-full">
-        <div className="treppe-innen flex h-full flex-col">
-          <div className={`relative ${bildHoehe} shrink-0 overflow-hidden [&_img]:h-full [&_img]:w-full [&_img]:object-cover`}>
-            <div className="absolute inset-0 transition-transform duration-500 group-hover:scale-[1.03]">
-              <ArticleMedia article={article} sizes="(max-width: 640px) 100vw, 320px" className="h-full w-full" />
-            </div>
-            {/* Weicher Uebergang mit Kurve (Tim, 15.08.): oben fast nichts,
-                erst ganz unten satt — Artwork-Helligkeit bleibt erhalten. */}
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute inset-x-0 bottom-0 h-24"
-              style={{ background: "linear-gradient(180deg, transparent 0%, rgba(15,14,32,0.02) 55%, rgba(15,14,32,0.08) 75%, rgba(15,14,32,0.28) 90%, rgba(15,14,32,0.72) 97%, #0F0E20 100%)" }}
-            />
+        <div className={`treppe-innen ${bildHoehe}`}>
+          <div className="absolute inset-0 [&_img]:h-full [&_img]:w-full [&_img]:object-cover transition-transform duration-500 group-hover:scale-[1.03]">
+            <ArticleMedia article={article} sizes="(max-width: 640px) 100vw, 320px" className="h-full w-full" />
           </div>
-          <div className="flex flex-1 flex-col px-3.5 pb-3 pt-2.5">
+          {/* Polygon-Scrim (aus deren CSS): nur auf der Textbox, untere
+              Haelfte flach 80%, obere Haelfte laeuft aus. */}
+          <div
+            className="absolute inset-x-0 bottom-0 px-3.5 pb-3.5 pt-[76px]"
+            style={{ background: "linear-gradient(0deg, #0F0E20 0px, #0F0E20 calc(100% - 76px), rgba(15,14,32,0.9) calc(100% - 64px), rgba(15,14,32,0.68) calc(100% - 48px), rgba(15,14,32,0.4) calc(100% - 32px), rgba(15,14,32,0.16) calc(100% - 16px), rgba(15,14,32,0) 100%)" }}
+          >
             {kicker && (
               <p className="mb-1 text-[11px] font-extrabold tracking-[0.08em] text-accent line-clamp-1">
                 {kicker.toUpperCase()}
               </p>
             )}
-            {/* Immer zweizeilige Titelhöhe (Tim, 15.08.): einzeilige Titel
-                liessen die Kartenreihe sonst ungleich hoch wirken. */}
             <h3 className="min-h-[2.6em] text-[16.5px] font-extrabold leading-[1.3] text-white line-clamp-2">{headline}</h3>
           </div>
         </div>
@@ -155,19 +149,28 @@ export function NewsletterBlock({ artikelBilder }: { artikelBilder: Article[] })
             </a>
           </p>
         </div>
-        <div className="relative hidden h-[300px] lg:block" aria-hidden="true">
+        {/* Polygon-Collage (Tim, 15.08.2026): Sticker-Bilder mit weissem
+            Rand vor grosser Cyan-Raute, dahinter ein feines Punktraster —
+            deren Newsletter-Look mit unseren Artikelbildern. */}
+        <div className="relative hidden h-[320px] overflow-visible lg:block" aria-hidden="true">
+          <div
+            className="absolute -inset-y-10 -right-10 left-0"
+            style={{ backgroundImage: "radial-gradient(rgba(255,255,255,0.1) 1.5px, transparent 1.5px)", backgroundSize: "17px 17px" }}
+          />
+          <div className="absolute right-16 top-1/2 h-[280px] w-[280px] -translate-y-1/2 rotate-45 bg-accent" />
           {artikelBilder[0] && (
-            <div className="treppe-tr absolute left-0 top-0 h-[250px] w-[250px] -rotate-[5deg]">
-              <div className="treppe-innen h-full w-full [&_img]:h-full [&_img]:w-full [&_img]:object-cover">
-                <ArticleMedia article={artikelBilder[0]} sizes="500px" className="h-full w-full" />
-              </div>
+            <div className="absolute left-2 top-2 h-[215px] w-[190px] -rotate-6 overflow-hidden border-4 border-white shadow-[0_18px_40px_-12px_rgba(0,0,0,0.55)] [&_img]:h-full [&_img]:w-full [&_img]:object-cover">
+              <ArticleMedia article={artikelBilder[0]} sizes="200px" className="h-full w-full" />
             </div>
           )}
           {artikelBilder[1] && (
-            <div className="treppe-tl absolute bottom-0 right-0 h-[250px] w-[250px] rotate-[4deg]">
-              <div className="treppe-innen h-full w-full [&_img]:h-full [&_img]:w-full [&_img]:object-cover">
-                <ArticleMedia article={artikelBilder[1]} sizes="500px" className="h-full w-full" />
-              </div>
+            <div className="absolute left-[150px] top-16 h-[240px] w-[200px] rotate-2 overflow-hidden border-4 border-white shadow-[0_18px_40px_-12px_rgba(0,0,0,0.6)] [&_img]:h-full [&_img]:w-full [&_img]:object-cover">
+              <ArticleMedia article={artikelBilder[1]} sizes="210px" className="h-full w-full" />
+            </div>
+          )}
+          {artikelBilder[2] && (
+            <div className="absolute right-6 top-6 h-[205px] w-[175px] rotate-[7deg] overflow-hidden border-4 border-white shadow-[0_18px_40px_-12px_rgba(0,0,0,0.55)] [&_img]:h-full [&_img]:w-full [&_img]:object-cover">
+              <ArticleMedia article={artikelBilder[2]} sizes="185px" className="h-full w-full" />
             </div>
           )}
         </div>

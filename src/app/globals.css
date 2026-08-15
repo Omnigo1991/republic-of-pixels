@@ -158,7 +158,7 @@ h3 {
    Innenabstand, innen dieselbe Treppe — Rand ueberall gleich dick. */
 .treppe-tl {
   background: #02F0D1;
-  padding: 5px;
+  padding: 7px;
   clip-path: polygon(0 45px, 15px 45px, 15px 30px, 30px 30px, 30px 15px, 45px 15px, 45px 0, 100% 0, 100% 100%, 0 100%);
 }
 .treppe-tl > .treppe-innen {
@@ -166,7 +166,7 @@ h3 {
 }
 .treppe-tr {
   background: #02F0D1;
-  padding: 4px;
+  padding: 5px;
   clip-path: polygon(0 0, calc(100% - 36px) 0, calc(100% - 36px) 12px, calc(100% - 24px) 12px, calc(100% - 24px) 24px, calc(100% - 12px) 24px, calc(100% - 12px) 36px, 100% 36px, 100% 100%, 0 100%);
 }
 .treppe-tr > .treppe-innen {
@@ -177,11 +177,11 @@ h3 {
   .treppe-tl, .treppe-tl > .treppe-innen {
     clip-path: polygon(0 27px, 9px 27px, 9px 18px, 18px 18px, 18px 9px, 27px 9px, 27px 0, 100% 0, 100% 100%, 0 100%);
   }
-  .treppe-tl { padding: 4px; }
+  .treppe-tl { padding: 5px; }
   .treppe-tr, .treppe-tr > .treppe-innen {
     clip-path: polygon(0 0, calc(100% - 27px) 0, calc(100% - 27px) 9px, calc(100% - 18px) 9px, calc(100% - 18px) 18px, calc(100% - 9px) 18px, calc(100% - 9px) 27px, 100% 27px, 100% 100%, 0 100%);
   }
-  .treppe-tr { padding: 3px; }
+  .treppe-tr { padding: 4px; }
 }
 
 
