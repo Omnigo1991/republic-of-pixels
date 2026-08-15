@@ -103,7 +103,7 @@ const organisationJsonLd = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="de" className={inter.variable}>
-      <body className="min-h-screen bg-bg-base font-sans antialiased">
+      <body className="relative min-h-screen bg-bg-base font-sans antialiased">
         <PixelStaub />
         <script
           type="application/ld+json"

@@ -197,6 +197,17 @@ h3 {
   from { transform: translateY(0); }
   to { transform: translateY(-28px); }
 }
+.staub-raute {
+  transform: rotate(45deg);
+  animation-name: staubDriftRaute;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes staubDriftRaute {
+  from { transform: rotate(45deg) translateY(0); }
+  to { transform: rotate(45deg) translateY(-24px); }
+}
 @media (prefers-reduced-motion: reduce) {
-  .staub-pixel { animation: none; }
+  .staub-pixel, .staub-raute { animation: none; }
 }
