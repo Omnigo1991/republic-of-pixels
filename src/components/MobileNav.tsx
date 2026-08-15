@@ -20,11 +20,11 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
   }, [open]);
 
   return (
-    <div className="flex items-center gap-1 lg:hidden">
+    <div className="flex items-center gap-1">
       <Link
         href="/suche"
         aria-label="Suche öffnen"
-        className="flex h-10 w-10 items-center justify-center rounded-full text-current hover:opacity-70 transition-opacity"
+        className="flex h-10 w-10 items-center justify-center rounded-full text-current hover:opacity-70 transition-opacity lg:hidden"
       >
         <SearchIcon className="h-5 w-5" />
       </Link>
@@ -71,6 +71,13 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
                   {c.key === "breaking" && <span className="h-2 w-2 rounded-full bg-accent animate-pulseDot" />}
                 </Link>
               ))}
+              <Link
+                href="/guides"
+                onClick={() => setOpen(false)}
+                className="flex items-center justify-between border-b border-navy-border py-4 text-xl font-medium text-navy-text active:text-accent"
+              >
+                Guides
+              </Link>
               <Link
                 href="/themen"
                 onClick={() => setOpen(false)}
