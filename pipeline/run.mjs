@@ -588,6 +588,35 @@ async function main() {
     await pingIndexNow(urls);
   }
 
+  // GUIDE-PFLEGE, STUFE 1 (Tim-Entscheid 15.08.2026): Guides veralten,
+  // wenn zum selben Spiel Neues passiert — ein GTA-6-Sammelguide muss von
+  // jeder neuen GTA-6-Meldung wissen. Diese Stufe ERKENNT das nur und
+  // meldet es sichtbar im Lauf-Protokoll; aktualisiert wird über die
+  // Guide-Werkstatt (gleiches Thema, neue Quelle dazu). Automatische
+  // Aktualisierung kommt erst, wenn sich die Erkennung bewährt hat.
+  if (publishedSlugs.length) {
+    const guides = [];
+    for (const f of readdirSync(ARTICLES_DIR).filter((f) => f.endsWith(".json"))) {
+      try {
+        const a = JSON.parse(readFileSync(join(ARTICLES_DIR, f), "utf8"));
+        if (a.category === "guides") guides.push(a);
+      } catch {}
+    }
+    for (const slug of publishedSlugs) {
+      let neu;
+      try { neu = JSON.parse(readFileSync(join(ARTICLES_DIR, `${slug}.json`), "utf8")); } catch { continue; }
+      const neueTags = (neu.tags ?? []).map((t) => String(t).toLowerCase());
+      for (const g of guides) {
+        // Erster Tag = Spielname (Konvention aus getRelated) — nur der
+        // zählt, sonst schlagen Allerwelts-Tags wie "Update" ständig an.
+        const spiel = String(g.tags?.[0] ?? "").toLowerCase();
+        if (spiel && neueTags.includes(spiel)) {
+          console.log(`::warning::Guide möglicherweise veraltet: "${g.title}" (${g.slug}) — neue Meldung zum selben Spiel: ${slug}. Aktualisieren über Guide-Werkstatt (gleiches Thema, neue Quelle dazu).`);
+        }
+      }
+    }
+  }
+
   console.log(`5/5 Fertig: ${published} Artikel geschrieben, State aktualisiert.`);
   verbrauchBericht();
 }

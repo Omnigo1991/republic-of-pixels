@@ -1,13 +1,16 @@
-# Guide-Entwurf (14.08.2026): Erzeugt einen Ratgeber-ENTWURF als Download.
-# Es wird NICHTS veroeffentlicht — Tim liest, beurteilt, und veroeffentlicht
-# von Hand. Guides sind eine neue Inhaltssorte; nichts Neues geht ungeprueft
-# auf die Seite.
+# Guide-Werkstatt (15.08.2026): Erzeugt einen Ratgeber — als Entwurf zum
+# Herunterladen oder, mit veroeffentlichen=ja, direkt als Artikel auf der
+# Seite. Vor jeder Veroeffentlichung steht das Faktentreue-Tor
+# (pipeline/lib/faktentor.mjs): Jede nachpruefbare Behauptung des fertigen
+# Guides wird gegen die Quelltexte gehalten — ein Verstoss stoppt den Lauf.
+# Tim-Entscheid: "Bau das Tor und lass laufen."
 #
-# Start: GitHub → Actions → "Guide-Entwurf" → Run workflow
-#   thema:   z. B. "Einsteigertipps zu STALKER 2 nach Update 2.0"
-#   quellen: eine oder mehrere Adressen, mit Komma getrennt (Pflicht —
-#            ohne Quelltexte schreibt das Modell aus dem Gedaechtnis)
-name: Guide-Entwurf
+# Start: GitHub → Actions → "Guide-Werkstatt" → Run workflow
+#   thema:            z. B. "Einsteigertipps zu STALKER 2 nach Update 2.0"
+#   quellen:          eine oder mehrere Adressen, mit Komma getrennt (Pflicht)
+#   veroeffentlichen: "ja" = nach bestandenem Tor als Artikel committen
+#   plattformen:      z. B. "pc,playstation" — nur fuers Veroeffentlichen
+name: Guide-Werkstatt
 
 on:
   workflow_dispatch:
@@ -18,15 +21,28 @@ on:
       quellen:
         description: "Quell-Adressen, mit Komma getrennt"
         required: true
+      veroeffentlichen:
+        description: "Direkt veroeffentlichen?"
+        type: choice
+        options: ["nein", "ja"]
+        default: "nein"
+      plattformen:
+        description: "Plattformen (Komma), nur fuers Veroeffentlichen"
+        default: "pc,playstation,xbox"
 
-# Nur Lesezugriff — dieser Lauf darf nichts ins Projekt schreiben.
+# Schreibrecht nur fuer den Veroeffentlichungs-Commit; der Entwurfsmodus
+# schreibt nichts ins Projekt.
 permissions:
-  contents: read
+  contents: write
+
+concurrency:
+  group: publish-main
+  cancel-in-progress: false
 
 jobs:
-  entwurf:
+  werkstatt:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
 
@@ -38,16 +54,37 @@ jobs:
       - name: Dependencies installieren
         run: npm ci
 
-      - name: Entwurf erzeugen
+      - name: Guide erzeugen und pruefen
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GUIDE_THEMA: ${{ github.event.inputs.thema }}
           GUIDE_QUELLEN: ${{ github.event.inputs.quellen }}
+          GUIDE_VEROEFFENTLICHEN: ${{ github.event.inputs.veroeffentlichen }}
+          GUIDE_PLATTFORMEN: ${{ github.event.inputs.plattformen }}
         run: node pipeline/guide-entwurf.mjs
 
       - name: Entwurf anhaengen
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: guide-entwurf
           path: guide-entwurf/
           retention-days: 14
+          if-no-files-found: ignore
+
+      - name: Veroeffentlichung committen
+        if: github.event.inputs.veroeffentlichen == 'ja'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/content/articles src/lib/articles.generated.ts
+          if git diff --cached --quiet; then
+            echo "Nichts zu committen — vermutlich hat das Tor gestoppt."
+          else
+            git commit -m "Guide veroeffentlicht: ${GUIDE_THEMA} ($(date -u +'%Y-%m-%d %H:%M UTC'))"
+            # Falls die News-Pipeline parallel gepusht hat: erst einreihen, dann pushen.
+            git pull --rebase origin main
+            git push origin main
+          fi
+        env:
+          GUIDE_THEMA: ${{ github.event.inputs.thema }}
