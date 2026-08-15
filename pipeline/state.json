@@ -4291,7 +4291,8 @@
     "357df23d734ef221": "2026-08-15T13:04:36.067Z",
     "94b2f028fd4e9c49": "2026-08-15T13:04:36.067Z",
     "1ee040fb386325f2": "2026-08-15T13:04:36.067Z",
-    "12f2e945e4e0aeb2": "2026-08-15T13:04:36.067Z"
+    "12f2e945e4e0aeb2": "2026-08-15T13:04:36.067Z",
+    "e22ba4bc8eacb75e": "2026-08-15T13:16:58.572Z"
   },
   "instagram": {
     "posted": {
@@ -4323,10 +4324,10 @@
       "gta-6-ultimate-edition-89-prozent-vorbestellungen": "2026-08-14T09:49:50.746Z",
       "pokemon-pokopia-5-millionen-verkaeufe-switch-2": "2026-08-14T13:04:36.698Z",
       "guide-gta-6-release-preis-und-editionen-im-ueberblick": "2026-08-15T09:56:11.016Z",
-      "helldivers-2-ps-plus-katalog-spielerzahl-2026": "2026-08-15T13:06:37.142Z"
+      "helldivers-2-ps-plus-katalog-spielerzahl-2026": "2026-08-15T13:06:37.142Z",
+      "battlefield-6-top-gun-update-wake-island-2026": "2026-08-15T13:18:39.752Z"
     },
     "cards": {
-      "/social/ig-crimson-desert-pearl-abyss-dlc-multiplayer-sequels-2026.jpg": "2026-08-12T13:06:37.779Z",
       "/social/ig-ghost-of-yotei-complete-edition-echoes-of-sekigahara-2026.mp4": "2026-08-12T15:44:15.824Z",
       "/social/ig-hogwarts-legacy-2-offiziell-bestaetigt-2026.mp4": "2026-08-13T09:06:25.922Z",
       "/social/ig-halo-campaign-evolved-marcus-lehto-art-kritik-2026.jpg": "2026-08-13T13:06:28.038Z",
@@ -4337,14 +4338,15 @@
       "/social/ig-pokemon-pokopia-5-millionen-verkaeufe-switch-2.mp4": "2026-08-14T13:04:36.698Z",
       "/social/ig-guide-gta-6-release-preis-und-editionen-im-ueberblick.mp4": "2026-08-15T09:56:11.016Z",
       "/social/ig-battlefield-6-top-gun-update-wake-island-2026.jpg": "2026-08-15T13:06:21.208Z",
-      "/social/ig-helldivers-2-ps-plus-katalog-spielerzahl-2026.mp4": "2026-08-15T13:06:37.142Z"
+      "/social/ig-helldivers-2-ps-plus-katalog-spielerzahl-2026.mp4": "2026-08-15T13:06:37.142Z",
+      "/social/ig-battlefield-6-top-gun-update-wake-island-2026.mp4": "2026-08-15T13:18:39.752Z"
     },
     "unlisted": [
       "gta-6-preis-80-dollar-zelnick-schnaeppchen-2026"
     ],
     "wechsel": {
       "day": "2026-08-15",
-      "nichtBreaking": 2
+      "nichtBreaking": 3
     },
     "tokenCheckedAt": "2026-08-15T09:48:57.921Z",
     "token": {
@@ -4354,7 +4356,7 @@
     "spielBild": {
       "red dead redemption 2": 2,
       "roblox": 1,
-      "battlefield 6": 2,
+      "battlefield 6": 3,
       "aliens: fireteam elite": 1,
       "final fantasy ix": 1,
       "god of war": 1,
@@ -4389,9 +4391,9 @@
         "Auswahl leer": 1
       },
       "2026-08-15": {
-        "Schlagzeile regelwidrig": 5,
+        "Schlagzeile regelwidrig": 7,
         "Auswahl leer": 2,
-        "kein taugliches Bild": 1,
+        "kein taugliches Bild": 2,
         "von Instagram abgelehnt": 1
       }
     }
