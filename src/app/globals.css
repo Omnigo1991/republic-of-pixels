@@ -31,11 +31,11 @@ h3 {
   background: #0C0B1A;
 }
 ::-webkit-scrollbar-thumb {
-  background: #28505C;
+  background: #33305C;
   border-radius: 999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #356878;
+  background: #45416E;
 }
 
 /* Fliesstext-Typografie der Artikelseite. Der :where(:not(...))-Guard nimmt

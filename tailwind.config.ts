@@ -18,24 +18,19 @@ const config: Config = {
   },
   theme: {
     extend: {
-      // FARBRICHTUNG "TIEFSEE" (Tim-Entscheid 15.08.2026 aus fuenf Varianten):
-      // Flaechen und Raender liegen im Blaugruenen statt im Violetten — sie
-      // stammen aus derselben Familie wie das Cyan und wirken dadurch aus
-      // einem Guss. Navy #0C0B1A und Cyan #02F0D1 sind Markenwerte und
-      // bleiben exakt unveraendert (CLAUDE.md).
       colors: {
         bg: {
           base: "#0C0B1A",
-          elevated: "#0E1822",
+          elevated: "#121126",
         },
         surface: {
-          card: "#102028",
-          hover: "#16303A",
+          card: "#16152B",
+          hover: "#1E1D38",
         },
         border: {
-          subtle: "#1C3A44",
-          default: "#28505C",
-          strong: "#356878",
+          subtle: "#262347",
+          default: "#33305C",
+          strong: "#45416E",
         },
         accent: {
           DEFAULT: "#02F0D1",
@@ -55,9 +50,9 @@ const config: Config = {
         // Marken-Navy-Band (Header/Hero/Footer) — minimal heller als bg.base,
         // damit die Zonen sich subtil absetzen.
         navy: {
-          DEFAULT: "#0D141C",
-          raised: "#132430",
-          border: "#1C3A44",
+          DEFAULT: "#0F0E20",
+          raised: "#171632",
+          border: "#262347",
           text: "#F1F0F2",
           muted: "#A9A9A9",
           dim: "#7D7D7D",
