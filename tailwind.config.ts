@@ -103,10 +103,15 @@ const config: Config = {
           "0%, 100%": { opacity: "1", transform: "scale(1)" },
           "50%": { opacity: "0.45", transform: "scale(0.8)" },
         },
+        vorhang: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(0)" },
+        },
       },
       animation: {
         fadeIn: "fadeIn 0.4s ease-out",
         pulseDot: "pulseDot 1.6s ease-in-out infinite",
+        vorhang: "vorhang 0.3s cubic-bezier(0.22, 1, 0.36, 1)",
       },
     },
   },
