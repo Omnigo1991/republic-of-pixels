@@ -7,6 +7,7 @@ const CATEGORY_TONE: Record<Category, string> = {
   news: "text-text-secondary border-border-default bg-text-primary/[0.03]",
   leaks: "text-warning border-warning/40 bg-warning/10",
   reviews: "text-text-secondary border-border-default bg-text-primary/[0.03]",
+  guides: "text-success border-success/40 bg-success/10",
 };
 
 // Varianten für Navy-Flächen (Hero, dunkle Bänder).
@@ -15,6 +16,7 @@ const CATEGORY_TONE_DARK: Record<Category, string> = {
   news: "text-navy-muted border-white/20 bg-white/[0.06]",
   leaks: "text-[#F5B942] border-[#F5B942]/40 bg-[#F5B942]/10",
   reviews: "text-navy-muted border-white/20 bg-white/[0.06]",
+  guides: "text-success border-success/50 bg-success/10",
 };
 
 export function CategoryPill({ category, onDark = false }: { category: Category; onDark?: boolean }) {

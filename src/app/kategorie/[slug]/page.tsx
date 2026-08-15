@@ -19,6 +19,7 @@ const CATEGORY_INTRO: Record<Category, string> = {
   news: "Der komplette News-Fluss aus PC-, Konsolen- und Branchenwelt.",
   leaks: "Gerüchte und Insider-Infos — klar gekennzeichnet, kritisch eingeordnet, nie als Fakt verkauft.",
   reviews: "Unser Urteil zu aktuellen Releases, mit dem Label-System von Republic of Pixels statt Punktewertung.",
+  guides: "Ratgeber, die bleiben: Einsteigertipps, Update-Erklärungen und Übersichten — mit klarem Stand, worauf sie sich beziehen.",
 };
 
 const PLATFORM_INTRO: Record<Platform, string> = {

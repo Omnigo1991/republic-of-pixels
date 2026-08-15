@@ -88,6 +88,16 @@ export function getRelated(article: Article, limit = 3): Article[] {
       .filter((a): a is Article => Boolean(a));
     if (explicit.length >= limit) return explicit.slice(0, limit);
   }
+  // GLEICHES SPIEL ZUERST (14.08.2026): Vorher zählte nur die Rubrik — in
+  // einem STALKER-Artikel empfahl die eingeschobene Karte deshalb ARC
+  // Raiders, schlicht die neueste News derselben Rubrik. Der erste Tag ist
+  // der wichtigste Hinweis auf das Thema (Spielname), darum gewinnt er.
+  // Für Guides ist das Pflicht, für News eine Verbesserung.
+  const sameTags = getAllArticles().filter(
+    (a) =>
+      a.slug !== article.slug &&
+      (a.tags ?? []).some((t) => (article.tags ?? []).includes(t))
+  );
   const sameCategory = getAllArticles().filter(
     (a) => a.slug !== article.slug && a.category === article.category
   );
@@ -96,7 +106,7 @@ export function getRelated(article: Article, limit = 3): Article[] {
       a.slug !== article.slug &&
       a.platforms.some((p) => article.platforms.includes(p))
   );
-  const merged = [...sameCategory, ...samePlatform, ...getAllArticles()].filter(
+  const merged = [...sameTags, ...sameCategory, ...samePlatform, ...getAllArticles()].filter(
     (a) => a.slug !== article.slug
   );
   const unique = Array.from(new Map(merged.map((a) => [a.slug, a])).values());

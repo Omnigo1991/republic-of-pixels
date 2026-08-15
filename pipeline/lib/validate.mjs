@@ -1,6 +1,6 @@
 // Strenge Validierung generierter Artikel, bevor irgendetwas committet wird.
 // Ein Artikel, der hier durchfällt, wird verworfen (Lauf bricht nicht ab).
-const CATEGORIES = ["breaking", "news", "leaks", "reviews"];
+const CATEGORIES = ["breaking", "news", "leaks", "reviews", "guides"];
 const PLATFORMS = ["pc", "playstation", "xbox", "nintendo"];
 const HERO_VARIANTS = ["circuit", "controller", "particles", "waveform", "grid"];
 const BLOCK_TYPES = ["paragraph", "heading", "quote", "list", "embed", "stats"];

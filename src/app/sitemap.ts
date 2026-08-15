@@ -18,6 +18,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  const guidesPage: MetadataRoute.Sitemap = [
+    { url: `${SITE_URL}/guides`, changeFrequency: "weekly", priority: 0.7 },
+  ];
+
   const themenPages: MetadataRoute.Sitemap = [
     { url: `${SITE_URL}/themen`, changeFrequency: "daily", priority: 0.6 },
     ...getAlleThemen().map((t) => ({
@@ -34,5 +38,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
-  return [...staticPages, ...categoryPages, ...themenPages, ...articlePages];
+  return [...staticPages, ...categoryPages, ...guidesPage, ...themenPages, ...articlePages];
 }

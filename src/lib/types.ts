@@ -1,4 +1,4 @@
-export type Category = "breaking" | "news" | "leaks" | "reviews";
+export type Category = "breaking" | "news" | "leaks" | "reviews" | "guides";
 export type Platform = "pc" | "playstation" | "xbox" | "nintendo";
 export type HeroVariant = "circuit" | "controller" | "particles" | "waveform" | "grid";
 export type ReviewLabel =
@@ -85,6 +85,9 @@ export const CATEGORY_LABELS: Record<Category, string> = {
   news: "News",
   leaks: "Leaks",
   reviews: "Reviews",
+  // Einzahl mit Absicht: Das Abzeichen am Artikel soll "GUIDE" lauten,
+  // nicht "GUIDES" — es beschreibt diesen einen Artikel.
+  guides: "Guide",
 };
 
 export const PLATFORM_LABELS: Record<Platform, string> = {

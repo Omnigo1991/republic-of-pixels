@@ -40,6 +40,13 @@ export function Footer() {
                 </li>
               ))}
               <li>
+                {/* Guides bewusst nur hier, noch nicht im Header: Der Reiter
+                    oben kommt, wenn genug Guides da sind (Tim, 15.08.2026). */}
+                <Link href="/guides" className="text-sm text-navy-muted hover:text-accent transition-colors">
+                  Guides
+                </Link>
+              </li>
+              <li>
                 <Link href="/themen" className="text-sm text-navy-muted hover:text-accent transition-colors">
                   Themen
                 </Link>
