@@ -71,7 +71,7 @@ export function NotchKarte({
           <div
             aria-hidden="true"
             className="absolute inset-0"
-            style={{ background: "linear-gradient(180deg, rgba(12,11,26,0.2) 8%, rgba(12,11,26,0.95) 62%)" }}
+            style={{ background: "linear-gradient(180deg, rgba(12,11,26,0) 38%, rgba(12,11,26,0.9) 76%)" }}
           />
           <div className="absolute bottom-3 left-3.5 right-3">
             {kicker && (
@@ -79,7 +79,9 @@ export function NotchKarte({
                 {kicker.toUpperCase()}
               </p>
             )}
-            <h3 className="text-[16px] font-extrabold leading-[1.3] text-white line-clamp-2">{headline}</h3>
+            {/* Immer zweizeilige Titelhöhe (Tim, 15.08.): einzeilige Titel
+                liessen die Kartenreihe sonst ungleich hoch wirken. */}
+            <h3 className="min-h-[2.6em] text-[16px] font-extrabold leading-[1.3] text-white line-clamp-2">{headline}</h3>
             <p className="mt-1.5 text-[11.5px] text-[#B9BCCB]">
               Von <b className="font-bold text-[#E7E8EF]">der Redaktion</b>
             </p>
@@ -118,7 +120,7 @@ export function TickerBand({ articles }: { articles: Article[] }) {
 // Leere zu sammeln.
 export function NewsletterBlock({ artikelBilder }: { artikelBilder: Article[] }) {
   return (
-    <div className="rauten-raster overflow-hidden bg-navy">
+    <div className="overflow-hidden bg-navy">
       <div className="mx-auto grid max-w-content items-center gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1fr_420px] lg:px-8 lg:py-[74px]">
         <div>
           <h2 className="text-[30px] font-black leading-[1.12] text-white sm:text-[46px]">
@@ -133,11 +135,11 @@ export function NewsletterBlock({ artikelBilder }: { artikelBilder: Article[] })
             <input
               placeholder="Newsletter startet bald"
               disabled
-              className="min-w-0 flex-1 rounded-lg border-2 border-[#3A3757] bg-[#14132A] px-4 py-3.5 text-[15px] text-white placeholder:text-[#7D8095]"
+              className="min-w-0 flex-1 rounded-full border-2 border-[#3A3757] bg-[#14132A] px-5 py-3.5 text-[15px] text-white placeholder:text-[#7D8095]"
             />
             <button
               disabled
-              className="cursor-not-allowed rounded-lg bg-accent px-7 py-3.5 text-[15px] font-extrabold text-navy opacity-60"
+              className="cursor-not-allowed rounded-full bg-accent px-7 py-3.5 text-[15px] font-extrabold text-navy opacity-60"
             >
               Anmelden
             </button>

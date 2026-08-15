@@ -51,7 +51,7 @@ export function GeradeImGespraech() {
   return (
     <section aria-labelledby="gespraech-heading" className="py-10">
       <div className="mb-3 flex items-baseline justify-between">
-        <h2 id="gespraech-heading" className="text-xl font-semibold tracking-tight text-text-primary">
+        <h2 id="gespraech-heading" className="text-[26px] font-black tracking-tight text-text-primary sm:text-[34px]">
           Gerade im Gespräch
         </h2>
         <span className="text-xs text-text-tertiary">Meiste Kommentare · letzte 24 Stunden</span>

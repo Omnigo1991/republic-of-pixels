@@ -91,7 +91,7 @@ export function DeineMerkliste() {
   return (
     <section aria-labelledby="merkliste-heading" className="py-10">
       <div className="mb-3 flex items-baseline justify-between">
-        <h2 id="merkliste-heading" className="text-xl font-semibold tracking-tight text-text-primary">
+        <h2 id="merkliste-heading" className="text-[26px] font-black tracking-tight text-text-primary sm:text-[34px]">
           Deine Merkliste
         </h2>
         <span className="text-xs text-text-tertiary">Themen, die du verfolgst</span>

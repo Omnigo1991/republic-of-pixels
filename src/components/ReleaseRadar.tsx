@@ -30,7 +30,7 @@ export function ReleaseRadar() {
   return (
     <section aria-labelledby="radar-heading" className="py-10">
       <div className="mb-3 flex items-baseline justify-between">
-        <h2 id="radar-heading" className="text-xl font-semibold tracking-tight text-text-primary">
+        <h2 id="radar-heading" className="text-[26px] font-black tracking-tight text-text-primary sm:text-[34px]">
           Release-Radar
         </h2>
         <span className="text-xs text-text-tertiary">Die nächsten Termine</span>

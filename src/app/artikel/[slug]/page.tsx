@@ -6,9 +6,9 @@ import {
   getArticleBySlug,
   getRelated,
 } from "@/lib/articles";
-import { CATEGORY_LABELS, PLATFORM_LABELS } from "@/lib/types";
+import { CATEGORY_LABELS } from "@/lib/types";
 import { ArticleMedia } from "@/components/ArticleMedia";
-import { CategoryPill, LeakBanner, Tag } from "@/components/Badges";
+import { LeakBanner } from "@/components/Badges";
 import { PlatformIcon } from "@/components/PlatformIcons";
 import { ArticleBody } from "@/components/ArticleBody";
 import { TldrBox, WhyItMattersBox, ReviewBox, SourcesBox } from "@/components/ArticleBoxes";
@@ -17,7 +17,7 @@ import { PollBox } from "@/components/PollBox";
 import { ShareButtons } from "@/components/ShareButtons";
 import { CommentSection } from "@/components/CommentSection";
 import { ArticleReactions } from "@/components/ArticleReactions";
-import { ArticleCard } from "@/components/ArticleCard";
+import { NotchKarte } from "@/components/StartseiteNeu";
 import { SectionDivider } from "@/components/SectionDivider";
 import { formatDateTime, splitTitle } from "@/lib/format";
 import { Masthead } from "@/components/Masthead";
@@ -94,44 +94,44 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
       />
 
       <article className="mx-auto max-w-article px-4 sm:px-6 pt-8 sm:pt-12">
-        <div className="mb-5 flex flex-wrap items-center gap-2">
-          <CategoryPill category={article.category} />
-          {article.platforms.map((p) => (
-            <Tag key={p}>
-              <PlatformIcon platform={p} className="mr-1.5 h-3.5 w-3.5" />
-              {PLATFORM_LABELS[p]}
-            </Tag>
-          ))}
-        </div>
-
+        {/* Polygon-Anlehnung (Tim, 15.08.2026): Rubrik + Spielname als EINE
+            Zeile im Zeitungsstil, danach die fette Schlagzeile — die
+            Plattform-Chips wandern unter die Autorenzeile, damit der Kopf
+            eine klare Lesefolge hat: Wo bin ich? Was ist passiert? Von wem? */}
         {(() => {
           const { kicker, headline } = splitTitle(article.title, article.tags);
           return (
             <>
-              {kicker && (
-                <p className="mb-2 text-sm font-bold uppercase tracking-wider text-accent">
-                  {kicker}
-                </p>
-              )}
-              <h1 className="text-3xl sm:text-[2.5rem] font-semibold leading-[1.15] tracking-tight text-text-primary">
+              <p className="mb-3 text-[14px] font-extrabold tracking-[0.1em] text-accent">
+                {CATEGORY_LABELS[article.category].toUpperCase()}
+                {kicker && <span className="text-text-tertiary"> · </span>}
+                {kicker && <span>{kicker.toUpperCase()}</span>}
+              </p>
+              <h1 className="text-[32px] font-black leading-[1.12] tracking-[-0.015em] text-text-primary sm:text-[46px]">
                 {headline}
               </h1>
             </>
           );
         })()}
-        <p className="mt-4 text-lg leading-relaxed text-text-secondary">{article.subtitle}</p>
+        <p className="mt-4 text-lg leading-relaxed text-text-secondary sm:text-[21px] sm:leading-[1.45]">{article.subtitle}</p>
 
-        <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 border-y border-border-subtle py-4 text-sm text-text-tertiary">
-          {/* Autorenzeile klickbar in Cyan (Leser-Audit 08.08.2026):
-              führt zu "Die Köpfe hinter der Republic" — Vertrauen + E-E-A-T. */}
-          <Link
-            href="/ueber-uns"
-            className="font-medium text-accent transition-opacity hover:opacity-80"
-          >
-            {article.author}
+        <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-3 border-y border-border-subtle py-4">
+          {/* Autorenzeile klickbar (Leser-Audit 08.08.2026): führt zu
+              "Die Köpfe hinter der Republic" — Vertrauen + E-E-A-T. */}
+          <Link href="/ueber-uns" className="flex items-center gap-2.5 transition-opacity hover:opacity-80">
+            <span className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-navy">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/brand/r-avatar.png" alt="" className="h-full w-full" />
+            </span>
+            <span className="text-sm font-bold text-text-primary">Von {article.author}</span>
           </Link>
-          <span>{formatDateTime(article.publishedAt)}</span>
-          <span>{article.readingTimeMinutes} Min. Lesezeit</span>
+          <span className="text-sm text-text-tertiary">{formatDateTime(article.publishedAt)}</span>
+          <span className="text-sm text-text-tertiary">{article.readingTimeMinutes} Min. Lesezeit</span>
+          <span className="ml-auto flex items-center gap-2">
+            {article.platforms.map((p) => (
+              <PlatformIcon key={p} platform={p} className="h-[18px] w-[18px] text-text-tertiary" />
+            ))}
+          </span>
         </div>
 
         {article.isLeakOrRumor && (
@@ -205,13 +205,14 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
 
       {related.length > 0 && (
         <section className="mx-auto max-w-content px-4 sm:px-6 lg:px-8 py-16">
-          <h2 className="mb-3 text-xl font-semibold tracking-tight text-text-primary">
-            Ähnliche Artikel
+          {/* NotchKarten statt neutraler Kachel-Karten (Polygon-Anlehnung):
+              dieselbe Kartensprache wie auf der Startseite. */}
+          <h2 className="mb-5 text-[26px] font-black tracking-tight text-text-primary sm:text-[34px]">
+            Mehr zum Thema
           </h2>
-          <SectionDivider />
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {related.map((a) => (
-              <ArticleCard key={a.slug} article={a} />
+              <NotchKarte key={a.slug} article={a} />
             ))}
           </div>
           <div className="mt-10 text-center">

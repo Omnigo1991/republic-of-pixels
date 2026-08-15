@@ -38,7 +38,7 @@ export default async function HomePage() {
     ...guides,
     ...chronological.filter((a) => a.category !== "guides").slice(8, 8 + Math.max(0, 5 - guides.length)),
   ].slice(0, 5);
-  const ticker = [topStory, ...chronological].slice(0, 2);
+  const ticker = chronological.slice(0, 2);
 
   return (
     <>

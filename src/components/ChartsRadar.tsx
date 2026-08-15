@@ -39,7 +39,7 @@ export function ChartsRadar() {
   return (
     <section aria-labelledby="charts-heading" className="py-10">
       <div className="mb-3 flex items-baseline justify-between">
-        <h2 id="charts-heading" className="text-xl font-semibold tracking-tight text-text-primary">
+        <h2 id="charts-heading" className="text-[26px] font-black tracking-tight text-text-primary sm:text-[34px]">
           Charts-Radar
         </h2>
         <span className="flex items-center gap-1.5 text-xs text-text-tertiary">
