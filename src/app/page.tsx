@@ -73,7 +73,7 @@ export default async function HomePage() {
             <SektionsKopf titel="Die grossen Republic-Guides 🎮" mehrHref="/guides" />
             <div className="grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-5">
               {guideReihe.map((a) => (
-                <NotchKarte key={a.slug} article={a} hoehe="h-[210px]" />
+                <NotchKarte key={a.slug} article={a} bildHoehe="h-[120px]" />
               ))}
             </div>
           </Reveal>

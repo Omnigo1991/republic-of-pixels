@@ -51,38 +51,36 @@ export function NeuesteRail({ articles }: { articles: Article[] }) {
   );
 }
 
-// Bildkarte mit Pixel-Treppe oben rechts, Beschriftung unten (Spielname in
-// Cyan, Titel weiss, Autorenzeile) — die Standardkarte des neuen Looks.
+// Bildkarte mit Pixel-Treppe oben rechts: Artwork oben KOMPLETT
+// unangetastet (Tim, 15.08.2026: "gar nicht abdunkeln"), Beschriftung auf
+// eigener Navy-Zone darunter — die Standardkarte des neuen Looks.
 export function NotchKarte({
   article,
-  hoehe = "h-[215px]",
+  bildHoehe = "h-[150px]",
 }: {
   article: Article;
-  hoehe?: string;
+  bildHoehe?: string;
 }) {
   const { kicker, headline } = splitTitle(article.title, article.tags);
   return (
-    <Link href={`/artikel/${article.slug}`} className="group block">
-      <div className="treppe-tr">
-        <div className={`treppe-innen ${hoehe}`}>
-          <div className="absolute inset-0 [&_img]:h-full [&_img]:w-full [&_img]:object-cover [&_img]:opacity-90 transition-transform duration-500 group-hover:scale-[1.03]">
-            <ArticleMedia article={article} sizes="(max-width: 640px) 100vw, 320px" className="h-full w-full" />
+    <Link href={`/artikel/${article.slug}`} className="group block h-full">
+      <div className="treppe-tr h-full">
+        <div className="treppe-innen flex h-full flex-col">
+          <div className={`relative ${bildHoehe} shrink-0 overflow-hidden [&_img]:h-full [&_img]:w-full [&_img]:object-cover`}>
+            <div className="absolute inset-0 transition-transform duration-500 group-hover:scale-[1.03]">
+              <ArticleMedia article={article} sizes="(max-width: 640px) 100vw, 320px" className="h-full w-full" />
+            </div>
           </div>
-          <div
-            aria-hidden="true"
-            className="absolute inset-0"
-            style={{ background: "linear-gradient(180deg, rgba(12,11,26,0) 38%, rgba(12,11,26,0.9) 76%)" }}
-          />
-          <div className="absolute bottom-3 left-3.5 right-3">
+          <div className="flex flex-1 flex-col px-3.5 pb-3 pt-2.5">
             {kicker && (
-              <p className="mb-1.5 text-[11px] font-extrabold tracking-[0.08em] text-accent line-clamp-1">
+              <p className="mb-1 text-[11px] font-extrabold tracking-[0.08em] text-accent line-clamp-1">
                 {kicker.toUpperCase()}
               </p>
             )}
             {/* Immer zweizeilige Titelhöhe (Tim, 15.08.): einzeilige Titel
                 liessen die Kartenreihe sonst ungleich hoch wirken. */}
-            <h3 className="min-h-[2.6em] text-[16px] font-extrabold leading-[1.3] text-white line-clamp-2">{headline}</h3>
-            <p className="mt-1.5 text-[11.5px] text-[#B9BCCB]">
+            <h3 className="min-h-[2.6em] text-[15.5px] font-extrabold leading-[1.3] text-white line-clamp-2">{headline}</h3>
+            <p className="mt-auto pt-1.5 text-[11.5px] text-[#B9BCCB]">
               Von <b className="font-bold text-[#E7E8EF]">der Redaktion</b>
             </p>
           </div>

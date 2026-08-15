@@ -79,13 +79,17 @@ export function EventRadar() {
       </div>
       <SectionDivider />
       {hero && (
-        <div className="mb-4 flex flex-col items-start gap-5 rounded-2xl border border-accent/30 bg-accent/[0.05] p-5 sm:flex-row sm:items-center sm:gap-8 sm:p-6">
+        // Navy-Kachel mit Cyan-Countdown (Hell-Umbau, Entwurfs-Stil): auf
+        // der hellen Seite sind die dunklen Kacheln der Blickfang — gleiche
+        // Sprache wie Zahlen-Kacheln und Newsletter-Block.
+        <div className="relative mb-4 flex flex-col items-start gap-5 overflow-hidden rounded-2xl bg-navy p-5 sm:flex-row sm:items-center sm:gap-8 sm:p-6">
+          <div aria-hidden="true" className="pointer-events-none absolute -right-10 -top-10 h-[130px] w-[130px] rotate-45 border-[9px] border-accent/30" />
           {countdown !== null && (
             <div className="shrink-0 text-center sm:min-w-[130px]">
               <div className="text-5xl font-bold leading-none tracking-tight text-accent">
                 {countdown === 0 ? "Heute" : countdown}
               </div>
-              <div className="mt-1.5 text-[11px] font-bold uppercase tracking-wider text-text-tertiary">
+              <div className="mt-1.5 text-[11px] font-bold uppercase tracking-wider text-[#A9ADC0]">
                 {countdown === 0 ? "Es geht los" : countdown === 1 ? "Tag bis zum Start" : "Tage bis zum Start"}
               </div>
             </div>
@@ -94,11 +98,11 @@ export function EventRadar() {
             <span className={`${PILL_REZEPT} text-accent border-accent/40 bg-accent/10`}>
               NÄCHSTES EVENT
             </span>
-            <p className="mt-2.5 text-2xl font-semibold tracking-tight text-text-primary">
+            <p className="mt-2.5 text-2xl font-black tracking-tight text-white">
               {hero.name}
             </p>
-            <p className="mt-1 text-sm text-text-secondary">
-              <span className="font-semibold text-text-primary">{hero.dateLabel}</span> ·{" "}
+            <p className="mt-1 text-sm text-[#C7CAD8]">
+              <span className="font-semibold text-white">{hero.dateLabel}</span> ·{" "}
               {hero.beschreibung}
             </p>
             {heroHub && (
