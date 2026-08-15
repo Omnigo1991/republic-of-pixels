@@ -185,3 +185,18 @@ h3 {
 }
 
 
+
+/* Pixel-Staub: sehr langsame Drift in den Seitenraendern. */
+.staub-pixel {
+  animation-name: staubDrift;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes staubDrift {
+  from { transform: translateY(0); }
+  to { transform: translateY(-28px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .staub-pixel { animation: none; }
+}

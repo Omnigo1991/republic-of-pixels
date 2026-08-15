@@ -1,3 +1,4 @@
+import { PixelStaub } from "@/components/PixelStaub";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Inter } from "next/font/google";
@@ -103,6 +104,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="de" className={inter.variable}>
       <body className="min-h-screen bg-bg-base font-sans antialiased">
+        <PixelStaub />
         <script
           type="application/ld+json"
           // eslint-disable-next-line react/no-danger
