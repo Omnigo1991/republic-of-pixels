@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-15T07:09:43.417Z",
+  "updatedAt": "2026-08-15T09:48:38.358Z",
   "deals": [
     {
       "appId": 1142710,
@@ -46,17 +46,6 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2358720/b7f722ddd5e23503f598586aa3700dd4d827bb2d/capsule_184x69.jpg?t=1760601605"
     },
     {
-      "appId": 1478500,
-      "title": "Big Walk",
-      "discountPercent": 25,
-      "originalPrice": 1899,
-      "finalPrice": 1424,
-      "currency": "EUR",
-      "endsAt": "2026-08-18T17:00:09.000Z",
-      "url": "https://store.steampowered.com/app/1478500/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1478500/44da9fb07ebe477387355d7fce29560b55125cce/capsule_184x69.jpg?t=1785911674"
-    },
-    {
       "appId": 2950790,
       "title": "IRON NEST: Heavy Turret Simulator",
       "discountPercent": 25,
@@ -66,6 +55,17 @@
       "endsAt": "2026-08-20T17:00:32.000Z",
       "url": "https://store.steampowered.com/app/2950790/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2950790/922472560f653fd897313ab7a10dd86b018d373f/capsule_184x69.jpg?t=1786639727"
+    },
+    {
+      "appId": 1478500,
+      "title": "Big Walk",
+      "discountPercent": 25,
+      "originalPrice": 1899,
+      "finalPrice": 1424,
+      "currency": "EUR",
+      "endsAt": "2026-08-18T17:00:09.000Z",
+      "url": "https://store.steampowered.com/app/1478500/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1478500/44da9fb07ebe477387355d7fce29560b55125cce/capsule_184x69.jpg?t=1785911674"
     }
   ]
 }

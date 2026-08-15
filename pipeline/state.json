@@ -4219,7 +4219,29 @@
     "d7a8614ede145a38": "2026-08-15T07:09:42.593Z",
     "196e632c22508025": "2026-08-15T07:09:42.593Z",
     "c2d00ba0f0976562": "2026-08-15T07:09:42.593Z",
-    "3cf3bab4cdd8de61": "2026-08-15T07:09:42.593Z"
+    "3cf3bab4cdd8de61": "2026-08-15T07:09:42.593Z",
+    "477b61a5d85a6756": "2026-08-15T09:48:37.566Z",
+    "798ae811b5b8a5a6": "2026-08-15T09:48:37.566Z",
+    "89314063bcd1d3b0": "2026-08-15T09:48:37.566Z",
+    "08004bd78185b399": "2026-08-15T09:48:37.566Z",
+    "e7fd0c15d0e2f8e5": "2026-08-15T09:48:37.566Z",
+    "65f4542fe2d1c27a": "2026-08-15T09:48:37.566Z",
+    "566a4adeef9eb5fa": "2026-08-15T09:48:37.566Z",
+    "13fbfb22f4fac027": "2026-08-15T09:48:37.566Z",
+    "02309cb70cf624b4": "2026-08-15T09:48:37.566Z",
+    "db43a2d69caa3845": "2026-08-15T09:48:37.566Z",
+    "288256350ef7361d": "2026-08-15T09:48:37.566Z",
+    "ea11ce382c4f5360": "2026-08-15T09:48:37.566Z",
+    "8b52e599c7966797": "2026-08-15T09:48:37.566Z",
+    "e74ffdd38cd1e4cd": "2026-08-15T09:48:37.566Z",
+    "1fda6117e58154a1": "2026-08-15T09:48:37.566Z",
+    "78826a29b833721d": "2026-08-15T09:48:37.566Z",
+    "944873cc49866405": "2026-08-15T09:48:37.566Z",
+    "a667ed4a56ad1551": "2026-08-15T09:48:37.566Z",
+    "0205c4c02c824dab": "2026-08-15T09:48:37.566Z",
+    "cad85a3fca285ca3": "2026-08-15T09:48:37.566Z",
+    "fe13a9cbdaf9c1da": "2026-08-15T09:48:37.566Z",
+    "6d50d79557ceb817": "2026-08-15T09:48:37.566Z"
   },
   "instagram": {
     "posted": {
@@ -4252,7 +4274,6 @@
       "pokemon-pokopia-5-millionen-verkaeufe-switch-2": "2026-08-14T13:04:36.698Z"
     },
     "cards": {
-      "/social/ig-zelda-ocarina-of-time-remake-switch-2-2026.mp4": "2026-08-12T09:05:01.317Z",
       "/social/ig-elder-scrolls-6-sharma-demo-bethesda-protest-2026.jpg": "2026-08-12T13:06:17.737Z",
       "/social/ig-crimson-desert-pearl-abyss-dlc-multiplayer-sequels-2026.jpg": "2026-08-12T13:06:37.779Z",
       "/social/ig-ghost-of-yotei-complete-edition-echoes-of-sekigahara-2026.mp4": "2026-08-12T15:44:15.824Z",
@@ -4271,10 +4292,10 @@
       "day": "2026-08-15",
       "nichtBreaking": 0
     },
-    "tokenCheckedAt": "2026-08-08T08:23:33.168Z",
+    "tokenCheckedAt": "2026-08-15T09:48:57.921Z",
     "token": {
-      "value": "IGAAQ9UX5JEQpBZAGFLQ0pGWDNZATE5QSUwwSlVna3JhZAlZAnYkRZAMkhOeVRzSDl6T3NZAVWlNdGx4d1oxeDBpVGRfcThXN1NfM3QwU0RZAa2ppOWx2V2VhMTdELURGT3B5S09MYUZAPQU9iTXptSzhyeFRxeVVR",
-      "expiresAt": "2026-10-06T18:29:59.168Z"
+      "value": "IGAAQ9UX5JEQpBZAGJlX05FQUR3OVNmTU5MNnlUWVVPSFBCQ1hMZATl3SDVPNGlyR2lWN3BMc2xZASDBRcVRhREVxTjNWWnBMazZA6NExSM1RGWEJFMmZA4SWdfZAWVxQ1dtZAVk4eWVSbnlSRmpma0I0WmdFRVF3",
+      "expiresAt": "2026-10-14T09:48:57.921Z"
     },
     "spielBild": {
       "red dead redemption 2": 2,
@@ -4313,8 +4334,8 @@
         "Auswahl leer": 1
       },
       "2026-08-15": {
-        "Schlagzeile regelwidrig": 1,
-        "Auswahl leer": 1
+        "Schlagzeile regelwidrig": 2,
+        "Auswahl leer": 2
       }
     }
   },
