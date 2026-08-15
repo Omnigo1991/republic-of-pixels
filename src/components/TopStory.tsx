@@ -3,30 +3,37 @@ import type { Article } from "@/lib/types";
 import { ArticleMedia } from "./ArticleMedia";
 import { splitTitle } from "@/lib/format";
 
-// HELL-UMBAU (15.08.2026, abgenommener Polygon-Entwurf): Der Held ist eine
-// grosse Karte mit Pixel-Treppen-Rahmen.
-// Das Artwork bleibt KOMPLETT unangetastet (Tim, 15.08.2026: "gar nicht
-// abdunkeln") — die Schlagzeile steht als weisse Zeilen auf opaken
-// Navy-Streifen, die Raute ist bewusst gestrichen.
+// HELD IN KARTEN-ANATOMIE (Tim, 15.08.2026 spät): dieselbe Zweiteilung
+// wie die NotchKarten — Artwork oben KOMPLETT unangetastet, weicher
+// 48px-Übergang, Navy-Textzone mit Kicker, grossem Titel und
+// Autorenzeile — nur eben in Heldengrösse.
 export function TopStory({ article }: { article: Article }) {
-  const { headline } = splitTitle(article.title, article.tags);
+  const { kicker, headline } = splitTitle(article.title, article.tags);
   return (
     <Link href={`/artikel/${article.slug}`} className="group block">
       <div className="treppe-tl">
-        <div className="treppe-innen h-[420px] sm:h-[480px] lg:h-[560px]">
-          <div className="h-full w-full [&_img]:h-full [&_img]:w-full [&_img]:object-cover transition-transform duration-700 group-hover:scale-[1.02]">
-            <ArticleMedia article={article} priority sizes="(max-width: 1024px) 100vw, 64vw" className="h-full w-full" />
+        <div className="treppe-innen flex flex-col">
+          <div className="relative h-[300px] shrink-0 overflow-hidden sm:h-[380px] lg:h-[440px] [&_img]:h-full [&_img]:w-full [&_img]:object-cover">
+            <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-[1.02]">
+              <ArticleMedia article={article} priority sizes="(max-width: 1024px) 100vw, 64vw" className="h-full w-full" />
+            </div>
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-x-0 bottom-0 h-12 bg-gradient-to-b from-transparent to-[#0F0E20]"
+            />
           </div>
-          <div className="absolute bottom-6 left-0 max-w-[88%] sm:bottom-9">
-            {/* Zeilenstreifen, die NAHTLOS aneinanderstossen (Tim, 15.08.):
-                Der Balken endet mit dem Text, die Flaeche bleibt durchgehend.
-                Inter malt den Inline-Hintergrund exakt 1.21em hoch; mit
-                0.18em Innenabstand pro Zeile ergibt das 1.57em — die
-                Zeilenhoehe ist exakt darauf gesetzt, kein Spalt, keine
-                Ueberlappung. */}
-            <h1 className="inline bg-[#0C0B1A] px-4 py-[0.18em] text-[22px]/[1.57] font-black tracking-[-0.01em] text-white [box-decoration-break:clone] [-webkit-box-decoration-break:clone] sm:px-5 sm:text-3xl/[1.57] lg:text-[36px]/[1.57]">
+          <div className="px-5 pb-5 pt-3 sm:px-7 sm:pb-6 sm:pt-4">
+            {kicker && (
+              <p className="mb-2 text-[13px] font-extrabold tracking-[0.08em] text-accent">
+                {kicker.toUpperCase()}
+              </p>
+            )}
+            <h1 className="text-[24px]/[1.25] font-black tracking-[-0.015em] text-white sm:text-[30px]/[1.25] lg:text-[34px]/[1.25]">
               {headline}
             </h1>
+            <p className="mt-2.5 text-[12.5px] text-[#B9BCCB]">
+              Von <b className="font-bold text-[#E7E8EF]">der Redaktion</b>
+            </p>
           </div>
         </div>
       </div>
