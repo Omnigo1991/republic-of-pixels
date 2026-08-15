@@ -18,7 +18,7 @@ export function TopStory({ article }: { article: Article }) {
             <ArticleMedia article={article} priority sizes="(max-width: 1024px) 100vw, 64vw" className="h-full w-full" />
           </div>
           <div className="absolute bottom-6 left-0 max-w-[86%] sm:bottom-9">
-            <h1 className="inline bg-[#0C0B1A] px-3 py-0 text-[26px] font-black leading-[1.65] tracking-[-0.01em] text-white [box-decoration-break:clone] [-webkit-box-decoration-break:clone] sm:px-4 sm:text-4xl lg:text-[42px]">
+            <h1 className="inline bg-[#0C0B1A] px-3 py-0 text-[26px]/[1.9] font-black tracking-[-0.01em] text-white [box-decoration-break:clone] [-webkit-box-decoration-break:clone] sm:px-4 sm:text-4xl/[1.9] lg:text-[42px]/[1.9]">
             {headline}
             </h1>
           </div>

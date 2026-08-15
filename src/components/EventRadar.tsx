@@ -78,45 +78,44 @@ export function EventRadar() {
         <span className="text-xs text-text-tertiary">Die nächsten grossen Momente</span>
       </div>
       <SectionDivider />
+      {/* Grosse Event-Buehne links, Karten rechts (Tim, 15.08.2026 —
+          das Layout aus dem abgenommenen Entwurf): Das naechste Event
+          bekommt eine stehende Navy-Flaeche mit grossem Cyan-Countdown. */}
+      <div className={hero ? "grid gap-4 lg:grid-cols-[400px_1fr]" : ""}>
       {hero && (
-        // Navy-Kachel mit Cyan-Countdown (Hell-Umbau, Entwurfs-Stil): auf
-        // der hellen Seite sind die dunklen Kacheln der Blickfang — gleiche
-        // Sprache wie Zahlen-Kacheln und Newsletter-Block.
-        <div className="relative mb-4 flex flex-col items-start gap-5 overflow-hidden rounded-2xl bg-navy p-5 sm:flex-row sm:items-center sm:gap-8 sm:p-6">
-          <div aria-hidden="true" className="pointer-events-none absolute -right-10 -top-10 h-[130px] w-[130px] rotate-45 border-[9px] border-accent/30" />
+        <div className="relative flex flex-col overflow-hidden rounded-2xl bg-navy p-6 sm:p-7">
+          <div aria-hidden="true" className="pointer-events-none absolute -right-14 -top-14 h-[210px] w-[210px] rotate-45 border-[11px] border-accent/30" />
+          <span className={`${PILL_REZEPT} self-start text-accent border-accent/40 bg-accent/10`}>
+            NÄCHSTES EVENT
+          </span>
           {countdown !== null && (
-            <div className="shrink-0 text-center sm:min-w-[130px]">
-              <div className="text-5xl font-bold leading-none tracking-tight text-accent">
+            <>
+              <div className="mt-5 text-[68px] font-black leading-none tracking-tight text-accent sm:text-[76px]">
                 {countdown === 0 ? "Heute" : countdown}
               </div>
-              <div className="mt-1.5 text-[11px] font-bold uppercase tracking-wider text-[#A9ADC0]">
+              <div className="mt-2 text-[12px] font-extrabold uppercase tracking-[0.14em] text-[#A9ADC0]">
                 {countdown === 0 ? "Es geht los" : countdown === 1 ? "Tag bis zum Start" : "Tage bis zum Start"}
               </div>
-            </div>
+            </>
           )}
-          <div className="min-w-0">
-            <span className={`${PILL_REZEPT} text-accent border-accent/40 bg-accent/10`}>
-              NÄCHSTES EVENT
-            </span>
-            <p className="mt-2.5 text-2xl font-black tracking-tight text-white">
-              {hero.name}
-            </p>
-            <p className="mt-1 text-sm text-[#C7CAD8]">
-              <span className="font-semibold text-white">{hero.dateLabel}</span> ·{" "}
-              {hero.beschreibung}
-            </p>
-            {heroHub && (
-              <Link
-                href={`/thema/${heroHub.slug}`}
-                className="mt-2.5 inline-block text-sm font-semibold text-accent hover:underline"
-              >
-                Unsere {hero.name}-Berichterstattung →
-              </Link>
-            )}
-          </div>
+          <p className="mt-6 text-[28px] font-black tracking-tight text-white">
+            {hero.name}
+          </p>
+          <p className="mt-2 max-w-[320px] text-sm leading-relaxed text-[#C7CAD8]">
+            <span className="font-semibold text-white">{hero.dateLabel}</span> ·{" "}
+            {hero.beschreibung}
+          </p>
+          {heroHub && (
+            <Link
+              href={`/thema/${heroHub.slug}`}
+              className="mt-3 inline-block text-sm font-semibold text-accent hover:underline"
+            >
+              Unsere {hero.name}-Berichterstattung →
+            </Link>
+          )}
         </div>
       )}
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid content-start gap-4 sm:grid-cols-2">
         {karten.map((e) => (
           <div
             key={e.name}
@@ -134,6 +133,7 @@ export function EventRadar() {
             <div>{pill(e.status)}</div>
           </div>
         ))}
+      </div>
       </div>
       <p className="mt-3 text-[11px] text-text-tertiary">
         Status: FIXIERT = offiziell bestätigt · ERWARTET = Branchen-Routine ohne Termin · GERÜCHT =

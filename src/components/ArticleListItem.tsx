@@ -1,38 +1,39 @@
 import Link from "next/link";
 import type { Article } from "@/lib/types";
 import { ArticleMedia } from "./ArticleMedia";
-import { CategoryPill } from "./Badges";
-import { formatDateTime, splitTitle } from "@/lib/format";
+import { CATEGORY_LABELS } from "@/lib/types";
+import { relativeZeit } from "./StartseiteNeu";
 
-// Chronologische Newsliste — strukturell an play3.de angelehnt (Bild + Text nebeneinander),
-// aber mit mehr Weissraum, ruhigerer Typo und klarer Artikeltrennung statt Card-Flut.
+// Chronologische Newsliste, an die "Neueste"-Spalte angelehnt (Tim,
+// 15.08.2026): gleiche Anatomie — Cyan-Zeitzeile, fetter Titel, Bild
+// rechts — plus Teaser, den die grosse Liste verträgt. EINE Zeilensprache
+// für alles, was chronologisch erzählt.
 export function ArticleListItem({ article }: { article: Article }) {
-  const { kicker, headline } = splitTitle(article.title, article.tags);
+  const istNews = article.category === "news";
   return (
     <Link
       href={`/artikel/${article.slug}`}
-      className="group flex items-center gap-4 sm:gap-6 border-b border-border-subtle py-6 first:pt-0"
+      className="group grid grid-cols-[1fr_112px] items-start gap-4 border-b border-border-subtle py-5 first:pt-0 sm:grid-cols-[1fr_192px] sm:gap-6"
     >
-      <div className="relative w-28 sm:w-48 shrink-0 self-center overflow-hidden rounded-xl border border-border-subtle aspect-[4/3] sm:aspect-[16/10]">
-        <ArticleMedia article={article} sizes="(max-width: 640px) 112px, 192px" className="h-full w-full transition-transform duration-500 group-hover:scale-105" />
-      </div>
-      <div className="flex min-w-0 flex-1 flex-col justify-center">
-        <div className="mb-2 flex flex-wrap items-center gap-2">
-          <CategoryPill category={article.category} />
-          <span className="text-xs text-text-tertiary hidden sm:inline">{formatDateTime(article.publishedAt)}</span>
-          <span className="text-xs text-text-tertiary">· {article.readingTimeMinutes} Min.</span>
-        </div>
-        {kicker && (
-          <p className="mb-0.5 text-[12px] font-bold uppercase tracking-wider text-accent line-clamp-1">
-            {kicker}
-          </p>
-        )}
-        <h3 className="text-base sm:text-lg font-semibold leading-snug text-text-primary group-hover:text-accent transition-colors line-clamp-2">
-          {headline}
+      <div className="min-w-0">
+        <p className="mb-1.5 text-[12.5px] font-extrabold tracking-[0.06em] text-accent">
+          {relativeZeit(article.publishedAt)}
+          {!istNews && (
+            <span className="text-text-tertiary"> · {CATEGORY_LABELS[article.category].toUpperCase()}</span>
+          )}
+        </p>
+        <h3 className="text-[17px] font-extrabold leading-[1.32] text-text-primary group-hover:text-accent transition-colors line-clamp-2 sm:text-[18px]">
+          {article.title}
         </h3>
-        <p className="mt-1.5 hidden sm:block text-sm text-text-secondary line-clamp-2">
+        <p className="mt-1.5 hidden text-sm leading-relaxed text-text-secondary line-clamp-2 sm:block">
           {article.excerpt}
         </p>
+        <p className="mt-2 text-[12.5px] text-text-secondary">
+          Von <b className="font-semibold text-text-primary/80">Republic of Pixels</b> · {article.readingTimeMinutes} Min.
+        </p>
+      </div>
+      <div className="relative aspect-[4/3] w-28 self-center overflow-hidden rounded-md sm:aspect-[16/10] sm:w-48">
+        <ArticleMedia article={article} sizes="(max-width: 640px) 112px, 192px" className="h-full w-full transition-transform duration-500 group-hover:scale-105" />
       </div>
     </Link>
   );

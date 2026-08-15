@@ -58,7 +58,13 @@ export function ChartsRadar() {
             className="group min-w-0 overflow-hidden rounded-2xl border border-border-subtle bg-surface-card transition-all duration-300 hover:bg-surface-hover"
           >
             {g.image && (
-              <div className="h-24 w-full overflow-hidden border-b border-border-subtle sm:h-28">
+              <div className="relative h-24 w-full overflow-hidden border-b border-border-subtle sm:h-28">
+                {/* Rang als Navy-Chip statt Schattenzahl (Tim, 15.08.2026):
+                    gleiche Sprache wie die Zahlen-Kacheln — Navy-Flaeche,
+                    Cyan-Zahl, kein Schlagschatten. */}
+                <span className="absolute left-2.5 top-2.5 z-10 flex h-9 w-9 items-center justify-center rounded-lg bg-navy text-lg font-black text-accent">
+                  {g.rank}
+                </span>
                 {/* Steam-Artwork vom offiziellen CDN — plain <img> wie im
                     Deal-Radar, damit keine next/image-Allowlist nötig ist. */}
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -71,10 +77,7 @@ export function ChartsRadar() {
               </div>
             )}
             <div className="relative p-4">
-              <span className="absolute -top-5 left-3 text-4xl font-bold leading-none tracking-tight text-accent [text-shadow:0_2px_12px_rgba(12,11,26,0.9)]">
-                {g.rank}
-              </span>
-              <div className="flex items-start justify-between gap-3 pl-9">
+              <div className="flex items-start justify-between gap-3">
                 <p className="truncate text-[15px] font-semibold text-text-primary group-hover:text-accent transition-colors">
                   {g.name}
                 </p>

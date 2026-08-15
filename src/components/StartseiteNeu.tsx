@@ -70,6 +70,12 @@ export function NotchKarte({
             <div className="absolute inset-0 transition-transform duration-500 group-hover:scale-[1.03]">
               <ArticleMedia article={article} sizes="(max-width: 640px) 100vw, 320px" className="h-full w-full" />
             </div>
+            {/* Weicher Uebergang zur Textzone (Tim, 15.08.): nur die
+                untersten ~36px blenden nach Navy — das Artwork bleibt hell. */}
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-x-0 bottom-0 h-9 bg-gradient-to-b from-transparent to-[#0F0E20]"
+            />
           </div>
           <div className="flex flex-1 flex-col px-3.5 pb-3 pt-2.5">
             {kicker && (
@@ -158,14 +164,14 @@ export function NewsletterBlock({ artikelBilder }: { artikelBilder: Article[] })
           {artikelBilder[0] && (
             <div className="treppe-tr absolute left-0 top-0 h-[250px] w-[250px] -rotate-[5deg]">
               <div className="treppe-innen h-full w-full [&_img]:h-full [&_img]:w-full [&_img]:object-cover">
-                <ArticleMedia article={artikelBilder[0]} sizes="250px" className="h-full w-full" />
+                <ArticleMedia article={artikelBilder[0]} sizes="500px" className="h-full w-full" />
               </div>
             </div>
           )}
           {artikelBilder[1] && (
             <div className="treppe-tl absolute bottom-0 right-0 h-[250px] w-[250px] rotate-[4deg]">
               <div className="treppe-innen h-full w-full [&_img]:h-full [&_img]:w-full [&_img]:object-cover">
-                <ArticleMedia article={artikelBilder[1]} sizes="250px" className="h-full w-full" />
+                <ArticleMedia article={artikelBilder[1]} sizes="500px" className="h-full w-full" />
               </div>
             </div>
           )}
