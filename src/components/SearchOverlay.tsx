@@ -106,7 +106,7 @@ export function SearchTrigger() {
       <button
         onClick={() => setOpen(true)}
         aria-label="Suche öffnen"
-        className="flex h-9 w-9 items-center justify-center rounded-full text-current hover:opacity-70 transition-opacity"
+        className="flex h-9 w-9 items-center justify-center rounded-full bg-[rgba(15,13,44,0.12)] text-current hover:opacity-70 transition-opacity"
       >
         <SearchIcon className="h-5 w-5" />
       </button>

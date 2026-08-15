@@ -32,12 +32,12 @@ export function Masthead({
 }) {
   return (
     <>
-      <div className="sticky top-0 z-50 overflow-hidden border-b border-border-subtle bg-white shadow-[0_10px_30px_-24px_rgba(12,11,26,0.25)]">
+      <div className="sticky top-0 z-50 overflow-hidden bg-accent text-[#0F0D2C]">
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 hidden lg:block">
           {KOPF_STAUB.map((p, i) => (
             <span
               key={i}
-              className="absolute bg-accent"
+              className="absolute bg-navy"
               style={{ left: `${p.l}%`, top: `${p.t}%`, width: `${p.g}px`, height: `${p.g}px`, opacity: p.o }}
             />
           ))}
@@ -45,35 +45,35 @@ export function Masthead({
         <div className="relative mx-auto flex h-16 max-w-content items-center gap-5 px-4 sm:px-6 lg:h-[88px] lg:gap-7 lg:px-8">
           <Link href="/" aria-label="Republic of Pixels – Startseite" className="mr-auto flex items-center gap-3 lg:gap-4">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/brand/r-mark.png" alt="" aria-hidden="true" className="h-9 w-auto lg:h-12" />
+            <img src="/brand/r-mark-navy.png" alt="" aria-hidden="true" className="h-9 w-auto lg:h-12" />
             {/* Unter 420px nur "REPUBLIC" — der volle Schriftzug lief sonst
                 unter die Anmelden-Pille (Mobil-Fund 15.08.2026). */}
-            <span className="translate-y-[1px] whitespace-nowrap text-[17px] font-black leading-none tracking-tight text-text-primary sm:text-[21px] lg:text-[28px]">
-              REPUBLIC<span className="hidden text-accent min-[420px]:inline"> OF PIXELS</span>
+            <span className="translate-y-[1px] whitespace-nowrap text-[17px] font-black leading-none tracking-tight sm:text-[21px] lg:text-[28px]">
+              REPUBLIC<span className="hidden opacity-60 min-[420px]:inline"> OF PIXELS</span>
             </span>
           </Link>
 
           {/* Pure Textlinks mit Sprungzielen (ohne Pillenbox, Tim-Vorgabe). */}
           <nav className="hidden items-center gap-7 lg:flex" aria-label="Bereiche">
-            <Link href="/#news" className="text-[16.5px] font-bold text-text-primary transition-colors hover:text-accent">
+            <Link href="/#news" className="text-[16.5px] font-bold transition-opacity hover:opacity-70">
               News
             </Link>
-            <Link href="/#guides" className="text-[16.5px] font-bold text-text-primary transition-colors hover:text-accent">
+            <Link href="/#guides" className="text-[16.5px] font-bold transition-opacity hover:opacity-70">
               Guides
             </Link>
-            <Link href="/#radare" className="text-[16.5px] font-bold text-text-primary transition-colors hover:text-accent">
+            <Link href="/#radare" className="text-[16.5px] font-bold transition-opacity hover:opacity-70">
               Radare
             </Link>
           </nav>
 
-          <nav className="hidden items-center rounded-full bg-surface-card px-3.5 py-2 lg:flex" aria-label="Plattformen">
+          <nav className="hidden items-center rounded-full bg-[rgba(15,13,44,0.12)] px-3.5 py-2 lg:flex" aria-label="Plattformen">
             {PLATFORM_NAV.map((p) => (
               <Link
                 key={p.key}
                 href={`/kategorie/${p.key}`}
                 title={p.label}
                 aria-label={p.label}
-                className="px-1.5 text-text-secondary transition-colors hover:text-text-primary"
+                className="px-1.5 opacity-75 transition-opacity hover:opacity-100"
               >
                 <PlatformIcon platform={p.key} className="h-[19px] w-[19px]" />
               </Link>
