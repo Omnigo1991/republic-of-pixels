@@ -17,9 +17,12 @@ export function TopStory({ article }: { article: Article }) {
           <div className="h-full w-full [&_img]:h-full [&_img]:w-full [&_img]:object-cover transition-transform duration-700 group-hover:scale-[1.02]">
             <ArticleMedia article={article} priority sizes="(max-width: 1024px) 100vw, 64vw" className="h-full w-full" />
           </div>
-          <div className="absolute bottom-6 left-0 max-w-[86%] sm:bottom-9">
-            <div className="inline-block bg-[#0C0B1A] px-4 py-3 sm:px-5 sm:py-4">
-              <h1 className="text-[26px]/[1.35] font-black tracking-[-0.01em] text-white sm:text-4xl/[1.35] lg:text-[42px]/[1.35]">
+          <div className="absolute bottom-6 left-0 max-w-[88%] sm:bottom-9">
+            {/* Zweizeilig wie im Entwurf; Innenabstand oben/unten optisch
+                gleich: Zeilenhoehe 1.3 + symmetrisches Padding, leicht
+                korrigiert um die Versalhoehe (oben wirkt sonst groesser). */}
+            <div className="inline-block bg-[#0C0B1A] px-4 pb-[15px] pt-[13px] sm:px-5 sm:pb-[19px] sm:pt-[16px]">
+              <h1 className="text-[22px]/[1.3] font-black tracking-[-0.01em] text-white sm:text-3xl/[1.3] lg:text-[36px]/[1.3]">
                 {headline}
               </h1>
             </div>
