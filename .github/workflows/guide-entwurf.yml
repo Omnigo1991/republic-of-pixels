@@ -49,6 +49,16 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      # FRISCH AUF DIE SPITZE (15.08.2026): Ein Lauf, der in der
+      # Warteschlange wartete, wuerde sonst auf dem Repository-Stand von
+      # seinem STARTZEITPUNKT arbeiten — der Lauf davor hat aber gepusht.
+      # Folge am 15.08.: Der aufgestaute Lauf erzeugte bereits
+      # veroeffentlichte Artikel erneut und scheiterte am Merge-Konflikt.
+      - name: Auf aktuellen Stand ziehen
+        run: git pull --ff-only origin main
 
       - uses: actions/setup-node@v4
         with:
