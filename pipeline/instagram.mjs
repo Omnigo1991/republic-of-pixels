@@ -186,8 +186,17 @@ Nur wenn ein Kandidat redaktionell unhaltbar ist, darf er fehlen; im Extremfall:
   // hier fangen den Rest ab (leere Antworten, API-Schluckauf). Scheitert
   // alles, wird ohne Posts fortgefahren (State/Aufräumen laufen weiter)
   // und der Lauf hinterlässt eine sichtbare Warnung in GitHub Actions.
+  // ZWEITE AUSWAHL-RUNDE MIT RÜCKMELDUNG (15.08.2026): Drei Läufe in
+  // Folge verloren ihren Slot nach demselben Muster — das Modell wählte
+  // die grösste Story, der Schlagzeilen-Wächter lehnte ab, und statt der
+  // im Kommentar versprochenen "nächsten Auswahl-Runde" kehrte der Code
+  // mit leerer Auswahl zurück. Jetzt bekommt das Modell die Beanstandung
+  // wörtlich zurück und darf dieselbe Story mit regelkonformer Schlagzeile
+  // erneut vorschlagen — oder eine andere wählen.
+  let anfrage = prompt;
   for (let versuch = 0; ; versuch++) {
     let raw = "";
+    const rundenFehler = [];
     try {
       // 2500 war zu knapp (10.08.2026): Bei zwei Posts mit Headline, Bildunter-
       // schrift und Hashtags brach die Antwort mitten im Satz ab, das JSON war
@@ -203,7 +212,7 @@ Nur wenn ein Kandidat redaktionell unhaltbar ist, darf er fehlen; im Extremfall:
       // ausführlicher als Sonnet.
       raw = await askClaude({
         system: IG_SYSTEM,
-        prompt,
+        prompt: anfrage,
         maxTokens: 12000,
         model: MODELL_URTEIL,
       });
@@ -228,6 +237,9 @@ Nur wenn ein Kandidat redaktionell unhaltbar ist, darf er fehlen; im Extremfall:
               .join(" / ")}"`,
           );
           notiere(state, GRUND.SCHLAGZEILE);
+          rundenFehler.push(
+            `Vorschlag zu Kandidat ${p.index}: Schlagzeile verworfen — ${pruefung.fehler.join("; ")}`,
+          );
           continue;
         }
         // KOPFZEILE UND NOTIZ DÜRFEN KEINEN POST KOSTEN (13.08.2026).
@@ -287,9 +299,24 @@ Nur wenn ein Kandidat redaktionell unhaltbar ist, darf er fehlen; im Extremfall:
             `  Pick verworfen (ausgeschriebene Umlaute): ${umlautFehler.join(", ")}`,
           );
           notiere(state, GRUND.UMLAUTE);
+          rundenFehler.push(
+            `Vorschlag zu Kandidat ${p.index}: ausgeschriebene Umlaute im Bildtext (${umlautFehler.join(", ")}) — Umlaute immer als ä/ö/ü schreiben`,
+          );
           continue;
         }
         brauchbar.push(p);
+      }
+      if (brauchbar.length === 0 && rundenFehler.length > 0 && versuch < 2) {
+        console.log(
+          `  Alle Vorschläge verworfen — neue Runde mit Rückmeldung der Schlussredaktion.`,
+        );
+        anfrage = `${prompt}
+
+RÜCKMELDUNG DER SCHLUSSREDAKTION zur vorherigen Runde (die Vorschläge wurden verworfen):
+${rundenFehler.map((f) => `- ${f}`).join("\n")}
+
+Wähle erneut. Du darfst dieselbe Story mit einer REGELKONFORMEN Schlagzeile noch einmal vorschlagen oder eine andere Story wählen. {"picks":[]} nur, wenn wirklich kein Kandidat vertretbar ist.`;
+        continue;
       }
       if (brauchbar.length === 0) {
         console.log(
