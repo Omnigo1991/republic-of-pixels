@@ -88,10 +88,10 @@ export function ArticleBody({
                       aria-hidden="true"
                       className="pointer-events-none absolute -right-6 -top-6 h-[70px] w-[70px] rotate-45 border-[6px] border-accent/30"
                     />
-                    <p className="text-3xl font-black tracking-tight text-accent sm:text-4xl">
+                    <p className="[hyphens:auto] break-words text-[clamp(22px,2.1vw,32px)] font-black leading-[1.1] tracking-tight text-accent" lang="de">
                       {s.value}
                     </p>
-                    <p className="mt-2 text-[13px] leading-snug text-[#A9ADC0]">{s.label}</p>
+                    <p className="mt-2 break-words text-[13px] leading-snug text-[#A9ADC0]">{s.label}</p>
                   </div>
                 ))}
               </div>
