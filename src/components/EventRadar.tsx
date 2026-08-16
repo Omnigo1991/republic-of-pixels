@@ -72,7 +72,7 @@ export function EventRadar() {
   return (
     <section aria-labelledby="events-heading" className="py-10">
       <div className="mb-3 flex items-baseline justify-between">
-        <h2 id="events-heading" className="text-[26px] font-black tracking-tight text-text-primary sm:text-[34px]">
+        <h2 id="events-heading" className="text-[24px] font-black tracking-tight text-text-primary sm:text-[28px]">
           Event-Radar
         </h2>
         <span className="text-xs text-text-tertiary">Die nächsten grossen Momente</span>
@@ -93,7 +93,7 @@ export function EventRadar() {
               <div className="mt-5 text-[68px] font-black leading-none tracking-tight text-accent sm:text-[76px]">
                 {countdown === 0 ? "Heute" : countdown}
               </div>
-              <div className="mt-2 text-[12px] font-extrabold uppercase tracking-[0.14em] text-[#A9ADC0]">
+              <div className="mt-2 text-[12px] font-extrabold uppercase tracking-[0.14em] text-[#C7CAD8]">
                 {countdown === 0 ? "Es geht los" : countdown === 1 ? "Tag bis zum Start" : "Tage bis zum Start"}
               </div>
             </>

@@ -37,7 +37,7 @@ export function DealRadar() {
   return (
     <section aria-labelledby="deals-heading" className="py-10">
       <div className="mb-3 flex items-baseline justify-between">
-        <h2 id="deals-heading" className="text-[26px] font-black tracking-tight text-text-primary sm:text-[34px]">
+        <h2 id="deals-heading" className="text-[24px] font-black tracking-tight text-text-primary sm:text-[28px]">
           Deal-Radar
         </h2>
         <span className="flex items-center gap-1.5 text-xs text-text-tertiary">
@@ -71,7 +71,7 @@ export function DealRadar() {
                   />
                 </div>
               ) : (
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-accent">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-accent">
                   <span className="text-[15px] font-bold leading-none text-[#0F0D2C]">
                     −{d.discountPercent}%
                   </span>

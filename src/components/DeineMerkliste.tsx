@@ -91,7 +91,7 @@ export function DeineMerkliste() {
   return (
     <section aria-labelledby="merkliste-heading" className="py-10">
       <div className="mb-3 flex items-baseline justify-between">
-        <h2 id="merkliste-heading" className="text-[26px] font-black tracking-tight text-text-primary sm:text-[34px]">
+        <h2 id="merkliste-heading" className="text-[24px] font-black tracking-tight text-text-primary sm:text-[28px]">
           Deine Merkliste
         </h2>
         <span className="text-xs text-text-tertiary">Themen, die du verfolgst</span>
@@ -138,7 +138,7 @@ export function DeineMerkliste() {
           {fehler && <p className="mt-1 text-xs text-error">{fehler}</p>}
 
           {vorschlaegeOffen && vorschlaege.length > 0 && (
-            <div className="absolute inset-x-0 top-full z-10 mt-1.5 overflow-hidden rounded-xl border border-border-default bg-bg-elevated shadow-elevated">
+            <div className="absolute inset-x-0 top-full z-10 mt-1.5 overflow-hidden rounded-2xl border border-border-default bg-bg-elevated shadow-elevated">
               {!neuesThema.trim() && (
                 <p className="px-3 pt-2.5 text-[10px] tracking-wide text-text-tertiary">VORSCHLÄGE</p>
               )}

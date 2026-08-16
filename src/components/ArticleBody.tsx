@@ -69,9 +69,21 @@ export function ArticleBody({
           case "embed":
             rendered = <ExternalEmbed key={i} platform={block.platform} url={block.url} />;
             break;
-          case "stats":
+          case "stats": {
             // Zahlen-Kacheln (Artikel-Bauplan 08.08.2026): die stärksten
             // Zahlen der Story als visuelle Unterbrechung der Textstrecke.
+            //
+            // EINE Schriftgrösse für ALLE Kacheln einer Gruppe (Tim,
+            // 16.08.2026): Sie richtet sich nach dem LÄNGSTEN Wert, damit
+            // keine Kachel anders gestaltet ist als ihre Nachbarn — und
+            // nichts über den Rand läuft.
+            const laengster = Math.max(...block.items.map((s) => s.value.length));
+            const wertGroesse =
+              laengster <= 8
+                ? "text-[30px] sm:text-[34px]"
+                : laengster <= 13
+                  ? "text-[22px] sm:text-[25px]"
+                  : "text-[18px] sm:text-[20px]";
             rendered = (
               <div
                 key={i}
@@ -82,21 +94,22 @@ export function ArticleBody({
                   // auf der hellen Seite sind die dunklen Kacheln der Blickfang.
                   <div
                     key={j}
-                    className="relative overflow-hidden rounded-xl bg-navy px-5 py-6 text-left"
+                    className="relative overflow-hidden rounded-2xl bg-navy px-5 py-6 text-left"
                   >
                     <div
                       aria-hidden="true"
                       className="pointer-events-none absolute -right-6 -top-6 h-[70px] w-[70px] rotate-45 border-[6px] border-accent/30"
                     />
-                    <p className="[hyphens:auto] break-words text-[clamp(22px,2.1vw,32px)] font-black leading-[1.1] tracking-tight text-accent" lang="de">
+                    <p className={`font-black leading-[1.15] tracking-tight text-accent ${wertGroesse}`}>
                       {s.value}
                     </p>
-                    <p className="mt-2 break-words text-[13px] leading-snug text-[#A9ADC0]">{s.label}</p>
+                    <p className="mt-2 break-words text-[13px] leading-snug text-[#C7CAD8]">{s.label}</p>
                   </div>
                 ))}
               </div>
             );
             break;
+          }
           default:
             rendered = null;
         }

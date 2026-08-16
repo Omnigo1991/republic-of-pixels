@@ -88,7 +88,7 @@ export default function InstagramLandingPage() {
 
       <Link
         href="/"
-        className="mt-5 block rounded-xl bg-accent py-3 text-center text-sm font-extrabold text-bg-base transition-opacity hover:opacity-90"
+        className="mt-5 block rounded-2xl bg-accent py-3 text-center text-sm font-extrabold text-bg-base transition-opacity hover:opacity-90"
       >
         Zur Startseite mit allen News
       </Link>
@@ -110,7 +110,7 @@ export default function InstagramLandingPage() {
                 alt={a.image.alt ?? a.title}
                 width={96}
                 height={60}
-                className="h-[60px] w-24 shrink-0 rounded-xl object-cover"
+                className="h-[60px] w-24 shrink-0 rounded-2xl object-cover"
               />
             )}
             <div className="min-w-0">

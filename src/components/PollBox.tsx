@@ -79,7 +79,7 @@ export function PollBox({ articleSlug, poll }: { articleSlug: string; poll: Poll
           return abgestimmt ? (
             <div
               key={i}
-              className={`relative overflow-hidden rounded-xl border px-4 py-2.5 ${i === eigene ? "border-accent/60" : "border-border-subtle"}`}
+              className={`relative overflow-hidden rounded-2xl border px-4 py-2.5 ${i === eigene ? "border-accent/60" : "border-border-subtle"}`}
             >
               <div
                 className="absolute inset-y-0 left-0 bg-accent/15 transition-all duration-700"
@@ -97,7 +97,7 @@ export function PollBox({ articleSlug, poll }: { articleSlug: string; poll: Poll
             <button
               key={i}
               onClick={() => abstimmen(i)}
-              className="rounded-xl border border-border-default px-4 py-2.5 text-left text-sm text-text-primary transition-colors hover:border-accent/60 hover:bg-surface-hover"
+              className="rounded-2xl border border-border-default px-4 py-2.5 text-left text-sm text-text-primary transition-colors hover:border-accent/60 hover:bg-surface-hover"
             >
               {option}
             </button>

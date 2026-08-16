@@ -85,7 +85,7 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
             <Link
               href="/suche"
               onClick={() => setOpen(false)}
-              className="mb-5 mt-1 flex items-center gap-3 rounded-xl bg-navy/10 px-4 py-3.5 text-[15px] font-semibold text-navy"
+              className="mb-5 mt-1 flex items-center gap-3 rounded-2xl bg-navy/10 px-4 py-3.5 text-[15px] font-semibold text-navy"
             >
               Suche nach Spielen, News, Guides …
               <SearchIcon className="ml-auto h-5 w-5 shrink-0" />

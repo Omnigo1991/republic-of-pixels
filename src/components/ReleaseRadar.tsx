@@ -30,7 +30,7 @@ export function ReleaseRadar() {
   return (
     <section aria-labelledby="radar-heading" className="py-10">
       <div className="mb-3 flex items-baseline justify-between">
-        <h2 id="radar-heading" className="text-[26px] font-black tracking-tight text-text-primary sm:text-[34px]">
+        <h2 id="radar-heading" className="text-[24px] font-black tracking-tight text-text-primary sm:text-[28px]">
           Release-Radar
         </h2>
         <span className="text-xs text-text-tertiary">Die nächsten Termine</span>
@@ -40,7 +40,7 @@ export function ReleaseRadar() {
         {upcoming.map((r) => {
           const inner = (
             <div className="flex h-full min-w-0 items-center gap-4 rounded-2xl border border-border-subtle bg-surface-card p-4 transition-all duration-300 hover:bg-surface-hover">
-              <div className="flex h-14 w-14 shrink-0 flex-col items-center justify-center rounded-xl border border-accent/30 bg-accent/[0.08]">
+              <div className="flex h-14 w-14 shrink-0 flex-col items-center justify-center rounded-2xl border border-accent/30 bg-accent/[0.08]">
                 <span className="text-lg font-bold leading-none text-accent">
                   {r.date.slice(8, 10)}
                 </span>

@@ -22,7 +22,7 @@ export function relativeZeit(iso: string): string {
 export function NeuesteRail({ articles }: { articles: Article[] }) {
   return (
     <aside aria-label="Neueste Meldungen">
-      <h2 className="mb-2 text-[28px] font-black tracking-tight text-text-primary">Neueste</h2>
+      <h2 className="mb-2 text-[24px] font-black tracking-tight text-text-primary sm:text-[28px]">Neueste</h2>
       <div>
         {articles.map((a, i) => (
           <Link
@@ -36,11 +36,11 @@ export function NeuesteRail({ articles }: { articles: Article[] }) {
               <p className="mb-1.5 text-[12.5px] font-extrabold tracking-[0.06em] text-accent">
                 {relativeZeit(a.publishedAt)}
               </p>
-              <h3 className="text-[18px] font-extrabold leading-[1.32] text-text-primary group-hover:text-accent transition-colors">
+              <h3 className="text-[17px] font-extrabold leading-[1.32] text-text-primary group-hover:text-accent transition-colors">
                 {a.title}
               </h3>
             </div>
-            <div className="relative h-[76px] w-[118px] overflow-hidden rounded-md">
+            <div className="relative h-[76px] w-[118px] overflow-hidden rounded-lg">
               <ArticleMedia article={a} sizes="118px" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
             </div>
           </Link>
@@ -79,7 +79,7 @@ export function NotchKarte({
                 {kicker.toUpperCase()}
               </p>
             )}
-            <h3 className="min-h-[2.6em] text-[16.5px] font-extrabold leading-[1.3] text-white line-clamp-2">{headline}</h3>
+            <h3 className="min-h-[2.6em] text-[16px] font-extrabold leading-[1.35] text-white line-clamp-2">{headline}</h3>
           </div>
         </div>
       </div>
@@ -118,19 +118,19 @@ export function NewsletterBlock({ artikelBilder }: { artikelBilder: Article[] })
     <div className="overflow-hidden rounded-2xl bg-navy">
       <div className="grid items-center gap-10 px-5 py-10 sm:px-10 sm:py-12 lg:grid-cols-[1fr_400px] lg:px-14 lg:py-14">
         <div>
-          <h2 className="text-[26px] font-black leading-[1.15] text-white sm:text-[40px] lg:text-[46px]">
+          <h2 className="text-[28px] font-black leading-[1.15] text-white sm:text-[40px]">
             <span className="text-accent">KEINE NEBENQUESTS.</span>
             <br />
             NUR DIE BESTEN NEWS IN DEIN POSTFACH.
           </h2>
-          <p className="mb-6 mt-4 text-[15.5px] text-[#A9ADC0] sm:text-[17px]">
+          <p className="mb-6 mt-4 text-[15.5px] text-[#C7CAD8] sm:text-[17px]">
             Bleib auf dem Laufenden — Gaming-News, eingeordnet statt nur gemeldet.
           </p>
           <div className="flex max-w-[520px] flex-col gap-3 sm:flex-row">
             <input
               placeholder="Newsletter startet bald"
               disabled
-              className="min-w-0 flex-1 rounded-full border-2 border-[#3A3757] bg-[#14132A] px-5 py-3.5 text-[15px] text-white placeholder:text-[#7D8095]"
+              className="min-w-0 flex-1 rounded-full border-2 border-[#3A3757] bg-[#14132A] px-5 py-3.5 text-[15px] text-white placeholder:text-[#8A8FA3]"
             />
             <button
               disabled
@@ -139,7 +139,7 @@ export function NewsletterBlock({ artikelBilder }: { artikelBilder: Article[] })
               Anmelden
             </button>
           </div>
-          <p className="mt-3 text-xs text-[#7D8095]">
+          <p className="mt-3 text-xs text-[#8A8FA3]">
             Wir bauen gerade den Versand — bis dahin:{" "}
             <a
               href="https://www.instagram.com/republicofpixels"
@@ -184,7 +184,7 @@ export function SektionsKopf({
 }) {
   return (
     <div className="mb-5 flex flex-wrap items-baseline gap-x-4 gap-y-1">
-      <h2 className="text-[26px] font-black tracking-tight text-text-primary sm:text-[34px]">{titel}</h2>
+      <h2 className="text-[24px] font-black tracking-tight text-text-primary sm:text-[28px]">{titel}</h2>
       {hinweis && <span className="ml-auto text-[13px] text-text-secondary">{hinweis}</span>}
     </div>
   );

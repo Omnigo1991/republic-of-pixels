@@ -25,7 +25,7 @@ export function TopStory({ article }: { article: Article }) {
                 {kicker.toUpperCase()}
               </p>
             )}
-            <h1 className="text-[24px]/[1.25] font-black tracking-[-0.015em] text-white sm:text-[30px]/[1.25] lg:text-[34px]/[1.25]">
+            <h1 className="text-[26px]/[1.22] font-black tracking-[-0.015em] text-white sm:text-[34px]/[1.2] lg:text-[40px]/[1.18]">
               {headline}
             </h1>
           </div>

@@ -207,7 +207,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
         <section className="mx-auto max-w-content px-4 sm:px-6 lg:px-8 py-16">
           {/* NotchKarten statt neutraler Kachel-Karten (Polygon-Anlehnung):
               dieselbe Kartensprache wie auf der Startseite. */}
-          <h2 className="mb-5 text-[26px] font-black tracking-tight text-text-primary sm:text-[34px]">
+          <h2 className="mb-5 text-[24px] font-black tracking-tight text-text-primary sm:text-[28px]">
             Mehr zum Thema
           </h2>
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

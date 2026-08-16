@@ -15,7 +15,7 @@ export function ArticleListItem({ article }: { article: Article }) {
       href={`/artikel/${article.slug}`}
       className="group grid grid-cols-[112px_1fr] items-center gap-4 border-b border-border-subtle py-6 first:pt-0 sm:grid-cols-[256px_1fr] sm:gap-7"
     >
-      <div className="relative aspect-[4/3] w-28 self-center overflow-hidden rounded-md sm:aspect-[16/10] sm:w-64">
+      <div className="relative aspect-[4/3] w-28 self-center overflow-hidden rounded-lg sm:aspect-[16/10] sm:w-64">
         <ArticleMedia article={article} sizes="(max-width: 640px) 112px, 256px" className="h-full w-full transition-transform duration-500 group-hover:scale-105" />
       </div>
       <div className="min-w-0">
@@ -26,7 +26,7 @@ export function ArticleListItem({ article }: { article: Article }) {
           )}
           <span className="text-text-tertiary"> · {article.readingTimeMinutes} MIN.</span>
         </p>
-        <h3 className="text-[18px] font-extrabold leading-[1.3] text-text-primary group-hover:text-accent transition-colors line-clamp-2 sm:text-[23px]">
+        <h3 className="text-[17px] font-extrabold leading-[1.32] text-text-primary group-hover:text-accent transition-colors line-clamp-2 sm:text-[20px]">
           {article.title}
         </h3>
         <p className="mt-2 hidden text-[15.5px] leading-relaxed text-text-secondary line-clamp-2 sm:block">

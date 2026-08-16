@@ -74,7 +74,7 @@ export function Masthead({
                 href={`/kategorie/${p.key}`}
                 title={p.label}
                 aria-label={p.label}
-                className="px-1.5 text-[#A9ADC0] transition-colors hover:text-white"
+                className="px-1.5 text-[#C7CAD8] transition-colors hover:text-white"
               >
                 <PlatformIcon platform={p.key} className="h-[19px] w-[19px]" />
               </Link>
