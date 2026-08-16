@@ -1,0 +1,149 @@
+{
+  "slug": "sharpemu-ps5-emulator-astros-playroom-steam-deck-2026",
+  "title": "PS5-Spiel startet auf dem Steam Deck — mit unter 1 Bild pro Sekunde",
+  "subtitle": "Der experimentelle Emulator SharpEmu bringt Astro's Playroom auf Valves Handheld, doch spielbar ist das Ergebnis noch lange nicht",
+  "excerpt": "Ein knapp 30 Sekunden langes Video zeigt Sonys Technik-Demo Astro's Playroom auf einem Steam Deck. Der Start gelingt — die Bildrate verrät jedoch, wie weit PS5-Emulation noch von brauchbar entfernt ist.",
+  "seoTitle": "SharpEmu: PS5-Spiel Astro's Playroom läuft auf Steam Deck",
+  "metaDescription": "Der PS5-Emulator SharpEmu startet Astro's Playroom auf dem Steam Deck — bei 0,5 bis 0,9 FPS. Warum der Machbarkeitsnachweis trotzdem zählt.",
+  "category": "news",
+  "platforms": [
+    "pc",
+    "playstation"
+  ],
+  "tags": [
+    "SharpEmu",
+    "Steam Deck",
+    "PlayStation 5",
+    "Astro's Playroom",
+    "Emulation",
+    "SteamOS"
+  ],
+  "tldr": [
+    "Der experimentelle PS5-Emulator SharpEmu startet Astro's Playroom auf einem Steam Deck unter SteamOS.",
+    "Die Bildrate liegt laut Performance-Overlay im Video nur zwischen 0,5 und 0,9 FPS.",
+    "Die Kompatibilitätsdatenbank von SharpEmu führt den Titel bislang als «nicht getestet».",
+    "SharpEmu ist quelloffen, in C# geschrieben und für Linux, macOS und Windows verfügbar."
+  ],
+  "whyItMatters": "PS5-Emulation auf PC-Handhelds ist der Anfang einer Debatte, die uns die nächsten Jahre begleiten wird: Wer Current-Gen-Spiele ausserhalb von Sonys Hardware laufen lassen will, braucht Software, die es bislang nicht gibt. Der Steam-Deck-Versuch zeigt, wie früh dieses Kapitel noch ist — und wo die Grenze zwischen Machbarkeitsnachweis und spielbarem Ergebnis verläuft.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Ein PS5-Spiel auf Valves Handheld: Was vor wenigen Jahren nach reinem Wunschdenken klang, ist jetzt zumindest als Standbild-Realität dokumentiert. Der X-Nutzer BrutalSam hat ein knapp 30 Sekunden langes Video veröffentlicht, das Astro's Playroom auf einem gedockten Steam Deck zeigt — ausgeführt über den experimentellen PlayStation-5-Emulator SharpEmu auf dem KDE-Plasma-Desktop von SteamOS. Das Spiel startet tatsächlich. Nur bewegt es sich kaum."
+    },
+    {
+      "type": "embed",
+      "platform": "twitter",
+      "url": "https://x.com/BrutalSam_/status/2087568822240698664"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "0,5–0,9",
+          "label": "Bilder pro Sekunde erreicht das Intro laut Overlay im Video"
+        },
+        {
+          "value": "46",
+          "label": "Spiele sind in der SharpEmu-Kompatibilitätsdatenbank bislang getestet"
+        },
+        {
+          "value": "8 vs. 36",
+          "label": "Compute Units: Steam-Deck-GPU gegenüber der regulären PS5"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Das Intro wird zur Diashow"
+    },
+    {
+      "type": "paragraph",
+      "text": "Im Video ist ein Performance-Overlay eingeblendet, und genau dort steckt der Haken: Die Intro-Sequenz des 3D-Plattformers läuft mit Bildraten zwischen 0,5 und 0,9 FPS. Ein Bild alle ein bis zwei Sekunden — von Spielen kann unter diesen Bedingungen keine Rede sein, das Intro verkommt zur Diashow. Als Urheber des Videomaterials nennt BrutalSam den Nutzer Ihc160."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgerechnet Astro's Playroom als Testkandidat zu wählen, ist naheliegend: Der Plattformer ist auf jeder PS5 kostenlos vorinstalliert und wurde von Sony als Demonstration des Funktionsumfangs der Konsole konzipiert. Für die Emulationsszene ist er damit so etwas wie ein Referenztitel — leicht verfügbar, technisch repräsentativ und ohne zusätzliche Hürden."
+    },
+    {
+      "type": "heading",
+      "text": "Warum die Hardware nicht mitspielt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Dass ein Steam Deck an dieser Aufgabe scheitert, ist keine Überraschung, sondern schlicht eine Frage der Rechenleistung. Valves Handheld arbeitet mit einer AMD-APU, die insgesamt maximal 15 Watt abrufen kann. Die CPU bietet vier Kerne und acht Threads auf Basis der mittlerweile betagten Zen-2-Architektur, die RDNA-2-GPU muss mit acht Compute Units auskommen."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Steam Deck: 4 Kerne, 8 Threads (Zen 2), 8 Compute Units (RDNA 2), maximal 15 Watt",
+        "PlayStation 5: 8 Kerne, 16 Threads (Zen 2), 36 Compute Units (RDNA 2), 10,28 Teraflops",
+        "Zusätzlich: Jeder Emulator erzeugt Overhead, der von der verfügbaren Leistung abgeht"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Architekturen ähneln sich also durchaus — Sony setzt bei der PS5 ebenfalls auf Zen 2 und RDNA 2. Der Unterschied liegt in der Menge: doppelt so viele CPU-Kerne, mehr als vier Mal so viele Compute Units und ein Leistungsbudget, das nicht bei 15 Watt endet. Wer eine solche Konsole per Software nachbildet, braucht deshalb im Regelfall deutlich mehr Rohleistung als das Original, nicht weniger."
+    },
+    {
+      "type": "heading",
+      "text": "Was die Kompatibilitätsdatenbank verrät"
+    },
+    {
+      "type": "paragraph",
+      "text": "Interessanter als die Bildrate ist der Umstand, dass der Titel überhaupt anläuft: In der offiziellen Kompatibilitätsdatenbank von SharpEmu wird Astro's Playroom bislang als «nicht getestet» geführt. Das Video liefert damit einen Datenpunkt, den das Projekt selbst noch gar nicht erfasst hat — und zeigt zugleich, dass der Emulator auch unter SteamOS grundsätzlich funktioniert."
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Gesamtstand bleibt allerdings bescheiden. Aktuell listet die Datenbank 46 getestete Spiele: Drei davon gelten als «spielbar», drei erreichen den Status «Ingame», bei vier funktioniert immerhin die Menünavigation. 22 Titel lassen sich starten, 15 zeigen gar nichts. SharpEmu ist ein quelloffenes Projekt, dessen Code auf GitHub einsehbar ist, wurde von Grund auf in C# programmiert und steht zu Testzwecken für Linux, macOS und Windows bereit."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung: Machbarkeitsnachweis, kein Spielerlebnis"
+    },
+    {
+      "type": "paragraph",
+      "text": "Wer aus diesem Video ableitet, dass PS5-Spiele demnächst auf dem Steam Deck laufen, liest zu viel hinein. Was hier gezeigt wird, ist ein Machbarkeitsnachweis in der frühesten denkbaren Form: Ein Titel bootet, rendert Bilder und stürzt nicht ab. Bis daraus ein spielbares Ergebnis wird, müsste sich sowohl an der Emulator-Optimierung als auch an der verfügbaren Hardware sehr viel ändern — und selbst leistungsfähigere PCs stehen bei SharpEmu erst am Anfang."
+    },
+    {
+      "type": "paragraph",
+      "text": "Bemerkenswert bleibt die Richtung: Emulation aktueller Konsolengenerationen setzt üblicherweise Jahre nach dem Marktstart ein, während die Plattform noch aktiv verkauft wird. Genau das passiert hier — mit einem offenen Projekt, das jede und jeder einsehen und testen kann. Für Besitzerinnen und Besitzer eines Steam Deck ändert das vorerst nichts. Für die Frage, wie langlebig digitale Spielebibliotheken über Hardware-Generationen hinweg sind, könnte es mittelfristig einiges bedeuten."
+    }
+  ],
+  "poll": {
+    "question": "Was haltet ihr von PS5-Emulation, während die Konsole noch aktuell ist?",
+    "options": [
+      "Wichtig — nur so bleiben Spiele langfristig erhalten",
+      "Technisch spannend, praktisch aber irrelevant",
+      "Zu früh, das schadet dem Projekt eher",
+      "Interessiert mich nicht, ich spiele auf der PS5"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-16T13:03:48.764Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "controller",
+  "sources": [
+    {
+      "title": "Emulation mit Einschränkung: PS5-Spiel Astro s Playroom startet auf dem Steam Deck",
+      "url": "https://www.computerbase.de/news/gaming/emulation-mit-einschraenkung-ps5-spiel-astros-playroom-startet-auf-dem-steam-deck.98868/",
+      "publisher": "ComputerBase"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/sharpemu-ps5-emulator-astros-playroom-steam-deck-2026.webp",
+    "alt": "PS5-Spiel startet auf dem Steam Deck — mit unter 1 Bild pro Sekunde",
+    "credit": "Bild: ComputerBase",
+    "sourceUrl": "https://www.computerbase.de/news/gaming/emulation-mit-einschraenkung-ps5-spiel-astros-playroom-startet-auf-dem-steam-deck.98868/",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "asobi-remote-play-ps-plus-cloud-streaming-steam-deck",
+    "steam-frame-release-termin-hinweis-gunman-contracts-2026",
+    "gran-turismo-7-mazda-rx-vision-gt3-evo-2026"
+  ]
+}

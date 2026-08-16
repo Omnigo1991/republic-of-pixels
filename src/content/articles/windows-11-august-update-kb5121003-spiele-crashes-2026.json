@@ -1,0 +1,150 @@
+{
+  "slug": "windows-11-august-update-kb5121003-spiele-crashes-2026",
+  "title": "Arc Raiders stürzt ab — schuld ist ein Windows-Pflichtupdate",
+  "subtitle": "Embark benennt den Auslöser und liefert einen Workaround, während Microsoft die Probleme bislang nicht bestätigt hat",
+  "excerpt": "Das verpflichtende August-Update KB5121003 lässt auf manchen PCs Arc Raiders, The Finals und Marvel Tokon abstürzen. Der Entwickler kennt den Schuldigen – und der steckt tief im System.",
+  "seoTitle": "Windows 11 KB5121003: Update crasht Arc Raiders und The Finals",
+  "metaDescription": "Windows-11-Update KB5121003 lässt Spiele abstürzen und verursacht Blackscreens. Embark nennt den Treiber inpoutx64.sys als Ursache und liefert einen Workaround.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "tags": [
+    "Windows 11",
+    "Arc Raiders",
+    "The Finals",
+    "Embark Studios",
+    "PC-Gaming",
+    "Microsoft"
+  ],
+  "tldr": [
+    "Das verpflichtende August-Update KB5121003 für Windows 11 24H2 und 25H2 lässt auf einigen Systemen Spiele abstürzen – betroffen sind unter anderem Arc Raiders, The Finals und Marvel Tokon: Fighting Souls.",
+    "Entwickler Embark hat die Abstürze bestätigt und nennt den Drittanbieter-Kerneltreiber inpoutx64.sys als Ursache.",
+    "Ein Workaround stoppt und löscht den Treiber; alternativ hilft die Deinstallation des Updates – dann fehlen aber rund 230 Sicherheitsupdates für Windows 11.",
+    "Zusätzlich berichten Nutzer von wechselnden Bildwiederholraten, HDR-Problemen und Blackscreens. Microsoft hat sich bislang nicht offiziell geäussert."
+  ],
+  "whyItMatters": "Wer Windows 11 nutzt, bekommt das August-Update automatisch – und riskiert damit auf bestimmten Konfigurationen Spielabstürze bis hin zum kompletten Systemhänger. Weil der Auslöser ein Treiber ist, den viele Monitoring- und RGB-Tools mitbringen, kann es praktisch jeden Gaming-PC mit Zusatzsoftware treffen. Solange Microsoft schweigt, bleibt die Fehlersuche an der Community und an einzelnen Studios hängen.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Das verpflichtende August-Update für Windows 11 24H2 und 25H2 sorgt bei einem Teil der Spielerschaft für Ärger: KB5121003 kann auf bestimmten Systemen Spiele zum Absturz bringen. Betroffen sind laut einem Bericht von Windows Latest unter anderem Arc Raiders, The Finals und Marvel Tokon: Fighting Souls. Ungewöhnlich ist, dass die Bestätigung nicht von Microsoft kommt, sondern vom Entwicklerstudio: Embark hat sich auf dem Discord-Server von Arc Raiders zu Wort gemeldet – und liefert direkt eine Zwischenlösung mit."
+    },
+    {
+      "type": "embed",
+      "platform": "reddit",
+      "url": "https://www.reddit.com/r/WindowsUpdate/comments/1vn1x67/hdr_regression_introduced_by_kb5121003_build/"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "230",
+          "label": "Sicherheitsupdates stecken allein für Windows 11 im August-Paket"
+        },
+        {
+          "value": "400+",
+          "label": "Sicherheitsupdates insgesamt gingen im August raus"
+        },
+        {
+          "value": "86,3 %",
+          "label": "der Teilnehmenden einer ComputerBase-Umfrage melden keinerlei Probleme"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Ein alter Bekannter im Kernel"
+    },
+    {
+      "type": "paragraph",
+      "text": "Als Ursache benennt Embark die Datei inpoutx64.sys – einen Kerneltreiber eines Drittanbieters, der Port-Zugriffe steuert und den IT-Sicherheitsforscher seit Jahren kritisch bewerten. Warum das Zusammenspiel mit dem August-Update jetzt bricht, ist offen; möglicherweise hat sich intern etwas verändert, das die Kompatibilität beeinträchtigt. Auf Reddit schildern Betroffene Fehlermeldungen wie «Hang detected on GameThread» und «EXCEPTION_ACCESS_VIOLATION». In einigen Fällen verabschiedet sich nicht nur das Spiel, sondern der komplette PC. Manche Berichte nennen zusätzlich Abstürze von Anti-Cheat-Software, die sich auf das Update zurückführen lassen."
+    },
+    {
+      "type": "quote",
+      "text": "Wir wissen von Abstürzen, die seit der Veröffentlichung eines Windows-Updates (KB5121003) auftreten und einige von euch beeinträchtigen können.",
+      "attribution": "Embark, Entwickler von Arc Raiders und The Finals, im offiziellen Discord"
+    },
+    {
+      "type": "heading",
+      "text": "So prüft und entfernt ihr den Treiber"
+    },
+    {
+      "type": "paragraph",
+      "text": "Entscheidend ist zunächst, ob der Treiber auf dem eigenen System überhaupt existiert. Das klärt in der Eingabeaufforderung der Befehl «sc query inpoutx64». Wer fündig wird, kann bis zum finalen Patch dem von Embark empfohlenen Weg folgen:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Eingabeaufforderung als Administrator öffnen und nacheinander «sc stop inpoutx64» sowie «sc delete inpoutx64» ausführen.",
+        "Im Datei-Explorer nach C:\\Windows\\System32\\Drivers wechseln und dort inpoutx64.sys löschen. Meldet Windows, die Datei sei noch geöffnet, Schritt 1 wiederholen.",
+        "Optional: In der Registry (regedit) den Eintrag unter HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\inpoutx64 entfernen.",
+        "PC neu starten – danach sollte Arc Raiders wieder ohne Abstürze laufen."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Ein Haken bleibt: Nutzt installierte Software den Treiber, kann er im Hintergrund erneut eingerichtet werden. Betroffen sind vor allem Monitoring- und Peripherie-Tools – also Programme für Hardware-Überwachung sowie für die Steuerung von RGB-Beleuchtung und Lüftern. Genau diese Kategorie findet sich auf sehr vielen Gaming-Rechnern, was erklärt, warum das Problem ausgerechnet Spielerinnen und Spieler trifft, während andere Windows-Systeme unauffällig bleiben."
+    },
+    {
+      "type": "heading",
+      "text": "Update deinstallieren? Nur als Notlösung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Einige Betroffene berichten, dass die komplette Deinstallation des August-Updates die Probleme beseitigt. Der Preis dafür ist allerdings hoch: Mit dem Paket verschwinden auch die Sicherheitsupdates – allein für Windows 11 waren es im August rund 230, insgesamt über 400. Wer die Wahl hat, sollte deshalb zuerst den Workaround von Embark testen und das Update auf dem System belassen."
+    },
+    {
+      "type": "heading",
+      "text": "Bildwiederholrate, HDR und Blackscreens"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Beschwerden gehen über Spielabstürze hinaus. Auf Reddit schildern Nutzer, dass sich nach der Installation die Bildwiederholrate verändert – in einem Fall sprang sie mitten im Spiel von 240 Hz auf 60 Hz. Auch weitere Grafikbereiche wie HDR sollen betroffen sein, dazu kommen Berichte über Blackscreens. Wie viele Systeme das jeweils trifft, lässt sich anhand der Meldungen nicht beziffern; Windows Latest verweist auf mehrere Hinweise, die die Redaktion von Spielern erhalten hat."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Das Ausmass bleibt unklar, und eine ComputerBase-Umfrage mit bislang 80 Teilnehmenden ist eine Momentaufnahme, keine Statistik: 86,3 Prozent melden dort keinerlei Probleme. Genau das ist typisch für Fehler, die an einer bestimmten Treiber- und Softwarekombination hängen – wer betroffen ist, trifft es hart, alle anderen merken nichts. Bemerkenswert ist vor allem, dass ein Spielestudio schneller und konkreter kommuniziert als Microsoft, das die Probleme bisher nicht offiziell bestätigt hat. Bis ein Fix bereitsteht, gilt: erst prüfen, ob inpoutx64 überhaupt läuft, dann den Workaround anwenden – und die Sicherheitsupdates möglichst nicht opfern."
+    }
+  ],
+  "poll": {
+    "question": "KB5121003 macht Ärger – wie reagiert ihr auf eurem PC?",
+    "options": [
+      "Treiber löschen, Update behalten",
+      "August-Update komplett deinstallieren",
+      "Abwarten, bis Microsoft reagiert",
+      "Bei mir läuft alles – nichts zu tun"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-16T13:02:50.889Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "circuit",
+  "sources": [
+    {
+      "title": "Windows 11: August-Update crasht Spiele und hat Bugs wie Blackscreens",
+      "url": "https://www.computerbase.de/news/betriebssysteme/windows-11-august-update-crasht-spiele-und-hat-bugs-wie-blackscreens.98873/",
+      "publisher": "ComputerBase"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/windows-11-august-update-kb5121003-spiele-crashes-2026.webp",
+    "alt": "Arc Raiders stürzt ab — schuld ist ein Windows-Pflichtupdate",
+    "credit": "Bild: ComputerBase",
+    "sourceUrl": "https://www.computerbase.de/news/betriebssysteme/windows-11-august-update-crasht-spiele-und-hat-bugs-wie-blackscreens.98873/",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "arc-raiders-frozen-trail-update-2026",
+    "epic-games-store-linux-client-bestaetigt-2026",
+    "elder-scrolls-6-sharma-demo-bethesda-protest-2026"
+  ]
+}
