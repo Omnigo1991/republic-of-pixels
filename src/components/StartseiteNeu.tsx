@@ -113,8 +113,8 @@ export function TickerBand({ articles }: { articles: Article[] }) {
 // Leere zu sammeln.
 export function NewsletterBlock({ artikelBilder }: { artikelBilder: Article[] }) {
   return (
-    <div className="overflow-hidden bg-navy">
-      <div className="mx-auto grid max-w-content items-center gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1fr_420px] lg:px-8 lg:py-[74px]">
+    <div className="treppe-br overflow-hidden rounded-2xl bg-navy">
+      <div className="grid items-center gap-10 px-6 py-12 sm:px-10 lg:grid-cols-[1fr_400px] lg:px-14 lg:py-14">
         <div>
           <h2 className="text-[30px] font-black leading-[1.12] text-white sm:text-[46px]">
             <span className="text-accent">KEINE NEBENQUESTS.</span>

@@ -211,3 +211,14 @@ h3 {
 @media (prefers-reduced-motion: reduce) {
   .staub-pixel, .staub-raute { animation: none; }
 }
+
+/* Pixel-Treppe unten RECHTS — fuer Flaechen wie den Newsletter-Block.
+   Keine Rahmenfassung, nur die Kerbe in der Ecke. */
+.treppe-br {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 36px), calc(100% - 12px) calc(100% - 36px), calc(100% - 12px) calc(100% - 24px), calc(100% - 24px) calc(100% - 24px), calc(100% - 24px) calc(100% - 12px), calc(100% - 36px) calc(100% - 12px), calc(100% - 36px) 100%, 0 100%);
+}
+@media (max-width: 640px) {
+  .treppe-br {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 27px), calc(100% - 9px) calc(100% - 27px), calc(100% - 9px) calc(100% - 18px), calc(100% - 18px) calc(100% - 18px), calc(100% - 18px) calc(100% - 9px), calc(100% - 27px) calc(100% - 9px), calc(100% - 27px) 100%, 0 100%);
+  }
+}

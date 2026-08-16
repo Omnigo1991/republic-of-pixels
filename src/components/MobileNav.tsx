@@ -124,6 +124,14 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
                 </span>
               </div>
 
+              <Link
+                href="/profil"
+                onClick={() => setOpen(false)}
+                className="mt-6 flex items-center justify-center gap-2 rounded-full bg-navy py-3.5 text-[15px] font-extrabold text-accent sm:hidden"
+              >
+                Anmelden
+              </Link>
+
               <div className="mt-6 flex gap-3.5">
                 <a
                   href={instagramUrl}

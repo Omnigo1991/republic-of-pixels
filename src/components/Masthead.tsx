@@ -43,13 +43,14 @@ export function Masthead({
           ))}
         </div>
         <div className="relative mx-auto flex h-16 max-w-content items-center gap-5 px-4 sm:px-6 lg:h-[88px] lg:gap-7 lg:px-8">
-          <Link href="/" aria-label="Republic of Pixels – Startseite" className="mr-auto flex items-center gap-3 lg:gap-4">
+          <Link href="/" aria-label="Republic of Pixels – Startseite" className="mr-auto flex min-w-0 items-center gap-2.5 sm:gap-3 lg:gap-4">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/brand/r-mark.png" alt="" aria-hidden="true" className="h-9 w-auto lg:h-12" />
-            {/* Unter 420px nur "REPUBLIC" — der volle Schriftzug lief sonst
-                unter die Anmelden-Pille (Mobil-Fund 15.08.2026). */}
-            <span className="translate-y-[1px] whitespace-nowrap text-[17px] font-black leading-none tracking-tight sm:text-[21px] lg:text-[28px]">
-              REPUBLIC<span className="hidden text-accent min-[420px]:inline"> OF PIXELS</span>
+            <img src="/brand/r-mark.png" alt="" aria-hidden="true" className="h-7 w-auto min-[380px]:h-8 sm:h-9 lg:h-12" />
+            {/* Schriftzug IMMER voll und einzeilig (Tim, 16.08.2026) —
+                auf schmalen Geraeten faellt er kleiner aus, statt zu
+                kuerzen oder umzubrechen. */}
+            <span className="translate-y-[1px] whitespace-nowrap text-[14px] font-black leading-none tracking-tight min-[380px]:text-[15.5px] sm:text-[21px] lg:text-[28px]">
+              REPUBLIC<span className="text-accent"> OF PIXELS</span>
             </span>
           </Link>
 
@@ -83,7 +84,9 @@ export function Masthead({
           <span className="hidden lg:block">
             <SearchTrigger />
           </span>
-          <AuthStatus />
+          <span className="hidden sm:block">
+            <AuthStatus />
+          </span>
           <MobileNav instagramUrl="https://www.instagram.com/republicofpixels" />
         </div>
       </div>
