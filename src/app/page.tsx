@@ -67,7 +67,16 @@ export default async function HomePage() {
             <NewsListe articles={chronological} />
           </Reveal>
         </section>
+      </div>
 
+      {/* Newsletter direkt nach den News (Tim, 16.08.2026): Wer die
+          Nachrichtenliste durch hat, ist am ehesten bereit, sich zu
+          binden — am Seitenende sehen ihn die wenigsten. */}
+      <div className="mt-14 sm:mt-16">
+        <NewsletterBlock artikelBilder={[topStory, ...kleinreihe].slice(0, 3)} />
+      </div>
+
+      <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
         <section id="guides" className="scroll-mt-16 lg:scroll-mt-[88px] pt-14 sm:pt-16">
           <Reveal>
             <SektionsKopf titel="Die grossen Republic-Guides" />
@@ -117,7 +126,6 @@ export default async function HomePage() {
 
       <div className="mt-16">
         <TickerBand articles={ticker} />
-        <NewsletterBlock artikelBilder={[topStory, ...kleinreihe].slice(0, 3)} />
       </div>
     </>
   );

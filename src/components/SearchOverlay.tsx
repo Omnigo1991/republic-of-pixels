@@ -143,7 +143,7 @@ export function SearchTrigger() {
         onClick={() => setOpen((o) => !o)}
         aria-label={open ? "Suche schliessen" : "Suche öffnen"}
         aria-expanded={open}
-        className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[rgba(15,13,44,0.12)] text-current transition-opacity hover:opacity-70"
+        className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#1B1A33] text-current transition-opacity hover:opacity-70"
       >
         <SearchIcon className="h-5 w-5" />
       </button>
