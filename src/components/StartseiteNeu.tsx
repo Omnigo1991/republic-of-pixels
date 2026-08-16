@@ -149,28 +149,21 @@ export function NewsletterBlock({ artikelBilder }: { artikelBilder: Article[] })
             </a>
           </p>
         </div>
-        {/* Polygon-Collage (Tim, 15.08.2026): Sticker-Bilder mit weissem
-            Rand vor grosser Cyan-Raute, dahinter ein feines Punktraster —
-            deren Newsletter-Look mit unseren Artikelbildern. */}
-        <div className="relative hidden h-[320px] overflow-visible lg:block" aria-hidden="true">
-          <div
-            className="absolute -inset-y-10 -right-10 left-0"
-            style={{ backgroundImage: "radial-gradient(rgba(255,255,255,0.1) 1.5px, transparent 1.5px)", backgroundSize: "17px 17px" }}
-          />
-          <div className="absolute right-16 top-1/2 h-[280px] w-[280px] -translate-y-1/2 rotate-45 bg-accent" />
+        {/* Zwei Sticker mit Pixel-Treppen-Rahmen (Fassung vor der
+            Polygon-Collage — Tim, 16.08.2026). */}
+        <div className="relative hidden h-[300px] lg:block" aria-hidden="true">
           {artikelBilder[0] && (
-            <div className="absolute left-2 top-2 h-[215px] w-[190px] -rotate-6 overflow-hidden border-4 border-white shadow-[0_18px_40px_-12px_rgba(0,0,0,0.55)] [&_img]:h-full [&_img]:w-full [&_img]:object-cover">
-              <ArticleMedia article={artikelBilder[0]} sizes="200px" className="h-full w-full" />
+            <div className="treppe-tr absolute left-0 top-0 h-[250px] w-[250px] -rotate-[5deg]">
+              <div className="treppe-innen h-full w-full [&_img]:h-full [&_img]:w-full [&_img]:object-cover">
+                <ArticleMedia article={artikelBilder[0]} sizes="500px" className="h-full w-full" />
+              </div>
             </div>
           )}
           {artikelBilder[1] && (
-            <div className="absolute left-[150px] top-16 h-[240px] w-[200px] rotate-2 overflow-hidden border-4 border-white shadow-[0_18px_40px_-12px_rgba(0,0,0,0.6)] [&_img]:h-full [&_img]:w-full [&_img]:object-cover">
-              <ArticleMedia article={artikelBilder[1]} sizes="210px" className="h-full w-full" />
-            </div>
-          )}
-          {artikelBilder[2] && (
-            <div className="absolute right-6 top-6 h-[205px] w-[175px] rotate-[7deg] overflow-hidden border-4 border-white shadow-[0_18px_40px_-12px_rgba(0,0,0,0.55)] [&_img]:h-full [&_img]:w-full [&_img]:object-cover">
-              <ArticleMedia article={artikelBilder[2]} sizes="185px" className="h-full w-full" />
+            <div className="treppe-tl absolute bottom-0 right-0 h-[250px] w-[250px] rotate-[4deg]">
+              <div className="treppe-innen h-full w-full [&_img]:h-full [&_img]:w-full [&_img]:object-cover">
+                <ArticleMedia article={artikelBilder[1]} sizes="500px" className="h-full w-full" />
+              </div>
             </div>
           )}
         </div>
