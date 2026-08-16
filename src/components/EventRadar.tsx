@@ -75,7 +75,6 @@ export function EventRadar() {
         <h2 id="events-heading" className="text-[24px] font-black tracking-tight text-text-primary sm:text-[28px]">
           Event-Radar
         </h2>
-        <span className="text-xs text-text-tertiary">Die nächsten grossen Momente</span>
       </div>
       <SectionDivider />
       {/* Grosse Event-Buehne links, Karten rechts (Tim, 15.08.2026 —
@@ -84,7 +83,6 @@ export function EventRadar() {
       <div className={hero ? "grid gap-4 lg:grid-cols-[400px_1fr]" : ""}>
       {hero && (
         <div className="relative flex flex-col overflow-hidden rounded-2xl bg-navy p-6 sm:p-7">
-          <div aria-hidden="true" className="pointer-events-none absolute -right-14 -top-14 h-[210px] w-[210px] rotate-45 border-[11px] border-accent/30" />
           <span className={`${PILL_REZEPT} self-start text-accent border-accent/40 bg-accent/10`}>
             NÄCHSTES EVENT
           </span>

@@ -40,10 +40,6 @@ export function DealRadar() {
         <h2 id="deals-heading" className="text-[24px] font-black tracking-tight text-text-primary sm:text-[28px]">
           Deal-Radar
         </h2>
-        <span className="flex items-center gap-1.5 text-xs text-text-tertiary">
-          <PlatformIcon platform="pc" className="h-3.5 w-3.5" />
-          PC-Angebote auf Steam
-        </span>
       </div>
       <SectionDivider />
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

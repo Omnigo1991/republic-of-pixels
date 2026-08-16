@@ -66,7 +66,7 @@ export default async function HomePage() {
       <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
         <section id="news" className="scroll-mt-16 lg:scroll-mt-[88px] pt-14 sm:pt-16">
           <Reveal>
-            <SektionsKopf titel="Alle News" hinweis="Chronologisch, neueste zuerst" />
+            <SektionsKopf titel="Alle News" />
             <SectionDivider />
             <NewsListe articles={chronological} />
           </Reveal>
@@ -96,19 +96,13 @@ export default async function HomePage() {
         </Reveal>
         </div>
 
-        <div className="h-px w-full bg-border-subtle" />
-
         <Reveal>
           <EventRadar />
         </Reveal>
 
-        <div className="h-px w-full bg-border-subtle" />
-
         <Reveal>
           <ChartsRadar />
         </Reveal>
-
-        <div className="h-px w-full bg-border-subtle" />
 
         <Reveal>
           <DealRadar />

@@ -96,10 +96,6 @@ export function ArticleBody({
                     key={j}
                     className="relative overflow-hidden rounded-2xl bg-navy px-5 py-6 text-left"
                   >
-                    <div
-                      aria-hidden="true"
-                      className="pointer-events-none absolute -right-6 -top-6 h-[70px] w-[70px] rotate-45 border-[6px] border-accent/30"
-                    />
                     <p className={`font-black leading-[1.15] tracking-tight text-accent ${wertGroesse}`}>
                       {s.value}
                     </p>

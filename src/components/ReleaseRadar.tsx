@@ -33,7 +33,6 @@ export function ReleaseRadar() {
         <h2 id="radar-heading" className="text-[24px] font-black tracking-tight text-text-primary sm:text-[28px]">
           Release-Radar
         </h2>
-        <span className="text-xs text-text-tertiary">Die nächsten Termine</span>
       </div>
       <SectionDivider />
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
