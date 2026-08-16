@@ -4479,7 +4479,33 @@
     "77e584db9df4f0c0": "2026-08-16T13:03:51.080Z",
     "722ba4b6744d2279": "2026-08-16T13:17:37.332Z",
     "fc078ec89ad6cd4f": "2026-08-16T13:17:37.332Z",
-    "04e5f838cf2e807e": "2026-08-16T13:17:37.332Z"
+    "04e5f838cf2e807e": "2026-08-16T13:17:37.332Z",
+    "799413ebf5167c12": "2026-08-16T15:44:58.665Z",
+    "a2999f4b3debb945": "2026-08-16T15:44:58.665Z",
+    "09539035dab65eb3": "2026-08-16T15:44:58.665Z",
+    "2ba2e33a0686c703": "2026-08-16T15:44:58.665Z",
+    "5d6ea1640c0bc53c": "2026-08-16T15:44:58.665Z",
+    "65becf2bcb3f0520": "2026-08-16T15:44:58.665Z",
+    "2c7f93793ed31b2d": "2026-08-16T15:44:58.665Z",
+    "8ae49fc27c47be88": "2026-08-16T15:44:58.665Z",
+    "03d6b70c830b73d6": "2026-08-16T15:44:58.665Z",
+    "90f5b6e034d31515": "2026-08-16T15:44:58.665Z",
+    "5c6a00c3fe37dcb6": "2026-08-16T15:44:58.665Z",
+    "4a053b4b47b6e021": "2026-08-16T15:44:58.665Z",
+    "d8c80f3a2530a270": "2026-08-16T15:44:58.665Z",
+    "e8623b1d89d5fd27": "2026-08-16T15:44:58.665Z",
+    "0704db5579f734d2": "2026-08-16T15:44:58.665Z",
+    "e2faa4c07767795a": "2026-08-16T15:44:58.665Z",
+    "d266cfa43a9e6553": "2026-08-16T15:44:58.665Z",
+    "83b2ea970bea9cc8": "2026-08-16T15:44:58.665Z",
+    "16e210f8124152df": "2026-08-16T15:44:58.665Z",
+    "7b14bd39230ec7a1": "2026-08-16T15:44:58.665Z",
+    "f5a4ed08a98f748b": "2026-08-16T15:44:58.665Z",
+    "afb6327de3dd2dc4": "2026-08-16T15:44:58.665Z",
+    "2843faccd35af547": "2026-08-16T15:44:58.665Z",
+    "1d2046fe2698d42e": "2026-08-16T15:44:58.665Z",
+    "8e49fafad56e1908": "2026-08-16T15:44:58.665Z",
+    "6ebba95d86b45a1d": "2026-08-16T15:44:58.665Z"
   },
   "instagram": {
     "posted": {
@@ -4517,12 +4543,10 @@
       "kingdom-hearts-4-d23-coco-welt-anime-2027": "2026-08-15T18:56:01.061Z",
       "activision-sledgehammer-halo-multiplayer-geruecht-2026": "2026-08-16T07:02:37.940Z",
       "kingdom-hearts-4-keine-verschiebung-ende-2027": "2026-08-16T13:04:55.766Z",
-      "windows-11-august-update-kb5121003-spiele-crashes-2026": "2026-08-16T13:05:13.146Z"
+      "windows-11-august-update-kb5121003-spiele-crashes-2026": "2026-08-16T13:05:13.146Z",
+      "witcher-3-npc-muetter-babys-bug-philipp-weber-2026": "2026-08-16T15:45:52.694Z"
     },
     "cards": {
-      "/social/ig-halo-campaign-evolved-marcus-lehto-art-kritik-2026.jpg": "2026-08-13T13:06:28.038Z",
-      "/social/ig-super-mario-sunshine-switch-2-nintendo-classics-2026.mp4": "2026-08-13T13:06:39.888Z",
-      "/social/ig-marvels-wolverine-insomniac-preview-2026.jpg": "2026-08-13T15:44:59.291Z",
       "/social/ig-gta-6-ultimate-edition-89-prozent-vorbestellungen.mp4": "2026-08-14T09:49:50.746Z",
       "/social/ig-marvels-wolverine-60-fps-basis-ps5-2026.jpg": "2026-08-14T13:04:17.548Z",
       "/social/ig-pokemon-pokopia-5-millionen-verkaeufe-switch-2.mp4": "2026-08-14T13:04:36.698Z",
@@ -4534,14 +4558,15 @@
       "/social/ig-kingdom-hearts-4-d23-coco-welt-anime-2027.mp4": "2026-08-15T18:56:01.061Z",
       "/social/ig-activision-sledgehammer-halo-multiplayer-geruecht-2026.mp4": "2026-08-16T07:02:37.941Z",
       "/social/ig-kingdom-hearts-4-keine-verschiebung-ende-2027.jpg": "2026-08-16T13:04:55.766Z",
-      "/social/ig-windows-11-august-update-kb5121003-spiele-crashes-2026.mp4": "2026-08-16T13:05:13.146Z"
+      "/social/ig-windows-11-august-update-kb5121003-spiele-crashes-2026.mp4": "2026-08-16T13:05:13.146Z",
+      "/social/ig-witcher-3-npc-muetter-babys-bug-philipp-weber-2026.jpg": "2026-08-16T15:45:52.694Z"
     },
     "unlisted": [
       "gta-6-preis-80-dollar-zelnick-schnaeppchen-2026"
     ],
     "wechsel": {
       "day": "2026-08-16",
-      "nichtBreaking": 3
+      "nichtBreaking": 4
     },
     "tokenCheckedAt": "2026-08-15T09:48:57.921Z",
     "token": {
@@ -4567,7 +4592,8 @@
       "god of war laufey": 1,
       "kingdom hearts iv": 2,
       "halo": 1,
-      "arc raiders": 1
+      "arc raiders": 1,
+      "the witcher 3: wild hunt": 1
     },
     "uebersprungen": {
       "br1-infinite-echtgeld-kills-unbestaetigt-2026": "2026-08-09T08:04:01.341Z",
@@ -4594,6 +4620,9 @@
         "Auswahl leer": 2,
         "kein taugliches Bild": 3,
         "von Instagram abgelehnt": 1
+      },
+      "2026-08-16": {
+        "kein taugliches Bild": 1
       }
     }
   },
