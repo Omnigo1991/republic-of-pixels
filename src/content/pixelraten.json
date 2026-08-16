@@ -1,22 +1,20 @@
 {
-  "datum": "2026-08-15",
-  "nummer": 7,
-  "loesung": "Age of Empires II",
+  "datum": "2026-08-16",
+  "nummer": 8,
+  "loesung": "Kingdom Come: Deliverance",
   "akzeptiert": [
-    "ageofempiresii",
-    "ageofempires2",
-    "aoe2",
-    "aoe2"
+    "kingdomcomedeliverance",
+    "kingdomcome"
   ],
   "hinweise": [
-    "Erschienen 1999 · Echtzeit-Strategie",
-    "Wololo"
+    "Erschienen 2018 · Rollenspiel",
+    "Mittelalter-Böhmen"
   ],
   "bilder": [
-    "/images/pixelraten/2026-08-15-s1.jpg",
-    "/images/pixelraten/2026-08-15-s2.jpg",
-    "/images/pixelraten/2026-08-15-s3.jpg",
-    "/images/pixelraten/2026-08-15-s4.jpg",
-    "/images/pixelraten/2026-08-15-s5.jpg"
+    "/images/pixelraten/2026-08-16-s1.jpg",
+    "/images/pixelraten/2026-08-16-s2.jpg",
+    "/images/pixelraten/2026-08-16-s3.jpg",
+    "/images/pixelraten/2026-08-16-s4.jpg",
+    "/images/pixelraten/2026-08-16-s5.jpg"
   ]
 }
