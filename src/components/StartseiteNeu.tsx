@@ -24,11 +24,13 @@ export function NeuesteRail({ articles }: { articles: Article[] }) {
     <aside aria-label="Neueste Meldungen">
       <h2 className="mb-2 text-[28px] font-black tracking-tight text-text-primary">Neueste</h2>
       <div>
-        {articles.map((a) => (
+        {articles.map((a, i) => (
           <Link
             key={a.slug}
             href={`/artikel/${a.slug}`}
-            className="group grid grid-cols-[1fr_118px] gap-4 border-b border-border-subtle py-4 last:border-b-0"
+            className={`group grid grid-cols-[1fr_118px] gap-4 border-b border-border-subtle py-4 last:border-b-0 ${
+              i > 2 ? "hidden lg:grid" : ""
+            }`}
           >
             <div>
               <p className="mb-1.5 text-[12.5px] font-extrabold tracking-[0.06em] text-accent">
@@ -113,18 +115,18 @@ export function TickerBand({ articles }: { articles: Article[] }) {
 // Leere zu sammeln.
 export function NewsletterBlock({ artikelBilder }: { artikelBilder: Article[] }) {
   return (
-    <div className="treppe-br overflow-hidden rounded-2xl bg-navy">
-      <div className="grid items-center gap-10 px-6 py-12 sm:px-10 lg:grid-cols-[1fr_400px] lg:px-14 lg:py-14">
+    <div className="overflow-hidden rounded-2xl bg-navy">
+      <div className="grid items-center gap-10 px-5 py-10 sm:px-10 sm:py-12 lg:grid-cols-[1fr_400px] lg:px-14 lg:py-14">
         <div>
-          <h2 className="text-[30px] font-black leading-[1.12] text-white sm:text-[46px]">
+          <h2 className="text-[26px] font-black leading-[1.15] text-white sm:text-[40px] lg:text-[46px]">
             <span className="text-accent">KEINE NEBENQUESTS.</span>
             <br />
             NUR DIE BESTEN NEWS IN DEIN POSTFACH.
           </h2>
-          <p className="mb-6 mt-4 text-[17px] text-[#A9ADC0]">
+          <p className="mb-6 mt-4 text-[15.5px] text-[#A9ADC0] sm:text-[17px]">
             Bleib auf dem Laufenden — Gaming-News, eingeordnet statt nur gemeldet.
           </p>
-          <div className="flex max-w-[520px] gap-3">
+          <div className="flex max-w-[520px] flex-col gap-3 sm:flex-row">
             <input
               placeholder="Newsletter startet bald"
               disabled

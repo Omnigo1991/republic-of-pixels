@@ -48,9 +48,13 @@ export default async function HomePage() {
           <div className="grid gap-8 lg:grid-cols-[1fr_372px] lg:gap-11">
             <div>
               <TopStory article={topStory} />
+              {/* Auf dem Handy nur EINE Karte, damit "Alle News" schneller
+                  kommt (Tim, 16.08.2026) — ab sm wieder alle drei. */}
               <div className="mt-6 grid gap-5 sm:grid-cols-3">
-                {kleinreihe.map((a) => (
-                  <NotchKarte key={a.slug} article={a} />
+                {kleinreihe.map((a, i) => (
+                  <div key={a.slug} className={i > 0 ? "hidden sm:block" : ""}>
+                    <NotchKarte article={a} />
+                  </div>
                 ))}
               </div>
             </div>

@@ -222,3 +222,8 @@ h3 {
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 27px), calc(100% - 9px) calc(100% - 27px), calc(100% - 9px) calc(100% - 18px), calc(100% - 18px) calc(100% - 18px), calc(100% - 18px) calc(100% - 9px), calc(100% - 27px) calc(100% - 9px), calc(100% - 27px) 100%, 0 100%);
   }
 }
+
+/* Mini-Treppe fuer kleine Flaechen wie den Teilen-Knopf. */
+.treppe-br-klein {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15px), calc(100% - 5px) calc(100% - 15px), calc(100% - 5px) calc(100% - 10px), calc(100% - 10px) calc(100% - 10px), calc(100% - 10px) calc(100% - 5px), calc(100% - 15px) calc(100% - 5px), calc(100% - 15px) 100%, 0 100%);
+}
