@@ -70,23 +70,23 @@ export function PollBox({ articleSlug, poll }: { articleSlug: string; poll: Poll
   const abgestimmt = eigene !== null;
 
   return (
-    <div className="my-8 rounded-2xl border border-accent/35 bg-accent-wash/30 p-6">
+    <div className="my-8 rounded-2xl bg-navy p-6">
       <p className="text-[13px] font-semibold tracking-wide text-accent">COMMUNITY-UMFRAGE</p>
-      <p className="mt-2 font-semibold text-text-primary">{poll.question}</p>
+      <p className="mt-2 font-semibold text-white">{poll.question}</p>
       <div className="mt-4 flex flex-col gap-2">
         {poll.options.map((option, i) => {
           const anteil = total > 0 ? Math.round((stimmen[i] / total) * 100) : 0;
           return abgestimmt ? (
             <div
               key={i}
-              className={`relative overflow-hidden rounded-2xl border px-4 py-2.5 ${i === eigene ? "border-accent/60" : "border-border-subtle"}`}
+              className={`relative overflow-hidden rounded-2xl border px-4 py-2.5 ${i === eigene ? "border-accent/70" : "border-white/15"}`}
             >
               <div
                 className="absolute inset-y-0 left-0 bg-accent/15 transition-all duration-700"
                 style={{ width: `${anteil}%` }}
               />
               <div className="relative flex items-center justify-between gap-3 text-sm">
-                <span className={i === eigene ? "font-semibold text-text-primary" : "text-text-secondary"}>
+                <span className={i === eigene ? "font-semibold text-white" : "text-[#C7CAD8]"}>
                   {option}
                   {i === eigene && <span className="ml-2 text-accent">✓</span>}
                 </span>
@@ -97,14 +97,14 @@ export function PollBox({ articleSlug, poll }: { articleSlug: string; poll: Poll
             <button
               key={i}
               onClick={() => abstimmen(i)}
-              className="rounded-2xl border border-border-default px-4 py-2.5 text-left text-sm text-text-primary transition-colors hover:border-accent/60 hover:bg-surface-hover"
+              className="rounded-2xl border border-white/15 px-4 py-2.5 text-left text-sm text-[#E9EAF0] transition-colors hover:border-accent/60 hover:bg-white/[0.06]"
             >
               {option}
             </button>
           );
         })}
       </div>
-      <p className="mt-3 text-xs text-text-tertiary">
+      <p className="mt-3 text-xs text-[#8A8FA3]">
         {abgestimmt
           ? `${total.toLocaleString("de-DE")} ${total === 1 ? "Stimme" : "Stimmen"} — danke fürs Mitmachen!`
           : "Anonym abstimmen und sehen, was die Community denkt."}
