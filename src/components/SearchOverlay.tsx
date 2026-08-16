@@ -151,7 +151,7 @@ export function SearchTrigger() {
       {/* Das Feld gleitet nach LINKS ueber die Navigation, statt sie zu
           verdraengen (sonst wird das Logo weggeschoben). */}
       <div
-        className={`absolute right-11 top-1/2 -translate-y-1/2 overflow-hidden transition-[width,opacity] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+        className={`absolute right-11 top-1/2 -translate-y-1/2 overflow-hidden rounded-full transition-[width,opacity] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
           open ? "w-[360px] opacity-100" : "pointer-events-none w-0 opacity-0"
         }`}
       >
@@ -161,7 +161,7 @@ export function SearchTrigger() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Spiele, Themen, Guides …"
-          className="h-10 w-[360px] rounded-full border-2 border-[rgba(15,13,44,0.25)] bg-white px-5 text-[14px] text-text-primary shadow-[0_4px_16px_-6px_rgba(12,11,26,0.35)] placeholder:text-text-tertiary focus:border-[rgba(15,13,44,0.45)] focus:outline-none"
+          className="h-10 w-[360px] rounded-full border-2 border-[rgba(15,13,44,0.25)] bg-white px-5 text-[14px] text-text-primary placeholder:text-text-tertiary focus:border-[rgba(15,13,44,0.45)] focus:outline-none"
         />
       </div>
 
