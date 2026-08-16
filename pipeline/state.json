@@ -4505,7 +4505,36 @@
     "2843faccd35af547": "2026-08-16T15:44:58.665Z",
     "1d2046fe2698d42e": "2026-08-16T15:44:58.665Z",
     "8e49fafad56e1908": "2026-08-16T15:44:58.665Z",
-    "6ebba95d86b45a1d": "2026-08-16T15:44:58.665Z"
+    "6ebba95d86b45a1d": "2026-08-16T15:44:58.665Z",
+    "eafb82899a145778": "2026-08-16T18:54:41.469Z",
+    "681f429db36c1877": "2026-08-16T18:54:41.469Z",
+    "4a68541b1b179b16": "2026-08-16T18:54:41.469Z",
+    "0e9a103647604336": "2026-08-16T18:54:41.469Z",
+    "65a77b2355e6f563": "2026-08-16T18:54:41.469Z",
+    "92413eef9f22b589": "2026-08-16T18:54:41.469Z",
+    "165b7886d21a63ff": "2026-08-16T18:54:41.469Z",
+    "4d7ed773d45a73e6": "2026-08-16T18:54:41.469Z",
+    "f14aa4cb786aae03": "2026-08-16T18:54:41.469Z",
+    "b84bb8ca634db709": "2026-08-16T18:54:41.469Z",
+    "c68747623288011f": "2026-08-16T18:54:41.469Z",
+    "6a247b25bfa219c3": "2026-08-16T18:54:41.469Z",
+    "43e80bb4e0765d6e": "2026-08-16T18:54:41.469Z",
+    "f32f5acf1ce87175": "2026-08-16T18:54:41.469Z",
+    "d4e4ee7d1959b380": "2026-08-16T18:54:41.469Z",
+    "4df4faf5ec1e18ef": "2026-08-16T18:54:41.469Z",
+    "5166502431bfb4bc": "2026-08-16T18:54:41.469Z",
+    "6e931d231c37f83b": "2026-08-16T18:54:41.469Z",
+    "0f9b9be646d93057": "2026-08-16T18:54:41.469Z",
+    "aaabf7c3df85977d": "2026-08-16T18:54:41.469Z",
+    "2b9a086c5f048caf": "2026-08-16T18:54:41.469Z",
+    "1ee3e2d871f51da7": "2026-08-16T18:54:41.469Z",
+    "5a67763becda5e74": "2026-08-16T18:54:41.469Z",
+    "2e6ac4eb8b812772": "2026-08-16T18:54:41.469Z",
+    "35df1b91cbbdc89c": "2026-08-16T18:54:41.469Z",
+    "b09834e61a3aacd2": "2026-08-16T18:54:41.469Z",
+    "fd0113f9b2b9c016": "2026-08-16T18:54:41.469Z",
+    "f2f67f1e6f36afaf": "2026-08-16T18:54:41.469Z",
+    "09eb348b7246d5e2": "2026-08-16T18:54:41.469Z"
   },
   "instagram": {
     "posted": {
@@ -4544,7 +4573,8 @@
       "activision-sledgehammer-halo-multiplayer-geruecht-2026": "2026-08-16T07:02:37.940Z",
       "kingdom-hearts-4-keine-verschiebung-ende-2027": "2026-08-16T13:04:55.766Z",
       "windows-11-august-update-kb5121003-spiele-crashes-2026": "2026-08-16T13:05:13.146Z",
-      "witcher-3-npc-muetter-babys-bug-philipp-weber-2026": "2026-08-16T15:45:52.694Z"
+      "witcher-3-npc-muetter-babys-bug-philipp-weber-2026": "2026-08-16T15:45:52.694Z",
+      "fortnite-kapitel-7-saison-4-override-gaming-legends-2026": "2026-08-16T18:55:25.653Z"
     },
     "cards": {
       "/social/ig-gta-6-ultimate-edition-89-prozent-vorbestellungen.mp4": "2026-08-14T09:49:50.746Z",
@@ -4559,14 +4589,15 @@
       "/social/ig-activision-sledgehammer-halo-multiplayer-geruecht-2026.mp4": "2026-08-16T07:02:37.941Z",
       "/social/ig-kingdom-hearts-4-keine-verschiebung-ende-2027.jpg": "2026-08-16T13:04:55.766Z",
       "/social/ig-windows-11-august-update-kb5121003-spiele-crashes-2026.mp4": "2026-08-16T13:05:13.146Z",
-      "/social/ig-witcher-3-npc-muetter-babys-bug-philipp-weber-2026.jpg": "2026-08-16T15:45:52.694Z"
+      "/social/ig-witcher-3-npc-muetter-babys-bug-philipp-weber-2026.jpg": "2026-08-16T15:45:52.694Z",
+      "/social/ig-fortnite-kapitel-7-saison-4-override-gaming-legends-2026.mp4": "2026-08-16T18:55:25.653Z"
     },
     "unlisted": [
       "gta-6-preis-80-dollar-zelnick-schnaeppchen-2026"
     ],
     "wechsel": {
       "day": "2026-08-16",
-      "nichtBreaking": 4
+      "nichtBreaking": 5
     },
     "tokenCheckedAt": "2026-08-15T09:48:57.921Z",
     "token": {
@@ -4593,7 +4624,8 @@
       "kingdom hearts iv": 2,
       "halo": 1,
       "arc raiders": 1,
-      "the witcher 3: wild hunt": 1
+      "the witcher 3: wild hunt": 1,
+      "fortnite": 1
     },
     "uebersprungen": {
       "br1-infinite-echtgeld-kills-unbestaetigt-2026": "2026-08-09T08:04:01.341Z",
