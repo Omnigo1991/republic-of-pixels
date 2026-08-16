@@ -1,16 +1,16 @@
 {
-  "updatedAt": "2026-08-16T01:04:28.787Z",
+  "updatedAt": "2026-08-16T02:03:22.314Z",
   "deals": [
     {
-      "appId": 460930,
-      "title": "Tom Clancy's Ghost Recon® Wildlands",
-      "discountPercent": 95,
-      "originalPrice": 4999,
-      "finalPrice": 249,
+      "appId": 1142710,
+      "title": "Total War: WARHAMMER III",
+      "discountPercent": 85,
+      "originalPrice": 5999,
+      "finalPrice": 899,
       "currency": "EUR",
-      "endsAt": "2026-08-16T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/460930/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460930/ff701838255b7081bdbed2a30892e5eb4d1bbe1d/capsule_184x69_alt_assets_0_german.jpg?t=1786116240"
+      "endsAt": "2026-08-27T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1142710/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1142710/capsule_184x69.jpg?t=1786634522"
     },
     {
       "appId": 1313140,
