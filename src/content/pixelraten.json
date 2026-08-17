@@ -1,20 +1,19 @@
 {
-  "datum": "2026-08-16",
-  "nummer": 8,
-  "loesung": "Kingdom Come: Deliverance",
+  "datum": "2026-08-17",
+  "nummer": 9,
+  "loesung": "Hades",
   "akzeptiert": [
-    "kingdomcomedeliverance",
-    "kingdomcome"
+    "hades"
   ],
   "hinweise": [
-    "Erschienen 2018 · Rollenspiel",
-    "Mittelalter-Böhmen"
+    "Erschienen 2020 · Roguelike",
+    "Griechische Unterwelt"
   ],
   "bilder": [
-    "/images/pixelraten/2026-08-16-s1.jpg",
-    "/images/pixelraten/2026-08-16-s2.jpg",
-    "/images/pixelraten/2026-08-16-s3.jpg",
-    "/images/pixelraten/2026-08-16-s4.jpg",
-    "/images/pixelraten/2026-08-16-s5.jpg"
+    "/images/pixelraten/2026-08-17-s1.jpg",
+    "/images/pixelraten/2026-08-17-s2.jpg",
+    "/images/pixelraten/2026-08-17-s3.jpg",
+    "/images/pixelraten/2026-08-17-s4.jpg",
+    "/images/pixelraten/2026-08-17-s5.jpg"
   ]
 }

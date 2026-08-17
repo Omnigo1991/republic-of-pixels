@@ -4543,7 +4543,14 @@
     "d4f62864cfcc884b": "2026-08-16T21:42:23.934Z",
     "15ced509c93615d3": "2026-08-16T21:42:23.934Z",
     "c9a1b9fb5aeffb89": "2026-08-16T21:42:23.934Z",
-    "1644d32868b14830": "2026-08-16T21:42:23.934Z"
+    "1644d32868b14830": "2026-08-16T21:42:23.934Z",
+    "e817e17dc72c7638": "2026-08-17T01:03:43.729Z",
+    "e9bb4fd734dc9d9e": "2026-08-17T01:03:43.729Z",
+    "8db2ed4796a6bc40": "2026-08-17T01:03:43.729Z",
+    "99ef33fc385f9c90": "2026-08-17T01:03:43.729Z",
+    "d274370eb6349ff2": "2026-08-17T01:03:43.729Z",
+    "7c1f56155c5d88c1": "2026-08-17T01:03:43.729Z",
+    "7e8d9f462a0cba7c": "2026-08-17T01:03:43.729Z"
   },
   "instagram": {
     "posted": {
@@ -4668,7 +4675,7 @@
     }
   },
   "pixelraten": {
-    "nummer": 8,
+    "nummer": 9,
     "benutzt": [
       "Subnautica",
       "Slay the Spire",
@@ -4677,7 +4684,8 @@
       "Sekiro: Shadows Die Twice",
       "Cyberpunk 2077",
       "Age of Empires II",
-      "Kingdom Come: Deliverance"
+      "Kingdom Come: Deliverance",
+      "Hades"
     ]
   }
 }
