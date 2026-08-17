@@ -53,7 +53,7 @@ export default async function HomePage() {
             Zeilenkiste: die Handschrift traegt Ober- und Unterlaengen,
             die optisch taeuschen). */}
         <div className="mx-auto max-w-content px-4 pt-[42px] sm:px-6 sm:pt-[52px] lg:px-8">
-          <p className="mb-[41px] font-marker text-[30px] leading-[1] text-text-primary sm:mb-[51px] sm:text-[40px]">
+          <p className="mb-[46px] font-marker text-[38px] leading-[1] text-text-primary sm:mb-[58px] sm:text-[56px]">
             Willkommen in der <span className="text-accent">Republic</span>
           </p>
           <div className="grid gap-8 lg:grid-cols-[1fr_372px] lg:gap-11">
@@ -80,6 +80,7 @@ export default async function HomePage() {
             <SektionsBanner titel="News aus der" cyan="Republic" />
             <SectionDivider />
             <NewsListe articles={chronological} />
+            <MehrPille href="/kategorie/news" text="Alle News" />
           </Reveal>
         </section>
 
@@ -92,6 +93,7 @@ export default async function HomePage() {
         <section id="guides" className="scroll-mt-16 lg:scroll-mt-[88px] pt-14 sm:pt-16">
           <Reveal>
             <SektionsBanner titel="Die grossen Republic-" cyan="Guides" />
+            <SectionDivider />
             <div className="grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-5">
               {guideReihe.map((a) => (
                 <NotchKarte key={a.slug} article={a} bildHoehe="h-[250px]" randCyan />
@@ -126,12 +128,22 @@ export default async function HomePage() {
         <Reveal>
           <GeradeImGespraech />
         </Reveal>
-        <Reveal>
-          <DeineMerkliste />
-        </Reveal>
-        <Reveal>
-          <PixelRaten />
-        </Reveal>
+
+        {/* Zweites Dach (Tim, 17.08.2026): Merkliste und Pixel-Raten sind
+            beide persoenlich — was DU dir gemerkt hast, was DU raetst.
+            Sie stehen deshalb unter einem gemeinsamen Titel. */}
+        <section className="pt-14 sm:pt-16">
+          <Reveal>
+            <SektionsBanner titel="Deine" cyan="Republic" />
+            <SectionDivider />
+          </Reveal>
+          <Reveal>
+            <DeineMerkliste />
+          </Reveal>
+          <Reveal>
+            <PixelRaten />
+          </Reveal>
+        </section>
       </div>
 
       <div className="mt-16">

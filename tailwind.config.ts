@@ -27,14 +27,14 @@ const config: Config = {
           elevated: "#14132A",
         },
         surface: {
-          // card = die VIELEN kleinen Karten (Release-, Event-, Deal-,
-          // Charts-Radar ...). Navy mit 12 % Cyan-Schleier plus
-          // Cyan-Kante: gehoert sichtbar zur Cyan-Familie, ohne dass die
-          // Seite zur Neon-Wand wird. Volles #02F0D1 bleibt den drei
-          // grossen Boxen vorbehalten (Newsletter, Naechstes Event,
-          // "Warum das wichtig ist") — Tim, 17.08.2026.
-          card: "#0B2630",
-          hover: "#103038",
+          // card = die vielen kleinen Karten (Release-, Event-, Deal-,
+          // Charts-Radar ...). Werte an der Live-Seite abgemessen
+          // (Tim, 17.08.2026): Flaeche rgb(22,21,43), Rand rgb(38,35,71),
+          // Radius 16 px. Volles #02F0D1 bleibt den drei grossen Boxen
+          // vorbehalten: Newsletter, Naechstes Event, "Warum das
+          // wichtig ist".
+          card: "#16152B",
+          hover: "#1D1B38",
           // panel = Bedienflaeche (Suche, Kommentare, Dialoge, Admin).
           // Die bleiben dunkel: Neon-Cyan unter einem Eingabefeld waere
           // weder lesbar noch gemeint.
@@ -42,9 +42,9 @@ const config: Config = {
           panelhover: "#1B1A36",
         },
         border: {
-          subtle: "rgba(2, 240, 209, 0.28)",
-          default: "rgba(2, 240, 209, 0.4)",
-          strong: "rgba(2, 240, 209, 0.55)",
+          subtle: "#262347",
+          default: "#302D58",
+          strong: "#423E75",
         },
         accent: {
           DEFAULT: "#02F0D1",

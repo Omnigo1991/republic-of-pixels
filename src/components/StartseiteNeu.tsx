@@ -122,36 +122,46 @@ export function NewsletterBlock({ artikelBilder }: { artikelBilder: Article[] })
     <div className="overflow-hidden rounded-2xl bg-accent">
       <div className="grid items-center gap-10 px-5 py-10 sm:px-10 sm:py-12 lg:grid-cols-[1fr_400px] lg:px-14 lg:py-14">
         <div>
-          <h2 className="text-[28px] font-black leading-[1.15] text-navy/70 sm:text-[40px]">
-            {/* Hervorhebung durch volles Navy statt Weiss: Weiss auf Cyan
-                misst 1.46:1 und ist damit nicht lesbar. */}
-            <span className="text-navy">KEINE NEBENQUESTS.</span>
-            <br />
-            NUR DIE BESTEN NEWS IN DEIN POSTFACH.
-          </h2>
-          <p className="mb-6 mt-4 text-[15.5px] text-navy/75 sm:text-[17px]">
-            Bleib auf dem Laufenden — Gaming-News, eingeordnet statt nur gemeldet.
+          {/* Schrift und Abstaende ueberarbeitet (Tim, 17.08.2026).
+              Vorher trugen beide Zeilen dieselbe Groesse und unterschieden
+              sich nur in der Deckkraft — das las sich wie ein Fehler statt
+              wie eine Hervorhebung. Jetzt fuehrt eine kleine Versalzeile
+              ein, die Aussage steht gross darunter, und die Abstaende
+              folgen einer Stufenleiter (10 / 18 / 28 / 14) statt beliebiger
+              Einzelwerte. */}
+          <p className="text-[12px] font-extrabold uppercase tracking-[0.16em] text-navy/70">
+            Der Republic-Newsletter
           </p>
-          <div className="flex max-w-[520px] flex-col gap-3 sm:flex-row">
+          <h2 className="mt-[10px] text-[30px] font-black leading-[1.08] tracking-[-0.02em] text-navy sm:text-[44px]">
+            Keine Nebenquests.
+            <br />
+            Nur die besten News.
+          </h2>
+          <p className="mt-[18px] max-w-[46ch] text-[16px] leading-[1.55] text-navy/75 sm:text-[17px]">
+            Einmal täglich in dein Postfach — Gaming-News, eingeordnet statt nur
+            gemeldet.
+          </p>
+          <div className="mt-[28px] flex max-w-[520px] flex-col gap-3 sm:flex-row">
             <input
               placeholder="Newsletter startet bald"
               disabled
-              className="min-w-0 flex-1 rounded-full border-2 border-navy/25 bg-white/70 px-5 py-3.5 text-[15px] text-navy placeholder:text-navy/50"
+              aria-label="E-Mail-Adresse"
+              className="min-w-0 flex-1 rounded-full border-2 border-navy/20 bg-white/70 px-5 py-3.5 text-[15px] text-navy placeholder:text-navy/45"
             />
             <button
               disabled
-              className="cursor-not-allowed rounded-full bg-navy px-7 py-3.5 text-[15px] font-extrabold text-accent opacity-70"
+              className="cursor-not-allowed rounded-full bg-navy px-8 py-3.5 text-[15px] font-extrabold tracking-[0.01em] text-accent opacity-80"
             >
               Anmelden
             </button>
           </div>
-          <p className="mt-3 text-xs text-navy/65">
+          <p className="mt-[14px] text-[12.5px] leading-[1.5] text-navy/65">
             Wir bauen gerade den Versand — bis dahin:{" "}
             <a
               href="https://www.instagram.com/republicofpixels"
               target="_blank"
               rel="noreferrer noopener"
-              className="font-semibold text-navy underline decoration-navy/40 underline-offset-4"
+              className="font-semibold text-navy underline decoration-navy/40 underline-offset-4 hover:decoration-navy"
             >
               @republicofpixels auf Instagram
             </a>

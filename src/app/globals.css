@@ -193,11 +193,10 @@ h3 {
 /* Pixel-Treppe: unsere Ecke (drei Stufen), abgeleitet aus dem R-Logo.
    Aufbau unveraendert — aussen Flaeche mit Rahmenstaerke als
    Innenabstand, innen dieselbe Treppe. Nur die Randfarbe ist jetzt
-   Navy statt Cyan (Tim, 17.08.2026): Der Rand verschmilzt mit dem
-   Grund, das Bild wirkt frei geschnitten, die Treppe bleibt als
-   Aussparung stehen. Form und Staerke sind unangetastet. */
+   wieder Cyan (Tim, 17.08.2026 — der Navy-Rand verschwand auf dem
+   Navy-Grund und die Karten standen ohne Fassung da). */
 .treppe-tl {
-  background: #0C0B1A;
+  background: #02F0D1;
   padding: 7px;
   clip-path: polygon(0 45px, 15px 45px, 15px 30px, 30px 30px, 30px 15px, 45px 15px, 45px 0, 100% 0, 100% 100%, 0 100%);
 }
@@ -205,7 +204,7 @@ h3 {
   clip-path: polygon(0 45px, 15px 45px, 15px 30px, 30px 30px, 30px 15px, 45px 15px, 45px 0, 100% 0, 100% 100%, 0 100%);
 }
 .treppe-tr {
-  background: #0C0B1A;
+  background: #02F0D1;
   padding: 7px;
   clip-path: polygon(0 0, calc(100% - 36px) 0, calc(100% - 36px) 12px, calc(100% - 24px) 12px, calc(100% - 24px) 24px, calc(100% - 12px) 24px, calc(100% - 12px) 36px, 100% 36px, 100% 100%, 0 100%);
 }
@@ -213,9 +212,13 @@ h3 {
   clip-path: polygon(0 0, calc(100% - 36px) 0, calc(100% - 36px) 12px, calc(100% - 24px) 12px, calc(100% - 24px) 24px, calc(100% - 12px) 24px, calc(100% - 12px) 36px, 100% 36px, 100% 100%, 0 100%);
 }
 .treppe-innen { position: relative; overflow: hidden; background: #0F0E20; }
-/* Ausnahme: die Guide-Karten behalten den Cyan-Rand (Tim, 17.08.2026).
-   Sie stehen als einzige Reihe ohne Nachbarn und brauchen die Fassung. */
+/* Nach der Rueckkehr zum Cyan-Rand ueberall braucht es hier nichts mehr;
+   die Klasse bleibt als ausdrueckliche Angabe an den Guide-Karten. */
 .treppe-cyan { background: #02F0D1; }
+/* Auf einer Cyan-Flaeche (Newsletter-Sticker) waere der Cyan-Rand
+   unsichtbar — dort fasst Navy die Bilder ein. */
+.bg-accent .treppe-tl,
+.bg-accent .treppe-tr { background: #0C0B1A; }
 @media (max-width: 640px) {
   .treppe-tl, .treppe-tl > .treppe-innen {
     clip-path: polygon(0 27px, 9px 27px, 9px 18px, 18px 18px, 18px 9px, 27px 9px, 27px 0, 100% 0, 100% 100%, 0 100%);
