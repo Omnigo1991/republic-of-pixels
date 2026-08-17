@@ -38,6 +38,15 @@ export function SektionsBanner({
   // darueber wirkt die Schrift verzogen statt gesetzt.
   const breite = Math.min(1536, Math.round(zeichen * 72 * 1.12));
 
+  // WICHTIG: Die Schrifthoehe muss konstant sein, nicht die Kastenbreite.
+  // Vorher war die Breite auf 660 px begrenzt — ein kurzer Titel wie
+  // "DEINE REPUBLIC" wurde dadurch auf dieselbe Breite gezogen wie
+  // "NEWS AUS DER REPUBLIC" und erschien deutlich groesser. Jetzt gibt
+  // 0.43 die Skalierung vor (1536 × 0.43 = 660 px, die gemessene Breite
+  // des Banners auf der Live-Seite bei 43 px Schrifthoehe); kurze Titel
+  // werden dadurch schmaler statt groesser.
+  const zielBreite = Math.round(breite * 0.43);
+
   return (
     <div className={`mb-5 ${className}`}>
       <svg
@@ -48,7 +57,8 @@ export function SektionsBanner({
         aria-level={2}
         aria-label={`${titel} ${cyan}`}
         id={id}
-        className="block h-auto w-full max-w-[660px] overflow-visible"
+        style={{ width: `min(100%, ${zielBreite}px)` }}
+        className="block h-auto overflow-visible"
       >
         <text
           x="0"

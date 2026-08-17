@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getTopStory, getChronological, getByCategory } from "@/lib/articles";
 import { TopStory } from "@/components/TopStory";
 import { NewsListe } from "@/components/NewsListe";
-import { NeuesteRail, NotchKarte, TickerBand, NewsletterBlock, MehrPille } from "@/components/StartseiteNeu";
+import { NeuesteRail, NotchKarte, TickerBand, NewsletterBlock, SektionsKopf } from "@/components/StartseiteNeu";
 import { SektionsBanner } from "@/components/SektionsBanner";
 import { ReleaseRadar } from "@/components/ReleaseRadar";
 import { DealRadar } from "@/components/DealRadar";
@@ -78,9 +78,9 @@ export default async function HomePage() {
         <section id="news" className="scroll-mt-16 lg:scroll-mt-[88px] pt-14 sm:pt-16">
           <Reveal>
             <SektionsBanner titel="News aus der" cyan="Republic" />
+            <SektionsKopf titel="Alle News" hinweis="Chronologisch, neueste zuerst" />
             <SectionDivider />
             <NewsListe articles={chronological} />
-            <MehrPille href="/kategorie/news" text="Alle News" />
           </Reveal>
         </section>
 
@@ -93,13 +93,13 @@ export default async function HomePage() {
         <section id="guides" className="scroll-mt-16 lg:scroll-mt-[88px] pt-14 sm:pt-16">
           <Reveal>
             <SektionsBanner titel="Die grossen Republic-" cyan="Guides" />
+            <SektionsKopf titel="Alle Guides" hinweis="Nachschlagen statt suchen" />
             <SectionDivider />
             <div className="grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-5">
               {guideReihe.map((a) => (
                 <NotchKarte key={a.slug} article={a} bildHoehe="h-[250px]" randCyan />
               ))}
             </div>
-            <MehrPille href="/guides" text="Alle Guides" />
           </Reveal>
         </section>
 
@@ -109,7 +109,6 @@ export default async function HomePage() {
         <section id="radare" className="scroll-mt-16 lg:scroll-mt-[88px] pt-14 sm:pt-16">
           <Reveal>
             <SektionsBanner titel="Die Republic-" cyan="Radare" />
-            <SectionDivider />
           </Reveal>
           <Reveal>
             <ReleaseRadar />
@@ -135,7 +134,6 @@ export default async function HomePage() {
         <section className="pt-14 sm:pt-16">
           <Reveal>
             <SektionsBanner titel="Deine" cyan="Republic" />
-            <SectionDivider />
           </Reveal>
           <Reveal>
             <DeineMerkliste />

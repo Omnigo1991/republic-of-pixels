@@ -199,9 +199,12 @@ export function SektionsKopf({
   hinweis?: string;
 }) {
   return (
-    <div className="mb-5 flex flex-wrap items-baseline gap-x-4 gap-y-1">
-      <h2 className="text-[24px] font-black tracking-tight text-text-primary sm:text-[28px]">{titel}</h2>
-      {hinweis && <span className="ml-auto text-[13px] text-text-secondary">{hinweis}</span>}
+    // Werte an der Live-Seite abgemessen (Tim, 17.08.2026): H2 20 px in
+    // Gewicht 600, Hinweis 12 px in der leisen Textfarbe, Kopfzeile mit
+    // 12 px Abstand nach unten und Grundlinien-Ausrichtung.
+    <div className="mb-3 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+      <h2 className="text-xl font-semibold tracking-tight text-text-primary">{titel}</h2>
+      {hinweis && <span className="text-xs text-text-tertiary">{hinweis}</span>}
     </div>
   );
 }
