@@ -1,0 +1,160 @@
+{
+  "slug": "oblivion-remastered-switch-2-digital-foundry-technikanalyse-2026",
+  "title": "Oblivion schlägt die Series S in der Schärfe — und ruckelt trotzdem",
+  "subtitle": "Digital Foundry attestiert dem Switch 2-Port eine beachtliche Technik-Leistung, doch Frame-Times zwischen 16 und 50 Millisekunden lassen die Kamera zittern",
+  "excerpt": "Der Switch 2-Port von Oblivion Remastered sieht in Dungeons und Städten teils schärfer aus als auf der Xbox Series S. Bei der Performance zeigt Digital Foundry dagegen dieselben alten Baustellen — mit einer überraschenden Ausnahme.",
+  "seoTitle": "Oblivion Remastered Switch 2: Digital Foundry analysiert Port",
+  "metaDescription": "Digital Foundry testet Oblivion Remastered auf Switch 2: 1080p im Dock, 900p mobil, 30 fps als Ziel — und Frame-Times, die zwischen 16 und 50 ms schwanken.",
+  "category": "news",
+  "platforms": [
+    "nintendo",
+    "xbox"
+  ],
+  "tags": [
+    "The Elder Scrolls IV: Oblivion Remastered",
+    "Nintendo Switch 2",
+    "Digital Foundry",
+    "Bethesda",
+    "Xbox Series S"
+  ],
+  "tldr": [
+    "Digital Foundry hat den Switch 2-Port von Oblivion Remastered technisch analysiert: 1080p im Dock via DLSS, 900p im Handheld-Modus.",
+    "Optisch liegt die Switch 2 in Dungeons und Städten teils vor der Xbox Series S, muss aber bei Vegetation, Bäumen und Sichtweiten deutlich zurückstecken.",
+    "Die Zielmarke von 30 fps wird durch Frame-Pacing-Probleme und Frame-Times zwischen 16 und 50 ms unterlaufen — die Kamera ruckelt.",
+    "Der auf PS5 und Xbox bekannte Leistungsverfall über die Spielzeit trat auf Switch 2 nicht auf; Bethesda hat einen neuen Patch angekündigt."
+  ],
+  "whyItMatters": "Oblivion Remastered ist eines der grössten Rollenspiele, die überhaupt auf der Switch 2 laufen — und damit ein Testfall dafür, wie viel Unreal-Engine-Technik die Hybridkonsole verkraftet. Wer den Kauf plant, sollte wissen, dass die Optik überrascht, das Spielgefühl aber unter denselben Problemen leidet wie auf den grossen Konsolen. Und weil Bethesda erwägt, Switch 2-Optimierungen zurückzuportieren, könnten am Ende alle Versionen profitieren.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Rund ein Jahr nach dem Start auf den übrigen Plattformen ist The Elder Scrolls 4: Oblivion Remastered auf der Nintendo Switch 2 angekommen — und Digital Foundry hat den Port technisch auseinandergenommen. Das Fazit fällt zweigeteilt aus: Optisch liefert die Hybridkonsole erstaunlich viel ab und übertrifft die Xbox Series S in einzelnen Situationen sogar in der Bildschärfe. Die Performance bleibt dagegen die grosse Baustelle, weil die schwächere Hardware bekannte Probleme der Neuauflage zusätzlich verschärft."
+    },
+    {
+      "type": "embed",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=LsV1XmJ00UE"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "1080p",
+          "label": "Auflösung im Dock dank DLSS — im Handheld-Modus sind es 900p"
+        },
+        {
+          "value": "30 fps",
+          "label": "Zielmarke der Switch 2-Fassung"
+        },
+        {
+          "value": "16–50 ms",
+          "label": "Schwankende Frame-Times, die für ruckelnde Kamerafahrten sorgen"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Schärfer als die Series S — an ausgewählten Stellen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Port bringt laut den Technikexperten fast alle grafischen Upgrades der anderen Versionen mit. In Dungeons und Städten, wo Details nah an der Kamera liegen, wirkt das Bild sogar knackiger als auf der Xbox Series S. Die Texturqualität liegt in Teilen auf Augenhöhe, an anderer Stelle wurde sie heruntergestuft. Bemerkenswert ist, dass Lumen für Reflexionen und indirekte Beleuchtung erhalten bleibt."
+    },
+    {
+      "type": "quote",
+      "text": "Auf der positiven Seite: Lumen-Reflexionen und Global Illumination sind mit an Bord. SSR kommt als Rückfalllösung mit niedrigeren 540p zum Einsatz, aber das hybride Setup funktioniert am besten. Indirektes Lichtbouncing wird in Dungeons und Städten simuliert und entspricht in den meisten Szenarien der Series S, allerdings mit etwas geringerer Streugenauigkeit als auf der Series X.",
+      "attribution": "Digital Foundry"
+    },
+    {
+      "type": "heading",
+      "text": "Was die Switch 2 opfern musste"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Preis für dieses Ergebnis ist in der freien Landschaft sichtbar. Die Entwickler haben die Umgebungsdichte spürbar zurückgefahren, und die Sichtweiten fallen deutlich aggressiver aus als auf den stationären Konsolen. Konkret nennt Digital Foundry:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Reduzierte Vegetationsdichte, einzelne Bäume fehlen komplett auf der Karte",
+        "Aggressivere LOD-Stufen, die Burgstrukturen und Schatten in der Ferne beschneiden",
+        "Assets, die erst spät aufpoppen, sobald man sich ihnen nähert",
+        "Teils herabgesetzte Texturqualität und zurückgenommene Detaileinstellungen"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Wichtig dabei: Alles baut sich korrekt auf, sobald man näher kommt. Der Unterschied fällt vor allem auf Distanz auf — dort, wo Oblivions weite Panoramen ihren Reiz entfalten."
+    },
+    {
+      "type": "heading",
+      "text": "30 fps als Ziel, ruckelnde Kamera als Realität"
+    },
+    {
+      "type": "paragraph",
+      "text": "Das Rollenspiel strebt auf der Switch 2 30 Bilder pro Sekunde an. Erreicht wird diese Marke jedoch nicht gleichmässig: Frame-Times schwanken zwischen 16 und 50 Millisekunden, was zu Frame-Pacing-Problemen und einer sichtbar ruckelnden Kamera führt. Traversal-Hitches — kurze Aussetzer beim Nachladen — treten laut Analyse hier sogar prominenter auf als in anderen Fassungen, besonders beim Galopp über offenes Terrain oder wenn viele Gegner gleichzeitig auf dem Schirm sind. In der Gesamtbetrachtung behält die Xbox Series S deshalb die Nase vorn."
+    },
+    {
+      "type": "heading",
+      "text": "Ein Problem der grossen Konsolen bleibt aus"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgerechnet bei einem der ärgerlichsten Mängel der PS5- und Xbox-Versionen schlägt sich die Nintendo-Konsole besser: Die Performance verschlechtert sich nicht mit zunehmender Spielzeit. Digital Foundry vermutet allerdings, dass die 30-fps-Deckelung mögliche Einbrüche kaschiert."
+    },
+    {
+      "type": "quote",
+      "text": "Was das Problem der sich verschlechternden Performance betrifft, das auf PS5 und Xbox auftritt: Die Switch 2 scheint besser abzuschneiden. Wir haben nach einer Stunde Spielzeit keine signifikante Verschlechterung festgestellt, was aber daran liegen könnte, dass die 30-fps-Grenze Probleme verbirgt, die bei ungedeckelten 60 fps sichtbar würden. Wir hatten einen Kamera-Bug beim Wechseln von Spielständen und einen reproduzierbaren Absturz, doch insgesamt war die Stabilität besser als auf anderen Plattformen.",
+      "attribution": "Digital Foundry"
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung: technisches Kunststück mit Restposten"
+    },
+    {
+      "type": "paragraph",
+      "text": "Digital Foundry zieht trotz der Kritik ein wohlwollendes Fazit: Der Port bleibe eine faszinierende technische Leistung für ein Handheld, auch wenn er nicht die definitive Hommage an ein geliebtes Spiel sei. Als weitere Pluspunkte nennt die Analyse die kleine Installationsgrösse, die Maus-Unterstützung und eine fortschrittlichere Upscaling-Implementierung als auf den Konsolen. Ob die Baustellen verschwinden, hängt nun an Bethesda — und die Bilanz dort ist gemischt: Der letzte Patch für die übrigen Fassungen erschien im Sommer 2025, danach herrschte Funkstille. Inzwischen hat das Studio ein neues Update angekündigt und prüft, ob sich Optimierungen aus der Switch 2-Version auf die anderen Plattformen übertragen lassen. Sollte das gelingen, wäre der technisch schwächste Ableger am Ende derjenige, der allen anderen hilft."
+    }
+  ],
+  "poll": {
+    "question": "Oblivion Remastered auf Switch 2 — wie entscheidet ihr euch?",
+    "options": [
+      "Zugreifen: Oblivion mobil ist das Ruckeln wert",
+      "Warten, bis der angekündigte Patch da ist",
+      "Series S bleibt die bessere Version",
+      "Für mich läuft das Remaster nur auf PC rund"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-17T13:04:25.563Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "grid",
+  "sources": [
+    {
+      "title": "The Elder Scrolls 4 Oblivion: Switch 2-Port ruckelt laut Digital Foundry spürbar",
+      "url": "https://www.eurogamer.de/oblivion-remastered-switch-2-performance",
+      "publisher": "Eurogamer.de"
+    },
+    {
+      "title": "Xbox Series S Compared To Nintendo Switch 2 In Oblivion Remastered Analysis",
+      "url": "https://www.purexbox.com/news/2026/08/xbox-series-s-compared-to-nintendo-switch-2-in-oblivion-remastered-analysis",
+      "publisher": "Pure Xbox"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/oblivion-remastered-switch-2-digital-foundry-technikanalyse-2026.webp",
+    "alt": "Oblivion schlägt die Series S in der Schärfe — und ruckelt trotzdem",
+    "credit": "Bild: Eurogamer.de",
+    "sourceUrl": "https://www.eurogamer.de/oblivion-remastered-switch-2-performance",
+    "sourceWidth": 690,
+    "sourceHeight": 388
+  },
+  "relatedSlugs": [
+    "oblivion-remastered-patch-ankuendigung-2026",
+    "oblivion-remastered-switch-2-gameplay-leak-2026",
+    "kingdom-hearts-4-d23-coco-welt-anime-2027"
+  ]
+}
