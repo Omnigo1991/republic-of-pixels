@@ -27,10 +27,14 @@ const config: Config = {
           elevated: "#14132A",
         },
         surface: {
-          // card = Inhaltsbox (Release-Radar, Event, "Warum das wichtig
-          // ist", Newsletter ...) — volles Cyan, Schrift darin Navy.
-          card: "#02F0D1",
-          hover: "#30F3D9",
+          // card = die VIELEN kleinen Karten (Release-, Event-, Deal-,
+          // Charts-Radar ...). Navy mit 12 % Cyan-Schleier plus
+          // Cyan-Kante: gehoert sichtbar zur Cyan-Familie, ohne dass die
+          // Seite zur Neon-Wand wird. Volles #02F0D1 bleibt den drei
+          // grossen Boxen vorbehalten (Newsletter, Naechstes Event,
+          // "Warum das wichtig ist") — Tim, 17.08.2026.
+          card: "#0B2630",
+          hover: "#103038",
           // panel = Bedienflaeche (Suche, Kommentare, Dialoge, Admin).
           // Die bleiben dunkel: Neon-Cyan unter einem Eingabefeld waere
           // weder lesbar noch gemeint.
@@ -38,9 +42,9 @@ const config: Config = {
           panelhover: "#1B1A36",
         },
         border: {
-          subtle: "#242144",
-          default: "#302D58",
-          strong: "#423E75",
+          subtle: "rgba(2, 240, 209, 0.28)",
+          default: "rgba(2, 240, 209, 0.4)",
+          strong: "rgba(2, 240, 209, 0.55)",
         },
         accent: {
           DEFAULT: "#02F0D1",
@@ -52,7 +56,7 @@ const config: Config = {
           primary: "#F1F0F2",
           secondary: "#B7BACB",
           tertiary: "#8A8FA3",
-          disabled: "#666A80",
+          disabled: "#8F95A9",
           // Schrift auf Cyan-Flaechen.
           oncyan: "#0C0B1A",
         },

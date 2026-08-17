@@ -48,7 +48,7 @@ export function SektionsBanner({
         aria-level={2}
         aria-label={`${titel} ${cyan}`}
         id={id}
-        className="block h-auto w-full max-w-[820px] overflow-visible"
+        className="block h-auto w-full max-w-[660px] overflow-visible"
       >
         <text
           x="0"

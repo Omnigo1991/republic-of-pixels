@@ -6,7 +6,6 @@ import type { Session } from "@supabase/supabase-js";
 import { getSupabase } from "@/lib/supabase";
 import { getAllArticles } from "@/lib/articles";
 import { SectionDivider } from "./SectionDivider";
-import { SektionsBanner } from "@/components/SektionsBanner";
 
 interface Eintrag {
   tag: string;
@@ -92,7 +91,9 @@ export function DeineMerkliste() {
   return (
     <section aria-labelledby="merkliste-heading" className="py-10">
       <div className="mb-3 flex items-baseline justify-between">
-        <SektionsBanner id="merkliste-heading" titel="Deine" cyan="Merkliste" className="mb-0" />
+        <h2 id="merkliste-heading" className="text-[20px] font-semibold tracking-tight text-text-primary">
+          Deine Merkliste
+        </h2>
         <span className="text-xs text-text-tertiary">Themen, die du verfolgst</span>
       </div>
       <SectionDivider />

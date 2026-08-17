@@ -53,8 +53,8 @@ export default async function HomePage() {
             Zeilenkiste: die Handschrift traegt Ober- und Unterlaengen,
             die optisch taeuschen). */}
         <div className="mx-auto max-w-content px-4 pt-[42px] sm:px-6 sm:pt-[52px] lg:px-8">
-          <p className="mb-[41px] font-marker text-[30px] leading-[1] text-accent sm:mb-[51px] sm:text-[40px]">
-            Willkommen in der Republic
+          <p className="mb-[41px] font-marker text-[30px] leading-[1] text-text-primary sm:mb-[51px] sm:text-[40px]">
+            Willkommen in der <span className="text-accent">Republic</span>
           </p>
           <div className="grid gap-8 lg:grid-cols-[1fr_372px] lg:gap-11">
             <div>
@@ -94,30 +94,34 @@ export default async function HomePage() {
             <SektionsBanner titel="Die grossen Republic-" cyan="Guides" />
             <div className="grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-5">
               {guideReihe.map((a) => (
-                <NotchKarte key={a.slug} article={a} bildHoehe="h-[250px]" />
+                <NotchKarte key={a.slug} article={a} bildHoehe="h-[250px]" randCyan />
               ))}
             </div>
             <MehrPille href="/guides" text="Alle Guides" />
           </Reveal>
         </section>
 
-        <div id="radare" className="scroll-mt-16 lg:scroll-mt-[88px]">
-        <Reveal>
-          <ReleaseRadar />
-        </Reveal>
-        </div>
-
-        <Reveal>
-          <EventRadar />
-        </Reveal>
-
-        <Reveal>
-          <ChartsRadar />
-        </Reveal>
-
-        <Reveal>
-          <DealRadar />
-        </Reveal>
+        {/* Ein Dach ueber die vier Radare (Tim, 17.08.2026): oben der
+            Sektionstitel im Bannerstil, darunter die Radare mit ihren
+            schlichten Ueberschriften wie auf der Live-Seite. */}
+        <section id="radare" className="scroll-mt-16 lg:scroll-mt-[88px] pt-14 sm:pt-16">
+          <Reveal>
+            <SektionsBanner titel="Die Republic-" cyan="Radare" />
+            <SectionDivider />
+          </Reveal>
+          <Reveal>
+            <ReleaseRadar />
+          </Reveal>
+          <Reveal>
+            <EventRadar />
+          </Reveal>
+          <Reveal>
+            <ChartsRadar />
+          </Reveal>
+          <Reveal>
+            <DealRadar />
+          </Reveal>
+        </section>
 
         <Reveal>
           <GeradeImGespraech />

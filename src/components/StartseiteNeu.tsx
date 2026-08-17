@@ -56,14 +56,17 @@ export function NeuesteRail({ articles }: { articles: Article[] }) {
 export function NotchKarte({
   article,
   bildHoehe = "h-[280px]",
+  randCyan = false,
 }: {
   article: Article;
   bildHoehe?: string;
+  /** Cyan-Rand statt Navy — bei den Guides (Tim, 17.08.2026). */
+  randCyan?: boolean;
 }) {
   const { kicker, headline } = splitTitle(article.title, article.tags);
   return (
     <Link href={`/artikel/${article.slug}`} className="group block h-full">
-      <div className="treppe-tr h-full">
+      <div className={`treppe-tr h-full ${randCyan ? "treppe-cyan" : ""}`}>
         <div className={`treppe-innen ${bildHoehe}`}>
           <div className="absolute inset-0 [&_img]:h-full [&_img]:w-full [&_img]:object-cover transition-transform duration-500 group-hover:scale-[1.03]">
             <ArticleMedia article={article} sizes="(max-width: 640px) 100vw, 320px" className="h-full w-full" />

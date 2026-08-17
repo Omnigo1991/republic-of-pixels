@@ -6,7 +6,6 @@ import { getSupabase } from "@/lib/supabase";
 import { getArticleBySlug } from "@/lib/articles";
 import { splitTitle } from "@/lib/format";
 import { SectionDivider } from "./SectionDivider";
-import { SektionsBanner } from "@/components/SektionsBanner";
 
 interface TrendArtikel {
   slug: string;
@@ -52,7 +51,9 @@ export function GeradeImGespraech() {
   return (
     <section aria-labelledby="gespraech-heading" className="py-10">
       <div className="mb-3 flex items-baseline justify-between">
-        <SektionsBanner id="gespraech-heading" titel="Gerade im" cyan="Gespräch" className="mb-0" />
+        <h2 id="gespraech-heading" className="text-[20px] font-semibold tracking-tight text-text-primary">
+          Gerade im Gespräch
+        </h2>
         <span className="text-xs text-text-tertiary">Meiste Kommentare · letzte 24 Stunden</span>
       </div>
       <SectionDivider />

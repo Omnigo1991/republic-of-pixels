@@ -149,65 +149,45 @@ h3 {
    die Absenkung auf #00B89F war nur fuer weissen Grund noetig. */
 .text-accent { color: #02F0D1; }
 
-/* Schriftumkehr auf den Cyan-Flaechen: dort ist die Tinte Navy.
+/* Schriftumkehr NUR auf vollem Cyan (bg-accent): dort ist die Tinte Navy.
+   Die getoenten Karten (bg-surface-card) sind dunkel und behalten helle
+   Schrift — deshalb stehen sie hier nicht mehr drin.
    Ohne diese Regeln stuende weisse Schrift auf Cyan (Kontrast 1.6:1)
    und Cyan-Schrift auf Cyan (unsichtbar). */
-.bg-surface-card,
 .bg-accent {
   color: #0C0B1A;
 }
-.bg-surface-card .text-text-primary,
 .bg-accent .text-text-primary { color: #0C0B1A; }
-.bg-surface-card .text-text-secondary,
 .bg-accent .text-text-secondary { color: rgba(12, 11, 26, 0.74); }
-.bg-surface-card .text-text-tertiary,
 .bg-accent .text-text-tertiary { color: rgba(12, 11, 26, 0.6); }
-.bg-surface-card .text-accent,
 .bg-accent .text-accent { color: #0C0B1A; }
-.bg-surface-card .text-navy-text,
 .bg-accent .text-navy-text { color: #0C0B1A; }
-.bg-surface-card .text-navy-muted,
 .bg-accent .text-navy-muted { color: rgba(12, 11, 26, 0.74); }
 /* Linien und Randfarben innerhalb einer Cyan-Flaeche */
-.bg-surface-card .border-border-subtle,
 .bg-accent .border-border-subtle { border-color: rgba(12, 11, 26, 0.2); }
-.bg-surface-card .border-border-default,
 .bg-accent .border-border-default { border-color: rgba(12, 11, 26, 0.28); }
 /* Cyan-Konturen (Pillen wie FIXIERT) waeren auf Cyan unsichtbar. */
-.bg-surface-card [class*="border-accent"],
 .bg-accent [class*="border-accent"] { border-color: rgba(12, 11, 26, 0.4); }
 /* Cyan-Schleier als Pillen-Fuellung ebenso — auf Cyan reine Kontur. */
-.bg-surface-card [class*="bg-accent/"],
 .bg-accent [class*="bg-accent/"] { background-color: transparent; }
 
 /* Signalfarben sind fuer dunklen Grund gemischt und stehen auf Cyan zu
    schwach (gemessen: Rot 2.35:1, Bernstein 1.15:1). Auf Cyan-Flaechen
    daher abgedunkelt. */
-.bg-surface-card .text-error,
 .bg-accent .text-error { color: #8A1810; }
-.bg-surface-card .text-success,
 .bg-accent .text-success { color: #0A5730; }
-.bg-surface-card .text-warning,
 .bg-accent .text-warning { color: #6B4900; }
-.bg-surface-card .text-text-disabled,
 .bg-accent .text-text-disabled { color: rgba(12, 11, 26, 0.66); }
 
 /* WICHTIG: In einer Cyan-Flaeche darf wieder eine dunkle Flaeche liegen
    (Datumskaestchen, Knopf, Rangzahl). Dort gilt die Umkehr NICHT mehr,
    sonst steht Navy auf Navy (gemessen 1.02:1). */
-.bg-surface-card :is([class*="bg-navy"], [class*="bg-bg-elevated"], [class*="bg-surface-panel"]),
 .bg-accent :is([class*="bg-navy"], [class*="bg-bg-elevated"], [class*="bg-surface-panel"]) { color: #F1F0F2; }
-.bg-surface-card :is([class*="bg-navy"], [class*="bg-bg-elevated"], [class*="bg-surface-panel"]) .text-accent,
 .bg-accent :is([class*="bg-navy"], [class*="bg-bg-elevated"], [class*="bg-surface-panel"]) .text-accent,
-.bg-surface-card :is([class*="bg-navy"], [class*="bg-bg-elevated"], [class*="bg-surface-panel"]).text-accent,
 .bg-accent :is([class*="bg-navy"], [class*="bg-bg-elevated"], [class*="bg-surface-panel"]).text-accent { color: #02F0D1; }
-.bg-surface-card :is([class*="bg-navy"], [class*="bg-bg-elevated"]) .text-text-primary,
 .bg-accent :is([class*="bg-navy"], [class*="bg-bg-elevated"]) .text-text-primary { color: #F1F0F2; }
-.bg-surface-card :is([class*="bg-navy"], [class*="bg-bg-elevated"]) .text-text-secondary,
 .bg-accent :is([class*="bg-navy"], [class*="bg-bg-elevated"]) .text-text-secondary { color: #B7BACB; }
-.bg-surface-card :is([class*="bg-navy"], [class*="bg-bg-elevated"]) .text-error,
 .bg-accent :is([class*="bg-navy"], [class*="bg-bg-elevated"]) .text-error { color: #F1544B; }
-.bg-surface-card :is([class*="bg-navy"], [class*="bg-bg-elevated"]) .text-success,
 .bg-accent :is([class*="bg-navy"], [class*="bg-bg-elevated"]) .text-success { color: #2ED47A; }
 
 /* Pixel-Treppe: unsere Ecke (drei Stufen), abgeleitet aus dem R-Logo.
@@ -233,6 +213,9 @@ h3 {
   clip-path: polygon(0 0, calc(100% - 36px) 0, calc(100% - 36px) 12px, calc(100% - 24px) 12px, calc(100% - 24px) 24px, calc(100% - 12px) 24px, calc(100% - 12px) 36px, 100% 36px, 100% 100%, 0 100%);
 }
 .treppe-innen { position: relative; overflow: hidden; background: #0F0E20; }
+/* Ausnahme: die Guide-Karten behalten den Cyan-Rand (Tim, 17.08.2026).
+   Sie stehen als einzige Reihe ohne Nachbarn und brauchen die Fassung. */
+.treppe-cyan { background: #02F0D1; }
 @media (max-width: 640px) {
   .treppe-tl, .treppe-tl > .treppe-innen {
     clip-path: polygon(0 27px, 9px 27px, 9px 18px, 18px 18px, 18px 9px, 27px 9px, 27px 0, 100% 0, 100% 100%, 0 100%);

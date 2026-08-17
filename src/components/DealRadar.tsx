@@ -1,7 +1,6 @@
 import { PlatformIcon } from "./PlatformIcons";
 import { SectionDivider } from "./SectionDivider";
 import dealsData from "@/content/deals.json";
-import { SektionsBanner } from "@/components/SektionsBanner";
 
 interface Deal {
   appId: number;
@@ -38,7 +37,9 @@ export function DealRadar() {
   return (
     <section aria-labelledby="deals-heading" className="py-10">
       <div className="mb-3 flex items-baseline justify-between">
-        <SektionsBanner id="deals-heading" titel="Deal-" cyan="Radar" className="mb-0" />
+        <h2 id="deals-heading" className="text-[20px] font-semibold tracking-tight text-text-primary">
+          Deal-Radar
+        </h2>
       </div>
       <SectionDivider />
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

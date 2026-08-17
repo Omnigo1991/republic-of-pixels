@@ -4,7 +4,6 @@ import { PlatformIcon } from "./PlatformIcons";
 import { SectionDivider } from "./SectionDivider";
 import releasesData from "@/content/releases.json";
 import { getThema, themaSlug } from "@/lib/themen";
-import { SektionsBanner } from "@/components/SektionsBanner";
 
 interface ReleaseEntry {
   title: string;
@@ -31,7 +30,9 @@ export function ReleaseRadar() {
   return (
     <section aria-labelledby="radar-heading" className="py-10">
       <div className="mb-3 flex items-baseline justify-between">
-        <SektionsBanner id="radar-heading" titel="Release-" cyan="Radar" className="mb-0" />
+        <h2 id="radar-heading" className="text-[20px] font-semibold tracking-tight text-text-primary">
+          Release-Radar
+        </h2>
       </div>
       <SectionDivider />
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

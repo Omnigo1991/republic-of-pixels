@@ -1,7 +1,6 @@
 import { PlatformIcon } from "./PlatformIcons";
 import { SectionDivider } from "./SectionDivider";
 import chartsData from "@/content/charts.json";
-import { SektionsBanner } from "@/components/SektionsBanner";
 
 interface ChartGame {
   appId: number;
@@ -40,7 +39,9 @@ export function ChartsRadar() {
   return (
     <section aria-labelledby="charts-heading" className="py-10">
       <div className="mb-3 flex items-baseline justify-between">
-        <SektionsBanner id="charts-heading" titel="Charts-" cyan="Radar" className="mb-0" />
+        <h2 id="charts-heading" className="text-[20px] font-semibold tracking-tight text-text-primary">
+          Charts-Radar
+        </h2>
       </div>
       <SectionDivider />
       <div className="grid gap-4 sm:grid-cols-3">

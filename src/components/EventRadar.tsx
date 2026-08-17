@@ -2,7 +2,6 @@ import Link from "next/link";
 import { SectionDivider } from "./SectionDivider";
 import eventsData from "@/content/events.json";
 import { getThema } from "@/lib/themen";
-import { SektionsBanner } from "@/components/SektionsBanner";
 
 type EventStatus = "fixiert" | "erwartet" | "geruecht";
 
@@ -73,7 +72,9 @@ export function EventRadar() {
   return (
     <section aria-labelledby="events-heading" className="py-10">
       <div className="mb-3 flex items-baseline justify-between">
-        <SektionsBanner id="events-heading" titel="Event-" cyan="Radar" className="mb-0" />
+        <h2 id="events-heading" className="text-[20px] font-semibold tracking-tight text-text-primary">
+          Event-Radar
+        </h2>
       </div>
       <SectionDivider />
       {/* Grosse Event-Buehne links, Karten rechts (Tim, 15.08.2026 —
