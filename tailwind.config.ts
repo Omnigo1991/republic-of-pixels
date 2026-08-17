@@ -19,34 +19,42 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // HELL-UMBAU (Tim-Freigabe 15.08.2026 abends, "Danach kannst du
-        // bauen"): Weiss + Navy-Tinte + Cyan, Palette aus dem abgenommenen
-        // Polygon-Entwurf. Navy-Töne unten bleiben für Masthead-Text,
-        // Footer und dunkle Blöcke erhalten.
+        // NAVY-UMBAU (Tim, 17.08.2026): derselbe Aufbau wie der Hell-Stand,
+        // nur der Grund kippt von Weiss auf Navy. Die Inhaltsboxen tragen
+        // jetzt VOLLES Cyan (#02F0D1) mit Navy-Schrift — Tims Entscheid.
         bg: {
-          base: "#FFFFFF",
-          elevated: "#F7F9FC",
+          base: "#0C0B1A",
+          elevated: "#14132A",
         },
         surface: {
-          card: "#F1F3F7",
-          hover: "#E9EDF3",
+          // card = Inhaltsbox (Release-Radar, Event, "Warum das wichtig
+          // ist", Newsletter ...) — volles Cyan, Schrift darin Navy.
+          card: "#02F0D1",
+          hover: "#30F3D9",
+          // panel = Bedienflaeche (Suche, Kommentare, Dialoge, Admin).
+          // Die bleiben dunkel: Neon-Cyan unter einem Eingabefeld waere
+          // weder lesbar noch gemeint.
+          panel: "#14132A",
+          panelhover: "#1B1A36",
         },
         border: {
-          subtle: "#E6E9F0",
-          default: "#D4D9E4",
-          strong: "#B8BFCF",
+          subtle: "#242144",
+          default: "#302D58",
+          strong: "#423E75",
         },
         accent: {
           DEFAULT: "#02F0D1",
           hover: "#30F3D9",
           active: "#02C5AB",
-          wash: "#DFF9F2",
+          wash: "#12303A",
         },
         text: {
-          primary: "#0C0B1A",
-          secondary: "#5B5F72",
-          tertiary: "#767B93",
-          disabled: "#ADB2C4",
+          primary: "#F1F0F2",
+          secondary: "#B7BACB",
+          tertiary: "#8A8FA3",
+          disabled: "#666A80",
+          // Schrift auf Cyan-Flaechen.
+          oncyan: "#0C0B1A",
         },
         success: "#2ED47A",
         warning: "#F5B942",
@@ -58,8 +66,8 @@ const config: Config = {
           raised: "#171632",
           border: "#262347",
           text: "#F1F0F2",
-          muted: "#A9A9A9",
-          dim: "#7D7D7D",
+          muted: "#C7CAD8",
+          dim: "#8A8FA3",
         },
       },
       fontFamily: {
@@ -79,6 +87,8 @@ const config: Config = {
           "BlinkMacSystemFont",
           "sans-serif",
         ],
+        // Nur fuer den Willkommensgruss ueber dem Aufmacher.
+        marker: ["var(--font-marker)", "Permanent Marker", "cursive"],
       },
       maxWidth: {
         article: "44rem",

@@ -381,7 +381,7 @@ function KommentarFormular({
         rows={parentId ? 2 : 3}
         maxLength={4000}
         placeholder={parentId ? "Deine Antwort …" : "Was denkst du dazu?"}
-        className="w-full rounded-2xl border border-border-default bg-surface-card p-4 text-[15px] text-text-primary placeholder:text-text-disabled focus:border-accent/60 focus:outline-none"
+        className="w-full rounded-2xl border border-border-default bg-surface-panel p-4 text-[15px] text-text-primary placeholder:text-text-disabled focus:border-accent/60 focus:outline-none"
       />
       {fehler && <p className="mt-1 text-xs text-error">{fehler}</p>}
       <div className="mt-2 flex justify-end">

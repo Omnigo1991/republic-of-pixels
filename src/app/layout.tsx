@@ -1,7 +1,7 @@
 import { PixelStaub } from "@/components/PixelStaub";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { Inter } from "next/font/google";
+import { Inter, Permanent_Marker } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import { Footer } from "@/components/Footer";
@@ -11,6 +11,16 @@ import { TeilenKnopf } from "@/components/TeilenKnopf";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: "swap",
+});
+
+// Handschrift fuer den Willkommensgruss ueber dem Aufmacher (Tim,
+// 17.08.2026 — "Marker, kraeftig"). Bewusst NUR dort: eine zweite
+// Schriftfamilie ist eine Ausnahme, kein neues Gestaltungsmittel.
+const marker = Permanent_Marker({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-marker",
   display: "swap",
 });
 
@@ -102,7 +112,7 @@ const organisationJsonLd = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="de" className={inter.variable}>
+    <html lang="de" className={`${inter.variable} ${marker.variable}`}>
       <body className="relative min-h-screen bg-bg-base font-sans antialiased">
         <script
           type="application/ld+json"

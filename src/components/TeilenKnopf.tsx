@@ -107,7 +107,7 @@ export function TeilenKnopf() {
           >
             <div className="mx-auto mb-4 h-1 w-9 rounded-full bg-border-default sm:hidden" />
             <div className="mb-4 flex items-center gap-3">
-              <span className="flex h-9 w-9 items-center justify-center rounded-lg border border-border-subtle bg-surface-card">
+              <span className="flex h-9 w-9 items-center justify-center rounded-lg border border-border-subtle bg-surface-panel">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src="/brand/r-mark.png" alt="" className="h-[18px]" />
               </span>
@@ -123,7 +123,7 @@ export function TeilenKnopf() {
                 <button
                   key={k.key}
                   onClick={() => kanalOeffnen(k)}
-                  className="rounded-2xl border border-border-subtle bg-surface-card px-1.5 pb-2.5 pt-3 text-center transition-colors hover:border-accent/40 hover:bg-surface-hover"
+                  className="rounded-2xl border border-border-subtle bg-surface-panel px-1.5 pb-2.5 pt-3 text-center transition-colors hover:border-accent/40 hover:bg-surface-panelhover"
                 >
                   <span className="flex h-7 items-center justify-center text-accent">
                     <KanalIcon kanal={k.key} />

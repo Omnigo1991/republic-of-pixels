@@ -21,7 +21,7 @@ export function CategoryChipBar({ active }: { active?: string }) {
               className={`inline-flex shrink-0 items-center justify-center rounded-full border px-4 py-1.5 text-[13px] font-medium leading-none whitespace-nowrap transition-colors ${
                 isActive
                   ? "border-transparent bg-accent text-bg-base"
-                  : "border-border-subtle bg-surface-card text-text-secondary"
+                  : "border-border-subtle bg-surface-panel text-text-secondary"
               }`}
             >
               {item.label}

@@ -51,7 +51,7 @@ export function NicknameWahl({ onFertig }: { onFertig: () => void }) {
           onChange={(e) => setName(e.target.value)}
           maxLength={24}
           placeholder="z. B. pixel_pilot"
-          className="flex-1 rounded-full border border-border-default bg-surface-card px-4 py-2 text-sm text-text-primary placeholder:text-text-disabled focus:border-accent/60 focus:outline-none"
+          className="flex-1 rounded-full border border-border-default bg-surface-panel px-4 py-2 text-sm text-text-primary placeholder:text-text-disabled focus:border-accent/60 focus:outline-none"
         />
         <button
           onClick={speichern}
@@ -126,13 +126,13 @@ export function AnmeldeDialog({ onSchliessen }: { onSchliessen: () => void }) {
         <div className="flex flex-col gap-2.5">
           <button
             onClick={() => oauth("google")}
-            className="flex items-center justify-center gap-2.5 rounded-full border border-border-default py-2.5 text-sm font-medium text-text-primary hover:bg-surface-hover transition-colors"
+            className="flex items-center justify-center gap-2.5 rounded-full border border-border-default py-2.5 text-sm font-medium text-text-primary hover:bg-surface-panelhover transition-colors"
           >
             <GoogleIcon /> Weiter mit Google
           </button>
           <button
             onClick={() => oauth("discord")}
-            className="flex items-center justify-center gap-2.5 rounded-full border border-border-default py-2.5 text-sm font-medium text-text-primary hover:bg-surface-hover transition-colors"
+            className="flex items-center justify-center gap-2.5 rounded-full border border-border-default py-2.5 text-sm font-medium text-text-primary hover:bg-surface-panelhover transition-colors"
           >
             <DiscordIcon /> Weiter mit Discord
           </button>
@@ -149,14 +149,14 @@ export function AnmeldeDialog({ onSchliessen }: { onSchliessen: () => void }) {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="E-Mail-Adresse"
-            className="rounded-full border border-border-default bg-surface-card px-4 py-2.5 text-sm text-text-primary placeholder:text-text-disabled focus:border-accent/60 focus:outline-none"
+            className="rounded-full border border-border-default bg-surface-panel px-4 py-2.5 text-sm text-text-primary placeholder:text-text-disabled focus:border-accent/60 focus:outline-none"
           />
           <input
             type="password"
             value={passwort}
             onChange={(e) => setPasswort(e.target.value)}
             placeholder={modus === "registrieren" ? "Passwort wählen (min. 8 Zeichen)" : "Passwort"}
-            className="rounded-full border border-border-default bg-surface-card px-4 py-2.5 text-sm text-text-primary placeholder:text-text-disabled focus:border-accent/60 focus:outline-none"
+            className="rounded-full border border-border-default bg-surface-panel px-4 py-2.5 text-sm text-text-primary placeholder:text-text-disabled focus:border-accent/60 focus:outline-none"
           />
           <button
             onClick={mitEmail}

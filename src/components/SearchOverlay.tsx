@@ -49,7 +49,7 @@ export function SearchPanel({
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Suche nach Spielen, Plattformen, Themen…"
-          className="w-full rounded-2xl border border-border-default bg-surface-card py-4 pl-12 pr-4 text-lg text-text-primary placeholder:text-text-tertiary focus:outline-none focus:border-accent/60 focus:ring-2 focus:ring-accent/20"
+          className="w-full rounded-2xl border border-border-default bg-surface-panel py-4 pl-12 pr-4 text-lg text-text-primary placeholder:text-text-tertiary focus:outline-none focus:border-accent/60 focus:ring-2 focus:ring-accent/20"
         />
       </div>
 
@@ -61,7 +61,7 @@ export function SearchPanel({
               <button
                 key={tag}
                 onClick={() => setQuery(tag)}
-                className="rounded-full border border-border-default bg-surface-card px-3.5 py-1.5 text-sm text-text-secondary transition-colors hover:border-accent/50 hover:text-text-primary"
+                className="rounded-full border border-border-default bg-surface-panel px-3.5 py-1.5 text-sm text-text-secondary transition-colors hover:border-accent/50 hover:text-text-primary"
               >
                 {tag}
               </button>
@@ -177,7 +177,7 @@ export function SearchTrigger() {
                 key={a.slug}
                 href={`/artikel/${a.slug}`}
                 onClick={() => { setOpen(false); setQuery(""); }}
-                className="block border-b border-border-subtle px-4 py-3 last:border-b-0 hover:bg-surface-card"
+                className="block border-b border-border-subtle px-4 py-3 last:border-b-0 hover:bg-surface-panel"
               >
                 <p className="text-[11px] font-extrabold tracking-[0.06em] text-accent">
                   {CATEGORY_LABELS[a.category].toUpperCase()}

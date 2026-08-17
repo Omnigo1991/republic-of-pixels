@@ -21,13 +21,14 @@ export function TldrBox({ items }: { items: string[] }) {
 
 export function WhyItMattersBox({ text }: { text: string }) {
   return (
-    // Navy statt Cyan-Wash (Tim, 16.08.2026): EINE Kachelfarbe auf der
-    // ganzen Seite — wie Zahlen-Kacheln, Event-Buehne und Newsletter.
-    <div className="my-8 rounded-2xl bg-navy p-6">
-      <p className="mb-2 text-[13px] font-semibold tracking-wide text-accent">
+    // Cyan statt Navy (Tim, 17.08.2026): EINE Kachelfarbe auf der ganzen
+    // Seite — wie Event-Buehne, Newsletter und Radar-Karten. Auf
+    // Navy-Grund ginge eine Navy-Box unter.
+    <div className="my-8 rounded-2xl bg-accent p-6">
+      <p className="mb-2 text-[13px] font-semibold tracking-wide text-navy/70">
         WARUM DAS WICHTIG IST
       </p>
-      <p className="text-[15px] leading-relaxed text-[#E9EAF0]">{text}</p>
+      <p className="text-[15px] leading-relaxed text-navy">{text}</p>
     </div>
   );
 }

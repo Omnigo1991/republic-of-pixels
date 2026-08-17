@@ -110,42 +110,45 @@ export function TickerBand({ articles }: { articles: Article[] }) {
   );
 }
 
-// Navy-Block mit Rauten-Raster. Der Versand existiert noch nicht — das
-// Feld ist bewusst stillgelegt und sagt das ehrlich, statt Adressen ins
-// Leere zu sammeln.
+// Cyan-Block (Navy-Umbau, Tim 17.08.2026 — vorher Navy, das ginge auf
+// Navy-Grund unter). Der Versand existiert noch nicht — das Feld ist
+// bewusst stillgelegt und sagt das ehrlich, statt Adressen ins Leere zu
+// sammeln.
 export function NewsletterBlock({ artikelBilder }: { artikelBilder: Article[] }) {
   return (
-    <div className="overflow-hidden rounded-2xl bg-navy">
+    <div className="overflow-hidden rounded-2xl bg-accent">
       <div className="grid items-center gap-10 px-5 py-10 sm:px-10 sm:py-12 lg:grid-cols-[1fr_400px] lg:px-14 lg:py-14">
         <div>
-          <h2 className="text-[28px] font-black leading-[1.15] text-white sm:text-[40px]">
-            <span className="text-accent">KEINE NEBENQUESTS.</span>
+          <h2 className="text-[28px] font-black leading-[1.15] text-navy/70 sm:text-[40px]">
+            {/* Hervorhebung durch volles Navy statt Weiss: Weiss auf Cyan
+                misst 1.46:1 und ist damit nicht lesbar. */}
+            <span className="text-navy">KEINE NEBENQUESTS.</span>
             <br />
             NUR DIE BESTEN NEWS IN DEIN POSTFACH.
           </h2>
-          <p className="mb-6 mt-4 text-[15.5px] text-[#C7CAD8] sm:text-[17px]">
+          <p className="mb-6 mt-4 text-[15.5px] text-navy/75 sm:text-[17px]">
             Bleib auf dem Laufenden — Gaming-News, eingeordnet statt nur gemeldet.
           </p>
           <div className="flex max-w-[520px] flex-col gap-3 sm:flex-row">
             <input
               placeholder="Newsletter startet bald"
               disabled
-              className="min-w-0 flex-1 rounded-full border-2 border-[#3A3757] bg-[#14132A] px-5 py-3.5 text-[15px] text-white placeholder:text-[#8A8FA3]"
+              className="min-w-0 flex-1 rounded-full border-2 border-navy/25 bg-white/70 px-5 py-3.5 text-[15px] text-navy placeholder:text-navy/50"
             />
             <button
               disabled
-              className="cursor-not-allowed rounded-full bg-accent px-7 py-3.5 text-[15px] font-extrabold text-navy opacity-60"
+              className="cursor-not-allowed rounded-full bg-navy px-7 py-3.5 text-[15px] font-extrabold text-accent opacity-70"
             >
               Anmelden
             </button>
           </div>
-          <p className="mt-3 text-xs text-[#8A8FA3]">
+          <p className="mt-3 text-xs text-navy/65">
             Wir bauen gerade den Versand — bis dahin:{" "}
             <a
               href="https://www.instagram.com/republicofpixels"
               target="_blank"
               rel="noreferrer noopener"
-              className="text-accent underline decoration-accent/40 underline-offset-4"
+              className="font-semibold text-navy underline decoration-navy/40 underline-offset-4"
             >
               @republicofpixels auf Instagram
             </a>

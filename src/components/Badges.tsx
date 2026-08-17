@@ -66,7 +66,7 @@ export function ReviewLabelBadge({ label, size = "md" }: { label: ReviewLabel; s
 
 export function Tag({ children }: { children: ReactNode }) {
   return (
-    <span className="inline-flex items-center rounded-full border border-border-subtle bg-surface-card px-3 py-1 text-xs text-text-tertiary">
+    <span className="inline-flex items-center rounded-full border border-border-subtle bg-surface-panel px-3 py-1 text-xs text-text-tertiary">
       {children}
     </span>
   );

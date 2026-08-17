@@ -46,7 +46,7 @@ export function ExternalEmbed({ platform, url }: { platform: EmbedPlatform; url:
 
   if (!geladen) {
     return (
-      <div className="my-8 rounded-2xl border border-border-default bg-surface-card p-6 text-center not-prose">
+      <div className="my-8 rounded-2xl border border-border-default bg-surface-panel p-6 text-center not-prose">
         <p className="mb-2 text-[13px] font-semibold tracking-wide text-text-tertiary">
           EXTERNER INHALT VON {meta.label.toUpperCase()}
         </p>

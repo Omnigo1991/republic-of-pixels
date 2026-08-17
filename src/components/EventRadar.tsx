@@ -2,6 +2,7 @@ import Link from "next/link";
 import { SectionDivider } from "./SectionDivider";
 import eventsData from "@/content/events.json";
 import { getThema } from "@/lib/themen";
+import { SektionsBanner } from "@/components/SektionsBanner";
 
 type EventStatus = "fixiert" | "erwartet" | "geruecht";
 
@@ -72,41 +73,43 @@ export function EventRadar() {
   return (
     <section aria-labelledby="events-heading" className="py-10">
       <div className="mb-3 flex items-baseline justify-between">
-        <h2 id="events-heading" className="text-[24px] font-black tracking-tight text-text-primary sm:text-[28px]">
-          Event-Radar
-        </h2>
+        <SektionsBanner id="events-heading" titel="Event-" cyan="Radar" className="mb-0" />
       </div>
       <SectionDivider />
       {/* Grosse Event-Buehne links, Karten rechts (Tim, 15.08.2026 —
           das Layout aus dem abgenommenen Entwurf): Das naechste Event
-          bekommt eine stehende Navy-Flaeche mit grossem Cyan-Countdown. */}
+          bekommt eine stehende Cyan-Flaeche mit grossem Navy-Countdown
+          (Navy-Umbau 17.08.2026 — vorher umgekehrt). */}
       <div className={hero ? "grid gap-4 lg:grid-cols-[400px_1fr]" : ""}>
       {hero && (
-        <div className="relative flex flex-col overflow-hidden rounded-2xl bg-navy p-6 sm:p-7">
-          <span className={`${PILL_REZEPT} self-start text-accent border-accent/40 bg-accent/10`}>
+        <div className="relative flex flex-col overflow-hidden rounded-2xl bg-accent p-6 sm:p-7">
+          {/* Kein bg-navy/10: ein 10-%-Schleier ist auf Cyan keine dunkle
+              Flaeche, wird von der Umkehr-Regel aber als solche behandelt
+              und bekaeme weisse Schrift (gemessen 1.58:1). Reine Kontur. */}
+          <span className={`${PILL_REZEPT} self-start border-[#0C0B1A]/40 text-navy`}>
             NÄCHSTES EVENT
           </span>
           {countdown !== null && (
             <>
-              <div className="mt-5 text-[68px] font-black leading-none tracking-tight text-accent sm:text-[76px]">
+              <div className="mt-5 text-[68px] font-black leading-none tracking-tight text-navy sm:text-[76px]">
                 {countdown === 0 ? "Heute" : countdown}
               </div>
-              <div className="mt-2 text-[12px] font-extrabold uppercase tracking-[0.14em] text-[#C7CAD8]">
+              <div className="mt-2 text-[12px] font-extrabold uppercase tracking-[0.14em] text-navy/70">
                 {countdown === 0 ? "Es geht los" : countdown === 1 ? "Tag bis zum Start" : "Tage bis zum Start"}
               </div>
             </>
           )}
-          <p className="mt-6 text-[28px] font-black tracking-tight text-white">
+          <p className="mt-6 text-[28px] font-black tracking-tight text-navy">
             {hero.name}
           </p>
-          <p className="mt-2 max-w-[320px] text-sm leading-relaxed text-[#C7CAD8]">
-            <span className="font-semibold text-white">{hero.dateLabel}</span> ·{" "}
+          <p className="mt-2 max-w-[320px] text-sm leading-relaxed text-navy/75">
+            <span className="font-semibold text-navy">{hero.dateLabel}</span> ·{" "}
             {hero.beschreibung}
           </p>
           {heroHub && (
             <Link
               href={`/thema/${heroHub.slug}`}
-              className="mt-3 inline-block text-sm font-semibold text-accent hover:underline"
+              className="mt-3 inline-block text-sm font-semibold text-navy underline decoration-navy/40 underline-offset-4 hover:decoration-navy"
             >
               Unsere {hero.name}-Berichterstattung →
             </Link>

@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { getTopStory, getChronological, getByCategory } from "@/lib/articles";
 import { TopStory } from "@/components/TopStory";
 import { NewsListe } from "@/components/NewsListe";
-import { NeuesteRail, NotchKarte, TickerBand, NewsletterBlock, SektionsKopf, MehrPille } from "@/components/StartseiteNeu";
+import { NeuesteRail, NotchKarte, TickerBand, NewsletterBlock, MehrPille } from "@/components/StartseiteNeu";
+import { SektionsBanner } from "@/components/SektionsBanner";
 import { ReleaseRadar } from "@/components/ReleaseRadar";
 import { DealRadar } from "@/components/DealRadar";
 import { ChartsRadar } from "@/components/ChartsRadar";
@@ -44,7 +45,17 @@ export default async function HomePage() {
     <>
       <Masthead variant="brand" />
       <section>
-        <div className="mx-auto max-w-content px-4 pt-8 sm:px-6 sm:pt-10 lg:px-8">
+        {/* Willkommensgruss in Handschrift ueber dem Aufmacher (Tim,
+            17.08.2026). Die Abstaende Kopf→Gruss und Gruss→Aufmacher sind
+            gleich gross — der Wert steht deshalb nur einmal, als
+            padding-top des Kastens und margin-bottom des Grusses, und ist
+            an der gerenderten Schriftflaeche nachgemessen (nicht an der
+            Zeilenkiste: die Handschrift traegt Ober- und Unterlaengen,
+            die optisch taeuschen). */}
+        <div className="mx-auto max-w-content px-4 pt-[42px] sm:px-6 sm:pt-[52px] lg:px-8">
+          <p className="mb-[41px] font-marker text-[30px] leading-[1] text-accent sm:mb-[51px] sm:text-[40px]">
+            Willkommen in der Republic
+          </p>
           <div className="grid gap-8 lg:grid-cols-[1fr_372px] lg:gap-11">
             <div>
               <TopStory article={topStory} />
@@ -66,7 +77,7 @@ export default async function HomePage() {
       <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
         <section id="news" className="scroll-mt-16 lg:scroll-mt-[88px] pt-14 sm:pt-16">
           <Reveal>
-            <SektionsKopf titel="Alle News" />
+            <SektionsBanner titel="News aus der" cyan="Republic" />
             <SectionDivider />
             <NewsListe articles={chronological} />
           </Reveal>
@@ -80,7 +91,7 @@ export default async function HomePage() {
 
         <section id="guides" className="scroll-mt-16 lg:scroll-mt-[88px] pt-14 sm:pt-16">
           <Reveal>
-            <SektionsKopf titel="Die grossen Republic-Guides" />
+            <SektionsBanner titel="Die grossen Republic-" cyan="Guides" />
             <div className="grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-5">
               {guideReihe.map((a) => (
                 <NotchKarte key={a.slug} article={a} bildHoehe="h-[250px]" />

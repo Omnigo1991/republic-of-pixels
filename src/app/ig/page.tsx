@@ -102,7 +102,7 @@ export default function InstagramLandingPage() {
           <Link
             key={a.slug}
             href={`/artikel/${a.slug}`}
-            className="flex items-center gap-3 rounded-2xl border border-border-subtle bg-surface-card p-2.5 transition-colors hover:bg-surface-hover"
+            className="flex items-center gap-3 rounded-2xl border border-border-subtle bg-surface-panel p-2.5 transition-colors hover:bg-surface-panelhover"
           >
             {a.image?.src && (
               <Image

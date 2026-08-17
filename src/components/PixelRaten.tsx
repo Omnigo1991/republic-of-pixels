@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { SectionDivider } from "./SectionDivider";
 import { getSupabase } from "@/lib/supabase";
 import raetsel from "@/content/pixelraten.json";
+import { SektionsBanner } from "@/components/SektionsBanner";
 
 // Pixel-Raten — das tägliche Rätsel der Republic (Tim-Freigabe 09.08.2026):
 // Ein verpixeltes Spiel-Artwork, fünf Versuche, mit jedem Fehlversuch wird
@@ -186,9 +187,7 @@ export function PixelRaten() {
   return (
     <section aria-labelledby="pixelraten-heading" className="py-10">
       <div className="mb-3 flex items-baseline justify-between">
-        <h2 id="pixelraten-heading" className="text-[24px] font-black tracking-tight text-text-primary sm:text-[28px]">
-          Pixel-Raten
-        </h2>
+        <SektionsBanner id="pixelraten-heading" titel="Pixel-" cyan="Raten" className="mb-0" />
         <span className="text-xs text-text-tertiary">
           Das tägliche Rätsel · jede Nacht neu
         </span>
