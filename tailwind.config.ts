@@ -91,8 +91,6 @@ const config: Config = {
           "BlinkMacSystemFont",
           "sans-serif",
         ],
-        // Nur fuer den Willkommensgruss ueber dem Aufmacher.
-        marker: ["var(--font-marker)", "Permanent Marker", "cursive"],
       },
       maxWidth: {
         article: "44rem",

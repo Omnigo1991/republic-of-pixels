@@ -45,17 +45,13 @@ export default async function HomePage() {
     <>
       <Masthead variant="brand" />
       <section>
-        {/* Willkommensgruss in Handschrift ueber dem Aufmacher (Tim,
-            17.08.2026). Die Abstaende Kopf→Gruss und Gruss→Aufmacher sind
-            gleich gross — der Wert steht deshalb nur einmal, als
-            padding-top des Kastens und margin-bottom des Grusses, und ist
-            an der gerenderten Schriftflaeche nachgemessen (nicht an der
-            Zeilenkiste: die Handschrift traegt Ober- und Unterlaengen,
-            die optisch taeuschen). */}
+        {/* Willkommensgruss ueber dem Aufmacher (Tim, 18.08.2026): jetzt
+            in derselben Sektionsbeschriftung wie alle anderen Sektionen,
+            nicht mehr in Handschrift. Die Abstaende Kopf→Gruss und
+            Gruss→Aufmacher bleiben gleich gross und sind an der
+            gerenderten Schriftflaeche nachgemessen. */}
         <div className="mx-auto max-w-content px-4 pt-[42px] sm:px-6 sm:pt-[52px] lg:px-8">
-          <p className="mb-[46px] font-marker text-[38px] leading-[1] text-text-primary sm:mb-[58px] sm:text-[56px]">
-            Willkommen in der <span className="text-accent">Republic</span>
-          </p>
+          <SektionsBanner titel="Willkommen in der" cyan="Republic" className="mb-[41px] sm:mb-[52px]" />
           <div className="grid gap-8 lg:grid-cols-[1fr_372px] lg:gap-11">
             <div>
               <TopStory article={topStory} />
