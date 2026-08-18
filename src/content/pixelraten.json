@@ -1,19 +1,20 @@
 {
-  "datum": "2026-08-17",
-  "nummer": 9,
-  "loesung": "Hades",
+  "datum": "2026-08-18",
+  "nummer": 10,
+  "loesung": "StarCraft II",
   "akzeptiert": [
-    "hades"
+    "starcraftii",
+    "starcraft2"
   ],
   "hinweise": [
-    "Erschienen 2020 · Roguelike",
-    "Griechische Unterwelt"
+    "Erschienen 2010 · Echtzeit-Strategie",
+    "Blizzard"
   ],
   "bilder": [
-    "/images/pixelraten/2026-08-17-s1.jpg",
-    "/images/pixelraten/2026-08-17-s2.jpg",
-    "/images/pixelraten/2026-08-17-s3.jpg",
-    "/images/pixelraten/2026-08-17-s4.jpg",
-    "/images/pixelraten/2026-08-17-s5.jpg"
+    "/images/pixelraten/2026-08-18-s1.jpg",
+    "/images/pixelraten/2026-08-18-s2.jpg",
+    "/images/pixelraten/2026-08-18-s3.jpg",
+    "/images/pixelraten/2026-08-18-s4.jpg",
+    "/images/pixelraten/2026-08-18-s5.jpg"
   ]
 }
