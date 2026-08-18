@@ -42,6 +42,8 @@ export function ChartsRadar() {
         <h2 id="charts-heading" className="text-[20px] font-semibold tracking-tight text-text-primary">
           Charts-Radar
         </h2>
+        {/* Leiser Hinweis rechts — woertlich von der Live-Seite. */}
+        <span className="text-xs text-text-tertiary">Meistgespielt auf Steam · KW 33</span>
       </div>
       <SectionDivider />
       <div className="grid gap-4 sm:grid-cols-3">

@@ -33,6 +33,8 @@ export function ReleaseRadar() {
         <h2 id="radar-heading" className="text-[20px] font-semibold tracking-tight text-text-primary">
           Release-Radar
         </h2>
+        {/* Leiser Hinweis rechts — woertlich von der Live-Seite. */}
+        <span className="text-xs text-text-tertiary">Die nächsten Termine</span>
       </div>
       <SectionDivider />
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

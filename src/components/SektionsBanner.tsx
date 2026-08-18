@@ -47,33 +47,41 @@ export function SektionsBanner({
   // werden dadurch schmaler statt groesser.
   const zielBreite = Math.round(breite * 0.43);
 
+  const schriftMerkmale = {
+    fontSize: 100,
+    fontWeight: 900,
+    letterSpacing: -2,
+    fontFamily: "var(--font-inter), Inter, system-ui, sans-serif",
+  } as const;
+
   return (
     <div className={`mb-5 ${className}`}>
+      {/* Einzeilig ab 640 px */}
       <svg
         viewBox={`0 0 ${breite} 100`}
-        width={breite}
-        height={100}
         role="heading"
         aria-level={2}
         aria-label={`${titel} ${cyan}`}
         id={id}
         style={{ width: `min(100%, ${zielBreite}px)` }}
-        className="block h-auto overflow-visible"
+        className="hidden h-auto overflow-visible sm:block"
       >
-        <text
-          x="0"
-          y="78"
-          textLength={breite}
-          lengthAdjust="spacingAndGlyphs"
-          fontSize="100"
-          fontWeight="900"
-          letterSpacing="-2"
-          fontFamily="var(--font-inter), Inter, system-ui, sans-serif"
-        >
+        <text x="0" y="78" textLength={breite} lengthAdjust="spacingAndGlyphs" {...schriftMerkmale}>
           <tspan fill="currentColor">{links}</tspan>
           <tspan fill="#02F0D1">{trenner + rechts}</tspan>
         </text>
       </svg>
+
+      {/* Auf dem Handy KEIN SVG: Ein gedehnter Schriftzug auf 358 px
+          Breite faellt je nach Titellaenge auf 23 bis 45 px Hoehe — die
+          Groesse haengt dann an der Zeichenzahl statt an der Gestaltung.
+          Echter Text bricht stattdessen um und behaelt ueberall
+          dieselbe Groesse. */}
+      <h2 className="text-[30px] font-black uppercase leading-[0.95] tracking-[-0.03em] text-text-primary sm:hidden">
+        {links}
+        {trenner}
+        <span className="text-accent">{rechts}</span>
+      </h2>
     </div>
   );
 }

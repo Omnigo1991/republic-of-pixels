@@ -273,3 +273,24 @@ h3 {
 .treppe-br-klein {
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15px), calc(100% - 5px) calc(100% - 15px), calc(100% - 5px) calc(100% - 10px), calc(100% - 10px) calc(100% - 10px), calc(100% - 10px) calc(100% - 5px), calc(100% - 15px) calc(100% - 5px), calc(100% - 15px) 100%, 0 100%);
 }
+
+/* ---------- Handy-Feinschliff (Tim, 18.08.2026) ---------- */
+
+@media (max-width: 640px) {
+  /* Bedienelemente auf mindestens 44 px. Gemessen lagen sechs Stueck
+     zwischen 38 und 42 px — knapp unter dem Mass, ab dem ein Daumen
+     zuverlaessig trifft. Betrifft Suche, Menue, "Mehr anzeigen",
+     Newsletter-Feld, "Raten" und den Instagram-Knopf. */
+  button,
+  input:not([type="checkbox"]):not([type="radio"]),
+  select,
+  a[class*="rounded-full"] {
+    min-height: 44px;
+  }
+
+  /* 11 px ist auf dem Handy zu klein fuer Kicker, Statuszeilen und
+     Restlaufzeiten (gemessen: 12 Stellen). Eine Stufe hoeher. */
+  .text-\[11px\] {
+    font-size: 12px;
+  }
+}

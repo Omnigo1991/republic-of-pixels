@@ -75,6 +75,8 @@ export function EventRadar() {
         <h2 id="events-heading" className="text-[20px] font-semibold tracking-tight text-text-primary">
           Event-Radar
         </h2>
+        {/* Leiser Hinweis rechts — woertlich von der Live-Seite. */}
+        <span className="text-xs text-text-tertiary">Die nächsten grossen Momente</span>
       </div>
       <SectionDivider />
       {/* Grosse Event-Buehne links, Karten rechts (Tim, 15.08.2026 —
