@@ -7,10 +7,10 @@ html {
 }
 
 body {
-  /* Navy-Umbau (17.08.2026): Navy als Grund, Weiss als Tinte. Aufbau und
-     Abstaende bleiben exakt wie im Hell-Stand. */
+  /* Cyberpunk-Umbau (Tim, 18.08.2026): Navy bleibt der Grund — eure
+     Markenfarbe, durchgehend und ohne Muster. */
   background-color: #0C0B1A;
-  color: #F1F0F2;
+  color: #EAF6FF;
 }
 
 h1,
@@ -143,135 +143,180 @@ h3 {
   }
 }
 
-/* ---------- Navy-Umbau: Cyan-Schrift und Pixel-Treppe ---------- */
+/* ================================================================
+   CYBERPUNK (Tim, 18.08.2026) — loest den Navy-Stand ab.
+   Drei Bausteine: Grund und Textur, Schrift, Randform K11 und
+   Kartenfassung C1. Aufbau, Raster und Abstaende der Seite bleiben.
+   ================================================================ */
 
-/* Auf Navy-Grund traegt Cyan-Schrift wieder den vollen Markenwert —
-   die Absenkung auf #00B89F war nur fuer weissen Grund noetig. */
-.text-accent { color: #02F0D1; }
-
-/* Schriftumkehr NUR auf vollem Cyan (bg-accent): dort ist die Tinte Navy.
-   Die getoenten Karten (bg-surface-card) sind dunkel und behalten helle
-   Schrift — deshalb stehen sie hier nicht mehr drin.
-   Ohne diese Regeln stuende weisse Schrift auf Cyan (Kontrast 1.6:1)
-   und Cyan-Schrift auf Cyan (unsichtbar). */
-.bg-accent {
-  color: #0C0B1A;
-}
-.bg-accent .text-text-primary { color: #0C0B1A; }
-.bg-accent .text-text-secondary { color: rgba(12, 11, 26, 0.74); }
-.bg-accent .text-text-tertiary { color: rgba(12, 11, 26, 0.6); }
-.bg-accent .text-accent { color: #0C0B1A; }
-.bg-accent .text-navy-text { color: #0C0B1A; }
-.bg-accent .text-navy-muted { color: rgba(12, 11, 26, 0.74); }
-/* Linien und Randfarben innerhalb einer Cyan-Flaeche */
-.bg-accent .border-border-subtle { border-color: rgba(12, 11, 26, 0.2); }
-.bg-accent .border-border-default { border-color: rgba(12, 11, 26, 0.28); }
-/* Cyan-Konturen (Pillen wie FIXIERT) waeren auf Cyan unsichtbar. */
-.bg-accent [class*="border-accent"] { border-color: rgba(12, 11, 26, 0.4); }
-/* Cyan-Schleier als Pillen-Fuellung ebenso — auf Cyan reine Kontur. */
-.bg-accent [class*="bg-accent/"] { background-color: transparent; }
-
-/* Signalfarben sind fuer dunklen Grund gemischt und stehen auf Cyan zu
-   schwach (gemessen: Rot 2.35:1, Bernstein 1.15:1). Auf Cyan-Flaechen
-   daher abgedunkelt. */
-.bg-accent .text-error { color: #8A1810; }
-.bg-accent .text-success { color: #0A5730; }
-.bg-accent .text-warning { color: #6B4900; }
-.bg-accent .text-text-disabled { color: rgba(12, 11, 26, 0.66); }
-
-/* WICHTIG: In einer Cyan-Flaeche darf wieder eine dunkle Flaeche liegen
-   (Datumskaestchen, Knopf, Rangzahl). Dort gilt die Umkehr NICHT mehr,
-   sonst steht Navy auf Navy (gemessen 1.02:1). */
-.bg-accent :is([class*="bg-navy"], [class*="bg-bg-elevated"], [class*="bg-surface-panel"]) { color: #F1F0F2; }
-.bg-accent :is([class*="bg-navy"], [class*="bg-bg-elevated"], [class*="bg-surface-panel"]) .text-accent,
-.bg-accent :is([class*="bg-navy"], [class*="bg-bg-elevated"], [class*="bg-surface-panel"]).text-accent { color: #02F0D1; }
-.bg-accent :is([class*="bg-navy"], [class*="bg-bg-elevated"]) .text-text-primary { color: #F1F0F2; }
-.bg-accent :is([class*="bg-navy"], [class*="bg-bg-elevated"]) .text-text-secondary { color: #B7BACB; }
-.bg-accent :is([class*="bg-navy"], [class*="bg-bg-elevated"]) .text-error { color: #F1544B; }
-.bg-accent :is([class*="bg-navy"], [class*="bg-bg-elevated"]) .text-success { color: #2ED47A; }
-
-/* Pixel-Treppe: unsere Ecke (drei Stufen), abgeleitet aus dem R-Logo.
-   Aufbau unveraendert — aussen Flaeche mit Rahmenstaerke als
-   Innenabstand, innen dieselbe Treppe. Nur die Randfarbe ist jetzt
-   wieder Cyan (Tim, 17.08.2026 — der Navy-Rand verschwand auf dem
-   Navy-Grund und die Karten standen ohne Fassung da). */
-.treppe-tl {
-  background: #02F0D1;
-  padding: 7px;
-  clip-path: polygon(0 45px, 15px 45px, 15px 30px, 30px 30px, 30px 15px, 45px 15px, 45px 0, 100% 0, 100% 100%, 0 100%);
-}
-.treppe-tl > .treppe-innen {
-  clip-path: polygon(0 45px, 15px 45px, 15px 30px, 30px 30px, 30px 15px, 45px 15px, 45px 0, 100% 0, 100% 100%, 0 100%);
-}
-.treppe-tr {
-  background: #02F0D1;
-  padding: 7px;
-  clip-path: polygon(0 0, calc(100% - 36px) 0, calc(100% - 36px) 12px, calc(100% - 24px) 12px, calc(100% - 24px) 24px, calc(100% - 12px) 24px, calc(100% - 12px) 36px, 100% 36px, 100% 100%, 0 100%);
-}
-.treppe-tr > .treppe-innen {
-  clip-path: polygon(0 0, calc(100% - 36px) 0, calc(100% - 36px) 12px, calc(100% - 24px) 12px, calc(100% - 24px) 24px, calc(100% - 12px) 24px, calc(100% - 12px) 36px, 100% 36px, 100% 100%, 0 100%);
-}
-.treppe-innen { position: relative; overflow: hidden; background: #0F0E20; }
-/* Nach der Rueckkehr zum Cyan-Rand ueberall braucht es hier nichts mehr;
-   die Klasse bleibt als ausdrueckliche Angabe an den Guide-Karten. */
-.treppe-cyan { background: #02F0D1; }
-/* Auf einer Cyan-Flaeche (Newsletter-Sticker) waere der Cyan-Rand
-   unsichtbar — dort fasst Navy die Bilder ein. */
-.bg-accent .treppe-tl,
-.bg-accent .treppe-tr { background: #0C0B1A; }
-@media (max-width: 640px) {
-  .treppe-tl, .treppe-tl > .treppe-innen {
-    clip-path: polygon(0 27px, 9px 27px, 9px 18px, 18px 18px, 18px 9px, 27px 9px, 27px 0, 100% 0, 100% 100%, 0 100%);
-  }
-  .treppe-tl { padding: 6px; }
-  .treppe-tr, .treppe-tr > .treppe-innen {
-    clip-path: polygon(0 0, calc(100% - 27px) 0, calc(100% - 27px) 9px, calc(100% - 18px) 9px, calc(100% - 18px) 18px, calc(100% - 9px) 18px, calc(100% - 9px) 27px, 100% 27px, 100% 100%, 0 100%);
-  }
-  .treppe-tr { padding: 6px; }
-}
-
-
-
-/* Pixel-Staub: sehr langsame Drift in den Seitenraendern. */
-.staub-pixel {
-  animation-name: staubDrift;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-@keyframes staubDrift {
-  from { transform: translateY(0); }
-  to { transform: translateY(-28px); }
-}
-.staub-raute {
-  transform: rotate(45deg);
-  animation-name: staubDriftRaute;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-@keyframes staubDriftRaute {
-  from { transform: rotate(45deg) translateY(0); }
-  to { transform: rotate(45deg) translateY(-24px); }
+/* ---------- Grund: durchgehend Navy, kein Muster ----------
+   Erst lagen zwei Farbschleier darauf (Aufmacher stand auf anderem
+   Grund), dann ein Netz — beides ist raus (Tim, 18.08.2026). Der
+   Grund ist jetzt ueberall dieselbe Flaeche. */
+/* Bildschirmzeilen (CRT) */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none;
+  background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.26) 0 1px, transparent 1px 3px);
+  mix-blend-mode: multiply;
+  opacity: 0.42;
 }
 @media (prefers-reduced-motion: reduce) {
-  .staub-pixel, .staub-raute { animation: none; }
+  body::after { opacity: 0.25; }
 }
+main, header, footer { position: relative; z-index: 1; }
 
-/* Pixel-Treppe unten RECHTS — fuer Flaechen wie den Newsletter-Block.
-   Keine Rahmenfassung, nur die Kerbe in der Ecke. */
-.treppe-br {
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 36px), calc(100% - 12px) calc(100% - 36px), calc(100% - 12px) calc(100% - 24px), calc(100% - 24px) calc(100% - 24px), calc(100% - 24px) calc(100% - 12px), calc(100% - 36px) calc(100% - 12px), calc(100% - 36px) 100%, 0 100%);
+/* ---------- Schrift: cyberpunk, aber lesbar ----------
+   Die Regel, an der die erste Fassung scheiterte: Versalien und
+   Farbversatz NUR auf Sektionsebene. Artikelueberschriften und
+   Fliesstext bleiben normal gesetzt. */
+h1, h2 {
+  text-transform: uppercase;
+  font-weight: 900;
+  text-shadow: -1px 0 rgba(255, 46, 151, 0.55), 1px 0 rgba(2, 240, 209, 0.55);
 }
+h3, h4, p, li { text-transform: none; text-shadow: none; }
+h3 { font-weight: 800; color: #F2F8FF; }
+/* Maschinenschrift nur fuer Kennungen und Messwerte, nie fuer
+   Schlagzeilen — sonst wird der Aufmacher unlesbar. */
+[class*="tracking-["]:not(h1):not(h2):not(h3),
+[class*="uppercase"]:not(h1):not(h2):not(h3),
+time {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+}
+h1, h2, h3 { font-family: var(--font-inter), Inter, system-ui, sans-serif; }
+.text-accent { color: #02F0D1; text-shadow: 0 0 9px rgba(2, 240, 209, 0.6); }
+
+/* ---------- K11: Kappecke statt Pixel-Treppe ----------
+   Zwei Ecken diagonal abgeschnitten (Tim-Entscheid 18.08.2026).
+   Klassennamen bleiben, damit die Bauteile unveraendert bleiben. */
+:root { --kappe: 26px; }
+.treppe-tl,
+.treppe-tr {
+  background: linear-gradient(150deg, #02F0D1, #B14CFF 60%, #FF2E97);
+  padding: 3px;
+  filter: drop-shadow(0 0 14px rgba(2, 240, 209, 0.32));
+  clip-path: polygon(0 0, calc(100% - var(--kappe)) 0, 100% var(--kappe), 100% 100%,
+    var(--kappe) 100%, 0 calc(100% - var(--kappe)));
+}
+.treppe-tl > .treppe-innen,
+.treppe-tr > .treppe-innen {
+  clip-path: polygon(0 0, calc(100% - (var(--kappe) - 2px)) 0, 100% calc(var(--kappe) - 2px),
+    100% 100%, calc(var(--kappe) - 2px) 100%, 0 calc(100% - (var(--kappe) - 2px)));
+}
+.treppe-innen {
+  position: relative;
+  overflow: hidden;
+  background: #0A0818;
+  display: block;
+}
+/* NUR wo ein Verhaeltnis gesetzt ist. Ein Standardwert hier ist eine
+   Falle: Kacheln mit fester Hoehe (h-[430px]) rechnen daraus eine
+   Breite von 688 px und sprengen den Bildschirm (gemessen 18.08.2026). */
+.treppe-innen[style*="--v"] {
+  aspect-ratio: var(--v);
+}
+.treppe-innen img { filter: saturate(1.22) contrast(1.06); }
 @media (max-width: 640px) {
-  .treppe-br {
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 27px), calc(100% - 9px) calc(100% - 27px), calc(100% - 9px) calc(100% - 18px), calc(100% - 18px) calc(100% - 18px), calc(100% - 18px) calc(100% - 9px), calc(100% - 27px) calc(100% - 9px), calc(100% - 27px) 100%, 0 100%);
-  }
+  :root { --kappe: 18px; }
+  .treppe-tl, .treppe-tr { padding: 2px; }
 }
 
-/* Mini-Treppe fuer kleine Flaechen wie den Teilen-Knopf. */
-.treppe-br-klein {
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15px), calc(100% - 5px) calc(100% - 15px), calc(100% - 5px) calc(100% - 10px), calc(100% - 10px) calc(100% - 10px), calc(100% - 10px) calc(100% - 5px), calc(100% - 15px) calc(100% - 5px), calc(100% - 15px) 100%, 0 100%);
+/* Der Anschnitt frisst die untere linke Ecke — ohne zusaetzlichen
+   Innenabstand wirken Kicker und Schlagzeile abgesaegt. */
+.treppe-innen > div:last-child {
+  padding-left: calc(var(--kappe) + 4px);
+  padding-right: 16px;
+  padding-bottom: 14px;
+}
+.treppe-innen h3, .treppe-innen p, .treppe-innen span {
+  overflow-wrap: anywhere;
+}
+
+/* ---------- C1: die Kartenfassung ----------
+   Gleiche Kappecke wie die Bildkacheln, spuerbar hellere Flaeche,
+   Kante als Verlauf. Vorher war die Karte eine blasse Umrisslinie. */
+.bg-surface-card {
+  position: relative;
+  border: 0 !important;
+  clip-path: polygon(0 0, calc(100% - var(--kappe)) 0, 100% var(--kappe), 100% 100%,
+    var(--kappe) 100%, 0 calc(100% - var(--kappe)));
+}
+.bg-surface-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(150deg, #02F0D1, #B14CFF 58%, #FF2E97);
+  clip-path: polygon(
+    0 0, calc(100% - var(--kappe)) 0, 100% var(--kappe), 100% 100%,
+    var(--kappe) 100%, 0 calc(100% - var(--kappe)), 0 0,
+    2px 2px, 2px calc(100% - var(--kappe) - 1px), calc(var(--kappe) + 1px) calc(100% - 2px),
+    calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(var(--kappe) + 1px),
+    calc(100% - var(--kappe) - 1px) 2px, 2px 2px);
+}
+.bg-surface-panel, .bg-bg-elevated {
+  border: 1px solid rgba(2, 240, 209, 0.28);
+}
+
+/* ---------- Volles Cyan wird Verlauf ---------- */
+.bg-accent {
+  background: linear-gradient(112deg, #FF2E97, #FF6BC0 44%, #02F0D1 122%);
+  box-shadow: 0 0 38px rgba(255, 46, 151, 0.28);
+}
+.bg-accent h2, .bg-accent p, .bg-accent span, .bg-accent div,
+.bg-accent dt, .bg-accent dd, .bg-accent .text-accent {
+  color: #0B0616;
+  text-shadow: none;
+}
+/* Dunkle Flaechen IN der Verlaufsbox behalten helle Schrift
+   (gemessen: sonst 1.05:1). */
+.bg-accent [class*="bg-navy"],
+.bg-accent [class*="bg-navy"] *,
+.bg-accent [class*="bg-navy"] div { color: #02F0D1; }
+
+/* ---------- Linien, Kopf und Fuss ---------- */
+.bg-accent.h-0\.5, [class*="h-0.5"][class*="w-full"] {
+  background: linear-gradient(90deg, #02F0D1, #FF2E97, #E8FF3D);
+  box-shadow: 0 0 10px rgba(2, 240, 209, 0.7);
+  height: 2px;
+}
+header {
+  background: rgba(12, 11, 26, 0.9);
+  border-bottom: 1px solid rgba(255, 46, 151, 0.45);
+  box-shadow: 0 1px 20px rgba(255, 46, 151, 0.22);
+  backdrop-filter: blur(8px);
+}
+footer {
+  border-top: 1px solid rgba(2, 240, 209, 0.4);
+  background: rgba(12, 11, 26, 0.92);
+}
+
+/* ---------- EIN Takt fuer alle wiederkehrenden Abstaende ----------
+   Gemessen war Banner→Unterueberschrift 20 px bei News und Guides,
+   aber 60 px bei den Radaren. Der Banner bringt seinen Abstand selbst
+   mit; die Polsterung des ersten Radars kam oben drauf. */
+#radare section:first-of-type,
+main > div > section:last-of-type section:first-of-type { padding-top: 0; }
+
+/* ---------- Knoepfe: Pillenform (Tim, 18.08.2026) ---------- */
+button, a[class*="rounded-full"], input[class*="rounded-full"] {
+  border-radius: 999px;
+}
+a[class*="rounded-full"] {
+  border-color: rgba(2, 240, 209, 0.6);
+  box-shadow: 0 0 14px rgba(2, 240, 209, 0.22);
+}
+
+/* Newsletter-Ecke folgt derselben Form. Der Teilen-Knopf NICHT: er ist
+   1:1 wie auf der Live-Seite rund (52 px, Rand rgba(2,240,209,.35),
+   Grund rgba(18,17,38,.85), Flieger 22 px mittig) — Tim, 18.08.2026. */
+.treppe-br {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 22px), calc(100% - 22px) 100%, 0 100%);
 }
 
 /* ---------- Handy-Feinschliff (Tim, 18.08.2026) ---------- */

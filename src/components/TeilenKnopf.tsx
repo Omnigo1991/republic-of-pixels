@@ -149,7 +149,7 @@ export function TeilenKnopf() {
         onClick={teilen}
         aria-label="Diese Seite teilen"
         aria-expanded={offen}
-        className={`treppe-br-klein fixed bottom-5 right-5 z-50 h-[52px] w-[52px] items-center justify-center rounded-2xl bg-navy text-accent shadow-[0_10px_28px_-10px_rgba(12,11,26,0.5)] transition-all duration-300 hover:opacity-90 sm:bottom-6 sm:right-6 sm:flex ${offen ? "hidden" : "flex"} ${
+        className={`fixed bottom-5 right-5 z-50 h-[52px] w-[52px] items-center justify-center rounded-full border border-accent/35 bg-[rgba(18,17,38,0.85)] text-accent backdrop-blur transition-all duration-300 hover:border-accent/70 sm:bottom-6 sm:right-6 sm:flex ${offen ? "hidden" : "flex"} ${
           sichtbar || offen
             ? "translate-y-0 opacity-100"
             : "pointer-events-none translate-y-4 opacity-0"

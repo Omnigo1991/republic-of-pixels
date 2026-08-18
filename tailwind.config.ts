@@ -19,46 +19,45 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // NAVY-UMBAU (Tim, 17.08.2026): derselbe Aufbau wie der Hell-Stand,
-        // nur der Grund kippt von Weiss auf Navy. Die Inhaltsboxen tragen
-        // jetzt VOLLES Cyan (#02F0D1) mit Navy-Schrift — Tims Entscheid.
+        // CYBERPUNK-UMBAU (Tim, 18.08.2026): loest den Navy-Stand ab.
+        // Drei Pole statt zwei — Cyan bleibt die Marke, Magenta ist der
+        // Gegenpol, Violett vermittelt. Der Grund ist tiefer als das
+        // bisherige Navy, damit Neon ueberhaupt leuchten kann.
         bg: {
           base: "#0C0B1A",
-          elevated: "#14132A",
+          elevated: "#14122E",
         },
         surface: {
-          // card = die vielen kleinen Karten (Release-, Event-, Deal-,
-          // Charts-Radar ...). Werte an der Live-Seite abgemessen
-          // (Tim, 17.08.2026): Flaeche rgb(22,21,43), Rand rgb(38,35,71),
-          // Radius 16 px. Volles #02F0D1 bleibt den drei grossen Boxen
-          // vorbehalten: Newsletter, Naechstes Event, "Warum das
-          // wichtig ist".
-          card: "#16152B",
-          hover: "#1D1B38",
-          // panel = Bedienflaeche (Suche, Kommentare, Dialoge, Admin).
-          // Die bleiben dunkel: Neon-Cyan unter einem Eingabefeld waere
-          // weder lesbar noch gemeint.
-          panel: "#14132A",
-          panelhover: "#1B1A36",
+          // card = die Inhaltskarten. Fassung "C1": spuerbar hellere
+          // Flaeche mit Verlaufskante, gleiche Kappecke wie die
+          // Bildkacheln. Vorher hob sie sich kaum vom Grund ab.
+          card: "#14122E",
+          hover: "#1B1840",
+          // panel = Bedienflaeche (Suche, Kommentare, Dialoge, Admin)
+          panel: "#11102A",
+          panelhover: "#191735",
         },
         border: {
-          subtle: "#262347",
-          default: "#302D58",
-          strong: "#423E75",
+          subtle: "rgba(2, 240, 209, 0.30)",
+          default: "rgba(2, 240, 209, 0.44)",
+          strong: "rgba(2, 240, 209, 0.62)",
         },
         accent: {
           DEFAULT: "#02F0D1",
-          hover: "#30F3D9",
+          hover: "#7DF9FF",
           active: "#02C5AB",
-          wash: "#12303A",
+          wash: "#0E2A34",
         },
+        // Gegenpole der Cyberpunk-Palette
+        magenta: "#FF2E97",
+        violett: "#B14CFF",
+        saeure: "#E8FF3D",
         text: {
-          primary: "#F1F0F2",
-          secondary: "#B7BACB",
-          tertiary: "#8A8FA3",
-          disabled: "#8F95A9",
-          // Schrift auf Cyan-Flaechen.
-          oncyan: "#0C0B1A",
+          primary: "#EAF6FF",
+          secondary: "#C2D2E4",
+          tertiary: "#93A6BC",
+          disabled: "#7C8DA3",
+          oncyan: "#04121A",
         },
         success: "#2ED47A",
         warning: "#F5B942",
