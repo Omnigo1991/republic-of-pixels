@@ -1,0 +1,156 @@
+{
+  "slug": "phantom-blade-zero-spielwelt-acht-tuschekarten-state-of-play",
+  "title": "Phantom Blade Zero zeigt seine Welt — geführt von acht Tuschekarten",
+  "subtitle": "S-Game verzichtet auf Open World und Questmarker und setzt stattdessen auf handgemalte Karten, die nur die grobe Richtung vorgeben",
+  "excerpt": "Nach Jahren voller Bosskämpfe ohne Kontext zeigt S-Game endlich die Spielwelt von Phantom Blade Zero: acht Regionen, verbunden zu einem Ganzen — und eine Navigation, die bewusst wenig verrät.",
+  "seoTitle": "Phantom Blade Zero: Spielwelt mit acht Tuschekarten enthüllt",
+  "metaDescription": "S-Game zeigt im State of Play erstmals die Welt von Phantom Blade Zero: acht verbundene Regionen, handgemalte Tuschekarten und Glocken als Schnellreise.",
+  "category": "news",
+  "platforms": [
+    "pc",
+    "playstation"
+  ],
+  "tags": [
+    "Phantom Blade Zero",
+    "S-Game",
+    "State of Play",
+    "PS5",
+    "Action-RPG"
+  ],
+  "tldr": [
+    "S-Game hat im PlayStation State of Play erstmals ausführlich die Spielwelt von Phantom Blade Zero gezeigt",
+    "Acht Regionen fügen sich laut Studio nahtlos zu einer zusammenhängenden Welt zusammen",
+    "Navigiert wird über acht handgemalte Tuschekarten, die in komplexen Gebieten nur grobe Richtungen geben; Glocken dienen als Schnellreisepunkte",
+    "Laut Studiogründer Soulframe Liang ist das Spiel weder ein Open-World-Titel noch ein lineares Abenteuer"
+  ],
+  "whyItMatters": "Bisher war Phantom Blade Zero vor allem für seine Bosskämpfe bekannt — wie das Spiel dazwischen funktioniert, blieb offen. Die Struktur der Welt entscheidet darüber, ob aus einer Aneinanderreihung von Duellen ein Abenteuer wird. Und die bewusst ungenauen Karten sind eine klare Ansage gegen die Marker-Flut vieler Open-World-Spiele.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Zweieinhalb Jahre lang hat S-Game vor allem eines gezeigt: Kämpfe. Bossduelle, Waffenwechsel, Wuxia-Choreografien. Wie die Welt zwischen diesen Gefechten aussieht, blieb weitgehend ein Geheimnis. In einem PlayStation State of Play hat das Studio dieses Geheimnis nun gelüftet — mit acht einzelnen Karten, die sich laut Entwickler «nahtlos zu einer einzigen Welt» verbinden."
+    },
+    {
+      "type": "embed",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=blh1v1dGJ2s"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "8",
+          "label": "handgemalte Tuschekarten führen durch die Spielwelt"
+        },
+        {
+          "value": "20 Min.",
+          "label": "neues Gameplay-Material im State of Play"
+        },
+        {
+          "value": "2023",
+          "label": "seit diesem Jahr ist Donnie Yen an der Entwicklung beteiligt"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Acht Karten, eine Welt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der interessanteste Teil der Präsentation betrifft nicht die Areale selbst, sondern die Art, wie man sich in ihnen zurechtfindet. Statt einer digitalen Übersichtskarte mit Symbolen setzt S-Game auf gemalte Vorlagen im Stil klassischer chinesischer Tuschemalerei — und die halten sich mit Informationen bewusst zurück."
+    },
+    {
+      "type": "quote",
+      "text": "Eure Reise wird von acht authentischen, handgemalten chinesischen Tuschekarten geleitet. In komplexen Regionen geben sie nur eine ungefähre Richtung vor und überlassen es euch, zu erkunden und verborgene Geheimnisse aufzudecken. Diese Karten fügen sich nahtlos zu einer einzigen Welt zusammen, in der Glocken die Schnellreise zwischen entdeckten Orten ermöglichen.",
+      "attribution": "S-Game im State of Play"
+    },
+    {
+      "type": "paragraph",
+      "text": "Das ist ein Mittelweg, den man so selten sieht: mehr Hilfe als in einem kartenlosen Soulslike, aber deutlich weniger Bevormundung als in einer typischen Open World, in der jeder Sammelgegenstand vorab markiert ist. Die Glocken übernehmen dabei die Rolle, die anderswo Lagerfeuer oder Leuchttürme spielen — Schnellreise gibt es erst, wenn man einen Ort tatsächlich gefunden hat."
+    },
+    {
+      "type": "heading",
+      "text": "Vom Banditental zum dampfbetriebenen Eisenturm"
+    },
+    {
+      "type": "paragraph",
+      "text": "Studiogründer Soulframe Liang führte durch eine Auswahl der Schauplätze, von denen jeweils nur wenige Sekunden zu sehen waren. Sie geben dennoch einen Eindruck davon, wie unterschiedlich die acht Regionen ausfallen sollen."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Ein Tal, das von skrupellosen Banditen überrannt wurde",
+        "Ein verlassenes Lagerhaus voller hängender Puppen, in dem offenbar ein dunkles Ritual stattfindet",
+        "Ein dampfbetriebener Eisenturm, errichtet für eine Art finsteres Experiment",
+        "Ein weiter See, den Protagonist Soul an Bord eines eigenwilligen Hochgeschwindigkeitsboots überquert"
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "Eure Reise führt euch in verwinkelte, aber surreale Landschaften. Dörfer, Täler, Seen und beschattete Gebiete.",
+      "attribution": "Soulframe Liang, Gründer von S-Game"
+    },
+    {
+      "type": "heading",
+      "text": "Weder Open World noch Schlauchlevel"
+    },
+    {
+      "type": "paragraph",
+      "text": "Liang formuliert die Einordnung selbst: Phantom Blade Zero sei «kein Open-World-Spiel, aber auch kein lineares Abenteuer von Anfang bis Ende». Die Präsentation zeigte zudem kurz, wie Waffen eingesetzt werden, um Hindernisse zu zertrümmern — ein Hinweis auf zumindest leichte Metroidvania-Elemente, bei denen neue Fähigkeiten alte Gebiete wieder interessant machen. Wie weit dieses Prinzip trägt, lässt sich aus wenigen Sekunden Videomaterial allerdings nicht ablesen."
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Kontext dazu: In Anspielterminen der vergangenen anderthalb Jahre hatte S-Game gegenüber Journalistinnen und Journalisten stets betont, dass die spielbaren Areale und die dort platzierten Bosse allesamt optionale Abstecher abseits der Hauptgeschichte seien — bemerkenswert angesichts ihres Umfangs. Erst dieses State of Play zeigt nun zentrale Figuren und Schauplätze und damit, wie das Ganze zusammenhängt."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Welt ist der letzte grosse unbekannte Faktor bei Phantom Blade Zero. Am Kampfsystem und an der Präsentation zweifelt nach den bisherigen Demos kaum jemand — die Frage war immer, was das Spiel zwischen den Duellen zu bieten hat. Der Ansatz mit acht verbundenen Regionen und Karten, die bewusst Lücken lassen, klingt nach einer Struktur, die Erkundung wieder zu einer Leistung machen will statt zu einer Checkliste. Ob das aufgeht, entscheidet sich an der Dichte der Geheimnisse und daran, wie clever die Abkürzungen zwischen den Gebieten gesetzt sind. Erst kürzlich wurde ausserdem bekannt, dass Hongkong-Actionstar Donnie Yen seit 2023 an der Entwicklung beteiligt ist — ein Hinweis darauf, wie ernst es dem Studio mit seiner Wuxia-Handschrift ist."
+    }
+  ],
+  "poll": {
+    "question": "Karten, die nur die grobe Richtung zeigen — gute Idee oder Frustquelle?",
+    "options": [
+      "Genau richtig, endlich mal keine Marker-Flut",
+      "Klingt nach unnötigem Herumirren",
+      "Am liebsten gar keine Karte, wie in Souls-Spielen",
+      "Entscheide ich, wenn ich es gespielt habe"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-18T04:04:48.331Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "grid",
+  "sources": [
+    {
+      "title": "Phantom Blade Zero finally shows off its interconnected game world, with exploration 'guided by 8 authentic hand-painted Chinese ink wash maps'",
+      "url": "https://www.pcgamer.com/games/action/phantom-blade-zero-finally-shows-off-its-interconnected-game-world-with-exploration-guided-by-8-authentic-hand-painted-chinese-ink-wash-maps/",
+      "publisher": "PC Gamer"
+    },
+    {
+      "title": "Live: Watch the Phantom Blade Zero PS5 State of Play Right Here",
+      "url": "https://www.pushsquare.com/features/live-watch-the-phantom-blade-zero-ps5-state-of-play-right-here",
+      "publisher": "Push Square"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/phantom-blade-zero-spielwelt-acht-tuschekarten-state-of-play.webp",
+    "alt": "Phantom Blade Zero zeigt seine Welt — geführt von acht Tuschekarten",
+    "credit": "Bild: PC Gamer",
+    "sourceUrl": "https://www.pcgamer.com/games/action/phantom-blade-zero-finally-shows-off-its-interconnected-game-world-with-exploration-guided-by-8-authentic-hand-painted-chinese-ink-wash-maps/",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "phantom-blade-zero-state-of-play-donnie-yen-2026",
+    "phantom-blade-zero-fertigstellung-praesentation-2026",
+    "crimson-moon-release-september-2026"
+  ]
+}
