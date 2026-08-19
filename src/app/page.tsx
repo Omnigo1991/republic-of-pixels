@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getTopStory, getChronological, getByCategory } from "@/lib/articles";
 import { TopStory } from "@/components/TopStory";
 import { NewsListe } from "@/components/NewsListe";
-import { NeuesteRail, NotchKarte, TickerBand, NewsletterBlock, SektionsKopf } from "@/components/StartseiteNeu";
+import { NeuesteRail, NotchKarte, TickerBand, NewsletterBlock, SektionsKopf, MehrPille } from "@/components/StartseiteNeu";
 import { SektionsBanner } from "@/components/SektionsBanner";
 import { ReleaseRadar } from "@/components/ReleaseRadar";
 import { DealRadar } from "@/components/DealRadar";
@@ -96,6 +96,9 @@ export default async function HomePage() {
                 <NotchKarte key={a.slug} article={a} bildHoehe="h-[250px]" randCyan />
               ))}
             </div>
+            {/* Gleiche Pille und derselbe Abstand (mt-8) wie unter der
+                Nachrichtenliste — Tim, 19.08.2026. */}
+            <MehrPille href="/guides" />
           </Reveal>
         </section>
 

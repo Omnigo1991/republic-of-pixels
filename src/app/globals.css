@@ -34,7 +34,7 @@ h3 {
 }
 ::-webkit-scrollbar-thumb {
   background: #302D58;
-  border-radius: 999px;
+  border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #423E75;
@@ -236,31 +236,33 @@ h1, h2, h3 { font-family: var(--font-inter), Inter, system-ui, sans-serif; }
   overflow-wrap: anywhere;
 }
 
-/* ---------- C1: die Kartenfassung ----------
-   Gleiche Kappecke wie die Bildkacheln, spuerbar hellere Flaeche,
-   Kante als Verlauf. Vorher war die Karte eine blasse Umrisslinie. */
+/* ---------- C1: die Kartenfassung, RUND ----------
+   Die Kappecke bleibt den Artikeln vorbehalten (Aufmacher, Kacheln,
+   Guides). Radare, Pixel-Raten, Merkliste und die Boxen der
+   Artikelseite tragen dieselbe Fassung mit runden Ecken —
+   Tim, 19.08.2026.
+
+   Die Verlaufskante entsteht ueber zwei Hintergruende: die Fuellung
+   liegt in der Innenflaeche (padding-box), der Verlauf in der
+   Randflaeche (border-box). Der Clip-Pfad von vorher konnte keine
+   runden Ecken. */
 .bg-surface-card {
   position: relative;
-  border: 0 !important;
-  clip-path: polygon(0 0, calc(100% - var(--kappe)) 0, 100% var(--kappe), 100% 100%,
-    var(--kappe) 100%, 0 calc(100% - var(--kappe)));
+  border: 2px solid transparent !important;
+  border-radius: 18px;
+  background:
+    linear-gradient(#14122E, #14122E) padding-box,
+    linear-gradient(150deg, #02F0D1, #B14CFF 58%, #FF2E97) border-box;
+  clip-path: none;
 }
-.bg-surface-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background: linear-gradient(150deg, #02F0D1, #B14CFF 58%, #FF2E97);
-  clip-path: polygon(
-    0 0, calc(100% - var(--kappe)) 0, 100% var(--kappe), 100% 100%,
-    var(--kappe) 100%, 0 calc(100% - var(--kappe)), 0 0,
-    2px 2px, 2px calc(100% - var(--kappe) - 1px), calc(var(--kappe) + 1px) calc(100% - 2px),
-    calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(var(--kappe) + 1px),
-    calc(100% - var(--kappe) - 1px) 2px, 2px 2px);
+.bg-surface-card:hover {
+  background:
+    linear-gradient(#1B1840, #1B1840) padding-box,
+    linear-gradient(150deg, #7DF9FF, #B14CFF 58%, #FF2E97) border-box;
 }
 .bg-surface-panel, .bg-bg-elevated {
   border: 1px solid rgba(2, 240, 209, 0.28);
+  border-radius: 16px;
 }
 
 /* ---------- Volles Cyan wird Verlauf ---------- */
@@ -305,7 +307,7 @@ main > div > section:last-of-type section:first-of-type { padding-top: 0; }
 
 /* ---------- Knoepfe: Pillenform (Tim, 18.08.2026) ---------- */
 button, a[class*="rounded-full"], input[class*="rounded-full"] {
-  border-radius: 999px;
+  border-radius: 9999px;
 }
 a[class*="rounded-full"] {
   border-color: rgba(2, 240, 209, 0.6);
