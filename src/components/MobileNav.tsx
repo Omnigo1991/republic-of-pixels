@@ -69,11 +69,6 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
             className="absolute inset-0 bg-navy/40"
           />
           <aside className="absolute inset-y-0 right-0 flex w-full flex-col overflow-hidden bg-accent px-7 pb-7 pt-5 shadow-[-30px_0_80px_-20px_rgba(12,11,26,0.45)] animate-vorhang sm:w-[430px]">
-            {/* Quadrat-Raute als Schmuck in der Ecke — Motiv der Event-Kachel. */}
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute -bottom-24 -right-24 h-[300px] w-[300px] rotate-45 border-[16px] border-navy/10"
-            />
             <button
               onClick={() => setOpen(false)}
               aria-label="Menü schliessen"
@@ -85,7 +80,7 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
             <Link
               href="/suche"
               onClick={() => setOpen(false)}
-              className="mb-5 mt-1 flex items-center gap-3 rounded-2xl bg-navy/10 px-4 py-3.5 text-[15px] font-semibold text-navy"
+              className="mb-5 mt-1 flex items-center gap-3 rounded-2xl bg-[#0C0B1A]/10 px-4 py-3.5 text-[15px] font-semibold text-[#0B0616]"
             >
               Suche nach Spielen, News, Guides …
               <SearchIcon className="ml-auto h-5 w-5 shrink-0" />
@@ -138,14 +133,14 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
                   target="_blank"
                   rel="noreferrer noopener"
                   aria-label="Instagram"
-                  className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-navy text-navy hover:opacity-70"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-[#0B0616] text-[#0B0616] hover:opacity-70"
                 >
                   <InstagramIcon className="h-5 w-5" />
                 </a>
                 <a
                   href="mailto:redaktion@republicofpixels.com"
                   aria-label="Kontakt"
-                  className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-navy text-navy hover:opacity-70"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-[#0B0616] text-[#0B0616] hover:opacity-70"
                 >
                   <MailIcon className="h-5 w-5" />
                 </a>

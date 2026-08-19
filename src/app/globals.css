@@ -180,14 +180,14 @@ h1, h2 {
 }
 h3, h4, p, li { text-transform: none; text-shadow: none; }
 h3 { font-weight: 800; color: #F2F8FF; }
-/* Maschinenschrift nur fuer Kennungen und Messwerte, nie fuer
-   Schlagzeilen — sonst wird der Aufmacher unlesbar. */
-[class*="tracking-["]:not(h1):not(h2):not(h3),
-[class*="uppercase"]:not(h1):not(h2):not(h3),
-time {
-  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+/* EINE Schrift ueberall (Betreiber-Vorgabe 05.08.2026, wieder
+   hergestellt am 19.08.2026): Inter fuer alles. Die zweite Familie
+   war an 63 Stellen im Einsatz und liess die Seite uneinheitlich
+   wirken — der Cyberpunk-Ton kommt aus Versalien und Sperrung, nicht
+   aus einer Maschinenschrift. */
+body, h1, h2, h3, h4, p, li, a, button, span, time, input, label {
+  font-family: var(--font-inter), Inter, system-ui, -apple-system, sans-serif;
 }
-h1, h2, h3 { font-family: var(--font-inter), Inter, system-ui, sans-serif; }
 .text-accent { color: #02F0D1; text-shadow: 0 0 9px rgba(2, 240, 209, 0.6); }
 
 /* ---------- K11: Kappecke statt Pixel-Treppe ----------
@@ -287,10 +287,53 @@ h1, h2, h3 { font-family: var(--font-inter), Inter, system-ui, sans-serif; }
   box-shadow: 0 0 10px rgba(2, 240, 209, 0.7);
   height: 2px;
 }
+/* ---------- Kopfband im Verlauf (Tim, 19.08.2026) ----------
+   Derselbe Verlauf wie das Menue. Damit wechselt die Schrift dort auf
+   Dunkel — Weiss auf Magenta misst 1.5:1 und waere nicht lesbar. */
+.kopfband {
+  background: linear-gradient(100deg, #FF2E97, #FF6BC0 42%, #02F0D1 118%);
+  border-bottom: 1px solid rgba(11, 6, 22, 0.35);
+  box-shadow: 0 6px 26px -8px rgba(255, 46, 151, 0.45);
+}
+.kopfband,
+.kopfband a,
+.kopfband button,
+.kopfband span,
+.kopfband svg { color: #0B0616; }
+.kopfband .text-accent { color: #0B0616; }
+/* Kein Leuchten im Kopf: sonst schimmert "OF PIXELS" staerker als
+   "REPUBLIC" und die beiden Haelften wirken wie zwei Schriften. */
+.kopfband, .kopfband * { text-shadow: none !important; }
+.kopfband a:hover, .kopfband button:hover { opacity: 0.72; }
+/* Plattform-Chips und Suchknopf: heller Schleier statt dunkler Block —
+   dieselbe Fassung wie das Suchfeld im Menue (Tim, 19.08.2026). */
+/* Beide Flaechen tragen eine feste Hexfarbe (bg-[#1B1A33]), deshalb
+   greifen Marken-Waehler hier nicht — sie werden ausdruecklich
+   genannt. */
+.kopfband [class*="bg-navy"],
+.kopfband [class*="bg-surface"],
+.kopfband [class*="bg-bg-"],
+.kopfband [class*="bg-[#1B1A33]"],
+.kopfband nav[aria-label="Plattformen"],
+.kopfband a[aria-label*="Suche"],
+.kopfband button[aria-label*="Suche"] {
+  background: rgba(11, 6, 22, 0.13) !important;
+  border-color: rgba(11, 6, 22, 0.22) !important;
+}
+.kopfband [class*="border-"] { border-color: rgba(11, 6, 22, 0.22); }
+/* "Anmelden" kehrt sich um: dunkle Pille mit Cyan-Schrift, damit sie
+   auf dem Verlauf ueberhaupt als Knopf lesbar bleibt. */
+.kopfband a[class*="bg-accent"],
+.kopfband button[class*="bg-accent"] {
+  background: #0B0616 !important;
+  color: #02F0D1 !important;
+}
+.kopfband a[class*="bg-accent"] span,
+.kopfband button[class*="bg-accent"] span { color: #02F0D1; }
+
 header {
   background: rgba(12, 11, 26, 0.9);
   border-bottom: 1px solid rgba(255, 46, 151, 0.45);
-  box-shadow: 0 1px 20px rgba(255, 46, 151, 0.22);
   backdrop-filter: blur(8px);
 }
 footer {
@@ -309,7 +352,10 @@ main > div > section:last-of-type section:first-of-type { padding-top: 0; }
 button, a[class*="rounded-full"], input[class*="rounded-full"] {
   border-radius: 9999px;
 }
-a[class*="rounded-full"] {
+/* Nur Pillen, die ohnehin eine Cyan-Kontur tragen. Vorher fing die
+   Regel JEDE runde Verlinkung ein und faerbte auch die schwarzen
+   Knoepfe im Menue cyan (Tim, 19.08.2026). */
+a[class*="rounded-full"][class*="border-accent"] {
   border-color: rgba(2, 240, 209, 0.6);
   box-shadow: 0 0 14px rgba(2, 240, 209, 0.22);
 }

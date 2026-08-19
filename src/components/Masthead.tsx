@@ -23,7 +23,7 @@ export function Masthead({
 }) {
   return (
     <>
-      <div className="sticky top-0 z-50 bg-navy text-white">
+      <div className="kopfband sticky top-0 z-50 text-white">
         <div className="relative mx-auto flex h-16 max-w-content items-center gap-5 px-4 sm:px-6 lg:h-[88px] lg:gap-7 lg:px-8">
           <Link href="/" aria-label="Republic of Pixels – Startseite" className="mr-auto flex min-w-0 items-center gap-2.5 sm:gap-3 lg:gap-4">
             {/* eslint-disable-next-line @next/next/no-img-element */}
