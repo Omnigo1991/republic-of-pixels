@@ -265,6 +265,34 @@ body, h1, h2, h3, h4, p, li, a, button, span, time, input, label {
   border-radius: 16px;
 }
 
+/* ---------- Personen-Kacheln auf "Ueber uns" ----------
+   Verlauf wie im Kopfband (Tim, 19.08.2026). Die Form bleibt rund —
+   es sind keine Artikel. */
+.personenkachel {
+  background: linear-gradient(120deg, #FF2E97, #FF6BC0 40%, #02F0D1 115%);
+  box-shadow: 0 0 40px -10px rgba(255, 46, 151, 0.4);
+}
+.personenkachel a { color: #0B0616; }
+
+/* ---------- Artikelkarte mit Kappecke (Slider "Beliebt bei Lesern") ----
+   Zwei Ebenen wie bei den Bildkacheln: aussen der Verlauf als Rand,
+   innen die Flaeche. Ein Beschnitt auf einem einzelnen Element wuerde
+   den Rand an der Schraege wegschneiden. */
+.artikelkante {
+  display: block;
+  padding: 3px;
+  background: linear-gradient(150deg, #02F0D1, #B14CFF 60%, #FF2E97);
+  clip-path: polygon(0 0, calc(100% - var(--kappe)) 0, 100% var(--kappe), 100% 100%,
+    var(--kappe) 100%, 0 calc(100% - var(--kappe)));
+  filter: drop-shadow(0 0 12px rgba(2, 240, 209, 0.25));
+}
+.artikelkante__innen {
+  background: #14122E;
+  clip-path: polygon(0 0, calc(100% - (var(--kappe) - 3px)) 0, 100% calc(var(--kappe) - 3px),
+    100% 100%, calc(var(--kappe) - 3px) 100%, 0 calc(100% - (var(--kappe) - 3px)));
+}
+.artikelkante:hover .artikelkante__innen { background: #1B1840; }
+
 /* ---------- Volles Cyan wird Verlauf ---------- */
 .bg-accent {
   background: linear-gradient(112deg, #FF2E97, #FF6BC0 44%, #02F0D1 122%);

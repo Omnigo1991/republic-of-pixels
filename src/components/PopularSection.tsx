@@ -111,10 +111,15 @@ function PopularCard({ article, rank }: { article: Article; rank: number }) {
   const { kicker, headline } = splitTitle(article.title, article.tags);
   return (
     <article className="w-[280px] shrink-0 snap-start sm:w-[320px]">
+      {/* Kappecke wie bei allen Artikeln (Tim, 19.08.2026): eckig = Artikel,
+          rund = Werkzeug. Aussen der Verlauf als Rand, innen die Flaeche —
+          zwei Ebenen, weil ein Beschnitt sonst den Rand an der Schraege
+          wegschneiden wuerde. */}
       <Link
         href={`/artikel/${article.slug}`}
-        className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border-subtle bg-surface-card transition-all duration-300 hover:bg-surface-hover"
+        className="artikelkante group block h-full transition-all duration-300"
       >
+        <span className="artikelkante__innen flex h-full flex-col overflow-hidden">
         <div className="relative aspect-[16/9] overflow-hidden">
           <ArticleMedia
             article={article}
@@ -125,7 +130,9 @@ function PopularCard({ article, rank }: { article: Article; rank: number }) {
             {String(rank).padStart(2, "0")}
           </span>
         </div>
-        <div className="flex flex-1 flex-col gap-2 p-4">
+        {/* Zusaetzlicher Innenabstand links: der Anschnitt frisst die
+            untere linke Ecke, sonst wirkt die Schlagzeile abgesaegt. */}
+        <div className="flex flex-1 flex-col gap-2 p-4 pl-[30px]">
           <div>
             <CategoryPill category={article.category} />
           </div>
@@ -138,6 +145,7 @@ function PopularCard({ article, rank }: { article: Article; rank: number }) {
             {headline}
           </h3>
         </div>
+      </span>
       </Link>
     </article>
   );
