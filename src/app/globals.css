@@ -370,43 +370,13 @@ header {
   border-bottom: 1px solid rgba(255, 46, 151, 0.45);
   backdrop-filter: blur(8px);
 }
-/* ---------- Fussleiste im Verlauf (Tim, 19.08.2026, Fassung F1) ----
-   NUR die Seiten-Fussleiste (body > footer): die Quellenangabe unter
-   einem Zitat ist ebenfalls ein <footer> und haette sonst denselben
-   Verlauf im Ruecken. Derselbe Verlauf wie im Kopf — die Seite wird oben und unten von
-   derselben Farbe gefasst. Schrift darin auf Dunkel. */
+/* ---------- Fussleiste ----------
+   Zurueck auf die schlichte dunkle Fassung (Tim, 19.08.2026): der
+   Verlauf wurde wieder verworfen. */
 body > footer {
-  background: linear-gradient(100deg, #FF2E97, #FF6BC0 42%, #02F0D1 118%);
-  border-top: 1px solid rgba(11, 6, 22, 0.35);
+  border-top: 1px solid rgba(2, 240, 209, 0.4);
+  background: rgba(12, 11, 26, 0.92);
 }
-body > footer,
-body > footer a,
-body > footer p,
-body > footer span,
-body > footer li,
-body > footer svg {
-  color: #0B0616;
-  text-shadow: none;
-}
-/* Die Fusszeile trug helle Grautoene fuer dunklen Grund. Element-Waehler
-   verlieren gegen Klassen — deshalb hier ueber Attribut-Waehler, die
-   gleich stark wiegen und spaeter stehen (gemessen: 76 Stellen). */
-body > footer [class*="text-navy-"],
-body > footer [class*="text-text-"],
-body > footer [class*="text-white"] {
-  color: #0B0616;
-}
-body > footer [class*="text-navy-dim"],
-body > footer [class*="text-text-tertiary"] {
-  color: rgba(11, 6, 22, 0.82);
-}
-body > footer [class*="border-t"] { border-color: rgba(11, 6, 22, 0.25); }
-/* Das Logo ist eine Bilddatei — auf dem Verlauf als Silhouette. */
-body > footer img { filter: brightness(0); }
-/* Die Instagram-Pille traegt eine dunkle Fuellung mit Cyan-Schrift,
-   wie der Anmelden-Knopf im Kopf. */
-body > footer a[class*="bg-navy"],
-body > footer a[class*="bg-navy"] * { color: #02F0D1; }
 
 /* ---------- EIN Takt fuer alle wiederkehrenden Abstaende ----------
    Gemessen war Banner→Unterueberschrift 20 px bei News und Guides,
