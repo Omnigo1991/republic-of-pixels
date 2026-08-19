@@ -140,18 +140,22 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           </div>
         )}
 
-        {/* Pixel-Treppen-Rahmen wie im abgenommenen Hell-Entwurf. */}
+        {/* Kappecke wie bei allen Artikeln. Die Bildbeschriftung steht
+            INNERHALB der Box (Tim, 19.08.2026) und haelt links Abstand
+            zum Anschnitt, damit sie unten links mit dem Rand aufgeht. */}
         <figure className="mt-8">
           <div className="treppe-tl">
-            <div className="treppe-innen aspect-[16/9]">
-              <ArticleMedia article={article} priority sizes="(max-width: 768px) 100vw, 680px" className="h-full w-full" />
+            <div className="treppe-innen">
+              <div className="relative aspect-[16/9]">
+                <ArticleMedia article={article} priority sizes="(max-width: 768px) 100vw, 680px" className="h-full w-full" />
+              </div>
+              {article.image?.credit && (
+                <figcaption className="bg-[#0A0818] px-4 pb-3 pl-[calc(var(--kappe)+8px)] pt-2.5 text-xs text-text-tertiary">
+                  {article.image.credit}
+                </figcaption>
+              )}
             </div>
           </div>
-          {article.image?.credit && (
-            <figcaption className="mt-2.5 text-xs text-text-tertiary">
-              {article.image.credit}
-            </figcaption>
-          )}
         </figure>
 
         <TldrBox items={article.tldr} />

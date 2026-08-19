@@ -50,7 +50,9 @@ export function ArticleBody({
               <blockquote key={i}>
                 “{block.text}”
                 {block.attribution && (
-                  <footer className="mt-2 text-sm not-italic text-text-tertiary">
+                  // Keine Trennlinie, gleicher Abstand wie im Fliesstext
+                  // (Tim, 19.08.2026).
+                  <footer className="mt-3 border-0 text-sm not-italic text-text-tertiary">
                     — {block.attribution}
                   </footer>
                 )}
@@ -90,16 +92,18 @@ export function ArticleBody({
                 className={`not-prose my-8 grid gap-3 ${block.items.length === 1 ? "grid-cols-1" : block.items.length === 2 ? "grid-cols-2" : "grid-cols-1 sm:grid-cols-3"}`}
               >
                 {block.items.map((s, j) => (
-                  // Navy-Kacheln mit Cyan-Zahl und Rauten-Ecke (Hell-Entwurf):
-                  // auf der hellen Seite sind die dunklen Kacheln der Blickfang.
+                  // Verlauf wie die Personen-Kacheln auf "Ueber uns"
+                  // (Tim, 19.08.2026): Die Zahlen sollen die Textstrecke
+                  // unterbrechen, nicht sich einfuegen. Schrift darin
+                  // dunkel — Cyan auf Magenta waere nicht lesbar.
                   <div
                     key={j}
-                    className="relative overflow-hidden rounded-2xl bg-navy px-5 py-6 text-left"
+                    className="personenkachel relative overflow-hidden rounded-2xl px-5 py-6 text-left"
                   >
-                    <p className={`font-black leading-[1.15] tracking-tight text-accent ${wertGroesse}`}>
+                    <p className={`font-black leading-[1.15] tracking-tight text-[#0B0616] ${wertGroesse}`}>
                       {s.value}
                     </p>
-                    <p className="mt-2 break-words text-[13px] leading-snug text-[#C7CAD8]">{s.label}</p>
+                    <p className="mt-2 break-words text-[13px] leading-snug text-[#0B0616]/85">{s.label}</p>
                   </div>
                 ))}
               </div>

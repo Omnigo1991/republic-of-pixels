@@ -127,7 +127,11 @@ export function CommentSection({ articleSlug }: { articleSlug: string }) {
 
   return (
     <section aria-labelledby="kommentare-heading" className="mt-4">
-      <div className="mb-3 flex items-center justify-between">
+      {/* Der Abmelde-Knopf rechts ist hoeher als die Ueberschrift und
+          zieht die Zeile auf — der Abstand zur Linie lag dadurch bei
+          15 px (Handy 20), waehrend jede andere Sektion 12 px hat.
+          Absolut gesetzt beeinflusst er die Zeilenhoehe nicht mehr. */}
+      <div className="relative mb-3 flex items-baseline justify-between">
         <h2 id="kommentare-heading" className="text-xl font-semibold tracking-tight text-text-primary">
           Kommentare
           {/* Die Null verstecken (Tim-Freigabe 14.08.2026): "Kommentare (0)"
@@ -140,6 +144,7 @@ export function CommentSection({ articleSlug }: { articleSlug: string }) {
             </span>
           )}
         </h2>
+        <div className="absolute right-0 top-1/2 flex -translate-y-1/2 items-center gap-2">
         {session ? (
           <button
             onClick={() => supabase.auth.signOut()}
@@ -155,6 +160,7 @@ export function CommentSection({ articleSlug }: { articleSlug: string }) {
             Anmelden
           </button>
         )}
+        </div>
       </div>
       <SectionDivider />
 

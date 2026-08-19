@@ -262,6 +262,12 @@ body, h1, h2, h3, h4, p, li, a, button, span, time, input, label {
 }
 .bg-surface-panel, .bg-bg-elevated {
   border: 1px solid rgba(2, 240, 209, 0.28);
+}
+/* Nur wo die Flaeche nicht ausdruecklich rund sein will. Sonst
+   ueberschreibt die Regel die Filter-Pillen auf der Suchseite und
+   macht 16 px daraus (gemessen 19.08.2026). */
+.bg-surface-panel:not([class*="rounded-full"]),
+.bg-bg-elevated:not([class*="rounded-full"]) {
   border-radius: 16px;
 }
 
