@@ -74,7 +74,7 @@ export default async function HomePage() {
         <section id="news" className="scroll-mt-16 lg:scroll-mt-[88px] pt-14 sm:pt-16">
           <Reveal>
             <SektionsBanner titel="News aus der" cyan="Republic" />
-            <SektionsKopf titel="Alle News" hinweis="Chronologisch, neueste zuerst" />
+            <SektionsKopf titel="Alle News" />
             <SectionDivider />
             <NewsListe articles={chronological} />
           </Reveal>
@@ -89,7 +89,7 @@ export default async function HomePage() {
         <section id="guides" className="scroll-mt-16 lg:scroll-mt-[88px] pt-14 sm:pt-16">
           <Reveal>
             <SektionsBanner titel="Die grossen Republic-" cyan="Guides" />
-            <SektionsKopf titel="Alle Guides" hinweis="Nachschlagen statt suchen" />
+            <SektionsKopf titel="Alle Guides" />
             <SectionDivider />
             <div className="grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-5">
               {guideReihe.map((a) => (

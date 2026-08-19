@@ -94,7 +94,6 @@ export function DeineMerkliste() {
         <h2 id="merkliste-heading" className="text-[20px] font-semibold tracking-tight text-text-primary">
           Deine Merkliste
         </h2>
-        <span className="text-xs text-text-tertiary">Themen, die du verfolgst</span>
       </div>
       <SectionDivider />
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">

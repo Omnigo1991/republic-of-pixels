@@ -54,7 +54,6 @@ export function GeradeImGespraech() {
         <h2 id="gespraech-heading" className="text-[20px] font-semibold tracking-tight text-text-primary">
           Gerade im Gespräch
         </h2>
-        <span className="text-xs text-text-tertiary">Meiste Kommentare · letzte 24 Stunden</span>
       </div>
       <SectionDivider />
       <div className="flex flex-wrap gap-2.5">

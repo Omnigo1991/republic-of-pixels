@@ -189,9 +189,6 @@ export function PixelRaten() {
         <h2 id="pixelraten-heading" className="text-[20px] font-semibold tracking-tight text-text-primary">
           Pixel-Raten
         </h2>
-        <span className="text-xs text-text-tertiary">
-          Das tägliche Rätsel · jede Nacht neu
-        </span>
       </div>
       <SectionDivider />
       <div className="flex flex-col gap-6 rounded-2xl border border-border-subtle bg-surface-card p-5 sm:flex-row sm:p-6">
