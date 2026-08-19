@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-19T01:04:19.779Z",
+  "updatedAt": "2026-08-19T02:01:22.630Z",
   "deals": [
     {
       "appId": 694280,
@@ -13,6 +13,17 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/694280/capsule_184x69.jpg?t=1786965015"
     },
     {
+      "appId": 2552430,
+      "title": "KINGDOM HEARTS -HD 1.5+2.5 ReMIX-",
+      "discountPercent": 70,
+      "originalPrice": 4999,
+      "finalPrice": 1499,
+      "currency": "EUR",
+      "endsAt": "2026-08-20T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/2552430/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2552430/capsule_184x69.jpg?t=1779418330"
+    },
+    {
       "appId": 1771300,
       "title": "Kingdom Come: Deliverance II",
       "discountPercent": 60,
@@ -22,17 +33,6 @@
       "endsAt": "2026-08-24T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/1771300/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1771300/93e28946c46f09d761bbfab1e17e8c1c4a8323a0/capsule_184x69.jpg?t=1777975568"
-    },
-    {
-      "appId": 1941540,
-      "title": "Mafia: The Old Country",
-      "discountPercent": 40,
-      "originalPrice": 4999,
-      "finalPrice": 2999,
-      "currency": "EUR",
-      "endsAt": "2026-08-28T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1941540/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1941540/0533259232ecf45eb80b21e9f1f37332d94edffc/capsule_184x69_alt_assets_3_german.jpg?t=1786750937"
     },
     {
       "appId": 2764460,
@@ -46,17 +46,6 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2764460/f0a29d6c91be4e91e9fa2f384dd5ae695bfd6b5b/capsule_184x69.jpg?t=1786703049"
     },
     {
-      "appId": 1643320,
-      "title": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
-      "discountPercent": 30,
-      "originalPrice": 5999,
-      "finalPrice": 4199,
-      "currency": "EUR",
-      "endsAt": "2026-08-31T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1643320/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1643320/290a107e6d65baf58523dfce8bc1d8310a2ee938/capsule_184x69.jpg?t=1787002837"
-    },
-    {
       "appId": 2950790,
       "title": "IRON NEST: Heavy Turret Simulator",
       "discountPercent": 25,
@@ -66,6 +55,17 @@
       "endsAt": "2026-08-20T17:00:32.000Z",
       "url": "https://store.steampowered.com/app/2950790/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2950790/922472560f653fd897313ab7a10dd86b018d373f/capsule_184x69.jpg?t=1786639727"
+    },
+    {
+      "appId": 1067360,
+      "title": "Pax Autocratica",
+      "discountPercent": 17,
+      "originalPrice": 2999,
+      "finalPrice": 2489,
+      "currency": "EUR",
+      "endsAt": "2026-08-24T17:00:04.000Z",
+      "url": "https://store.steampowered.com/app/1067360/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1067360/0e2383a66d23ea67d7b9618a3a53fa52ca5db032/capsule_184x69.jpg?t=1786694191"
     }
   ]
 }
