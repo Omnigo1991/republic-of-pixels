@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-19T02:01:22.630Z",
+  "updatedAt": "2026-08-19T07:45:53.323Z",
   "deals": [
     {
       "appId": 694280,
@@ -35,6 +35,17 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1771300/93e28946c46f09d761bbfab1e17e8c1c4a8323a0/capsule_184x69.jpg?t=1777975568"
     },
     {
+      "appId": 2688950,
+      "title": "Planet Coaster 2",
+      "discountPercent": 60,
+      "originalPrice": 4999,
+      "finalPrice": 1999,
+      "currency": "EUR",
+      "endsAt": "2026-08-25T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/2688950/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2688950/capsule_184x69.jpg?t=1786540751"
+    },
+    {
       "appId": 2764460,
       "title": "Sandustry",
       "discountPercent": 35,
@@ -55,17 +66,6 @@
       "endsAt": "2026-08-20T17:00:32.000Z",
       "url": "https://store.steampowered.com/app/2950790/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2950790/922472560f653fd897313ab7a10dd86b018d373f/capsule_184x69.jpg?t=1786639727"
-    },
-    {
-      "appId": 1067360,
-      "title": "Pax Autocratica",
-      "discountPercent": 17,
-      "originalPrice": 2999,
-      "finalPrice": 2489,
-      "currency": "EUR",
-      "endsAt": "2026-08-24T17:00:04.000Z",
-      "url": "https://store.steampowered.com/app/1067360/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1067360/0e2383a66d23ea67d7b9618a3a53fa52ca5db032/capsule_184x69.jpg?t=1786694191"
     }
   ]
 }

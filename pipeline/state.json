@@ -5427,7 +5427,34 @@
     "43eab138278eb3e6": "2026-08-19T04:07:24.930Z",
     "22fe7097731bb087": "2026-08-19T04:07:24.930Z",
     "7ddcd7aba2a03e49": "2026-08-19T04:07:24.930Z",
-    "cdfbd720f6cba1a4": "2026-08-19T04:07:24.930Z"
+    "cdfbd720f6cba1a4": "2026-08-19T04:07:24.930Z",
+    "a56aa8d5fcb0212e": "2026-08-19T07:45:52.540Z",
+    "45c82e61f6d25f67": "2026-08-19T07:45:52.540Z",
+    "0b59fd797092e1b7": "2026-08-19T07:45:52.540Z",
+    "92769af148a3096c": "2026-08-19T07:45:52.540Z",
+    "1319ee3b22f95817": "2026-08-19T07:45:52.540Z",
+    "220af2baf8c361fb": "2026-08-19T07:45:52.540Z",
+    "3d7c08eb234d330e": "2026-08-19T07:45:52.540Z",
+    "3ad7dbcce5b90c1a": "2026-08-19T07:45:52.540Z",
+    "b08ac65f019b7529": "2026-08-19T07:45:52.540Z",
+    "2250ce2ddfb9b1a5": "2026-08-19T07:45:52.540Z",
+    "909a6398c0040ffc": "2026-08-19T07:45:52.540Z",
+    "085b585b51376e12": "2026-08-19T07:45:52.540Z",
+    "6ae8597357499a53": "2026-08-19T07:45:52.540Z",
+    "0b1dd4f0b45d391c": "2026-08-19T07:45:52.540Z",
+    "0c05c0844e4778be": "2026-08-19T07:45:52.540Z",
+    "40ae4e9d276098c0": "2026-08-19T07:45:52.540Z",
+    "f22b800ddf717adf": "2026-08-19T07:45:52.540Z",
+    "6bb3965891ef63c7": "2026-08-19T07:45:52.540Z",
+    "c0e7629b82dfdd5d": "2026-08-19T07:45:52.540Z",
+    "8be1b9fa9939d9ea": "2026-08-19T07:45:52.540Z",
+    "4598ea4161f6e1fb": "2026-08-19T07:45:52.540Z",
+    "bcea1821288906ed": "2026-08-19T07:45:52.540Z",
+    "3185ff6be1fe8e84": "2026-08-19T07:45:52.540Z",
+    "1ff6236ab9de0c47": "2026-08-19T07:45:52.540Z",
+    "20d6c6221db7d94b": "2026-08-19T07:45:52.540Z",
+    "2c899a066a30e23f": "2026-08-19T07:45:52.540Z",
+    "92f7d3da11d26899": "2026-08-19T07:45:52.540Z"
   },
   "instagram": {
     "posted": {
@@ -5475,11 +5502,10 @@
       "us-army-gta-6-sonderurlaub-wiederverpflichtung-2026": "2026-08-18T07:05:07.362Z",
       "rockstar-34-gta-6-kein-boykott-solidaritaets-shirts-2026": "2026-08-18T13:05:31.752Z",
       "hogwarts-legacy-2-warner-bros-aktionaersbrief-2026": "2026-08-18T13:05:50.601Z",
-      "star-citizen-entwickler-stream-abbruch-vertrauenskrise-2026": "2026-08-18T15:57:20.344Z"
+      "star-citizen-entwickler-stream-abbruch-vertrauenskrise-2026": "2026-08-18T15:57:20.344Z",
+      "gta-6-gameplay-leak-cyberleek-2026": "2026-08-19T07:46:32.148Z"
     },
     "cards": {
-      "/social/ig-kingdom-hearts-4-d23-coco-welt-anime-2027.mp4": "2026-08-15T18:56:01.061Z",
-      "/social/ig-activision-sledgehammer-halo-multiplayer-geruecht-2026.mp4": "2026-08-16T07:02:37.941Z",
       "/social/ig-kingdom-hearts-4-keine-verschiebung-ende-2027.jpg": "2026-08-16T13:04:55.766Z",
       "/social/ig-windows-11-august-update-kb5121003-spiele-crashes-2026.mp4": "2026-08-16T13:05:13.146Z",
       "/social/ig-witcher-3-npc-muetter-babys-bug-philipp-weber-2026.jpg": "2026-08-16T15:45:52.694Z",
@@ -5491,14 +5517,15 @@
       "/social/ig-us-army-gta-6-sonderurlaub-wiederverpflichtung-2026.mp4": "2026-08-18T07:05:07.362Z",
       "/social/ig-rockstar-34-gta-6-kein-boykott-solidaritaets-shirts-2026.jpg": "2026-08-18T13:05:31.752Z",
       "/social/ig-hogwarts-legacy-2-warner-bros-aktionaersbrief-2026.mp4": "2026-08-18T13:05:50.601Z",
-      "/social/ig-star-citizen-entwickler-stream-abbruch-vertrauenskrise-2026.jpg": "2026-08-18T15:57:20.344Z"
+      "/social/ig-star-citizen-entwickler-stream-abbruch-vertrauenskrise-2026.jpg": "2026-08-18T15:57:20.344Z",
+      "/social/ig-gta-6-gameplay-leak-cyberleek-2026.mp4": "2026-08-19T07:46:32.148Z"
     },
     "unlisted": [
       "gta-6-preis-80-dollar-zelnick-schnaeppchen-2026"
     ],
     "wechsel": {
-      "day": "2026-08-18",
-      "nichtBreaking": 4
+      "day": "2026-08-19",
+      "nichtBreaking": 1
     },
     "tokenCheckedAt": "2026-08-15T09:48:57.921Z",
     "token": {
@@ -5518,7 +5545,7 @@
       "halo: campaign evolved": 2,
       "super mario sunshine": 1,
       "marvel's wolverine": 2,
-      "grand theft auto vi": 4,
+      "grand theft auto vi": 5,
       "pokémon pokopia": 1,
       "helldivers 2": 1,
       "god of war laufey": 1,
