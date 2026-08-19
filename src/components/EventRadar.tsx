@@ -84,10 +84,10 @@ export function EventRadar() {
       <div className={hero ? "grid gap-4 lg:grid-cols-[400px_1fr]" : ""}>
       {hero && (
         <div className="relative flex flex-col overflow-hidden rounded-2xl bg-accent p-6 sm:p-7">
-          {/* Kein bg-navy/10: ein 10-%-Schleier ist auf Cyan keine dunkle
-              Flaeche, wird von der Umkehr-Regel aber als solche behandelt
-              und bekaeme weisse Schrift (gemessen 1.58:1). Reine Kontur. */}
-          <span className={`${PILL_REZEPT} self-start border-[#0C0B1A]/40 text-navy`}>
+          {/* Volle dunkle Pille mit Cyan-Schrift — dieselbe Loesung wie
+              beim Anmelden-Knopf im Kopf (Tim, 19.08.2026). Die blosse
+              Kontur ging auf dem Verlauf fast unter. */}
+          <span className={`${PILL_REZEPT} self-start border-transparent bg-navy text-accent`}>
             NÄCHSTES EVENT
           </span>
           {countdown !== null && (

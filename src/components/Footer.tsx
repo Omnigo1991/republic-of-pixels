@@ -9,7 +9,10 @@ export function Footer() {
     // der Navy-Newsletter-Block direkt an — ein weisses Band dazwischen
     // zerriss die dunkle Schlusszone. Unterseiten bringen ihren eigenen
     // Abstand über das Seiten-Padding mit.
-    <footer className="border-t border-navy-border bg-navy">
+    // Kein bg-navy mehr: die Flaeche kommt aus globals.css als Verlauf.
+    // Die Klasse hier wuerde ihn ueberschreiben, weil Klassen staerker
+    // wiegen als Element-Waehler.
+    <footer className="border-t border-navy-border">
       <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-2 gap-10 md:grid-cols-5">
           <div className="col-span-2">
@@ -25,7 +28,7 @@ export function Footer() {
               href="https://www.instagram.com/republicofpixels"
               target="_blank"
               rel="noreferrer noopener"
-              className="mt-6 inline-flex items-center gap-2 rounded-full border border-accent/40 px-4 py-2 text-sm font-medium text-accent hover:bg-accent/10 transition-colors"
+              className="mt-6 inline-flex items-center gap-2 rounded-full border border-transparent bg-navy px-5 py-2.5 text-sm font-semibold text-accent transition-opacity hover:opacity-85"
             >
               @republicofpixels auf Instagram
             </a>

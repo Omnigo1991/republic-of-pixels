@@ -148,12 +148,18 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
             <div className="treppe-innen">
               <div className="relative aspect-[16/9]">
                 <ArticleMedia article={article} priority sizes="(max-width: 768px) 100vw, 680px" className="h-full w-full" />
+                {article.image?.credit && (
+                  // Ohne eigene Flaeche (Tim, 19.08.2026): die Angabe liegt
+                  // auf dem Bild, der Schlagschatten traegt sie ueber jedem
+                  // Motiv. Links haelt sie Abstand zum Anschnitt.
+                  <figcaption
+                    className="absolute bottom-2.5 left-0 right-4 pl-[calc(var(--kappe)+8px)] text-xs text-white/80"
+                    style={{ textShadow: "0 1px 4px rgba(0,0,0,.9), 0 0 12px rgba(0,0,0,.7)" }}
+                  >
+                    {article.image.credit}
+                  </figcaption>
+                )}
               </div>
-              {article.image?.credit && (
-                <figcaption className="bg-[#0A0818] px-4 pb-3 pl-[calc(var(--kappe)+8px)] pt-2.5 text-xs text-text-tertiary">
-                  {article.image.credit}
-                </figcaption>
-              )}
             </div>
           </div>
         </figure>
