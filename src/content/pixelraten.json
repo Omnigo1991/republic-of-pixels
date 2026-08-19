@@ -1,20 +1,20 @@
 {
-  "datum": "2026-08-18",
-  "nummer": 10,
-  "loesung": "StarCraft II",
+  "datum": "2026-08-19",
+  "nummer": 11,
+  "loesung": "DOOM Eternal",
   "akzeptiert": [
-    "starcraftii",
-    "starcraft2"
+    "doometernal",
+    "doometernal"
   ],
   "hinweise": [
-    "Erschienen 2010 · Echtzeit-Strategie",
-    "Blizzard"
+    "Erschienen 2020 · Shooter",
+    "Höllen-Dämonen"
   ],
   "bilder": [
-    "/images/pixelraten/2026-08-18-s1.jpg",
-    "/images/pixelraten/2026-08-18-s2.jpg",
-    "/images/pixelraten/2026-08-18-s3.jpg",
-    "/images/pixelraten/2026-08-18-s4.jpg",
-    "/images/pixelraten/2026-08-18-s5.jpg"
+    "/images/pixelraten/2026-08-19-s1.jpg",
+    "/images/pixelraten/2026-08-19-s2.jpg",
+    "/images/pixelraten/2026-08-19-s3.jpg",
+    "/images/pixelraten/2026-08-19-s4.jpg",
+    "/images/pixelraten/2026-08-19-s5.jpg"
   ]
 }
