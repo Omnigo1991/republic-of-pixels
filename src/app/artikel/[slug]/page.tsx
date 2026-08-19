@@ -22,6 +22,8 @@ import { SectionDivider } from "@/components/SectionDivider";
 import { formatDateTime, splitTitle } from "@/lib/format";
 import { Masthead } from "@/components/Masthead";
 import { themenFuerArtikel } from "@/lib/themen";
+import { CategoryPill } from "@/components/Badges";
+import { PLATFORM_LABELS } from "@/lib/types";
 
 export function generateStaticParams() {
   return getAllArticles().map((a) => ({ slug: a.slug }));
@@ -94,19 +96,31 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
       />
 
       <article className="mx-auto max-w-article px-4 sm:px-6 pt-8 sm:pt-12">
-        {/* Polygon-Anlehnung (Tim, 15.08.2026): Rubrik + Spielname als EINE
-            Zeile im Zeitungsstil, danach die fette Schlagzeile — die
-            Plattform-Chips wandern unter die Autorenzeile, damit der Kopf
-            eine klare Lesefolge hat: Wo bin ich? Was ist passiert? Von wem? */}
+        {/* Aufbau der Live-Seite (Tim, 19.08.2026): erst die Pillenreihe
+            aus Rubrik und Plattformen, dann NUR der Spielbezug, dann die
+            Schlagzeile. Die Rubrik steht nicht mehr als Text im Kicker —
+            sie ist die erste Pille. */}
         {(() => {
           const { kicker, headline } = splitTitle(article.title, article.tags);
           return (
             <>
-              <p className="mb-3 text-[14px] font-extrabold tracking-[0.1em] text-accent">
-                {CATEGORY_LABELS[article.category].toUpperCase()}
-                {kicker && <span className="text-text-tertiary"> · </span>}
-                {kicker && <span>{kicker.toUpperCase()}</span>}
-              </p>
+              <div className="mb-5 flex flex-wrap items-center gap-2">
+                <CategoryPill category={article.category} />
+                {article.platforms.map((pl) => (
+                  <span
+                    key={pl}
+                    className="inline-flex items-center gap-1.5 rounded-full border border-border-subtle px-2.5 py-1 text-[11px] font-semibold tracking-wide text-text-secondary"
+                  >
+                    <PlatformIcon platform={pl} className="h-3.5 w-3.5" />
+                    {PLATFORM_LABELS[pl]}
+                  </span>
+                ))}
+              </div>
+              {kicker && (
+                <p className="mb-2 text-sm font-bold uppercase tracking-wider text-accent">
+                  {kicker}
+                </p>
+              )}
               <h1 className="text-[32px] font-black leading-[1.12] tracking-[-0.015em] text-text-primary sm:text-[46px]">
                 {headline}
               </h1>
@@ -123,15 +137,10 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/brand/r-avatar.png" alt="" className="h-full w-full" />
             </span>
-            <span className="text-sm font-bold text-text-primary">Von {article.author}</span>
+            <span className="text-sm font-bold text-accent">{article.author}</span>
           </Link>
           <span className="text-sm text-text-tertiary">{formatDateTime(article.publishedAt)}</span>
           <span className="text-sm text-text-tertiary">{article.readingTimeMinutes} Min. Lesezeit</span>
-          <span className="ml-auto flex items-center gap-2">
-            {article.platforms.map((p) => (
-              <PlatformIcon key={p} platform={p} className="h-[18px] w-[18px] text-text-tertiary" />
-            ))}
-          </span>
         </div>
 
         {article.isLeakOrRumor && (
