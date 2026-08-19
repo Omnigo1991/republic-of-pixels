@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { getTopStory, getChronological, getByCategory } from "@/lib/articles";
+import { getTopStory, getChronological, getByCategory, getPopularArticlesLive } from "@/lib/articles";
 import { TopStory } from "@/components/TopStory";
 import { NewsListe } from "@/components/NewsListe";
 import { NeuesteRail, NotchKarte, TickerBand, NewsletterBlock, SektionsKopf, MehrPille } from "@/components/StartseiteNeu";
 import { SektionsBanner } from "@/components/SektionsBanner";
+import { PopularSection } from "@/components/PopularSection";
 import { ReleaseRadar } from "@/components/ReleaseRadar";
 import { DealRadar } from "@/components/DealRadar";
 import { ChartsRadar } from "@/components/ChartsRadar";
@@ -40,6 +41,9 @@ export default async function HomePage() {
     ...chronological.filter((a) => a.category !== "guides").slice(8, 8 + Math.max(0, 5 - guides.length)),
   ].slice(0, 5);
   const ticker = chronological.slice(0, 2);
+  // Kleine Slider-Leiste vor den News (Tim, 19.08.2026) — dieselbe
+  // Stelle wie auf der Live-Seite.
+  const beliebt = await getPopularArticlesLive(8);
 
   return (
     <>
@@ -71,6 +75,10 @@ export default async function HomePage() {
       </section>
 
       <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
+        <Reveal>
+          <PopularSection articles={beliebt} />
+        </Reveal>
+
         <section id="news" className="scroll-mt-16 lg:scroll-mt-[88px] pt-14 sm:pt-16">
           <Reveal>
             <SektionsBanner titel="News aus der" cyan="Republic" />

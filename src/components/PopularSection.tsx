@@ -46,12 +46,17 @@ export function PopularSection({ articles }: { articles: Article[] }) {
 
   return (
     <section aria-labelledby="popular-heading" className="py-10">
-      <div className="mb-3 flex items-center justify-between">
+      {/* items-baseline statt items-center: sonst sitzt der Titel mittig
+          zwischen den hoeheren Pfeilen und der Abstand zur Linie faellt
+          auf 16 px, waehrend alle anderen Sektionen 12 px haben. */}
+      <div className="relative mb-3 flex items-baseline justify-between">
         <h2 id="popular-heading" className="text-xl font-semibold tracking-tight text-text-primary">
           Beliebt bei Lesern
         </h2>
-        <div className="flex items-center gap-2">
-          <span className="mr-2 hidden text-xs text-text-tertiary sm:inline">Diese Woche</span>
+        {/* Absolut gesetzt, damit die hoeheren Pfeile die Zeilenhoehe
+            nicht vergroessern — sonst waere der Abstand zur Linie 15 px
+            statt der 12 px, die jede andere Sektion hat. */}
+        <div className="absolute right-0 top-1/2 flex -translate-y-1/2 items-center gap-2">
           <SliderArrow direction="prev" onClick={() => scrollByCard(-1)} disabled={!canPrev} />
           <SliderArrow direction="next" onClick={() => scrollByCard(1)} disabled={!canNext} />
         </div>
