@@ -22,7 +22,6 @@ import { SectionDivider } from "@/components/SectionDivider";
 import { formatDateTime, splitTitle } from "@/lib/format";
 import { Masthead } from "@/components/Masthead";
 import { themenFuerArtikel } from "@/lib/themen";
-import { CategoryPill } from "@/components/Badges";
 import { PLATFORM_LABELS } from "@/lib/types";
 
 export function generateStaticParams() {
@@ -104,8 +103,14 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           const { kicker, headline } = splitTitle(article.title, article.tags);
           return (
             <>
+              {/* Rubrik und Plattformen tragen in dieser Reihe DIESELBE
+                  Fassung (Tim, 20.08.2026). Die Rubrik-Pille nutzte vorher
+                  border-default (44 % Cyan) und wirkte dadurch heller als
+                  ihre Nachbarn mit border-subtle (30 %). */}
               <div className="mb-5 flex flex-wrap items-center gap-2">
-                <CategoryPill category={article.category} />
+                <span className="inline-flex items-center rounded-full border border-border-subtle px-2.5 py-1 text-[11px] font-semibold tracking-wide text-text-secondary">
+                  {CATEGORY_LABELS[article.category].toUpperCase()}
+                </span>
                 {article.platforms.map((pl) => (
                   <span
                     key={pl}
