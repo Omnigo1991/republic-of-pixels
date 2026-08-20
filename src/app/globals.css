@@ -315,25 +315,27 @@ body, h1, h2, h3, h4, p, li, a, button, span, time, input, label {
   left: 0;
   right: 0;
   bottom: 0;
-  /* GLEICHES VERHAELTNIS WIE DIE KACHELN (Tim, 20.08.2026, gemessen):
-     Die NotchKarte hat ein 280 px hohes Bildfeld und eine 76 px lange
-     Verlaufsstrecke, also 27 %. Der Aufmacher: 120 px auf 600 px, 20 %.
-     Bei "Beliebt bei Lesern" ist das Bildfeld nur 177 px hoch - dieselben
-     76 px waeren dort 43 % gewesen, mehr als das Doppelte im Verhaeltnis,
-     und genau so sah es auch aus. 27 % von 177 px sind 48 px.
-     Die Abstufung ist dieselbe wie bei der Kachel, nur auf 48 px
-     gestaucht. Wichtiger Unterschied im Aufbau: Dort ist der Verlauf der
-     Untergrund fuer den Text, hier endet er an der Bildunterkante, weil
-     der Text darunter auf eigener Flaeche steht. */
-  height: 48px;
+  /* KURZ HALTEN, NICHT PROPORTIONAL RECHNEN (Tim, 20.08.2026).
+     Ich hatte erst proportional gerechnet: Kachel 76 px auf 280 px Bild
+     (27 %), also 48 px auf 177 px. Tim empfand auch das als deutlich zu
+     hoch - zu Recht, denn der Massstab ist ein anderer. Bei der Kachel
+     ist der Verlauf der UNTERGRUND FUER DEN TEXT, er darf und soll das
+     Bild dort verdecken. Hier steht der Text unter dem Bild; der Verlauf
+     hat nur eine Aufgabe, naemlich die harte Kante zu brechen. Alles
+     darueber hinaus frisst Motiv.
+     Am Aufmacher gemessen: 16 px ueber dem Cyan-Text ist der Verlauf
+     praktisch deckend (0,92). Genau diese Strecke ist gemeint, wenn Tim
+     von "einem halben Zentimeter" spricht. Also 20 px, dieselbe
+     Abstufung, nur kurz. */
+  height: 20px;
   pointer-events: none;
   background: linear-gradient(0deg,
     #14122E 0px,
-    rgba(20, 18, 46, 0.9) 8px,
-    rgba(20, 18, 46, 0.68) 18px,
-    rgba(20, 18, 46, 0.4) 28px,
-    rgba(20, 18, 46, 0.16) 38px,
-    rgba(20, 18, 46, 0) 48px);
+    rgba(20, 18, 46, 0.9) 4px,
+    rgba(20, 18, 46, 0.68) 8px,
+    rgba(20, 18, 46, 0.4) 12px,
+    rgba(20, 18, 46, 0.16) 16px,
+    rgba(20, 18, 46, 0) 20px);
 }
 
 /* ---------- Personen-Kacheln auf "Ueber uns" ----------
@@ -389,13 +391,31 @@ body, h1, h2, h3, h4, p, li, a, button, span, time, input, label {
   background: linear-gradient(100deg, #FF2E97, #FF6BC0 42%, #02F0D1 118%);
   border-bottom: 1px solid rgba(11, 6, 22, 0.35);
   box-shadow: 0 6px 26px -8px rgba(255, 46, 151, 0.45);
-  /* BIS GANZ NACH OBEN (Tim, 20.08.2026): Am iPhone liegt ueber der
-     Seite noch die Statusleiste. Ohne diese Zeile endete das Kopfband
-     darunter und im Streifen schimmerte das Artikelbild durch. Die
-     Innenabstand-Zeile faerbt den Streifen mit, weil der Verlauf auch
-     unter dem Innenabstand liegt; der Inhalt bleibt darunter.
-     Am Rechner ist env() gleich 0 - dort aendert sich nichts. */
-  padding-top: env(safe-area-inset-top, 0px);
+  /* DURCHGEHEND GEFUELLT BIS ZUR BILDSCHIRMKANTE (Tim, 20.08.2026).
+     Erster Versuch war nur "padding-top: env(safe-area-inset-top)".
+     Das half nicht: Meldet Safari die Hoehe der Statusleiste nicht,
+     bleibt der Wert null und es passiert gar nichts - genau so war es.
+     Jetzt unabhaengig davon: Das Kopfband zieht seine Flaeche um 140 px
+     nach oben (negativer Aussenabstand) und schiebt den Inhalt um
+     denselben Betrag wieder herunter (Innenabstand). Die Flaeche reicht
+     damit weit ueber die obere Kante hinaus, der Inhalt sitzt
+     unveraendert an seinem Platz. Weil es EINE Flaeche mit EINEM
+     Verlauf ist, entsteht keine Naht - ein zweites Element darueber
+     haette den Verlauf neu begonnen und einen sichtbaren Absatz
+     erzeugt.
+     140 px liegen ueber jeder Statusleiste (iPhone: 47-59 px) und sind
+     bei nicht gescrollter Seite ausserhalb des Bildschirms. Der Zusatz
+     von env() bleibt fuer die Faelle, in denen Safari den Wert doch
+     liefert. */
+  /* Der Klebepunkt muss mitwandern: Mit "top: 0" klemmt der Browser die
+     Oberkante beim Kleben auf null fest, und die 140 px landen UNTER der
+     Bildschirmkante statt darueber - das Band wurde dadurch einfach
+     140 px hoeher. Mit "top: -140px" klebt die Flaeche 140 px oberhalb
+     der Kante, der Inhalt landet genau an der Kante (bzw. unterhalb der
+     Statusleiste, wenn Safari deren Hoehe meldet). */
+  top: -140px;
+  margin-top: -140px;
+  padding-top: calc(140px + env(safe-area-inset-top, 0px));
 }
 .kopfband,
 .kopfband a,
