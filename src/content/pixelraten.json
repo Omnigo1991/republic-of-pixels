@@ -1,20 +1,20 @@
 {
-  "datum": "2026-08-19",
-  "nummer": 11,
-  "loesung": "DOOM Eternal",
+  "datum": "2026-08-20",
+  "nummer": 12,
+  "loesung": "The Elder Scrolls V: Skyrim",
   "akzeptiert": [
-    "doometernal",
-    "doometernal"
+    "theelderscrollsvskyrim",
+    "skyrim"
   ],
   "hinweise": [
-    "Erschienen 2020 · Shooter",
-    "Höllen-Dämonen"
+    "Erschienen 2011 · Rollenspiel",
+    "Bethesda"
   ],
   "bilder": [
-    "/images/pixelraten/2026-08-19-s1.jpg",
-    "/images/pixelraten/2026-08-19-s2.jpg",
-    "/images/pixelraten/2026-08-19-s3.jpg",
-    "/images/pixelraten/2026-08-19-s4.jpg",
-    "/images/pixelraten/2026-08-19-s5.jpg"
+    "/images/pixelraten/2026-08-20-s1.jpg",
+    "/images/pixelraten/2026-08-20-s2.jpg",
+    "/images/pixelraten/2026-08-20-s3.jpg",
+    "/images/pixelraten/2026-08-20-s4.jpg",
+    "/images/pixelraten/2026-08-20-s5.jpg"
   ]
 }
