@@ -55,10 +55,6 @@ export function NeuesteRail({ articles }: { articles: Article[] }) {
 // eigener Navy-Zone darunter - die Standardkarte des neuen Looks.
 export function NotchKarte({
   article,
-  /** Kompakte Schrift fuer die 5er-Reihe (Guides): Bei 205 px Kartenbreite
-      frisst die 16-px-Schlagzeile mit vier Zeilen sonst fast das ganze
-      Bild. */
-  klein = false,
   // AM HANDY DEUTLICH KLEINER ALS DER AUFMACHER (Tim, 20.08.2026): Mit
   // fester Hoehe von 280 px war das Bild praktisch so gross wie der
   // Aufmacher (300 px) - die zweite Meldung wirkte damit wichtiger als
@@ -68,7 +64,6 @@ export function NotchKarte({
   randCyan = false,
 }: {
   article: Article;
-  klein?: boolean;
   bildHoehe?: string;
   /** Cyan-Rand statt Navy - bei den Guides (Tim, 17.08.2026). */
   randCyan?: boolean;
@@ -110,7 +105,7 @@ export function NotchKarte({
                 Schrift und zwei Zeilen brach fast jede Schlagzeile mitten
                 im Wort ab - auf der Startseite waren 19 Ueberschriften
                 abgeschnitten. Ab sm bleibt alles wie bisher. */}
-            <h3 className={`min-h-[3.9em] text-[13.5px] font-extrabold leading-[1.3] text-white line-clamp-3 sm:line-clamp-3 ${klein ? "sm:min-h-[3.9em] sm:text-[14px] sm:leading-[1.3]" : "sm:min-h-[4.05em] sm:text-[16px] sm:leading-[1.35]"}`}>{kern}</h3>
+            <h3 className="min-h-[3.9em] text-[13.5px] font-extrabold leading-[1.3] text-white line-clamp-3 sm:min-h-[4.05em] sm:text-[16px] sm:leading-[1.35]">{kern}</h3>
           </div>
         </div>
       </div>

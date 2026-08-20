@@ -38,8 +38,8 @@ export default async function HomePage() {
   // Meldungen, bis fünf Karten stehen.
   const guideReihe = [
     ...guides,
-    ...chronological.filter((a) => a.category !== "guides").slice(8, 8 + Math.max(0, 5 - guides.length)),
-  ].slice(0, 5);
+    ...chronological.filter((a) => a.category !== "guides").slice(8, 8 + Math.max(0, 4 - guides.length)),
+  ].slice(0, 4);
   const ticker = chronological.slice(0, 2);
   // Kleine Slider-Leiste vor den News (Tim, 19.08.2026) - dieselbe
   // Stelle wie auf der Live-Seite.
@@ -104,9 +104,12 @@ export default async function HomePage() {
             <SektionsBanner titel="Die Republic-" cyan="Guides" />
             <SektionsKopf titel="Alle Guides" />
             <SectionDivider />
-            <div className="grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-5">
+            {/* GLEICH GROSS WIE DIE KARTEN UNTER DEM HERO (Tim, 20.08.2026):
+                vier Spalten auf voller Breite ergeben dieselbe Kartenbreite
+                (~310 px) wie die Dreierreihe neben der Seitenleiste. */}
+            <div className="grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-4">
               {guideReihe.map((a) => (
-                <NotchKarte key={a.slug} article={a} bildHoehe="aspect-[4/5] h-auto sm:aspect-[4/3]" randCyan klein />
+                <NotchKarte key={a.slug} article={a} bildHoehe="aspect-[4/5] h-auto sm:aspect-auto sm:h-[280px]" randCyan />
               ))}
             </div>
             {/* Gleiche Pille und derselbe Abstand (mt-8) wie unter der
