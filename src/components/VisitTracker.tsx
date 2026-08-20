@@ -16,7 +16,13 @@ export function VisitTracker() {
       // - localhost = Entwicklung/Previews → nie zählen
       // - rop_intern = Redaktionsgerät (wird beim Öffnen des Statistik-
       //   Cockpits gesetzt) → nie zählen
-      if (location.hostname === "localhost") return;
+      // NUR DIE ECHTE DOMAIN ZAEHLT (Fund 16.08.2026): Bisher wurde nur
+      // "localhost" ausgenommen — Vercel-Vorschauen (*.vercel.app) liefen
+      // damit voll in die Statistik. Beim Redesign-Zweig hat allein die
+      // automatische Screenshot-Pruefung die Vorschau dutzendfach
+      // geladen, jedes Mal mit frischem Browser und damit neuer
+      // Besucher-Kennung. Das hat die Zahlen aufgeblaeht.
+      if (location.hostname !== "www.republicofpixels.com") return;
       if (localStorage.getItem("rop_intern")) return;
       let visitor = localStorage.getItem("rop_vid");
       if (!visitor) {

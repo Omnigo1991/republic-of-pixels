@@ -1,0 +1,153 @@
+{
+  "slug": "marvel-tokon-raubkopie-performance-anti-cheat-2026",
+  "title": "Marvel Tōkon läuft geknackt besser — Anti-Cheat unter Verdacht",
+  "subtitle": "Nutzerberichte vergleichen CPU-Last von Retail- und Crack-Version und kommen auf einen Unterschied von mehr als 20 Prozentpunkten",
+  "excerpt": "Seit Wochen klagen PC-Spieler:innen über die Performance von Marvel Tōkon: Fighting Souls. Jetzt kursiert eine geknackte Fassung — und die soll deutlich runder laufen. Der Verdacht fällt auf eine bestimmte Software-Schicht.",
+  "seoTitle": "Marvel Tōkon: Raubkopie läuft laut Berichten besser auf PC",
+  "metaDescription": "Nutzer melden: Die geknackte Version von Marvel Tōkon belastet die CPU deutlich weniger als die Kaufversion. Der Verdacht richtet sich gegen Anti-Cheat und DRM.",
+  "category": "news",
+  "platforms": [
+    "pc",
+    "playstation"
+  ],
+  "tags": [
+    "Marvel Tōkon: Fighting Souls",
+    "Arc System Works",
+    "Sony",
+    "PC",
+    "Anti-Cheat"
+  ],
+  "tldr": [
+    "Eine geknackte Fassung von Marvel Tōkon: Fighting Souls ist online aufgetaucht — weniger als zwei Wochen nach Release des PC-Ports",
+    "Nutzer berichten, die Crack-Version belaste ihre CPU mit rund 34 Prozent, die Kaufversion dagegen mit gut 57 Prozent",
+    "Als Ursache wird die Anti-Cheat- und DRM-Schicht vermutet: Die Retail-Fassung soll das Spiel in Echtzeit in 64-KB-Blöcken auf nur einem CPU-Kern entschlüsseln",
+    "Die Angaben stammen von Einzelpersonen aus der Fighting-Game-Community und sind offiziell unbestätigt"
+  ],
+  "whyItMatters": "Wer für ein Spiel bezahlt, sollte nicht die schlechtere technische Erfahrung bekommen als jemand, der es sich illegal beschafft. Der Fall Marvel Tōkon rückt eine Frage in den Mittelpunkt, die PC-Spieler:innen seit Jahren beschäftigt: Wie viel Leistung kosten Kopierschutz und Anti-Cheat wirklich — und wer zahlt dafür?",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Der PC-Port von Marvel Tōkon: Fighting Souls steht seit Wochen in der Kritik: ruckelige Bildraten, hohe CPU-Last, instabile Frametimes. Nun hat sich die Debatte verschärft. Eine geknackte Fassung des Prügelspiels von Arc System Works und Sony ist online aufgetaucht — und mehrere Nutzer berichten, dass diese Version auf identischer Hardware spürbar besser laufe als die gekaufte. Die Erklärung, auf die sich die Berichte stützen: die mehrschichtige Anti-Cheat- und DRM-Konstruktion der Verkaufsversion. Bestätigt ist davon bislang nichts."
+    },
+    {
+      "type": "embed",
+      "platform": "twitter",
+      "url": "https://x.com/JustinSGX/status/2089719755196301778"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "34 %",
+          "label": "CPU-Auslastung der geknackten Version auf einem i7 6700K (laut Nutzerbericht)"
+        },
+        {
+          "value": "57 %",
+          "label": "CPU-Auslastung der Kaufversion auf derselben CPU"
+        },
+        {
+          "value": "< 2 Wochen",
+          "label": "vergingen zwischen PC-Release und dem Auftauchen der Crack-Version"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Was die Nutzerberichte behaupten"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ins Rollen gebracht hat die Diskussion der Nutzer JustinSGX, der seine Messwerte auf X veröffentlichte. Auf einem Intel i7 6700K habe die geknackte Fassung rund 34 Prozent der Rechenleistung beansprucht, die Kaufversion dagegen gut 57 Prozent. Als technische Ursache nennt er die Verschlüsselung des Spiels — und die Art, wie diese zur Laufzeit aufgelöst werde."
+    },
+    {
+      "type": "quote",
+      "text": "Die Retail-Version des Spiels ist verschlüsselt und entschlüsselt das Spiel in Echtzeit in 64-KB-Blöcken auf einem einzigen CPU-Kern.",
+      "attribution": "JustinSGX auf X"
+    },
+    {
+      "type": "paragraph",
+      "text": "Mehrere weitere Stimmen aus der Fighting-Game-Community meldeten ähnliche Beobachtungen. Der ArcSys-Content-Creator ShaudL erklärte, er habe sich die Sache im Debugger angesehen: «Habe mir das ein wenig in x64dbg angeschaut, und ehrlich gesagt: Wenn ihr seht, wie viel Speicher allein fürs Anti-Cheat draufgeht, werdet ihr wütend.» Nutzer MattWilliamson9 schrieb, das Spiel laufe «buchstäblich zehnmal besser, selbst auf höchsten Einstellungen nutze ich kaum 45 Prozent meiner CPU»."
+    },
+    {
+      "type": "paragraph",
+      "text": "Besonders drastisch fällt der Vergleich bei bar_barXII aus, der von stabilen 60 Bildern pro Sekunde auf mittleren Einstellungen berichtet — bei CPU- und GPU-Auslastung im Bereich von 40 bis 50 Prozent. Die Kaufversion hänge dagegen bei dauerhaft 45 fps fest, «selbst bei GBA-Auflösung»."
+    },
+    {
+      "type": "heading",
+      "text": "Warum das plausibel klingt — und wo die Grenze liegt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Diese Angaben stammen ausnahmslos von Einzelpersonen und lassen sich nicht unabhängig überprüfen. Wer ein Spiel legal besitzt, kann den Gegentest schlicht nicht durchführen, ohne selbst zur Raubkopie zu greifen. Auffällig ist allerdings, dass sich mehrere unabhängige Berichte in dieselbe Richtung decken sich — und dass die beschriebene Mechanik technisch nachvollziehbar wäre: Eine Entschlüsselung in kleinen Blöcken, die auf einem einzelnen Kern abläuft, erzeugt einen Flaschenhals, den keine zusätzliche Kernzahl auffangen kann."
+    },
+    {
+      "type": "paragraph",
+      "text": "Dazu passt eine weitere Beobachtung, die bereits vor dem Auftauchen der Crack-Version für Stirnrunzeln sorgte: Beim Start von Marvel Tōkon werden fünf separate Instanzen von Sonys SDK-Laufzeitanwendung hochgefahren. Ob und wie stark sich das auf die Bildrate auswirkt, ist offen — es zeigt aber, wie viele Schichten hier gleichzeitig mitlaufen."
+    },
+    {
+      "type": "heading",
+      "text": "Ein Schutz, der wenig geschützt hat"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Ironie des Falls liegt auf der Hand. Der gesamte Aufwand an DRM und Anti-Cheat hat weder das eine noch das andere Ziel erreicht:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Weniger als zwei Wochen nach Veröffentlichung des PC-Ports kursierte eine geknackte Fassung im Netz",
+        "Datamining-Funde hatten zuvor bereits mehrere kommende DLC-Charaktere offengelegt",
+        "Arc System Works veröffentlichte vergangene Woche einen Patch, der die Performance verbesserte — die Kritik verstummte damit nicht"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Für zahlende Kundschaft ergibt sich daraus eine unangenehme Bilanz: Sie trägt die Kosten eines Schutzmechanismus, dessen Wirkung sich bereits als begrenzt erwiesen hat. Der Kopierschutz hat die Kopie nicht verhindert, das Anti-Cheat keine Geheimnisse gewahrt — geblieben ist offenbar die Rechenlast."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Noch hat sich weder Arc System Works noch Sony zu den Berichten geäussert, und solange das so bleibt, gilt die Anti-Cheat-These als plausible Vermutung, nicht als Befund. Entscheidend wird sein, ob der Nachfolge-Patch das Problem an der Wurzel angeht — also an der Art, wie das Spiel zur Laufzeit entschlüsselt wird — oder ob weiter an Grafikoptionen geschraubt wird. Für ein Fighting Game, dessen gesamter Reiz an konstanten Bildraten und präziser Eingabeverarbeitung hängt, ist das keine Nebensächlichkeit, sondern die Kernfrage."
+    }
+  ],
+  "poll": {
+    "question": "Wie viel Performance-Verlust durch Anti-Cheat und DRM ist für euch noch akzeptabel?",
+    "options": [
+      "Gar keiner — ich zahle für das bessere Produkt",
+      "Ein paar Prozent, wenn Cheater draussen bleiben",
+      "Egal, solange stabile 60 fps stehen",
+      "Bei Singleplayer-Modi gehört Anti-Cheat komplett raus"
+    ]
+  },
+  "isLeakOrRumor": true,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-18T21:46:16.177Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "grid",
+  "sources": [
+    {
+      "title": "Pirated Marvel Tōkon Copies Reportedly Run Much Better On PC",
+      "url": "https://kotaku.com/marvel-tokon-cracked-pirated-pc-steam-performance-anti-cheat-drm-2000725430",
+      "publisher": "Kotaku"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/marvel-tokon-raubkopie-performance-anti-cheat-2026.webp",
+    "alt": "Marvel Tōkon läuft geknackt besser — Anti-Cheat unter Verdacht",
+    "credit": "Bild: Kotaku",
+    "sourceUrl": "https://kotaku.com/marvel-tokon-cracked-pirated-pc-steam-performance-anti-cheat-drm-2000725430",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "marvel-tokon-fighting-souls-pc-patch-2026",
+    "marvel-tokon-pc-release-probleme-2026",
+    "marvel-tokon-fighting-souls-review-2026"
+  ]
+}

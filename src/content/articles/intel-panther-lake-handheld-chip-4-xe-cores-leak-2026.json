@@ -1,0 +1,149 @@
+{
+  "slug": "intel-panther-lake-handheld-chip-4-xe-cores-leak-2026",
+  "title": "Intels dritter Handheld-Chip: mehr Power-Kerne, weniger Grafik",
+  "subtitle": "Ein Leak deutet auf eine Panther-Lake-Variante mit doppelt so vielen P-Cores hin — die Grafikeinheit schrumpft dafür auf ein Drittel",
+  "excerpt": "Bisher besteht Intels Handheld-Serie aus Arc G3 und Arc G3 Extreme. Ein neuer Hinweis nennt eine dritte, deutlich kleinere Konfiguration — und ausgerechnet dort, wo Handhelds am empfindlichsten sind, wird gespart.",
+  "seoTitle": "Intel Panther Lake: Leak zu kleinerem Handheld-Chip",
+  "metaDescription": "Ein Leak nennt eine dritte Panther-Lake-Variante für Handhelds: 8 statt 14 CPU-Kerne, aber nur 4 statt 10 oder 12 GPU-Kerne. Was das bedeutet.",
+  "category": "leaks",
+  "platforms": [
+    "pc"
+  ],
+  "tags": [
+    "Intel",
+    "Panther Lake",
+    "Intel Arc",
+    "Handheld",
+    "Leak"
+  ],
+  "tldr": [
+    "Unbestätigt: Leaker Jaykihn nennt eine Panther-Lake-Konfiguration «4+0+4+4» für Handhelds",
+    "Das wären 8 statt 14 CPU-Kerne, aber doppelt so viele Performance-Kerne wie bei Arc G3 und G3 Extreme",
+    "Die Grafikeinheit schrumpft auf 4 Xe-Kerne — Arc G3 hat 10, Arc G3 Extreme 12",
+    "Taktraten, Speicher, TDP-Spielraum und Produktname sind bislang unbekannt"
+  ],
+  "whyItMatters": "In Gaming-Handhelds entscheidet fast immer die integrierte Grafikeinheit über die Bildrate, nicht die Anzahl der CPU-Kerne. Eine Panther-Lake-Variante mit nur 4 Xe-Kernen würde also günstigere Intel-Handhelds ermöglichen, dafür aber spürbar weniger Spieleleistung liefern als Arc G3 und Arc G3 Extreme. Wer 2026 ein Handheld kauft, sollte die Modellbezeichnung deshalb sehr genau lesen.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Intels Vorstoss in den Handheld-Markt hatte bisher zwei Gesichter: Arc G3 und Arc G3 Extreme, beide auf Basis von Panther Lake und beide mit einer üppig bestückten Grafikeinheit. Jetzt deutet ein Hinweis aus der Leaker-Szene auf ein drittes, deutlich abgespecktes Modell hin, das die Serie nach unten abrunden könnte. Bestätigt ist davon bislang nichts — Intel hat sich zu einer solchen Variante nicht geäussert."
+    },
+    {
+      "type": "embed",
+      "platform": "twitter",
+      "url": "https://x.com/jaykihn0/status/2088959096796102877"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "4",
+          "label": "GPU-Kerne soll die kolportierte Einstiegsvariante haben"
+        },
+        {
+          "value": "12",
+          "label": "GPU-Kerne bietet dagegen das Topmodell Arc G3 Extreme"
+        },
+        {
+          "value": "8",
+          "label": "CPU-Kerne statt der bisherigen 14 in Intels Handheld-Chips"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Vier Ziffern, die alles verraten"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgangspunkt ist ein knapper Beitrag des bei Intel-Themen bisher gut informierten X-Nutzers Jaykihn. Mehr als eine Zahlenkette liefert er nicht — die hat es aber in sich, weil sie dem etablierten Schema für Panther-Lake-Konfigurationen folgt."
+    },
+    {
+      "type": "quote",
+      "text": "Panther Lake 4+0+4+4 Handheld",
+      "attribution": "Jaykihn auf X"
+    },
+    {
+      "type": "list",
+      "items": [
+        "4 Performance-Kerne (P-Cores) — doppelt so viele wie bei Arc G3 und Arc G3 Extreme",
+        "0 Effizienz-Kerne (E-Cores) — statt bisher acht fallen sie komplett weg",
+        "4 Low-Power-Effizienz-Kerne (LPE-Cores) — unverändert",
+        "4 GPU-Kerne (Xe-Cores) — gegenüber 10 beim Arc G3 und 12 beim Arc G3 Extreme"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Unterm Strich blieben also acht statt vierzehn CPU-Kerne übrig, dafür aber die doppelte Anzahl der leistungsstärksten Kerne. In den Kommentaren zu seinem Posting spricht Jaykihn ausdrücklich von einer Modellvariante der niedrigeren Klasse."
+    },
+    {
+      "type": "heading",
+      "text": "Mehr starke Kerne — und trotzdem der kleinere Chip"
+    },
+    {
+      "type": "paragraph",
+      "text": "Das klingt zunächst widersprüchlich, ist es aber nicht. Für die Spieleleistung eines Handhelds ist in erster Linie die integrierte Grafikeinheit entscheidend, und genau dort wird am härtesten gespart: Vier Xe-Kerne sind weniger als die Hälfte dessen, was der Arc G3 mitbringt, und ein Drittel der Ausstattung des Arc G3 Extreme. Die zusätzlichen P-Cores können das in klassischen Spielen kaum ausgleichen — sie helfen eher bei Anwendungen, die auf wenige, schnelle Threads angewiesen sind. Zum Vergleich: Arc G3 und Arc G3 Extreme takten bis 4,6 beziehungsweise 4,7 GHz, verfügen über 12 MB L3-Cache, greifen auf LPDDR5X-8533 zu und bewegen sich in einem TDP-Fenster von 8 bis 30 respektive 8 bis 35 Watt bei 25 Watt Base Power. Ihre Grafikeinheiten heissen Arc B370 und Arc B390 und takten bis 2,20 beziehungsweise 2,30 GHz."
+    },
+    {
+      "type": "heading",
+      "text": "Den Chip gibt es längst — nur nicht im Handheld"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bemerkenswert ist, dass die kolportierte Konfiguration keine Neuentwicklung wäre. Genau diese Kombination aus acht Kernen (4+0+4) und vier Xe-Kernen steckt bereits in mehreren Notebook-Prozessoren von Intel: Core Ultra 7 365 und 355 sowie Core Ultra 5 335 und 325 takten zwischen 4,5 und 4,8 GHz, bieten ebenfalls 12 MB L3-Cache und arbeiten mit LPDDR5X-6800 oder DDR5-6400. Ihre TDP beginnt bei 25 Watt und reicht je nach Modell bis 55 oder gar 80 Watt. Für ein kompaktes Handheld wäre derselbe Chip mit niedrigeren Taktraten und einem deutlich engeren Leistungsbudget denkbar — ein naheliegender Weg, um ohne neues Silizium eine günstigere Produktstufe zu schaffen."
+    },
+    {
+      "type": "heading",
+      "text": "Was noch komplett fehlt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Leak beschränkt sich auf die Kernkonfiguration. Es gibt bislang keine Angaben zu Taktraten, zum unterstützten Speicher, zum TDP-Spielraum oder zur NPU-Leistung. Auch ein Produktname wird nicht genannt: Ob Intel die Variante als Arc G1, Arc G2 oder unter einer ganz anderen Bezeichnung führt, ist offen. Selbst die Frage, ob die Grafikeinheit überhaupt das Arc-Branding erhält oder schlicht als «Intel Graphics» läuft — wie bei den erwähnten Notebook-Modellen —, bleibt unbeantwortet."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Intel positioniert Arc G3 Extreme direkt gegen AMDs Ryzen Z2 Extreme und damit gegen den derzeitigen Massstab im Handheld-Segment. Eine dritte, kleinere Variante würde diesen Kampf nicht entscheiden, sondern eine andere Lücke schliessen: preiswertere Geräte, bei denen der Chip nicht das teuerste Bauteil ist. Für Käuferinnen und Käufer heisst das vor allem eines — ein Panther-Lake-Aufkleber auf der Verpackung sagt künftig noch weniger über die tatsächliche Spieleleistung aus. Entscheidend bleibt die Zahl der Xe-Kerne. Bis Intel offizielle Daten nennt, ist der Hinweis genau das: ein Hinweis."
+    }
+  ],
+  "poll": {
+    "question": "Ein günstigeres Intel-Handheld mit nur 4 GPU-Kernen — würdet ihr das kaufen?",
+    "options": [
+      "Nur wenn es deutlich billiger ist",
+      "Nein, bei der GPU spare ich nie",
+      "Ja, mir reichen Indies und Emulation",
+      "Ich warte lieber auf AMDs Antwort"
+    ]
+  },
+  "isLeakOrRumor": true,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-18T07:04:20.850Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "controller",
+  "sources": [
+    {
+      "title": "Intel Arc G?: Kleinerer Panther-Lake-Chip für Handhelds erwartet",
+      "url": "https://www.computerbase.de/news/prozessoren/intel-arc-g-kleinerer-panther-lake-chip-fuer-handhelds-erwartet.98896/",
+      "publisher": "ComputerBase"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/intel-panther-lake-handheld-chip-4-xe-cores-leak-2026.webp",
+    "alt": "Intels dritter Handheld-Chip: mehr Power-Kerne, weniger Grafik",
+    "credit": "Bild: ComputerBase",
+    "sourceUrl": "https://www.computerbase.de/news/prozessoren/intel-arc-g-kleinerer-panther-lake-chip-fuer-handhelds-erwartet.98896/",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "star-wars-magellan-gameplay-leak-echtra-games-2026",
+    "spider-man-beyond-the-spider-verse-trailer-leak-2026",
+    "hideki-kamiya-devil-may-cry-rueckkehr-andeutung-2026"
+  ]
+}

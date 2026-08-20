@@ -1,22 +1,20 @@
 {
-  "datum": "2026-08-15",
-  "nummer": 7,
-  "loesung": "Age of Empires II",
+  "datum": "2026-08-20",
+  "nummer": 12,
+  "loesung": "The Elder Scrolls V: Skyrim",
   "akzeptiert": [
-    "ageofempiresii",
-    "ageofempires2",
-    "aoe2",
-    "aoe2"
+    "theelderscrollsvskyrim",
+    "skyrim"
   ],
   "hinweise": [
-    "Erschienen 1999 · Echtzeit-Strategie",
-    "Wololo"
+    "Erschienen 2011 · Rollenspiel",
+    "Bethesda"
   ],
   "bilder": [
-    "/images/pixelraten/2026-08-15-s1.jpg",
-    "/images/pixelraten/2026-08-15-s2.jpg",
-    "/images/pixelraten/2026-08-15-s3.jpg",
-    "/images/pixelraten/2026-08-15-s4.jpg",
-    "/images/pixelraten/2026-08-15-s5.jpg"
+    "/images/pixelraten/2026-08-20-s1.jpg",
+    "/images/pixelraten/2026-08-20-s2.jpg",
+    "/images/pixelraten/2026-08-20-s3.jpg",
+    "/images/pixelraten/2026-08-20-s4.jpg",
+    "/images/pixelraten/2026-08-20-s5.jpg"
   ]
 }

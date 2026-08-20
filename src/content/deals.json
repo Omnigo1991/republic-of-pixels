@@ -1,27 +1,16 @@
 {
-  "updatedAt": "2026-08-15T07:09:43.417Z",
+  "updatedAt": "2026-08-20T04:06:58.205Z",
   "deals": [
     {
-      "appId": 1142710,
-      "title": "Total War: WARHAMMER III",
-      "discountPercent": 85,
+      "appId": 1771300,
+      "title": "Kingdom Come: Deliverance II",
+      "discountPercent": 60,
       "originalPrice": 5999,
-      "finalPrice": 899,
+      "finalPrice": 2399,
       "currency": "EUR",
-      "endsAt": "2026-08-27T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1142710/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1142710/capsule_184x69.jpg?t=1786634522"
-    },
-    {
-      "appId": 1941540,
-      "title": "Mafia: The Old Country",
-      "discountPercent": 40,
-      "originalPrice": 4999,
-      "finalPrice": 2999,
-      "currency": "EUR",
-      "endsAt": "2026-08-28T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1941540/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1941540/0533259232ecf45eb80b21e9f1f37332d94edffc/capsule_184x69_alt_assets_3_german.jpg?t=1786750937"
+      "endsAt": "2026-08-24T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1771300/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1771300/93e28946c46f09d761bbfab1e17e8c1c4a8323a0/capsule_184x69.jpg?t=1777975568"
     },
     {
       "appId": 2764460,
@@ -46,17 +35,6 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2358720/b7f722ddd5e23503f598586aa3700dd4d827bb2d/capsule_184x69.jpg?t=1760601605"
     },
     {
-      "appId": 1478500,
-      "title": "Big Walk",
-      "discountPercent": 25,
-      "originalPrice": 1899,
-      "finalPrice": 1424,
-      "currency": "EUR",
-      "endsAt": "2026-08-18T17:00:09.000Z",
-      "url": "https://store.steampowered.com/app/1478500/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1478500/44da9fb07ebe477387355d7fce29560b55125cce/capsule_184x69.jpg?t=1785911674"
-    },
-    {
       "appId": 2950790,
       "title": "IRON NEST: Heavy Turret Simulator",
       "discountPercent": 25,
@@ -66,6 +44,28 @@
       "endsAt": "2026-08-20T17:00:32.000Z",
       "url": "https://store.steampowered.com/app/2950790/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2950790/922472560f653fd897313ab7a10dd86b018d373f/capsule_184x69.jpg?t=1786639727"
+    },
+    {
+      "appId": 4132330,
+      "title": "Pizza House Simulator🍕",
+      "discountPercent": 25,
+      "originalPrice": 1349,
+      "finalPrice": 1011,
+      "currency": "EUR",
+      "endsAt": "2026-09-02T17:00:37.000Z",
+      "url": "https://store.steampowered.com/app/4132330/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4132330/30e0db1cba795cfaefd61c946efe97c5df73ab0c/capsule_184x69.jpg?t=1787166636"
+    },
+    {
+      "appId": 1067360,
+      "title": "Pax Autocratica",
+      "discountPercent": 17,
+      "originalPrice": 2999,
+      "finalPrice": 2489,
+      "currency": "EUR",
+      "endsAt": "2026-08-24T17:00:04.000Z",
+      "url": "https://store.steampowered.com/app/1067360/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1067360/0e2383a66d23ea67d7b9618a3a53fa52ca5db032/capsule_184x69.jpg?t=1786694191"
     }
   ]
 }
