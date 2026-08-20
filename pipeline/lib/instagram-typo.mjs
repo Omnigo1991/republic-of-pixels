@@ -201,13 +201,22 @@ export async function renderTypoCard({
      sich selbst — sie wäre immer zufrieden. */
   .titel { font-family:'Inter',sans-serif; font-weight:900; text-transform:uppercase;
     width:100%; text-align:center; font-size:${TITEL_GROESSE}px; line-height:1.34;
-    letter-spacing:-0.02em; color:#FFFFFF; }
+    letter-spacing:-0.02em; color:#FFFFFF;
+    text-shadow:-3px 0 rgba(255,46,151,0.75), 3px 0 rgba(2,240,209,0.75); }
   .titel .zeile { display:block; white-space:nowrap; }
-  .titel .cy { background:#02F0D1; color:#0C0B1A; padding:1px 9px 5px 9px; }
+  .titel .cy { background:linear-gradient(100deg,#FF2E97,#02F0D1); color:#0B0616;
+    padding:1px 9px 5px 9px; text-shadow:none; }
   /* transform-origin mittig statt links — sonst kippt die Notiz aus der
      Mittelachse. */
   .notiz { font-family:'Caveat',cursive; font-weight:700; font-size:47px; line-height:1.0;
     color:#02F0D1; margin-top:24px; transform:rotate(-2deg); transform-origin:center center; }
+  /* ---- Cyberpunk (Entwurf 20.08.2026) ----
+     Roehrenbild: feine Bildschirmzeilen ueber der ganzen Karte. Der
+     Aufbau bleibt unveraendert, nur Textur und Farbe wechseln. */
+  body::after { content:""; position:absolute; inset:0; z-index:5; pointer-events:none;
+    background:repeating-linear-gradient(0deg, rgba(0,0,0,0.34) 0 2px, transparent 2px 6px);
+    mix-blend-mode:multiply; opacity:0.5; }
+  .stapel, .logo, .label { z-index:6; }
   .logo { position:absolute; left:50%; transform:translateX(-50%); bottom:${G}px; height:${LOGO_H}px; }
 </style></head><body>
   ${icons ? iconHtml(streuText, kategorie) : ""}

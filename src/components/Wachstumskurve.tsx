@@ -57,7 +57,7 @@ export function Wachstumskurve({ daten }: { daten: Tageswert[] }) {
 
   if (daten.length < 2) {
     return (
-      <p className="rounded-2xl border border-border-subtle bg-surface-card p-5 text-sm text-text-tertiary">
+      <p className="rounded-2xl border border-border-subtle bg-surface-panel p-5 text-sm text-text-tertiary">
         Noch zu wenig Daten für eine Kurve — ab dem zweiten Tag erscheint sie hier.
       </p>
     );
@@ -82,7 +82,7 @@ export function Wachstumskurve({ daten }: { daten: Tageswert[] }) {
     ersteHaelfte > 0 ? Math.round(((zweiteHaelfte - ersteHaelfte) / ersteHaelfte) * 100) : null;
 
   return (
-    <div className="rounded-2xl border border-border-subtle bg-surface-card p-4 sm:p-5">
+    <div className="rounded-2xl border border-border-subtle bg-surface-panel p-4 sm:p-5">
       <div className="mb-4 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
         <div className="flex items-center gap-4 text-xs">
           <span className="inline-flex items-center gap-1.5 text-text-secondary">

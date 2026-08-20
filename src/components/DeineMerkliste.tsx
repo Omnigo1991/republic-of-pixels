@@ -91,10 +91,9 @@ export function DeineMerkliste() {
   return (
     <section aria-labelledby="merkliste-heading" className="py-10">
       <div className="mb-3 flex items-baseline justify-between">
-        <h2 id="merkliste-heading" className="text-xl font-semibold tracking-tight text-text-primary">
+        <h2 id="merkliste-heading" className="text-[20px] font-semibold tracking-tight text-text-primary">
           Deine Merkliste
         </h2>
-        <span className="text-xs text-text-tertiary">Themen, die du verfolgst</span>
       </div>
       <SectionDivider />
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
@@ -138,7 +137,7 @@ export function DeineMerkliste() {
           {fehler && <p className="mt-1 text-xs text-error">{fehler}</p>}
 
           {vorschlaegeOffen && vorschlaege.length > 0 && (
-            <div className="absolute inset-x-0 top-full z-10 mt-1.5 overflow-hidden rounded-xl border border-border-default bg-bg-elevated shadow-elevated">
+            <div className="absolute inset-x-0 top-full z-10 mt-1.5 overflow-hidden rounded-2xl border border-border-default bg-bg-elevated shadow-elevated">
               {!neuesThema.trim() && (
                 <p className="px-3 pt-2.5 text-[10px] tracking-wide text-text-tertiary">VORSCHLÄGE</p>
               )}

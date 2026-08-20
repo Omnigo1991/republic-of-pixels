@@ -21,7 +21,7 @@ export function BreakingTicker() {
   return (
     <Link
       href={`/artikel/${latest.slug}`}
-      className="group block border-b border-accent/20 bg-accent/[0.07] outline-none transition-colors hover:bg-accent/[0.12]"
+      className="group block border-b border-navy-border bg-navy outline-none transition-colors hover:bg-[#14132A]"
     >
       <div className="mx-auto flex max-w-content items-center gap-3 px-4 py-2.5 sm:px-6 lg:px-8">
         <span className="relative flex h-2 w-2 shrink-0">
@@ -31,7 +31,7 @@ export function BreakingTicker() {
         <span className="shrink-0 text-[11px] font-bold uppercase tracking-[0.2em] text-accent">
           Breaking
         </span>
-        <span className="truncate text-sm text-text-primary group-hover:text-accent transition-colors">
+        <span className="truncate text-sm text-white group-hover:text-accent transition-colors">
           {headline}
         </span>
         <span className="ml-auto hidden shrink-0 text-xs text-text-tertiary group-hover:text-accent sm:inline">

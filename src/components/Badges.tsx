@@ -32,7 +32,7 @@ export function CategoryPill({ category, onDark = false }: { category: Category;
 
 export function LeakBanner() {
   return (
-    <div className="flex items-start gap-3 rounded-xl border border-warning/30 bg-warning/[0.08] px-4 py-3">
+    <div className="flex items-start gap-3 rounded-2xl border border-warning/30 bg-warning/[0.08] px-4 py-3">
       <span className="mt-0.5 text-warning">⚠</span>
       <p className="text-sm leading-relaxed text-text-primary">
         <strong className="text-warning">Gerücht / Leak:</strong> Dieser Artikel behandelt unbestätigte
@@ -66,7 +66,7 @@ export function ReviewLabelBadge({ label, size = "md" }: { label: ReviewLabel; s
 
 export function Tag({ children }: { children: ReactNode }) {
   return (
-    <span className="inline-flex items-center rounded-full border border-border-subtle bg-surface-card px-3 py-1 text-xs text-text-tertiary">
+    <span className="inline-flex items-center rounded-full border border-border-subtle bg-surface-panel px-3 py-1 text-xs text-text-tertiary">
       {children}
     </span>
   );

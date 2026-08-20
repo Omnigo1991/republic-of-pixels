@@ -36,7 +36,7 @@ export default function ThemaPage({ params }: { params: { slug: string } }) {
             Thema
           </Link>
         </p>
-        <h1 className="text-2xl font-semibold tracking-tight text-text-primary sm:text-3xl">
+        <h1 className="text-[30px] font-black tracking-tight text-text-primary sm:text-[36px]">
           {thema.label}
         </h1>
         <p className="mt-3 max-w-2xl text-text-secondary">

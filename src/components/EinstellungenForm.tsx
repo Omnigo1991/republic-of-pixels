@@ -145,7 +145,7 @@ export function EinstellungenForm() {
       </p>
 
       {/* Nickname */}
-      <div className="mt-8 rounded-2xl border border-border-subtle bg-surface-card p-6">
+      <div className="mt-8 rounded-2xl border border-border-subtle bg-surface-panel p-6">
         <h2 className="text-lg font-semibold text-text-primary">Nickname</h2>
         <p className="mt-1 text-xs text-text-tertiary">
           Dein öffentlicher Name in Kommentaren und auf deinem Profil.
@@ -169,7 +169,7 @@ export function EinstellungenForm() {
       </div>
 
       {/* Profilbild */}
-      <div className="mt-6 rounded-2xl border border-border-subtle bg-surface-card p-6">
+      <div className="mt-6 rounded-2xl border border-border-subtle bg-surface-panel p-6">
         <h2 className="text-lg font-semibold text-text-primary">Profilbild</h2>
         <p className="mt-1 text-xs text-text-tertiary">
           Wähle einen Pixel-Sprite — oder deine Initiale bzw. dein Login-Profilbild.
@@ -224,7 +224,7 @@ export function EinstellungenForm() {
       </div>
 
       {/* Passwort (nur E-Mail-Konten) */}
-      <div className="mt-6 rounded-2xl border border-border-subtle bg-surface-card p-6">
+      <div className="mt-6 rounded-2xl border border-border-subtle bg-surface-panel p-6">
         <h2 className="text-lg font-semibold text-text-primary">Passwort</h2>
         {istEmailKonto ? (
           <>
@@ -256,7 +256,7 @@ export function EinstellungenForm() {
       </div>
 
       {/* Abmelden */}
-      <div className="mt-6 rounded-2xl border border-border-subtle bg-surface-card p-6">
+      <div className="mt-6 rounded-2xl border border-border-subtle bg-surface-panel p-6">
         <h2 className="text-lg font-semibold text-text-primary">Sitzung</h2>
         <button
           onClick={() => supabase.auth.signOut()}

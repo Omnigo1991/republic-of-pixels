@@ -107,7 +107,7 @@ export function TeilenKnopf() {
           >
             <div className="mx-auto mb-4 h-1 w-9 rounded-full bg-border-default sm:hidden" />
             <div className="mb-4 flex items-center gap-3">
-              <span className="flex h-9 w-9 items-center justify-center rounded-[10px] border border-border-subtle bg-surface-card">
+              <span className="flex h-9 w-9 items-center justify-center rounded-lg border border-border-subtle bg-surface-panel">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src="/brand/r-mark.png" alt="" className="h-[18px]" />
               </span>
@@ -123,7 +123,7 @@ export function TeilenKnopf() {
                 <button
                   key={k.key}
                   onClick={() => kanalOeffnen(k)}
-                  className="rounded-2xl border border-border-subtle bg-surface-card px-1.5 pb-2.5 pt-3 text-center transition-colors hover:border-accent/40 hover:bg-surface-hover"
+                  className="rounded-2xl border border-border-subtle bg-surface-panel px-1.5 pb-2.5 pt-3 text-center transition-colors hover:border-accent/40 hover:bg-surface-panelhover"
                 >
                   <span className="flex h-7 items-center justify-center text-accent">
                     <KanalIcon kanal={k.key} />
@@ -149,7 +149,7 @@ export function TeilenKnopf() {
         onClick={teilen}
         aria-label="Diese Seite teilen"
         aria-expanded={offen}
-        className={`fixed bottom-5 right-5 z-50 h-[52px] w-[52px] items-center justify-center rounded-full border border-accent/35 bg-bg-elevated/85 text-accent backdrop-blur transition-all duration-300 hover:border-accent/60 hover:bg-surface-hover sm:bottom-6 sm:right-6 sm:flex ${offen ? "hidden" : "flex"} ${
+        className={`fixed bottom-5 right-5 z-50 h-[52px] w-[52px] items-center justify-center rounded-full border border-accent/35 bg-[rgba(18,17,38,0.85)] text-accent backdrop-blur transition-all duration-300 hover:border-accent/70 sm:bottom-6 sm:right-6 sm:flex ${offen ? "hidden" : "flex"} ${
           sichtbar || offen
             ? "translate-y-0 opacity-100"
             : "pointer-events-none translate-y-4 opacity-0"

@@ -72,47 +72,52 @@ export function EventRadar() {
   return (
     <section aria-labelledby="events-heading" className="py-10">
       <div className="mb-3 flex items-baseline justify-between">
-        <h2 id="events-heading" className="text-xl font-semibold tracking-tight text-text-primary">
+        <h2 id="events-heading" className="text-[20px] font-semibold tracking-tight text-text-primary">
           Event-Radar
         </h2>
-        <span className="text-xs text-text-tertiary">Die nächsten grossen Momente</span>
       </div>
       <SectionDivider />
+      {/* Grosse Event-Buehne links, Karten rechts (Tim, 15.08.2026 —
+          das Layout aus dem abgenommenen Entwurf): Das naechste Event
+          bekommt eine stehende Cyan-Flaeche mit grossem Navy-Countdown
+          (Navy-Umbau 17.08.2026 — vorher umgekehrt). */}
+      <div className={hero ? "grid gap-4 lg:grid-cols-[400px_1fr]" : ""}>
       {hero && (
-        <div className="mb-4 flex flex-col items-start gap-5 rounded-2xl border border-accent/30 bg-accent/[0.05] p-5 sm:flex-row sm:items-center sm:gap-8 sm:p-6">
+        <div className="relative flex flex-col overflow-hidden rounded-2xl bg-accent p-6 sm:p-7">
+          {/* Volle dunkle Pille mit Cyan-Schrift — dieselbe Loesung wie
+              beim Anmelden-Knopf im Kopf (Tim, 19.08.2026). Die blosse
+              Kontur ging auf dem Verlauf fast unter. */}
+          <span className={`${PILL_REZEPT} self-start border-transparent bg-navy text-accent`}>
+            NÄCHSTES EVENT
+          </span>
           {countdown !== null && (
-            <div className="shrink-0 text-center sm:min-w-[130px]">
-              <div className="text-5xl font-bold leading-none tracking-tight text-accent">
+            <>
+              <div className="mt-5 text-[68px] font-black leading-none tracking-tight text-navy sm:text-[76px]">
                 {countdown === 0 ? "Heute" : countdown}
               </div>
-              <div className="mt-1.5 text-[11px] font-bold uppercase tracking-wider text-text-tertiary">
+              <div className="mt-2 text-[12px] font-extrabold uppercase tracking-[0.14em] text-navy/70">
                 {countdown === 0 ? "Es geht los" : countdown === 1 ? "Tag bis zum Start" : "Tage bis zum Start"}
               </div>
-            </div>
+            </>
           )}
-          <div className="min-w-0">
-            <span className={`${PILL_REZEPT} text-accent border-accent/40 bg-accent/10`}>
-              NÄCHSTES EVENT
-            </span>
-            <p className="mt-2.5 text-2xl font-semibold tracking-tight text-text-primary">
-              {hero.name}
-            </p>
-            <p className="mt-1 text-sm text-text-secondary">
-              <span className="font-semibold text-text-primary">{hero.dateLabel}</span> ·{" "}
-              {hero.beschreibung}
-            </p>
-            {heroHub && (
-              <Link
-                href={`/thema/${heroHub.slug}`}
-                className="mt-2.5 inline-block text-sm font-semibold text-accent hover:underline"
-              >
-                Unsere {hero.name}-Berichterstattung →
-              </Link>
-            )}
-          </div>
+          <p className="mt-6 text-[28px] font-black tracking-tight text-navy">
+            {hero.name}
+          </p>
+          <p className="mt-2 max-w-[320px] text-sm leading-relaxed text-navy/75">
+            <span className="font-semibold text-navy">{hero.dateLabel}</span> ·{" "}
+            {hero.beschreibung}
+          </p>
+          {heroHub && (
+            <Link
+              href={`/thema/${heroHub.slug}`}
+              className="mt-3 inline-block text-sm font-semibold text-navy underline decoration-navy/40 underline-offset-4 hover:decoration-navy"
+            >
+              Unsere {hero.name}-Berichterstattung →
+            </Link>
+          )}
         </div>
       )}
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid content-start gap-4 sm:grid-cols-2">
         {karten.map((e) => (
           <div
             key={e.name}
@@ -130,6 +135,7 @@ export function EventRadar() {
             <div>{pill(e.status)}</div>
           </div>
         ))}
+      </div>
       </div>
       <p className="mt-3 text-[11px] text-text-tertiary">
         Status: FIXIERT = offiziell bestätigt · ERWARTET = Branchen-Routine ohne Termin · GERÜCHT =

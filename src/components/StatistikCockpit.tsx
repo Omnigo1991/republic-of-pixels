@@ -349,7 +349,7 @@ export function StatistikCockpit() {
           </div>
 
           {/* Community */}
-          <div className="mb-6 flex items-center gap-4 rounded-2xl border border-border-subtle bg-surface-card p-6">
+          <div className="mb-6 flex items-center gap-4 rounded-2xl border border-border-subtle bg-surface-panel p-6">
             <div>
               <p className="text-3xl font-bold text-text-primary">
                 {zahlen.registrierteKonten.toLocaleString("de-DE")}
@@ -370,7 +370,7 @@ export function StatistikCockpit() {
               { wert: zahlen.gesamt, label: "Aufrufe gesamt" },
               { wert: zahlen.besucherGesamt, label: "Besucher gesamt" },
             ].map((k) => (
-              <div key={k.label} className="rounded-2xl border border-border-subtle bg-surface-card p-5 text-center">
+              <div key={k.label} className="rounded-2xl border border-border-subtle bg-surface-panel p-5 text-center">
                 <p className="text-2xl font-bold text-text-primary">{k.wert.toLocaleString("de-DE")}</p>
                 <p className="mt-1 text-xs text-text-tertiary">{k.label}</p>
               </div>
@@ -396,7 +396,7 @@ export function StatistikCockpit() {
             {zahlen.herkunft.map((h, i) => (
               <div
                 key={h.quelle}
-                className={`flex items-center justify-between gap-4 px-5 py-3 ${i % 2 === 0 ? "bg-surface-card" : "bg-bg-elevated"}`}
+                className={`flex items-center justify-between gap-4 px-5 py-3 ${i % 2 === 0 ? "bg-surface-panel" : "bg-bg-elevated"}`}
               >
                 <span className="text-sm text-text-secondary">{h.quelle}</span>
                 <span className="shrink-0 text-sm font-semibold text-accent">

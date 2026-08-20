@@ -16,7 +16,7 @@ export function InlineArticleCard({ article }: { article: Article }) {
       href={`/artikel/${article.slug}`}
       className="group not-prose flex items-center gap-4 sm:gap-6 rounded-2xl border border-border-default p-3 sm:p-4 transition-colors hover:bg-surface-hover"
     >
-      <div className="relative w-28 sm:w-48 shrink-0 self-center overflow-hidden rounded-xl border border-border-subtle aspect-[4/3] sm:aspect-[16/10]">
+      <div className="relative w-28 sm:w-48 shrink-0 self-center overflow-hidden rounded-2xl border border-border-subtle aspect-[4/3] sm:aspect-[16/10]">
         <ArticleMedia article={article} sizes="(max-width: 640px) 112px, 192px" className="h-full w-full transition-transform duration-500 group-hover:scale-105" />
       </div>
       <div className="flex min-w-0 flex-1 flex-col justify-center">

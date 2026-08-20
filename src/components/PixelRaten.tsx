@@ -186,16 +186,13 @@ export function PixelRaten() {
   return (
     <section aria-labelledby="pixelraten-heading" className="py-10">
       <div className="mb-3 flex items-baseline justify-between">
-        <h2 id="pixelraten-heading" className="text-xl font-semibold tracking-tight text-text-primary">
+        <h2 id="pixelraten-heading" className="text-[20px] font-semibold tracking-tight text-text-primary">
           Pixel-Raten
         </h2>
-        <span className="text-xs text-text-tertiary">
-          Das tägliche Rätsel · jede Nacht neu
-        </span>
       </div>
       <SectionDivider />
       <div className="flex flex-col gap-6 rounded-2xl border border-border-subtle bg-surface-card p-5 sm:flex-row sm:p-6">
-        <div className="relative w-full shrink-0 overflow-hidden rounded-xl border border-border-subtle sm:w-[320px]">
+        <div className="relative w-full shrink-0 overflow-hidden rounded-2xl border border-border-subtle sm:w-[320px]">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={raetsel.bilder[stufe - 1]}
@@ -224,7 +221,7 @@ export function PixelRaten() {
               return (
                 <span
                   key={i}
-                  className={`flex h-9 w-9 items-center justify-center rounded-xl border text-sm font-bold ${
+                  className={`flex h-9 w-9 items-center justify-center rounded-2xl border text-sm font-bold ${
                     erfolg
                       ? "border-accent bg-accent/15 text-accent"
                       : falsch
@@ -258,14 +255,14 @@ export function PixelRaten() {
               spät, um noch zu helfen. Der zweite Hinweis folgt weiterhin
               später, damit es nicht zu leicht wird. */}
           {!fertig && falscheTipps.length >= 1 && (
-            <div className="mt-3 rounded-xl border border-accent/25 bg-accent/5 px-4 py-2.5 text-sm text-text-secondary">
+            <div className="mt-3 rounded-2xl border border-accent/25 bg-accent/5 px-4 py-2.5 text-sm text-text-secondary">
               <span className="font-semibold text-accent">Hinweis:</span> {raetsel.hinweise[0]}
               {falscheTipps.length >= 3 && <> · {raetsel.hinweise[1]}</>}
             </div>
           )}
 
           {bereit && fertig ? (
-            <div className="mt-4 rounded-xl border border-border-subtle bg-bg-elevated px-4 py-3">
+            <div className="mt-4 rounded-2xl border border-border-subtle bg-bg-elevated px-4 py-3">
               {geloest ? (
                 <p className="text-sm text-text-primary">
                   <span className="font-semibold text-accent">Richtig!</span> Es war{" "}

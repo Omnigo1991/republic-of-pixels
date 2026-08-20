@@ -7,6 +7,10 @@ const nextConfig = {
   // auf der Live-Seite aus. Unsere Pipeline erzeugt die Bilder bereits
   // als fertig optimierte 1600px-WebPs (~80 KB); wir liefern sie direkt
   // aus, statt sie erneut durch den Optimierer zu schicken.
+  //
+  // Nachgezogen am 17.08.2026: Der Design-Zweig entstand vor dem Notfall
+  // und hatte den Eintrag nie. Deshalb war in seiner Vorschau KEIN
+  // einziges Bild zu sehen, waehrend die Live-Seite normal lief.
   images: {
     unoptimized: true,
   },

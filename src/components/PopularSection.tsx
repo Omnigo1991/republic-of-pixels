@@ -46,12 +46,17 @@ export function PopularSection({ articles }: { articles: Article[] }) {
 
   return (
     <section aria-labelledby="popular-heading" className="py-10">
-      <div className="mb-3 flex items-center justify-between">
+      {/* items-baseline statt items-center: sonst sitzt der Titel mittig
+          zwischen den hoeheren Pfeilen und der Abstand zur Linie faellt
+          auf 16 px, waehrend alle anderen Sektionen 12 px haben. */}
+      <div className="relative mb-3 flex items-baseline justify-between">
         <h2 id="popular-heading" className="text-xl font-semibold tracking-tight text-text-primary">
           Beliebt bei Lesern
         </h2>
-        <div className="flex items-center gap-2">
-          <span className="mr-2 hidden text-xs text-text-tertiary sm:inline">Diese Woche</span>
+        {/* Absolut gesetzt, damit die hoeheren Pfeile die Zeilenhoehe
+            nicht vergroessern — sonst waere der Abstand zur Linie 15 px
+            statt der 12 px, die jede andere Sektion hat. */}
+        <div className="absolute right-0 top-1/2 flex -translate-y-1/2 items-center gap-2">
           <SliderArrow direction="prev" onClick={() => scrollByCard(-1)} disabled={!canPrev} />
           <SliderArrow direction="next" onClick={() => scrollByCard(1)} disabled={!canNext} />
         </div>
@@ -84,7 +89,7 @@ function SliderArrow({
       onClick={onClick}
       disabled={disabled}
       aria-label={direction === "prev" ? "Vorherige Artikel" : "Weitere Artikel"}
-      className="flex h-9 w-9 items-center justify-center rounded-full border border-border-default text-text-secondary transition-colors hover:border-accent/60 hover:text-accent disabled:cursor-default disabled:opacity-35 disabled:hover:border-border-default disabled:hover:text-text-secondary"
+      className="blaetterpfeil flex h-9 w-9 items-center justify-center rounded-full border border-border-default text-text-secondary transition-colors hover:border-accent/60 hover:text-accent disabled:cursor-default disabled:opacity-35 disabled:hover:border-border-default disabled:hover:text-text-secondary"
     >
       <svg
         viewBox="0 0 24 24"
@@ -106,10 +111,15 @@ function PopularCard({ article, rank }: { article: Article; rank: number }) {
   const { kicker, headline } = splitTitle(article.title, article.tags);
   return (
     <article className="w-[280px] shrink-0 snap-start sm:w-[320px]">
+      {/* Kappecke wie bei allen Artikeln (Tim, 19.08.2026): eckig = Artikel,
+          rund = Werkzeug. Aussen der Verlauf als Rand, innen die Flaeche —
+          zwei Ebenen, weil ein Beschnitt sonst den Rand an der Schraege
+          wegschneiden wuerde. */}
       <Link
         href={`/artikel/${article.slug}`}
-        className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border-subtle bg-surface-card transition-all duration-300 hover:bg-surface-hover"
+        className="artikelkante group block h-full transition-all duration-300"
       >
+        <span className="artikelkante__innen flex h-full flex-col overflow-hidden">
         <div className="relative aspect-[16/9] overflow-hidden">
           <ArticleMedia
             article={article}
@@ -120,7 +130,9 @@ function PopularCard({ article, rank }: { article: Article; rank: number }) {
             {String(rank).padStart(2, "0")}
           </span>
         </div>
-        <div className="flex flex-1 flex-col gap-2 p-4">
+        {/* Zusaetzlicher Innenabstand links: der Anschnitt frisst die
+            untere linke Ecke, sonst wirkt die Schlagzeile abgesaegt. */}
+        <div className="flex flex-1 flex-col gap-2 p-4 pl-[30px]">
           <div>
             <CategoryPill category={article.category} />
           </div>
@@ -133,6 +145,7 @@ function PopularCard({ article, rank }: { article: Article; rank: number }) {
             {headline}
           </h3>
         </div>
+      </span>
       </Link>
     </article>
   );

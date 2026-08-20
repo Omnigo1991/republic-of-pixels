@@ -13,6 +13,7 @@ const inter = Inter({
   display: "swap",
 });
 
+
 const SITE_URL = "https://www.republicofpixels.com";
 
 export const metadata: Metadata = {
@@ -102,7 +103,7 @@ const organisationJsonLd = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="de" className={inter.variable}>
-      <body className="min-h-screen bg-bg-base font-sans antialiased">
+      <body className="relative min-h-screen bg-bg-base font-sans antialiased">
         <script
           type="application/ld+json"
           // eslint-disable-next-line react/no-danger

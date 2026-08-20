@@ -74,7 +74,7 @@ export default function AdminPage() {
           <div className="overflow-x-auto rounded-2xl border border-border-subtle">
             <table className="w-full min-w-[720px] text-sm">
               <thead>
-                <tr className="border-b border-border-subtle bg-surface-card text-left text-xs text-text-tertiary">
+                <tr className="border-b border-border-subtle bg-surface-panel text-left text-xs text-text-tertiary">
                   <th className="px-4 py-3 font-medium">Titel</th>
                   <th className="px-4 py-3 font-medium">Kategorie</th>
                   <th className="px-4 py-3 font-medium">Status</th>
@@ -122,7 +122,7 @@ export default function AdminPage() {
           <div className="flex flex-col gap-4">
             <p className="text-sm text-text-tertiary">Gemeldete Kommentare — Warteschlange</p>
             {MOCK_REPORTED.map((c) => (
-              <div key={c.id} className="rounded-2xl border border-border-subtle bg-surface-card p-5">
+              <div key={c.id} className="rounded-2xl border border-border-subtle bg-surface-panel p-5">
                 <div className="mb-2 flex items-center justify-between">
                   <span className="text-sm font-medium text-text-primary">{c.author}</span>
                   <span className="rounded-full border border-warning/40 bg-warning/10 px-2.5 py-1 text-xs text-warning">
@@ -148,7 +148,7 @@ export default function AdminPage() {
           <div className="overflow-x-auto rounded-2xl border border-border-subtle">
             <table className="w-full min-w-[560px] text-sm">
               <thead>
-                <tr className="border-b border-border-subtle bg-surface-card text-left text-xs text-text-tertiary">
+                <tr className="border-b border-border-subtle bg-surface-panel text-left text-xs text-text-tertiary">
                   <th className="px-4 py-3 font-medium">Name</th>
                   <th className="px-4 py-3 font-medium">Rang</th>
                   <th className="px-4 py-3 font-medium">Badges</th>
@@ -180,7 +180,7 @@ export default function AdminPage() {
         )}
 
         {tab === "einstellungen" && (
-          <div className="max-w-lg rounded-2xl border border-border-subtle bg-surface-card p-6">
+          <div className="max-w-lg rounded-2xl border border-border-subtle bg-surface-panel p-6">
             <p className="mb-4 text-sm font-semibold text-text-primary">Cookie-Kategorien</p>
             {["Notwendig", "Funktional", "Analyse"].map((cat) => (
               <div key={cat} className="flex items-center justify-between border-b border-border-subtle py-3 last:border-0">

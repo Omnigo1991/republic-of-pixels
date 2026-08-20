@@ -24,6 +24,15 @@ function istEntwicklung(host: string) {
 }
 
 export function middleware(req: NextRequest) {
+  // Vorschau-Umgebungen (Fund 15.08.2026): Vercel-Branch-Vorschauen liefen
+  // in dieselbe Umleitung — jede Vorschau-Adresse landete sofort auf der
+  // Live-Domain, kein Entwurf war je als Vorschau anschaubar. In der
+  // Produktion setzt Vercel VERCEL_ENV="production"; alles andere
+  // (preview, development) darf unkanonisiert ausliefern. Google sieht
+  // Vorschauen nicht: Vercel schützt sie mit Anmeldung und noindex.
+  if (process.env.VERCEL_ENV && process.env.VERCEL_ENV !== "production") {
+    return NextResponse.next();
+  }
   const host = req.headers.get("host") ?? "";
   if (host === CANONICAL_HOST || istEntwicklung(host)) {
     return NextResponse.next();

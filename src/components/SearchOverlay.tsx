@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { getAllArticles } from "@/lib/articles";
 import { CATEGORY_LABELS } from "@/lib/types";
@@ -49,7 +49,7 @@ export function SearchPanel({
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Suche nach Spielen, Plattformen, Themen…"
-          className="w-full rounded-2xl border border-border-default bg-surface-card py-4 pl-12 pr-4 text-lg text-text-primary placeholder:text-text-tertiary focus:outline-none focus:border-accent/60 focus:ring-2 focus:ring-accent/20"
+          className="w-full rounded-2xl border border-border-default bg-surface-panel py-4 pl-12 pr-4 text-lg text-text-primary placeholder:text-text-tertiary focus:outline-none focus:border-accent/60 focus:ring-2 focus:ring-accent/20"
         />
       </div>
 
@@ -61,7 +61,7 @@ export function SearchPanel({
               <button
                 key={tag}
                 onClick={() => setQuery(tag)}
-                className="rounded-full border border-border-default bg-surface-card px-3.5 py-1.5 text-sm text-text-secondary transition-colors hover:border-accent/50 hover:text-text-primary"
+                className="rounded-full border border-border-default bg-surface-panel px-3.5 py-1.5 text-sm text-text-secondary transition-colors hover:border-accent/50 hover:text-text-primary"
               >
                 {tag}
               </button>
@@ -82,7 +82,7 @@ export function SearchPanel({
               key={a.slug}
               href={`/artikel/${a.slug}`}
               onClick={onNavigate}
-              className="flex items-center justify-between gap-4 rounded-xl px-3 py-3 hover:bg-text-primary/[0.04] transition-colors"
+              className="flex items-center justify-between gap-4 rounded-2xl px-3 py-3 hover:bg-text-primary/[0.04] transition-colors"
             >
               <div className="min-w-0">
                 <p className="truncate text-[15px] font-medium text-text-primary">{a.title}</p>
@@ -99,37 +99,98 @@ export function SearchPanel({
   );
 }
 
+// AUSFAHRENDES SUCHFELD (Tim, 15.08.2026): kein Pop-up-Fenster mehr —
+// ein Klick auf die Lupe faehrt das Feld direkt in der Kopfzeile aus.
+// Die Trefferliste haengt darunter als Panel, Escape und Klick daneben
+// schliessen wieder.
 export function SearchTrigger() {
   const [open, setOpen] = useState(false);
+  const [query, setQuery] = useState("");
+  const huelle = useRef<HTMLDivElement>(null);
+  const articles = useMemo(() => getAllArticles(), []);
+  const treffer = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return [];
+    return articles
+      .filter(
+        (a) =>
+          a.title.toLowerCase().includes(q) ||
+          a.excerpt.toLowerCase().includes(q) ||
+          a.tags.some((t) => t.toLowerCase().includes(q))
+      )
+      .slice(0, 6);
+  }, [articles, query]);
+
+  useEffect(() => {
+    if (!open) return;
+    const taste = (e: KeyboardEvent) => {
+      if (e.key === "Escape") { setOpen(false); setQuery(""); }
+    };
+    const klick = (e: MouseEvent) => {
+      if (huelle.current && !huelle.current.contains(e.target as Node)) setOpen(false);
+    };
+    document.addEventListener("keydown", taste);
+    document.addEventListener("mousedown", klick);
+    return () => {
+      document.removeEventListener("keydown", taste);
+      document.removeEventListener("mousedown", klick);
+    };
+  }, [open]);
+
   return (
-    <>
+    <div ref={huelle} className="relative flex items-center">
       <button
-        onClick={() => setOpen(true)}
-        aria-label="Suche öffnen"
-        className="flex h-9 w-9 items-center justify-center rounded-full text-current hover:opacity-70 transition-opacity"
+        onClick={() => setOpen((o) => !o)}
+        aria-label={open ? "Suche schliessen" : "Suche öffnen"}
+        aria-expanded={open}
+        className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#1B1A33] text-current transition-opacity hover:opacity-70"
       >
         <SearchIcon className="h-5 w-5" />
       </button>
-      {open && (
-        <div
-          className="fixed inset-0 z-[70] flex items-start justify-center bg-bg-base/80 backdrop-blur-sm px-4 pt-24 animate-fadeIn"
-          onClick={() => setOpen(false)}
-        >
-          <div
-            className="w-full max-w-xl rounded-2xl border border-border-default bg-bg-elevated p-4 shadow-elevated"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <SearchPanel onNavigate={() => setOpen(false)} />
-            <button
-              onClick={() => setOpen(false)}
-              className="mt-3 w-full rounded-xl py-2 text-sm text-text-tertiary hover:text-text-primary"
-            >
-              Schliessen (Esc)
-            </button>
-          </div>
+
+      {/* Das Feld gleitet nach LINKS ueber die Navigation, statt sie zu
+          verdraengen (sonst wird das Logo weggeschoben). */}
+      <div
+        className={`absolute right-11 top-1/2 -translate-y-1/2 overflow-hidden rounded-full transition-[width,opacity] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+          open ? "w-[360px] opacity-100" : "pointer-events-none w-0 opacity-0"
+        }`}
+      >
+        <input
+          autoFocus={open}
+          type="text"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Spiele, Themen, Guides …"
+          className="h-10 w-[360px] rounded-full border-2 border-[rgba(2,240,209,0.35)] bg-[#11102A] px-5 text-[14px] text-[#EAF6FF] placeholder:text-[#93A6BC] focus:border-[rgba(2,240,209,0.7)] focus:outline-none"
+        />
+      </div>
+
+      {/* Trefferliste haengt AUSSERHALB des Animations-Containers, sonst
+          wuerde sie vom overflow-hidden abgeschnitten. */}
+      {open && query.trim() && (
+        <div className="suchliste absolute right-0 top-[52px] z-10 w-[400px] overflow-hidden rounded-2xl border border-border-subtle shadow-elevated">
+          {treffer.length === 0 ? (
+            <p className="px-4 py-4 text-sm text-text-secondary">Nichts gefunden für «{query}».</p>
+          ) : (
+            treffer.map((a) => (
+              <Link
+                key={a.slug}
+                href={`/artikel/${a.slug}`}
+                onClick={() => { setOpen(false); setQuery(""); }}
+                className="block border-b border-border-subtle px-4 py-3 last:border-b-0 hover:bg-surface-panel"
+              >
+                <p className="text-[11px] font-extrabold tracking-[0.06em] text-accent">
+                  {CATEGORY_LABELS[a.category].toUpperCase()}
+                </p>
+                <p className="mt-0.5 text-[14.5px] font-bold leading-snug text-text-primary line-clamp-2">
+                  {a.title}
+                </p>
+              </Link>
+            ))
+          )}
         </div>
       )}
-    </>
+    </div>
   );
 }
 

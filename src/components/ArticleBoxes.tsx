@@ -21,12 +21,14 @@ export function TldrBox({ items }: { items: string[] }) {
 
 export function WhyItMattersBox({ text }: { text: string }) {
   return (
-    // Dezenter, rundum gleich dicker Cyan-Rand (Betreiber-Vorgabe 05.08.2026).
-    <div className="my-8 rounded-2xl border border-accent/35 bg-accent-wash/30 p-6">
-      <p className="mb-2 text-[13px] font-semibold tracking-wide text-accent">
+    // Cyan statt Navy (Tim, 17.08.2026): EINE Kachelfarbe auf der ganzen
+    // Seite — wie Event-Buehne, Newsletter und Radar-Karten. Auf
+    // Navy-Grund ginge eine Navy-Box unter.
+    <div className="my-8 rounded-2xl bg-accent p-6">
+      <p className="mb-2 text-[13px] font-semibold tracking-wide text-navy/70">
         WARUM DAS WICHTIG IST
       </p>
-      <p className="text-[15px] leading-relaxed text-text-primary">{text}</p>
+      <p className="text-[15px] leading-relaxed text-navy">{text}</p>
     </div>
   );
 }

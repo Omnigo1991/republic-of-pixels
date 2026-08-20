@@ -169,7 +169,7 @@ export function AuthStatus() {
                 ref={menueRef}
                 role="menu"
                 style={{ top: menuePos.top, right: menuePos.right }}
-                className="fixed z-[70] w-72 overflow-hidden rounded-xl border border-border-default bg-bg-elevated text-text-primary shadow-elevated"
+                className="fixed z-[70] w-72 overflow-hidden rounded-2xl border border-border-default bg-bg-elevated text-text-primary shadow-elevated"
               >
                 <div className="flex items-center gap-3 border-b border-border-subtle p-4">
                   {istMaster ? (
@@ -203,7 +203,7 @@ export function AuthStatus() {
                     <p className="mb-1.5 text-xs text-text-tertiary">
                       Noch {next.fehlend} {next.fehlend === 1 ? "Punkt" : "Punkte"} bis {next.rang.name}
                     </p>
-                    <div className="h-1.5 overflow-hidden rounded-full bg-surface-card">
+                    <div className="h-1.5 overflow-hidden rounded-full bg-surface-panel">
                       <div
                         className="h-full rounded-full bg-accent transition-[width]"
                         style={{ width: `${Math.min(100, Math.round(((punkte ?? 0) / next.rang.ab) * 100))}%` }}
@@ -216,14 +216,14 @@ export function AuthStatus() {
                   <Link
                     href={`/profil/${name}`}
                     onClick={() => setMenueOffen(false)}
-                    className="block px-4 py-2.5 text-sm hover:bg-surface-hover transition-colors"
+                    className="block px-4 py-2.5 text-sm hover:bg-surface-panelhover transition-colors"
                   >
                     Mein Profil
                   </Link>
                   <Link
                     href="/einstellungen"
                     onClick={() => setMenueOffen(false)}
-                    className="block px-4 py-2.5 text-sm hover:bg-surface-hover transition-colors"
+                    className="block px-4 py-2.5 text-sm hover:bg-surface-panelhover transition-colors"
                   >
                     Einstellungen
                   </Link>
@@ -231,7 +231,7 @@ export function AuthStatus() {
                     <Link
                       href="/redaktion/statistik"
                       onClick={() => setMenueOffen(false)}
-                      className="block px-4 py-2.5 text-sm text-accent hover:bg-surface-hover transition-colors"
+                      className="block px-4 py-2.5 text-sm text-accent hover:bg-surface-panelhover transition-colors"
                     >
                       Statistik
                     </Link>
@@ -242,7 +242,7 @@ export function AuthStatus() {
                       setMenueOffen(false);
                       supabase.auth.signOut();
                     }}
-                    className="block w-full px-4 py-2.5 text-left text-sm text-text-secondary hover:bg-surface-hover hover:text-error transition-colors"
+                    className="block w-full px-4 py-2.5 text-left text-sm text-text-secondary hover:bg-surface-panelhover hover:text-error transition-colors"
                   >
                     Abmelden
                   </button>
@@ -260,7 +260,7 @@ export function AuthStatus() {
     <>
       <button
         onClick={() => setDialogOffen(true)}
-        className="rounded-full border border-current/40 px-3.5 py-1.5 text-[13px] font-semibold text-current hover:opacity-70 transition-opacity"
+        className="shrink-0 rounded-full bg-accent px-3 py-1.5 text-[12.5px] font-extrabold text-[#0F0D2C] transition-opacity hover:opacity-85 sm:px-4 sm:py-2 sm:text-[13.5px] lg:px-5 lg:py-2.5 lg:text-[14px]"
       >
         Anmelden
       </button>

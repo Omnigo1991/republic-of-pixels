@@ -7,8 +7,10 @@ html {
 }
 
 body {
+  /* Cyberpunk-Umbau (Tim, 18.08.2026): Navy bleibt der Grund — eure
+     Markenfarbe, durchgehend und ohne Muster. */
   background-color: #0C0B1A;
-  color: #f2f2f2;
+  color: #EAF6FF;
 }
 
 h1,
@@ -28,14 +30,14 @@ h3 {
   height: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #0C0B1A;
+  background: #14132A;
 }
 ::-webkit-scrollbar-thumb {
-  background: #33305C;
-  border-radius: 999px;
+  background: #302D58;
+  border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #45416E;
+  background: #423E75;
 }
 
 /* Fliesstext-Typografie der Artikelseite. Der :where(:not(...))-Guard nimmt
@@ -45,7 +47,7 @@ h3 {
    erbt Artikelschriftgrössen und -abstände. :where() hält die Spezifität
    unverändert. Das echte not-prose des Typography-Plugins gibt es hier nicht. */
 .prose-rop {
-  color: #f2f2f2;
+  color: #E4E5EE;
 }
 .prose-rop p:where(:not(.not-prose, .not-prose *)) {
   margin-top: 1.25em;
@@ -55,7 +57,7 @@ h3 {
      unserer 18px-Schrift zu luftig. */
   line-height: 1.65;
   font-size: 1.125rem;
-  color: #e6e6e6;
+  color: #D7D9E5;
 }
 .prose-rop h2:where(:not(.not-prose, .not-prose *)) {
   margin-top: 2.5em;
@@ -63,15 +65,16 @@ h3 {
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: -0.01em;
-  color: #02f0d1; /* Zwischenüberschriften in Cyan (Betreiber-Vorgabe 05.08.2026) */
+  /* Auf Navy tragen Zwischenüberschriften wieder Weiss. */
+  color: #F1F0F2;
 }
 .prose-rop blockquote:where(:not(.not-prose, .not-prose *)) {
   margin: 2em 0;
   padding: 0.25rem 0 0.25rem 1.25rem;
-  border-left: 3px solid #02f0d1;
-  color: #f1f0f2;
+  border-left: 6px solid #02f0d1;
+  color: #F1F0F2;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 1.375rem;
   line-height: 1.4;
 }
@@ -79,18 +82,20 @@ h3 {
   margin: 1.25em 0;
   padding-left: 1.25rem;
   list-style: disc;
-  color: #e6e6e6;
+  color: #D7D9E5;
 }
 .prose-rop li:where(:not(.not-prose, .not-prose *)) {
   margin: 0.5em 0;
   line-height: 1.65;
 }
 .prose-rop a:where(:not(.not-prose, .not-prose *)) {
-  color: #02f0d1;
-  text-decoration: none;
+  color: #02F0D1;
+  text-decoration: underline;
+  text-decoration-color: rgba(2, 240, 209, 0.45);
+  text-underline-offset: 4px;
 }
 .prose-rop a:where(:not(.not-prose, .not-prose *)):hover {
-  color: #30f3d9;
+  color: #30F3D9;
 }
 
 @media (max-width: 640px) {
@@ -135,5 +140,326 @@ h3 {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+}
+
+/* ================================================================
+   CYBERPUNK (Tim, 18.08.2026) — loest den Navy-Stand ab.
+   Drei Bausteine: Grund und Textur, Schrift, Randform K11 und
+   Kartenfassung C1. Aufbau, Raster und Abstaende der Seite bleiben.
+   ================================================================ */
+
+/* ---------- Grund: durchgehend Navy, kein Muster ----------
+   Erst lagen zwei Farbschleier darauf (Aufmacher stand auf anderem
+   Grund), dann ein Netz — beides ist raus (Tim, 18.08.2026). Der
+   Grund ist jetzt ueberall dieselbe Flaeche. */
+/* Bildschirmzeilen (CRT) */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none;
+  background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.26) 0 1px, transparent 1px 3px);
+  mix-blend-mode: multiply;
+  opacity: 0.42;
+}
+@media (prefers-reduced-motion: reduce) {
+  body::after { opacity: 0.25; }
+}
+main, header, footer { position: relative; z-index: 1; }
+
+/* ---------- Schrift: cyberpunk, aber lesbar ----------
+   Die Regel, an der die erste Fassung scheiterte: Versalien und
+   Farbversatz NUR auf Sektionsebene. Artikelueberschriften und
+   Fliesstext bleiben normal gesetzt. */
+h1, h2 {
+  text-transform: uppercase;
+  font-weight: 900;
+  text-shadow: -1px 0 rgba(255, 46, 151, 0.55), 1px 0 rgba(2, 240, 209, 0.55);
+}
+h3, h4, p, li { text-transform: none; text-shadow: none; }
+h3 { font-weight: 800; color: #F2F8FF; }
+/* EINE Schrift ueberall (Betreiber-Vorgabe 05.08.2026, wieder
+   hergestellt am 19.08.2026): Inter fuer alles. Die zweite Familie
+   war an 63 Stellen im Einsatz und liess die Seite uneinheitlich
+   wirken — der Cyberpunk-Ton kommt aus Versalien und Sperrung, nicht
+   aus einer Maschinenschrift. */
+body, h1, h2, h3, h4, p, li, a, button, span, time, input, label {
+  font-family: var(--font-inter), Inter, system-ui, -apple-system, sans-serif;
+}
+/* Ohne Schimmer (Tim, 20.08.2026): das Leuchten wirkte beim
+   Ueberfahren wie ein Effekt, nicht wie Gestaltung. */
+.text-accent { color: #02F0D1; }
+
+/* ---------- Vorschlagsliste der Suche ----------
+   Sie haengt im Kopfband und wurde von dessen Regeln eingefangen:
+   heller Schleier mit dunkler Schrift, auf dunklem Grund unlesbar
+   (Tim, 20.08.2026). Hier ausdruecklich zurueckgesetzt. */
+.suchliste, .kopfband .suchliste {
+  background: #11102A !important;
+  color: #EAF6FF !important;
+}
+.suchliste a, .suchliste span, .suchliste p, .suchliste div,
+.kopfband .suchliste a, .kopfband .suchliste span,
+.kopfband .suchliste p, .kopfband .suchliste div {
+  color: #EAF6FF !important;
+}
+.suchliste [class*="text-text-tertiary"],
+.kopfband .suchliste [class*="text-text-tertiary"] { color: #93A6BC !important; }
+.suchliste [class*="text-accent"],
+.kopfband .suchliste [class*="text-accent"] { color: #02F0D1 !important; }
+.suchliste a:hover { background: #191735 !important; }
+/* Das Eingabefeld ebenso: deckend, damit die Navigation nicht
+   durchscheint. */
+.kopfband input[type="search"], .kopfband input {
+  background: #11102A !important;
+  color: #EAF6FF !important;
+  border-color: rgba(2, 240, 209, 0.35) !important;
+}
+
+/* ---------- Sektionsbanner ----------
+   Einzeilig auf jeder Breite. Am Handy sorgt der kleinere Faktor
+   dafuer, dass auch "WILLKOMMEN IN DER REPUBLIC" auf eine Zeile
+   passt (Tim, 20.08.2026). */
+.banner svg { width: min(100%, var(--bw)); }
+@media (max-width: 640px) {
+  .banner svg { width: min(100%, var(--bw-klein)); }
+}
+
+/* ---------- K11: Kappecke statt Pixel-Treppe ----------
+   Zwei Ecken diagonal abgeschnitten (Tim-Entscheid 18.08.2026).
+   Klassennamen bleiben, damit die Bauteile unveraendert bleiben. */
+:root { --kappe: 26px; }
+.treppe-tl,
+.treppe-tr {
+  background: linear-gradient(150deg, #02F0D1, #B14CFF 60%, #FF2E97);
+  padding: 3px;
+  clip-path: polygon(0 0, calc(100% - var(--kappe)) 0, 100% var(--kappe), 100% 100%,
+    var(--kappe) 100%, 0 calc(100% - var(--kappe)));
+}
+.treppe-tl > .treppe-innen,
+.treppe-tr > .treppe-innen {
+  clip-path: polygon(0 0, calc(100% - (var(--kappe) - 2px)) 0, 100% calc(var(--kappe) - 2px),
+    100% 100%, calc(var(--kappe) - 2px) 100%, 0 calc(100% - (var(--kappe) - 2px)));
+}
+.treppe-innen {
+  position: relative;
+  overflow: hidden;
+  background: #0A0818;
+  display: block;
+}
+/* NUR wo ein Verhaeltnis gesetzt ist. Ein Standardwert hier ist eine
+   Falle: Kacheln mit fester Hoehe (h-[430px]) rechnen daraus eine
+   Breite von 688 px und sprengen den Bildschirm (gemessen 18.08.2026). */
+.treppe-innen[style*="--v"] {
+  aspect-ratio: var(--v);
+}
+.treppe-innen img { filter: saturate(1.22) contrast(1.06); }
+@media (max-width: 640px) {
+  :root { --kappe: 18px; }
+  .treppe-tl, .treppe-tr { padding: 2px; }
+}
+
+/* Der Anschnitt frisst die untere linke Ecke — ohne zusaetzlichen
+   Innenabstand wirken Kicker und Schlagzeile abgesaegt. */
+.treppe-innen > div:last-child {
+  padding-left: calc(var(--kappe) + 4px);
+  padding-right: 16px;
+  padding-bottom: 14px;
+}
+.treppe-innen h3, .treppe-innen p, .treppe-innen span {
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Werkzeugkarten: ruhige Cyan-Haarlinie ----------
+   Vorher trugen Artikelkacheln UND Werkzeugkarten dieselbe
+   Verlaufskante — auf der Startseite lagen rund zwanzig davon
+   gleichzeitig im Bild, und der Verlauf wurde Tapete. Er bleibt jetzt
+   den Artikeln vorbehalten (Tim, 20.08.2026). */
+.bg-surface-card {
+  background: #14122E;
+  border: 1px solid rgba(2, 240, 209, 0.30);
+  border-radius: 18px;
+}
+.bg-surface-card:hover {
+  background: #1B1840;
+  border-color: rgba(2, 240, 209, 0.55);
+}
+.bg-surface-panel, .bg-bg-elevated {
+  border: 1px solid rgba(2, 240, 209, 0.28);
+}
+.bg-surface-panel:not([class*="rounded-full"]),
+.bg-bg-elevated:not([class*="rounded-full"]) {
+  border-radius: 16px;
+}
+
+/* ---------- Personen-Kacheln auf "Ueber uns" ----------
+   Verlauf wie im Kopfband (Tim, 19.08.2026). Die Form bleibt rund —
+   es sind keine Artikel. */
+.personenkachel {
+  background: linear-gradient(120deg, #FF2E97, #FF6BC0 40%, #02F0D1 115%);
+}
+.personenkachel a { color: #0B0616; }
+
+/* ---------- Artikelkarte mit Kappecke (Slider "Beliebt bei Lesern") ----
+   Zwei Ebenen wie bei den Bildkacheln: aussen der Verlauf als Rand,
+   innen die Flaeche. Ein Beschnitt auf einem einzelnen Element wuerde
+   den Rand an der Schraege wegschneiden. */
+.artikelkante {
+  display: block;
+  padding: 3px;
+  background: linear-gradient(150deg, #02F0D1, #B14CFF 60%, #FF2E97);
+  clip-path: polygon(0 0, calc(100% - var(--kappe)) 0, 100% var(--kappe), 100% 100%,
+    var(--kappe) 100%, 0 calc(100% - var(--kappe)));
+}
+.artikelkante__innen {
+  background: #14122E;
+  clip-path: polygon(0 0, calc(100% - (var(--kappe) - 3px)) 0, 100% calc(var(--kappe) - 3px),
+    100% 100%, calc(var(--kappe) - 3px) 100%, 0 calc(100% - (var(--kappe) - 3px)));
+}
+.artikelkante:hover .artikelkante__innen { background: #1B1840; }
+
+/* ---------- Volles Cyan wird Verlauf ---------- */
+.bg-accent {
+  background: linear-gradient(112deg, #FF2E97, #FF6BC0 44%, #02F0D1 122%);
+}
+.bg-accent h2, .bg-accent p, .bg-accent span, .bg-accent div,
+.bg-accent dt, .bg-accent dd, .bg-accent .text-accent {
+  color: #0B0616;
+  text-shadow: none;
+}
+/* Dunkle Flaechen IN der Verlaufsbox behalten helle Schrift
+   (gemessen: sonst 1.05:1). */
+.bg-accent [class*="bg-navy"],
+.bg-accent [class*="bg-navy"] *,
+.bg-accent [class*="bg-navy"] div { color: #02F0D1; }
+
+/* ---------- Linien, Kopf und Fuss ---------- */
+.bg-accent.h-0\.5, [class*="h-0.5"][class*="w-full"] {
+  background: linear-gradient(90deg, #02F0D1, #FF2E97, #E8FF3D);
+  height: 2px;
+}
+/* ---------- Kopfband im Verlauf (Tim, 19.08.2026) ----------
+   Derselbe Verlauf wie das Menue. Damit wechselt die Schrift dort auf
+   Dunkel — Weiss auf Magenta misst 1.5:1 und waere nicht lesbar. */
+.kopfband {
+  background: linear-gradient(100deg, #FF2E97, #FF6BC0 42%, #02F0D1 118%);
+  border-bottom: 1px solid rgba(11, 6, 22, 0.35);
+  box-shadow: 0 6px 26px -8px rgba(255, 46, 151, 0.45);
+}
+.kopfband,
+.kopfband a,
+.kopfband button,
+.kopfband span,
+.kopfband svg { color: #0B0616; }
+.kopfband .text-accent { color: #0B0616; }
+/* Kein Leuchten im Kopf: sonst schimmert "OF PIXELS" staerker als
+   "REPUBLIC" und die beiden Haelften wirken wie zwei Schriften. */
+.kopfband, .kopfband * { text-shadow: none !important; }
+.kopfband a:hover, .kopfband button:hover { opacity: 0.72; }
+/* Plattform-Chips und Suchknopf: heller Schleier statt dunkler Block —
+   dieselbe Fassung wie das Suchfeld im Menue (Tim, 19.08.2026). */
+/* Beide Flaechen tragen eine feste Hexfarbe (bg-[#1B1A33]), deshalb
+   greifen Marken-Waehler hier nicht — sie werden ausdruecklich
+   genannt. */
+.kopfband [class*="bg-navy"],
+.kopfband [class*="bg-surface"],
+.kopfband [class*="bg-bg-"],
+.kopfband [class*="bg-[#1B1A33]"],
+.kopfband nav[aria-label="Plattformen"],
+.kopfband a[aria-label*="Suche"],
+.kopfband button[aria-label*="Suche"] {
+  background: rgba(11, 6, 22, 0.13) !important;
+  border-color: rgba(11, 6, 22, 0.22) !important;
+}
+.kopfband [class*="border-"] { border-color: rgba(11, 6, 22, 0.22); }
+/* "Anmelden" kehrt sich um: dunkle Pille mit Cyan-Schrift, damit sie
+   auf dem Verlauf ueberhaupt als Knopf lesbar bleibt. */
+.kopfband a[class*="bg-accent"],
+.kopfband button[class*="bg-accent"] {
+  background: #0B0616 !important;
+  color: #02F0D1 !important;
+}
+.kopfband a[class*="bg-accent"] span,
+.kopfband button[class*="bg-accent"] span { color: #02F0D1; }
+
+header {
+  background: rgba(12, 11, 26, 0.9);
+  border-bottom: 1px solid rgba(255, 46, 151, 0.45);
+  backdrop-filter: blur(8px);
+}
+/* ---------- Fussleiste ----------
+   Zurueck auf die schlichte dunkle Fassung (Tim, 19.08.2026): der
+   Verlauf wurde wieder verworfen. */
+body > footer {
+  border-top: 1px solid rgba(2, 240, 209, 0.4);
+  background: rgba(12, 11, 26, 0.92);
+}
+
+/* ---------- EIN Takt fuer alle wiederkehrenden Abstaende ----------
+   Gemessen war Banner→Unterueberschrift 20 px bei News und Guides,
+   aber 60 px bei den Radaren. Der Banner bringt seinen Abstand selbst
+   mit; die Polsterung des ersten Radars kam oben drauf. */
+#radare section:first-of-type,
+main > div > section:last-of-type section:first-of-type { padding-top: 0; }
+
+/* ---------- Knoepfe: Pillenform (Tim, 18.08.2026) ---------- */
+button, a[class*="rounded-full"], input[class*="rounded-full"] {
+  border-radius: 9999px;
+}
+/* Nur Pillen, die ohnehin eine Cyan-Kontur tragen. Vorher fing die
+   Regel JEDE runde Verlinkung ein und faerbte auch die schwarzen
+   Knoepfe im Menue cyan (Tim, 19.08.2026). */
+a[class*="rounded-full"][class*="border-accent"] {
+  border-color: rgba(2, 240, 209, 0.6);
+}
+
+/* Newsletter-Ecke folgt derselben Form. Der Teilen-Knopf NICHT: er ist
+   1:1 wie auf der Live-Seite rund (52 px, Rand rgba(2,240,209,.35),
+   Grund rgba(18,17,38,.85), Flieger 22 px mittig) — Tim, 18.08.2026. */
+.treppe-br {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 22px), calc(100% - 22px) 100%, 0 100%);
+}
+
+/* ---------- Handy-Feinschliff (Tim, 18.08.2026) ---------- */
+
+@media (max-width: 640px) {
+  /* Bedienelemente auf mindestens 44 px. Gemessen lagen sechs Stueck
+     zwischen 38 und 42 px — knapp unter dem Mass, ab dem ein Daumen
+     zuverlaessig trifft. Betrifft Suche, Menue, "Mehr anzeigen",
+     Newsletter-Feld, "Raten" und den Instagram-Knopf. */
+  button,
+  input:not([type="checkbox"]):not([type="radio"]),
+  select,
+  a[class*="rounded-full"] {
+    min-height: 44px;
+  }
+  /* Runde Symbolknoepfe muessen quadratisch bleiben: die Mindesthoehe
+     allein macht aus einem 36-px-Quadrat ein Oval (gemessen 20.08.2026
+     an Suche, Menue und den Blaetterpfeilen). */
+  /* Die Blaetterpfeile sind ausgenommen: sie sollen auf jeder Breite
+     exakt 36 x 36 px messen wie auf der Live-Seite (Tim, 20.08.2026).
+     Damit liegen sie bewusst unter dem 44-px-Mass. */
+  .blaetterpfeil {
+    min-width: 36px !important;
+    min-height: 36px !important;
+    height: 36px;
+    width: 36px;
+  }
+  button[class*="rounded-full"][class*="w-9"]:not(.blaetterpfeil),
+  button[class*="rounded-full"][class*="w-10"]:not(.blaetterpfeil),
+  button[class*="rounded-full"][class*="w-11"],
+  a[class*="rounded-full"][class*="w-9"],
+  a[class*="rounded-full"][class*="w-10"],
+  a[class*="rounded-full"][class*="w-11"] {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* 11 px ist auf dem Handy zu klein fuer Kicker, Statuszeilen und
+     Restlaufzeiten (gemessen: 12 Stellen). Eine Stufe hoeher. */
+  .text-\[11px\] {
+    font-size: 12px;
   }
 }

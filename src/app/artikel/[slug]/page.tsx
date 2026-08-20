@@ -6,9 +6,9 @@ import {
   getArticleBySlug,
   getRelated,
 } from "@/lib/articles";
-import { CATEGORY_LABELS, PLATFORM_LABELS } from "@/lib/types";
+import { CATEGORY_LABELS } from "@/lib/types";
 import { ArticleMedia } from "@/components/ArticleMedia";
-import { CategoryPill, LeakBanner, Tag } from "@/components/Badges";
+import { LeakBanner } from "@/components/Badges";
 import { PlatformIcon } from "@/components/PlatformIcons";
 import { ArticleBody } from "@/components/ArticleBody";
 import { TldrBox, WhyItMattersBox, ReviewBox, SourcesBox } from "@/components/ArticleBoxes";
@@ -17,11 +17,12 @@ import { PollBox } from "@/components/PollBox";
 import { ShareButtons } from "@/components/ShareButtons";
 import { CommentSection } from "@/components/CommentSection";
 import { ArticleReactions } from "@/components/ArticleReactions";
-import { ArticleCard } from "@/components/ArticleCard";
+import { NotchKarte } from "@/components/StartseiteNeu";
 import { SectionDivider } from "@/components/SectionDivider";
 import { formatDateTime, splitTitle } from "@/lib/format";
 import { Masthead } from "@/components/Masthead";
 import { themenFuerArtikel } from "@/lib/themen";
+import { PLATFORM_LABELS } from "@/lib/types";
 
 export function generateStaticParams() {
   return getAllArticles().map((a) => ({ slug: a.slug }));
@@ -94,44 +95,57 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
       />
 
       <article className="mx-auto max-w-article px-4 sm:px-6 pt-8 sm:pt-12">
-        <div className="mb-5 flex flex-wrap items-center gap-2">
-          <CategoryPill category={article.category} />
-          {article.platforms.map((p) => (
-            <Tag key={p}>
-              <PlatformIcon platform={p} className="mr-1.5 h-3.5 w-3.5" />
-              {PLATFORM_LABELS[p]}
-            </Tag>
-          ))}
-        </div>
-
+        {/* Aufbau der Live-Seite (Tim, 19.08.2026): erst die Pillenreihe
+            aus Rubrik und Plattformen, dann NUR der Spielbezug, dann die
+            Schlagzeile. Die Rubrik steht nicht mehr als Text im Kicker —
+            sie ist die erste Pille. */}
         {(() => {
           const { kicker, headline } = splitTitle(article.title, article.tags);
           return (
             <>
+              {/* Rubrik und Plattformen tragen in dieser Reihe DIESELBE
+                  Fassung (Tim, 20.08.2026). Die Rubrik-Pille nutzte vorher
+                  border-default (44 % Cyan) und wirkte dadurch heller als
+                  ihre Nachbarn mit border-subtle (30 %). */}
+              <div className="mb-5 flex flex-wrap items-center gap-2">
+                <span className="inline-flex items-center rounded-full border border-border-subtle px-2.5 py-1 text-[11px] font-semibold tracking-wide text-text-secondary">
+                  {CATEGORY_LABELS[article.category].toUpperCase()}
+                </span>
+                {article.platforms.map((pl) => (
+                  <span
+                    key={pl}
+                    className="inline-flex items-center gap-1.5 rounded-full border border-border-subtle px-2.5 py-1 text-[11px] font-semibold tracking-wide text-text-secondary"
+                  >
+                    <PlatformIcon platform={pl} className="h-3.5 w-3.5" />
+                    {PLATFORM_LABELS[pl]}
+                  </span>
+                ))}
+              </div>
               {kicker && (
                 <p className="mb-2 text-sm font-bold uppercase tracking-wider text-accent">
                   {kicker}
                 </p>
               )}
-              <h1 className="text-3xl sm:text-[2.5rem] font-semibold leading-[1.15] tracking-tight text-text-primary">
+              <h1 className="text-[32px] font-black leading-[1.12] tracking-[-0.015em] text-text-primary sm:text-[46px]">
                 {headline}
               </h1>
             </>
           );
         })()}
-        <p className="mt-4 text-lg leading-relaxed text-text-secondary">{article.subtitle}</p>
+        <p className="mt-4 text-lg leading-relaxed text-text-secondary sm:text-[21px] sm:leading-[1.45]">{article.subtitle}</p>
 
-        <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 border-y border-border-subtle py-4 text-sm text-text-tertiary">
-          {/* Autorenzeile klickbar in Cyan (Leser-Audit 08.08.2026):
-              führt zu "Die Köpfe hinter der Republic" — Vertrauen + E-E-A-T. */}
-          <Link
-            href="/ueber-uns"
-            className="font-medium text-accent transition-opacity hover:opacity-80"
-          >
-            {article.author}
+        <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-3 border-y border-border-subtle py-4">
+          {/* Autorenzeile klickbar (Leser-Audit 08.08.2026): führt zu
+              "Die Köpfe hinter der Republic" — Vertrauen + E-E-A-T. */}
+          <Link href="/ueber-uns" className="flex items-center gap-2.5 transition-opacity hover:opacity-80">
+            <span className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-navy">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/brand/r-avatar.png" alt="" className="h-full w-full" />
+            </span>
+            <span className="text-sm font-bold text-accent">{article.author}</span>
           </Link>
-          <span>{formatDateTime(article.publishedAt)}</span>
-          <span>{article.readingTimeMinutes} Min. Lesezeit</span>
+          <span className="text-sm text-text-tertiary">{formatDateTime(article.publishedAt)}</span>
+          <span className="text-sm text-text-tertiary">{article.readingTimeMinutes} Min. Lesezeit</span>
         </div>
 
         {article.isLeakOrRumor && (
@@ -140,18 +154,28 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           </div>
         )}
 
-        <figure className="relative mt-8">
-          <div className="relative aspect-[16/9] overflow-hidden rounded-2xl border border-border-subtle">
-            <ArticleMedia article={article} priority sizes="(max-width: 768px) 100vw, 680px" className="h-full w-full" />
+        {/* Kappecke wie bei allen Artikeln. Die Bildbeschriftung steht
+            INNERHALB der Box (Tim, 19.08.2026) und haelt links Abstand
+            zum Anschnitt, damit sie unten links mit dem Rand aufgeht. */}
+        <figure className="mt-8">
+          <div className="treppe-tl">
+            <div className="treppe-innen">
+              <div className="relative aspect-[16/9]">
+                <ArticleMedia article={article} priority sizes="(max-width: 768px) 100vw, 680px" className="h-full w-full" />
+                {article.image?.credit && (
+                  // Ohne eigene Flaeche (Tim, 19.08.2026): die Angabe liegt
+                  // auf dem Bild, der Schlagschatten traegt sie ueber jedem
+                  // Motiv. Links haelt sie Abstand zum Anschnitt.
+                  <figcaption
+                    className="absolute bottom-2.5 left-0 right-4 pl-[calc(var(--kappe)+8px)] text-xs text-white/80"
+                    style={{ textShadow: "0 1px 4px rgba(0,0,0,.9), 0 0 12px rgba(0,0,0,.7)" }}
+                  >
+                    {article.image.credit}
+                  </figcaption>
+                )}
+              </div>
+            </div>
           </div>
-          {article.image?.credit && (
-            <>
-              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 rounded-b-2xl bg-gradient-to-t from-black/80 to-transparent" />
-              <figcaption className="absolute inset-x-0 bottom-0 px-4 pb-3 text-xs text-white/90 [text-shadow:0_1px_2px_rgba(0,0,0,0.6)]">
-                {article.image.credit}
-              </figcaption>
-            </>
-          )}
         </figure>
 
         <TldrBox items={article.tldr} />
@@ -205,13 +229,14 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
 
       {related.length > 0 && (
         <section className="mx-auto max-w-content px-4 sm:px-6 lg:px-8 py-16">
-          <h2 className="mb-3 text-xl font-semibold tracking-tight text-text-primary">
-            Ähnliche Artikel
+          {/* NotchKarten statt neutraler Kachel-Karten (Polygon-Anlehnung):
+              dieselbe Kartensprache wie auf der Startseite. */}
+          <h2 className="mb-5 text-[24px] font-black tracking-tight text-text-primary sm:text-[28px]">
+            Mehr zum Thema
           </h2>
-          <SectionDivider />
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {related.map((a) => (
-              <ArticleCard key={a.slug} article={a} />
+              <NotchKarte key={a.slug} article={a} />
             ))}
           </div>
           <div className="mt-10 text-center">

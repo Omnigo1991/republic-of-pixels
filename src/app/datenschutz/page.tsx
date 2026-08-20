@@ -8,7 +8,7 @@ export default function DatenschutzPage() {
     <>
       <Masthead />
     <div className="mx-auto max-w-article px-4 sm:px-6 py-14">
-      <h1 className="text-3xl font-semibold tracking-tight text-text-primary">Datenschutzerklärung</h1>
+      <h1 className="text-[30px] font-black tracking-tight sm:text-[36px] text-text-primary">Datenschutzerklärung</h1>
 
       <div className="prose-rop mt-8">
         <h2>1. Verantwortlicher</h2>

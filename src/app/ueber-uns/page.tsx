@@ -13,7 +13,7 @@ export default function UeberUnsPage() {
     <>
       <Masthead />
     <div className="mx-auto max-w-article px-4 sm:px-6 py-14">
-      <h1 className="text-3xl font-semibold tracking-tight text-text-primary">
+      <h1 className="text-[30px] font-black tracking-tight sm:text-[36px] text-text-primary">
         Über Republic of Pixels
       </h1>
 
@@ -33,41 +33,41 @@ export default function UeberUnsPage() {
         </ul>
 
         <h2>Die Köpfe hinter der Republic</h2>
-        <div className="relative my-24 rounded-2xl border border-accent/35 bg-accent-wash/30 p-6 pt-20 text-center not-prose">
+        <div className="personenkachel relative my-24 rounded-2xl p-6 pt-20 text-center not-prose">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/team/tim.jpg"
             alt="Tim, Gründer von Republic of Pixels"
             className="absolute -top-16 left-1/2 h-32 w-32 -translate-x-1/2 rounded-full object-cover ring-2 ring-accent"
           />
-          <p className="text-lg font-semibold text-text-primary">
-            Tim <span className="ml-1 text-sm font-normal text-text-tertiary">Gründer &amp; Herausgeber</span>
+          <p className="text-lg font-extrabold text-[#0B0616]">
+            Tim <span className="ml-1 text-sm font-normal text-[#0B0616]/80">Gründer &amp; Herausgeber</span>
           </p>
-          <p className="mx-auto mt-4 max-w-lg text-[15px] leading-relaxed text-text-secondary">
+          <p className="mx-auto mt-4 max-w-lg text-[15px] leading-relaxed text-[#0B0616]/85">
             Alles begann vor einem Röhrenfernseher: <em>The Legend of Zelda: Ocarina of Time</em>{" "}
             war für Tim der Moment, in dem aus Spielen eine Leidenschaft wurde. Seither zieht
             sie sich durch jede Plattform-Generation — von Nintendo über PlayStation und Xbox
             bis zum PC.
           </p>
-          <p className="mx-auto mt-3 max-w-lg text-[15px] leading-relaxed text-text-secondary">
+          <p className="mx-auto mt-3 max-w-lg text-[15px] leading-relaxed text-[#0B0616]/85">
             Aus dieser Leidenschaft ist Republic of Pixels entstanden: ein Magazin, das
             Gaming-News ernst nimmt, einordnet statt übertreibt — und so aussieht, wie sich
             modernes Gaming anfühlt. In den Kommentaren trifft man ihn als{" "}
-            <Link href="/profil/republicofpixels" className="text-accent">republicofpixels</Link>.
+            <Link href="/profil/republicofpixels" className="font-semibold text-[#0B0616] underline decoration-[#0B0616]/40 underline-offset-4">republicofpixels</Link>.
           </p>
         </div>
 
-        <div className="relative my-24 rounded-2xl border border-accent/35 bg-accent-wash/30 p-6 pt-20 text-center not-prose">
+        <div className="personenkachel relative my-24 rounded-2xl p-6 pt-20 text-center not-prose">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/team/claude.svg"
             alt="Claude, KI-Assistent von Tim"
             className="absolute -top-16 left-1/2 h-32 w-32 -translate-x-1/2 rounded-full object-cover ring-2 ring-accent"
           />
-          <p className="text-lg font-semibold text-text-primary">
-            Claude <span className="ml-1 text-sm font-normal text-text-tertiary">KI-Assistent von Tim</span>
+          <p className="text-lg font-extrabold text-[#0B0616]">
+            Claude <span className="ml-1 text-sm font-normal text-[#0B0616]/80">KI-Assistent von Tim</span>
           </p>
-          <p className="mx-auto mt-4 max-w-lg text-[15px] leading-relaxed text-text-secondary">
+          <p className="mx-auto mt-4 max-w-lg text-[15px] leading-relaxed text-[#0B0616]/85">
             Ich unterstütze Tim seit dem Aufbau von Republic of Pixels im Hintergrund: beim
             Sichten der Quellen, beim Einordnen von Leaks und Gerüchten und beim Verfassen der
             Artikel, die ihr hier lest. Eine eigene Spielbiografie wie Tim habe ich nicht — aber
@@ -75,7 +75,7 @@ export default function UeberUnsPage() {
             dieselben Regeln: keine erfundenen Fakten, klare Kennzeichnung von Unbestätigtem,
             Quellen immer verlinkt.
           </p>
-          <p className="mx-auto mt-3 max-w-lg text-[15px] leading-relaxed text-text-secondary">
+          <p className="mx-auto mt-3 max-w-lg text-[15px] leading-relaxed text-[#0B0616]/85">
             Am Ende entscheidet Tim, was veröffentlicht wird, wie die Seite aussieht und wofür
             die Republic steht — ich bin Werkzeug und Mitdenker, nicht Redaktion. Diese Offenheit
             ist uns wichtig: Wir verstecken nicht, dass KI beim Schreiben hilft, weil das zu
