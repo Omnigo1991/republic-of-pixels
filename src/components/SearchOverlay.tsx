@@ -161,14 +161,14 @@ export function SearchTrigger() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Spiele, Themen, Guides …"
-          className="h-10 w-[360px] rounded-full border-2 border-[rgba(15,13,44,0.25)] bg-white px-5 text-[14px] text-text-primary placeholder:text-text-tertiary focus:border-[rgba(15,13,44,0.45)] focus:outline-none"
+          className="h-10 w-[360px] rounded-full border-2 border-[rgba(2,240,209,0.35)] bg-[#11102A] px-5 text-[14px] text-[#EAF6FF] placeholder:text-[#93A6BC] focus:border-[rgba(2,240,209,0.7)] focus:outline-none"
         />
       </div>
 
       {/* Trefferliste haengt AUSSERHALB des Animations-Containers, sonst
           wuerde sie vom overflow-hidden abgeschnitten. */}
       {open && query.trim() && (
-        <div className="absolute right-0 top-[52px] z-10 w-[400px] overflow-hidden rounded-2xl border border-border-subtle bg-white shadow-elevated">
+        <div className="suchliste absolute right-0 top-[52px] z-10 w-[400px] overflow-hidden rounded-2xl border border-border-subtle shadow-elevated">
           {treffer.length === 0 ? (
             <p className="px-4 py-4 text-sm text-text-secondary">Nichts gefunden für «{query}».</p>
           ) : (

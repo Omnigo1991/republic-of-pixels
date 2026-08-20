@@ -192,6 +192,32 @@ body, h1, h2, h3, h4, p, li, a, button, span, time, input, label {
    Ueberfahren wie ein Effekt, nicht wie Gestaltung. */
 .text-accent { color: #02F0D1; }
 
+/* ---------- Vorschlagsliste der Suche ----------
+   Sie haengt im Kopfband und wurde von dessen Regeln eingefangen:
+   heller Schleier mit dunkler Schrift, auf dunklem Grund unlesbar
+   (Tim, 20.08.2026). Hier ausdruecklich zurueckgesetzt. */
+.suchliste, .kopfband .suchliste {
+  background: #11102A !important;
+  color: #EAF6FF !important;
+}
+.suchliste a, .suchliste span, .suchliste p, .suchliste div,
+.kopfband .suchliste a, .kopfband .suchliste span,
+.kopfband .suchliste p, .kopfband .suchliste div {
+  color: #EAF6FF !important;
+}
+.suchliste [class*="text-text-tertiary"],
+.kopfband .suchliste [class*="text-text-tertiary"] { color: #93A6BC !important; }
+.suchliste [class*="text-accent"],
+.kopfband .suchliste [class*="text-accent"] { color: #02F0D1 !important; }
+.suchliste a:hover { background: #191735 !important; }
+/* Das Eingabefeld ebenso: deckend, damit die Navigation nicht
+   durchscheint. */
+.kopfband input[type="search"], .kopfband input {
+  background: #11102A !important;
+  color: #EAF6FF !important;
+  border-color: rgba(2, 240, 209, 0.35) !important;
+}
+
 /* ---------- Sektionsbanner ----------
    Einzeilig auf jeder Breite. Am Handy sorgt der kleinere Faktor
    dafuer, dass auch "WILLKOMMEN IN DER REPUBLIC" auf eine Zeile
