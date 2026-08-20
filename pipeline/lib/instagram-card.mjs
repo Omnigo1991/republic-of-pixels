@@ -315,9 +315,9 @@ export async function renderInstagramCard({
   .bild::after { content:""; position:absolute; inset:0; background:${grad}; }
   .stapel { position:absolute; left:${G}px; right:${G}px; bottom:${G + LOGO_H + G}px;
     display:flex; flex-direction:column; align-items:flex-start; text-align:left; }
-  .badge { border:3.5px solid #02F0D1; color:#02F0D1; font-family:'Inter',sans-serif;
+  .badge { border:0; background:#0B0616; color:#02F0D1; font-family:'Inter',sans-serif;
     font-weight:900; font-size:24px; letter-spacing:0.22em; text-transform:uppercase;
-    padding:10px 26px 9px 32px; border-radius:999px; background:rgba(12,11,26,0.55);
+    padding:10px 26px 9px 32px; border-radius:999px;
     margin-bottom:22px; }
   .kicker { font-family:'Inter',sans-serif; font-weight:900; font-size:26px;
     letter-spacing:0.20em; text-transform:uppercase; color:#02F0D1; margin-bottom:17px; }
@@ -331,12 +331,21 @@ export async function renderInstagramCard({
      war immer zufrieden — "DES SIRIUS-TEAMS" lief rechts aus dem Bild. */
   .titel { font-family:'Inter',sans-serif; font-weight:900; text-transform:uppercase;
     width:100%; text-align:left; font-size:75px; line-height:1.34; letter-spacing:-0.02em;
-    color:#FFFFFF; text-shadow:0 3px 18px rgba(0,0,0,0.5); }
+    color:#FFFFFF;
+    text-shadow:-3px 0 rgba(255,46,151,0.75), 3px 0 rgba(2,240,209,0.75),
+      0 3px 18px rgba(0,0,0,0.55); }
   .titel .zeile { display:block; white-space:nowrap; }
-  .titel .cy { background:#02F0D1; color:#0C0B1A; padding:1px 9px 5px 9px;
-    text-shadow:none; }
+  .titel .cy { background:linear-gradient(100deg,#FF2E97,#02F0D1); color:#0B0616;
+    padding:1px 9px 5px 9px; text-shadow:none; }
   .notiz { font-family:'Caveat',cursive; font-weight:700; font-size:47px; line-height:1.0;
     color:#02F0D1; margin-top:24px; transform:rotate(-2deg); transform-origin:left center; }
+  /* ---- Cyberpunk (Entwurf 20.08.2026) ----
+     Roehrenbild: feine Bildschirmzeilen ueber der ganzen Karte. Der
+     Aufbau bleibt unveraendert, nur Textur und Farbe wechseln. */
+  body::after { content:""; position:absolute; inset:0; z-index:5; pointer-events:none;
+    background:repeating-linear-gradient(0deg, rgba(0,0,0,0.34) 0 2px, transparent 2px 6px);
+    mix-blend-mode:multiply; opacity:0.5; }
+  .stapel, .logo, .label { z-index:6; }
   .logo { position:absolute; left:50%; transform:translateX(-50%); bottom:${G}px; height:${LOGO_H}px; }
   .label { position:absolute; left:40px; bottom:30px; font-family:'Inter',sans-serif;
     font-weight:900; font-size:14px; letter-spacing:0.14em; text-transform:uppercase;
