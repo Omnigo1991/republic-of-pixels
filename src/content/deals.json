@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T19:04:24.716Z",
+  "updatedAt": "2026-08-20T21:51:44.930Z",
   "deals": [
     {
       "appId": 1771300,
@@ -35,17 +35,6 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2764460/f0a29d6c91be4e91e9fa2f384dd5ae695bfd6b5b/capsule_184x69.jpg?t=1786703049"
     },
     {
-      "appId": 1643320,
-      "title": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
-      "discountPercent": 30,
-      "originalPrice": 5999,
-      "finalPrice": 4199,
-      "currency": "EUR",
-      "endsAt": "2026-08-31T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1643320/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1643320/87ade1fa0e9869388368228258d758e040a3f651/capsule_184x69_alt_assets_7_german.jpg?t=1787251039"
-    },
-    {
       "appId": 2358720,
       "title": "Black Myth: Wukong",
       "discountPercent": 30,
@@ -57,15 +46,26 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2358720/b7f722ddd5e23503f598586aa3700dd4d827bb2d/capsule_184x69.jpg?t=1760601605"
     },
     {
-      "appId": 4132330,
-      "title": "Pizza House Simulator🍕",
+      "appId": 3065940,
+      "title": "Gallipoli",
       "discountPercent": 25,
-      "originalPrice": 1349,
-      "finalPrice": 1011,
+      "originalPrice": 2999,
+      "finalPrice": 2249,
       "currency": "EUR",
-      "endsAt": "2026-09-02T17:00:37.000Z",
-      "url": "https://store.steampowered.com/app/4132330/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4132330/30e0db1cba795cfaefd61c946efe97c5df73ab0c/capsule_184x69.jpg?t=1787218826"
+      "endsAt": "2026-09-03T17:00:12.000Z",
+      "url": "https://store.steampowered.com/app/3065940/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3065940/8241f8f3e49226d916e09f31f642fb0f5d05f463/capsule_184x69.jpg?t=1787244879"
+    },
+    {
+      "appId": 4294490,
+      "title": "KOTAMON: My Sis Found A Super-Rare Card In Her Cereal Box, So I Became A Garbage Man To Find The Entire Collection And Earn $1,000,000",
+      "discountPercent": 20,
+      "originalPrice": 719,
+      "finalPrice": 575,
+      "currency": "EUR",
+      "endsAt": "2026-09-03T17:00:29.000Z",
+      "url": "https://store.steampowered.com/app/4294490/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4294490/40d4e5b73d269b2e5b93202f43d65cf417862697/capsule_184x69.jpg?t=1787241636"
     }
   ]
 }

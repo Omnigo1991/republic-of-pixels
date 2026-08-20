@@ -1,0 +1,147 @@
+{
+  "slug": "xbox-ea-circana-digitaldaten-panel-2026",
+  "title": "Xbox liefert keine Verkaufszahlen mehr - Charts werden zum Rätselraten",
+  "subtitle": "Microsoft und EA sind aus dem Circana-Datenpanel ausgestiegen, und damit verschwindet auch der Blick auf Call of Duty",
+  "excerpt": "Seit Juli 2026 teilt Xbox keine US-Digitalverkäufe mehr mit Circana, EA ebenfalls nicht. Was übrig bleibt, sind zwölf Publisher - und viel Schätzarbeit.",
+  "seoTitle": "Xbox und EA steigen aus Circana-Datenpanel aus",
+  "metaDescription": "Xbox und EA teilen keine digitalen US-Verkaufsdaten mehr mit Circana. Was das für Charts, Call of Duty und die Transparenz der Branche bedeutet.",
+  "category": "news",
+  "platforms": [
+    "pc",
+    "playstation",
+    "xbox",
+    "nintendo"
+  ],
+  "tags": [
+    "Xbox",
+    "EA",
+    "Circana",
+    "Marktdaten",
+    "Nintendo Switch 2"
+  ],
+  "tldr": [
+    "Xbox ist seit Juli 2026 kein Teilnehmer des Circana-Panels für digitale Verkaufsdaten mehr, EA hat seine Mitgliedschaft ebenfalls beendet",
+    "Damit fehlen nicht nur Zahlen zu Xbox-Eigenproduktionen wie Call of Duty, sondern auch zu Drittanbietern, die über den Microsoft Store verkaufen",
+    "Zwölf Publisher bleiben im Panel, darunter Sony, Sega, Capcom, Square Enix und Take-Two",
+    "Parallel meldet Circana für Juli 2026 einen Einbruch der US-Hardware-Ausgaben um 29 Prozent auf 282 Millionen Dollar"
+  ],
+  "whyItMatters": "Ohne belastbare Verkaufszahlen können Publisher die Erzählung über ihre eigenen Spiele fast vollständig kontrollieren - ein Flop lässt sich als Erfolg verkaufen und ein Erfolg als Begründung für unpopuläre Entscheidungen. Für Spielerinnen und Spieler bedeutet das weniger unabhängige Einordnung, etwa wenn Studios geschlossen oder Preise erhöht werden.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Die monatlichen US-Marktberichte von Circana verlieren gleich zwei ihrer wichtigsten Quellen: Xbox ist seit Juli 2026 kein teilnehmender Publisher im Panel für digitale Verkaufsdaten mehr. Das bestätigte das Marktforschungsunternehmen gegenüber Kotaku. Auf Nachfrage wurde ausserdem bekannt, dass auch Electronic Arts seine Mitgliedschaft beendet hat - laut Circana zeitlich abgestimmt auf den Rückzug des Konzerns von der Börse. Xbox und EA haben sich zu einer Anfrage von Kotaku bislang nicht geäussert."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "Juli 2026",
+          "label": "seit diesem Monat teilt Xbox keine digitalen US-Verkaufsdaten mehr mit Circana"
+        },
+        {
+          "value": "12",
+          "label": "Publisher verbleiben im Panel für digitale Verkaufsdaten"
+        },
+        {
+          "value": "282 Mio. $",
+          "label": "US-Hardware-Ausgaben im Juli 2026 - tiefster Juli-Wert seit 2020"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Warum es dieses Panel überhaupt braucht"
+    },
+    {
+      "type": "paragraph",
+      "text": "Physische Verkäufe lassen sich über Handelsketten und weitere Quellen nachvollziehen. Bei digitalen Käufen im eShop, im PlayStation Store oder im Microsoft Store existiert dieser Umweg nicht: Entweder liefert die Plattform selbst die Zahlen, oder der jeweilige Publisher tut es. Genau dafür gibt es Circanas Panel - eine Gruppe von Unternehmen, die freiwillig ganz oder teilweise offenlegen, wie sich ihre Spiele digital verkaufen. Wer nicht mitmacht, taucht in den Charts nur als Schätzung auf. Nintendo ist dafür das bekannteste Beispiel."
+    },
+    {
+      "type": "paragraph",
+      "text": "Übrig bleiben nach den beiden Abgängen laut Circana diese Teilnehmer:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Bandai Namco, Capcom, Konami, Sega, Square Enix",
+        "Crystal Dynamics, Eidos, Disney Interactive Studios",
+        "Plaion, Sony, Take-Two, Warner Bros."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Der Xbox-Ausstieg trifft doppelt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Dass ausgerechnet Microsoft aussteigt, wiegt schwerer als frühere Abgänge. Zum einen verschwinden damit die digitalen US-Zahlen zu den eigenen Titeln - inklusive Call of Duty, der wohl verlässlichsten Jahresmarke der Branche. Zum anderen war der Microsoft Store bislang ein Ersatzfenster: Als Ubisoft und Take-Two das Panel verliessen, liessen sich ihre digitalen Verkäufe wenigstens über die Storefronts der Plattformhalter grob abschätzen. Take-Two kehrte später zurück, Ubisoft nicht. Dieses Hintertürchen ist nun zu - und trifft neben Ubisoft auch EA selbst."
+    },
+    {
+      "type": "quote",
+      "text": "Die Software-Charts dieses Monats sind voller Rätselraten.",
+      "attribution": "Rebekah Valentine, Kotaku"
+    },
+    {
+      "type": "paragraph",
+      "text": "Zusätzlich kursieren Hinweise, dass Xbox auch bei Game Sales Data (GSD) ausgestiegen sein könnte - dem europäischen Pendant zu Circana. Bestätigt ist das bislang nicht, offizielle Aussagen fehlen. Sollte es zutreffen, wäre der Transparenzverlust deutlich grösser als nur ein US-Problem."
+    },
+    {
+      "type": "heading",
+      "text": "Die Zahlen, die noch da sind, sehen düster aus"
+    },
+    {
+      "type": "paragraph",
+      "text": "Was Circana weiterhin misst, ist der Hardwaremarkt - und der steckt tief im Minus. Laut Analyst Mat Piscatella fielen die US-Hardware-Ausgaben im Juli 2026 um 29 Prozent auf 282 Millionen Dollar, der schwächste Juli seit 2020 mit damals 163 Millionen Dollar. In Stückzahlen ist der Rückgang mit 39 Prozent noch drastischer, abgefedert nur durch 16 Prozent höhere Preise. Die PlayStation 5 kam mit minus sechs Prozent am glimpflichsten davon, Xbox verlor 18 Prozent, die Nintendo Switch 2 brach um 51 Prozent ein. Trotzdem bleibt die Switch 2 die meistverkaufte Konsole nach Stückzahlen und liegt laut Piscatella auf Kurs, die Gesamtzahlen des Vorgängers zu übertreffen. Als Ursache für die Preisspirale gilt die durch KI-Rechenzentren ausgelöste Speicherknappheit, die Hardware quer durch die Elektronikbranche verteuert."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung: Der blinde Fleck wird grösser"
+    },
+    {
+      "type": "paragraph",
+      "text": "Das Problem dürfte zunehmen. Digitale Käufe machen längst den Löwenanteil aus, reine Handelsdaten zeichnen also ohnehin ein Zerrbild. PlayStation stellt die Disc-Produktion 2028 komplett ein, womit Sony künftig allein darüber entscheidet, was über eigene Verkäufe nach draussen dringt - und dem Beispiel von Xbox und Nintendo jederzeit folgen könnte. Von Steam und Battle.net weiss die Öffentlichkeit sowieso nichts. Wer glaubt, das gehe nur Analystinnen und Insider etwas an, unterschätzt die Folgen: Ohne unabhängige Zahlen lässt sich jede Entlassungswelle mit angeblich enttäuschenden Verkäufen begründen und jede unbeliebte Monetarisierung mit angeblich riesiger Nachfrage. Was bleibt, sind gut begründete Schätzungen - und die Erzählungen der Konzerne selbst."
+    }
+  ],
+  "poll": {
+    "question": "Wie wichtig sind euch öffentliche Verkaufszahlen?",
+    "options": [
+      "Sehr - ohne sie glaube ich Publishern gar nichts mehr",
+      "Interessant, aber mein Spielverhalten ändert das nicht",
+      "Egal, das ist reine Insider-Statistik",
+      "Schätzungen reichen mir völlig"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-20T21:51:42.208Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "waveform",
+  "sources": [
+    {
+      "title": "Xbox And EA Aren t Sharing U.S. Digital Sales Data Anymore, And That s Worrisome",
+      "url": "https://kotaku.com/xbox-isnt-sharing-us-digital-sales-data-anymore-2000726257",
+      "publisher": "Kotaku"
+    },
+    {
+      "title": "We all knew game hardware spending would drop, but the July percentages are still shocking",
+      "url": "https://www.destructoid.com/gaming-hardware-decline-sales/",
+      "publisher": "Destructoid"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/xbox-ea-circana-digitaldaten-panel-2026.webp",
+    "alt": "Xbox liefert keine Verkaufszahlen mehr - Charts werden zum Rätselraten",
+    "credit": "Bild: Kotaku",
+    "sourceUrl": "https://kotaku.com/xbox-isnt-sharing-us-digital-sales-data-anymore-2000726257",
+    "sourceWidth": 1248,
+    "sourceHeight": 702
+  },
+  "relatedSlugs": [
+    "it-takes-two-nintendo-switch-2-leak-2026",
+    "fromsoftware-miyazaki-singleplayer-duskbloods-2026",
+    "compulsion-games-management-buyout-xbox-abgeschlossen-2026"
+  ]
+}
