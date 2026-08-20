@@ -157,7 +157,15 @@ h3 {
 body::after {
   content: "";
   position: fixed;
-  inset: 0;
+  /* KEIN ROEHRENBILD IM KOPFBAND (Tim, 20.08.2026): Die Linien lagen
+     bisher ueber der ganzen Seite, also auch ueber dem Kopfband. Der
+     Schleier beginnt jetzt erst unterhalb des Bandes. Ueber die
+     Stapelebene loesen liesse es sich nicht: Ein hoeherer Wert am
+     Kopfband wuerde es auch ueber das Menue und die Suche legen. */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: calc(65px + env(safe-area-inset-top, 0px));
   z-index: 9998;
   pointer-events: none;
   background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.26) 0 1px, transparent 1px 3px);
@@ -166,6 +174,10 @@ body::after {
 }
 @media (prefers-reduced-motion: reduce) {
   body::after { opacity: 0.25; }
+}
+/* Am Rechner ist das Kopfband hoeher (88 px plus Trennlinie). */
+@media (min-width: 1024px) {
+  body::after { top: 89px; }
 }
 main, header, footer { position: relative; z-index: 1; }
 
@@ -388,7 +400,15 @@ body, h1, h2, h3, h4, p, li, a, button, span, time, input, label {
    Derselbe Verlauf wie das Menue. Damit wechselt die Schrift dort auf
    Dunkel - Weiss auf Magenta misst 1.5:1 und waere nicht lesbar. */
 .kopfband {
-  background: linear-gradient(100deg, #FF2E97, #FF6BC0 42%, #02F0D1 118%);
+  /* WAAGRECHT, NICHT SCHRAEG (Tim, 20.08.2026): Der Verlauf lief mit
+     100 Grad, also leicht schraeg. Solange das Band 65 px hoch war,
+     fiel das nicht auf. Seit die Flaeche 140 px ueber die
+     Bildschirmkante hinausreicht, wandern die Farben ueber diese
+     Strecke sichtbar: Gemessen lagen Streifen und Band um bis zu 9
+     Farbstufen auseinander - ein feiner Absatz genau an der Kante.
+     Bei 90 Grad ist der Verlauf senkrecht gleichfoermig, der Abstand
+     betraegt an jeder Stelle exakt 0. */
+  background: linear-gradient(90deg, #FF2E97, #FF6BC0 42%, #02F0D1 118%);
   border-bottom: 1px solid rgba(11, 6, 22, 0.35);
   box-shadow: 0 6px 26px -8px rgba(255, 46, 151, 0.45);
   /* DURCHGEHEND GEFUELLT BIS ZUR BILDSCHIRMKANTE (Tim, 20.08.2026).
