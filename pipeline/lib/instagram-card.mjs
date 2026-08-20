@@ -335,7 +335,14 @@ export async function renderInstagramCard({
     text-shadow:-3px 0 rgba(255,46,151,0.75), 3px 0 rgba(2,240,209,0.75),
       0 3px 18px rgba(0,0,0,0.55); }
   .titel .zeile { display:block; white-space:nowrap; }
-  .titel .cy { background:linear-gradient(100deg,#FF2E97,#02F0D1); color:#0B0616;
+  /* VERLAUF BEGINNT LINKS MIT CYAN — nicht umdrehen (Fehler 20.08.2026):
+     Die Abnahme prueft, ob jede Zeile am Satzspiegel beginnt, und erkennt
+     Schrift an der Helligkeit (Schwelle 150). Magenta #FF2E97 liegt in
+     Graustufen bei 98 und ist fuer sie unsichtbar. Mit Magenta links mass
+     sie die linke Kante erst bei x=166 statt 60, warf die Zeile als "kein
+     Text" weg und lehnte jeden Post ab, dessen erste Schlagzeilenzeile mit
+     einem markierten Wort beginnt — am 20.08.2026 drei von vier. */
+  .titel .cy { background:linear-gradient(100deg,#02F0D1,#FF2E97); color:#0B0616;
     padding:1px 9px 5px 9px; text-shadow:none; }
   .notiz { font-family:'Caveat',cursive; font-weight:700; font-size:47px; line-height:1.0;
     color:#02F0D1; margin-top:24px; transform:rotate(-2deg); transform-origin:left center; }

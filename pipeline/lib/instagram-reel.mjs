@@ -93,7 +93,7 @@ async function renderOverlay({ headlineLines, kicker, notiz, badge, credit, chro
     text-shadow:-3px 0 rgba(255,46,151,0.75), 3px 0 rgba(2,240,209,0.75),
       0 3px 18px rgba(0,0,0,0.55); }
   .titel .zeile { display:block; white-space:nowrap; }
-  .titel .cy { background:linear-gradient(100deg,#FF2E97,#02F0D1); color:#0B0616;
+  .titel .cy { background:linear-gradient(100deg,#02F0D1,#FF2E97); color:#0B0616;
     padding:1px 9px 5px 9px; text-shadow:none; }
   .notiz { font-family:'Caveat',cursive; font-weight:700; font-size:47px; line-height:1.0;
     color:#02F0D1; margin-top:24px; transform:rotate(-2deg); transform-origin:left center; }

@@ -204,7 +204,7 @@ export async function renderTypoCard({
     letter-spacing:-0.02em; color:#FFFFFF;
     text-shadow:-3px 0 rgba(255,46,151,0.75), 3px 0 rgba(2,240,209,0.75); }
   .titel .zeile { display:block; white-space:nowrap; }
-  .titel .cy { background:linear-gradient(100deg,#FF2E97,#02F0D1); color:#0B0616;
+  .titel .cy { background:linear-gradient(100deg,#02F0D1,#FF2E97); color:#0B0616;
     padding:1px 9px 5px 9px; text-shadow:none; }
   /* transform-origin mittig statt links — sonst kippt die Notiz aus der
      Mittelachse. */
