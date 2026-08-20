@@ -1,0 +1,145 @@
+{
+  "slug": "sandisk-bics9-bics10-bics11-nand-roadmap-2026",
+  "title": "Sandisk plant NAND bis BiCS13 — nur der Starttermin fehlt",
+  "subtitle": "Neue Roadmap vom Investor Day nennt erstmals BiCS11, verspricht deutlich schnelleren QLC-Flash und schweigt zur Massenfertigung",
+  "excerpt": "Sandisk hat auf dem Investor Day frische Zahlen zu BiCS9 und BiCS10 gezeigt und erstmals BiCS11 in die Roadmap gesetzt. Für Gaming-SSDs klingen die Werte gut — eine Angabe fehlt aber ausgerechnet dort, wo sie zählt.",
+  "seoTitle": "Sandisk NAND-Roadmap: BiCS9, BiCS10 und BiCS11 im Detail",
+  "metaDescription": "Sandisk zeigt neue NAND-Roadmap mit BiCS11, BiCS12 und BiCS13, nennt kräftige Zuwächse bei BiCS9 QLC — verrät aber keinen Termin für die Massenfertigung.",
+  "category": "news",
+  "platforms": [
+    "pc",
+    "playstation",
+    "xbox"
+  ],
+  "tags": [
+    "Sandisk",
+    "Kioxia",
+    "NAND-Flash",
+    "SSD",
+    "Hardware"
+  ],
+  "tldr": [
+    "Sandisk nennt auf dem Investor Day erstmals BiCS11 und erwähnt am Rande BiCS12 und BiCS13",
+    "BiCS9 QLC soll gegenüber BiCS8 QLC 150 Prozent mehr Schreibdurchsatz und 75 Prozent mehr Lesedurchsatz bieten",
+    "BiCS9 zielt auf Consumer-Produkte, das dichtere BiCS10 voraussichtlich auf den Enterprise-Sektor",
+    "Konkrete Termine für die Massenfertigung fehlen weiterhin; bemustert wird seit Juli"
+  ],
+  "whyItMatters": "NAND-Flash bestimmt, wie viel Speicherplatz Gaming-SSDs bieten und was sie kosten. Die von Sandisk genannten Sprünge bei Durchsatz und Effizienz betreffen ausgerechnet den günstigen QLC-Speicher, der in vielen bezahlbaren Laufwerken für PC und Konsole steckt. Ohne Fertigungstermin bleibt aber offen, wann davon etwas im Handel ankommt.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Sandisk hat auf seinem jüngsten Investor Day nachgelegt: Der Flash-Hersteller lieferte neue Details zu den NAND-Generationen BiCS9 und BiCS10, verglich sie mit dem Vorgänger BiCS8 und zeigte eine aktualisierte Roadmap. Darauf taucht erstmals BiCS11 auf — und auf einer weiteren Folie stehen bereits BiCS12 und BiCS13. Was in der Präsentation dagegen konsequent fehlt, sind Zeitpläne für den Start der Massenfertigung."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "+150 %",
+          "label": "Schreibdurchsatz von BiCS9 QLC gegenüber BiCS8 QLC laut Sandisk"
+        },
+        {
+          "value": "4,8 Gbit/s",
+          "label": "NAND-Schnittstelle bei BiCS9 — ein Drittel schneller als bei BiCS8"
+        },
+        {
+          "value": "2 Tbit",
+          "label": "Kapazität pro Die bei den aktuellen QLC-Varianten"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "BiCS11 wird wieder ein ganzer Schritt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Namensgebung der Partner Sandisk und Kioxia hat in der Vergangenheit mehrfach für Verwirrung gesorgt. Erst wurde BiCS7 komplett übersprungen, dann stellten beide Unternehmen BiCS9 und BiCS10 parallel vor — was zunächst wie ein Widerspruch aussah. Die Auflösung: BiCS9 ist ein Hybrid, BiCS10 die Fortsetzung der klassischen Roadmap. Bei BiCS11 kehrt Sandisk laut der gezeigten Folie zum regulären Vorgehen zurück. Sowohl im Speicherbereich als auch bei den Logikschaltkreisen soll dann neue Technik zum Einsatz kommen."
+    },
+    {
+      "type": "paragraph",
+      "text": "Offen bleibt, wie der nächste Technik-Hybrid heissen wird. Auf der Roadmap steht er bislang nur als «Future BiCS Technology» — ein Platzhalter, der die Namenslogik erneut auf die Probe stellen dürfte."
+    },
+    {
+      "type": "heading",
+      "text": "Was BiCS9 zum günstigen Zwischenschritt macht"
+    },
+    {
+      "type": "paragraph",
+      "text": "BiCS9 kombiniert Speicherzellen aus der BiCS8-Generation mit dem neuen Interface von BiCS10. Möglich macht das die sogenannte CBA-Technik: Speicherbereich und Logik entstehen auf getrennten Wafern und werden anschliessend per Waferbonden zu einem Chip zusammengefügt. Das Upgrade älterer Technik soll vor allem Kostenvorteile bringen — und genau deshalb ist BiCS9 künftig für Consumer-Produkte vorgesehen, während das teurere BiCS10 mit höchster Speicherdichte und Leistung voraussichtlich dem Enterprise-Sektor vorbehalten bleibt."
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Zahlen, die Sandisk zur kürzlich vorgestellten QLC-Variante nennt, klingen deutlich: Gegenüber BiCS8 QLC mit 2 Tbit soll BiCS9 QLC mit 2 Tbit beim Schreibdurchsatz um 150 Prozent und beim Lesen um 75 Prozent zulegen. Was genau gemessen wurde, lässt der Hersteller allerdings offen. Bekannt ist immerhin, dass die genutzte NAND-Schnittstelle mit 4,8 Gbit/s ein Drittel schneller arbeitet als bei BiCS8. Auch bei der Energieeffizienz verspricht Sandisk kräftige Zuwächse — 40 Prozent beim Lesen, 85 Prozent beim Schreiben."
+    },
+    {
+      "type": "heading",
+      "text": "BiCS10: sechs Planes und ein sichtbar kleinerer Die"
+    },
+    {
+      "type": "paragraph",
+      "text": "Für BiCS10 wirbt Sandisk sowohl in der TLC- als auch in der QLC-Ausführung mit der branchenweit höchsten Speicherdichte. Auf den Vergleichsbildern gut zu erkennen ist das neue 6-Plane-Design der QLC-Variante, deren Die deutlich kleiner ausfällt als bei BiCS8 QLC. Mehr Kapazität auf weniger Fläche bedeutet perspektivisch mehr Bits pro Wafer — und genau das ist die Kennzahl, die Sandisk gemeinsam mit Kioxia bei jeder neuen Generation deutlich steigern will. Zwischenschritte wie BiCS9 sind davon ausdrücklich ausgenommen."
+    },
+    {
+      "type": "paragraph",
+      "text": "Wie weit die Skalierung bereits getragen hat, illustrierte eine weitere Folie: Binnen 25 Jahren ging es vom planaren MLC-NAND mit 1 Gbit bis zum heutigen BiCS10 QLC-3D-NAND mit 2 Tbit pro Die."
+    },
+    {
+      "type": "heading",
+      "text": "Der fehlende Termin"
+    },
+    {
+      "type": "list",
+      "items": [
+        "BiCS9: Hybrid aus BiCS8-Zellen und BiCS10-Interface, gedacht für Consumer-Produkte",
+        "BiCS10: höchste Speicherdichte als TLC und QLC, voraussichtlich für den Enterprise-Sektor",
+        "BiCS11: wieder eine vollständige neue Generation bei Speicher und Logik",
+        "BiCS12 und BiCS13: bereits eingeplant, aber ohne technische Details"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "So detailliert die Technik dargelegt wird, so vage bleibt der Zeitplan. Weder Sandisk noch Kioxia haben zuletzt genannt, wann die Massenfertigung von BiCS9 und BiCS10 anläuft. Bekannt ist lediglich, dass erste Chips beider Generationen seit Juli bemustert werden — der Schritt vom Muster zum Serienprodukt kann Monate dauern."
+    },
+    {
+      "type": "paragraph",
+      "text": "Für die Praxis heisst das: Wer aktuell eine SSD für PC oder Konsole sucht, kauft weiterhin Laufwerke auf Basis der bisherigen Generationen. Interessant wird BiCS9 mittelfristig trotzdem, weil ausgerechnet der günstige QLC-Speicher profitieren soll — jene Variante also, die grosse Kapazitäten bezahlbar macht, beim Dauerschreiben bislang aber gerne einbricht. Ob die genannten Prozentwerte sich in Alltagsszenarien wie dem Installieren grosser Spiele wiederfinden, lässt sich erst beurteilen, wenn fertige Produkte auf dem Tisch liegen. Bis dahin bleibt die Roadmap das, was Roadmaps auf Investor Days meist sind: ein Versprechen mit offenem Datum."
+    }
+  ],
+  "poll": {
+    "question": "QLC-Speicher im Gaming-Rechner — kommt euch das ins Gehäuse?",
+    "options": [
+      "Klar, Hauptsache viele Terabyte fürs Geld",
+      "Nur als Zweitlaufwerk für die Spielebibliothek",
+      "Nein danke, ich bleibe bei TLC",
+      "Interessiert mich erst mit echten Benchmarks"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-20T04:06:50.676Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "controller",
+  "sources": [
+    {
+      "title": "Neue NAND-Roadmap: Sandisk spricht über BiCS9, BiCS10 und BiCS11",
+      "url": "https://www.computerbase.de/news/storage/neue-nand-roadmap-sandisk-spricht-ueber-bics9-bics10-und-bics11.98935/",
+      "publisher": "ComputerBase"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/sandisk-bics9-bics10-bics11-nand-roadmap-2026.webp",
+    "alt": "Sandisk plant NAND bis BiCS13 — nur der Starttermin fehlt",
+    "credit": "Bild: ComputerBase",
+    "sourceUrl": "https://www.computerbase.de/news/storage/neue-nand-roadmap-sandisk-spricht-ueber-bics9-bics10-und-bics11.98935/",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "ps6-kein-release-termin-totoki-chipknappheit-2026",
+    "pc-partner-grafikkarten-knappheit-preiswarnung-2026",
+    "speicherpreise-rekord-august-2026-ram-ssd-nand"
+  ]
+}
