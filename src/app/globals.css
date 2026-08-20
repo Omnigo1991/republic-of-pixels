@@ -344,27 +344,21 @@ code {
   left: 0;
   right: 0;
   bottom: 0;
-  /* KURZ HALTEN, NICHT PROPORTIONAL RECHNEN (Tim, 20.08.2026).
-     Ich hatte erst proportional gerechnet: Kachel 76 px auf 280 px Bild
-     (27 %), also 48 px auf 177 px. Tim empfand auch das als deutlich zu
-     hoch - zu Recht, denn der Massstab ist ein anderer. Bei der Kachel
-     ist der Verlauf der UNTERGRUND FUER DEN TEXT, er darf und soll das
-     Bild dort verdecken. Hier steht der Text unter dem Bild; der Verlauf
-     hat nur eine Aufgabe, naemlich die harte Kante zu brechen. Alles
-     darueber hinaus frisst Motiv.
-     Am Aufmacher gemessen: 16 px ueber dem Cyan-Text ist der Verlauf
-     praktisch deckend (0,92). Genau diese Strecke ist gemeint, wenn Tim
-     von "einem halben Zentimeter" spricht. Also 20 px, dieselbe
-     Abstufung, nur kurz. */
-  height: 20px;
+  /* WEICH UND BIS KURZ VOR DIE PILLE (Tim, 20.08.2026, dritte
+     Abstimmung): Die 20-px-Fassung wirkte hart. Jetzt 72 px mit der
+     weichen Abstufung der Artikel-Kacheln; unten voll deckend in der
+     Kartenfarbe, sodass der Verlauf nahtlos in die Flaeche unter dem
+     Bild uebergeht und optisch erst kurz vor der NEWS-Pille endet. */
+  height: 72px;
   pointer-events: none;
   background: linear-gradient(0deg,
     #14122E 0px,
-    rgba(20, 18, 46, 0.9) 4px,
-    rgba(20, 18, 46, 0.68) 8px,
-    rgba(20, 18, 46, 0.4) 12px,
-    rgba(20, 18, 46, 0.16) 16px,
-    rgba(20, 18, 46, 0) 20px);
+    #14122E 8px,
+    rgba(20, 18, 46, 0.9) 20px,
+    rgba(20, 18, 46, 0.68) 36px,
+    rgba(20, 18, 46, 0.4) 50px,
+    rgba(20, 18, 46, 0.16) 62px,
+    rgba(20, 18, 46, 0) 72px);
 }
 
 /* ---------- Personen-Kacheln auf "Ueber uns" ----------
