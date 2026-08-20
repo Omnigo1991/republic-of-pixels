@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T15:56:58.639Z",
+  "updatedAt": "2026-08-20T19:04:24.716Z",
   "deals": [
     {
       "appId": 1771300,
@@ -11,17 +11,6 @@
       "endsAt": "2026-08-24T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/1771300/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1771300/93e28946c46f09d761bbfab1e17e8c1c4a8323a0/capsule_184x69.jpg?t=1777975568"
-    },
-    {
-      "appId": 2688950,
-      "title": "Planet Coaster 2",
-      "discountPercent": 60,
-      "originalPrice": 4999,
-      "finalPrice": 1999,
-      "currency": "EUR",
-      "endsAt": "2026-08-25T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/2688950/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2688950/capsule_184x69.jpg?t=1787133907"
     },
     {
       "appId": 4001890,
@@ -46,17 +35,6 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2764460/f0a29d6c91be4e91e9fa2f384dd5ae695bfd6b5b/capsule_184x69.jpg?t=1786703049"
     },
     {
-      "appId": 2163330,
-      "title": "Yet Another Zombie Survivors",
-      "discountPercent": 35,
-      "originalPrice": 1479,
-      "finalPrice": 961,
-      "currency": "EUR",
-      "endsAt": "2026-09-03T17:00:08.000Z",
-      "url": "https://store.steampowered.com/app/2163330/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2163330/765e6898cbb4faffa34991912775d813be58cc56/capsule_184x69.jpg?t=1787234279"
-    },
-    {
       "appId": 1643320,
       "title": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
       "discountPercent": 30,
@@ -65,7 +43,29 @@
       "currency": "EUR",
       "endsAt": "2026-08-31T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/1643320/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1643320/87ade1fa0e9869388368228258d758e040a3f651/capsule_184x69_alt_assets_7_german.jpg?t=1787231306"
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1643320/87ade1fa0e9869388368228258d758e040a3f651/capsule_184x69_alt_assets_7_german.jpg?t=1787251039"
+    },
+    {
+      "appId": 2358720,
+      "title": "Black Myth: Wukong",
+      "discountPercent": 30,
+      "originalPrice": 5999,
+      "finalPrice": 4199,
+      "currency": "EUR",
+      "endsAt": "2026-08-25T16:00:00.000Z",
+      "url": "https://store.steampowered.com/app/2358720/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2358720/b7f722ddd5e23503f598586aa3700dd4d827bb2d/capsule_184x69.jpg?t=1760601605"
+    },
+    {
+      "appId": 4132330,
+      "title": "Pizza House Simulator🍕",
+      "discountPercent": 25,
+      "originalPrice": 1349,
+      "finalPrice": 1011,
+      "currency": "EUR",
+      "endsAt": "2026-09-02T17:00:37.000Z",
+      "url": "https://store.steampowered.com/app/4132330/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4132330/30e0db1cba795cfaefd61c946efe97c5df73ab0c/capsule_184x69.jpg?t=1787218826"
     }
   ]
 }
