@@ -74,8 +74,15 @@ export function NotchKarte({
   randCyan?: boolean;
 }) {
   const { kicker, headline } = splitTitle(article.title, article.tags);
+  // NUR DER KERN VOR DER WENDUNG (Tim, 20.08.2026): "The Duskbloods
+  // geleakt - ausgerechnet vor dem Screenshot-Verbot" brauchte fuenf
+  // Zeilen und begrub das Bild - "das Bild ist das, was die Leute
+  // catched". Auf der Kachel steht der Kern, die Wendung liest man im
+  // Artikel. Damit reichen ueberall DREI Zeilen, fest reserviert -
+  // jede Kachel hat dieselbe Textzone, kein "mal so, mal so".
+  const kern = headline.split(" - ")[0].trim();
   return (
-    <Link href={`/artikel/${article.slug}`} className="group block h-full">
+    <Link href={`/artikel/${article.slug}`} title={article.title} className="group block h-full">
       <div className={`treppe-tr h-full ${randCyan ? "treppe-cyan" : ""}`}>
         <div className={`treppe-innen ${bildHoehe}`}>
           <div className="absolute inset-0 [&_img]:h-full [&_img]:w-full [&_img]:object-cover transition-transform duration-500 group-hover:scale-[1.03]">
@@ -103,7 +110,7 @@ export function NotchKarte({
                 Schrift und zwei Zeilen brach fast jede Schlagzeile mitten
                 im Wort ab - auf der Startseite waren 19 Ueberschriften
                 abgeschnitten. Ab sm bleibt alles wie bisher. */}
-            <h3 className={`min-h-[3.9em] text-[13.5px] font-extrabold leading-[1.3] text-white line-clamp-5 sm:min-h-[2.6em] sm:line-clamp-4 ${klein ? "sm:text-[14px] sm:leading-[1.3]" : "sm:text-[16px] sm:leading-[1.35]"}`}>{headline}</h3>
+            <h3 className={`min-h-[3.9em] text-[13.5px] font-extrabold leading-[1.3] text-white line-clamp-3 sm:line-clamp-3 ${klein ? "sm:min-h-[3.9em] sm:text-[14px] sm:leading-[1.3]" : "sm:min-h-[4.05em] sm:text-[16px] sm:leading-[1.35]"}`}>{kern}</h3>
           </div>
         </div>
       </div>

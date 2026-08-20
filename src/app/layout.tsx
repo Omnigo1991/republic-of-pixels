@@ -85,7 +85,12 @@ export const metadata: Metadata = {
 // Kopfbands. Mit "cover" reicht die Seite bis an die Bildschirmkante,
 // und das Kopfband fuellt den Streifen (siehe .kopfband in globals.css).
 export const viewport: Viewport = {
-  themeColor: "#0C0B1A",
+  // BEWUSST KEIN themeColor (Tim, 20.08.2026): Mit einer festen Farbe
+  // faerbt Safari den Streifen hinter der Uhrzeit beim Scrollen genau
+  // damit ein - der Streifen war Navy, waehrend das Kopfband darunter
+  // pink-cyan leuchtete. Ohne Angabe uebernimmt Safari die Farbe des
+  // Inhalts unter dem Streifen, also das Kopfband - wie frueher, als
+  // "bis und mit Uhrzeit alles in Cyan" war.
   viewportFit: "cover",
 };
 
