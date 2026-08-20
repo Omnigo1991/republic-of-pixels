@@ -120,7 +120,7 @@ function PopularCard({ article, rank }: { article: Article; rank: number }) {
         className="artikelkante group block h-full transition-all duration-300"
       >
         <span className="artikelkante__innen flex h-full flex-col overflow-hidden">
-        <div className="bildauslauf relative aspect-[16/9] overflow-hidden">
+        <div className="relative aspect-[16/9] overflow-hidden">
           <ArticleMedia
             article={article}
             sizes="320px"

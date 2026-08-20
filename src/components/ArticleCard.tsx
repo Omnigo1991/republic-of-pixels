@@ -12,7 +12,7 @@ export function ArticleCard({ article }: { article: Article }) {
       href={`/artikel/${article.slug}`}
       className="group flex flex-col overflow-hidden rounded-2xl border border-border-subtle bg-surface-card transition-all duration-300 hover:bg-surface-hover"
     >
-      <div className="bildauslauf relative aspect-[16/9] overflow-hidden">
+      <div className="relative aspect-[16/9] overflow-hidden">
         <ArticleMedia article={article} sizes="(max-width: 640px) 100vw, 33vw" className="h-full w-full transition-transform duration-500 group-hover:scale-105" />
       </div>
       <div className="flex flex-1 flex-col gap-3 p-5">

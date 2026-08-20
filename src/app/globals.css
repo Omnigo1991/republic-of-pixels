@@ -330,36 +330,14 @@ code {
   border-color: rgba(2, 240, 209, 0.28);
 }
 
-/* ---------- Weicher Bildauslauf ----------
-   KEINE HARTEN KANTEN (Tim, 20.08.2026): Bei "Beliebt bei Lesern" und
-   der Artikelkarte endete das Bild mit einer geraden Linie, waehrend die
-   Kacheln der Startseite (NotchKarte, Aufmacher) weich ins Navy
-   auslaufen. Zwei Uebergaenge fuer dieselbe Sache. Diese Regel gibt
-   allen Artikel-Kacheln denselben Auslauf.
-   Die Farbe ist exakt der Untergrund beider Karten (#14122E), damit der
-   Verlauf nahtlos in die Textflaeche uebergeht. */
-.bildauslauf::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  /* WEICH UND BIS KURZ VOR DIE PILLE (Tim, 20.08.2026, dritte
-     Abstimmung): Die 20-px-Fassung wirkte hart. Jetzt 72 px mit der
-     weichen Abstufung der Artikel-Kacheln; unten voll deckend in der
-     Kartenfarbe, sodass der Verlauf nahtlos in die Flaeche unter dem
-     Bild uebergeht und optisch erst kurz vor der NEWS-Pille endet. */
-  height: 72px;
-  pointer-events: none;
-  background: linear-gradient(0deg,
-    #14122E 0px,
-    #14122E 8px,
-    rgba(20, 18, 46, 0.9) 20px,
-    rgba(20, 18, 46, 0.68) 36px,
-    rgba(20, 18, 46, 0.4) 50px,
-    rgba(20, 18, 46, 0.16) 62px,
-    rgba(20, 18, 46, 0) 72px);
-}
+/* ---------- Kein Bildauslauf auf Karten mit Text UNTER dem Bild ----------
+   Endgueltig entschieden nach vier Anlaeufen (Tim, 20.08.2026): Bei
+   "Beliebt bei Lesern" und der Artikelkarte steht der Text unterhalb
+   des Bildes - dort endet das Bild wie auf der alten Cyan-Fassung
+   direkt an der Kartenflaeche, OHNE Verlauf. Jeder Verlauf, egal ob
+   20, 48 oder 72 px, frass sichtbar Motiv und wurde abgelehnt.
+   Verlaeufe gibt es nur dort, wo Text IM Bild steht (NotchKarte,
+   Aufmacher) - da sind sie der Untergrund der Schrift. */
 
 /* ---------- Personen-Kacheln auf "Ueber uns" ----------
    Verlauf wie im Kopfband (Tim, 19.08.2026). Die Form bleibt rund -
