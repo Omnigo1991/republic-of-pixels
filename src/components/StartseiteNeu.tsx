@@ -69,15 +69,8 @@ export function NotchKarte({
   randCyan?: boolean;
 }) {
   const { kicker, headline } = splitTitle(article.title, article.tags);
-  // NUR DER KERN VOR DER WENDUNG (Tim, 20.08.2026): "The Duskbloods
-  // geleakt - ausgerechnet vor dem Screenshot-Verbot" brauchte fuenf
-  // Zeilen und begrub das Bild - "das Bild ist das, was die Leute
-  // catched". Auf der Kachel steht der Kern, die Wendung liest man im
-  // Artikel. Damit reichen ueberall DREI Zeilen, fest reserviert -
-  // jede Kachel hat dieselbe Textzone, kein "mal so, mal so".
-  const kern = headline.split(" - ")[0].trim();
   return (
-    <Link href={`/artikel/${article.slug}`} title={article.title} className="group block h-full">
+    <Link href={`/artikel/${article.slug}`} className="group block h-full">
       <div className={`treppe-tr h-full ${randCyan ? "treppe-cyan" : ""}`}>
         <div className={`treppe-innen ${bildHoehe}`}>
           <div className="absolute inset-0 [&_img]:h-full [&_img]:w-full [&_img]:object-cover transition-transform duration-500 group-hover:scale-[1.03]">
@@ -85,18 +78,16 @@ export function NotchKarte({
           </div>
           {/* Polygon-Scrim (aus deren CSS): nur auf der Textbox, untere
               Haelfte flach 80%, obere Haelfte laeuft aus. */}
-          {/* UEBERGANG HALB SO LANG (Tim, 20.08.2026): Die 76 px Auslauf
-              stammen vom grossen Aufmacher. Auf den kleinen Kacheln (Guides,
-              News-Reihe) frassen sie fast das halbe Bild - "massiv zu hoch
-              und zu stark". Jetzt 36 px, und die Zwischenstufen setzen
-              spaeter ein. Der deckende Sockel unter der Schrift bleibt,
-              sonst wird der Text unlesbar. */}
+          {/* Uebergang wie vor der Analyserunde: 76 px weicher Auslauf.
+              Die 36-px-Kurzfassung wirkte hart ("beschissen") - seit die
+              Guides-Kacheln Trio-Groesse haben, passt die lange Fassung
+              wieder ueberall. */}
           <div
-            className="absolute inset-x-0 bottom-0 px-3.5 pb-3.5 pt-[36px]"
-            style={{ background: "linear-gradient(0deg, #0F0E20 0px, #0F0E20 calc(100% - 36px), rgba(15,14,32,0.85) calc(100% - 30px), rgba(15,14,32,0.58) calc(100% - 22px), rgba(15,14,32,0.3) calc(100% - 14px), rgba(15,14,32,0.11) calc(100% - 7px), rgba(15,14,32,0) 100%)" }}
+            className="absolute inset-x-0 bottom-0 px-3.5 pb-3.5 pt-[76px]"
+            style={{ background: "linear-gradient(0deg, #0F0E20 0px, #0F0E20 calc(100% - 76px), rgba(15,14,32,0.9) calc(100% - 64px), rgba(15,14,32,0.68) calc(100% - 48px), rgba(15,14,32,0.4) calc(100% - 32px), rgba(15,14,32,0.16) calc(100% - 16px), rgba(15,14,32,0) 100%)" }}
           >
             {kicker && (
-              <p className="mb-1 text-[10px] font-extrabold tracking-[0.05em] text-accent line-clamp-1 sm:text-[11px]">
+              <p className="mb-1 text-[10px] font-extrabold tracking-[0.08em] text-accent line-clamp-1 sm:text-[11px]">
                 {kicker.toUpperCase()}
               </p>
             )}
@@ -105,7 +96,12 @@ export function NotchKarte({
                 Schrift und zwei Zeilen brach fast jede Schlagzeile mitten
                 im Wort ab - auf der Startseite waren 19 Ueberschriften
                 abgeschnitten. Ab sm bleibt alles wie bisher. */}
-            <h3 className="min-h-[3.9em] text-[13.5px] font-extrabold leading-[1.3] text-white line-clamp-3 sm:min-h-[4.05em] sm:text-[16px] sm:leading-[1.35]">{kern}</h3>
+            {/* ZURUECK AUF DEN STAND VOR DER ANALYSERUNDE (Tim, 20.08.2026,
+                "verschlimmbessert"): volle Schlagzeile samt Wendung, am
+                Rechner exakt zwei Zeilen (min-h = clamp), lange Titel
+                enden mit Punkten. Der Kern-ohne-Wendung-Versuch liess
+                Einzeiler mit grosser Leerflaeche zurueck. */}
+            <h3 className="min-h-[3.9em] text-[13.5px] font-extrabold leading-[1.3] text-white line-clamp-4 sm:min-h-[2.6em] sm:text-[16px] sm:leading-[1.35] sm:line-clamp-2">{headline}</h3>
           </div>
         </div>
       </div>
