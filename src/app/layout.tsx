@@ -85,12 +85,15 @@ export const metadata: Metadata = {
 // Kopfbands. Mit "cover" reicht die Seite bis an die Bildschirmkante,
 // und das Kopfband fuellt den Streifen (siehe .kopfband in globals.css).
 export const viewport: Viewport = {
-  // BEWUSST KEIN themeColor (Tim, 20.08.2026): Mit einer festen Farbe
-  // faerbt Safari den Streifen hinter der Uhrzeit beim Scrollen genau
-  // damit ein - der Streifen war Navy, waehrend das Kopfband darunter
-  // pink-cyan leuchtete. Ohne Angabe uebernimmt Safari die Farbe des
-  // Inhalts unter dem Streifen, also das Kopfband - wie frueher, als
-  // "bis und mit Uhrzeit alles in Cyan" war.
+  // STREIFEN HINTER DER UHRZEIT (Tim, 20.08.2026, zweiter Anlauf):
+  // Ohne Angabe nimmt Safari beim Scrollen den Seitengrund (Navy) -
+  // der Streifen fiel aus dem Band. Apple erlaubt hier nur EINE Farbe,
+  // keinen Verlauf. Magenta ist der Startton des Kopfbands: Links bei
+  // der Uhrzeit geht der Streifen nahtlos ins Band ueber; rechts beim
+  // Akku bleibt ein Unterschied zum Cyan-Ende - technische Grenze.
+  // Ungescrollt zeigt der Streifen weiterhin den echten Verlauf, weil
+  // die Seite unter die Statusleiste reicht (viewport-fit: cover).
+  themeColor: "#FF2E97",
   viewportFit: "cover",
 };
 
