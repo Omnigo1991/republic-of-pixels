@@ -101,7 +101,7 @@ export default async function HomePage() {
             <SectionDivider />
             <div className="grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-5">
               {guideReihe.map((a) => (
-                <NotchKarte key={a.slug} article={a} bildHoehe="h-[250px]" randCyan />
+                <NotchKarte key={a.slug} article={a} bildHoehe="aspect-[4/3] h-auto" randCyan />
               ))}
             </div>
             {/* Gleiche Pille und derselbe Abstand (mt-8) wie unter der
