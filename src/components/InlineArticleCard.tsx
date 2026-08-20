@@ -5,7 +5,7 @@ import { CategoryPill } from "./Badges";
 import { formatDateTime, splitTitle } from "@/lib/format";
 
 // Artikelempfehlung im exakten Stil der Startseiten-Newsliste
-// (ArticleListItem) — gerahmt wie eine Box, damit sie sich sauber in
+// (ArticleListItem) - gerahmt wie eine Box, damit sie sich sauber in
 // den Fliesstext einfügt. Wird sowohl inline im Artikeltext (wie bei
 // play3.de) als auch im "Weiterlesen"-Block am Artikelende verwendet,
 // damit beide Stellen gleich aussehen.

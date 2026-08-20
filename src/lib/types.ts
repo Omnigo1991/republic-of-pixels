@@ -31,7 +31,7 @@ export type BodyBlock =
   | { type: "quote"; text: string; attribution?: string }
   | { type: "list"; items: string[] }
   | { type: "embed"; platform: EmbedPlatform; url: string }
-  // Zahlen-Kacheln (Artikel-Bauplan 08.08.2026): die 2–3 stärksten Zahlen
+  // Zahlen-Kacheln (Artikel-Bauplan 08.08.2026): die 2-3 stärksten Zahlen
   // der Story als visuelle Kacheln nach dem Einstieg.
   | { type: "stats"; items: { value: string; label: string }[] };
 
@@ -86,7 +86,7 @@ export const CATEGORY_LABELS: Record<Category, string> = {
   leaks: "Leaks",
   reviews: "Reviews",
   // Einzahl mit Absicht: Das Abzeichen am Artikel soll "GUIDE" lauten,
-  // nicht "GUIDES" — es beschreibt diesen einen Artikel.
+  // nicht "GUIDES" - es beschreibt diesen einen Artikel.
   guides: "Guide",
 };
 
@@ -103,11 +103,11 @@ export const REVIEW_LABEL_META: Record<
 > = {
   Essenziell: {
     tone: "success",
-    description: "Eines der besten Spiele der Saison – uneingeschränkte Empfehlung.",
+    description: "Eines der besten Spiele der Saison - uneingeschränkte Empfehlung.",
   },
   "Klare Empfehlung": {
     tone: "accent",
-    description: "Hochwertig mit kleinen Schwächen – für Fans des Genres ein Muss.",
+    description: "Hochwertig mit kleinen Schwächen - für Fans des Genres ein Muss.",
   },
   Empfehlenswert: {
     tone: "accent",

@@ -3,13 +3,13 @@ import Link from "next/link";
 import { getAlleThemen } from "@/lib/themen";
 import { Masthead } from "@/components/Masthead";
 
-// Übersicht aller Themen-Hubs — Einstieg für Leser und Crawler
+// Übersicht aller Themen-Hubs - Einstieg für Leser und Crawler
 // (jeder Hub ist von hier aus verlinkt).
 
 export const metadata: Metadata = {
   title: "Alle Themen",
   description:
-    "Alle Themen bei Republic of Pixels im Überblick — von GTA 6 bis Switch 2: News, Leaks und Reviews pro Spiel und Thema.",
+    "Alle Themen bei Republic of Pixels im Überblick - von GTA 6 bis Switch 2: News, Leaks und Reviews pro Spiel und Thema.",
   alternates: { canonical: "/themen" },
 };
 
@@ -24,7 +24,7 @@ export default function ThemenPage() {
           Alle Themen
         </h1>
         <p className="mt-3 max-w-2xl text-text-secondary">
-          Unsere Berichterstattung nach Spielen und Themen gebündelt — jedes
+          Unsere Berichterstattung nach Spielen und Themen gebündelt - jedes
           Thema mit allen zugehörigen News, Leaks und Reviews.
         </p>
 

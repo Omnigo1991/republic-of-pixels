@@ -4,7 +4,7 @@ import { PlaceholderArt } from "./PlaceholderArt";
 
 // Einheitliche Bilddarstellung: echtes Artikelbild (next/image, von Vercel
 // on-demand optimiert), sonst PlaceholderArt. Der umgebende Container muss
-// `relative` mit festem Seitenverhältnis sein — wie bei allen bisherigen
+// `relative` mit festem Seitenverhältnis sein - wie bei allen bisherigen
 // PlaceholderArt-Einsätzen.
 export function ArticleMedia({
   article,

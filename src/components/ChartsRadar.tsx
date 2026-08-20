@@ -15,7 +15,7 @@ interface ChartGame {
 
 // Charts-Radar: die meistgespielten Steam-Spiele der Woche (Tim-Freigabe
 // 09.08.2026, Skizze VORSCHAU-charts-radar). Datenquelle: src/content/
-// charts.json — von pipeline/charts.mjs jeden Montag aktualisiert.
+// charts.json - von pipeline/charts.mjs jeden Montag aktualisiert.
 // Aufbau analog Release-/Deal-Radar: Top 3 als Artwork-Podium, Plätze 4-8
 // als kompakte Liste, Trend = Steams eigener Wochenvergleich.
 export function ChartsRadar() {
@@ -30,7 +30,7 @@ export function ChartsRadar() {
     const delta = g.lastWeekRank - g.steamRank;
     if (delta > 0) return <span className="text-xs font-bold text-accent">▲ {delta}</span>;
     if (delta < 0) return <span className="text-xs font-bold text-error">▼ {-delta}</span>;
-    return <span className="text-xs font-bold text-text-tertiary">—</span>;
+    return <span className="text-xs font-bold text-text-tertiary">-</span>;
   };
 
   const podium = games.slice(0, 3);
@@ -56,12 +56,12 @@ export function ChartsRadar() {
             {g.image && (
               <div className="relative h-24 w-full overflow-hidden border-b border-border-subtle sm:h-28">
                 {/* Rang als Navy-Chip statt Schattenzahl (Tim, 15.08.2026):
-                    gleiche Sprache wie die Zahlen-Kacheln — Navy-Flaeche,
+                    gleiche Sprache wie die Zahlen-Kacheln - Navy-Flaeche,
                     Cyan-Zahl, kein Schlagschatten. */}
                 <span className="absolute left-2.5 top-2.5 z-10 flex h-9 w-9 items-center justify-center rounded-lg bg-navy text-lg font-black text-accent">
                   {g.rank}
                 </span>
-                {/* Steam-Artwork vom offiziellen CDN — plain <img> wie im
+                {/* Steam-Artwork vom offiziellen CDN - plain <img> wie im
                     Deal-Radar, damit keine next/image-Allowlist nötig ist. */}
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img

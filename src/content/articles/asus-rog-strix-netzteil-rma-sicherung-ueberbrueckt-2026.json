@@ -1,7 +1,7 @@
 {
   "slug": "asus-rog-strix-netzteil-rma-sicherung-ueberbrueckt-2026",
-  "title": "Netzteil kommt aus der Reparatur zurück — mit überbrückter Sicherung",
-  "subtitle": "Ein ROG Strix mit 850 Watt löste nach zwei Stunden Betrieb die Hauptsicherung im Raum aus — im Inneren fand der Besitzer eine eingelötete Drahtbrücke",
+  "title": "Netzteil kommt aus der Reparatur zurück - mit überbrückter Sicherung",
+  "subtitle": "Ein ROG Strix mit 850 Watt löste nach zwei Stunden Betrieb die Hauptsicherung im Raum aus - im Inneren fand der Besitzer eine eingelötete Drahtbrücke",
   "excerpt": "Ein ASUS ROG Strix mit 850 Watt kehrte aus dem RMA-Prozess zurück, lief zwei Stunden und legte dann die Hauptsicherung des Raums lahm. Beim Öffnen zeigte sich, was im Service damit gemacht wurde.",
   "seoTitle": "ASUS ROG Strix Netzteil: Sicherung nach RMA überbrückt",
   "metaDescription": "Ein ROG Strix Netzteil kam laut Reddit-Bericht mit überbrückter Schutzsicherung aus dem RMA zurück und löste die Hauptsicherung aus. Was Betroffene wissen sollten.",
@@ -19,14 +19,14 @@
   "tldr": [
     "Ein ASUS ROG Strix Netzteil mit 850 Watt kam laut einem Reddit-Bericht aus der RMA-Reparatur zurück, ohne dass die defekten Bauteile ersetzt wurden.",
     "Statt einer neuen Sicherung war ein Draht direkt über die Kontakte der internen Schutzsicherung gelötet.",
-    "Nach rund zwei Stunden Betrieb löste der Hauptschutzschalter des Raums aus — beim zweiten Einschaltversuch erneut.",
+    "Nach rund zwei Stunden Betrieb löste der Hauptschutzschalter des Raums aus - beim zweiten Einschaltversuch erneut.",
     "Der Besitzer gibt an, dass ihm die Garantieleistung ohnehin verweigert wurde; er hat ASUS USA kontaktiert."
   ],
-  "whyItMatters": "Das Netzteil ist die Komponente, die im Fehlerfall alles andere im Rechner schützt — und im schlimmsten Fall den Unterschied zwischen einem Defekt und einem Kabelbrand ausmacht. Wenn ausgerechnet ein Service-Eingriff diese Schutzfunktion entfernt, betrifft das jede Person, die Hardware zur Reparatur einschickt und danach blind wieder ans Stromnetz hängt.",
+  "whyItMatters": "Das Netzteil ist die Komponente, die im Fehlerfall alles andere im Rechner schützt - und im schlimmsten Fall den Unterschied zwischen einem Defekt und einem Kabelbrand ausmacht. Wenn ausgerechnet ein Service-Eingriff diese Schutzfunktion entfernt, betrifft das jede Person, die Hardware zur Reparatur einschickt und danach blind wieder ans Stromnetz hängt.",
   "body": [
     {
       "type": "paragraph",
-      "text": "Ein Netzteil ist die unscheinbarste teure Komponente im PC — und die einzige, die im Fehlerfall zwischen defekter Elektronik und der Steckdose steht. Genau diese Schutzfunktion fehlte offenbar bei einem ASUS ROG Strix mit 850 Watt, das aus dem RMA-Prozess zu seinem Besitzer zurückkehrte. Statt die fehlerhaften Bauteile zu tauschen, war die interne Schutzsicherung schlicht mit einem Stück Draht überbrückt worden, das direkt über die Kontakte gelötet war. Nach rund zwei Stunden Betrieb flog die Hauptsicherung des Raums."
+      "text": "Ein Netzteil ist die unscheinbarste teure Komponente im PC - und die einzige, die im Fehlerfall zwischen defekter Elektronik und der Steckdose steht. Genau diese Schutzfunktion fehlte offenbar bei einem ASUS ROG Strix mit 850 Watt, das aus dem RMA-Prozess zu seinem Besitzer zurückkehrte. Statt die fehlerhaften Bauteile zu tauschen, war die interne Schutzsicherung schlicht mit einem Stück Draht überbrückt worden, das direkt über die Kontakte gelötet war. Nach rund zwei Stunden Betrieb flog die Hauptsicherung des Raums."
     },
     {
       "type": "embed",
@@ -46,7 +46,7 @@
         },
         {
           "value": "2×",
-          "label": "so oft flog die Sicherung — auch nach dem Zurücksetzen"
+          "label": "so oft flog die Sicherung - auch nach dem Zurücksetzen"
         }
       ]
     },
@@ -60,7 +60,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Der Ablauf danach liest sich wie ein Lehrstück darüber, wofür Sicherungen überhaupt existieren. Nach etwa zwei Stunden Betrieb löste der Hauptschutzschalter des Raums aus. Beim Versuch, den Schalter zurückzusetzen und den Rechner erneut zu starten, flog die Sicherung ein zweites Mal. Erst dann öffnete der Besitzer das Netzteil — und fand die Ursache sofort."
+      "text": "Der Ablauf danach liest sich wie ein Lehrstück darüber, wofür Sicherungen überhaupt existieren. Nach etwa zwei Stunden Betrieb löste der Hauptschutzschalter des Raums aus. Beim Versuch, den Schalter zurückzusetzen und den Rechner erneut zu starten, flog die Sicherung ein zweites Mal. Erst dann öffnete der Besitzer das Netzteil - und fand die Ursache sofort."
     },
     {
       "type": "heading",
@@ -68,7 +68,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Die interne Sicherung eines Netzteils ist als Opferbauteil gedacht. Sie unterbricht bei einem Überstrom den Stromkreis, bevor Leiterbahnen, Kabel oder Bauteile heiss genug werden, um einen Brand auszulösen. Fehlt diese Schutzstufe, wandert der Fehlerstrom weiter — bis zur nächsten Instanz, in diesem Fall dem Schutzschalter der Hausinstallation. Genau der war hier die einzige verbleibende Barriere gegen ein mögliches Feuer."
+      "text": "Die interne Sicherung eines Netzteils ist als Opferbauteil gedacht. Sie unterbricht bei einem Überstrom den Stromkreis, bevor Leiterbahnen, Kabel oder Bauteile heiss genug werden, um einen Brand auszulösen. Fehlt diese Schutzstufe, wandert der Fehlerstrom weiter - bis zur nächsten Instanz, in diesem Fall dem Schutzschalter der Hausinstallation. Genau der war hier die einzige verbleibende Barriere gegen ein mögliches Feuer."
     },
     {
       "type": "paragraph",
@@ -80,7 +80,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Normalerweise gilt das Öffnen eines Netzteils als Garantieverlust — und der Besitzer war sich dessen bewusst. Nach eigener Aussage spielte das keine Rolle mehr, weil ihm die Garantieleistung ohnehin verweigert worden war. Er hat inzwischen ASUS USA kontaktiert, doch über die Standardkanäle sind die Aussichten gering. Offen bleibt, ob das Unternehmen den Fehler seiner Techniker anerkennt und eine Entschädigung anbietet. Eine Stellungnahme von ASUS liegt bislang nicht vor."
+      "text": "Normalerweise gilt das Öffnen eines Netzteils als Garantieverlust - und der Besitzer war sich dessen bewusst. Nach eigener Aussage spielte das keine Rolle mehr, weil ihm die Garantieleistung ohnehin verweigert worden war. Er hat inzwischen ASUS USA kontaktiert, doch über die Standardkanäle sind die Aussichten gering. Offen bleibt, ob das Unternehmen den Fehler seiner Techniker anerkennt und eine Entschädigung anbietet. Eine Stellungnahme von ASUS liegt bislang nicht vor."
     },
     {
       "type": "heading",
@@ -90,9 +90,9 @@
       "type": "list",
       "items": [
         "Nach einer Reparatur nie blind vertrauen: Ungewöhnliche Gerüche, Geräusche oder auslösende Sicherungen sind ein sofortiges Abschaltsignal.",
-        "Ein Netzteil, das den Hausschutzschalter auslöst, gehört nicht zurück in den Betrieb — auch nicht testweise.",
+        "Ein Netzteil, das den Hausschutzschalter auslöst, gehört nicht zurück in den Betrieb - auch nicht testweise.",
         "Das Öffnen des Gehäuses beendet in der Regel die Garantie. Wer einen Verdacht hat, dokumentiert ihn besser schriftlich gegenüber dem Hersteller, bevor er selbst zum Schraubenzieher greift.",
-        "Fotos, Ticketnummern und Schriftverkehr aus dem RMA-Prozess aufbewahren — sie sind bei Streitfällen die einzige belastbare Grundlage."
+        "Fotos, Ticketnummern und Schriftverkehr aus dem RMA-Prozess aufbewahren - sie sind bei Streitfällen die einzige belastbare Grundlage."
       ]
     },
     {
@@ -101,13 +101,13 @@
     },
     {
       "type": "paragraph",
-      "text": "Belegt ist bislang ein einzelner Fall, dokumentiert durch Fotos eines Reddit-Nutzers. Daraus lässt sich kein systematisches Problem in der Serviceabwicklung ableiten. Trotzdem trifft dieser Einzelfall einen empfindlichen Punkt: RMA ist für die meisten eine Blackbox. Man schickt Hardware ein, bekommt sie zurück und schliesst sie wieder ans Stromnetz an, ohne die Reparatur je überprüfen zu können. Dieses Vertrauen ist die Geschäftsgrundlage jedes Herstellersupports — und es wird nicht durch Marketing verteidigt, sondern durch saubere Arbeit an der Werkbank."
+      "text": "Belegt ist bislang ein einzelner Fall, dokumentiert durch Fotos eines Reddit-Nutzers. Daraus lässt sich kein systematisches Problem in der Serviceabwicklung ableiten. Trotzdem trifft dieser Einzelfall einen empfindlichen Punkt: RMA ist für die meisten eine Blackbox. Man schickt Hardware ein, bekommt sie zurück und schliesst sie wieder ans Stromnetz an, ohne die Reparatur je überprüfen zu können. Dieses Vertrauen ist die Geschäftsgrundlage jedes Herstellersupports - und es wird nicht durch Marketing verteidigt, sondern durch saubere Arbeit an der Werkbank."
     }
   ],
   "poll": {
     "question": "Wie sollte ASUS diesen Fall lösen?",
     "options": [
-      "Neues Netzteil plus Entschädigung — der Fehler lag klar beim Service",
+      "Neues Netzteil plus Entschädigung - der Fehler lag klar beim Service",
       "Ersatzgerät ohne Diskussion, mehr braucht es nicht",
       "Gar nichts, das Gehäuse wurde geöffnet",
       "Externe Prüfung des gesamten RMA-Prozesses"
@@ -130,7 +130,7 @@
   ],
   "image": {
     "src": "/images/articles/asus-rog-strix-netzteil-rma-sicherung-ueberbrueckt-2026.webp",
-    "alt": "Netzteil kommt aus der Reparatur zurück — mit überbrückter Sicherung",
+    "alt": "Netzteil kommt aus der Reparatur zurück - mit überbrückter Sicherung",
     "credit": "Bild: Wccftech",
     "sourceUrl": "https://wccftech.com/asus-rog-strix-psu-rma-bypassed-fuse-fire-hazard/",
     "sourceWidth": 1456,

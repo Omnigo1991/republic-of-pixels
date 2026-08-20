@@ -1,7 +1,7 @@
 import { getAllArticles } from "@/lib/articles";
 
 // Google-News-Sitemap (für Google Discover / Google News): listet nur
-// Artikel der letzten 48 Stunden — so verlangt es die Spezifikation.
+// Artikel der letzten 48 Stunden - so verlangt es die Spezifikation.
 // Wird bei jedem Build neu erzeugt; da die Pipeline alle 3 Stunden
 // deployt, ist die Liste immer aktuell. Ältere Artikel bleiben über die
 // normale sitemap.xml auffindbar.

@@ -12,7 +12,7 @@ function escapeXml(s: string): string {
     .replace(/"/g, "&quot;");
 }
 
-// Eigener RSS-Feed — Pflicht für ein News-Medium (Feedreader, Syndication,
+// Eigener RSS-Feed - Pflicht für ein News-Medium (Feedreader, Syndication,
 // Google-News-Erschliessung). Wird bei jedem Build statisch erzeugt.
 export function GET() {
   const items = getAllArticles()
@@ -36,9 +36,9 @@ export function GET() {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Republic of Pixels — Gaming-News, Leaks &amp; Reviews</title>
+    <title>Republic of Pixels - Gaming-News, Leaks &amp; Reviews</title>
     <link>${SITE_URL}</link>
-    <description>Deutschsprachige Gaming-News für PC, PlayStation, Xbox und Nintendo — ohne Clickbait.</description>
+    <description>Deutschsprachige Gaming-News für PC, PlayStation, Xbox und Nintendo - ohne Clickbait.</description>
     <language>de-DE</language>
     <atom:link href="${SITE_URL}/feed.xml" rel="self" type="application/rss+xml"/>
 ${items}

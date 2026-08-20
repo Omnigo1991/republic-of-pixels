@@ -6,7 +6,7 @@ import { FliegerIcon, KanalIcon, kanaeleFuer, nativTeilen, type Kanal } from "./
 
 // Schwebender Teilen-Knopf unten rechts (Tim-Freigabe 09.08.2026,
 // Variante A): nur das Papierflieger-Icon in Cyan, kein Text.
-// Er teilt IMMER die Seite, auf der man gerade ist — Startseite teilt die
+// Er teilt IMMER die Seite, auf der man gerade ist - Startseite teilt die
 // Startseite, ein Artikel den Artikel. Klick öffnet das native Teilen-Menü
 // des Geräts; wo der Browser keins hat (z. B. Firefox am Desktop), klappt
 // unser eigenes Panel mit denselben Kanälen auf.
@@ -81,7 +81,7 @@ export function TeilenKnopf() {
         setKopiert(kanal.key);
         setTimeout(() => setKopiert(null), 2200);
       } catch {
-        // Zwischenablage gesperrt — der Link bleibt über die Adresszeile erreichbar
+        // Zwischenablage gesperrt - der Link bleibt über die Adresszeile erreichbar
       }
       if (kanal.key === "kopieren") return;
     }
@@ -136,7 +136,7 @@ export function TeilenKnopf() {
             </div>
             {kopiert === "instagram" && (
               <p className="mt-3 text-[11px] leading-relaxed text-text-tertiary">
-                Instagram erlaubt kein direktes Teilen im Web — der Link liegt in der
+                Instagram erlaubt kein direktes Teilen im Web - der Link liegt in der
                 Zwischenablage und kann dort eingefügt werden.
               </p>
             )}
@@ -144,12 +144,12 @@ export function TeilenKnopf() {
         </>
       )}
       {/* Auf dem Handy liegt das Teilen-Blatt über dem Knopf und würde die
-          letzte Kachel verdecken — solange es offen ist, tritt er zurück. */}
+          letzte Kachel verdecken - solange es offen ist, tritt er zurück. */}
       <button
         onClick={teilen}
         aria-label="Diese Seite teilen"
         aria-expanded={offen}
-        className={`fixed bottom-5 right-5 z-50 h-[52px] w-[52px] items-center justify-center rounded-full border border-accent/35 bg-[rgba(18,17,38,0.85)] text-accent backdrop-blur transition-all duration-300 hover:border-accent/70 sm:bottom-6 sm:right-6 sm:flex ${offen ? "hidden" : "flex"} ${
+        className={`fixed bottom-[calc(1.25rem+env(safe-area-inset-bottom,0px))] right-5 z-50 h-[52px] w-[52px] items-center justify-center rounded-full border border-accent/35 bg-[rgba(18,17,38,0.85)] text-accent backdrop-blur transition-all duration-300 hover:border-accent/70 sm:bottom-[calc(1.5rem+env(safe-area-inset-bottom,0px))] sm:right-6 sm:flex ${offen ? "hidden" : "flex"} ${
           sichtbar || offen
             ? "translate-y-0 opacity-100"
             : "pointer-events-none translate-y-4 opacity-0"

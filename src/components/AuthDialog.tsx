@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import { getSupabase } from "@/lib/supabase";
 
-// Login-Dialog (Google/Discord/E-Mail) und Nickname-Wahl — genutzt von der
+// Login-Dialog (Google/Discord/E-Mail) und Nickname-Wahl - genutzt von der
 // Kommentarsektion und vom Anmelde-Status im Header (AuthStatus.tsx).
 
 export function NicknameWahl({ onFertig }: { onFertig: () => void }) {
@@ -28,8 +28,8 @@ export function NicknameWahl({ onFertig }: { onFertig: () => void }) {
     if (error) {
       setFehler(
         error.code === "23505"
-          ? "Dieser Nickname ist schon vergeben — probier einen anderen."
-          : "3–24 Zeichen, erlaubt sind Buchstaben, Zahlen, Punkt, Minus und Unterstrich."
+          ? "Dieser Nickname ist schon vergeben - probier einen anderen."
+          : "3-24 Zeichen, erlaubt sind Buchstaben, Zahlen, Punkt, Minus und Unterstrich."
       );
       return;
     }
@@ -39,10 +39,10 @@ export function NicknameWahl({ onFertig }: { onFertig: () => void }) {
   return (
     <div className="mb-6 rounded-2xl border border-accent/35 bg-accent-wash/30 p-5">
       <p className="mb-1 text-sm font-semibold text-text-primary">
-        Fast geschafft — wähle deinen Nickname
+        Fast geschafft - wähle deinen Nickname
       </p>
       <p className="mb-3 text-xs text-text-tertiary">
-        So erscheinst du in den Kommentaren. 3–24 Zeichen; Buchstaben, Zahlen, Punkt, Minus,
+        So erscheinst du in den Kommentaren. 3-24 Zeichen; Buchstaben, Zahlen, Punkt, Minus,
         Unterstrich.
       </p>
       <div className="flex gap-2">
@@ -97,7 +97,7 @@ export function AnmeldeDialog({ onSchliessen }: { onSchliessen: () => void }) {
       );
     } else {
       const { error } = await supabase.auth.signInWithPassword({ email, password: passwort });
-      if (error) setMeldung("Anmeldung fehlgeschlagen — E-Mail oder Passwort prüfen.");
+      if (error) setMeldung("Anmeldung fehlgeschlagen - E-Mail oder Passwort prüfen.");
       else onSchliessen();
     }
     setSendet(false);

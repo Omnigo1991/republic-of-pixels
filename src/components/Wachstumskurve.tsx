@@ -6,12 +6,12 @@ import { useId, useState } from "react";
 //
 // WARUM: Für ein Werbegespräch ist die wichtigste Grafik eine Linie, die nach
 // oben zeigt. Das Cockpit zeigte bisher nur Momentaufnahmen (heute, 7 Tage,
-// 30 Tage) — daraus liest niemand eine Entwicklung. Die Tagesdaten lagen
+// 30 Tage) - daraus liest niemand eine Entwicklung. Die Tagesdaten lagen
 // bereits in page_views, sie wurden nur nie ausgewertet.
 //
 // Bewusst als eigenes SVG statt mit einer Diagramm-Bibliothek: Wir brauchen
 // genau eine Kurvenart, dafür lohnt kein zusätzliches Paket im Seitengewicht
-// — und so sitzen Cyan, Kurvenform und Typografie exakt in unserer Sprache.
+// - und so sitzen Cyan, Kurvenform und Typografie exakt in unserer Sprache.
 
 export interface Tageswert {
   tag: string; // ISO-Datum (YYYY-MM-DD)
@@ -31,7 +31,7 @@ function pfad(werte: number[], maxWert: number, flaeche: boolean) {
   const y = (v: number) => RAND.oben + innenH - (maxWert > 0 ? (v / maxWert) * innenH : 0);
 
   // Sanfte Kurve statt harter Ecken: horizontale Kontrollpunkte auf halber
-  // Strecke — ergibt einen ruhigen Verlauf ohne über die Datenpunkte
+  // Strecke - ergibt einen ruhigen Verlauf ohne über die Datenpunkte
   // hinauszuschiessen (was bei echten Zahlen irreführend wäre).
   let d = `M ${x(0)} ${y(werte[0] ?? 0)}`;
   for (let i = 1; i < werte.length; i++) {
@@ -58,7 +58,7 @@ export function Wachstumskurve({ daten }: { daten: Tageswert[] }) {
   if (daten.length < 2) {
     return (
       <p className="rounded-2xl border border-border-subtle bg-surface-panel p-5 text-sm text-text-tertiary">
-        Noch zu wenig Daten für eine Kurve — ab dem zweiten Tag erscheint sie hier.
+        Noch zu wenig Daten für eine Kurve - ab dem zweiten Tag erscheint sie hier.
       </p>
     );
   }
@@ -207,7 +207,7 @@ export function Wachstumskurve({ daten }: { daten: Tageswert[] }) {
         })}
 
         {daten.map((d, i) => {
-          // Auf Mobile wären 30 Datumsangaben Brei — nur Anfang, Mitte, Ende.
+          // Auf Mobile wären 30 Datumsangaben Brei - nur Anfang, Mitte, Ende.
           const zeigen = i === 0 || i === daten.length - 1 || i === Math.floor(daten.length / 2);
           if (!zeigen) return null;
           const x = RAND.links + i * schritt;

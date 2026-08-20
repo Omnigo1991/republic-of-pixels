@@ -3,7 +3,7 @@
 //
 // Warum SVG und nicht einfach eine grosse Ueberschrift: Die Breite soll
 // sich der Spalte anpassen, ohne dass die Schriftgroesse in Stufen
-// springt. Im SVG uebernimmt das viewBox — ein einziger <text>-Knoten
+// springt. Im SVG uebernimmt das viewBox - ein einziger <text>-Knoten
 // wird auf die Kastenbreite skaliert, die Buchstabenabstaende bleiben
 // dabei im Verhaeltnis erhalten.
 //
@@ -34,12 +34,12 @@ export function SektionsBanner({
   const zeichen = links.length + trenner.length + rechts.length;
 
   // 72 = gemessene Durchschnittsbreite eines Zeichens bei font-size 100
-  // in Inter Black. Der Faktor 1.12 erlaubt hoechstens 12 % Dehnung —
+  // in Inter Black. Der Faktor 1.12 erlaubt hoechstens 12 % Dehnung -
   // darueber wirkt die Schrift verzogen statt gesetzt.
   const breite = Math.min(1536, Math.round(zeichen * 72 * 1.12));
 
   // WICHTIG: Die Schrifthoehe muss konstant sein, nicht die Kastenbreite.
-  // Vorher war die Breite auf 660 px begrenzt — ein kurzer Titel wie
+  // Vorher war die Breite auf 660 px begrenzt - ein kurzer Titel wie
   // "DEINE REPUBLIC" wurde dadurch auf dieselbe Breite gezogen wie
   // "NEWS AUS DER REPUBLIC" und erschien deutlich groesser. Jetzt gibt
   // 0.43 die Skalierung vor (1536 × 0.43 = 660 px, die gemessene Breite
@@ -57,7 +57,7 @@ export function SektionsBanner({
   // Skalierung: 0.43 am Desktop (1536 × 0.43 = 660 px, die gemessene
   // Breite der Live-Seite), 0.23 am Handy. Bei 0.23 passt selbst der
   // laengste Titel einzeilig auf 390 px UND alle Banner werden exakt
-  // gleich hoch — bei 0.28 war der kuerzeste 5 px hoeher, weil er die
+  // gleich hoch - bei 0.28 war der kuerzeste 5 px hoeher, weil er die
   // Breitenbegrenzung nicht erreichte (Tim, 20.08.2026).
   return (
     <div

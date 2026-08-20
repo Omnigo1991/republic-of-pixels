@@ -5,7 +5,7 @@ import { SectionDivider } from "./SectionDivider";
 import { getSupabase } from "@/lib/supabase";
 import raetsel from "@/content/pixelraten.json";
 
-// Pixel-Raten — das tägliche Rätsel der Republic (Tim-Freigabe 09.08.2026):
+// Pixel-Raten - das tägliche Rätsel der Republic (Tim-Freigabe 09.08.2026):
 // Ein verpixeltes Spiel-Artwork, fünf Versuche, mit jedem Fehlversuch wird
 // das Bild eine Stufe schärfer. Rätsel-Daten kommen statisch aus
 // src/content/pixelraten.json (nächtlich von pipeline/pixelraten.mjs
@@ -24,12 +24,12 @@ interface Fortschritt {
 const MAX_VERSUCHE = 5;
 
 // Untergrenze für die Community-Zeile (Tim, 09.08.2026): Bei einem einzigen
-// Teilnehmer stünde dort "von 100 % der Republic gelöst" — das liest sich
+// Teilnehmer stünde dort "von 100 % der Republic gelöst" - das liest sich
 // leer statt souverän und untergräbt genau den Vergleich, wegen dem die
 // Zeile existiert. Unter fünf Teilnehmern bleibt sie darum unsichtbar.
 const MIN_TEILNEHMER = 5;
 
-// Serien-Symbol — gleiche Bauart wie die Profil-Icons (24er-Raster,
+// Serien-Symbol - gleiche Bauart wie die Profil-Icons (24er-Raster,
 // gefüllte Silhouette, currentColor). Ersetzt das 🔥-Emoji (Tim,
 // 09.08.2026). Bewusst ein BLITZ statt einer Flamme: Drei Flammen-
 // Entwürfe lasen sich bei 14 px allesamt als Wassertropfen, der Blitz
@@ -105,7 +105,7 @@ export function PixelRaten() {
         JSON.stringify({ datum: raetsel.datum, tipps: neueTipps, geloest: neuGeloest })
       );
     } catch {
-      // Fortschritt nur im Speicher — unkritisch
+      // Fortschritt nur im Speicher - unkritisch
     }
   }
 
@@ -165,7 +165,7 @@ export function PixelRaten() {
     const quadrate = tipps
       .map((_, i) => (geloest && i === tipps.length - 1 ? "🟩" : "🟥"))
       .join("");
-    const text = `Pixel-Raten: ${quadrate} — ${
+    const text = `Pixel-Raten: ${quadrate} - ${
       geloest ? `gelöst in ${tipps.length} ${tipps.length === 1 ? "Versuch" : "Versuchen"}` : "heute nicht geknackt"
     }\nDas tägliche Gaming-Rätsel auf republicofpixels.com`;
     try {
@@ -251,7 +251,7 @@ export function PixelRaten() {
 
           {/* HINWEIS SCHON NACH DEM ERSTEN FEHLVERSUCH (Tim, 12.08.2026):
               Vorher erst nach zwei. Wer zweimal ohne jede Stütze danebenlag,
-              hatte das Rätsel meist schon aufgegeben — der Hinweis kam zu
+              hatte das Rätsel meist schon aufgegeben - der Hinweis kam zu
               spät, um noch zu helfen. Der zweite Hinweis folgt weiterhin
               später, damit es nicht zu leicht wird. */}
           {!fertig && falscheTipps.length >= 1 && (
@@ -266,12 +266,12 @@ export function PixelRaten() {
               {geloest ? (
                 <p className="text-sm text-text-primary">
                   <span className="font-semibold text-accent">Richtig!</span> Es war{" "}
-                  <span className="font-semibold">{raetsel.loesung}</span> — gelöst in {tipps.length}{" "}
+                  <span className="font-semibold">{raetsel.loesung}</span> - gelöst in {tipps.length}{" "}
                   {tipps.length === 1 ? "Versuch" : "Versuchen"}.
                 </p>
               ) : (
                 <p className="text-sm text-text-primary">
-                  Heute nicht geknackt — es war{" "}
+                  Heute nicht geknackt - es war{" "}
                   <span className="font-semibold text-accent">{raetsel.loesung}</span>. Morgen wartet
                   ein neues Rätsel!
                 </p>

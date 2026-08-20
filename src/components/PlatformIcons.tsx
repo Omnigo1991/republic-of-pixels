@@ -5,7 +5,7 @@ import type { Platform } from "@/lib/types";
 // Berichterstattungs-Kategorien; Markenrechte liegen bei Sony, Microsoft, Nintendo.
 // Nintendo wird durch das Switch-Glyph repräsentiert (bei Kleingrössen erkennbarer
 // als der Wortmarken-Pill).
-// "PC" hat kein offizielles Logo — dafür ein neutrales Monitor-Icon im selben Stil.
+// "PC" hat kein offizielles Logo - dafür ein neutrales Monitor-Icon im selben Stil.
 
 const PATHS: Record<Exclude<Platform, "pc">, string> = {
   playstation:

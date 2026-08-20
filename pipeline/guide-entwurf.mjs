@@ -1,4 +1,4 @@
-// GUIDE-WERKSTATT — erzeugt Ratgeber-Artikel, wahlweise als Entwurf oder
+// GUIDE-WERKSTATT - erzeugt Ratgeber-Artikel, wahlweise als Entwurf oder
 // direkt veröffentlicht.
 //
 // WAS EIN "GUIDE" HIER HEISST: Ein Ratgeber-Artikel wie "Einsteigertipps zu
@@ -8,18 +8,18 @@
 //
 // VOM ENTWURF ZUR AUTOMATIK (Tim-Entscheid 15.08.2026, "Bau das Tor und
 // lass laufen"): Ursprünglich erzeugte dieses Skript nur einen Entwurf zum
-// Herunterladen — Guides waren neu, nichts Neues geht ungeprüft auf die
+// Herunterladen - Guides waren neu, nichts Neues geht ungeprüft auf die
 // Seite. Statt Tim dauerhaft jeden Guide lesen zu lassen (bei News liest er
 // ja auch nicht jeden Artikel), gilt jetzt dieselbe Hausregel wie überall:
 // Ein Wächter im Code prüft das ERGEBNIS. Das Faktentreue-Tor
 // (lib/faktentor.mjs) hält jede nachprüfbare Behauptung des fertigen Guides
-// gegen die Quelltexte — ein Verstoss stoppt die Veröffentlichung.
+// gegen die Quelltexte - ein Verstoss stoppt die Veröffentlichung.
 //
 // FAKTENBASIS PFLICHT: Ohne Quelltexte schreibt das Modell aus dem
-// Gedächtnis — bei Patch-Ständen und Zahlen ist das gefährlich. Darum
+// Gedächtnis - bei Patch-Ständen und Zahlen ist das gefährlich. Darum
 // verlangt das Skript mindestens eine Quell-Adresse und zieht daraus den
 // Text als Faktenbasis. Was nicht in den Quellen steht, darf nicht in den
-// Guide — und das Tor prüft das nach.
+// Guide - und das Tor prüft das nach.
 //
 // Start: GitHub → Actions → "Guide-Werkstatt" → Run workflow.
 //   thema:           z. B. "Einsteigertipps zu STALKER 2 nach Update 2.0"
@@ -40,11 +40,11 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const AUS = join(ROOT, "guide-entwurf");
 const ARTICLES_DIR = join(ROOT, "src", "content", "articles");
 
-const SYSTEM = `Du bist Ratgeber-Redaktion von Republic of Pixels, einem deutschsprachigen Gaming-Magazin (SCHWEIZER Rechtschreibung: NIEMALS "ß", immer "ss"; "Republic of Pixels" nie mit Bindestrichen). Du schreibst Guides, die lange gelesen werden: ruhig, präzise, ohne Clickbait und ohne Füllsätze. WICHTIGSTE REGEL: Du behauptest NUR, was die mitgelieferten Quelltexte belegen. Fehlt eine Information, lässt du sie weg — du erfindest keine Werte, keine Patch-Details, keine Tipps.`;
+const SYSTEM = `Du bist Ratgeber-Redaktion von Republic of Pixels, einem deutschsprachigen Gaming-Magazin (SCHWEIZER Rechtschreibung: NIEMALS "ß", immer "ss"; "Republic of Pixels" nie mit Bindestrichen). Du schreibst Guides, die lange gelesen werden: ruhig, präzise, ohne Clickbait und ohne Füllsätze. WICHTIGSTE REGEL: Du behauptest NUR, was die mitgelieferten Quelltexte belegen. Fehlt eine Information, lässt du sie weg - du erfindest keine Werte, keine Patch-Details, keine Tipps.`;
 
 // ---------- Hilfen für die Artikel-Umwandlung ----------
 
-// Slug aus dem Titel: Umlaute werden NUR hier umschrieben — das ist eine
+// Slug aus dem Titel: Umlaute werden NUR hier umschrieben - das ist eine
 // Web-Adresse, kein Lesetext (die Umlaut-Regel gilt für Anzeigetexte).
 export function guideSlug(title) {
   const basis = title
@@ -57,7 +57,7 @@ export function guideSlug(title) {
 }
 
 // Kurzfassung (tldr): die letzte Liste des Guides mit mindestens zwei
-// Punkten — Guides enden nach Vorgabe mit einer Checkliste. Fallback:
+// Punkten - Guides enden nach Vorgabe mit einer Checkliste. Fallback:
 // die ersten Listenpunkte, egal wo sie stehen.
 function ableitenTldr(body) {
   const listen = (body ?? []).filter((b) => b.type === "list" && (b.items ?? []).length >= 2);
@@ -66,7 +66,7 @@ function ableitenTldr(body) {
 }
 
 // Bild: Guides haben kein eigenes Pressebild. Wir übernehmen das Bild des
-// neuesten News-Artikels zum selben Spiel (erster Tag = Spielname) — Credit
+// neuesten News-Artikels zum selben Spiel (erster Tag = Spielname) - Credit
 // und Quelle bleiben erhalten. Gibt es keines, bleibt das Bild leer und die
 // Seite zeigt die prozedurale Hero-Grafik.
 export function findeBild(tags, artikelDir = ARTICLES_DIR) {
@@ -153,7 +153,7 @@ async function main() {
   }
   if (quellenListe.length === 0) {
     console.log(
-      "::error::Keine Quellen angegeben (GUIDE_QUELLEN). Ohne Quelltexte schreibt das Modell aus dem Gedächtnis — das lassen wir nicht zu.",
+      "::error::Keine Quellen angegeben (GUIDE_QUELLEN). Ohne Quelltexte schreibt das Modell aus dem Gedächtnis - das lassen wir nicht zu.",
     );
     process.exit(1);
   }
@@ -172,7 +172,7 @@ async function main() {
     lesbareQuellen.push(url);
   }
   if (quellTexte.length === 0) {
-    console.log("::error::Keine der Quellen war lesbar — kein Entwurf erstellt.");
+    console.log("::error::Keine der Quellen war lesbar - kein Entwurf erstellt.");
     process.exit(1);
   }
 
@@ -191,7 +191,7 @@ Aufbau: kurze Einleitung (wofür ist dieser Guide, für wen), dann klar
 gegliederte Abschnitte mit Zwischentiteln, konkrete Handlungsanweisungen
 statt Allgemeinplätzen, am Ende eine Checkliste als Liste. 700 bis 1000
 Wörter. Wo eine Angabe vom Patch-Stand abhängt, nenne den Stand ("Stand:
-Update 2.0, August 2026") — der Artikel soll auch in Monaten noch brauchbar
+Update 2.0, August 2026") - der Artikel soll auch in Monaten noch brauchbar
 sein oder klar zeigen, worauf er sich bezieht.
 
 Antworte NUR mit JSON, erstes Zeichen "{":
@@ -213,7 +213,7 @@ Antworte NUR mit JSON, erstes Zeichen "{":
   });
   const guide = parseJsonResponse(raw);
 
-  // Umlaut-Wächter auch hier — gleiche Regel wie überall.
+  // Umlaut-Wächter auch hier - gleiche Regel wie überall.
   const texte = [];
   (function sammle(x) {
     if (typeof x === "string") texte.push(x);
@@ -225,14 +225,14 @@ Antworte NUR mit JSON, erstes Zeichen "{":
     console.log(`::warning::Ausgeschriebene Umlaute im Entwurf: ${[...new Set(umlautFunde)].slice(0, 10).join(", ")}`);
   }
 
-  // FAKTENTREUE-TOR: das Ergebnis gegen die Quellen halten. Fail-closed —
+  // FAKTENTREUE-TOR: das Ergebnis gegen die Quellen halten. Fail-closed -
   // scheitert die Prüfung selbst, wird nichts veröffentlicht.
   let fakten;
   try {
     fakten = await pruefeFakten({ guideText: guideAlsText(guide), quellTexte });
   } catch (err) {
     if (veroeffentlichen) {
-      console.log(`::error::Faktentor nicht durchführbar (${err.message}) — Veröffentlichung gestoppt.`);
+      console.log(`::error::Faktentor nicht durchführbar (${err.message}) - Veröffentlichung gestoppt.`);
       process.exit(1);
     }
     console.log(`::warning::Faktentor nicht durchführbar: ${err.message}`);
@@ -240,15 +240,15 @@ Antworte NUR mit JSON, erstes Zeichen "{":
   }
   if (fakten) {
     if (fakten.gedeckt) {
-      console.log("Faktentor: bestanden — alle nachprüfbaren Angaben sind durch die Quellen gedeckt.");
+      console.log("Faktentor: bestanden - alle nachprüfbaren Angaben sind durch die Quellen gedeckt.");
     } else {
       for (const v of fakten.verstoesse) {
-        console.log(`::warning::Faktentor-Verstoss: "${v.behauptung}" — ${v.problem}`);
+        console.log(`::warning::Faktentor-Verstoss: "${v.behauptung}" - ${v.problem}`);
       }
     }
   }
 
-  // Lesbare Fassung — bleibt in jedem Fall als Download erhalten.
+  // Lesbare Fassung - bleibt in jedem Fall als Download erhalten.
   const md = [
     `# ${guide.title}`,
     "",
@@ -268,7 +268,7 @@ Antworte NUR mit JSON, erstes Zeichen "{":
   }
   if (fakten && !fakten.gedeckt) {
     md.push("---", "", "## Faktentor-Beanstandungen", "");
-    md.push(...fakten.verstoesse.map((v) => `- "${v.behauptung}" — ${v.problem}`), "");
+    md.push(...fakten.verstoesse.map((v) => `- "${v.behauptung}" - ${v.problem}`), "");
   }
   if (guide.offeneFragen?.length) {
     md.push("---", "", "## Nicht im Guide (von den Quellen nicht gedeckt)", "");
@@ -283,12 +283,12 @@ Antworte NUR mit JSON, erstes Zeichen "{":
 
   // ---------- Veröffentlichung ----------
   if (!veroeffentlichen) {
-    console.log("Nur Entwurf — es wird nichts veröffentlicht (veroeffentlichen war nicht 'ja').");
+    console.log("Nur Entwurf - es wird nichts veröffentlicht (veroeffentlichen war nicht 'ja').");
     verbrauchBericht();
     return;
   }
   if (fakten && !fakten.gedeckt) {
-    console.log(`::error::Faktentor: ${fakten.verstoesse.length} Verstoss/Verstösse — Veröffentlichung gestoppt. Details oben und im Entwurf-Download.`);
+    console.log(`::error::Faktentor: ${fakten.verstoesse.length} Verstoss/Verstösse - Veröffentlichung gestoppt. Details oben und im Entwurf-Download.`);
     verbrauchBericht();
     process.exit(1);
   }
@@ -299,7 +299,7 @@ Antworte NUR mit JSON, erstes Zeichen "{":
   );
   const pruefung = validateArticle(artikel, slugs);
   if (!pruefung.ok) {
-    console.log(`::error::Artikel-Validierung fehlgeschlagen — nichts veröffentlicht:\n${pruefung.errors.join("\n")}`);
+    console.log(`::error::Artikel-Validierung fehlgeschlagen - nichts veröffentlicht:\n${pruefung.errors.join("\n")}`);
     verbrauchBericht();
     process.exit(1);
   }
@@ -310,7 +310,7 @@ Antworte NUR mit JSON, erstes Zeichen "{":
   verbrauchBericht();
 }
 
-// Nur bei Direktstart laufen — beim Import (Tests) passiert nichts.
+// Nur bei Direktstart laufen - beim Import (Tests) passiert nichts.
 if (process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1])) {
   main().catch((err) => {
     console.error("Guide-Werkstatt abgebrochen:", err);

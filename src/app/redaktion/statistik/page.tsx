@@ -3,7 +3,7 @@ import { Masthead } from "@/components/Masthead";
 import { StatistikCockpit } from "@/components/StatistikCockpit";
 
 export const metadata: Metadata = {
-  title: "Statistik — Redaktion",
+  title: "Statistik - Redaktion",
   robots: { index: false },
 };
 

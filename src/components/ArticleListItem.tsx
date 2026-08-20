@@ -5,8 +5,8 @@ import { CATEGORY_LABELS } from "@/lib/types";
 import { relativeZeit } from "./StartseiteNeu";
 
 // Chronologische Newsliste, an die "Neueste"-Spalte angelehnt (Tim,
-// 15.08.2026): gleiche Anatomie — Cyan-Zeitzeile, fetter Titel, Bild
-// rechts — plus Teaser, den die grosse Liste verträgt. EINE Zeilensprache
+// 15.08.2026): gleiche Anatomie - Cyan-Zeitzeile, fetter Titel, Bild
+// rechts - plus Teaser, den die grosse Liste verträgt. EINE Zeilensprache
 // für alles, was chronologisch erzählt.
 export function ArticleListItem({ article }: { article: Article }) {
   const istNews = article.category === "news";

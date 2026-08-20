@@ -13,7 +13,7 @@ interface TrendArtikel {
   kommentare: number;
 }
 
-// Artikel mit den meisten neuen Kommentaren der letzten 24 Std. — pro
+// Artikel mit den meisten neuen Kommentaren der letzten 24 Std. - pro
 // Artikel gezählt (nicht pro Tag), damit die Zahl beim Anklicken exakt
 // nachvollziehbar ist.
 export function GeradeImGespraech() {

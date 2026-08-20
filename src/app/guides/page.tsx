@@ -8,7 +8,7 @@ import { Masthead } from "@/components/Masthead";
 //
 // Eigene Adresse /guides von Anfang an: Adressen lassen sich später nicht
 // mehr ändern, ohne bei Google von vorn anzufangen. Der Reiter im Header
-// kommt bewusst erst, wenn genug Guides da sind (ab etwa sechs) — ein
+// kommt bewusst erst, wenn genug Guides da sind (ab etwa sechs) - ein
 // Reiter vor zwei Artikeln ist ein leeres Restaurant.
 //
 // Bis dahin ist die Seite über Fusszeile, Themen und direkte Links
@@ -18,7 +18,7 @@ import { Masthead } from "@/components/Masthead";
 export const metadata: Metadata = {
   title: "Guides",
   description:
-    "Ratgeber, die bleiben: Einsteigertipps, Update-Erklärungen und Übersichten zu aktuellen Spielen — mit klarem Stand, worauf sie sich beziehen.",
+    "Ratgeber, die bleiben: Einsteigertipps, Update-Erklärungen und Übersichten zu aktuellen Spielen - mit klarem Stand, worauf sie sich beziehen.",
 };
 
 export default function GuidesPage() {
@@ -34,7 +34,7 @@ export default function GuidesPage() {
           </h1>
           <p className="mt-2 max-w-2xl text-text-secondary">
             Ratgeber, die bleiben: Einsteigertipps, Update-Erklärungen und
-            Übersichten — jeder Guide nennt den Stand, auf den er sich bezieht.
+            Übersichten - jeder Guide nennt den Stand, auf den er sich bezieht.
           </p>
         </header>
 

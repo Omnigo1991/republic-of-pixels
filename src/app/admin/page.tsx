@@ -42,7 +42,7 @@ export default function AdminPage() {
             <span className="text-sm font-semibold tracking-wide text-text-tertiary">REDAKTIONS-BACKEND</span>
           </div>
           <span className="rounded-full border border-border-default px-3 py-1 text-xs text-text-tertiary">
-            Demo-Modus — keine Datenbank verbunden
+            Demo-Modus - keine Datenbank verbunden
           </span>
         </div>
         <div className="mx-auto flex max-w-content gap-1 px-4 sm:px-6">
@@ -105,7 +105,7 @@ export default function AdminPage() {
                         {a.isTopStory ? "Ist Top-Story" : "Setzen"}
                       </button>
                     </td>
-                    <td className="px-4 py-3 text-text-secondary">{a.popularityRank ?? "—"}</td>
+                    <td className="px-4 py-3 text-text-secondary">{a.popularityRank ?? "-"}</td>
                     <td className="px-4 py-3">
                       <button className="text-text-tertiary hover:text-accent transition-colors" title="Backend folgt">
                         Bearbeiten
@@ -120,7 +120,7 @@ export default function AdminPage() {
 
         {tab === "kommentare" && (
           <div className="flex flex-col gap-4">
-            <p className="text-sm text-text-tertiary">Gemeldete Kommentare — Warteschlange</p>
+            <p className="text-sm text-text-tertiary">Gemeldete Kommentare - Warteschlange</p>
             {MOCK_REPORTED.map((c) => (
               <div key={c.id} className="rounded-2xl border border-border-subtle bg-surface-panel p-5">
                 <div className="mb-2 flex items-center justify-between">
@@ -160,7 +160,7 @@ export default function AdminPage() {
                   <tr key={u.id} className="border-b border-border-subtle last:border-0">
                     <td className="px-4 py-3 text-text-primary">{u.name}</td>
                     <td className="px-4 py-3 text-text-secondary">{u.rank}</td>
-                    <td className="px-4 py-3 text-text-tertiary">{u.badges.join(", ") || "—"}</td>
+                    <td className="px-4 py-3 text-text-tertiary">{u.badges.join(", ") || "-"}</td>
                     <td className="px-4 py-3">
                       <span
                         className={`rounded-full border px-2.5 py-1 text-xs ${

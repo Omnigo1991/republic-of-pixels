@@ -2,7 +2,7 @@ import Link from "next/link";
 
 // Das R-Markenzeichen wird direkt aus der Original-Logodatei verwendet
 // (public/brand/r-mark.png, extrahiert aus "Logo-Vorlage (2).png" mit
-// transparentem Hintergrund) — exakt das Original, keine Rekonstruktion,
+// transparentem Hintergrund) - exakt das Original, keine Rekonstruktion,
 // keine Artefakte (Betreiber-Vorgabe 05.08.2026).
 // Seitenverhältnis der Datei: 401×464.
 export function LogoMark({ className }: { className?: string }) {
@@ -33,7 +33,7 @@ export function Logo({
     <Link
       href="/"
       className="flex items-center gap-3 shrink-0 group"
-      aria-label="Republic of Pixels – Startseite"
+      aria-label="Republic of Pixels - Startseite"
     >
       <LogoMark className={`${markSize} transition-transform duration-300 group-hover:scale-105`} />
       {withWordmark &&

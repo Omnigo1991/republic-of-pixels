@@ -27,7 +27,7 @@
   "body": [
     {
       "type": "paragraph",
-      "text": "MSI hat als jüngster NVIDIA-Partner offiziell bestätigt, die Preise seiner Grafikkarten um mehr als 20 Prozent anzuheben. Damit reiht sich der Hersteller in eine Entwicklung ein, die bereits ASUS und Gigabyte im chinesischen Markt vorexerziert haben. Grund für die Preissprünge sind anhaltende DRAM-Engpässe, die laut Berichten von Board Channels sämtliche Grafikkartenserien betreffen – von der aktuellen RTX-50-Generation bis zurück zur älteren RTX-30-Serie."
+      "text": "MSI hat als jüngster NVIDIA-Partner offiziell bestätigt, die Preise seiner Grafikkarten um mehr als 20 Prozent anzuheben. Damit reiht sich der Hersteller in eine Entwicklung ein, die bereits ASUS und Gigabyte im chinesischen Markt vorexerziert haben. Grund für die Preissprünge sind anhaltende DRAM-Engpässe, die laut Berichten von Board Channels sämtliche Grafikkartenserien betreffen - von der aktuellen RTX-50-Generation bis zurück zur älteren RTX-30-Serie."
     },
     {
       "type": "heading",
@@ -53,8 +53,8 @@
     {
       "type": "list",
       "items": [
-        "RTX 5080/5070 Ti (MSI): +1350–2100 RMB (rund 200–311 US-Dollar)",
-        "RTX 5060 Ti 8G/5060 (MSI): +600–650 RMB (rund 89–96 US-Dollar)",
+        "RTX 5080/5070 Ti (MSI): +1350-2100 RMB (rund 200-311 US-Dollar)",
+        "RTX 5060 Ti 8G/5060 (MSI): +600-650 RMB (rund 89-96 US-Dollar)",
         "RTX 5050 (MSI): +550 RMB (rund 82 US-Dollar)",
         "RTX 5090 D V2 (ASUS/Gigabyte): +4500 bzw. +4000 RMB"
       ]

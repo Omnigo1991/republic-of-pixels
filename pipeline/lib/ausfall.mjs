@@ -1,7 +1,7 @@
 // AUSFALL-REGISTER (Tim, 14.08.2026).
 //
 // WARUM: Neun Stellen in der Instagram-Kette können einen Post fallen
-// lassen. Jede schreibt brav eine Zeile ins Protokoll — aber niemand zählt
+// lassen. Jede schreibt brav eine Zeile ins Protokoll - aber niemand zählt
 // sie zusammen. Die Tagesbilanz meldete abends "nur 2 von 5 Posts" und liess
 // Tim mit der Frage allein, WARUM.
 //
@@ -9,12 +9,12 @@
 // Fehlalarm, Instagram-Ablehnung, Abnahme). Gemerkt hat es nur, wer die
 // Protokolle aller Läufe einzeln gelesen hat. Genau das soll niemand müssen.
 //
-// Dieses Register zählt jeden gescheiterten ANLAUF mit Grund — pro Lauf für
+// Dieses Register zählt jeden gescheiterten ANLAUF mit Grund - pro Lauf für
 // das Protokoll und pro Tag im State, damit die Tagesbilanz am Abend nicht
 // nur sagt, dass Posts fehlen, sondern auch woran es lag.
 //
 // BEWUSST "ANLÄUFE", NICHT "VERLORENE POSTS": Die Ersatz-Runde fängt viele
-// Abbrüche auf — fällt ein Bild durch, rückt die nächste Story nach und der
+// Abbrüche auf - fällt ein Bild durch, rückt die nächste Story nach und der
 // Slot ist gerettet. Ein gescheiterter Anlauf ist also nicht automatisch ein
 // fehlender Post. Die Zahl beschreibt die REIBUNG in der Kette, und genau
 // dafür ist sie da. Wieviele Posts am Ende fehlen, sagt weiterhin die
@@ -48,7 +48,7 @@ const zuerichTag = (d = new Date()) =>
 const lauf = new Map();
 
 /**
- * Hält einen ausgefallenen Post fest — im Lauf und im State.
+ * Hält einen ausgefallenen Post fest - im Lauf und im State.
  * @param {object} state  geladener State (wird verändert, nicht geschrieben)
  * @param {string} grund  ein Wert aus GRUND
  * @param {string} [slug] betroffener Artikel, nur fürs Protokoll
@@ -77,7 +77,7 @@ export function laufBericht() {
   if (lauf.size === 0) return;
   const teile = [...lauf.entries()].map(([g, n]) => `${g}: ${n}`);
   const summe = [...lauf.values()].reduce((a, b) => a + b, 0);
-  console.log(`Gescheiterte Anläufe in diesem Lauf: ${summe} — ${teile.join(", ")}`);
+  console.log(`Gescheiterte Anläufe in diesem Lauf: ${summe} - ${teile.join(", ")}`);
 }
 
 /**

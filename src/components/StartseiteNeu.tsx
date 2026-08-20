@@ -4,10 +4,10 @@ import { ArticleMedia } from "./ArticleMedia";
 import { splitTitle } from "@/lib/format";
 
 // Bausteine der neuen hellen Startseite (Hell-Umbau 15.08.2026,
-// abgenommener Polygon-Entwurf mit Pixel-Treppe). Alles Serverkomponenten —
+// abgenommener Polygon-Entwurf mit Pixel-Treppe). Alles Serverkomponenten -
 // reine Darstellung, Daten kommen aus page.tsx.
 
-// "VOR 2 STUNDEN" — die Zeitform der Neueste-Spalte. Ab 24 Stunden wird
+// "VOR 2 STUNDEN" - die Zeitform der Neueste-Spalte. Ab 24 Stunden wird
 // daraus ein Datum, damit nie "VOR 37 STUNDEN" dasteht.
 export function relativeZeit(iso: string): string {
   const diffMs = Date.now() - new Date(iso).getTime();
@@ -52,15 +52,20 @@ export function NeuesteRail({ articles }: { articles: Article[] }) {
 
 // Bildkarte mit Pixel-Treppe oben rechts: Artwork oben KOMPLETT
 // unangetastet (Tim, 15.08.2026: "gar nicht abdunkeln"), Beschriftung auf
-// eigener Navy-Zone darunter — die Standardkarte des neuen Looks.
+// eigener Navy-Zone darunter - die Standardkarte des neuen Looks.
 export function NotchKarte({
   article,
-  bildHoehe = "h-[280px]",
+  // AM HANDY DEUTLICH KLEINER ALS DER AUFMACHER (Tim, 20.08.2026): Mit
+  // fester Hoehe von 280 px war das Bild praktisch so gross wie der
+  // Aufmacher (300 px) - die zweite Meldung wirkte damit wichtiger als
+  // die erste. 16:9 entspricht genau dem Seitenverhaeltnis unserer
+  // Artikelbilder, es wird also zusaetzlich nichts weggeschnitten.
+  bildHoehe = "aspect-[16/9] h-auto sm:aspect-auto sm:h-[280px]",
   randCyan = false,
 }: {
   article: Article;
   bildHoehe?: string;
-  /** Cyan-Rand statt Navy — bei den Guides (Tim, 17.08.2026). */
+  /** Cyan-Rand statt Navy - bei den Guides (Tim, 17.08.2026). */
   randCyan?: boolean;
 }) {
   const { kicker, headline } = splitTitle(article.title, article.tags);
@@ -78,11 +83,16 @@ export function NotchKarte({
             style={{ background: "linear-gradient(0deg, #0F0E20 0px, #0F0E20 calc(100% - 76px), rgba(15,14,32,0.9) calc(100% - 64px), rgba(15,14,32,0.68) calc(100% - 48px), rgba(15,14,32,0.4) calc(100% - 32px), rgba(15,14,32,0.16) calc(100% - 16px), rgba(15,14,32,0) 100%)" }}
           >
             {kicker && (
-              <p className="mb-1 text-[11px] font-extrabold tracking-[0.08em] text-accent line-clamp-1">
+              <p className="mb-1 text-[10px] font-extrabold tracking-[0.08em] text-accent line-clamp-1 sm:text-[11px]">
                 {kicker.toUpperCase()}
               </p>
             )}
-            <h3 className="min-h-[2.6em] text-[16px] font-extrabold leading-[1.35] text-white line-clamp-2">{headline}</h3>
+            {/* AM HANDY KLEINER UND DREIZEILIG (Tim, 20.08.2026): In zwei
+                Spalten ist eine Karte nur rund 167 px breit. Mit 16 px
+                Schrift und zwei Zeilen brach fast jede Schlagzeile mitten
+                im Wort ab - auf der Startseite waren 19 Ueberschriften
+                abgeschnitten. Ab sm bleibt alles wie bisher. */}
+            <h3 className="min-h-[3.9em] text-[13.5px] font-extrabold leading-[1.3] text-white line-clamp-4 sm:min-h-[2.6em] sm:text-[16px] sm:leading-[1.35] sm:line-clamp-2">{headline}</h3>
           </div>
         </div>
       </div>
@@ -90,7 +100,7 @@ export function NotchKarte({
   );
 }
 
-// Cyan-Band mit den zwei wichtigsten Schlagzeilen — volle Breite.
+// Cyan-Band mit den zwei wichtigsten Schlagzeilen - volle Breite.
 export function TickerBand({ articles }: { articles: Article[] }) {
   if (articles.length === 0) return null;
   return (
@@ -113,8 +123,8 @@ export function TickerBand({ articles }: { articles: Article[] }) {
   );
 }
 
-// Cyan-Block (Navy-Umbau, Tim 17.08.2026 — vorher Navy, das ginge auf
-// Navy-Grund unter). Der Versand existiert noch nicht — das Feld ist
+// Cyan-Block (Navy-Umbau, Tim 17.08.2026 - vorher Navy, das ginge auf
+// Navy-Grund unter). Der Versand existiert noch nicht - das Feld ist
 // bewusst stillgelegt und sagt das ehrlich, statt Adressen ins Leere zu
 // sammeln.
 export function NewsletterBlock({ artikelBilder }: { artikelBilder: Article[] }) {
@@ -124,7 +134,7 @@ export function NewsletterBlock({ artikelBilder }: { artikelBilder: Article[] })
         <div>
           {/* Schrift und Abstaende ueberarbeitet (Tim, 17.08.2026).
               Vorher trugen beide Zeilen dieselbe Groesse und unterschieden
-              sich nur in der Deckkraft — das las sich wie ein Fehler statt
+              sich nur in der Deckkraft - das las sich wie ein Fehler statt
               wie eine Hervorhebung. Jetzt fuehrt eine kleine Versalzeile
               ein, die Aussage steht gross darunter, und die Abstaende
               folgen einer Stufenleiter (10 / 18 / 28 / 14) statt beliebiger
@@ -138,7 +148,7 @@ export function NewsletterBlock({ artikelBilder }: { artikelBilder: Article[] })
             Nur die besten News.
           </h2>
           <p className="mt-[18px] max-w-[46ch] text-[16px] leading-[1.55] text-navy/75 sm:text-[17px]">
-            Einmal täglich in dein Postfach — Gaming-News, eingeordnet statt nur
+            Einmal täglich in dein Postfach - Gaming-News, eingeordnet statt nur
             gemeldet.
           </p>
           <div className="mt-[28px] flex max-w-[520px] flex-col gap-3 sm:flex-row">
@@ -157,7 +167,7 @@ export function NewsletterBlock({ artikelBilder }: { artikelBilder: Article[] })
           </div>
         </div>
         {/* Zwei Sticker mit Pixel-Treppen-Rahmen (Fassung vor der
-            Polygon-Collage — Tim, 16.08.2026). */}
+            Polygon-Collage - Tim, 16.08.2026). */}
         <div className="relative hidden h-[300px] lg:block" aria-hidden="true">
           {artikelBilder[0] && (
             <div className="treppe-tr absolute left-0 top-0 h-[250px] w-[250px] -rotate-[5deg]">
@@ -198,7 +208,7 @@ export function SektionsKopf({
   );
 }
 
-// "Mehr anzeigen" als Pille unter der Sektion — EIN Muster fuer alle
+// "Mehr anzeigen" als Pille unter der Sektion - EIN Muster fuer alle
 // Sektionen (Tim, 15.08.2026): kein Mini-Link mehr neben der Ueberschrift.
 export function MehrPille({ href, text = "Mehr anzeigen" }: { href: string; text?: string }) {
   return (

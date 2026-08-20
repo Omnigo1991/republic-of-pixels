@@ -50,7 +50,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Auch nach erfolgreichem Start berichten Spielende von kurzen, aber folgenreichen Framerate-Einbrüchen, die selbst auf Systemen auftreten, welche die empfohlenen Anforderungen deutlich übertreffen. Besonders in Online-Matches wirken sich diese Ruckler aus: Der Rollback-Netcode passt den Kampf bei Frameverlust sofort an, damit beide Spielenden dasselbe Bild sehen. Ruckelt ein Gegner, leidet dadurch auch die eigene Partie – unabhängig davon, wie stabil die eigene Hardware läuft. Deshalb wird auf PS5-Seite mittlerweile teils empfohlen, Crossplay mit dem PC zu deaktivieren, um die Netcode-Konsistenz zu wahren."
+      "text": "Auch nach erfolgreichem Start berichten Spielende von kurzen, aber folgenreichen Framerate-Einbrüchen, die selbst auf Systemen auftreten, welche die empfohlenen Anforderungen deutlich übertreffen. Besonders in Online-Matches wirken sich diese Ruckler aus: Der Rollback-Netcode passt den Kampf bei Frameverlust sofort an, damit beide Spielenden dasselbe Bild sehen. Ruckelt ein Gegner, leidet dadurch auch die eigene Partie - unabhängig davon, wie stabil die eigene Hardware läuft. Deshalb wird auf PS5-Seite mittlerweile teils empfohlen, Crossplay mit dem PC zu deaktivieren, um die Netcode-Konsistenz zu wahren."
     },
     {
       "type": "heading",
@@ -75,7 +75,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Der holprige PC-Start wiegt besonders schwer, da die offene Beta im Vorfeld – trotz eines temporären PSN-Ausfalls – positiv aufgenommen wurde. Ob Arc System Works die Performance-Probleme zeitnah beheben kann, dürfte massgeblich darüber entscheiden, wie sich die PC-Community des Spiels langfristig entwickelt."
+      "text": "Der holprige PC-Start wiegt besonders schwer, da die offene Beta im Vorfeld - trotz eines temporären PSN-Ausfalls - positiv aufgenommen wurde. Ob Arc System Works die Performance-Probleme zeitnah beheben kann, dürfte massgeblich darüber entscheiden, wie sich die PC-Community des Spiels langfristig entwickelt."
     }
   ],
   "isLeakOrRumor": false,

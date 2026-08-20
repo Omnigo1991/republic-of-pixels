@@ -22,7 +22,7 @@ export function TldrBox({ items }: { items: string[] }) {
 export function WhyItMattersBox({ text }: { text: string }) {
   return (
     // Cyan statt Navy (Tim, 17.08.2026): EINE Kachelfarbe auf der ganzen
-    // Seite — wie Event-Buehne, Newsletter und Radar-Karten. Auf
+    // Seite - wie Event-Buehne, Newsletter und Radar-Karten. Auf
     // Navy-Grund ginge eine Navy-Box unter.
     <div className="my-8 rounded-2xl bg-accent p-6">
       <p className="mb-2 text-[13px] font-semibold tracking-wide text-navy/70">
@@ -39,7 +39,7 @@ export function ReviewBox({ review }: { review: Review }) {
       <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
         {/* "DAS SAGT DIE FACHPRESSE" statt "URTEIL VON REPUBLIC OF PIXELS"
             (Tim-Freigabe 14.08.2026): Unsere Tests fassen die Tests der
-            Fachpresse zusammen — wir spielen die Spiele nicht selbst. Der
+            Fachpresse zusammen - wir spielen die Spiele nicht selbst. Der
             Fliesstext sagt das ehrlich ("laut PC Gamer"), aber die alte
             Überschrift behauptete ein eigenes Urteil. Die Box verspricht
             jetzt genau das, was drinsteckt. */}
@@ -67,7 +67,7 @@ export function ReviewBox({ review }: { review: Review }) {
           <ul className="flex flex-col gap-2">
             {review.weaknesses.map((w, i) => (
               <li key={i} className="flex gap-2 text-sm text-text-secondary">
-                <span className="text-error">–</span>
+                <span className="text-error">-</span>
                 {w}
               </li>
             ))}
@@ -116,7 +116,7 @@ export function SourcesBox({ sources }: { sources: Source[] }) {
             >
               {s.title}
             </a>
-            {s.publisher && <span className="text-text-tertiary"> — {s.publisher}</span>}
+            {s.publisher && <span className="text-text-tertiary"> - {s.publisher}</span>}
           </li>
         ))}
       </ul>

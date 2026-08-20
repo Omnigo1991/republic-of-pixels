@@ -23,14 +23,14 @@
   "tldr": [
     "Laut DigiTimes haben Samsung, SK Hynix und Micron ihre DRAM- und HBM-Produktionskapazitäten für 2027 bereits vollständig verkauft",
     "Grund ist die stark gestiegene Nachfrage durch den KI-Boom, die das Angebot deutlich übersteigt",
-    "Auch NAND-Flash-Speicher könnte knapp werden – entsprechende Kontingente für 2027 sollen bis Ende August 2026 ausgebucht sein",
+    "Auch NAND-Flash-Speicher könnte knapp werden - entsprechende Kontingente für 2027 sollen bis Ende August 2026 ausgebucht sein",
     "Samsung, SK Hynix und Micron sehen sich zudem mit einer Sammelklage wegen angeblicher Preisabsprachen konfrontiert"
   ],
   "whyItMatters": "Wenn Arbeitsspeicher und NAND-Flash knapp und teurer werden, wirkt sich das direkt auf die Preise von Gaming-PCs, Laptops und Peripherie aus. Auch Konsolenhersteller sind auf eine stabile Speicherversorgung angewiesen, weshalb sich der Engpass langfristig auf die gesamte Gaming-Branche auswirken könnte.",
   "body": [
     {
       "type": "paragraph",
-      "text": "Wer auf sinkende Preise für Arbeitsspeicher hofft, dürfte laut einem aktuellen Branchenbericht enttäuscht werden. Das taiwanische Fachmagazin DigiTimes berichtet unter Berufung auf Insider aus der Halbleiterindustrie, dass die drei grössten Speicherhersteller der Welt – Samsung, SK Hynix und Micron – ihre gesamten Produktionskapazitäten für DRAM- und HBM-Speicher für das Jahr 2027 bereits vollständig verkauft haben. Weiterer Nachschub soll demnach schlicht nicht verfügbar sein."
+      "text": "Wer auf sinkende Preise für Arbeitsspeicher hofft, dürfte laut einem aktuellen Branchenbericht enttäuscht werden. Das taiwanische Fachmagazin DigiTimes berichtet unter Berufung auf Insider aus der Halbleiterindustrie, dass die drei grössten Speicherhersteller der Welt - Samsung, SK Hynix und Micron - ihre gesamten Produktionskapazitäten für DRAM- und HBM-Speicher für das Jahr 2027 bereits vollständig verkauft haben. Weiterer Nachschub soll demnach schlicht nicht verfügbar sein."
     },
     {
       "type": "heading",
@@ -42,7 +42,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Laut DigiTimes sollen manche KI-Unternehmen inzwischen regelrecht um zusätzliche Kontingente ersuchen. Namen werden im Bericht nicht genannt. Zugang zu weiterem Nachschub erhalten diese Firmen demnach nur, wenn sie deutlich höhere Preise akzeptieren – ein Umstand, der die ohnehin schon gestiegenen Speicherpreise weiter nach oben treiben dürfte."
+      "text": "Laut DigiTimes sollen manche KI-Unternehmen inzwischen regelrecht um zusätzliche Kontingente ersuchen. Namen werden im Bericht nicht genannt. Zugang zu weiterem Nachschub erhalten diese Firmen demnach nur, wenn sie deutlich höhere Preise akzeptieren - ein Umstand, der die ohnehin schon gestiegenen Speicherpreise weiter nach oben treiben dürfte."
     },
     {
       "type": "heading",
@@ -70,7 +70,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Für die Gaming-Branche ist die Entwicklung relevant, weil Speicherchips ein zentraler Bestandteil praktisch jeder Hardware sind – von Grafikkarten über Gaming-Notebooks bis hin zu Konsolen. Sollte sich der beschriebene Engpass tatsächlich wie geschildert bis 2027 fortsetzen, dürften Preissenkungen bei entsprechender Hardware vorerst ausbleiben. Da sich der Bericht auf Insiderangaben eines einzelnen Fachmagazins stützt, bleibt abzuwarten, wie sich die Situation konkret entwickelt und ob einzelne Hersteller gegensteuern können."
+      "text": "Für die Gaming-Branche ist die Entwicklung relevant, weil Speicherchips ein zentraler Bestandteil praktisch jeder Hardware sind - von Grafikkarten über Gaming-Notebooks bis hin zu Konsolen. Sollte sich der beschriebene Engpass tatsächlich wie geschildert bis 2027 fortsetzen, dürften Preissenkungen bei entsprechender Hardware vorerst ausbleiben. Da sich der Bericht auf Insiderangaben eines einzelnen Fachmagazins stützt, bleibt abzuwarten, wie sich die Situation konkret entwickelt und ob einzelne Hersteller gegensteuern können."
     }
   ],
   "isLeakOrRumor": false,

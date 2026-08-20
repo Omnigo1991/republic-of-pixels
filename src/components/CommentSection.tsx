@@ -29,7 +29,7 @@ export function CommentSection({ articleSlug }: { articleSlug: string }) {
   const [eigeneVotes, setEigeneVotes] = useState<Set<number>>(new Set());
   const [laden, setLaden] = useState(true);
   const [loginOffen, setLoginOffen] = useState(false);
-  // WICHTIG: Die User-ID kommt aus diesem Ref statt aus supabase.auth.getSession() —
+  // WICHTIG: Die User-ID kommt aus diesem Ref statt aus supabase.auth.getSession() -
   // der Aufruf im Datenpfad führte zu einem Deadlock der Auth-Sperre (Fenster fror
   // nach dem Kommentieren ein, 05.08.2026).
   const sessionRef = useRef<Session | null>(null);
@@ -112,7 +112,7 @@ export function CommentSection({ articleSlug }: { articleSlug: string }) {
       reporter_id: session.user.id,
       reason: grund.slice(0, 500),
     });
-    window.alert("Danke — die Redaktion schaut sich den Kommentar an.");
+    window.alert("Danke - die Redaktion schaut sich den Kommentar an.");
   }
 
   async function loeschen(kommentarId: number) {
@@ -128,14 +128,14 @@ export function CommentSection({ articleSlug }: { articleSlug: string }) {
   return (
     <section aria-labelledby="kommentare-heading" className="mt-4">
       {/* Der Abmelde-Knopf rechts ist hoeher als die Ueberschrift und
-          zieht die Zeile auf — der Abstand zur Linie lag dadurch bei
+          zieht die Zeile auf - der Abstand zur Linie lag dadurch bei
           15 px (Handy 20), waehrend jede andere Sektion 12 px hat.
           Absolut gesetzt beeinflusst er die Zeilenhoehe nicht mehr. */}
       <div className="relative mb-3 flex items-baseline justify-between">
         <h2 id="kommentare-heading" className="text-xl font-semibold tracking-tight text-text-primary">
           Kommentare
           {/* Die Null verstecken (Tim-Freigabe 14.08.2026): "Kommentare (0)"
-              wirkt wie ein leeres Restaurant — die Zahl erscheint erst, wenn
+              wirkt wie ein leeres Restaurant - die Zahl erscheint erst, wenn
               mindestens ein Kommentar da ist. Der Aufruf "schreib den
               ersten!" weiter unten übernimmt den leeren Zustand. */}
           {kommentare.filter((k) => !k.deleted).length > 0 && (
@@ -179,14 +179,14 @@ export function CommentSection({ articleSlug }: { articleSlug: string }) {
           onClick={() => setLoginOffen(true)}
           className="w-full rounded-2xl border border-dashed border-border-default p-5 text-left text-sm text-text-tertiary hover:border-accent/50 hover:text-text-secondary transition-colors"
         >
-          Melde dich an, um mitzudiskutieren — mit Google, Discord oder E-Mail.
+          Melde dich an, um mitzudiskutieren - mit Google, Discord oder E-Mail.
         </button>
       )}
 
       <div className="mt-8 flex flex-col gap-6">
         {laden && <p className="text-sm text-text-tertiary">Kommentare werden geladen …</p>}
         {!laden && wurzeln.length === 0 && (
-          <p className="text-sm text-text-tertiary">Noch keine Kommentare — schreib den ersten!</p>
+          <p className="text-sm text-text-tertiary">Noch keine Kommentare - schreib den ersten!</p>
         )}
         {wurzeln.map((k) => (
           <div key={k.id}>
@@ -288,7 +288,7 @@ function EinKommentar(props: {
           <span className="text-sm font-semibold text-text-primary">Unbekannt</span>
         )}
         {/* EXAKT die Profil-Badge-Rezeptur (von Tim auf dem iPhone als
-            korrekt bestätigt, 08.08.2026) — eine Bauweise überall statt
+            korrekt bestätigt, 08.08.2026) - eine Bauweise überall statt
             einer Mini-Variante mit eigener Sub-Pixel-Physik: Die 9px-
             Version renderte in iOS-Safari anders als im Test-Chromium. */}
         {k.profiles?.nickname === MASTER_NICKNAME && (
@@ -374,7 +374,7 @@ function KommentarFormular({
       body: text.trim(),
     });
     setSendet(false);
-    if (error) return setFehler("Senden fehlgeschlagen — bitte erneut versuchen.");
+    if (error) return setFehler("Senden fehlgeschlagen - bitte erneut versuchen.");
     setText("");
     onGesendet();
   }

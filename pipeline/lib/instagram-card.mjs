@@ -13,9 +13,9 @@ import { entferneBalken } from "./letterbox.mjs";
 // - Headline Inter 900, 64px, uppercase, Weiss mit max. 2 Cyan-Wörtern
 // - Abstände Schrift-Tintenkante→Logo und Logo→Bildrand exakt 60px
 //   (Tintenoffset wird im Browser per Canvas-Metrik gemessen)
-// - Badge (BREAKING/REVIEW): Cyan-Umriss-Pill — bewusst EINE Bauart/Farbe
+// - Badge (BREAKING/REVIEW): Cyan-Umriss-Pill - bewusst EINE Bauart/Farbe
 // - Credit-Label unten links: echter Bildnachweis der Quelle (unsere
-//   Artikelbilder sind KEINE KI-Bilder — "KI-Symbolbild" nur als Fallback,
+//   Artikelbilder sind KEINE KI-Bilder - "KI-Symbolbild" nur als Fallback,
 //   wenn kein Quellbild existiert)
 // - Kontrast-Wächter: Ist der Bildbereich hinter der Headline hell, wird
 //   der Verlauf verstärkt, damit Weiss/Cyan immer satt lesbar bleiben.
@@ -25,13 +25,13 @@ const LOGO = join(ROOT, "public", "brand", "r-mark.png");
 const G = 60;
 const LOGO_H = 60;
 
-// MOTIV-SUCHER (Tim, 09.08.2026 — RDR2-Post): Steam-Cover tragen den
+// MOTIV-SUCHER (Tim, 09.08.2026 - RDR2-Post): Steam-Cover tragen den
 // Spieltitel fast immer im unteren Drittel, also genau dort, wo unsere
-// Headline sitzt — zwei Schriften übereinander sind unlesbar. Statt stur
+// Headline sitzt - zwei Schriften übereinander sind unlesbar. Statt stur
 // die Bildmitte zu nehmen, probiert der Renderer mehrere senkrechte
 // Ausschnitte durch und wählt den, bei dem die Kopfzeilen-Zone am
 // RUHIGSTEN ist (wenig Struktur = kein Logo, kein Gesicht, keine Kante).
-// Die Bild-Hierarchie bleibt davon unberührt — es geht nur darum, WIE
+// Die Bild-Hierarchie bleibt davon unberührt - es geht nur darum, WIE
 // ein gewähltes Bild im 4:5-Fenster liegt.
 //
 // Rückgabe: { position } in Prozent für object-position, { luminanz } und
@@ -48,7 +48,7 @@ export async function besterAusschnitt(imagePath) {
   const spielraumX = width - sichtbarB;
 
   // Kopfzeilen-Zone im fertigen Post: von 56 % bis 92 % der Höhe, mittlere
-  // 84 % der Breite — dort steht unsere Schlagzeile.
+  // 84 % der Breite - dort steht unsere Schlagzeile.
   const zoneOben = Math.round(sichtbarH * 0.56);
   const zoneHoehe = Math.max(8, Math.round(sichtbarH * 0.36));
   const zoneBreite = Math.max(8, Math.round(sichtbarB * 0.84));
@@ -56,7 +56,7 @@ export async function besterAusschnitt(imagePath) {
 
   const werte = async (left, top, w, h) => {
     // WICHTIG (Fund 09.08.2026): sharp .stats() misst IMMER das
-    // Eingangsbild und ignoriert ein vorangestelltes .extract() — der
+    // Eingangsbild und ignoriert ein vorangestelltes .extract() - der
     // Ausschnitt muss erst materialisiert werden.
     const puffer = await sharp(imagePath)
       .extract({
@@ -73,10 +73,10 @@ export async function besterAusschnitt(imagePath) {
     };
   };
 
-  // SCHNITT-WÄCHTER, jetzt auf DREI Kanten (Tim, 12.08.2026 — Ghost of
+  // SCHNITT-WÄCHTER, jetzt auf DREI Kanten (Tim, 12.08.2026 - Ghost of
   // Yotei und Zelda): Bisher wurde nur die Oberkante geprüft und waagrecht
   // immer aus der Mitte geschnitten. Bei einem 16:9-Bild ist aber genau die
-  // Waagrechte die entscheidende Achse — dort liegen 880 px Spielraum, die
+  // Waagrechte die entscheidende Achse - dort liegen 880 px Spielraum, die
   // wir verschenkt haben. Ergebnis: Der "GHOST OF YOTEI"-Schriftzug wurde
   // mittendurch getrennt. Jetzt zählen Ober-, Links- und Rechtskante; die
   // Unterkante bleibt aussen vor, sie verschwindet unter dem Verlauf.
@@ -93,16 +93,16 @@ export async function besterAusschnitt(imagePath) {
 
   // WAAGRECHT IMMER MITTIG (Tim, 12.08.2026, nach zwei Fehlversuchen):
   // Ich habe zweimal versucht, auch die Waagrechte zu optimieren. Beide Male
-  // wurde es schlechter — erst wanderte der Ausschnitt in den leeren Himmel
+  // wurde es schlechter - erst wanderte der Ausschnitt in den leeren Himmel
   // (Zelda), dann aufs Haus statt auf die Figur (Halloween). Der Grund ist
   // strukturell: An Position 0 faellt die linke Schnittkante mit dem Bildrand
-  // zusammen, dort gibt es per Konstruktion nichts zu zerschneiden — die
+  // zusammen, dort gibt es per Konstruktion nichts zu zerschneiden - die
   // Randpositionen bekommen dadurch einen unverdienten Vorteil. Eine reine
   // Statistik kennt eben kein Motiv.
   // Bildautoren setzen ihr Motiv fast immer in die horizontale Mitte. Genau
   // das nutzen wir jetzt: mittig schneiden und stattdessen das ORIGINAL
   // verwenden statt der "attention"-Ableitung, die den Ghost-of-Yotei-Titel
-  // zerschnitten hatte. Senkrecht wird weiter gesucht — dort hat sich der
+  // zerschnitten hatte. Senkrecht wird weiter gesucht - dort hat sich der
   // Sucher bewaehrt (RDR2, Aliens, Cyberpunk).
   const anteile = [0, 0.25, 0.5, 0.75, 1];
   const kandidatenY = spielraumY <= 2 ? [0] : anteile.map((a) => Math.round(spielraumY * a));
@@ -116,15 +116,15 @@ export async function besterAusschnitt(imagePath) {
       const mitteX = spielraumX > 0 ? Math.abs(x / spielraumX - 0.5) : 0;
       const mitteY = spielraumY > 0 ? Math.abs(y / spielraumY - 0.5) : 0;
       // Ein zerschnittenes Logo sticht sofort ins Auge, eine minim unruhigere
-      // Kopfzone nicht — darum wiegt der Schnitt am schwersten. Die Bildmitte
+      // Kopfzone nicht - darum wiegt der Schnitt am schwersten. Die Bildmitte
       // bekommt einen kleinen Bonus, damit wir nur bei echtem Gewinn abweichen.
       // MITTE ALS REGEL, ABWEICHUNG ALS AUSNAHME (Tim, 12.08.2026):
       // Vorher war der Mitte-Bonus mit 0.06 fast wirkungslos, und die
-      // Bewertung optimierte auf ruhige Flaechen — beim Zelda-Bild wanderte
+      // Bewertung optimierte auf ruhige Flaechen - beim Zelda-Bild wanderte
       // sie deshalb in den leeren Himmel, beim Halloween-Bild aufs Haus statt
       // auf die Figur. Ich habe daraufhin versucht, "Struktur oben" zu
       // belohnen; das kippte den Fehler nur auf die andere Seite. Lehre: Eine
-      // reine Statistik-Heuristik kennt kein Motiv. Darum jetzt umgekehrt —
+      // reine Statistik-Heuristik kennt kein Motiv. Darum jetzt umgekehrt -
       // die Mitte gewinnt, ausser ein Rand schneidet nachweislich durch
       // Struktur (Logo, Gesicht). Dafuer ist der Mitte-Bonus zehnmal
       // schwerer als zuvor. Vorhersehbar schlaegt clever.
@@ -146,7 +146,7 @@ export async function besterAusschnitt(imagePath) {
 // der Verlauf beginnt früher und deckt stärker. Helligkeits-Schwelle
 // empirisch (Testbilder 07.08.2026); die Unruhe-Schwelle kam am 09.08.2026
 // dazu, weil auch ein dunkles Bild durch Strukturen (Logo, Kanten) unter
-// der Schrift stören kann. Stufe 2 deckt fast vollständig ab — für Cover,
+// der Schrift stören kann. Stufe 2 deckt fast vollständig ab - für Cover,
 // deren Titel selbst im besten Ausschnitt noch in die Kopfzeilen-Zone ragt.
 // Beitrag und Reel teilen sich diese Funktion, damit beide Formate eines
 // Artikels identisch aussehen.
@@ -167,10 +167,10 @@ function escapeHtml(s) {
 }
 
 // headlineLines: Array von Zeilen; jede Zeile ist ein Array von Segmenten
-// { text, cyan } — die Struktur kommt von Claude, das HTML bauen wir selbst.
+// { text, cyan } - die Struktur kommt von Claude, das HTML bauen wir selbst.
 // JEDE ZEILE UNUMBRECHBAR (Tim, 11.08.2026): Vorher wurden die Zeilen mit
 // <br> aneinandergehängt und durften umbrechen. Eine zu lange Zeile wurde
-// dadurch heimlich zu zweien — so entstand beim Halloween-Post der Bruch
+// dadurch heimlich zu zweien - so entstand beim Halloween-Post der Bruch
 // "WEGEN MARIHUANA-" / "MECHANIK" mit einem einzelnen Wort auf der letzten
 // Zeile. Jetzt steht jede Zeile in einem eigenen Block mit nowrap; passt sie
 // nicht, wird die Schrift verkleinert (siehe schriftEinpassen) statt
@@ -197,7 +197,7 @@ export function schriftEinpassenQuelle() {
   // breitenFaktor: Anteil der Satzbreite, den eine Zeile nutzen darf.
   // 0.80 stammt aus dem zentrierten Layout (Rand links UND rechts musste vom
   // Text selbst kommen). Im linksbündigen Marker-Layout gibt der Satzspiegel
-  // den Rand bereits vor — dort darf die Zeile die volle Breite nutzen (1.0),
+  // den Rand bereits vor - dort darf die Zeile die volle Breite nutzen (1.0),
   // sonst verschenkt sie rechts unnötig Platz und die Schrift schrumpft
   // grundlos.
   return (maxHoehe, breitenFaktor = 0.8) => {
@@ -205,7 +205,7 @@ export function schriftEinpassenQuelle() {
     if (!titel) return { groesse: null, passt: true };
     const zeilen = [...titel.querySelectorAll(".zeile")];
     // 80 % der verfügbaren Breite (Tim, 11.08.2026): Mit 96 % blieben nur
-    // 79 px Rand auf 1080 px Breite, gut 7 % — im Feed wirkte das gedrängt
+    // 79 px Rand auf 1080 px Breite, gut 7 % - im Feed wirkte das gedrängt
     // ("gewurstelt"). Der Faktor wurde EMPIRISCH bestimmt, nicht gerechnet:
     // gemessen am fertigen Bild ergibt 0.86 = 99 px, 0.80 = 131 px und
     // 0.76 = 155 px Rand. 0.80 trifft die angepeilten 12 % je Seite.
@@ -220,12 +220,12 @@ export function schriftEinpassenQuelle() {
     let groesse = parseFloat(getComputedStyle(titel).fontSize);
     const MIN = 38;
     // TEXTBREITE PER RANGE MESSEN (Fund 11.08.2026): scrollWidth liefert bei
-    // einem Block-Element die Container-Breite statt der Textbreite — die
+    // einem Block-Element die Container-Breite statt der Textbreite - die
     // Bedingung wäre nie erfüllbar und die Schrift würde immer bis zum
     // Anschlag schrumpfen, auch bei kurzen Schlagzeilen.
     // MARKIERUNG MITMESSEN (Fund 13.08.2026, CD-Projekt-Post): Der Range
     // liefert die Breite der TEXTKNOTEN. Der Marker-Kasten trägt aber links
-    // und rechts je 9 px Polsterung, die dabei fehlen — die Zeile "FÜNFTEL
+    // und rechts je 9 px Polsterung, die dabei fehlen - die Zeile "FÜNFTEL
     // DES SIRIUS-TEAMS" galt damit als passend und lief im fertigen Bild
     // rechts über den Rand hinaus, das letzte S war abgeschnitten.
     // Element-Rechtecke enthalten die Polsterung; die Zeilenbreite ist darum
@@ -265,10 +265,10 @@ export function schriftEinpassenQuelle() {
 //    Spielname in der Schlagzeile selbst und verbrauchte Wörter.
 // 3. MARKIERUNG statt Cyan-Schrift: Das Schlüsselwort steht in einem cyanen
 //    Kasten. Cyane Schrift auf dunklem Grund ist im Feed als Daumennagel
-//    kaum vom Weiss zu unterscheiden — ein Farbblock ist es immer.
+//    kaum vom Weiss zu unterscheiden - ein Farbblock ist es immer.
 // 4. HANDSCHRIFTLICHE NOTIZ: eine Haltung zur Meldung, kein Fliesstext.
 //    Sie ist der Grund, warum die Karte nach Redaktion aussieht und nicht
-//    nach Automat. Ohne echte Aussage wirkt sie wie Füllsel — dafür gibt es
+//    nach Automat. Ohne echte Aussage wirkt sie wie Füllsel - dafür gibt es
 //    eine eigene Prüfung in headline.mjs.
 //
 // Was bleibt: 1080×1350, Verlauf ins Navy, Motiv-Sucher, Kontrast-Wächter,
@@ -283,8 +283,8 @@ export async function renderInstagramCard({
   outPath, // absoluter Zielpfad (.jpg)
   chromium, // playwright.chromium (injiziert, damit der Import zentral bleibt)
 }) {
-  // SCHWARZE BALKEN ZUERST (Tim, 13.08.2026 — Halo-Post): Letterbox aus
-  // Steam- und IGDB-Artwork muss weg, BEVOR der Motiv-Sucher misst — sonst
+  // SCHWARZE BALKEN ZUERST (Tim, 13.08.2026 - Halo-Post): Letterbox aus
+  // Steam- und IGDB-Artwork muss weg, BEVOR der Motiv-Sucher misst - sonst
   // rechnet er die Balken als Bildinhalt mit und der Streifen landet auf
   // der fertigen Karte.
   const balkenfrei = await entferneBalken(imagePath);
@@ -322,26 +322,26 @@ export async function renderInstagramCard({
   .kicker { font-family:'Inter',sans-serif; font-weight:900; font-size:26px;
     letter-spacing:0.20em; text-transform:uppercase; color:#02F0D1; margin-bottom:17px; }
   /* ZEILENABSTAND 1.34 (nicht 1.18 wie vorher): Der Marker-Kasten hängt an
-     einem Wort INNERHALB der Zeile und beansprucht keine eigene Höhe —
+     einem Wort INNERHALB der Zeile und beansprucht keine eigene Höhe -
      padding vergrössert die Zeilenbox nicht. Ohne diese Luft läuft der
      Kasten in die Zeile darunter. */
   /* width:100% ist PFLICHT, nicht Kosmetik: In einem Flex-Stapel mit
      align-items:flex-start schrumpft ein Block-Kind auf seine Inhaltsbreite.
      Ohne diese Zeile mass die Einpassung die Zeile gegen sich selbst und
-     war immer zufrieden — "DES SIRIUS-TEAMS" lief rechts aus dem Bild. */
+     war immer zufrieden - "DES SIRIUS-TEAMS" lief rechts aus dem Bild. */
   .titel { font-family:'Inter',sans-serif; font-weight:900; text-transform:uppercase;
     width:100%; text-align:left; font-size:75px; line-height:1.34; letter-spacing:-0.02em;
     color:#FFFFFF;
     text-shadow:-3px 0 rgba(255,46,151,0.75), 3px 0 rgba(2,240,209,0.75),
       0 3px 18px rgba(0,0,0,0.55); }
   .titel .zeile { display:block; white-space:nowrap; }
-  /* VERLAUF BEGINNT LINKS MIT CYAN — nicht umdrehen (Fehler 20.08.2026):
+  /* VERLAUF BEGINNT LINKS MIT CYAN - nicht umdrehen (Fehler 20.08.2026):
      Die Abnahme prueft, ob jede Zeile am Satzspiegel beginnt, und erkennt
      Schrift an der Helligkeit (Schwelle 150). Magenta #FF2E97 liegt in
      Graustufen bei 98 und ist fuer sie unsichtbar. Mit Magenta links mass
      sie die linke Kante erst bei x=166 statt 60, warf die Zeile als "kein
      Text" weg und lehnte jeden Post ab, dessen erste Schlagzeilenzeile mit
-     einem markierten Wort beginnt — am 20.08.2026 drei von vier. */
+     einem markierten Wort beginnt - am 20.08.2026 drei von vier. */
   .titel .cy { background:linear-gradient(100deg,#02F0D1,#FF2E97); color:#0B0616;
     padding:1px 9px 5px 9px; text-shadow:none; }
   .notiz { font-family:'Caveat',cursive; font-weight:700; font-size:47px; line-height:1.0;
@@ -376,7 +376,7 @@ export async function renderInstagramCard({
     });
     // NICHT AUF "networkidle" WARTEN (Fund 13.08.2026): Der Abruf der
     // Google-Schriften laeuft gelegentlich in die 30-Sekunden-Grenze, und
-    // Playwright wirft dann einen Fehler — in GitHub Actions kostet das den
+    // Playwright wirft dann einen Fehler - in GitHub Actions kostet das den
     // ganzen Lauf. Zuverlaessiger und schneller: auf "load" warten und dann
     // gezielt darauf, dass die Schriften wirklich da sind. Das ist sogar
     // strenger, denn mit Ersatzschrift gemessene Breiten waeren falsch.
@@ -384,7 +384,7 @@ export async function renderInstagramCard({
     await page.evaluate(() => document.fonts.ready);
     await page.waitForTimeout(400);
 
-    // Schrift einpassen, BEVOR die Tintenkompensation misst — sonst rechnet
+    // Schrift einpassen, BEVOR die Tintenkompensation misst - sonst rechnet
     // sie mit der alten Grösse. Höhenvorgabe 430 px: Damit bleibt der obere
     // Bildteil in jedem Fall sichtbar und der Block drängt sich nie ans Logo.
     // Höhenvorgabe 340 px statt 430: Der Block trägt jetzt zusätzlich
@@ -440,7 +440,7 @@ export async function renderInstagramCard({
         return r.getBoundingClientRect();
       };
 
-      // Drehung der Notiz für die Messung aussetzen — sie vergrössert das
+      // Drehung der Notiz für die Messung aussetzen - sie vergrössert das
       // Umgebungsrechteck und verfälscht die Kanten.
       const drehung = notiz ? notiz.style.transform : null;
       if (notiz) notiz.style.transform = "none";

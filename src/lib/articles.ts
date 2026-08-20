@@ -14,7 +14,7 @@ export function getArticleBySlug(slug: string): Article | undefined {
 const TOP_STORY_MAX_AGE_MS = 48 * 60 * 60 * 1000;
 
 export function getTopStory(): Article {
-  // Eine manuell markierte Top-Story gilt maximal 48 h — danach übernimmt
+  // Eine manuell markierte Top-Story gilt maximal 48 h - danach übernimmt
   // automatisch der neueste Artikel, damit die Startseite nie veraltet wirkt.
   const flagged = ALL_ARTICLES.find(
     (a) =>
@@ -26,7 +26,7 @@ export function getTopStory(): Article {
 
 // "Beliebt bei Lesern" mit ECHTEN Aufrufzahlen (Betreiber-Wunsch 07.08.2026):
 // liest die aggregierte 7-Tage-Ansicht artikel_aufrufe (Supabase-View über
-// page_views, nur Slug + Anzahl). Der Abruf passiert beim Build — die
+// page_views, nur Slug + Anzahl). Der Abruf passiert beim Build - die
 // Startseite wird bei jedem Pipeline-Deploy (~alle 3 Std.) neu gebaut, die
 // Rangliste bleibt also aktuell. Fällt bei jedem Fehler lautlos auf die
 // bisherige Logik (neueste Artikel) zurück.
@@ -88,7 +88,7 @@ export function getRelated(article: Article, limit = 3): Article[] {
       .filter((a): a is Article => Boolean(a));
     if (explicit.length >= limit) return explicit.slice(0, limit);
   }
-  // GLEICHES SPIEL ZUERST (14.08.2026): Vorher zählte nur die Rubrik — in
+  // GLEICHES SPIEL ZUERST (14.08.2026): Vorher zählte nur die Rubrik - in
   // einem STALKER-Artikel empfahl die eingeschobene Karte deshalb ARC
   // Raiders, schlicht die neueste News derselben Rubrik. Der erste Tag ist
   // der wichtigste Hinweis auf das Thema (Spielname), darum gewinnt er.

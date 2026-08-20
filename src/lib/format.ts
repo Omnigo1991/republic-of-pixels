@@ -1,8 +1,8 @@
-// Zeitzone IMMER explizit (08.08.2026): Der Vercel-Server rendert in UTC —
+// Zeitzone IMMER explizit (08.08.2026): Der Vercel-Server rendert in UTC -
 // ohne timeZone standen auf statisch gebauten Seiten UTC-Zeiten (2 Std.
 // falsch), und in Client-Komponenten entstanden Hydration-Fehler, weil der
 // Browser die Zeiten in Lokalzeit neu berechnete. Redaktionszeit ist
-// Europe/Zurich — für alle Besucher einheitlich.
+// Europe/Zurich - für alle Besucher einheitlich.
 const ZEITZONE = "Europe/Zurich";
 
 export function formatDate(iso: string): string {

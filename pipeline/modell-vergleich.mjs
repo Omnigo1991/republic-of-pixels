@@ -1,4 +1,4 @@
-// MODELL-VERGLEICH — dieselben Quellen, zwei Modelle, nebeneinander.
+// MODELL-VERGLEICH - dieselben Quellen, zwei Modelle, nebeneinander.
 //
 // WARUM: Am 14.08.2026 haben wir die Modellwahl je Aufgabe getrennt.
 // Themenwahl und Instagram-Texte laufen seither auf dem staerkeren Modell,
@@ -34,7 +34,7 @@ function alsText(artikel) {
     if (b.type === "paragraph") zeilen.push(b.text, "");
     else if (b.type === "heading") zeilen.push(`## ${b.text}`, "");
     else if (b.type === "list") zeilen.push(...(b.items ?? []).map((i) => `- ${i}`), "");
-    else if (b.type === "quote") zeilen.push(`> ${b.text}`, `> — ${b.attribution ?? ""}`, "");
+    else if (b.type === "quote") zeilen.push(`> ${b.text}`, `> - ${b.attribution ?? ""}`, "");
     else if (b.type === "stats")
       zeilen.push(...(b.items ?? []).map((s) => `**${s.value}** ${s.label}`), "");
   }
@@ -48,11 +48,11 @@ async function main() {
 
   console.log("Feeds abrufen …");
   // fetchAllFeeds liefert ein Ergebnis PRO FEED, nicht eine flache Liste von
-  // Meldungen — genau wie in run.mjs muss erst flachgeklopft werden.
+  // Meldungen - genau wie in run.mjs muss erst flachgeklopft werden.
   //
   // ZWEITER FEHLSCHLAG AM 14.08.2026: Ich hatte das Rueckgabeformat geraten
   // statt nachzusehen. Die "33 Kandidaten" im Protokoll waren 33 FEEDS, und
-  // keiner davon hat ein Feld "title" oder "link" — also blieb die Auswahl
+  // keiner davon hat ein Feld "title" oder "link" - also blieb die Auswahl
   // leer. Der Lauf davor scheiterte an einer geratenen Feldbedingung. Zweimal
   // dieselbe Ursache: geraten statt geprueft.
   const ergebnisseFeeds = await fetchAllFeeds(FEEDS);
@@ -68,7 +68,7 @@ async function main() {
   //
   // FILTER KORRIGIERT (14.08.2026): Die erste Fassung verlangte einen
   // Feed-Anriss von ueber 120 Zeichen. Beim ersten echten Lauf hatte keiner
-  // der 33 Kandidaten einen so langen Anriss — das Ergebnis war leer, ohne
+  // der 33 Kandidaten einen so langen Anriss - das Ergebnis war leer, ohne
   // dass irgendwo stand warum. Die Anrisslaenge war ohnehin das falsche
   // Merkmal: Entscheidend ist, ob sich der VOLLTEXT holen laesst, und das
   // prueft die Schleife unten bereits.
@@ -76,16 +76,16 @@ async function main() {
   console.log(`  ${auswahl.length} davon mit Titel und Link`);
 
   // TROCKENLAUF: Sammeln und Volltext pruefen, ohne Claude zu fragen. Damit
-  // laesst sich der ganze Vorlauf ohne API-Schluessel testen — genau das
+  // laesst sich der ganze Vorlauf ohne API-Schluessel testen - genau das
   // haette die zwei Fehlschlaege oben verhindert.
   if (process.env.VERGLEICH_TROCKEN) {
-    console.log("\nTrockenlauf — es wird kein Text geschrieben.\n");
+    console.log("\nTrockenlauf - es wird kein Text geschrieben.\n");
     let brauchbar = 0;
     for (const item of auswahl.slice(0, ANZAHL * 4)) {
       let text = "";
       try {
         // extractArticleText liefert ein OBJEKT {ok, text, ogImage, ...},
-        // keinen String — siehe run.mjs, Zeile 474.
+        // keinen String - siehe run.mjs, Zeile 474.
         text = (await extractArticleText(item.link)).text ?? "";
       } catch {
         // Wie im echten Lauf: nicht abrufbar ist kein Absturz.
@@ -104,7 +104,7 @@ async function main() {
   const markdown = ["# Modell-Vergleich", "", `Erstellt am ${new Date().toISOString()}`, ""];
 
   // Solange weitersuchen, bis genug Quellen mit brauchbarem Volltext
-  // beisammen sind — ein nicht abrufbarer Artikel soll den Vergleich nicht
+  // beisammen sind - ein nicht abrufbarer Artikel soll den Vergleich nicht
   // um eine Quelle aermer machen.
   let versuche = 0;
   for (const item of auswahl) {
@@ -115,15 +115,15 @@ async function main() {
     let text;
     try {
       // extractArticleText liefert ein OBJEKT {ok, text, ogImage, ...},
-      // keinen String (run.mjs, Zeile 474). Ich hatte das geraten — der
+      // keinen String (run.mjs, Zeile 474). Ich hatte das geraten - der
       // Rohtext waere als "[object Object]" in den Prompt gewandert.
       text = (await extractArticleText(item.link)).text ?? "";
     } catch (err) {
-      console.log(`  Quelltext nicht lesbar (${err.message}) — uebersprungen`);
+      console.log(`  Quelltext nicht lesbar (${err.message}) - uebersprungen`);
       continue;
     }
     if (!text || text.length < 400) {
-      console.log("  Quelltext zu duenn — uebersprungen");
+      console.log("  Quelltext zu duenn - uebersprungen");
       continue;
     }
 

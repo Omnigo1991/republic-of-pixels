@@ -6,7 +6,7 @@ import { InlineArticleCard } from "./InlineArticleCard";
 // Bestimmt, wo die eingebettete Artikelempfehlung sitzt: direkt vor der
 // zweiten Zwischenüberschrift (wie bei play3.de zwischen zwei Abschnitten),
 // bei kürzeren Artikeln mit nur einer Überschrift ersatzweise auf halber
-// Strecke — nie mitten in einem Absatz, einer Liste oder einem Zitat.
+// Strecke - nie mitten in einem Absatz, einer Liste oder einem Zitat.
 function findInsertIndex(blocks: BodyBlock[]): number {
   const headingIndices = blocks
     .map((b, i) => (b.type === "heading" ? i : -1))
@@ -53,7 +53,7 @@ export function ArticleBody({
                   // Keine Trennlinie, gleicher Abstand wie im Fliesstext
                   // (Tim, 19.08.2026).
                   <footer className="mt-3 border-0 text-sm not-italic text-text-tertiary">
-                    — {block.attribution}
+                    - {block.attribution}
                   </footer>
                 )}
               </blockquote>
@@ -77,7 +77,7 @@ export function ArticleBody({
             //
             // EINE Schriftgrösse für ALLE Kacheln einer Gruppe (Tim,
             // 16.08.2026): Sie richtet sich nach dem LÄNGSTEN Wert, damit
-            // keine Kachel anders gestaltet ist als ihre Nachbarn — und
+            // keine Kachel anders gestaltet ist als ihre Nachbarn - und
             // nichts über den Rand läuft.
             const laengster = Math.max(...block.items.map((s) => s.value.length));
             const wertGroesse =
@@ -95,7 +95,7 @@ export function ArticleBody({
                   // Verlauf wie die Personen-Kacheln auf "Ueber uns"
                   // (Tim, 19.08.2026): Die Zahlen sollen die Textstrecke
                   // unterbrechen, nicht sich einfuegen. Schrift darin
-                  // dunkel — Cyan auf Magenta waere nicht lesbar.
+                  // dunkel - Cyan auf Magenta waere nicht lesbar.
                   <div
                     key={j}
                     className="personenkachel relative overflow-hidden rounded-2xl px-5 py-6 text-left"

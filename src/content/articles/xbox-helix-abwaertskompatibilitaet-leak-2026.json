@@ -23,7 +23,7 @@
     "Zwei Programme genannt: Disc-to-Digital-Lizenzierung (Programm 01) und Publisher-Opt-in für Altspiele (Programm 02)",
     "Vier Original-Xbox-Spiele mit eingebautem 360-Emulator sind laut Berichten bereits seit vergangenem Monat auf PC erhältlich"
   ],
-  "whyItMatters": "Sollte sich der Leak bestätigen, würde Xbox Helix potenziell die grösste Spielebibliothek aller Konsolen bündeln – ein zentrales Argument im Wettbewerb mit PlayStation und dem PC-Markt. Für Spielende bedeutet das mehr Zugriff auf klassische Titel über verschiedene Geräte hinweg.",
+  "whyItMatters": "Sollte sich der Leak bestätigen, würde Xbox Helix potenziell die grösste Spielebibliothek aller Konsolen bündeln - ein zentrales Argument im Wettbewerb mit PlayStation und dem PC-Markt. Für Spielende bedeutet das mehr Zugriff auf klassische Titel über verschiedene Geräte hinweg.",
   "body": [
     {
       "type": "paragraph",
@@ -40,7 +40,7 @@
     {
       "type": "list",
       "items": [
-        "Programm 01 (Disc-to-Digital): Physische Datenträger ab der Xbox-One-Generation sollen sich in eine digitale, kontogebundene Lizenz umwandeln lassen. Diese bleibt gültig, bis die Disc in einer anderen Konsole verwendet wird – dann wandert die Lizenz zum Konto der nächsten Person.",
+        "Programm 01 (Disc-to-Digital): Physische Datenträger ab der Xbox-One-Generation sollen sich in eine digitale, kontogebundene Lizenz umwandeln lassen. Diese bleibt gültig, bis die Disc in einer anderen Konsole verwendet wird - dann wandert die Lizenz zum Konto der nächsten Person.",
         "Programm 02 (Publisher-Opt-in): Entwicklerstudios sollen selbst entscheiden, ob ihre alten Xbox- und Xbox-360-Titel per Emulation verfügbar gemacht werden, inklusive Preis und Game-Pass-Aufnahme. Laut Memo übernimmt Microsoft dabei sämtliche technische Arbeit, den massgeschneiderten Emulator, Zertifizierung, Storefront-Präsentation und Support, während Publisher „rights, pricing, and brand control“ behalten sollen."
       ]
     },
@@ -55,7 +55,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Erste Schritte sollen bereits umgesetzt sein: Vier Titel der ursprünglichen Xbox sind seit vergangenem Monat über den Xbox Store auf PC erhältlich. Dataminer fanden dabei laut den Berichten heraus, dass im Hintergrund tatsächlich ein Xbox-360-Emulator arbeitet, der die erste Xbox emuliert – und in Teilen bereits Xbox-360-Spiele zum Laufen bringt. Für die vollständige Ausrollung der Xbox-Emulation wird im Dokument offenbar Oktober 2026 als Zieltermin genannt. Beim Disc-to-Digital-Feature soll ursprünglich ein Insider-Test im Juli 2026 vorgesehen gewesen sein, der jedoch abgesagt wurde; eine Veröffentlichung wird den Berichten zufolge noch innerhalb dieses Jahres erwartet."
+      "text": "Erste Schritte sollen bereits umgesetzt sein: Vier Titel der ursprünglichen Xbox sind seit vergangenem Monat über den Xbox Store auf PC erhältlich. Dataminer fanden dabei laut den Berichten heraus, dass im Hintergrund tatsächlich ein Xbox-360-Emulator arbeitet, der die erste Xbox emuliert - und in Teilen bereits Xbox-360-Spiele zum Laufen bringt. Für die vollständige Ausrollung der Xbox-Emulation wird im Dokument offenbar Oktober 2026 als Zieltermin genannt. Beim Disc-to-Digital-Feature soll ursprünglich ein Insider-Test im Juli 2026 vorgesehen gewesen sein, der jedoch abgesagt wurde; eine Veröffentlichung wird den Berichten zufolge noch innerhalb dieses Jahres erwartet."
     },
     {
       "type": "paragraph",
@@ -71,7 +71,7 @@
   "heroVariant": "controller",
   "sources": [
     {
-      "title": "Microsoft wants the next-gen Xbox Helix to play every Xbox game ever made as it urges publishers to opt in — New report also claims Xbox 360 games coming to PC soon",
+      "title": "Microsoft wants the next-gen Xbox Helix to play every Xbox game ever made as it urges publishers to opt in - New report also claims Xbox 360 games coming to PC soon",
       "url": "https://www.tomshardware.com/video-games/xbox/microsoft-wants-the-next-gen-xbox-helix-to-play-every-xbox-game-ever-made-as-it-urges-publishers-to-opt-in-new-report-also-claims-xbox-360-games-coming-to-pc-soon",
       "publisher": "Tom's Hardware"
     },

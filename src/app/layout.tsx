@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
@@ -19,11 +19,11 @@ const SITE_URL = "https://www.republicofpixels.com";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Republic of Pixels — Gaming-News, Leaks & Reviews",
-    template: "%s — Republic of Pixels",
+    default: "Republic of Pixels - Gaming-News, Leaks & Reviews",
+    template: "%s - Republic of Pixels",
   },
   description:
-    "Republic of Pixels ist die deutschsprachige Gaming-Newsplattform für PC, PlayStation, Xbox und Nintendo — Breaking News, Leaks, Reviews und Einordnung ohne Clickbait.",
+    "Republic of Pixels ist die deutschsprachige Gaming-Newsplattform für PC, PlayStation, Xbox und Nintendo - Breaking News, Leaks, Reviews und Einordnung ohne Clickbait.",
   keywords: [
     "Gaming News",
     "Gaming Deutschland",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     site: "@republicofpixels",
   },
   // Icons (09.08.2026): iOS und macOS brauchen für Teilen-Menü und
-  // Startbildschirm PNG bzw. ICO — ein SVG-Favicon allein genügt dort
+  // Startbildschirm PNG bzw. ICO - ein SVG-Favicon allein genügt dort
   // nicht. Bewusst OHNE SVG-Deklaration: unseres ist nicht quadratisch
   // (401×464) und im hellen Modus dunkelblau auf transparent, Safari
   // bevorzugt es aber vor allen anderen und kommt damit nicht klar.
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
   // Google-Discover-Voraussetzung: Ohne "max-image-preview: large" zeigt
-  // Google nur Mini-Thumbnails — grosse Vorschaubilder sind aber praktisch
+  // Google nur Mini-Thumbnails - grosse Vorschaubilder sind aber praktisch
   // die Eintrittskarte für Discover-Ausspielung.
   robots: {
     index: true,
@@ -79,9 +79,19 @@ export const metadata: Metadata = {
   },
 };
 
+// KOPF BIS GANZ NACH OBEN (Tim, 20.08.2026): Ohne "viewport-fit: cover"
+// endet die Seite unterhalb der Statusleiste des iPhones. Der Streifen
+// dort zeigte dann das durchscheinende Artikelbild statt unseres
+// Kopfbands. Mit "cover" reicht die Seite bis an die Bildschirmkante,
+// und das Kopfband fuellt den Streifen (siehe .kopfband in globals.css).
+export const viewport: Viewport = {
+  themeColor: "#0C0B1A",
+  viewportFit: "cover",
+};
+
 // Marken-Verknüpfung für Suchmaschinen (08.08.2026): sameAs verbindet die
 // Website mit unseren offiziellen Social-Profilen zu EINER Marke im
-// Knowledge Graph — stärkt Marken-Suche und E-E-A-T.
+// Knowledge Graph - stärkt Marken-Suche und E-E-A-T.
 const organisationJsonLd = {
   "@context": "https://schema.org",
   "@type": "NewsMediaOrganization",
@@ -112,7 +122,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {/* Masthead wird pro Seitentyp gerendert (Masthead.tsx: brand/section/slim). */}
         <main>{children}</main>
         <Footer />
-        {/* Teilt immer die aktuelle Seite (Tim, 09.08.2026) — deshalb im
+        {/* Teilt immer die aktuelle Seite (Tim, 09.08.2026) - deshalb im
             Layout und nicht pro Seite. */}
         <TeilenKnopf />
         <VisitTracker />

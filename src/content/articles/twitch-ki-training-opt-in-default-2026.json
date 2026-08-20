@@ -1,6 +1,6 @@
 {
   "slug": "twitch-ki-training-opt-in-default-2026",
-  "title": "Twitch trainiert KI-Modelle mit Streamer-Inhalten – Opt-out nötig",
+  "title": "Twitch trainiert KI-Modelle mit Streamer-Inhalten - Opt-out nötig",
   "subtitle": "Die neue Funktion ist standardmässig aktiviert, Twitchs Produktchef nennt den Grund dafür offen",
   "excerpt": "Twitch nutzt Streams, VODs und mehr, um generative KI-Modelle für Amazon zu trainieren. Die Funktion ist automatisch aktiv, Kritik an Kommunikation und Standardeinstellung wächst.",
   "seoTitle": "Twitch KI-Training: Streamer-Daten standardmässig für Amazon genutzt",
@@ -22,7 +22,7 @@
     "Twitch-Produktchef Mike Minton begründet dies damit, dass sich sonst niemand dafür entscheiden würde",
     "Ein UserVoice-Thread mit rund 14'000 Stimmen fordert seit Mai eine Opt-out-Regelung"
   ],
-  "whyItMatters": "Wer streamt, produziert damit unfreiwillig Trainingsmaterial für Amazons KI-Systeme – inklusive Spielinhalten, an denen Streamer:innen gar keine Rechte besitzen. Das wirft Fragen zu Persönlichkeitsrechten, Urheberrecht und dem Umgang grosser Plattformen mit Nutzerdaten auf.",
+  "whyItMatters": "Wer streamt, produziert damit unfreiwillig Trainingsmaterial für Amazons KI-Systeme - inklusive Spielinhalten, an denen Streamer:innen gar keine Rechte besitzen. Das wirft Fragen zu Persönlichkeitsrechten, Urheberrecht und dem Umgang grosser Plattformen mit Nutzerdaten auf.",
   "body": [
     {
       "type": "paragraph",
@@ -81,7 +81,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Laut Twitchs eigener FAQ betrifft das Opt-out allerdings nicht sämtliche KI-Nutzung. Auch nach der Deaktivierung dürfen Stream-Daten weiterhin für 'KI-gestützte Funktionen' wie automatische Untertitel verwendet werden – nur eben nicht mehr zum Training generativer Modelle, die neue Inhalte erzeugen können."
+      "text": "Laut Twitchs eigener FAQ betrifft das Opt-out allerdings nicht sämtliche KI-Nutzung. Auch nach der Deaktivierung dürfen Stream-Daten weiterhin für 'KI-gestützte Funktionen' wie automatische Untertitel verwendet werden - nur eben nicht mehr zum Training generativer Modelle, die neue Inhalte erzeugen können."
     },
     {
       "type": "heading",
@@ -98,7 +98,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Diese Aussage steht im direkten Widerspruch zur eigenen FAQ-Seite, auf der Twitch erklärt, dass etwa Audiodaten aus Streams genutzt werden können, um Sprache-zu-Text-Modelle zu verbessern – Modelle, von denen laut Twitch nicht nur die eigene Plattform, sondern der gesamte Amazon-Konzern profitiert. Die naheliegendste Erklärung: Twitch versucht möglicherweise, zwischen sich selbst und Amazon als Konzern zu unterscheiden – eine Unterscheidung ohne praktische Relevanz, da Twitch eine hundertprozentige Amazon-Tochter ist."
+      "text": "Diese Aussage steht im direkten Widerspruch zur eigenen FAQ-Seite, auf der Twitch erklärt, dass etwa Audiodaten aus Streams genutzt werden können, um Sprache-zu-Text-Modelle zu verbessern - Modelle, von denen laut Twitch nicht nur die eigene Plattform, sondern der gesamte Amazon-Konzern profitiert. Die naheliegendste Erklärung: Twitch versucht möglicherweise, zwischen sich selbst und Amazon als Konzern zu unterscheiden - eine Unterscheidung ohne praktische Relevanz, da Twitch eine hundertprozentige Amazon-Tochter ist."
     },
     {
       "type": "heading",
@@ -119,7 +119,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Die aktuelle Kontroverse reiht sich in eine längere Liste umstrittener Entscheidungen bei Twitch ein, die in den vergangenen Jahren unter anderem Regeln zu sexuellen Inhalten, politischen Themen und einzelnen umstrittenen Begriffen betrafen. Anders als bei vielen früheren Fällen betrifft das KI-Training jedoch nicht nur Moderationsfragen, sondern direkt die wirtschaftliche Verwertung von Inhalten – mit potenziellen Folgen für Streamer:innen ebenso wie für die Studios, deren Spiele auf der Plattform gezeigt werden."
+      "text": "Die aktuelle Kontroverse reiht sich in eine längere Liste umstrittener Entscheidungen bei Twitch ein, die in den vergangenen Jahren unter anderem Regeln zu sexuellen Inhalten, politischen Themen und einzelnen umstrittenen Begriffen betrafen. Anders als bei vielen früheren Fällen betrifft das KI-Training jedoch nicht nur Moderationsfragen, sondern direkt die wirtschaftliche Verwertung von Inhalten - mit potenziellen Folgen für Streamer:innen ebenso wie für die Studios, deren Spiele auf der Plattform gezeigt werden."
     }
   ],
   "poll": {
@@ -148,7 +148,7 @@
   ],
   "image": {
     "src": "/images/articles/twitch-ki-training-opt-in-default-2026.webp",
-    "alt": "Twitch trainiert KI-Modelle mit Streamer-Inhalten – Opt-out nötig",
+    "alt": "Twitch trainiert KI-Modelle mit Streamer-Inhalten - Opt-out nötig",
     "credit": "Bild: PC Gamer",
     "sourceUrl": "https://www.pcgamer.com/software/ai/twitch-under-fire-for-new-gen-ai-training-system-that-harvests-streamer-data-for-amazon-says-its-on-by-default-because-if-it-was-opt-in-nobody-would-opt-in/",
     "sourceWidth": 1280,

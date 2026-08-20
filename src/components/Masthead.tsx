@@ -10,7 +10,7 @@ import { PLATFORM_NAV } from "@/lib/articles";
 // weisse Leiste, grosses Cyan-Logo mit Schriftzug, drei pure Textlinks
 // (News / Guides / Radare) mit Sprungzielen auf der Startseite, die
 // Plattform-Icons als Chip-Gruppe, Suche, Anmelden als Cyan-Pille und das
-// Burger-Menü mit dem kompletten Mobile-Inhalt — auf allen Breiten.
+// Burger-Menü mit dem kompletten Mobile-Inhalt - auf allen Breiten.
 
 // Kein Header-Staub mehr (Tim, 19.08.2026): restlos entfernt.
 
@@ -25,10 +25,10 @@ export function Masthead({
     <>
       <div className="kopfband sticky top-0 z-50 text-white">
         <div className="relative mx-auto flex h-16 max-w-content items-center gap-5 px-4 sm:px-6 lg:h-[88px] lg:gap-7 lg:px-8">
-          <Link href="/" aria-label="Republic of Pixels – Startseite" className="mr-auto flex min-w-0 items-center gap-2.5 sm:gap-3 lg:gap-4">
+          <Link href="/" aria-label="Republic of Pixels - Startseite" className="mr-auto flex min-w-0 items-center gap-2.5 sm:gap-3 lg:gap-4">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/brand/r-mark.png" alt="" aria-hidden="true" className="h-7 w-auto min-[380px]:h-8 sm:h-9 lg:h-12" />
-            {/* Schriftzug IMMER voll und einzeilig (Tim, 16.08.2026) —
+            {/* Schriftzug IMMER voll und einzeilig (Tim, 16.08.2026) -
                 auf schmalen Geraeten faellt er kleiner aus, statt zu
                 kuerzen oder umzubrechen. */}
             <span className="translate-y-[1px] whitespace-nowrap text-[14px] font-black leading-none tracking-tight min-[380px]:text-[15.5px] sm:text-[21px] lg:text-[28px]">

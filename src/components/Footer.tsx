@@ -6,7 +6,7 @@ import { PlatformIcon } from "./PlatformIcons";
 export function Footer() {
   return (
     // Kein Aussenabstand mehr (Hell-Umbau): Auf der Startseite schliesst
-    // der Navy-Newsletter-Block direkt an — ein weisses Band dazwischen
+    // der Navy-Newsletter-Block direkt an - ein weisses Band dazwischen
     // zerriss die dunkle Schlusszone. Unterseiten bringen ihren eigenen
     // Abstand über das Seiten-Padding mit.
     <footer className="border-t border-navy-border bg-navy">
@@ -14,12 +14,12 @@ export function Footer() {
         <div className="grid grid-cols-2 gap-10 md:grid-cols-5">
           <div className="col-span-2">
             {/* Nur das R-Markenzeichen in Logo-Cyan, ohne Wortmarke (Vorgabe 04.08.2026). */}
-            <Link href="/" aria-label="Republic of Pixels – Startseite" className="inline-block">
+            <Link href="/" aria-label="Republic of Pixels - Startseite" className="inline-block">
               <LogoMark className="h-10 w-auto text-accent" />
             </Link>
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-navy-muted">
               Republic of Pixels ist eine unabhängige, deutschsprachige Gaming-Newsplattform.
-              Wir ordnen ein, statt nur zu melden — ruhig, ehrlich und ohne Clickbait.
+              Wir ordnen ein, statt nur zu melden - ruhig, ehrlich und ohne Clickbait.
             </p>
             <a
               href="https://www.instagram.com/republicofpixels"

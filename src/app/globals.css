@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  /* Cyberpunk-Umbau (Tim, 18.08.2026): Navy bleibt der Grund — eure
+  /* Cyberpunk-Umbau (Tim, 18.08.2026): Navy bleibt der Grund - eure
      Markenfarbe, durchgehend und ohne Muster. */
   background-color: #0C0B1A;
   color: #EAF6FF;
@@ -41,7 +41,7 @@ h3 {
 }
 
 /* Fliesstext-Typografie der Artikelseite. Der :where(:not(...))-Guard nimmt
-   alles mit .not-prose (und dessen Nachfahren) aus — nötig für eingebettete
+   alles mit .not-prose (und dessen Nachfahren) aus - nötig für eingebettete
    UI wie die InlineArticleCard: Ohne den Guard überschreiben diese Regeln
    (Spezifität 0-1-1) die Tailwind-Utilities der Karte (0-1-0), und die Karte
    erbt Artikelschriftgrössen und -abstände. :where() hält die Spezifität
@@ -53,7 +53,7 @@ h3 {
   margin-top: 1.25em;
   margin-bottom: 1.25em;
   /* 1.65 statt 1.75 (Betreiber-Entscheidung 06.08.2026): kompakter,
-     nach Vergleichsmessung mit play3.de (dort 1.62) — 1.75 wirkte bei
+     nach Vergleichsmessung mit play3.de (dort 1.62) - 1.75 wirkte bei
      unserer 18px-Schrift zu luftig. */
   line-height: 1.65;
   font-size: 1.125rem;
@@ -144,14 +144,14 @@ h3 {
 }
 
 /* ================================================================
-   CYBERPUNK (Tim, 18.08.2026) — loest den Navy-Stand ab.
+   CYBERPUNK (Tim, 18.08.2026) - loest den Navy-Stand ab.
    Drei Bausteine: Grund und Textur, Schrift, Randform K11 und
    Kartenfassung C1. Aufbau, Raster und Abstaende der Seite bleiben.
    ================================================================ */
 
 /* ---------- Grund: durchgehend Navy, kein Muster ----------
    Erst lagen zwei Farbschleier darauf (Aufmacher stand auf anderem
-   Grund), dann ein Netz — beides ist raus (Tim, 18.08.2026). Der
+   Grund), dann ein Netz - beides ist raus (Tim, 18.08.2026). Der
    Grund ist jetzt ueberall dieselbe Flaeche. */
 /* Bildschirmzeilen (CRT) */
 body::after {
@@ -183,7 +183,7 @@ h3 { font-weight: 800; color: #F2F8FF; }
 /* EINE Schrift ueberall (Betreiber-Vorgabe 05.08.2026, wieder
    hergestellt am 19.08.2026): Inter fuer alles. Die zweite Familie
    war an 63 Stellen im Einsatz und liess die Seite uneinheitlich
-   wirken — der Cyberpunk-Ton kommt aus Versalien und Sperrung, nicht
+   wirken - der Cyberpunk-Ton kommt aus Versalien und Sperrung, nicht
    aus einer Maschinenschrift. */
 body, h1, h2, h3, h4, p, li, a, button, span, time, input, label {
   font-family: var(--font-inter), Inter, system-ui, -apple-system, sans-serif;
@@ -261,7 +261,7 @@ body, h1, h2, h3, h4, p, li, a, button, span, time, input, label {
   .treppe-tl, .treppe-tr { padding: 2px; }
 }
 
-/* Der Anschnitt frisst die untere linke Ecke — ohne zusaetzlichen
+/* Der Anschnitt frisst die untere linke Ecke - ohne zusaetzlichen
    Innenabstand wirken Kicker und Schlagzeile abgesaegt. */
 .treppe-innen > div:last-child {
   padding-left: calc(var(--kappe) + 4px);
@@ -274,7 +274,7 @@ body, h1, h2, h3, h4, p, li, a, button, span, time, input, label {
 
 /* ---------- Werkzeugkarten: ruhige Cyan-Haarlinie ----------
    Vorher trugen Artikelkacheln UND Werkzeugkarten dieselbe
-   Verlaufskante — auf der Startseite lagen rund zwanzig davon
+   Verlaufskante - auf der Startseite lagen rund zwanzig davon
    gleichzeitig im Bild, und der Verlauf wurde Tapete. Er bleibt jetzt
    den Artikeln vorbehalten (Tim, 20.08.2026). */
 .bg-surface-card {
@@ -286,16 +286,58 @@ body, h1, h2, h3, h4, p, li, a, button, span, time, input, label {
   background: #1B1840;
   border-color: rgba(2, 240, 209, 0.55);
 }
+/* NUR DIE FARBE, NIE EINEN RAHMEN ERZEUGEN (Tim, 20.08.2026):
+   Vorher setzte diese Regel "border: 1px solid" und einen Radius. Damit
+   bekam JEDES Element mit dieser Flaechenfarbe einen Rahmen - auch dort,
+   wo im Code bewusst keiner steht. In der Statistik sind die Zeilen der
+   Herkunfts-Liste blosse Streifen; sie wurden dadurch zu einzelnen
+   Kaestchen in einem Kasten. Dasselbe traf Tabellenzeilen und
+   Fortschrittsbalken.
+   Fast alle Karten setzen ihren Rahmen ohnehin selbst ("border
+   border-border-subtle"). Es genuegt daher, dessen FARBE auf Cyan zu
+   ziehen: Wer einen Rahmen hat, bekommt den Cyan-Ton; wer keinen hat,
+   bleibt rahmenlos. */
 .bg-surface-panel, .bg-bg-elevated {
-  border: 1px solid rgba(2, 240, 209, 0.28);
+  border-color: rgba(2, 240, 209, 0.28);
 }
-.bg-surface-panel:not([class*="rounded-full"]),
-.bg-bg-elevated:not([class*="rounded-full"]) {
-  border-radius: 16px;
+
+/* ---------- Weicher Bildauslauf ----------
+   KEINE HARTEN KANTEN (Tim, 20.08.2026): Bei "Beliebt bei Lesern" und
+   der Artikelkarte endete das Bild mit einer geraden Linie, waehrend die
+   Kacheln der Startseite (NotchKarte, Aufmacher) weich ins Navy
+   auslaufen. Zwei Uebergaenge fuer dieselbe Sache. Diese Regel gibt
+   allen Artikel-Kacheln denselben Auslauf.
+   Die Farbe ist exakt der Untergrund beider Karten (#14122E), damit der
+   Verlauf nahtlos in die Textflaeche uebergeht. */
+.bildauslauf::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* GLEICHES VERHAELTNIS WIE DIE KACHELN (Tim, 20.08.2026, gemessen):
+     Die NotchKarte hat ein 280 px hohes Bildfeld und eine 76 px lange
+     Verlaufsstrecke, also 27 %. Der Aufmacher: 120 px auf 600 px, 20 %.
+     Bei "Beliebt bei Lesern" ist das Bildfeld nur 177 px hoch - dieselben
+     76 px waeren dort 43 % gewesen, mehr als das Doppelte im Verhaeltnis,
+     und genau so sah es auch aus. 27 % von 177 px sind 48 px.
+     Die Abstufung ist dieselbe wie bei der Kachel, nur auf 48 px
+     gestaucht. Wichtiger Unterschied im Aufbau: Dort ist der Verlauf der
+     Untergrund fuer den Text, hier endet er an der Bildunterkante, weil
+     der Text darunter auf eigener Flaeche steht. */
+  height: 48px;
+  pointer-events: none;
+  background: linear-gradient(0deg,
+    #14122E 0px,
+    rgba(20, 18, 46, 0.9) 8px,
+    rgba(20, 18, 46, 0.68) 18px,
+    rgba(20, 18, 46, 0.4) 28px,
+    rgba(20, 18, 46, 0.16) 38px,
+    rgba(20, 18, 46, 0) 48px);
 }
 
 /* ---------- Personen-Kacheln auf "Ueber uns" ----------
-   Verlauf wie im Kopfband (Tim, 19.08.2026). Die Form bleibt rund —
+   Verlauf wie im Kopfband (Tim, 19.08.2026). Die Form bleibt rund -
    es sind keine Artikel. */
 .personenkachel {
   background: linear-gradient(120deg, #FF2E97, #FF6BC0 40%, #02F0D1 115%);
@@ -342,11 +384,18 @@ body, h1, h2, h3, h4, p, li, a, button, span, time, input, label {
 }
 /* ---------- Kopfband im Verlauf (Tim, 19.08.2026) ----------
    Derselbe Verlauf wie das Menue. Damit wechselt die Schrift dort auf
-   Dunkel — Weiss auf Magenta misst 1.5:1 und waere nicht lesbar. */
+   Dunkel - Weiss auf Magenta misst 1.5:1 und waere nicht lesbar. */
 .kopfband {
   background: linear-gradient(100deg, #FF2E97, #FF6BC0 42%, #02F0D1 118%);
   border-bottom: 1px solid rgba(11, 6, 22, 0.35);
   box-shadow: 0 6px 26px -8px rgba(255, 46, 151, 0.45);
+  /* BIS GANZ NACH OBEN (Tim, 20.08.2026): Am iPhone liegt ueber der
+     Seite noch die Statusleiste. Ohne diese Zeile endete das Kopfband
+     darunter und im Streifen schimmerte das Artikelbild durch. Die
+     Innenabstand-Zeile faerbt den Streifen mit, weil der Verlauf auch
+     unter dem Innenabstand liegt; der Inhalt bleibt darunter.
+     Am Rechner ist env() gleich 0 - dort aendert sich nichts. */
+  padding-top: env(safe-area-inset-top, 0px);
 }
 .kopfband,
 .kopfband a,
@@ -358,10 +407,10 @@ body, h1, h2, h3, h4, p, li, a, button, span, time, input, label {
    "REPUBLIC" und die beiden Haelften wirken wie zwei Schriften. */
 .kopfband, .kopfband * { text-shadow: none !important; }
 .kopfband a:hover, .kopfband button:hover { opacity: 0.72; }
-/* Plattform-Chips und Suchknopf: heller Schleier statt dunkler Block —
+/* Plattform-Chips und Suchknopf: heller Schleier statt dunkler Block -
    dieselbe Fassung wie das Suchfeld im Menue (Tim, 19.08.2026). */
 /* Beide Flaechen tragen eine feste Hexfarbe (bg-[#1B1A33]), deshalb
-   greifen Marken-Waehler hier nicht — sie werden ausdruecklich
+   greifen Marken-Waehler hier nicht - sie werden ausdruecklich
    genannt. */
 .kopfband [class*="bg-navy"],
 .kopfband [class*="bg-surface"],
@@ -417,7 +466,7 @@ a[class*="rounded-full"][class*="border-accent"] {
 
 /* Newsletter-Ecke folgt derselben Form. Der Teilen-Knopf NICHT: er ist
    1:1 wie auf der Live-Seite rund (52 px, Rand rgba(2,240,209,.35),
-   Grund rgba(18,17,38,.85), Flieger 22 px mittig) — Tim, 18.08.2026. */
+   Grund rgba(18,17,38,.85), Flieger 22 px mittig) - Tim, 18.08.2026. */
 .treppe-br {
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 22px), calc(100% - 22px) 100%, 0 100%);
 }
@@ -426,7 +475,7 @@ a[class*="rounded-full"][class*="border-accent"] {
 
 @media (max-width: 640px) {
   /* Bedienelemente auf mindestens 44 px. Gemessen lagen sechs Stueck
-     zwischen 38 und 42 px — knapp unter dem Mass, ab dem ein Daumen
+     zwischen 38 und 42 px - knapp unter dem Mass, ab dem ein Daumen
      zuverlaessig trifft. Betrifft Suche, Menue, "Mehr anzeigen",
      Newsletter-Feld, "Raten" und den Instagram-Knopf. */
   button,

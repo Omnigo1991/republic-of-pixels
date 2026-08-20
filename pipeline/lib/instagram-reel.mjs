@@ -13,21 +13,21 @@ import {
 } from "./instagram-card.mjs";
 
 // Instagram-Reel-Renderer (Motion-Graphic, 08.08.2026): 1080×1350 (4:5), 5 s,
-// 30 fps — Artikelbild mit langsamem Ken-Burns-Zoom, darüber ein statisches
+// 30 fps - Artikelbild mit langsamem Ken-Burns-Zoom, darüber ein statisches
 // Overlay im Master-Template-Look (Verlauf ins Navy, Inter-900-Headline mit
 // Cyan-Wörtern, Badge, R-Logo, Credit). Kein Trailer-/Gameplay-Material
 // (Rechte!). ffmpeg kommt aus ffmpeg-static (identisch lokal und in CI);
-// WICHTIG: execFileSync statt Shell — der Projektpfad enthält Leerzeichen
+// WICHTIG: execFileSync statt Shell - der Projektpfad enthält Leerzeichen
 // und Klammern.
 //
 // Sicherheitszonen: Instagram legt im Reels-Feed unten ~420 px (Caption,
-// Audio, Aktionen) und rechts ~120 px (Icon-Spalte) über das Video — alles
+// Audio, Aktionen) und rechts ~120 px (Icon-Spalte) über das Video - alles
 // Wichtige sitzt darum in der oberen Bildmitte mit grosszügigem Rand.
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
 const LOGO = join(ROOT, "public", "brand", "r-mark.png");
 
-// 5 Sekunden (Tim-Entscheid 08.08.2026): Die Headline ist in 2–3 s gelesen;
+// 5 Sekunden (Tim-Entscheid 08.08.2026): Die Headline ist in 2-3 s gelesen;
 // kurze Reels loopen im Feed → Abschlussrate über 100 % ist das stärkste
 // Watch-Time-Signal für den Algorithmus. (Instagram-Minimum: 3 s.)
 const DAUER_S = 5;
@@ -49,7 +49,7 @@ async function renderOverlay({ headlineLines, kicker, notiz, badge, credit, chro
   const kickerHtml = kicker ? `<div class="kicker">${escapeHtml(kicker)}</div>` : "";
   const notizHtml = notiz ? `<div class="notiz">${escapeHtml(notiz)}</div>` : "";
   // 1:1 die Beitrags-Vorlage (Tim-Vorgabe 08.08.2026, Referenz: seine
-  // manuellen Reels): Das Reel IST die animierte Beitrags-Karte — gleicher
+  // manuellen Reels): Das Reel IST die animierte Beitrags-Karte - gleicher
   // 4:5-Canvas (1080×1350), gleiche Elemente, Grössen, Abstände und
   // Verlaufs-Stopps wie instagram-card.mjs. Instagram akzeptiert 4:5-Reels;
   // im Feed sind sie von Bild-Posts nicht zu unterscheiden, im Reels-Tab
@@ -58,7 +58,7 @@ async function renderOverlay({ headlineLines, kicker, notiz, badge, credit, chro
   const LOGO_H = 60;
   const INK = 13.6;
   const HUB = 0;
-  // Marker-Layout wie bei der Bild-Karte (13.08.2026) — Reel und Beitrag
+  // Marker-Layout wie bei der Bild-Karte (13.08.2026) - Reel und Beitrag
   // müssen identisch aussehen, sonst zerfällt das Raster in zwei Stile.
   const html = `<!doctype html><html><head><meta charset="utf-8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -86,7 +86,7 @@ async function renderOverlay({ headlineLines, kicker, notiz, badge, credit, chro
   /* width:100% ist PFLICHT, nicht Kosmetik: In einem Flex-Stapel mit
      align-items:flex-start schrumpft ein Block-Kind auf seine Inhaltsbreite.
      Ohne diese Zeile mass die Einpassung die Zeile gegen sich selbst und
-     war immer zufrieden — "DES SIRIUS-TEAMS" lief rechts aus dem Bild. */
+     war immer zufrieden - "DES SIRIUS-TEAMS" lief rechts aus dem Bild. */
   .titel { font-family:'Inter',sans-serif; font-weight:900; text-transform:uppercase;
     width:100%; text-align:left; font-size:75px; line-height:1.34; letter-spacing:-0.02em;
     color:#FFFFFF;
@@ -115,7 +115,7 @@ async function renderOverlay({ headlineLines, kicker, notiz, badge, credit, chro
     const page = await browser.newPage({ viewport: { width: 1080, height: 1350 } });
     // NICHT AUF "networkidle" WARTEN (Fund 13.08.2026): Der Abruf der
     // Google-Schriften laeuft gelegentlich in die 30-Sekunden-Grenze, und
-    // Playwright wirft dann einen Fehler — in GitHub Actions kostet das den
+    // Playwright wirft dann einen Fehler - in GitHub Actions kostet das den
     // ganzen Lauf. Zuverlaessiger und schneller: auf "load" warten und dann
     // gezielt darauf, dass die Schriften wirklich da sind. Das ist sogar
     // strenger, denn mit Ersatzschrift gemessene Breiten waeren falsch.
@@ -197,9 +197,9 @@ export async function renderInstagramReel({
   // Motiv-Sucher wie beim Standbild (09.08.2026): Reel und Beitrag eines
   // Artikels müssen denselben Ausschnitt und denselben Verlauf zeigen.
   // ffmpeg kann den Ausschnitt nicht selbst wählen, darum schneiden wir
-  // das Bild vorher exakt auf 4:5 zu — der Ken-Burns-Zoom arbeitet dann
+  // das Bild vorher exakt auf 4:5 zu - der Ken-Burns-Zoom arbeitet dann
   // auf dem bereits richtig gelegten Fenster.
-  // Schwarze Balken zuerst entfernen — Begründung in instagram-card.mjs.
+  // Schwarze Balken zuerst entfernen - Begründung in instagram-card.mjs.
   const balkenfrei = await entferneBalken(imagePath);
   if (balkenfrei.beschnitten) {
     console.log(`  Schwarze Balken entfernt (${JSON.stringify(balkenfrei.balken)})`);
@@ -241,10 +241,10 @@ export async function renderInstagramReel({
 
   const frames = DAUER_S * FPS;
   // Ken-Burns: Bild deckend hochskalieren (Reserve für den Zoom), dann
-  // langsamer zentrierter Zoom auf 1080×1350 — das 4:5-Format der Karte.
+  // langsamer zentrierter Zoom auf 1080×1350 - das 4:5-Format der Karte.
   // Farbraum-Fix (09.08.2026, Tims Cyan-Beobachtung): Ohne explizite
   // Matrix wandelt swscale RGB nach der alten TV-Norm BT.601, Player
-  // interpretieren 1080p aber als BT.709 — das verschob das Marken-Cyan
+  // interpretieren 1080p aber als BT.709 - das verschob das Marken-Cyan
   // sichtbar. Jetzt: Umwandlung erzwungen nach BT.709 + Kennzeichnung im
   // Container, damit jeder Player identisch dekodiert.
   const filter =

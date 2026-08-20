@@ -3,7 +3,7 @@
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 
 // Ein Client pro Browser-Sitzung. Die Werte sind bewusst öffentlich
-// (anon/publishable Key) — Schreibrechte regeln die Row-Level-Security-
+// (anon/publishable Key) - Schreibrechte regeln die Row-Level-Security-
 // Policies in der Datenbank (supabase/schema.sql).
 let client: SupabaseClient | null = null;
 

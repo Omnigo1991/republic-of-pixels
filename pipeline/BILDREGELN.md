@@ -2,7 +2,7 @@
 
 Tims Massstäbe, erhoben am 13.08.2026 in vier Fragerunden. Diese Datei ist
 die Referenz für jede Änderung an Bildwahl, Bildherkunft und Bildausschnitt.
-Wer hier etwas ändert, braucht Tims Zustimmung — nicht ein besseres Gefühl.
+Wer hier etwas ändert, braucht Tims Zustimmung - nicht ein besseres Gefühl.
 
 ## 1. Woher das Bild kommt
 
@@ -13,7 +13,7 @@ Trailer-Standbild, eine bestimmte Person.
 
 > Anlass: Von den letzten zehn Posts nutzten fünf Artwork und drei ein
 > Pressebild. Die drei Pressebild-Posts waren Ghost of Yotei, Zelda und
-> GTA 6 — Yotei und Zelda sind genau die beiden, die Tim beanstandet hat.
+> GTA 6 - Yotei und Zelda sind genau die beiden, die Tim beanstandet hat.
 > Die Bildwahl war das Problem, nicht der Ausschnitt.
 
 **Bei Artwork: Szenenbild vor Cover.** Erst nach einem Artwork ohne
@@ -28,7 +28,7 @@ Quartalszahlen): offizielles Material des Studios oder Herstellers nutzen
 
 **Bildnachweis nennt den Publisher**, nicht die Website, von der wir das
 Material haben. Also "Bild: Sony Interactive Entertainment", nicht
-"Bild: Gematsu" — das Material gehört dem Rechteinhaber.
+"Bild: Gematsu" - das Material gehört dem Rechteinhaber.
 
 ## 2. Wie das Bild aussehen darf
 
@@ -37,19 +37,19 @@ Verlauf sorgt weiterhin dafür, dass die Schlagzeile unten lesbar bleibt. Ein
 Raster aus lauter dunklen Posts wirkt geschlossen, aber leblos.
 
 **Drastisches Material wird gezeigt, wie das Spiel es zeigt.** Horror, Blut,
-Waffen — kein Entschärfen. (Hinweis, den Tim kennt: Instagram kann solche
+Waffen - kein Entschärfen. (Hinweis, den Tim kennt: Instagram kann solche
 Beiträge in der Reichweite drosseln. Das ist eine bewusste Entscheidung.)
 
 **Der Spiel-Schriftzug im Artwork stört nicht**, solange er sich nicht mit
 unserer Schlagzeile überlagert. Damit ist der Motiv-Sucher von seiner
 ursprünglichen Hauptaufgabe entlastet.
 
-**Mindestgüte etwas lockerer** als die bisherigen 900 px Quellhöhe — auf dem
+**Mindestgüte etwas lockerer** als die bisherigen 900 px Quellhöhe - auf dem
 Handy fällt der Unterschied kaum auf, und wir verlieren weniger Motive.
 
 ## 3. Wohin der Ausschnitt zielt
 
-**Figur und Gesicht haben Vorrang** — auch wenn die Schlagzeile dadurch auf
+**Figur und Gesicht haben Vorrang** - auch wenn die Schlagzeile dadurch auf
 unruhigerem Grund steht. Menschen schauen auf Gesichter; das stoppt den
 Daumen.
 
@@ -59,7 +59,7 @@ Daumen.
 > 12.08. gescheitert (Zelda: leerer Himmel; Halloween: Haus statt Michael
 > Myers). Lehre von damals: Eine reine Statistik-Heuristik kennt kein Motiv.
 > "Gesicht hat Vorrang" braucht deshalb echte Gesichts- bzw.
-> Motiverkennung — nicht noch eine Varianz-Formel. Solange die fehlt, bleibt
+> Motiverkennung - nicht noch eine Varianz-Formel. Solange die fehlt, bleibt
 > die Mitte-Regel bestehen.
 
 **Personenfotos sind erwünscht.** Porträts ziehen, auch als Aufmacher für
@@ -71,13 +71,13 @@ Tim hat drei Bilder vorgegeben und die fertigen Posts beurteilt. Drei Regeln
 kamen dabei heraus, die vorher nicht scharf genug formuliert waren:
 
 **1. FIGUR SCHLÄGT LOGO.** Sind Motiv und Spiel-Schriftzug im selben Bild,
-gewinnt die Figur — und das Logo darf ganz herausfallen. Das schärft Punkt 2
+gewinnt die Figur - und das Logo darf ganz herausfallen. Das schärft Punkt 2
 oben ("der Spiel-Schriftzug stört nicht"): Er stört nicht, wenn er ganz und
 nebenbei zu sehen ist. Ein angeschnittener Schriftzug ist schlimmer als gar
 keiner.
 
 > Anlass: Beim Zelda-Hub-Artwork steht Link links, das Logo rechts. Die
-> Mitte-Regel schnitt genau dazwischen — übrig blieben ein halber Link am
+> Mitte-Regel schnitt genau dazwischen - übrig blieben ein halber Link am
 > Bildrand und ein rotes "Z". Tims Urteil: "Positionierung sehr schlecht."
 
 **2. AUFLÖSUNG IST AUSSCHLUSSKRITERIUM, NICHT GESCHMACKSFRAGE.** Ein zu
@@ -101,19 +101,19 @@ als Navy-Fläche für den Text nutzen, statt seitlich zu beschneiden.
 **Innerhalb von sieben Tagen kein Motiv doppelt.** Erscheint dasselbe Spiel
 mehrfach, rotiert der Artwork-Vorrat.
 
-**Ist der Vorrat erschöpft, wird von vorne rotiert** — nach vier Posts
+**Ist der Vorrat erschöpft, wird von vorne rotiert** - nach vier Posts
 erinnert sich kaum jemand an das erste Bild.
 
 ## 4b. Wenn das Bild nicht taugt (Tim, 14.08.2026)
 
 **Ein schlechtes Bild führt zur nächsten STORY, nicht zur Typo-Karte.** Wir
 schreiben rund 18 Artikel am Tag und brauchen 5 Posts. Fällt ein Bild durch,
-wird die nächste Meldung geprüft — der Vorrat ist da.
+wird die nächste Meldung geprüft - der Vorrat ist da.
 
 **Höchstens 2 Typo-Karten pro Tag.** Harte Grenze.
 
 > Stand im Code: Die Pipeline erlaubt seit dem 09.08. nur EINE pro Tag, ist
-> also strenger als Tims Obergrenze. Das bleibt bewusst so — die Regel ist
+> also strenger als Tims Obergrenze. Das bleibt bewusst so - die Regel ist
 > eine Decke, kein Ziel. Wer sie auf 2 anhebt, braucht Tims Zustimmung.
 
 > Tims Vorgabe im Wortlaut: „Es soll aber nicht sein, dass wir danach nur noch
@@ -122,7 +122,7 @@ wird die nächste Meldung geprüft — der Vorrat ist da.
 
 **Die Typo-Karte ist ein Sonderfall, kein Auffangnetz.** Sie kommt nur zum
 Zug, wenn eine Meldung raus MUSS (Breaking) und kein taugliches Bild
-auffindbar ist. Erst wenn alle verbliebenen Kandidaten durchgefallen sind —
+auffindbar ist. Erst wenn alle verbliebenen Kandidaten durchgefallen sind -
 nicht schon beim ersten schlechten Bild.
 
 > Korrektur meines eigenen Entwurfs: Ich hatte die Typo-Karte als Auffangnetz
@@ -132,7 +132,7 @@ nicht schon beim ersten schlechten Bild.
 **Warnung statt stiller Flut.** Fällt die Annahmequote der Bilder unter rund
 30 %, ist nicht das Bildmaterial schlecht, sondern die Messlatte falsch
 gesetzt. Der Lauf muss das sichtbar melden, statt auf Typo-Karten auszuweichen.
-Rechenweg: 5 Plätze aus 18 Artikeln — unter etwa 28 % Annahme läuft der Tag
+Rechenweg: 5 Plätze aus 18 Artikeln - unter etwa 28 % Annahme läuft der Tag
 leer.
 
 ## 5. Reel oder Standbild
@@ -145,11 +145,11 @@ Reels bekommen mehr Reichweite, also gehört die zugkräftigste Meldung darauf.
 **Grossbuchstaben bleiben.** Laut, plakativ, als Daumennagel lesbar.
 
 **Der Textblock sitzt immer unten links.** Er wandert nie nach oben; liegt
-das Motiv im Weg, weicht der AUSSCHNITT aus — nicht der Text.
+das Motiv im Weg, weicht der AUSSCHNITT aus - nicht der Text.
 
 **Die Schriftgrösse darf nur in engen Grenzen schwanken.** Verkleinern bis
 etwa 90 % der Normalgrösse; reicht das nicht, wird die Schlagzeile neu
-angefordert statt weiter geschrumpft. (Heute schrumpft sie bis 38 px — das
+angefordert statt weiter geschrumpft. (Heute schrumpft sie bis 38 px - das
 ist deutlich zu viel Spielraum und muss angezogen werden.)
 
 **Die handschriftliche Notiz steht auf JEDEM Post.** Sie ist unsere Stimme.
@@ -157,7 +157,7 @@ Bei ernsten Themen ohne Pointe und ohne Ironie, aber sie fehlt nie.
 
 > Widerspruch zur heutigen Absicherung: Ich habe am 13.08. eingebaut, dass
 > eine untaugliche Notiz ersatzlos wegfällt, damit sie keinen Post kostet.
-> Nach dieser Regel muss stattdessen NEU ANGEFORDERT werden — und wenn auch
+> Nach dieser Regel muss stattdessen NEU ANGEFORDERT werden - und wenn auch
 > das scheitert, fällt der Post, nicht die Notiz.
 
 ## 7. Der Übergang vom Bild zum Navy
@@ -167,7 +167,7 @@ Bei ernsten Themen ohne Pointe und ohne Ironie, aber sie fehlt nie.
 **Unten läuft das Bild vollständig ins Navy.** Logo und Bildnachweis stehen
 auf reinem Grund.
 
-**Immer unser Navy (#0C0B1A)** — der Verlauf nimmt nie Farbe aus dem Bild
+**Immer unser Navy (#0C0B1A)** - der Verlauf nimmt nie Farbe aus dem Bild
 auf. Die Markenfarbe steht auf jedem Post an derselben Stelle.
 
 **Die automatische Verstärkung bleibt, aber schwächer:** zwei Stufen statt

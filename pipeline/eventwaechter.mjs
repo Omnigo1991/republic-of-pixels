@@ -7,13 +7,13 @@ import { fetchAllFeeds } from "./lib/rss.mjs";
 // EVENT-WÄCHTER (Tim, 12.08.2026).
 //
 // ANLASS: Geoff Keighley bestätigte am 11.08. den Termin der Game Awards
-// (10. Dezember). Zwei unserer Quellen meldeten es — bei uns stand trotzdem
+// (10. Dezember). Zwei unserer Quellen meldeten es - bei uns stand trotzdem
 // weiter "ERWARTET", weil events.json von Hand gepflegt wird. Tim: "Wir
 // müssen dies weitestgehend automatisieren."
 //
 // WAS DIESER WÄCHTER TUT UND WAS NICHT: Er ändert NICHTS an events.json. Er
 // meldet nur. Bewusst so, denn ein Datum aus einer Schlagzeile zu lesen ist
-// unzuverlässig — "Set for August" kann eine spielspezifische State of Play
+// unzuverlässig - "Set for August" kann eine spielspezifische State of Play
 // meinen statt Sonys grosse Show, und ein falsches Datum bei einem
 // Grossereignis wäre peinlicher als ein fehlender Eintrag. Ein Mensch
 // entscheidet, der Wächter sorgt nur dafür, dass niemand es übersieht.
@@ -26,7 +26,7 @@ import { fetchAllFeeds } from "./lib/rss.mjs";
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const EVENTS = join(ROOT, "src", "content", "events.json");
 
-// Wörter, die auf eine Terminbestätigung hindeuten — in beiden Sprachen,
+// Wörter, die auf eine Terminbestätigung hindeuten - in beiden Sprachen,
 // weil die meisten unserer Quellen englisch sind.
 const BESTAETIGT =
   /\b(confirm|confirmed|announce[sd]?|announcement|dated|set for|scheduled|takes place|returns on|bestätigt|angekündigt|Termin steht|findet statt)\b/i;
@@ -52,7 +52,7 @@ function begriffe(name) {
 function passt(titel, worte) {
   const t = titel.toLowerCase();
   const treffer = worte.filter((w) => t.includes(w)).length;
-  // Mindestens zwei Namensbestandteile — sonst schlägt "Direct" auf jede
+  // Mindestens zwei Namensbestandteile - sonst schlägt "Direct" auf jede
   // beliebige Meldung an.
   return worte.length === 1 ? treffer === 1 : treffer >= 2;
 }
@@ -60,7 +60,7 @@ function passt(titel, worte) {
 async function main() {
   const offen = eintraege().filter((e) => !e.dateStart);
   if (offen.length === 0) {
-    console.log("Event-Wächter: alle Termine haben ein konkretes Datum — nichts zu prüfen.");
+    console.log("Event-Wächter: alle Termine haben ein konkretes Datum - nichts zu prüfen.");
     return;
   }
 

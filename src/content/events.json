@@ -7,8 +7,8 @@
       "hero": true,
       "dateStart": "2026-08-26",
       "dateEnd": "2026-08-30",
-      "dateLabel": "26.–30. August",
-      "beschreibung": "Die grösste Spielemesse der Welt in der Koelnmesse — mit Opening Night Live am 25. August, 20:00 Uhr.",
+      "dateLabel": "26.-30. August",
+      "beschreibung": "Die grösste Spielemesse der Welt in der Koelnmesse - mit Opening Night Live am 25. August, 20:00 Uhr.",
       "thema": "gamescom"
     },
     {
@@ -17,15 +17,15 @@
       "dateStart": "2026-08-25",
       "dateEnd": "2026-08-25",
       "dateLabel": "25. August · 20:00 Uhr",
-      "beschreibung": "Geoff Keighleys Show zum gamescom-Auftakt — traditionell voller Weltpremieren."
+      "beschreibung": "Geoff Keighleys Show zum gamescom-Auftakt - traditionell voller Weltpremieren."
     },
     {
       "name": "Tokyo Game Show 2026",
       "status": "fixiert",
       "dateStart": "2026-09-17",
       "dateEnd": "2026-09-21",
-      "dateLabel": "17.–21. September",
-      "beschreibung": "Japans grösste Messe, zum 30. Jubiläum erstmals fünf Tage — Makuhari Messe, Chiba."
+      "dateLabel": "17.-21. September",
+      "beschreibung": "Japans grösste Messe, zum 30. Jubiläum erstmals fünf Tage - Makuhari Messe, Chiba."
     },
     {
       "name": "PlayStation State of Play",
@@ -33,7 +33,7 @@
       "dateStart": null,
       "dateEnd": "2026-09-30",
       "dateLabel": "September (erwartet)",
-      "beschreibung": "Sony zeigt üblicherweise im September die Herbst-Lineups — ein offizieller Termin steht aus."
+      "beschreibung": "Sony zeigt üblicherweise im September die Herbst-Lineups - ein offizieller Termin steht aus."
     },
     {
       "name": "Nintendo Direct",
@@ -41,7 +41,7 @@
       "dateStart": null,
       "dateEnd": "2026-09-30",
       "dateLabel": "September (Gerücht)",
-      "beschreibung": "Mehrere Insider rechnen mit einer grossen Direct zur Weihnachtsplanung — unbestätigt."
+      "beschreibung": "Mehrere Insider rechnen mit einer grossen Direct zur Weihnachtsplanung - unbestätigt."
     },
     {
       "name": "The Game Awards 2026",
@@ -49,7 +49,7 @@
       "dateStart": "2026-12-10",
       "dateEnd": "2026-12-10",
       "dateLabel": "10. Dezember",
-      "beschreibung": "Die Preisverleihung des Jahres mit zahlreichen Weltpremieren — Termin von Geoff Keighley bestätigt."
+      "beschreibung": "Die Preisverleihung des Jahres mit zahlreichen Weltpremieren - Termin von Geoff Keighley bestätigt."
     }
   ]
 }

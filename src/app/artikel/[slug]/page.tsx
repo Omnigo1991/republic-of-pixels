@@ -97,7 +97,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
       <article className="mx-auto max-w-article px-4 sm:px-6 pt-8 sm:pt-12">
         {/* Aufbau der Live-Seite (Tim, 19.08.2026): erst die Pillenreihe
             aus Rubrik und Plattformen, dann NUR der Spielbezug, dann die
-            Schlagzeile. Die Rubrik steht nicht mehr als Text im Kicker —
+            Schlagzeile. Die Rubrik steht nicht mehr als Text im Kicker -
             sie ist die erste Pille. */}
         {(() => {
           const { kicker, headline } = splitTitle(article.title, article.tags);
@@ -136,7 +136,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
 
         <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-3 border-y border-border-subtle py-4">
           {/* Autorenzeile klickbar (Leser-Audit 08.08.2026): führt zu
-              "Die Köpfe hinter der Republic" — Vertrauen + E-E-A-T. */}
+              "Die Köpfe hinter der Republic" - Vertrauen + E-E-A-T. */}
           <Link href="/ueber-uns" className="flex items-center gap-2.5 transition-opacity hover:opacity-80">
             <span className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-navy">
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -193,7 +193,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
         <SourcesBox sources={article.sources} />
 
         {/* Themen-Hubs (SEO-Baustein 08.08.2026): Tags mit eigener Hub-Seite
-            werden klickbar — gebündelte interne Verlinkung pro Spiel/Thema. */}
+            werden klickbar - gebündelte interne Verlinkung pro Spiel/Thema. */}
         {(() => {
           const themen = themenFuerArtikel(article);
           if (themen.length === 0) return null;

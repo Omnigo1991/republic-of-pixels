@@ -27,7 +27,7 @@
   "body": [
     {
       "type": "paragraph",
-      "text": "Die Hoffnung auf eine baldige Entspannung bei den Preisen für Arbeitsspeicher dürfte sich erledigt haben. Einem Bericht der taiwanischen Fachzeitung DigiTimes zufolge, der teilweise von TweakTown ins Englische übertragen wurde, haben die drei grössten Speicherhersteller der Welt – Samsung, Micron und SK Hynix – ihre Produktionskapazitäten nicht nur für 2026, sondern bereits für das gesamte Jahr 2027 verkauft. Berufen wird sich dabei auf ungenannte Branchen-Insider. Damit wäre der grossflächige Nachschub an neuen RAM-Chips faktisch bis 2028 verplant."
+      "text": "Die Hoffnung auf eine baldige Entspannung bei den Preisen für Arbeitsspeicher dürfte sich erledigt haben. Einem Bericht der taiwanischen Fachzeitung DigiTimes zufolge, der teilweise von TweakTown ins Englische übertragen wurde, haben die drei grössten Speicherhersteller der Welt - Samsung, Micron und SK Hynix - ihre Produktionskapazitäten nicht nur für 2026, sondern bereits für das gesamte Jahr 2027 verkauft. Berufen wird sich dabei auf ungenannte Branchen-Insider. Damit wäre der grossflächige Nachschub an neuen RAM-Chips faktisch bis 2028 verplant."
     },
     {
       "type": "heading",
@@ -35,7 +35,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Besonders betroffen sind laut dem Bericht DRAM- und HBM-Speicher. DRAM ist jene Speicherart, die in klassischen Arbeitsspeicher-Modulen, aktuellen Gaming-Grafikkarten und hochwertigen SSDs zum Einsatz kommt – also in weiten Teilen der PC-Hardware, die Spielerinnen und Spieler regelmässig kaufen. Bei NAND-Speicher, der Grundlage vieler SSDs, sei die Lage minimal entspannter, da hier noch Restkapazitäten für 2027 verfügbar seien. Allerdings sollen auch diese laut dem Bericht noch vor Ende des laufenden Monats ausverkauft sein, wodurch selbst DRAM-lose SSDs voraussichtlich für weitere zwei Jahre teuer bleiben dürften."
+      "text": "Besonders betroffen sind laut dem Bericht DRAM- und HBM-Speicher. DRAM ist jene Speicherart, die in klassischen Arbeitsspeicher-Modulen, aktuellen Gaming-Grafikkarten und hochwertigen SSDs zum Einsatz kommt - also in weiten Teilen der PC-Hardware, die Spielerinnen und Spieler regelmässig kaufen. Bei NAND-Speicher, der Grundlage vieler SSDs, sei die Lage minimal entspannter, da hier noch Restkapazitäten für 2027 verfügbar seien. Allerdings sollen auch diese laut dem Bericht noch vor Ende des laufenden Monats ausverkauft sein, wodurch selbst DRAM-lose SSDs voraussichtlich für weitere zwei Jahre teuer bleiben dürften."
     },
     {
       "type": "list",
@@ -56,7 +56,7 @@
     },
     {
       "type": "heading",
-      "text": "Chinesische Hersteller als Alternative – vorerst nur in kleinem Rahmen"
+      "text": "Chinesische Hersteller als Alternative - vorerst nur in kleinem Rahmen"
     },
     {
       "type": "paragraph",
@@ -68,7 +68,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Selbst wenn zusätzliche Fertigungskapazitäten – etwa aus China – in den kommenden Jahren hinzukommen, ist unklar, ob sie den Konsumentenmarkt tatsächlich entlasten. Die stark wachsende und hardwarehungrige KI-Industrie könnte zusätzliche Speicherchips ebenso leicht aufnehmen wie die bisherigen Bestände, ohne dass sich an der grundlegenden Knappheit für PC-Komponenten etwas ändert. Solange keine Anzeichen für ein Abklingen dieser Nachfrage bestehen, dürften RAM-, SSD- und Grafikkartenpreise auch über 2027 hinaus auf hohem Niveau bleiben."
+      "text": "Selbst wenn zusätzliche Fertigungskapazitäten - etwa aus China - in den kommenden Jahren hinzukommen, ist unklar, ob sie den Konsumentenmarkt tatsächlich entlasten. Die stark wachsende und hardwarehungrige KI-Industrie könnte zusätzliche Speicherchips ebenso leicht aufnehmen wie die bisherigen Bestände, ohne dass sich an der grundlegenden Knappheit für PC-Komponenten etwas ändert. Solange keine Anzeichen für ein Abklingen dieser Nachfrage bestehen, dürften RAM-, SSD- und Grafikkartenpreise auch über 2027 hinaus auf hohem Niveau bleiben."
     }
   ],
   "isLeakOrRumor": true,

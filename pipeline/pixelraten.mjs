@@ -1,8 +1,8 @@
-// Pixel-Raten — das tägliche Rätsel der Republic (Tim-Freigabe 09.08.2026).
+// Pixel-Raten - das tägliche Rätsel der Republic (Tim-Freigabe 09.08.2026).
 // Wählt jede Nacht ein Spiel aus dem kuratierten Fundus, holt das offizielle
 // Artwork über die bestehende Bild-Strecke (Steam → IGDB) und rechnet es in
 // FÜNF Schärfe-Stufen herunter (Mosaik: winzig rechnen, grob hochskalieren).
-// Ergebnis: src/content/pixelraten.json + public/images/pixelraten/*.jpg —
+// Ergebnis: src/content/pixelraten.json + public/images/pixelraten/*.jpg -
 // beides wird committet, die Komponente auf der Startseite liest es statisch.
 // Läuft als Schritt der News-Pipeline; generiert genau EINMAL pro Tag
 // (Europe/Zurich), alte Bilder werden nach 3 Tagen aufgeräumt.
@@ -127,18 +127,18 @@ for (let versuch = 0; versuch < 5 && !spiel; versuch++) {
     spiel = kandidat;
     rohBild = tmp;
   } else {
-    console.log(`  ${kandidat.n}: kein Artwork — nächste Ziehung`);
+    console.log(`  ${kandidat.n}: kein Artwork - nächste Ziehung`);
     offen = offen.filter((s) => s !== kandidat);
   }
 }
 if (!spiel) {
-  console.error("Pixel-Raten: kein Kandidat mit Artwork gefunden — Rätsel bleibt das gestrige.");
+  console.error("Pixel-Raten: kein Kandidat mit Artwork gefunden - Rätsel bleibt das gestrige.");
   process.exit(0);
 }
 
 // Schärfe-Stufen als Mosaik: winzig herunterrechnen, grob hochskalieren.
 // Die LETZTE Stufe ist bewusst voll scharf (Fix 09.08.2026, Tims
-// Beobachtung): Sie erscheint erst im fünften und letzten Versuch — dort
+// Beobachtung): Sie erscheint erst im fünften und letzten Versuch - dort
 // gehört eine faire Chance hin. Der frühere Grund fürs Weichzeichnen
 // (Titel-Schriftzug auf Cover-Artworks) entfiel mit der Umstellung auf
 // Screenshots.
@@ -146,7 +146,7 @@ mkdirSync(BILDER_DIR, { recursive: true });
 const datum = zuerichTag();
 // SCHWIERIGKEIT GELOCKERT (Tim, 12.08.2026): "Es ist zu schwer, lockere es
 // ein wenig auf. Es soll nach wie vor nicht einfach sein, aber auch nicht so
-// schwer." Vorher [14, 22, 34, 54] — die erste Stufe zeigte das Bild in
+// schwer." Vorher [14, 22, 34, 54] - die erste Stufe zeigte das Bild in
 // 14 Pixel Breite, was praktisch nur Farbflächen übrig liess und den ersten
 // Versuch zum Raten machte. Jetzt beginnt es bei 24 Pixeln: Umrisse und
 // grobe Formen sind erkennbar, Details noch nicht. Die Abstände zwischen den

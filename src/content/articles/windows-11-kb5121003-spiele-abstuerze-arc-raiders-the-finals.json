@@ -1,10 +1,10 @@
 {
   "slug": "windows-11-kb5121003-spiele-abstuerze-arc-raiders-the-finals",
-  "title": "Windows-11-Update crasht Spiele — Microsoft sucht noch die Ursache",
+  "title": "Windows-11-Update crasht Spiele - Microsoft sucht noch die Ursache",
   "subtitle": "KB5121003 lässt unter anderem ARC Raiders, The Finals und Marvel Tōkon einfrieren, einen Fix gibt es bislang nicht",
-  "excerpt": "Microsoft bestätigt Abstürze nach dem August-Patchday: Spiele frieren ein, PCs starten ohne Warnung neu. Es gibt einen Notausgang — der reisst dafür Sicherheitslücken wieder auf.",
+  "excerpt": "Microsoft bestätigt Abstürze nach dem August-Patchday: Spiele frieren ein, PCs starten ohne Warnung neu. Es gibt einen Notausgang - der reisst dafür Sicherheitslücken wieder auf.",
   "seoTitle": "Windows 11: KB5121003 lässt Spiele und PCs abstürzen",
-  "metaDescription": "Microsoft bestätigt Abstürze nach dem Windows-11-Update KB5121003: Spiele frieren ein, PCs starten neu. Betroffen sind 24H2 und 25H2 — ein Fix fehlt.",
+  "metaDescription": "Microsoft bestätigt Abstürze nach dem Windows-11-Update KB5121003: Spiele frieren ein, PCs starten neu. Betroffen sind 24H2 und 25H2 - ein Fix fehlt.",
   "category": "news",
   "platforms": [
     "pc"
@@ -22,11 +22,11 @@
     "Microsoft untersucht noch, ob das Problem überhaupt vom Unternehmen verursacht wurde, und bittet um Feedback über den Feedback Hub.",
     "Die Deinstallation des Updates hilft laut Nutzerberichten, öffnet aber bereits aktiv ausgenutzte Sicherheitslücken erneut."
   ],
-  "whyItMatters": "Wer am PC spielt, steht hier vor einer unangenehmen Wahl: stabile Spielesitzungen oder ein vollständig gepatchtes System. Weil Microsoft die Ursache noch nicht kennt und keinen Fix liefert, bleibt das Risiko vorerst bei der Spielerschaft — und betrifft mit ARC Raiders und The Finals ausgerechnet Titel mit grosser Online-Basis.",
+  "whyItMatters": "Wer am PC spielt, steht hier vor einer unangenehmen Wahl: stabile Spielesitzungen oder ein vollständig gepatchtes System. Weil Microsoft die Ursache noch nicht kennt und keinen Fix liefert, bleibt das Risiko vorerst bei der Spielerschaft - und betrifft mit ARC Raiders und The Finals ausgerechnet Titel mit grosser Online-Basis.",
   "body": [
     {
       "type": "paragraph",
-      "text": "Das August-Update für Windows 11 sorgt bei Spielerinnen und Spielern für Frust. Microsoft bestätigt im eigenen Release-Health-Dashboard, dass es nach der Installation von KB5121003 vermehrt Beschwerden gab: Einzelne Spiele frieren mitten in der Sitzung ein, schliessen sich unerwartet oder reissen gleich den kompletten Rechner mit. Einen Fix gibt es bislang nicht — und selbst die Frage, wer das Problem verursacht hat, ist offiziell noch nicht geklärt."
+      "text": "Das August-Update für Windows 11 sorgt bei Spielerinnen und Spielern für Frust. Microsoft bestätigt im eigenen Release-Health-Dashboard, dass es nach der Installation von KB5121003 vermehrt Beschwerden gab: Einzelne Spiele frieren mitten in der Sitzung ein, schliessen sich unerwartet oder reissen gleich den kompletten Rechner mit. Einen Fix gibt es bislang nicht - und selbst die Frage, wer das Problem verursacht hat, ist offiziell noch nicht geklärt."
     },
     {
       "type": "embed",
@@ -81,7 +81,7 @@
     },
     {
       "type": "heading",
-      "text": "Microsoft untersucht — und weiss noch nicht, wer schuld ist"
+      "text": "Microsoft untersucht - und weiss noch nicht, wer schuld ist"
     },
     {
       "type": "paragraph",
@@ -94,7 +94,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Diese Formulierung lässt bewusst offen, ob der Auslöser im Update selbst steckt oder im Zusammenspiel mit Software von Drittanbietern. Für Betroffene ändert das kurzfristig wenig — ein Patch ist erst zu erwarten, wenn die Ursache feststeht."
+      "text": "Diese Formulierung lässt bewusst offen, ob der Auslöser im Update selbst steckt oder im Zusammenspiel mit Software von Drittanbietern. Für Betroffene ändert das kurzfristig wenig - ein Patch ist erst zu erwarten, wenn die Ursache feststeht."
     },
     {
       "type": "heading",
@@ -118,7 +118,7 @@
     }
   ],
   "poll": {
-    "question": "Sicherheitspatch oder stabile Spielesitzung — wie würdest du entscheiden?",
+    "question": "Sicherheitspatch oder stabile Spielesitzung - wie würdest du entscheiden?",
     "options": [
       "Update bleibt drauf, ich warte auf den Fix",
       "Runter damit, ich will spielen",
@@ -143,7 +143,7 @@
   ],
   "image": {
     "src": "/images/articles/windows-11-kb5121003-spiele-abstuerze-arc-raiders-the-finals.webp",
-    "alt": "Windows-11-Update crasht Spiele — Microsoft sucht noch die Ursache",
+    "alt": "Windows-11-Update crasht Spiele - Microsoft sucht noch die Ursache",
     "credit": "Bild: Golem.de Games",
     "sourceUrl": "https://www.golem.de/news/microsoft-windows-11-update-laesst-spiele-und-pcs-abstuerzen-2608-212113.html",
     "sourceWidth": 1200,

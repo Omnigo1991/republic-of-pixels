@@ -1,5 +1,5 @@
 // Gemeinsame Teilen-Grundlage für den schwebenden Knopf (TeilenKnopf) und
-// die Knopfreihe am Artikelende (ShareButtons) — Tim-Entscheid 09.08.2026:
+// die Knopfreihe am Artikelende (ShareButtons) - Tim-Entscheid 09.08.2026:
 // EIN System mit zwei Eingängen statt zweier Lösungen.
 //
 // Icon-Grössen sind optisch ausgeglichen, nicht nominell gleich: Die vier
@@ -21,7 +21,7 @@ export function kanaeleFuer(url: string, titel: string): Kanal[] {
   const t = encodeURIComponent(titel);
   return [
     { key: "whatsapp", label: "WhatsApp", href: `https://wa.me/?text=${encodeURIComponent(`${titel} ${url}`)}` },
-    // Instagram bietet keinen Teilen-Link im Web — wir kopieren die Adresse
+    // Instagram bietet keinen Teilen-Link im Web - wir kopieren die Adresse
     // und öffnen Instagram, damit sie sich direkt einfügen lässt.
     { key: "instagram", label: "Instagram", href: "https://www.instagram.com/", kopieren: true },
     { key: "x", label: "X", href: `https://twitter.com/intent/tweet?text=${t}&url=${u}` },
@@ -79,7 +79,7 @@ export function KanalIcon({ kanal, basis = 24 }: { kanal: string; basis?: number
 }
 
 // Papierflieger für den schwebenden Knopf. Die Verschiebung rückt den
-// MASSENSCHWERPUNKT in die Kreismitte — der Umriss-Kasten allein täuscht,
+// MASSENSCHWERPUNKT in die Kreismitte - der Umriss-Kasten allein täuscht,
 // weil die Fläche unten links liegt und oben rechts nur die Spitze
 // (gemessen 09.08.2026: 29,5 px Versatz bei 400 px, danach 0,04 px).
 export function FliegerIcon({ groesse = 22 }: { groesse?: number }) {
@@ -111,7 +111,7 @@ export async function nativTeilen(url: string, titel: string): Promise<boolean> 
     await navigator.share({ title: titel, url });
     return true;
   } catch (err) {
-    // Abbruch durch die Nutzerin ist kein Fehler — und kein Grund, danach
+    // Abbruch durch die Nutzerin ist kein Fehler - und kein Grund, danach
     // noch unser Panel aufzuklappen.
     if ((err as Error)?.name === "AbortError") return true;
     return false;

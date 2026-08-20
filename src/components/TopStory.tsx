@@ -4,7 +4,7 @@ import { ArticleMedia } from "./ArticleMedia";
 import { splitTitle } from "@/lib/format";
 
 // HELD MIT POLYGON-SCRIM (15.08.2026, aus Polygons echtem CSS gemessen):
-// Der Verlauf sitzt NUR auf der Textbox — untere Haelfte flach 80%
+// Der Verlauf sitzt NUR auf der Textbox - untere Haelfte flach 80%
 // Deckkraft, obere Haelfte laeuft auf null aus. Das Artwork selbst
 // bleibt komplett unberuehrt.
 export function TopStory({ article }: { article: Article }) {

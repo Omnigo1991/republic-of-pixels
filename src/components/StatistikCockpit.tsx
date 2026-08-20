@@ -7,7 +7,7 @@ import { Wachstumskurve, type Tageswert } from "./Wachstumskurve";
 import { MASTER_NICKNAME } from "@/lib/ranking";
 
 // Redaktions-Cockpit: eigene, cookielose Besucherstatistik aus page_views
-// (schema-v4.sql). Zugriff ausschliesslich für den Master-Account — die
+// (schema-v4.sql). Zugriff ausschliesslich für den Master-Account - die
 // Datenbank erzwingt das zusätzlich per Row-Level-Security.
 
 interface Kennzahlen {
@@ -65,13 +65,13 @@ export function StatistikCockpit() {
   const supabase = useMemo(() => getSupabase(), []);
 
   // Wer das Cockpit öffnet, ist Redaktion: Gerät dauerhaft als intern
-  // markieren — der VisitTracker zählt es ab jetzt nicht mehr mit
+  // markieren - der VisitTracker zählt es ab jetzt nicht mehr mit
   // (eigene Aufrufe verfälschen sonst die Statistik; Tim, 07.08.2026).
   useEffect(() => {
     try {
       localStorage.setItem("rop_intern", "1");
     } catch {
-      // Ohne localStorage kein Ausschluss möglich — unkritisch.
+      // Ohne localStorage kein Ausschluss möglich - unkritisch.
     }
   }, []);
 
@@ -116,7 +116,7 @@ export function StatistikCockpit() {
     // EINDEUTIGE BESUCHER ZAEHLT DIE DATENBANK (Tim, 13.08.2026).
     // Vorher holten wir die Roh-Zeilen und zaehlten sie hier im Browser.
     // Supabase liefert pro Abfrage aber nur begrenzt viele Zeilen aus, und
-    // ohne Sortierung die AELTESTEN — die Gesamt-Abfrage sah damit nur die
+    // ohne Sortierung die AELTESTEN - die Gesamt-Abfrage sah damit nur die
     // ersten Tage nach dem Start und meldete WENIGER Besucher als die
     // 7-Tage-Abfrage. Das ist rechnerisch unmoeglich und war der Beweis,
     // dass die Abfrage nicht alle Zeilen sah. Siehe supabase/schema-v9.sql.
@@ -152,7 +152,7 @@ export function StatistikCockpit() {
 
       // Herkunft: pro Besucher zählt der erste Aufruf im 7-Tage-Fenster.
       // AUSWAHL UND GRUPPIERUNG machen beide die Datenbank (schema-v10).
-      // Vorher kam eine Zeile pro BESUCHER in den Browser — das lief in
+      // Vorher kam eine Zeile pro BESUCHER in den Browser - das lief in
       // dieselbe Zeilengrenze wie der Fehler vom 13.08., nur an anderer
       // Stelle: Die Herkunfts-Summe blieb dann hinter der Kachel
       // "Besucher 7 Tage" zurueck. Jetzt kommen nur noch so viele Zeilen,
@@ -175,10 +175,10 @@ export function StatistikCockpit() {
         .map(([quelle, besucher]) => ({ quelle, besucher }));
 
       // WACHSTUMSKURVE (Tim, 11.08.2026): Tagesverlauf der letzten 30 Tage.
-      // Kein neues Tracking noetig — die Zeitstempel lagen schon vor, sie
+      // Kein neues Tracking noetig - die Zeitstempel lagen schon vor, sie
       // wurden nur nie nach Tagen gruppiert.
       // Auch hier zählt die Datenbank: Die alte Fassung holte 30 Tage
-      // Roh-Zeilen und gruppierte sie hier — bei begrenzter Zeilenmenge
+      // Roh-Zeilen und gruppierte sie hier - bei begrenzter Zeilenmenge
       // füllten sich nur die ältesten Tage, das rechte Ende der Kurve blieb
       // leer. Die Gruppierung nach Zürcher Kalendertag macht jetzt Postgres.
       const { data: verlaufRows, error: verlaufError } = await supabase.rpc(
@@ -209,13 +209,13 @@ export function StatistikCockpit() {
 
       // ZAHLEN RECHNEN SICH SELBST NACH (Tim, 14.08.2026).
       //
-      // Am 13.08. stand "Besucher 7 Tage" hoeher als "Besucher gesamt" —
+      // Am 13.08. stand "Besucher 7 Tage" hoeher als "Besucher gesamt" -
       // rechnerisch unmoeglich. Aufgefallen ist es nur, weil Tim hingesehen
       // hat. Eine Zahl, die niemand nachrechnet, ist eine Zahl, der man
       // nicht trauen kann.
       //
       // Diese Regeln MUESSEN immer gelten. Wird eine verletzt, stimmt die
-      // Erhebung nicht — dann steht das sichtbar im Cockpit, statt dass wir
+      // Erhebung nicht - dann steht das sichtbar im Cockpit, statt dass wir
       // auf das naechste Bauchgefuehl warten.
       const herkunftSumme = herkunft.reduce((n, h) => n + h.besucher, 0);
       const regeln: [boolean, string][] = [
@@ -257,12 +257,12 @@ export function StatistikCockpit() {
     } catch {
       // ALTE ZAHLEN NICHT ALS AKTUELL AUSGEBEN (Fund 14.08.2026): Bisher
       // wurde hier nur eine Meldung gesetzt und die zuletzt geladenen Zahlen
-      // blieben unveraendert stehen — inklusive der Zeitangabe "Stand".
+      // blieben unveraendert stehen - inklusive der Zeitangabe "Stand".
       // Faellt eine Aktualisierung aus, sieht das Cockpit dann aus wie
       // immer, nur bewegt sich nichts mehr. Genau so entsteht der Eindruck,
       // die Zahlen wuerden "manchmal stehenbleiben".
       setFehler(
-        "Zahlen konnten nicht aktualisiert werden. Angezeigt wird der letzte erfolgreiche Stand — nicht der aktuelle."
+        "Zahlen konnten nicht aktualisiert werden. Angezeigt wird der letzte erfolgreiche Stand - nicht der aktuelle."
       );
     }
   }, [supabase]);
@@ -315,7 +315,7 @@ export function StatistikCockpit() {
       {zahlen && zahlen.widersprueche.length > 0 && (
         <div className="mt-4 rounded-2xl border border-warning/60 bg-warning/10 p-5">
           <p className="text-sm font-semibold text-text-primary">
-            Diese Zahlen widersprechen sich — bitte nicht verwenden:
+            Diese Zahlen widersprechen sich - bitte nicht verwenden:
           </p>
           <ul className="mt-2 list-disc pl-5 text-sm text-text-secondary">
             {zahlen.widersprueche.map((w) => (
@@ -377,7 +377,7 @@ export function StatistikCockpit() {
             ))}
           </div>
 
-          {/* Wachstum — die Kurve steht bewusst direkt unter den Kennzahlen:
+          {/* Wachstum - die Kurve steht bewusst direkt unter den Kennzahlen:
               Sie ist das Erste, was in einem Werbegespräch gezeigt wird. */}
           <div className="mt-10 mb-4 flex items-baseline justify-between">
             <h2 className="text-xl font-semibold tracking-tight text-text-primary">Wachstum</h2>

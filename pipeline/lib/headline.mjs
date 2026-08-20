@@ -1,7 +1,7 @@
 // Prüfung der Schlagzeilen für Instagram-Grafiken.
 //
 // WARUM ES DIESE DATEI GIBT (Tim, 11.08.2026): Die Regeln standen bisher nur
-// im Prompt — "2–3 Zeilen, gesamthaft maximal 9 Wörter, keine Zeile deutlich
+// im Prompt - "2-3 Zeilen, gesamthaft maximal 9 Wörter, keine Zeile deutlich
 // kürzer als ihre Nachbarn". Geprüft wurde im Code lediglich, ob überhaupt
 // eine Zeile vorhanden ist. Am 11.08. verletzten DREI von vier Posts die
 // Regel, und niemand fing es auf: vier Zeilen statt drei, das Wort "AN"
@@ -12,7 +12,7 @@
 // verworfen und neu angefordert (die Auswahl hat dafür drei Runden).
 
 // MARKER-LAYOUT (13.08.2026): Der Spielname steht jetzt in der Kopfzeile,
-// die Schlagzeile setzt ihn nur fort. Sie braucht damit weniger Platz —
+// die Schlagzeile setzt ihn nur fort. Sie braucht damit weniger Platz -
 // genau 2 Zeilen, höchstens 8 Wörter. Drei Zeilen plus Kopfzeile plus Notiz
 // ergäben einen Textblock, der das halbe Bild verdeckt.
 export const MAX_ZEILEN = 2;
@@ -34,7 +34,7 @@ function woerter(zeile) {
     .filter(Boolean);
 }
 
-// Rückgabe: { ok, fehler: [] } — fehler ist leer, wenn alles stimmt.
+// Rückgabe: { ok, fehler: [] } - fehler ist leer, wenn alles stimmt.
 export function pruefeHeadline(headlineLines) {
   const fehler = [];
   if (!Array.isArray(headlineLines) || headlineLines.length === 0) {
@@ -50,7 +50,7 @@ export function pruefeHeadline(headlineLines) {
 
   // GENAU EINE MARKIERUNG (13.08.2026): Das cyane Segment wird jetzt als
   // Markierungs-Kasten gesetzt. Zwei Kästen in einer Schlagzeile heben sich
-  // gegenseitig auf — markiert ist dann nichts mehr. Keiner heisst: die
+  // gegenseitig auf - markiert ist dann nichts mehr. Keiner heisst: die
   // Karte hat keinen Blickfang.
   const cyanZahl = headlineLines.flat().filter((s) => s?.cyan).length;
   if (cyanZahl !== 1) {
@@ -67,7 +67,7 @@ export function pruefeHeadline(headlineLines) {
   }
 
   // Waisen-Zeile: ein KURZES einzelnes Wort neben längeren Zeilen wirkt wie
-  // ein Versehen — genau das passierte mit "AN" im Kamiya-Post. Ein LANGES
+  // ein Versehen - genau das passierte mit "AN" im Kamiya-Post. Ein LANGES
   // Einzelwort ist dagegen ein bewusster Schlag ("MASSENENTLASSUNGEN") und
   // bleibt erlaubt; die erste Fassung dieser Regel verbot beides und hätte
   // gute Schlagzeilen mitgerissen.
@@ -78,7 +78,7 @@ export function pruefeHeadline(headlineLines) {
   }
 
   // Zwei zusammengeklebte Schlagzeilen: Der Kamiya-Post trug "Kamiya deutet
-  // Comeback an" UND "Capcom schweigt" — zwei Aussagen, die um Aufmerksamkeit
+  // Comeback an" UND "Capcom schweigt" - zwei Aussagen, die um Aufmerksamkeit
   // konkurrieren. Ein Satzzeichen mitten in der Schlagzeile ist das Signal.
   const ganzerText = proZeile.flat().join(" ");
   if (/[.;]|,\s*\S+\s+\S+\s+\S+/.test(ganzerText)) {
@@ -87,7 +87,7 @@ export function pruefeHeadline(headlineLines) {
 
   // UMLAUTE AUSSCHREIBEN IST VERBOTEN (Tim, 12.08.2026): Beim von Hand
   // gebauten Zelda-Reel stand "ZURUECK" statt "ZURÜCK". Die Pipeline selbst
-  // schreibt Umlaute korrekt — der Fehler entstand, weil ich die Schlagzeile
+  // schreibt Umlaute korrekt - der Fehler entstand, weil ich die Schlagzeile
   // manuell getippt und dabei umschrieben habe. Geprüft wird gegen eine
   // kurze Liste von Wörtern, die es in der ue/oe/ae-Schreibweise im
   // Deutschen NICHT gibt; damit sind Fehlalarme bei echten Wörtern wie
@@ -98,11 +98,11 @@ export function pruefeHeadline(headlineLines) {
   }
 
   // CYAN ENDET NICHT AUF EINEM HILFSWORT (Tim, 12.08.2026): Beim
-  // Crimson-Desert-Post war "CRIMSON DESERT WIRD" komplett cyan — das "wird"
+  // Crimson-Desert-Post war "CRIMSON DESERT WIRD" komplett cyan - das "wird"
   // gehört aber nicht zum Spielnamen und soll weiss sein. Cyan hebt den
   // Spielnamen und die Pointe hervor, nicht ein angehängtes Hilfsverb oder
   // einen Artikel. Bewusst nur das ENDE geprüft und nur mit Hilfswörtern,
-  // die nie Teil eines Titels sind — Partikeln wie "an" (in "deutet Comeback
+  // die nie Teil eines Titels sind - Partikeln wie "an" (in "deutet Comeback
   // an") bleiben erlaubt.
   const HILFSWORT =
     /^(wird|wurde|werden|ist|sind|war|waren|hat|hatte|haben|kann|kann|soll|sollen|muss|müssen|will|wollen|der|die|das|den|dem|des|ein|eine|einen|einem|und|oder|mit|von|vom|für|im|in|auf|zu|zum|zur|als|wie|bei|nach)$/i;
@@ -126,7 +126,7 @@ export function pruefeHeadline(headlineLines) {
   return { ok: fehler.length === 0, fehler };
 }
 
-// KOPFZEILE UND NOTIZ (Tim, 13.08.2026) — die zwei neuen Textebenen des
+// KOPFZEILE UND NOTIZ (Tim, 13.08.2026) - die zwei neuen Textebenen des
 // Marker-Layouts. Beide werden hier geprüft und nicht nur im Prompt
 // beschrieben; das ist die Lehre vom 11.08., als drei von vier Posts eine
 // Regel verletzten, die nur im Prompt stand.
@@ -161,7 +161,7 @@ export function pruefeNotiz(notiz, headlineLines = [], kicker = "") {
   }
 
   // KEINE WIEDERHOLUNG (der Kern der Regel): Eine Notiz, die nur die
-  // Schlagzeile nachspricht, ist Füllsel — genau das, was Tim an meinem
+  // Schlagzeile nachspricht, ist Füllsel - genau das, was Tim an meinem
   // ersten Entwurf nicht verstanden hat. Geprüft über Wort-Überlappung:
   // Teilen sich Notiz und Schlagzeile die Mehrzahl ihrer Inhaltswörter,
   // sagt die Notiz nichts Neues.

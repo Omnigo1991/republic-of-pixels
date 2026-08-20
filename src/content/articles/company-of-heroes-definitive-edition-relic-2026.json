@@ -47,7 +47,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Laut Christie war die Umstellung von der ursprünglich 32-Bit-basierten Essence Engine auf eine 64-Bit-Architektur der aufwendigste Teil des gesamten Projekts. Fast zwanzig Jahre gewachsener Code brachte Speicherlimits, veraltete Pointer-Grössen und Abhängigkeiten mit sich, mit denen moderne Hardware nichts mehr anfangen kann. Eine zweite Herausforderung war die Kompatibilität mit Community-Mods, die über zwei Jahrzehnte auf der alten Architektur entstanden sind. Relic arbeitete deshalb bereits vor dem Release eng mit Moddern zusammen, um Problemstellen frühzeitig zu identifizieren – ein Vorgehen, das sich laut Studio bereits bei Dawn of War: Definitive Edition bewährt habe. Wer eigene Inhalte weiterverwenden will, muss sie dennoch selbst für 64-Bit anpassen."
+      "text": "Laut Christie war die Umstellung von der ursprünglich 32-Bit-basierten Essence Engine auf eine 64-Bit-Architektur der aufwendigste Teil des gesamten Projekts. Fast zwanzig Jahre gewachsener Code brachte Speicherlimits, veraltete Pointer-Grössen und Abhängigkeiten mit sich, mit denen moderne Hardware nichts mehr anfangen kann. Eine zweite Herausforderung war die Kompatibilität mit Community-Mods, die über zwei Jahrzehnte auf der alten Architektur entstanden sind. Relic arbeitete deshalb bereits vor dem Release eng mit Moddern zusammen, um Problemstellen frühzeitig zu identifizieren - ein Vorgehen, das sich laut Studio bereits bei Dawn of War: Definitive Edition bewährt habe. Wer eigene Inhalte weiterverwenden will, muss sie dennoch selbst für 64-Bit anpassen."
     },
     {
       "type": "heading",
@@ -77,7 +77,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Art Lead Roland Longpre betont, dass keine der neuen Rendering-Techniken dem Original etwas wegnehme – man habe nichts streichen müssen, um Platz für die Verbesserungen zu schaffen. Die höhere Sichtweite gelte zudem nur ausserhalb aktiver Gefechte und habe keinen Einfluss auf Missionen oder Matches. Auch Ultrawide-Support verändere weder Territorium-Mechaniken noch Einheitenverhalten oder Kampfsystem, das kompetitive Balancing bleibe vollständig unangetastet."
+      "text": "Art Lead Roland Longpre betont, dass keine der neuen Rendering-Techniken dem Original etwas wegnehme - man habe nichts streichen müssen, um Platz für die Verbesserungen zu schaffen. Die höhere Sichtweite gelte zudem nur ausserhalb aktiver Gefechte und habe keinen Einfluss auf Missionen oder Matches. Auch Ultrawide-Support verändere weder Territorium-Mechaniken noch Einheitenverhalten oder Kampfsystem, das kompetitive Balancing bleibe vollständig unangetastet."
     },
     {
       "type": "quote",

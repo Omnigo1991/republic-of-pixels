@@ -7,7 +7,7 @@ import { PLATFORM_NAV } from "@/lib/articles";
 import { PlatformIcon } from "./PlatformIcons";
 
 // DER CYAN-VORHANG (Tim, 15.08.2026 abends): Das Menü ist eine
-// Markenbühne — ein voller Cyan-Vorhang, der von rechts hereingleitet
+// Markenbühne - ein voller Cyan-Vorhang, der von rechts hereingleitet
 // (Polygon-Geste, unsere Sprache). Suche zuoberst, dann die Rubriken in
 // der Display-Stimme, Plattformen als Icon-Zeile, Instagram und Kontakt
 // als Kreise. Eine Geste für alle Bildschirmgrössen: auf dem Handy
@@ -58,7 +58,7 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
       </button>
 
       {/* Portal nach document.body: Der Header nutzt backdrop-filter und wird
-          dadurch zum Containing Block für fixed-Elemente — ohne Portal würde
+          dadurch zum Containing Block für fixed-Elemente - ohne Portal würde
           das Overlay im Header gefangen (auf Mobile entdeckt, 04.08.2026). */}
       {open && mounted && createPortal(
         <div className="fixed inset-0 z-[60]">
@@ -68,7 +68,7 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
             onClick={() => setOpen(false)}
             className="absolute inset-0 bg-navy/40"
           />
-          <aside className="absolute inset-y-0 right-0 flex w-full flex-col overflow-hidden bg-accent px-7 pb-7 pt-5 shadow-[-30px_0_80px_-20px_rgba(12,11,26,0.45)] animate-vorhang sm:w-[430px]">
+          <aside className="absolute inset-y-0 right-0 flex w-full flex-col overflow-hidden bg-accent px-7 pb-[calc(1.75rem+env(safe-area-inset-bottom,0px))] pt-[calc(1.25rem+env(safe-area-inset-top,0px))] shadow-[-30px_0_80px_-20px_rgba(12,11,26,0.45)] animate-vorhang sm:w-[430px]">
             <button
               onClick={() => setOpen(false)}
               aria-label="Menü schliessen"

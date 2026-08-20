@@ -57,8 +57,8 @@ export function EinstellungenForm() {
       error
         ? error.code === "23505"
           ? "Dieser Nickname ist schon vergeben."
-          : "Ungültig: 3–24 Zeichen; Buchstaben, Zahlen, Punkt, Minus, Unterstrich."
-        : "Gespeichert — dein neuer Nickname ist aktiv."
+          : "Ungültig: 3-24 Zeichen; Buchstaben, Zahlen, Punkt, Minus, Unterstrich."
+        : "Gespeichert - dein neuer Nickname ist aktiv."
     );
   }
 
@@ -70,7 +70,7 @@ export function EinstellungenForm() {
       .update({ avatar_url: url })
       .eq("id", profil.id);
     if (error) {
-      setAvatarMeldung("Speichern fehlgeschlagen — bitte erneut versuchen.");
+      setAvatarMeldung("Speichern fehlgeschlagen - bitte erneut versuchen.");
       return;
     }
     setProfil({ ...profil, avatar_url: url });
@@ -92,7 +92,7 @@ export function EinstellungenForm() {
     });
     if (error) {
       setAvatarMeldung(
-        "Upload fehlgeschlagen — der Bilderspeicher ist noch nicht eingerichtet (schema-v3.sql) oder das Format wird nicht unterstützt."
+        "Upload fehlgeschlagen - der Bilderspeicher ist noch nicht eingerichtet (schema-v3.sql) oder das Format wird nicht unterstützt."
       );
       return;
     }
@@ -172,7 +172,7 @@ export function EinstellungenForm() {
       <div className="mt-6 rounded-2xl border border-border-subtle bg-surface-panel p-6">
         <h2 className="text-lg font-semibold text-text-primary">Profilbild</h2>
         <p className="mt-1 text-xs text-text-tertiary">
-          Wähle einen Pixel-Sprite — oder deine Initiale bzw. dein Login-Profilbild.
+          Wähle einen Pixel-Sprite - oder deine Initiale bzw. dein Login-Profilbild.
         </p>
         <div className="mt-4 flex flex-wrap items-center gap-3">
           {/* Initiale (kein Bild) */}
@@ -249,7 +249,7 @@ export function EinstellungenForm() {
           </>
         ) : (
           <p className="mt-1 text-sm text-text-secondary">
-            Du meldest dich über {session.user.app_metadata?.provider === "google" ? "Google" : "Discord"} an —
+            Du meldest dich über {session.user.app_metadata?.provider === "google" ? "Google" : "Discord"} an -
             dein Passwort verwaltest du dort.
           </p>
         )}

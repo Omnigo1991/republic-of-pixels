@@ -54,7 +54,7 @@ export function PopularSection({ articles }: { articles: Article[] }) {
           Beliebt bei Lesern
         </h2>
         {/* Absolut gesetzt, damit die hoeheren Pfeile die Zeilenhoehe
-            nicht vergroessern — sonst waere der Abstand zur Linie 15 px
+            nicht vergroessern - sonst waere der Abstand zur Linie 15 px
             statt der 12 px, die jede andere Sektion hat. */}
         <div className="absolute right-0 top-1/2 flex -translate-y-1/2 items-center gap-2">
           <SliderArrow direction="prev" onClick={() => scrollByCard(-1)} disabled={!canPrev} />
@@ -112,7 +112,7 @@ function PopularCard({ article, rank }: { article: Article; rank: number }) {
   return (
     <article className="w-[280px] shrink-0 snap-start sm:w-[320px]">
       {/* Kappecke wie bei allen Artikeln (Tim, 19.08.2026): eckig = Artikel,
-          rund = Werkzeug. Aussen der Verlauf als Rand, innen die Flaeche —
+          rund = Werkzeug. Aussen der Verlauf als Rand, innen die Flaeche -
           zwei Ebenen, weil ein Beschnitt sonst den Rand an der Schraege
           wegschneiden wuerde. */}
       <Link
@@ -120,7 +120,7 @@ function PopularCard({ article, rank }: { article: Article; rank: number }) {
         className="artikelkante group block h-full transition-all duration-300"
       >
         <span className="artikelkante__innen flex h-full flex-col overflow-hidden">
-        <div className="relative aspect-[16/9] overflow-hidden">
+        <div className="bildauslauf relative aspect-[16/9] overflow-hidden">
           <ArticleMedia
             article={article}
             sizes="320px"

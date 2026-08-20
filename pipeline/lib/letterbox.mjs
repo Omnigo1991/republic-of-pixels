@@ -2,18 +2,18 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import sharp from "sharp";
 
-// SCHWARZE BALKEN ENTFERNEN (Tim, 13.08.2026 — Halo-Post).
+// SCHWARZE BALKEN ENTFERNEN (Tim, 13.08.2026 - Halo-Post).
 //
 // WARUM: Der Halo-Post vom 13.08. hatte oben einen schwarzen Streifen. Das
 // Artikelbild war sauber; der Balken kam aus dem offiziellen Artwork. Manche
 // Steam- und IGDB-Grafiken stammen aus Zwischensequenzen und sind mit
-// Letterbox gespeichert. Wir schneiden auf 4:5 zu — die Balken bleiben drin.
+// Letterbox gespeichert. Wir schneiden auf 4:5 zu - die Balken bleiben drin.
 //
 // Die Bild-Abnahme fängt das nicht: Sie prüft unsere Schrift, unsere Ränder,
 // unser Logo. Ein schwarzer Streifen im Bild ist für sie formal einwandfrei.
 // Tim musste den Post von Hand archivieren.
 //
-// WICHTIG — die Falle bei dieser Prüfung: Ein Bild mit dunklem, aber ECHTEM
+// WICHTIG - die Falle bei dieser Prüfung: Ein Bild mit dunklem, aber ECHTEM
 // Inhalt am Rand (Nachthimmel, schwarze Rüstung, Schatten) darf NICHT
 // beschnitten werden. Darum zwei Bedingungen statt einer: Die Zeile muss im
 // Mittel fast schwarz sein UND ihr hellstes Pixel muss ebenfalls dunkel sein.
@@ -22,7 +22,7 @@ import sharp from "sharp";
 //
 // BEKANNTE GRENZE (ehrlich dokumentiert, nicht wegkalibriert): Ist ein Bild
 // an BEIDEN Seiten dunkel und hat dort schmale Seitenbalken, ist die Kante
-// nicht mehr messbar — dann wird nicht geschnitten. Beim Test blieb genau
+// nicht mehr messbar - dann wird nicht geschnitten. Beim Test blieb genau
 // ein Fall übrig: 80 px Seitenbalken auf 1600 px Breite an einem durchweg
 // dunklen Bild. Realistische Seitenbalken sind deutlich dicker (4:3 in 16:9
 // ergibt rund 200 px) und werden erkannt; oben/unten funktioniert in jeder
@@ -43,14 +43,14 @@ const MAX_ANTEIL = 0.34;
 // HARTE KANTE IST DAS ENTSCHEIDENDE MERKMAL (Korrektur 13.08.2026).
 //
 // Mein erster Versuch prüfte nur, ob die Randzeilen dunkel sind. Damit
-// wollte er 309 px vom MSI-Grafikkarten-Foto abschneiden — einem dunklen
+// wollte er 309 px vom MSI-Grafikkarten-Foto abschneiden - einem dunklen
 // Produktbild, das links schlicht ins Schwarz ausläuft. Es hätte echtes
 // Bild zerstört.
 //
 // Ein Letterbox-Balken endet ABRUPT: Auf die letzte schwarze Zeile folgt
 // sofort Bildinhalt. Dunkler Bildinhalt geht dagegen weich über. Darum wird
 // jetzt zusätzlich die Helligkeit direkt hinter dem vermeintlichen Balken
-// gemessen — ohne deutlichen Sprung wird nicht geschnitten.
+// gemessen - ohne deutlichen Sprung wird nicht geschnitten.
 //
 // 15 statt urspruenglich 22 (Nachmessung 13.08.2026): Bei einem dunklen
 // Testbild lag der Inhalt direkt hinter dem Balken bei 20.8 und fiel damit
@@ -89,7 +89,7 @@ function balkenZaehlen(data, breite, hoehe, richtung) {
   // Kantenstärke: Wie hell wird es direkt hinter dem Balken? Gemittelt über
   // fünf Zeilen, damit eine einzelne dunkle Zeile das Ergebnis nicht kippt.
   // Die Bewertung passiert bewusst NICHT hier, sondern erst nach der
-  // Paar-Prüfung — siehe unten.
+  // Paar-Prüfung - siehe unten.
   let summe = 0;
   let n = 0;
   for (let k = 0; k < 5 && zahl + k < laenge; k++) {
@@ -103,7 +103,7 @@ function balkenZaehlen(data, breite, hoehe, richtung) {
  * Schneidet schwarze Ränder ab, falls vorhanden.
  * @param {string} pfad Bilddatei
  * @returns {Promise<{pfad: string, beschnitten: boolean, balken: object}>}
- *          pfad ist die Originaldatei, wenn nichts zu tun war — sonst eine
+ *          pfad ist die Originaldatei, wenn nichts zu tun war - sonst eine
  *          neue Datei im temporären Verzeichnis.
  */
 export async function entferneBalken(pfad) {
@@ -125,7 +125,7 @@ export async function entferneBalken(pfad) {
     links: roh.links.zahl, rechts: roh.rechts.zahl,
   };
 
-  // Zu grosse "Balken" bedeuten ein durchgehend dunkles Bild — Finger weg.
+  // Zu grosse "Balken" bedeuten ein durchgehend dunkles Bild - Finger weg.
   if (
     balken.oben + balken.unten > hoehe * MAX_ANTEIL ||
     balken.links + balken.rechts > breite * MAX_ANTEIL
@@ -136,7 +136,7 @@ export async function entferneBalken(pfad) {
   // BALKEN TRETEN IMMER PAARWEISE AUF (Korrektur 13.08.2026).
   //
   // Letterbox entsteht, wenn ein Seitenverhältnis in ein anderes eingepasst
-  // wird — dabei bleibt oben UND unten (oder links UND rechts) gleich viel
+  // wird - dabei bleibt oben UND unten (oder links UND rechts) gleich viel
   // Rand. Eine einzelne dunkle Kante ist nie Letterbox, sondern Bildinhalt.
   //
   // Ohne diese Regel hätte die Prüfung 179 px vom AMD-Präsentationsbild
@@ -146,7 +146,7 @@ export async function entferneBalken(pfad) {
   // REIHENFOLGE (zweiter Fehler, gefunden beim Testen): Zuerst wurde die
   // Kante JE SEITE geprüft und erst danach das Paar gebildet. War der
   // Bildinhalt auf einer Seite dunkel, fiel diese Seite durch die
-  // Kantenprüfung — und die Paar-Regel verwarf daraufhin BEIDE Balken.
+  // Kantenprüfung - und die Paar-Regel verwarf daraufhin BEIDE Balken.
   // Genau das passierte bei seitlichen Balken. Jetzt wird erst das Paar
   // gebildet, und die Kante muss nur auf EINER der beiden Seiten deutlich
   // sein.

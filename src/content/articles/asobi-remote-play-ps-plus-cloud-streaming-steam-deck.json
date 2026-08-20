@@ -3,7 +3,7 @@
   "title": "PS-Plus-Cloud-Streaming ohne PS5: App bringt Sonys Katalog auf Steam Deck",
   "subtitle": "Die App Asobi: Remote Play startet einen öffentlichen Playtest und erlaubt Cloud-Streaming über PS Plus Premium ganz ohne eigene Konsole",
   "excerpt": "Mit Asobi: Remote Play lässt sich der PS-Plus-Premium-Cloud-Katalog erstmals ohne PS5 auf Steam Deck und Steam Machine streamen. Der Playtest läuft, alle Premium-Funktionen sind vorübergehend kostenlos freigeschaltet.",
-  "seoTitle": "Asobi: Remote Play – PS-Plus-Streaming ohne PS5 auf Steam Deck",
+  "seoTitle": "Asobi: Remote Play - PS-Plus-Streaming ohne PS5 auf Steam Deck",
   "metaDescription": "Asobi: Remote Play startet Playtest: PS-Plus-Premium-Cloud-Streaming ohne PS5 auf Steam Deck und Steam Machine, mit 60 fps, HDR und 4K-Upscaling.",
   "category": "news",
   "platforms": [
@@ -19,7 +19,7 @@
   ],
   "tldr": [
     "Die App Asobi: Remote Play befindet sich im öffentlichen Playtest für Steam Deck, Steam Machine und andere SteamOS-/Linux-Geräte",
-    "Neu ist Cloud-Streaming aus dem PS-Plus-Premium-Katalog ohne eigene PS5 – Streaming von einer besessenen Konsole funktionierte bereits vorher",
+    "Neu ist Cloud-Streaming aus dem PS-Plus-Premium-Katalog ohne eigene PS5 - Streaming von einer besessenen Konsole funktionierte bereits vorher",
     "Während des Playtests sind alle Premium-Funktionen wie 60 fps, HDR, Controller-Haptik und 4K-Upscaling kostenlos freigeschaltet",
     "Nach dem Playtest greift für die kostenlose Version wieder ein Limit von 1080p und 30 fps, Preise für die Vollversion stehen noch nicht fest"
   ],
@@ -53,11 +53,11 @@
     },
     {
       "type": "heading",
-      "text": "Was neu ist – und was nicht"
+      "text": "Was neu ist - und was nicht"
     },
     {
       "type": "paragraph",
-      "text": "Das Streamen eigener PS4- oder PS5-Spiele über das Heimnetzwerk auf ein Steam Deck ist keine Neuheit. Asobi und vergleichbare Apps bieten diese Funktion bereits länger an, noch bevor Sony mit dem PS Portal eine eigene Lösung präsentierte. Diese ältere Funktion bleibt unverändert bestehen und funktioniert unabhängig von einem Abonnement – vorausgesetzt, man besitzt tatsächlich eine eigene Konsole. Neu ist ausschliesslich der Zugriff auf den PS-Plus-Premium-Cloud-Katalog ohne jegliche PS5-Hardware, wofür ein PSN-Konto mit aktivem Premium-Abonnement erforderlich ist."
+      "text": "Das Streamen eigener PS4- oder PS5-Spiele über das Heimnetzwerk auf ein Steam Deck ist keine Neuheit. Asobi und vergleichbare Apps bieten diese Funktion bereits länger an, noch bevor Sony mit dem PS Portal eine eigene Lösung präsentierte. Diese ältere Funktion bleibt unverändert bestehen und funktioniert unabhängig von einem Abonnement - vorausgesetzt, man besitzt tatsächlich eine eigene Konsole. Neu ist ausschliesslich der Zugriff auf den PS-Plus-Premium-Cloud-Katalog ohne jegliche PS5-Hardware, wofür ein PSN-Konto mit aktivem Premium-Abonnement erforderlich ist."
     },
     {
       "type": "heading",
@@ -78,7 +78,7 @@
         "60 fps und HDR-Darstellung während des Playtests kostenlos verfügbar",
         "Controller-Haptik und 4K-Upscaling ebenfalls Teil der freigeschalteten Premium-Funktionen",
         "Manuelle Bitratensteuerung für individuelle Anpassung der Streaming-Qualität",
-        "Kein Wechsel in den Desktop-Modus nötig – die App läuft vollständig innerhalb von Steam"
+        "Kein Wechsel in den Desktop-Modus nötig - die App läuft vollständig innerhalb von Steam"
       ]
     },
     {
@@ -91,7 +91,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Asobi: Remote Play ist kein Sony-Produkt und steht in keiner offiziellen Verbindung zu PlayStation, Valve oder Steam. Sony selbst adressiert dieselbe Zielgruppe mit dem PS Portal, das für rund 250 Euro ebenfalls Cloud-Streaming über PS Plus Premium ermöglicht – etwa für Titel wie Astro Bot, Ghost of Yōtei oder Resident Evil 4. Für Besitzer eines Steam Decks bietet die neue App damit eine potenziell günstigere Alternative, sofern die spätere Preisgestaltung der Vollversion moderat ausfällt."
+      "text": "Asobi: Remote Play ist kein Sony-Produkt und steht in keiner offiziellen Verbindung zu PlayStation, Valve oder Steam. Sony selbst adressiert dieselbe Zielgruppe mit dem PS Portal, das für rund 250 Euro ebenfalls Cloud-Streaming über PS Plus Premium ermöglicht - etwa für Titel wie Astro Bot, Ghost of Yōtei oder Resident Evil 4. Für Besitzer eines Steam Decks bietet die neue App damit eine potenziell günstigere Alternative, sofern die spätere Preisgestaltung der Vollversion moderat ausfällt."
     }
   ],
   "poll": {

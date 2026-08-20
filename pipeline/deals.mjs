@@ -1,7 +1,7 @@
 // Deal-Radar-Datenbeschaffung: holt die aktuellen Steam-Angebote
 // (offizieller Store-Endpoint, EUR-Preise, kein API-Schlüssel nötig)
 // und schreibt sie nach src/content/deals.json. Läuft als Schritt der
-// News-Pipeline — die Deals werden also im 3-Stunden-Takt aktualisiert.
+// News-Pipeline - die Deals werden also im 3-Stunden-Takt aktualisiert.
 // Nur PC/Steam: Für PSN/eShop/Xbox existieren keine sauberen freien APIs.
 import { writeFileSync, readFileSync } from "node:fs";
 import { join, dirname } from "node:path";
@@ -15,7 +15,7 @@ const res = await fetch("https://store.steampowered.com/api/featuredcategories?c
   signal: AbortSignal.timeout(20000),
 });
 if (!res.ok) {
-  console.error(`Steam-API antwortet mit ${res.status} — deals.json bleibt unverändert.`);
+  console.error(`Steam-API antwortet mit ${res.status} - deals.json bleibt unverändert.`);
   process.exit(0); // Pipeline nicht blockieren, alte Deals bleiben stehen
 }
 const data = await res.json();
@@ -36,13 +36,13 @@ const deals = items
     currency: it.currency ?? "EUR",
     endsAt: it.discount_expiration ? new Date(it.discount_expiration * 1000).toISOString() : null,
     url: `https://store.steampowered.com/app/${it.id}/`,
-    // Offizielles Steam-Kapselbild (CDN-Hotlink, setzt keine Cookies) —
+    // Offizielles Steam-Kapselbild (CDN-Hotlink, setzt keine Cookies) -
     // bewusst nicht lokal gespiegelt, sonst würde jeder 3-Std.-Lauf
     // Binärdateien ins Repo committen.
     image: it.small_capsule_image ?? it.large_capsule_image ?? null,
   }));
 
-// Nur schreiben, wenn sich die Angebote inhaltlich geändert haben —
+// Nur schreiben, wenn sich die Angebote inhaltlich geändert haben -
 // sonst löst jeder Lauf wegen updatedAt/Cache-Bust-Parametern (?t= im
 // Bild-URL) einen sinnlosen Commit + Deploy aus. Vergleich über die
 // Deals ohne flüchtige Bestandteile.
@@ -53,11 +53,11 @@ let bestehend = [];
 try {
   bestehend = JSON.parse(readFileSync(OUT, "utf8")).deals ?? [];
 } catch {
-  // keine bestehende Datei — wird neu geschrieben
+  // keine bestehende Datei - wird neu geschrieben
 }
 
 if (normalisiert(bestehend) === normalisiert(deals)) {
-  console.log("Deals unverändert — deals.json bleibt wie sie ist.");
+  console.log("Deals unverändert - deals.json bleibt wie sie ist.");
 } else {
   writeFileSync(OUT, JSON.stringify({ updatedAt: new Date().toISOString(), deals }, null, 2) + "\n");
   console.log(`deals.json geschrieben: ${deals.length} Angebote`);

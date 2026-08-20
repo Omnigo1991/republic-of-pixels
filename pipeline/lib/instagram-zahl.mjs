@@ -8,14 +8,14 @@ import { headlineHtml, schriftEinpassenQuelle } from "./instagram-card.mjs";
 // ┌──────────────────────────────────────────────────────────────────────┐
 // │ STATUS: NICHT EINGEBUNDEN. Diese Datei wird von nichts importiert.    │
 // │                                                                       │
-// │ Sie ist ein Entwurf, kein toter Code — Tim hat sie am 13.08.2026      │
+// │ Sie ist ein Entwurf, kein toter Code - Tim hat sie am 13.08.2026      │
 // │ ausdruecklich NICHT verworfen ("Die Zahlenkarten sehen eigentlich gut │
 // │ aus"), aber auch nicht freigegeben. Offen war seine Frage, ob wir     │
 // │ hier nicht doch Artwork verwenden sollten, und das "XT" der Radeon-   │
 // │ Karte, das allein auf der zweiten Zeile stand.                        │
 // │                                                                       │
 // │ WARUM DIESER KASTEN HIER STEHT: Der Umlaut-Waechter lag zwei Tage     │
-// │ fertig herum, ohne eingebunden zu sein — in dieser Zeit passierte der │
+// │ fertig herum, ohne eingebunden zu sein - in dieser Zeit passierte der │
 // │ Fehler dreimal. Unfertige Bausteine sind nicht das Problem, still     │
 // │ vergessene sind es. Wer diese Datei oeffnet, weiss jetzt sofort,      │
 // │ woran sie haengt.                                                     │
@@ -23,10 +23,10 @@ import { headlineHtml, schriftEinpassenQuelle } from "./instagram-card.mjs";
 // │ ZUM EINBINDEN FEHLT: Tims Entscheid zur Artwork-Frage, die Behebung   │
 // │ der Waisen-Zeile, und dieselbe Abstimmung mit der Abnahme, die die    │
 // │ Typo-Karte am 14.08. einen ganzen Lauf gekostet hat (Zeilenzahl und   │
-// │ Randabstand — siehe pipeline/lib/abnahme.mjs).                        │
+// │ Randabstand - siehe pipeline/lib/abnahme.mjs).                        │
 // └──────────────────────────────────────────────────────────────────────┘
 //
-// ZAHLEN-KARTE (13.08.2026) — eigene Bildsprache für Meldungen ohne Motiv.
+// ZAHLEN-KARTE (13.08.2026) - eigene Bildsprache für Meldungen ohne Motiv.
 //
 // WARUM: Unsere Artikelbilder stammen aus dem Feed der Quelle. Bei
 // Spiel-Meldungen ist das brauchbar, bei Firmen- und Branchennachrichten
@@ -35,11 +35,11 @@ import { headlineHtml, schriftEinpassenQuelle } from "./instagram-card.mjs";
 // Meldung über Super Mario Sunshine ein GameCube-Controller. Tim beim
 // Durchsehen: "Wenn das echte Posts wären, wäre ich enttäuscht."
 //
-// Das Problem ist nicht, dass uns Bilder FEHLEN — es ist, dass wir fremde
+// Das Problem ist nicht, dass uns Bilder FEHLEN - es ist, dass wir fremde
 // Bilder benutzen, die mit der Story nichts zu tun haben. Ein perfekt
 // gesetzter Marker über einem falschen Bild ist ein perfekt gesetzter Fehler.
 //
-// Diese Karte leiht sich gar kein Bild. Sie macht die ZAHL zum Motiv — und
+// Diese Karte leiht sich gar kein Bild. Sie macht die ZAHL zum Motiv - und
 // das Material dafür liegt schon vor: Alle 25 zuletzt geprüften Artikel
 // tragen einen stats-Block mit ein bis drei starken Zahlen ("20 %",
 // "14'000", "150 → 300"). Bei einer Preiserhöhung IST die Zahl die Nachricht.
@@ -133,11 +133,11 @@ export async function renderZahlCard({
     // Schlagzeile einpassen wie überall: nie umbrechen, sondern verkleinern.
     await page.evaluate(`(${schriftEinpassenQuelle().toString()})(300, 1.0)`);
 
-    // DIE ZAHL FÜLLT DIE BREITE — in beide Richtungen. Ein reines
+    // DIE ZAHL FÜLLT DIE BREITE - in beide Richtungen. Ein reines
     // Verkleinern (wie bei der Schlagzeile) reicht hier nicht: "150 → 300"
     // ist viel breiter als "18", und eine kleine "18" auf leerer Fläche
     // wirkt verloren statt wuchtig. Die Zahl IST das Motiv dieser Karte,
-    // also skaliert sie auf den Satzspiegel — nach unten wie nach oben.
+    // also skaliert sie auf den Satzspiegel - nach unten wie nach oben.
     await page.evaluate(() => {
       const el = document.querySelector(".zahl");
       const rahmen = el.parentElement.clientWidth * 0.98;
@@ -161,7 +161,7 @@ export async function renderZahlCard({
     await page.waitForTimeout(120);
 
     // ZAHLENBLOCK AUSMITTELN (Fund 13.08.2026): Auf festem Abstand von oben
-    // klaffte zwischen Zahl und Textblock ein leeres Drittel — die Karte
+    // klaffte zwischen Zahl und Textblock ein leeres Drittel - die Karte
     // zerfiel in zwei Hälften. Die Höhe des Textblocks schwankt aber mit der
     // Schlagzeile, ein fester Wert kann also gar nicht passen. Der Block wird
     // darum NACH dem Einpassen zwischen Trennlinie und Textblock zentriert.

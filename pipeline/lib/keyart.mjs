@@ -7,8 +7,8 @@ import sharp from "sharp";
 // Offizielles Bildmaterial für Social-Posts (Tim-Strategie 08.08.2026,
 // erweitert 09.08.2026 um IGDB): Pro Spiel existiert ein POOL aus
 // offiziellem Publisher-Material. Quellen in dieser Reihenfolge:
-//   1. Steam  — Bibliothekscover (1200×1800) + Store-Screenshots
-//   2. IGDB   — Cover + Artworks + Screenshots (deckt Konsolen-Exklusives
+//   1. Steam  - Bibliothekscover (1200×1800) + Store-Screenshots
+//   2. IGDB   - Cover + Artworks + Screenshots (deckt Konsolen-Exklusives
 //               wie Nintendo/PlayStation ab, die Steam nicht kennt;
 //               Zugang über Twitch-API-Schlüssel)
 // Bei wiederkehrenden News zum selben Spiel wird rotiert (Index kommt vom
@@ -27,7 +27,7 @@ if (!process.env.TWITCH_CLIENT_ID) {
       if (k && v && !process.env[k]) process.env[k] = v;
     }
   } catch {
-    // keine Datei — IGDB-Stufe wird einfach übersprungen
+    // keine Datei - IGDB-Stufe wird einfach übersprungen
   }
 }
 
@@ -40,11 +40,11 @@ function tokens(s) {
 }
 
 // Namens-Abgleich auf GANZWORT-Basis mit Rangfolge (09.08.2026 abends
-// erweitert): Vorher musste der kürzere Name der ANFANG des längeren sein —
+// erweitert): Vorher musste der kürzere Name der ANFANG des längeren sein -
 // damit fiel "Oblivion Remastered" gegen "The Elder Scrolls IV: Oblivion
 // Remastered" durch, obwohl das Artwork vorhanden war, und die Story landete
 // unnötig auf einer Typo-Karte. Jetzt zählt auch eine zusammenhängende
-// Wortfolge irgendwo im Titel — aber schlechter bewertet, damit bei mehreren
+// Wortfolge irgendwo im Titel - aber schlechter bewertet, damit bei mehreren
 // Kandidaten der genauere gewinnt.
 // Rang 0 = identisch, 1 = Anfang, 2 = enthaltene Wortfolge, null = kein Treffer.
 // Weiterhin sicher: "grand theft auto vi" trifft NICHT auf "… vice city",
@@ -149,7 +149,7 @@ async function igdbPool(gameName) {
     signal: AbortSignal.timeout(15000),
   }).then((r) => r.json());
 
-  // Kandidaten: Ganzwort-Treffer, dann ranken — exakter Name schlägt
+  // Kandidaten: Ganzwort-Treffer, dann ranken - exakter Name schlägt
   // alles, Hauptspiel (category 0) schlägt Bundles/DLC/Mods, mehr
   // Artwork schlägt weniger (Fan-Einträge wie "BotW Randomizer" von
   // Drittpersonen fallen so zuverlässig durch).
@@ -170,7 +170,7 @@ async function igdbPool(gameName) {
     `https://images.igdb.com/igdb/image/upload/${groesse}/${imageId}.jpg`;
   const eintraege = [];
   // Cover zuerst (Hochformat wie Steam-Key-Art), dann Artworks, dann
-  // Screenshots — jeweils 1080p mit 720p-Rettung im selben Eintrag.
+  // Screenshots - jeweils 1080p mit 720p-Rettung im selben Eintrag.
   if (spiel.cover?.image_id) {
     eintraege.push([bild(spiel.cover.image_id, "t_1080p"), bild(spiel.cover.image_id, "t_720p")]);
   }
@@ -197,7 +197,7 @@ export async function holeSpielBild({ gameName, rotation = 0, outPath }) {
     try {
       pool = await steamPool(gameName);
     } catch (err) {
-      console.log(`  Steam-Suche fehlgeschlagen (${err.message}) — versuche IGDB`);
+      console.log(`  Steam-Suche fehlgeschlagen (${err.message}) - versuche IGDB`);
     }
     if (!pool) pool = await igdbPool(gameName);
     if (!pool) return null;
@@ -207,7 +207,7 @@ export async function holeSpielBild({ gameName, rotation = 0, outPath }) {
     // Ab der Rotations-Position ALLE Pool-Einträge durchgehen, bis einer
     // lädt und den Qualitäts-Wächter besteht (Fix 09.08.2026 abends):
     // Vorher wurde bei einem Fehlschlag nur das Cover als Rettung probiert
-    // — hat ein Spiel wie "Oblivion Remastered" gar kein Steam-Cover (404),
+    // - hat ein Spiel wie "Oblivion Remastered" gar kein Steam-Cover (404),
     // blieben die sechs vorhandenen Screenshots ungenutzt und die Story
     // landete unnötig auf einer Typo-Karte.
     let buffer = null;
@@ -233,17 +233,17 @@ export async function holeSpielBild({ gameName, rotation = 0, outPath }) {
     };
   } catch (err) {
     // Sichtbar loggen statt still schlucken (Lehre vom 08.08.: stumme
-    // Fehler kosten Diagnose-Zeit) — der Aufrufer behandelt null ohnehin.
+    // Fehler kosten Diagnose-Zeit) - der Aufrufer behandelt null ohnehin.
     console.log(`  Spielbild-Suche fehlgeschlagen (${err.message})`);
     return null;
   }
 }
 
-// MEHRERE KANDIDATEN STATT EINEM (Tim, 14.08.2026 — fürs Bild-Tor).
+// MEHRERE KANDIDATEN STATT EINEM (Tim, 14.08.2026 - fürs Bild-Tor).
 //
 // holeSpielBild oben nimmt das ERSTE Bild, das lädt und über 900 px hoch
 // ist, und liefert es aus. Ob es das beste im Pool ist, hat nie jemand
-// verglichen — es gab nichts zum Vergleichen. Genau daran sind Tomb Raider
+// verglichen - es gab nichts zum Vergleichen. Genau daran sind Tomb Raider
 // (Lara am Bildrand) und AC Black Flag (beide Figuren kaum sichtbar)
 // gescheitert: Der Pool enthielt bessere Bilder, wir haben sie nie geholt.
 //
@@ -261,7 +261,7 @@ export async function holeSpielBildKandidaten({
     try {
       pool = await steamPool(gameName);
     } catch (err) {
-      console.log(`  Steam-Suche fehlgeschlagen (${err.message}) — versuche IGDB`);
+      console.log(`  Steam-Suche fehlgeschlagen (${err.message}) - versuche IGDB`);
     }
     if (!pool) pool = await igdbPool(gameName);
     if (!pool) return null;

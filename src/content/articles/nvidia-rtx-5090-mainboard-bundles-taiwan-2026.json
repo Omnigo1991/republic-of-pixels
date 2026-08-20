@@ -2,7 +2,7 @@
   "slug": "nvidia-rtx-5090-mainboard-bundles-taiwan-2026",
   "title": "RTX 5090 nur im Paket: Händler in Taiwan bündeln Grafikkarte mit acht Mainboards",
   "subtitle": "Auf der Plattform PChome24h gibt es Nvidias Flaggschiff nur noch zusammen mit Ladenhütern wie Mainboards, Netzteilen und Mittelklasse-GPUs",
-  "excerpt": "In Taiwan verkauft die Plattform PChome24h die RTX 5090 nur noch in Kombi-Paketen mit bis zu acht Mainboards und weiteren Komponenten – ein Zeichen für die angespannte Lage im PC-Markt.",
+  "excerpt": "In Taiwan verkauft die Plattform PChome24h die RTX 5090 nur noch in Kombi-Paketen mit bis zu acht Mainboards und weiteren Komponenten - ein Zeichen für die angespannte Lage im PC-Markt.",
   "seoTitle": "RTX 5090: Taiwan-Händler bündelt GPU mit 8 Mainboards",
   "metaDescription": "PChome24h verkauft die RTX 5090 in Taiwan nur noch mit umfangreichen Bundles aus Mainboards, Netzteilen und weiteren Komponenten. Was hinter dem Trend steckt.",
   "category": "news",
@@ -23,11 +23,11 @@
     "Die Aktion gilt als Reaktion auf die aktuelle Speicherkrise, die den PC-Markt weltweit belastet",
     "Analysten rechnen erst ab 2029 mit einer Erholung des Marktes für PC-Bauteile"
   ],
-  "whyItMatters": "Wer aktuell einen PC bauen oder aufrüsten will, bekommt die Auswirkungen der Speicherkrise direkt zu spüren – Bundle-Zwänge wie in Taiwan könnten ein Vorbote für andere Märkte sein. Für Gamer:innen zeigt sich damit, wie stark KI-getriebene Nachfrage die Preise und Verfügbarkeit von Gaming-Hardware verzerrt.",
+  "whyItMatters": "Wer aktuell einen PC bauen oder aufrüsten will, bekommt die Auswirkungen der Speicherkrise direkt zu spüren - Bundle-Zwänge wie in Taiwan könnten ein Vorbote für andere Märkte sein. Für Gamer:innen zeigt sich damit, wie stark KI-getriebene Nachfrage die Preise und Verfügbarkeit von Gaming-Hardware verzerrt.",
   "body": [
     {
       "type": "paragraph",
-      "text": "Wer in Taiwan derzeit eine Nvidia RTX 5090 kaufen will, kommt kaum an einem Zwangspaket vorbei. Auf der E-Commerce-Plattform PChome24h werden mehrere Varianten der High-End-Grafikkarte ausschliesslich zusammen mit einer teils absurden Menge an Zubehör verkauft – darunter Mainboards, Netzteile, Prozessoren und sogar zusätzliche Mittelklasse-Grafikkarten. Der Hardware-Analyst Uniko's Hardware hat vier dieser Kombis auf X dokumentiert, die Modelle von Asus, Gigabyte und MSI betreffen."
+      "text": "Wer in Taiwan derzeit eine Nvidia RTX 5090 kaufen will, kommt kaum an einem Zwangspaket vorbei. Auf der E-Commerce-Plattform PChome24h werden mehrere Varianten der High-End-Grafikkarte ausschliesslich zusammen mit einer teils absurden Menge an Zubehör verkauft - darunter Mainboards, Netzteile, Prozessoren und sogar zusätzliche Mittelklasse-Grafikkarten. Der Hardware-Analyst Uniko's Hardware hat vier dieser Kombis auf X dokumentiert, die Modelle von Asus, Gigabyte und MSI betreffen."
     },
     {
       "type": "embed",
@@ -109,7 +109,7 @@
   "heroVariant": "grid",
   "sources": [
     {
-      "title": "Nvidia RTX 5090 ships in bizarre 8-motherboard bundle — retailers hold GPUs hostage similar to the crypto boom",
+      "title": "Nvidia RTX 5090 ships in bizarre 8-motherboard bundle - retailers hold GPUs hostage similar to the crypto boom",
       "url": "https://www.tomshardware.com/pc-components/gpus/nvidia-rtx-5090-ships-in-bizarre-8-motherboard-bundle-retailers-hold-gpus-hostage-similar-to-the-crypto-boom",
       "publisher": "Tom's Hardware"
     }

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 // Held mit Pixel-Treppe + "Neueste"-Spalte daneben, drei beschriftete
 // Karten darunter, Guide-Kartenreihe, dann die Radare, das Cyan-Band und
 // der Navy-Newsletter-Block. "Alle News" bleibt erhalten (Kernprodukt,
-// stand nicht im Entwurf, fliegt aber nicht raus) — "Beliebt bei Lesern"
+// stand nicht im Entwurf, fliegt aber nicht raus) - "Beliebt bei Lesern"
 // ist bewusst gewichen: Die Neueste-Spalte übernimmt die Aktualität.
 export default async function HomePage() {
   const topStory = getTopStory();
@@ -41,7 +41,7 @@ export default async function HomePage() {
     ...chronological.filter((a) => a.category !== "guides").slice(8, 8 + Math.max(0, 5 - guides.length)),
   ].slice(0, 5);
   const ticker = chronological.slice(0, 2);
-  // Kleine Slider-Leiste vor den News (Tim, 19.08.2026) — dieselbe
+  // Kleine Slider-Leiste vor den News (Tim, 19.08.2026) - dieselbe
   // Stelle wie auf der Live-Seite.
   const beliebt = await getPopularArticlesLive(8);
 
@@ -59,12 +59,17 @@ export default async function HomePage() {
           <div className="grid gap-8 lg:grid-cols-[1fr_372px] lg:gap-11">
             <div>
               <TopStory article={topStory} />
-              {/* Auf dem Handy nur EINE Karte, damit "Alle News" schneller
-                  kommt (Tim, 16.08.2026) — ab sm wieder alle drei. */}
-              <div className="mt-6 grid gap-5 sm:grid-cols-3">
+              {/* WIE BEI DEN GUIDES (Tim, 20.08.2026): zwei Karten
+                  nebeneinander im Verhaeltnis 4:3. Vorher stand am Handy
+                  EINE Karte mit 280 px hohem Bild da - fast so gross wie
+                  der Aufmacher daneben, wodurch die zweite Meldung
+                  wichtiger wirkte als die erste. Jetzt passen zwei
+                  Artikel in denselben Platz, und der Aufmacher bleibt
+                  eindeutig der Aufmacher. Ab sm wieder alle drei. */}
+              <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5">
                 {kleinreihe.map((a, i) => (
-                  <div key={a.slug} className={i > 0 ? "hidden sm:block" : ""}>
-                    <NotchKarte article={a} />
+                  <div key={a.slug} className={i > 1 ? "hidden sm:block" : ""}>
+                    <NotchKarte article={a} bildHoehe="aspect-[4/5] h-auto sm:aspect-auto sm:h-[280px]" />
                   </div>
                 ))}
               </div>
@@ -89,7 +94,7 @@ export default async function HomePage() {
         </section>
 
         {/* Newsletter direkt nach den News (Tim, 16.08.2026), als Kachel
-            in der Inhaltsspalte wie bei Polygon — nicht randlos. */}
+            in der Inhaltsspalte wie bei Polygon - nicht randlos. */}
         <div className="mt-14 sm:mt-16">
           <NewsletterBlock artikelBilder={[topStory, ...kleinreihe].slice(0, 3)} />
         </div>
@@ -101,11 +106,11 @@ export default async function HomePage() {
             <SectionDivider />
             <div className="grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-5">
               {guideReihe.map((a) => (
-                <NotchKarte key={a.slug} article={a} bildHoehe="aspect-[4/3] h-auto" randCyan />
+                <NotchKarte key={a.slug} article={a} bildHoehe="aspect-[4/5] h-auto sm:aspect-[4/3]" randCyan />
               ))}
             </div>
             {/* Gleiche Pille und derselbe Abstand (mt-8) wie unter der
-                Nachrichtenliste — Tim, 19.08.2026. */}
+                Nachrichtenliste - Tim, 19.08.2026. */}
             <MehrPille href="/guides" />
           </Reveal>
         </section>
@@ -136,13 +141,20 @@ export default async function HomePage() {
         </Reveal>
 
         {/* Zweites Dach (Tim, 17.08.2026): Merkliste und Pixel-Raten sind
-            beide persoenlich — was DU dir gemerkt hast, was DU raetst.
+            beide persoenlich - was DU dir gemerkt hast, was DU raetst.
             Sie stehen deshalb unter einem gemeinsamen Titel. */}
         <section className="pt-14 sm:pt-16">
           <Reveal>
             <SektionsBanner titel="Deine" cyan="Republic" />
           </Reveal>
-          <Reveal>
+          {/* MERKLEISTE UEBER DIE NACHBARSEKTION HEBEN (Tim, 20.08.2026):
+              Jedes Reveal blendet mit einer Transformation ein und bildet
+              dadurch eine eigene Stapelebene. Bei gleichrangigen Ebenen
+              gewinnt die spaetere im Dokument - Pixel-Raten lag also ueber
+              der Merkleiste, und ihre Vorschlagsliste verschwand dahinter.
+              Ein hoeherer Wert an der Liste selbst half nicht: Er wirkt nur
+              INNERHALB der eigenen Stapelebene. */}
+          <Reveal className="relative z-20">
             <DeineMerkliste />
           </Reveal>
           <Reveal>

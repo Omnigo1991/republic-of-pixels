@@ -17,7 +17,7 @@ export function VisitTracker() {
       // - rop_intern = Redaktionsgerät (wird beim Öffnen des Statistik-
       //   Cockpits gesetzt) → nie zählen
       // NUR DIE ECHTE DOMAIN ZAEHLT (Fund 16.08.2026): Bisher wurde nur
-      // "localhost" ausgenommen — Vercel-Vorschauen (*.vercel.app) liefen
+      // "localhost" ausgenommen - Vercel-Vorschauen (*.vercel.app) liefen
       // damit voll in die Statistik. Beim Redesign-Zweig hat allein die
       // automatische Screenshot-Pruefung die Vorschau dutzendfach
       // geladen, jedes Mal mit frischem Browser und damit neuer
@@ -30,7 +30,7 @@ export function VisitTracker() {
         localStorage.setItem("rop_vid", visitor);
       }
       // Herkunft (Tim-Wunsch 08.08.2026): externer Referrer wird mitgespeichert
-      // (nur die Quelle, keine Personendaten) — Grundlage der "Herkunft"-
+      // (nur die Quelle, keine Personendaten) - Grundlage der "Herkunft"-
       // Sektion im Cockpit. Interne Navigation zählt nicht als Quelle.
       const referrer =
         document.referrer && !document.referrer.includes(location.hostname)

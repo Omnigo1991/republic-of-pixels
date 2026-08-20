@@ -1,8 +1,8 @@
 {
   "slug": "epic-games-store-linux-client-bestaetigt-2026",
-  "title": "«Bald» — Epic bringt den Games Store nativ auf Linux",
+  "title": "«Bald» - Epic bringt den Games Store nativ auf Linux",
   "subtitle": "Ein Epic-Mitarbeiter bestätigt auf Discord die Arbeit an einem nativen Linux-Client, nennt aber weder Termin noch unterstützte Distributionen",
-  "excerpt": "Der Epic Games Store soll nativ unter Linux laufen — bestätigt in einer Discord-Fragerunde. Doch im ersten Preview-Build des neuen Launchers fehlt die Unterstützung noch.",
+  "excerpt": "Der Epic Games Store soll nativ unter Linux laufen - bestätigt in einer Discord-Fragerunde. Doch im ersten Preview-Build des neuen Launchers fehlt die Unterstützung noch.",
   "seoTitle": "Epic Games Store: Nativer Linux-Client kommt «bald»",
   "metaDescription": "Epic bestätigt auf Discord einen nativen Linux-Client für den Epic Games Store. Termin, Distributionen und SteamOS-Support bleiben aber offen.",
   "category": "news",
@@ -22,11 +22,11 @@
     "Zeitplan, unterstützte Distributionen und ein möglicher SteamOS-Support bleiben offen",
     "Bislang decken Community-Projekte wie Heroic Games Launcher und Lutris die Lücke ab"
   ],
-  "whyItMatters": "Wer unter Linux oder auf dem Steam Deck spielt, greift bislang nur über Umwege auf die eigene Epic-Bibliothek zu. Ein offizieller Client würde Shop, Bibliothek und Downloads erstmals ohne Bastellösung zugänglich machen. Dass damit automatisch alle Epic-Spiele unter Linux laufen, folgt daraus allerdings nicht — vor allem Titel mit Anti-Cheat bleiben ein Sonderfall.",
+  "whyItMatters": "Wer unter Linux oder auf dem Steam Deck spielt, greift bislang nur über Umwege auf die eigene Epic-Bibliothek zu. Ein offizieller Client würde Shop, Bibliothek und Downloads erstmals ohne Bastellösung zugänglich machen. Dass damit automatisch alle Epic-Spiele unter Linux laufen, folgt daraus allerdings nicht - vor allem Titel mit Anti-Cheat bleiben ein Sonderfall.",
   "body": [
     {
       "type": "paragraph",
-      "text": "Der Epic Games Store soll künftig nativ unter Linux laufen. Bestätigt wurde das nicht per Pressemitteilung, sondern in einer Frage-Antwort-Runde auf dem offiziellen Discord-Server des Unternehmens: Ein Nutzer wollte wissen, ob eine native Linux-Fassung des Epic Games Launchers geplant sei. Die Antwort des als Epic-Mitarbeiter ausgewiesenen Accounts «onepercentnachos» fiel knapp aus — und begann mit einem einzigen Wort. Dokumentiert wurde der Austausch von SteamDeckHQ."
+      "text": "Der Epic Games Store soll künftig nativ unter Linux laufen. Bestätigt wurde das nicht per Pressemitteilung, sondern in einer Frage-Antwort-Runde auf dem offiziellen Discord-Server des Unternehmens: Ein Nutzer wollte wissen, ob eine native Linux-Fassung des Epic Games Launchers geplant sei. Die Antwort des als Epic-Mitarbeiter ausgewiesenen Accounts «onepercentnachos» fiel knapp aus - und begann mit einem einzigen Wort. Dokumentiert wurde der Austausch von SteamDeckHQ."
     },
     {
       "type": "stats",
@@ -37,7 +37,7 @@
         },
         {
           "value": "Juni",
-          "label": "im Juni stellte Epic die Roadmap für den umgebauten Store vor — ohne Linux ausdrücklich zu nennen"
+          "label": "im Juni stellte Epic die Roadmap für den umgebauten Store vor - ohne Linux ausdrücklich zu nennen"
         }
       ]
     },
@@ -56,14 +56,14 @@
     },
     {
       "type": "paragraph",
-      "text": "Damit steht zwar fest, dass an einem offiziellen Client gearbeitet wird — konkret ist darüber hinaus aber wenig. Offen bleiben unter anderem:"
+      "text": "Damit steht zwar fest, dass an einem offiziellen Client gearbeitet wird - konkret ist darüber hinaus aber wenig. Offen bleiben unter anderem:"
     },
     {
       "type": "list",
       "items": [
         "der Veröffentlichungszeitraum",
         "die unterstützten Linux-Distributionen",
-        "eine mögliche ausdrückliche Unterstützung von SteamOS — und damit dem Steam Deck"
+        "eine mögliche ausdrückliche Unterstützung von SteamOS - und damit dem Steam Deck"
       ]
     },
     {
@@ -84,15 +84,15 @@
     },
     {
       "type": "paragraph",
-      "text": "Die Linux-Pläne fügen sich in ein Vorhaben ein, das Epic seit Monaten verfolgt: eine neue Generation des eigenen Launchers. Die im Juni vorgestellte Roadmap für den Epic Games Store nennt unter anderem eine schnellere Programmoberfläche, Nutzerrezensionen, Spielerprofile und eine breitere Controller-Unterstützung. Zusätzliche Plattformen stellte Epic damals ebenfalls in Aussicht — Linux allerdings ohne es ausdrücklich zu benennen. Genau diese Lücke schliesst die Discord-Antwort nun, wenn auch ohne Termin. Die erste Vorschauversion des neuen Launchers bleibt vorerst ohne Linux-Fassung."
+      "text": "Die Linux-Pläne fügen sich in ein Vorhaben ein, das Epic seit Monaten verfolgt: eine neue Generation des eigenen Launchers. Die im Juni vorgestellte Roadmap für den Epic Games Store nennt unter anderem eine schnellere Programmoberfläche, Nutzerrezensionen, Spielerprofile und eine breitere Controller-Unterstützung. Zusätzliche Plattformen stellte Epic damals ebenfalls in Aussicht - Linux allerdings ohne es ausdrücklich zu benennen. Genau diese Lücke schliesst die Discord-Antwort nun, wenn auch ohne Termin. Die erste Vorschauversion des neuen Launchers bleibt vorerst ohne Linux-Fassung."
     },
     {
       "type": "heading",
-      "text": "GOG geht denselben Weg — ebenfalls ohne Datum"
+      "text": "GOG geht denselben Weg - ebenfalls ohne Datum"
     },
     {
       "type": "paragraph",
-      "text": "Epic ist mit diesen Plänen nicht allein. Bereits Anfang des Jahres liess eine Stellenausschreibung bei GOG konkrete Arbeiten an einer Linux-Version von GOG Galaxy erkennen. Auch dort existiert bis heute kein Veröffentlichungstermin. Zwei der grössten Steam-Alternativen arbeiten damit parallel an offiziellen Linux-Clients — und beide lassen offen, wann daraus ein Download wird."
+      "text": "Epic ist mit diesen Plänen nicht allein. Bereits Anfang des Jahres liess eine Stellenausschreibung bei GOG konkrete Arbeiten an einer Linux-Version von GOG Galaxy erkennen. Auch dort existiert bis heute kein Veröffentlichungstermin. Zwei der grössten Steam-Alternativen arbeiten damit parallel an offiziellen Linux-Clients - und beide lassen offen, wann daraus ein Download wird."
     },
     {
       "type": "paragraph",
@@ -104,7 +104,7 @@
     "options": [
       "Ausdrücklicher SteamOS- und Steam-Deck-Support",
       "Anti-Cheat-Titel, die zuverlässig laufen",
-      "Nichts — Heroic ist mir ohnehin lieber",
+      "Nichts - Heroic ist mir ohnehin lieber",
       "Hauptsache, er kommt überhaupt"
     ]
   },
@@ -125,7 +125,7 @@
   ],
   "image": {
     "src": "/images/articles/epic-games-store-linux-client-bestaetigt-2026.webp",
-    "alt": "«Bald» — Epic bringt den Games Store nativ auf Linux",
+    "alt": "«Bald» - Epic bringt den Games Store nativ auf Linux",
     "credit": "Bild: ComputerBase",
     "sourceUrl": "https://www.computerbase.de/news/apps/epic-games-store-offizieller-linux-client-kommt-bald.98856/",
     "sourceWidth": 1280,

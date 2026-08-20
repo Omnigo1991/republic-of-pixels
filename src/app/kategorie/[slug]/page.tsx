@@ -15,11 +15,11 @@ const CATEGORY_KEYS = CATEGORY_NAV.map((c) => c.key) as Category[];
 const PLATFORM_KEYS = PLATFORM_NAV.map((p) => p.key) as Platform[];
 
 const CATEGORY_INTRO: Record<Category, string> = {
-  breaking: "Die wichtigsten Eilmeldungen der Gaming-Branche — geprüft, eingeordnet, ohne Aufregung um der Aufregung willen.",
+  breaking: "Die wichtigsten Eilmeldungen der Gaming-Branche - geprüft, eingeordnet, ohne Aufregung um der Aufregung willen.",
   news: "Der komplette News-Fluss aus PC-, Konsolen- und Branchenwelt.",
-  leaks: "Gerüchte und Insider-Infos — klar gekennzeichnet, kritisch eingeordnet, nie als Fakt verkauft.",
+  leaks: "Gerüchte und Insider-Infos - klar gekennzeichnet, kritisch eingeordnet, nie als Fakt verkauft.",
   reviews: "Unser Urteil zu aktuellen Releases, mit dem Label-System von Republic of Pixels statt Punktewertung.",
-  guides: "Ratgeber, die bleiben: Einsteigertipps, Update-Erklärungen und Übersichten — mit klarem Stand, worauf sie sich beziehen.",
+  guides: "Ratgeber, die bleiben: Einsteigertipps, Update-Erklärungen und Übersichten - mit klarem Stand, worauf sie sich beziehen.",
 };
 
 const PLATFORM_INTRO: Record<Platform, string> = {
@@ -75,7 +75,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
         <div className="mt-10 flex flex-col">
           {articles.length === 0 && (
             <p className="py-16 text-center text-text-tertiary">
-              Aktuell keine Artikel in dieser Kategorie — schau bald wieder vorbei.
+              Aktuell keine Artikel in dieser Kategorie - schau bald wieder vorbei.
             </p>
           )}
           {articles.map((article) => (

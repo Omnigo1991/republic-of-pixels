@@ -2,7 +2,7 @@
   "slug": "guide-stalker-2-nach-update-2-0-einsteigertipps-fuer-die-zone",
   "title": "STALKER 2 nach Update 2.0: Einsteigertipps für die Zone",
   "subtitle": "Ein Guide für Neu- und Wiedereinsteiger, der erklärt, welche Systeme Update 2.0 verändert und wie man die ersten Stunden in der Zone danach angeht.",
-  "excerpt": "Ein Guide für Neu- und Wiedereinsteiger, der erklärt, welche Systeme Update 2.0 verändert und wie man die ersten Stunden in der Zone danach angeht. Update 2.0 erscheint am 20. August und ist für alle Besitzenden kostenlos – es verändert mit überarbeiteter A-Life-KI, neuen Waffen, Fernglässern und einem Regelbaukaste…",
+  "excerpt": "Ein Guide für Neu- und Wiedereinsteiger, der erklärt, welche Systeme Update 2.0 verändert und wie man die ersten Stunden in der Zone danach angeht. Update 2.0 erscheint am 20. August und ist für alle Besitzenden kostenlos - es verändert mit überarbeiteter A-Life-KI, neuen Waffen, Fernglässern und einem Regelbaukaste…",
   "category": "guides",
   "platforms": [
     "pc",
@@ -32,11 +32,11 @@
   ],
   "tldr": [
     "Vor dem Start die Custom Rules durchgehen und die Schwierigkeit auf das eigene Tempo einstellen; Master und Expedition bewusst erst für später aufheben.",
-    "Früh ein Fernglas beschaffen – in der Zone finden oder bei einem der ausgewählten Händler kaufen.",
+    "Früh ein Fernglas beschaffen - in der Zone finden oder bei einem der ausgewählten Händler kaufen.",
     "Lagerfeuer, Bushaltestellen und andere Points of Interest aus Distanz prüfen, bevor man sie betritt.",
     "Bei Nebel das Verhalten anpassen: eigene Sicht und eigenes Gehör sind eingeschränkt, die der Gegner ebenfalls."
   ],
-  "whyItMatters": "Update 2.0 erscheint am 20. August und ist für alle Besitzenden kostenlos – es verändert mit überarbeiteter A-Life-KI, neuen Waffen, Fernglässern und einem Regelbaukasten genau jene Systeme, die den Einstieg prägen. Weil am selben Tag die erste grosse Erweiterung Cost of Hope startet, steigen gerade viele neu oder nach längerer Pause wieder in die Zone ein.",
+  "whyItMatters": "Update 2.0 erscheint am 20. August und ist für alle Besitzenden kostenlos - es verändert mit überarbeiteter A-Life-KI, neuen Waffen, Fernglässern und einem Regelbaukasten genau jene Systeme, die den Einstieg prägen. Weil am selben Tag die erste grosse Erweiterung Cost of Hope startet, steigen gerade viele neu oder nach längerer Pause wieder in die Zone ein.",
   "poll": null,
   "review": null,
   "seoTitle": "STALKER 2 nach Update 2.0: Einsteigertipps für die Zone",
@@ -48,7 +48,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Dieser Guide richtet sich an alle, die STALKER 2: Heart of Chornobyl nach Update 2.0 zum ersten Mal starten – oder nach längerer Pause zurückkehren und wissen wollen, was sich an den Grundlagen geändert hat. Er beschreibt ausschliesslich, was GSC Game World für Update 2.0 angekündigt hat, und leitet daraus ab, worauf man sich in den ersten Stunden einstellen sollte. Stand: Update 2.0, August 2026. Wer später liest, sollte die Angaben gegen den dann aktuellen Patchstand prüfen."
+      "text": "Dieser Guide richtet sich an alle, die STALKER 2: Heart of Chornobyl nach Update 2.0 zum ersten Mal starten - oder nach längerer Pause zurückkehren und wissen wollen, was sich an den Grundlagen geändert hat. Er beschreibt ausschliesslich, was GSC Game World für Update 2.0 angekündigt hat, und leitet daraus ab, worauf man sich in den ersten Stunden einstellen sollte. Stand: Update 2.0, August 2026. Wer später liest, sollte die Angaben gegen den dann aktuellen Patchstand prüfen."
     },
     {
       "type": "heading",
@@ -56,7 +56,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Update 2.0 ist ein kostenloses Update für alle Spielerinnen und Spieler und erscheint am 20. August – am selben Tag wie die kostenpflichtige Erweiterung Cost of Hope. Beides ist zu trennen: Für das Update braucht es keinen Zusatzkauf. GSC beschreibt 2.0 als Bündel aus jahrelangem Community-Feedback, technischen Verbesserungen und neuen Ideen, mit dem Schwerpunkt auf Optik, dynamischerem Zonenleben, mehr Anpassungsmöglichkeiten und neuen Waffen."
+      "text": "Update 2.0 ist ein kostenloses Update für alle Spielerinnen und Spieler und erscheint am 20. August - am selben Tag wie die kostenpflichtige Erweiterung Cost of Hope. Beides ist zu trennen: Für das Update braucht es keinen Zusatzkauf. GSC beschreibt 2.0 als Bündel aus jahrelangem Community-Feedback, technischen Verbesserungen und neuen Ideen, mit dem Schwerpunkt auf Optik, dynamischerem Zonenleben, mehr Anpassungsmöglichkeiten und neuen Waffen."
     },
     {
       "type": "heading",
@@ -81,7 +81,7 @@
     {
       "type": "list",
       "items": [
-        "Points of Interest vor dem Anmarsch beobachten statt direkt hineinlaufen – die Besetzung kann wechseln.",
+        "Points of Interest vor dem Anmarsch beobachten statt direkt hineinlaufen - die Besetzung kann wechseln.",
         "Damit rechnen, dass eine bekannte Route beim zweiten Mal anders aussieht.",
         "Zwei lang bestehende Probleme sind laut GSC behoben: Gegner, die durch Wände schiessen oder Objekte werfen, sowie unerwartete Überbevölkerung in bestimmten Zonenteilen. Wer alte Videos oder Guides als Referenz nutzt, sollte das im Kopf behalten."
       ]
@@ -105,16 +105,16 @@
     {
       "type": "list",
       "items": [
-        "Arev – Sturmgewehr",
-        "GP3A – Designated Marksman Rifle",
-        "SKP – Designated Marksman Rifle",
-        "Fora-230 – Maschinenpistole",
+        "Arev - Sturmgewehr",
+        "GP3A - Designated Marksman Rifle",
+        "SKP - Designated Marksman Rifle",
+        "Fora-230 - Maschinenpistole",
         "Zusätzlich existiert irgendwo in der Zone eine einzigartige Variante einer der neuen Waffen."
       ]
     },
     {
       "type": "paragraph",
-      "text": "Dazu kommen neue Optiken: ein 3x-Zielfernrohr für Waffen westlicher Bauart und ein neues Rotpunktvisier für Waffen östlicher Bauart. Wer also eine Waffe modifizieren will, sollte wissen, aus welchem Block sie stammt – sonst passt das gefundene Visier nicht. Ausserdem wurde Offset Aiming über die reine Nutzung mit Nachtsicht hinaus erweitert, was mehr Freiheit beim Zusammenstellen der Ausrüstung gibt."
+      "text": "Dazu kommen neue Optiken: ein 3x-Zielfernrohr für Waffen westlicher Bauart und ein neues Rotpunktvisier für Waffen östlicher Bauart. Wer also eine Waffe modifizieren will, sollte wissen, aus welchem Block sie stammt - sonst passt das gefundene Visier nicht. Ausserdem wurde Offset Aiming über die reine Nutzung mit Nachtsicht hinaus erweitert, was mehr Freiheit beim Zusammenstellen der Ausrüstung gibt."
     },
     {
       "type": "heading",
@@ -122,7 +122,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Nebel wirkt sich mit Update 2.0 auf das Spielgeschehen aus und ist nicht mehr nur ein optischer Wettereffekt: Sowohl Stalker als auch Gegner haben bei Nebel eine verringerte Sicht- und Hörweite. Das schneidet in beide Richtungen – Nebel ist Deckung beim Rückzug oder beim Umgehen einer Stellung, macht aber Aufklärung mit dem Fernglas schwierig. Zusätzlich hat das Wetterszenario Light Rainy eine optische Überarbeitung erhalten."
+      "text": "Nebel wirkt sich mit Update 2.0 auf das Spielgeschehen aus und ist nicht mehr nur ein optischer Wettereffekt: Sowohl Stalker als auch Gegner haben bei Nebel eine verringerte Sicht- und Hörweite. Das schneidet in beide Richtungen - Nebel ist Deckung beim Rückzug oder beim Umgehen einer Stellung, macht aber Aufklärung mit dem Fernglas schwierig. Zusätzlich hat das Wetterszenario Light Rainy eine optische Überarbeitung erhalten."
     },
     {
       "type": "heading",
@@ -142,7 +142,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Nein – zumindest nicht für den Einstieg. Cost of Hope ist die erste grosse Erweiterung, dreht sich um den langjährigen Konflikt zwischen den Fraktionen Duty und Freedom und führt an neue Orte, darunter Iron Forest, das Kernkraftwerk Tschornobyl und die Spatial Bubble. GSC verspricht zahlreiche Stunden neuen Inhalts. Die Erweiterung ist in der Ultimate Edition enthalten und separat für 29.99 US-Dollar beziehungsweise 29.99 Euro erhältlich. Zum Start gibt es ausserdem eine Website, auf der man nach einem kurzen Quiz seine Fraktion bestimmt, abstimmt und um limitierte Preise mitspielt."
+      "text": "Nein - zumindest nicht für den Einstieg. Cost of Hope ist die erste grosse Erweiterung, dreht sich um den langjährigen Konflikt zwischen den Fraktionen Duty und Freedom und führt an neue Orte, darunter Iron Forest, das Kernkraftwerk Tschornobyl und die Spatial Bubble. GSC verspricht zahlreiche Stunden neuen Inhalts. Die Erweiterung ist in der Ultimate Edition enthalten und separat für 29.99 US-Dollar beziehungsweise 29.99 Euro erhältlich. Zum Start gibt es ausserdem eine Website, auf der man nach einem kurzen Quiz seine Fraktion bestimmt, abstimmt und um limitierte Preise mitspielt."
     },
     {
       "type": "heading",
@@ -152,13 +152,13 @@
       "type": "list",
       "items": [
         "Vor dem Start die Custom Rules durchgehen und die Schwierigkeit auf das eigene Tempo einstellen; Master und Expedition bewusst erst für später aufheben.",
-        "Früh ein Fernglas beschaffen – in der Zone finden oder bei einem der ausgewählten Händler kaufen.",
+        "Früh ein Fernglas beschaffen - in der Zone finden oder bei einem der ausgewählten Händler kaufen.",
         "Lagerfeuer, Bushaltestellen und andere Points of Interest aus Distanz prüfen, bevor man sie betritt.",
         "Bei Nebel das Verhalten anpassen: eigene Sicht und eigenes Gehör sind eingeschränkt, die der Gegner ebenfalls.",
-        "Vor dem Aufrüsten klären, ob die Waffe westlicher oder östlicher Bauart ist – davon hängt ab, ob das 3x-Zielfernrohr oder das neue Rotpunktvisier passt.",
+        "Vor dem Aufrüsten klären, ob die Waffe westlicher oder östlicher Bauart ist - davon hängt ab, ob das 3x-Zielfernrohr oder das neue Rotpunktvisier passt.",
         "Neue Waffen nach Rolle einsortieren: Arev als Sturmgewehr, GP3A und SKP als Designated Marksman Rifles, Fora-230 als Maschinenpistole.",
         "Die Statistikseite im PDA nutzen, um den eigenen Fortschritt im Blick zu behalten.",
-        "Ältere Guides und Videos mit Vorsicht behandeln – A-Life-Verhalten, Optik und Mutanten-Erscheinungsbilder haben sich mit 2.0 verändert.",
+        "Ältere Guides und Videos mit Vorsicht behandeln - A-Life-Verhalten, Optik und Mutanten-Erscheinungsbilder haben sich mit 2.0 verändert.",
         "Cost of Hope als optionalen Zusatz einplanen, nicht als Voraussetzung für den Einstieg."
       ]
     }

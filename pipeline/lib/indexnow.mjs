@@ -1,6 +1,6 @@
 // IndexNow: informiert Bing/Yandex/Seznam sofort über neue Artikel-URLs,
 // statt auf den nächsten regulären Crawl zu warten. Google nimmt nicht am
-// IndexNow-Protokoll teil — dafür ist die Google-News-Aufnahme (separates
+// IndexNow-Protokoll teil - dafür ist die Google-News-Aufnahme (separates
 // Vorhaben) der massgebliche Hebel.
 const HOST = "www.republicofpixels.com";
 const KEY = "3776be420571c80008e39b128d333d60";

@@ -3,10 +3,10 @@
 import { useEffect, useState } from "react";
 import { KanalIcon, kanaeleFuer, type Kanal } from "./TeilenKanaele";
 
-// Teilen-Reihe am Artikelende — bewusst BEHALTEN (Tim-Entscheid
+// Teilen-Reihe am Artikelende - bewusst BEHALTEN (Tim-Entscheid
 // 09.08.2026): Sie steht im Moment der höchsten Teilen-Bereitschaft,
 // direkt nach dem Lesen. Sie nutzt jetzt aber dieselbe Mechanik und
-// dieselben Kanäle wie der schwebende Knopf (siehe TeilenKanaele) —
+// dieselben Kanäle wie der schwebende Knopf (siehe TeilenKanaele) -
 // ein System mit zwei Eingängen.
 export function ShareButtons({ title }: { title: string }) {
   const [url, setUrl] = useState("");
@@ -23,7 +23,7 @@ export function ShareButtons({ title }: { title: string }) {
         setKopiert(kanal.key);
         setTimeout(() => setKopiert(null), 2200);
       } catch {
-        // Zwischenablage gesperrt — unkritisch
+        // Zwischenablage gesperrt - unkritisch
       }
       if (kanal.key === "kopieren") return;
     }
@@ -35,7 +35,7 @@ export function ShareButtons({ title }: { title: string }) {
       <span className="mr-1 text-xs font-semibold tracking-wide text-text-tertiary">TEILEN</span>
 
       {/* Kein zusätzlicher "Menü öffnen"-Knopf (Tim, 09.08.2026): Das
-          native Teilen-Menü erreicht man über den schwebenden Knopf —
+          native Teilen-Menü erreicht man über den schwebenden Knopf -
           hier zählen die direkten Kanäle. */}
       {kanaeleFuer(url, title).map((k) => (
         <button

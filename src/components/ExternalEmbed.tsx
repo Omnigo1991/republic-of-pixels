@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import type { EmbedPlatform } from "@/lib/types";
 
 // Eingebettete Social-Posts/Videos (X/Reddit/YouTube) laden Inhalte der
-// jeweiligen Plattform nach, die Cookies setzen können — deshalb erst nach
+// jeweiligen Plattform nach, die Cookies setzen können - deshalb erst nach
 // explizitem Klick, passend zu unserer cookielosen Grundhaltung (siehe
 // /cookies). YouTube läuft zusätzlich über die datensparsame
 // youtube-nocookie.com-Domain, sobald zugestimmt wurde.

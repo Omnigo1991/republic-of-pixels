@@ -60,7 +60,7 @@ async function optimizeAndSave(buffer, slug, publicDir) {
     .toFile(file);
 
   // Zusätzlich ein natives 4:5-Hochformat (1080×1350) aus dem ORIGINAL-
-  // Buffer — fürs Instagram-Autoposting. Ein nachträglicher Zuschnitt aus
+  // Buffer - fürs Instagram-Autoposting. Ein nachträglicher Zuschnitt aus
   // dem 1600×900-Derivat nutzt nur einen 720px-Streifen und wird beim
   // Hochskalieren sichtbar unscharf (von Tim am Testpost vom 07.08.2026
   // bemängelt); das Original liefert die volle Quellauflösung.
@@ -70,12 +70,12 @@ async function optimizeAndSave(buffer, slug, publicDir) {
     .toFile(join(dir, `${slug}-portrait.webp`));
 
   // Original-Auflösung mitgeben: Qualitäts-Wächter fürs Social-Posting
-  // (Tim, 08.08.2026 — schwach aufgelöste Bilder schaden dem Auftritt).
+  // (Tim, 08.08.2026 - schwach aufgelöste Bilder schaden dem Auftritt).
   return { src: `/images/articles/${slug}.webp`, sourceWidth: meta.width ?? null, sourceHeight: meta.height ?? null };
 }
 
 // Hauptfunktion: liefert ein ArticleImage-Objekt oder null (→ Placeholder).
-// items: alle Quellen des Clusters (nicht nur die primäre) — bei mehreren
+// items: alle Quellen des Clusters (nicht nur die primäre) - bei mehreren
 // Quellen erhöht das die Trefferchance deutlich, z. B. wenn die primäre
 // Quelle kein brauchbares Bild liefert, eine weitere aber schon.
 export async function acquireImage({ slug, items, altText, publicDir }) {

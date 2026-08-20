@@ -1,8 +1,8 @@
 {
   "slug": "rockstar-crunch-kris-roberts-red-dead-redemption-2026",
-  "title": "«Das ist inakzeptabel» — Ex-Rockstar-Dev über Crunch bei Red Dead",
+  "title": "«Das ist inakzeptabel» - Ex-Rockstar-Dev über Crunch bei Red Dead",
   "subtitle": "Kris Roberts sagt, die Wochenendschichten hätten oft nicht dem Spiel gedient, sondern dem Besuch der Führungsetage",
-  "excerpt": "Ein früherer Design-Lead von Red Dead Redemption beschreibt die letzten sechs Monate der Entwicklung als «Blur» — und nennt einen Grund für die Überstunden, der nichts mit Bugs zu tun hatte.",
+  "excerpt": "Ein früherer Design-Lead von Red Dead Redemption beschreibt die letzten sechs Monate der Entwicklung als «Blur» - und nennt einen Grund für die Überstunden, der nichts mit Bugs zu tun hatte.",
   "seoTitle": "Rockstar Crunch: Ex-Dev über Red Dead Redemption",
   "metaDescription": "Kris Roberts, Multiplayer-Design-Lead von Red Dead Redemption, schildert Crunch bei Rockstar: ausgeweitete Core Hours, Wochenendpflicht und Besuche der Chefs.",
   "category": "news",
@@ -24,11 +24,11 @@
     "Besonders kritisiert er «künstliche» Wochenendeinsätze, die laut ihm nicht Bugs galten, sondern dem Auftritt vor besuchenden Führungskräften.",
     "Crunch bleibt bei Rockstar aktuell: Schutzregeln dagegen zählen zu den zentralen Forderungen der gewerkschaftlichen Organisierung im Studio."
   ],
-  "whyItMatters": "Rockstar steht mit GTA 6 vor dem grössten Release der Branche — und ausgerechnet die Frage, wie dort gearbeitet wird, begleitet das Studio seit Jahren. Wer wissen will, unter welchen Bedingungen die Spiele entstehen, die den Kalender vieler Gamer:innen bestimmen, bekommt hier eine seltene Innensicht aus der Führungsebene eines Entwicklerteams.",
+  "whyItMatters": "Rockstar steht mit GTA 6 vor dem grössten Release der Branche - und ausgerechnet die Frage, wie dort gearbeitet wird, begleitet das Studio seit Jahren. Wer wissen will, unter welchen Bedingungen die Spiele entstehen, die den Kalender vieler Gamer:innen bestimmen, bekommt hier eine seltene Innensicht aus der Führungsebene eines Entwicklerteams.",
   "body": [
     {
       "type": "paragraph",
-      "text": "Kris Roberts hat jahrelang für Rockstar gearbeitet: zuerst am Fahrverhalten der Fahrzeuge in der Midnight-Club-Reihe, später als Design-Lead für die Mehrspieler-Modi von Red Dead Redemption. In einem Interview mit dem YouTube-Kanal Kiwi Talks bezeichnet er die letzten sechs Monate an dem Western-Epos als die härteste Crunch-Phase seiner gesamten Laufbahn — und sagt zugleich, ein Teil der Überstunden habe dem Spiel gar nicht geholfen. Es sei darum gegangen, für besuchende Führungskräfte eine Show abzuliefern."
+      "text": "Kris Roberts hat jahrelang für Rockstar gearbeitet: zuerst am Fahrverhalten der Fahrzeuge in der Midnight-Club-Reihe, später als Design-Lead für die Mehrspieler-Modi von Red Dead Redemption. In einem Interview mit dem YouTube-Kanal Kiwi Talks bezeichnet er die letzten sechs Monate an dem Western-Epos als die härteste Crunch-Phase seiner gesamten Laufbahn - und sagt zugleich, ein Teil der Überstunden habe dem Spiel gar nicht geholfen. Es sei darum gegangen, für besuchende Führungskräfte eine Show abzuliefern."
     },
     {
       "type": "embed",
@@ -43,12 +43,12 @@
           "label": "die Schlussphase von Red Dead Redemption, laut Roberts die schlimmste Crunch-Zeit seiner Karriere"
         },
         {
-          "value": "9:30–18:00",
+          "value": "9:30-18:00",
           "label": "die ursprünglich vereinbarten «Core Hours» für festangestellte Entwickler:innen"
         },
         {
           "value": "7 Tage",
-          "label": "Arbeitswoche am Ende der Produktion — «jeden Tag, den ganzen Tag»"
+          "label": "Arbeitswoche am Ende der Produktion - «jeden Tag, den ganzen Tag»"
         }
       ]
     },
@@ -85,7 +85,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Am meisten stören ihn rückblickend jene Einsätze, die er «künstlich» nennt: kurzfristig ausgerufene «All hands on deck»-Wochenenden, die mit Besuchen von Führungsfiguren wie Sam Houser und Leslie Benzies zusammenfielen. Freitags um 16:30 Uhr sei eine Mail gekommen, dass am Wochenende alle anwesend sein müssten — gefolgt von einer zweiten Mail, die klarstellte, dass damit nicht nur der Samstag gemeint sei."
+      "text": "Am meisten stören ihn rückblickend jene Einsätze, die er «künstlich» nennt: kurzfristig ausgerufene «All hands on deck»-Wochenenden, die mit Besuchen von Führungsfiguren wie Sam Houser und Leslie Benzies zusammenfielen. Freitags um 16:30 Uhr sei eine Mail gekommen, dass am Wochenende alle anwesend sein müssten - gefolgt von einer zweiten Mail, die klarstellte, dass damit nicht nur der Samstag gemeint sei."
     },
     {
       "type": "quote",
@@ -94,7 +94,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Entscheidend ist für ihn die Begründung — oder deren Fehlen. Es sei nicht um eine bestimmte Zahl offener Tickets im hauseigenen Bugtracker Bugstar gegangen, nicht um kritische Fehler vor dem nächsten Build und auch nicht um einen belegbaren geschäftlichen Grund. Sondern, so Roberts, darum, «die Show abzuziehen, dass alle immer da sind, weil gerade ein Manager zu Besuch ist»."
+      "text": "Entscheidend ist für ihn die Begründung - oder deren Fehlen. Es sei nicht um eine bestimmte Zahl offener Tickets im hauseigenen Bugtracker Bugstar gegangen, nicht um kritische Fehler vor dem nächsten Build und auch nicht um einen belegbaren geschäftlichen Grund. Sondern, so Roberts, darum, «die Show abzuziehen, dass alle immer da sind, weil gerade ein Manager zu Besuch ist»."
     },
     {
       "type": "heading",
@@ -102,7 +102,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Roberts räumt ein, dass er sich mit der Kritik unwohl fühlt: Bei Midnight Club habe er sich den Crunch teils selbst auferlegt, weil ihm die Arbeit wichtig war. Bei Red Dead Redemption sei die Lage eine andere gewesen — nicht zuletzt, weil er als Design-Lead die Wochenend-Ansagen an sein eigenes Team weitergeben musste. Genau das habe den Ausschlag gegeben, das Studio zu verlassen; unter den Gründen für seinen Abgang stehe es «locker in den Top vier», sagt er mit einem Augenzwinkern."
+      "text": "Roberts räumt ein, dass er sich mit der Kritik unwohl fühlt: Bei Midnight Club habe er sich den Crunch teils selbst auferlegt, weil ihm die Arbeit wichtig war. Bei Red Dead Redemption sei die Lage eine andere gewesen - nicht zuletzt, weil er als Design-Lead die Wochenend-Ansagen an sein eigenes Team weitergeben musste. Genau das habe den Ausschlag gegeben, das Studio zu verlassen; unter den Gründen für seinen Abgang stehe es «locker in den Top vier», sagt er mit einem Augenzwinkern."
     },
     {
       "type": "heading",
@@ -110,11 +110,11 @@
     },
     {
       "type": "paragraph",
-      "text": "Neu ist die Debatte nicht. Rund um den Release von Red Dead Redemption 2 wurde Rockstars Umgang mit Überstunden öffentlich diskutiert; das Unternehmen reagierte damals mit Aussagen von Mitarbeitenden, die den Alltag deutlich weniger dramatisch schilderten. Vorwürfe zu Überarbeitung gibt es dennoch weiterhin — und Schutzmechanismen gegen Crunch gehören zu den zentralen Punkten jener Beschäftigten, die sich derzeit bei Rockstar gewerkschaftlich organisieren. Entlassene Entwickler:innen haben zuletzt zudem darum gebeten, GTA 6 nicht zu boykottieren, sondern stattdessen ihren Rechtsstreit zu unterstützen."
+      "text": "Neu ist die Debatte nicht. Rund um den Release von Red Dead Redemption 2 wurde Rockstars Umgang mit Überstunden öffentlich diskutiert; das Unternehmen reagierte damals mit Aussagen von Mitarbeitenden, die den Alltag deutlich weniger dramatisch schilderten. Vorwürfe zu Überarbeitung gibt es dennoch weiterhin - und Schutzmechanismen gegen Crunch gehören zu den zentralen Punkten jener Beschäftigten, die sich derzeit bei Rockstar gewerkschaftlich organisieren. Entlassene Entwickler:innen haben zuletzt zudem darum gebeten, GTA 6 nicht zu boykottieren, sondern stattdessen ihren Rechtsstreit zu unterstützen."
     },
     {
       "type": "paragraph",
-      "text": "Einordnung: Roberts' Schilderung betrifft ein Spiel von 2010 und ist die Sicht eines einzelnen Beteiligten, nicht ein bestätigter Befund über die heutige Praxis im Studio. Interessant macht sie trotzdem ein Detail, das über Rockstar hinausweist: Nicht die Menge der Arbeit war für ihn das Problem, sondern Überstunden ohne Zweck. Genau an dieser Unterscheidung — Notwendigkeit gegen Symbolik — entscheidet sich, ob Crunch als Ausnahme oder als Kultur gilt. Rockstar hat sich zu den Aussagen bislang nicht geäussert."
+      "text": "Einordnung: Roberts' Schilderung betrifft ein Spiel von 2010 und ist die Sicht eines einzelnen Beteiligten, nicht ein bestätigter Befund über die heutige Praxis im Studio. Interessant macht sie trotzdem ein Detail, das über Rockstar hinausweist: Nicht die Menge der Arbeit war für ihn das Problem, sondern Überstunden ohne Zweck. Genau an dieser Unterscheidung - Notwendigkeit gegen Symbolik - entscheidet sich, ob Crunch als Ausnahme oder als Kultur gilt. Rockstar hat sich zu den Aussagen bislang nicht geäussert."
     }
   ],
   "poll": {
@@ -123,7 +123,7 @@
       "Ja, ich kaufe bewusst nicht",
       "Nein, ich trenne Spiel und Studio",
       "Ich warte ab, was die laufenden Verfahren ergeben",
-      "Boykott hilft niemandem — lieber die Devs unterstützen"
+      "Boykott hilft niemandem - lieber die Devs unterstützen"
     ]
   },
   "isLeakOrRumor": false,
@@ -143,7 +143,7 @@
   ],
   "image": {
     "src": "/images/articles/rockstar-crunch-kris-roberts-red-dead-redemption-2026.webp",
-    "alt": "«Das ist inakzeptabel» — Ex-Rockstar-Dev über Crunch bei Red Dead",
+    "alt": "«Das ist inakzeptabel» - Ex-Rockstar-Dev über Crunch bei Red Dead",
     "credit": "Bild: GamesRadar",
     "sourceUrl": "https://www.gamesradar.com/games/red-dead/thats-unacceptable-red-dead-redemption-dev-says-crunch-at-rockstar-was-to-put-on-the-show-for-executives-not-to-fix-bugs/",
     "sourceWidth": 1280,

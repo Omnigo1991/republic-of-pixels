@@ -1,20 +1,20 @@
-// UMLAUT-WÄCHTER (Tim, 12.08.2026) — findet ausgeschriebene Umlaute.
+// UMLAUT-WÄCHTER (Tim, 12.08.2026) - findet ausgeschriebene Umlaute.
 //
 // WARUM ES DIESE DATEI GIBT: Am 12.08. stand "ZURUECK" statt "ZURÜCK" auf
 // einem Post. Meine erste Antwort darauf war eine LISTE der Wörter, die es
 // in der ue/oe/ae-Schreibweise nicht gibt. Beim ersten Test des nächsten
-// Formats fielen prompt "WUERDET" und "laeuft" durch — beide standen nicht
+// Formats fielen prompt "WUERDET" und "laeuft" durch - beide standen nicht
 // auf der Liste. Eine Wortliste ist prinzipiell immer einen Fehler hinterher;
 // genau dieser Denkfehler hat uns diese Woche acht Mal eingeholt.
 //
 // Diese Prüfung arbeitet stattdessen am MUSTER. Ein ausgeschriebener Umlaut
-// ist ein "ae", "oe" oder "ue", dem kein Vokal vorangeht — bei echten
+// ist ein "ae", "oe" oder "ue", dem kein Vokal vorangeht - bei echten
 // Doppellauten steht immer ein Vokal davor (neue, Frauen, Abenteuer, heute).
 // Dazu vier bauliche Ausnahmen und eine kurze Liste echter Wörter, die dem
 // Muster zufällig entsprechen.
 
 // Wörter, die dem Muster entsprechen, aber korrekt sind. Bewusst kurz
-// gehalten — jeder Eintrag hier ist eine Lücke im Wächter. Aufgenommen wird
+// gehalten - jeder Eintrag hier ist eine Lücke im Wächter. Aufgenommen wird
 // nur, was in unserem Umfeld (Gaming, deutsch/englisch gemischt) real
 // vorkommt.
 const AUSNAHMEN = new Set([
@@ -31,7 +31,7 @@ const AUSNAHMEN = new Set([
 const VOKALE = new Set(["a", "e", "i", "o", "u", "ä", "ö", "ü", "y"]);
 
 // FUGEN-"ue" (Fund 14.08.2026, Guide-Entwurf): In "zuerst" stossen "zu" und
-// "erst" aneinander — das "ue" ist eine Wortfuge, kein ausgeschriebenes "ü".
+// "erst" aneinander - das "ue" ist eine Wortfuge, kein ausgeschriebenes "ü".
 // Der Waechter meldete es als Verstoss; auf Instagram haette das Wort einen
 // Post verworfen. Ein Muster dafuer gibt es nicht ohne Woerterbuch, darum
 // die gaengigen Faelle als Ausnahmen.
@@ -43,7 +43,7 @@ for (const w of ["zuerst", "allzuerst", "zuende", "zueinander", "zuoberst", "zuu
 //
 // Die erste Fassung entfernte alle Nicht-Buchstaben aus dem Wort. Damit
 // klebten Bestandteile aneinander, die im Text getrennt stehen:
-// "GTA-6-Edition" wurde zu "gtaedition" — das "a" von GTA und das "E" von
+// "GTA-6-Edition" wurde zu "gtaedition" - das "a" von GTA und das "E" von
 // Edition ergaben ein "ae", das es nie gab. Der Post wurde verworfen, der
 // Slot war weg.
 //

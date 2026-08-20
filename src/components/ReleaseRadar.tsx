@@ -13,7 +13,7 @@ interface ReleaseEntry {
 }
 
 // Release-Radar: kuratierte Leiste der nächsten Releases (Nutzwert-Sektion,
-// die reine News-Ticker nicht bieten). Datenquelle: src/content/releases.json —
+// die reine News-Ticker nicht bieten). Datenquelle: src/content/releases.json -
 // wird redaktionell bzw. künftig von der Pipeline gepflegt; vergangene Termine
 // fallen beim Build automatisch raus.
 export function ReleaseRadar() {
@@ -40,7 +40,7 @@ export function ReleaseRadar() {
           const inner = (
             <div className="flex h-full min-w-0 items-center gap-4 rounded-2xl border border-border-subtle bg-surface-card p-4 transition-all duration-300 hover:bg-surface-hover">
               {/* Navy-Umbau: Die Karte ist jetzt Cyan, also kehrt sich das
-                  Datumskaestchen um — Navy-Flaeche mit Cyan-Schrift.
+                  Datumskaestchen um - Navy-Flaeche mit Cyan-Schrift.
                   Vorher stand Cyan auf Cyan und der Monat verschwand. */}
               <div className="flex h-14 w-14 shrink-0 flex-col items-center justify-center rounded-2xl bg-navy">
                 <span className="text-lg font-bold leading-none text-accent">

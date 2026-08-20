@@ -16,7 +16,7 @@ export const FEEDS = [
   // Deutschsprachige Quellen (Markt- und Themennähe)
   { id: "gamestar", name: "GameStar", url: "https://www.gamestar.de/news/rss/news.rss", lang: "de", weight: 1.0 },
   { id: "play3", name: "play3.de", url: "https://www.play3.de/feed/", lang: "de", weight: 0.9 },
-  // GamePro blockt Bot-Abrufe serverseitig (HTTP 403, geprüft 04.08.2026) — entfernt.
+  // GamePro blockt Bot-Abrufe serverseitig (HTTP 403, geprüft 04.08.2026) - entfernt.
   // Hardware & Konsolen-Ökosystem (05.08.2026: PS6-/Xbox-Helix-Leaks, GPUs, Handhelds)
   { id: "computerbase", name: "ComputerBase", url: "https://www.computerbase.de/rss/news.xml", lang: "de", weight: 0.9 },
   { id: "tomshardware", name: "Tom's Hardware", url: "https://www.tomshardware.com/feeds/all", lang: "en", weight: 0.9 },
@@ -36,7 +36,7 @@ export const FEEDS = [
   { id: "destructoid", name: "Destructoid", url: "https://www.destructoid.com/feed/", lang: "en", weight: 0.7 },
   { id: "theverge_games", name: "The Verge Games", url: "https://www.theverge.com/rss/games/index.xml", lang: "en", weight: 0.9 },
   // Dedizierte Review-Feeds (06.08.2026): erhöhen gezielt die Trefferquote
-  // für die "reviews"-Kategorie — jeder Eintrag hier ist bereits ein Test,
+  // für die "reviews"-Kategorie - jeder Eintrag hier ist bereits ein Test,
   // nicht nur eine News über ein Spiel.
   { id: "gamespot_reviews", name: "GameSpot", url: "https://www.gamespot.com/feeds/reviews/", lang: "en", weight: 1.0 },
   { id: "eurogamer_reviews", name: "Eurogamer", url: "https://www.eurogamer.net/feed/reviews", lang: "en", weight: 1.0 },

@@ -8,7 +8,7 @@ automatisch in GitHub Actions.
 
 ## Mit wem du arbeitest
 
-Tim Winiger, Gründer und Betreiber. **Kein Entwickler** — erklär Technisches in
+Tim Winiger, Gründer und Betreiber. **Kein Entwickler** - erklär Technisches in
 normaler Sprache, ohne Fachjargon und ohne Herablassung. Er hat ein sehr gutes
 Auge für Gestaltung und findet Fehler, die Messwerte nicht zeigen.
 
@@ -18,7 +18,7 @@ etwas eine schlechte Idee ist.
 
 ## Feste Regeln
 
-- **Schweizer Rechtschreibung.** Niemals „ß", immer „ss" — auf der Seite, in
+- **Schweizer Rechtschreibung.** Niemals „ß", immer „ss" - auf der Seite, in
   Posts, in Commit-Nachrichten.
 - **„Republic of Pixels" nie mit Bindestrichen** verbinden.
 - **Cyan ist #02F0D1**, Navy ist #0C0B1A. Exakt diese Werte.
@@ -38,7 +38,7 @@ ERGEBNIS. Daraus folgt eine Regel, die über allem steht:
 > **Eine Regel, die nur im Prompt steht, ist keine Regel.** Jede Vorgabe an
 > Claude muss zusätzlich im Code geprüft werden.
 
-Deshalb gibt es `pipeline/lib/abnahme.mjs` — sie misst am fertig gerenderten
+Deshalb gibt es `pipeline/lib/abnahme.mjs` - sie misst am fertig gerenderten
 Bild und verhindert die Veröffentlichung, wenn etwas nicht stimmt.
 
 ## Wo was liegt
@@ -61,17 +61,17 @@ Bildausschnitt, Textlayout oder Verlauf.
 
 ## Posting-Regeln Instagram
 
-5 Posts pro Tag als Soll, Deckel 6, Fenster 9–21 Uhr (Europe/Zurich) entlang
+5 Posts pro Tag als Soll, Deckel 6, Fenster 9-21 Uhr (Europe/Zurich) entlang
 einer Tageskurve. Breaking geht immer sofort. Zwei Phasen im selben Lauf:
 `prepare` vor dem Commit, `publish` nach dem Push (wartet, bis Vercel die
 Grafik ausliefert).
 
 ## Umgebung
 
-Projektordner: `~/Projekte/Republic of Pixels (Website)` — **bewusst nicht auf
+Projektordner: `~/Projekte/Republic of Pixels (Website)` - **bewusst nicht auf
 dem Schreibtisch**, weil iCloud sonst 15 000 Dateien synchronisiert und den
-Mac lahmlegt (passiert am 11.–13.08.2026).
+Mac lahmlegt (passiert am 11.-13.08.2026).
 
 Tims Mac hat 8 GB RAM und einen Ultrawide-Bildschirm. Serien-Renderings
-belasten ihn spürbar — bei vielen Testgrafiken lieber auf dem Server rendern
+belasten ihn spürbar - bei vielen Testgrafiken lieber auf dem Server rendern
 oder ihn vorwarnen.

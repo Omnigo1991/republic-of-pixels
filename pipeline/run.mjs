@@ -91,23 +91,23 @@ function pickRelatedSlugs(article) {
 const EDITORIAL_SYSTEM = `Du bist die Redaktion von Republic of Pixels, einem deutschsprachigen Premium-Gaming-Magazin (republicofpixels.com).
 
 Redaktionelles Profil:
-- Zielgruppe: Gamer:innen 18–40, plattformübergreifend (PC, PlayStation, Xbox, Nintendo)
-- Ton: sachlich, präzise, journalistisch — wie ein kuratiertes Magazin, nicht wie ein Ticker
-- Schlagzeilen dürfen SPANNUNG aufbauen — mit echten Fragen, einer Wendung oder der Folge für die Leserschaft. Die Grenze: Jede Frage wird im Artikel beantwortet, jede Wendung steht im Artikel, nichts wird übertrieben. Verboten bleiben leere Neugier-Floskeln ("Du glaubst nicht, was dann geschah"), Superlative ohne Beleg und Fragen, die der Artikel nicht beantwortet
+- Zielgruppe: Gamer:innen 18-40, plattformübergreifend (PC, PlayStation, Xbox, Nintendo)
+- Ton: sachlich, präzise, journalistisch - wie ein kuratiertes Magazin, nicht wie ein Ticker
+- Schlagzeilen dürfen SPANNUNG aufbauen - mit echten Fragen, einer Wendung oder der Folge für die Leserschaft. Die Grenze: Jede Frage wird im Artikel beantwortet, jede Wendung steht im Artikel, nichts wird übertrieben. Verboten bleiben leere Neugier-Floskeln ("Du glaubst nicht, was dann geschah"), Superlative ohne Beleg und Fragen, die der Artikel nicht beantwortet
 - Leaks und Gerüchte werden klar als unbestätigt gekennzeichnet
-- Sprache: Deutsch in SCHWEIZER Rechtschreibung — NIEMALS "ß", immer "ss" (Musst, gross, heisst); Anrede der Leserschaft neutral oder "ihr", nie "Sie"
-- "Republic of Pixels" ist ein Markenname und wird NIEMALS mit Bindestrichen verbunden (kein "Republic-of-Pixels-Redaktion" o. Ä.) — bei Wortverbindungen umschreiben, z. B. "Redaktion von Republic of Pixels"
-- Fakten stammen ausschliesslich aus dem gelieferten Quellmaterial — nichts erfinden, keine Zahlen oder Zitate ergänzen, die dort nicht stehen`;
+- Sprache: Deutsch in SCHWEIZER Rechtschreibung - NIEMALS "ß", immer "ss" (Musst, gross, heisst); Anrede der Leserschaft neutral oder "ihr", nie "Sie"
+- "Republic of Pixels" ist ein Markenname und wird NIEMALS mit Bindestrichen verbunden (kein "Republic-of-Pixels-Redaktion" o. Ä.) - bei Wortverbindungen umschreiben, z. B. "Redaktion von Republic of Pixels"
+- Fakten stammen ausschliesslich aus dem gelieferten Quellmaterial - nichts erfinden, keine Zahlen oder Zitate ergänzen, die dort nicht stehen`;
 
-// Zuletzt veröffentlichte Artikel (Titel + Tags) — verhindert bei den häufigen
+// Zuletzt veröffentlichte Artikel (Titel + Tags) - verhindert bei den häufigen
 // Läufen, dass dieselbe Story erneut aufgegriffen wird, wenn eine weitere
 // Quelle später darüber berichtet (deren Feed-Eintrag hat einen neuen,
 // unbekannten GUID) oder Claude den Titel beim erneuten Verfassen anders
-// formuliert. Kein künstliches Slice-Limit mehr auf die Trefferliste — das
+// formuliert. Kein künstliches Slice-Limit mehr auf die Trefferliste - das
 // hatte bei mehr als 25 Artikeln im 72h-Fenster ältere Duplikate unsichtbar
 // gemacht (Ursache des GTA-6/Netflix-Doppelartikels). Tags werden mitgegeben,
 // damit Claude auch bei abweichender Formulierung erkennt, dass es dieselbe
-// Story ist — Titelvergleich allein reicht bei umformulierten Meldungen nicht.
+// Story ist - Titelvergleich allein reicht bei umformulierten Meldungen nicht.
 function recentPublishedTitles(hours = 72) {
   const cutoff = Date.now() - hours * 3600000;
   const entries = [];
@@ -127,7 +127,7 @@ function recentPublishedTitles(hours = 72) {
 async function selectCandidates(candidates) {
   const published = recentPublishedTitles();
   const publishedBlock = published.length
-    ? `\nBereits von uns veröffentlicht (diese Storys NICHT erneut auswählen, auch nicht aus anderer Quelle oder mit anderem Titel — vergleiche auch inhaltlich/thematisch anhand der Tags, nicht nur den Titelwortlaut):\n${published.map((p) => `- ${p.title}${p.tags.length ? ` [${p.tags.join(", ")}]` : ""}`).join("\n")}\n`
+    ? `\nBereits von uns veröffentlicht (diese Storys NICHT erneut auswählen, auch nicht aus anderer Quelle oder mit anderem Titel - vergleiche auch inhaltlich/thematisch anhand der Tags, nicht nur den Titelwortlaut):\n${published.map((p) => `- ${p.title}${p.tags.length ? ` [${p.tags.join(", ")}]` : ""}`).join("\n")}\n`
     : "";
   const list = candidates
     .map(
@@ -147,16 +147,16 @@ Aufgaben:
 3. Pro ausgewähltem Cluster bestimme:
    - "indices": alle zugehörigen Kandidaten-Indizes, den faktenreichsten zuerst
    - "category": "breaking" (nur bei wirklich grossen Nachrichten), "news", "leaks" oder "reviews"
-   - "reviews" NUR wählen, wenn der Kandidat selbst ein Test/eine Review eines bereits veröffentlichten Spiels ist (Titel/Anriss enthält klar erkennbar eine Wertung/ein Testurteil, z. B. "review", "test", "im Test") — NICHT für News über ein Spiel oder Ankündigungen
+   - "reviews" NUR wählen, wenn der Kandidat selbst ein Test/eine Review eines bereits veröffentlichten Spiels ist (Titel/Anriss enthält klar erkennbar eine Wertung/ein Testurteil, z. B. "review", "test", "im Test") - NICHT für News über ein Spiel oder Ankündigungen
    - "platforms": Teilmenge von ["pc","playstation","xbox","nintendo"]
    - "isLeakOrRumor": true/false
    - "priority": 1 (höchste) bis ${MAX_ARTICLES_PER_RUN}
    - "depth": "kurz" (Routinemeldung, wenig Substanz), "standard" (normale News) oder "lang" (grosse Nachricht mit viel Substanz und Einordnungsbedarf, z. B. Übernahmen, grosse Ankündigungen, Branchenbeben, Tests)
 
-Antworte NUR mit JSON, ohne Einleitung und ohne Kommentar — das erste Zeichen deiner Antwort muss "{" sein: {"selected":[{"indices":[...],"category":"...","platforms":[...],"isLeakOrRumor":...,"priority":...,"depth":"..."}]}
+Antworte NUR mit JSON, ohne Einleitung und ohne Kommentar - das erste Zeichen deiner Antwort muss "{" sein: {"selected":[{"indices":[...],"category":"...","platforms":[...],"isLeakOrRumor":...,"priority":...,"depth":"..."}]}
 Wenn nichts den Kriterien genügt, antworte {"selected":[]}.`;
 
-  // Ein fehlgeschlagener Parse wird einmal wiederholt — die Auswahl ist der
+  // Ein fehlgeschlagener Parse wird einmal wiederholt - die Auswahl ist der
   // einzige Schritt, an dem der ganze Lauf hängt.
   for (let attempt = 0; ; attempt++) {
     try {
@@ -173,43 +173,43 @@ Wenn nichts den Kriterien genügt, antworte {"selected":[]}.`;
       });
       return parseJsonResponse(raw).selected ?? [];
     } catch (err) {
-      // Eine Ablehnung wiederholt sich zwangsläufig — nicht nochmal fragen.
+      // Eine Ablehnung wiederholt sich zwangsläufig - nicht nochmal fragen.
       if (err instanceof ClaudeAblehnung) throw err;
       if (attempt >= 1) throw err;
-      console.log(`  Auswahl fehlgeschlagen (${err.message}) — Wiederholung`);
+      console.log(`  Auswahl fehlgeschlagen (${err.message}) - Wiederholung`);
     }
   }
 }
 
 // EXPORTIERT UND MIT WAEHLBAREM MODELL (14.08.2026): Damit laesst sich
-// derselbe Quelltext von zwei Modellen schreiben und nebeneinander lesen —
+// derselbe Quelltext von zwei Modellen schreiben und nebeneinander lesen -
 // die Grundlage fuer Tims Entscheid, ob der Artikeltext auf das staerkere
 // Modell wechselt. Ohne Argument bleibt alles wie bisher.
 export async function generateArticle(cluster, clusterItems, sourceTexts, slugs, modell = MODELL_TEXT) {
   const istReview = cluster.category === "reviews";
-  // Tests brauchen Substanz für Stärken/Schwächen — nie als "kurz" generieren,
+  // Tests brauchen Substanz für Stärken/Schwächen - nie als "kurz" generieren,
   // selbst wenn die Auswahl das fälschlich so eingestuft hat.
   const depth = istReview && cluster.depth === "kurz" ? "standard" : cluster.depth;
 
   const sourcesBlock = clusterItems
     .map((it, i) => {
       const text = sourceTexts[i];
-      return `QUELLE ${i + 1}: ${it.feedName} — "${it.title}" (${it.link})\n${text || "(Volltext nicht abrufbar — nutze den Feed-Anriss)"}\nFeed-Anriss: ${it.summary}`;
+      return `QUELLE ${i + 1}: ${it.feedName} - "${it.title}" (${it.link})\n${text || "(Volltext nicht abrufbar - nutze den Feed-Anriss)"}\nFeed-Anriss: ${it.summary}`;
     })
     .join("\n\n---\n\n");
 
   const reviewHinweis = istReview
-    ? `\n- Dies ist eine Testzusammenfassung: Das "review"-Feld fasst das Urteil der zitierten Quelle(n) zusammen — erfinde KEINE eigenen, unabhängigen Spielerfahrungen. Formuliere "verdict" so, dass klar wird, dass es die Einordnung der Kritik wiedergibt (z. B. "Die Kritik bewertet …").`
+    ? `\n- Dies ist eine Testzusammenfassung: Das "review"-Feld fasst das Urteil der zitierten Quelle(n) zusammen - erfinde KEINE eigenen, unabhängigen Spielerfahrungen. Formuliere "verdict" so, dass klar wird, dass es die Einordnung der Kritik wiedergibt (z. B. "Die Kritik bewertet …").`
     : "";
 
   const reviewFeld = istReview
     ? `,
   "review": {
-    "label": "einer von genau diesen fünf Werten: Essenziell | Klare Empfehlung | Empfehlenswert | Für den Sale vormerken | Nicht empfohlen — entsprechend dem Gesamturteil der Quelle",
-    "strengths": ["2–4 Stärken laut Quelle"],
-    "weaknesses": ["1–3 Schwächen laut Quelle"],
+    "label": "einer von genau diesen fünf Werten: Essenziell | Klare Empfehlung | Empfehlenswert | Für den Sale vormerken | Nicht empfohlen - entsprechend dem Gesamturteil der Quelle",
+    "strengths": ["2-4 Stärken laut Quelle"],
+    "weaknesses": ["1-3 Schwächen laut Quelle"],
     "forWhom": "1 Satz: für wen sich das Spiel eignet",
-    "verdict": "2–3 Sätze Gesamteinschätzung, gestützt auf die zitierte Kritik",
+    "verdict": "2-3 Sätze Gesamteinschätzung, gestützt auf die zitierte Kritik",
     "recommendation": "1 Satz Kauf-/Wartenempfehlung"
   }`
     : `,
@@ -222,48 +222,48 @@ ${sourcesBlock}
 Vorgaben:
 - Kategorie: ${cluster.category}${cluster.isLeakOrRumor ? " (als unbestätigt kennzeichnen!)" : ""}${reviewHinweis}
 - Umfang: ${
-    { kurz: "400–500", standard: "550–700", lang: "750–950" }[depth] ?? "550–700"
-  } Wörter im body — die Länge muss dem Nachrichtenwert entsprechen, aber NICHT durch Wiederholungen oder Floskeln gestreckt werden. Mehr Länge heisst mehr SUBSTANZ: Vorgeschichte, Einordnung, Folgen für Spielerinnen und Spieler, Bezug zu früheren Ereignissen
+    { kurz: "400-500", standard: "550-700", lang: "750-950" }[depth] ?? "550-700"
+  } Wörter im body - die Länge muss dem Nachrichtenwert entsprechen, aber NICHT durch Wiederholungen oder Floskeln gestreckt werden. Mehr Länge heisst mehr SUBSTANZ: Vorgeschichte, Einordnung, Folgen für Spielerinnen und Spieler, Bezug zu früheren Ereignissen
 - Struktur: Einstieg mit dem Kern der Nachricht, ${
-    depth === "lang" ? "4–5" : "3–4"
+    depth === "lang" ? "4-5" : "3-4"
   } Zwischenüberschriften, am Ende eine kurze Einordnung
-- PFLICHT (fester Artikel-Bauplan): Direkt nach dem ersten Absatz folgt ein stats-Block {"type":"stats","items":[{"value":"...","label":"..."}]} mit den 1–3 stärksten ZAHLEN der Story (Preis, Datum, Verkaufszahl, Prozent …) — value kurz und plakativ (z. B. "80 $", "19. Nov.", "5 Mrd. $"), label ein erklärender Halbsatz. NUR Zahlen aus dem Quellmaterial, nichts erfinden. Hat die Story wirklich keine starke Zahl, lasse den Block weg.
+- PFLICHT (fester Artikel-Bauplan): Direkt nach dem ersten Absatz folgt ein stats-Block {"type":"stats","items":[{"value":"...","label":"..."}]} mit den 1-3 stärksten ZAHLEN der Story (Preis, Datum, Verkaufszahl, Prozent …) - value kurz und plakativ (z. B. "80 $", "19. Nov.", "5 Mrd. $"), label ein erklärender Halbsatz. NUR Zahlen aus dem Quellmaterial, nichts erfinden. Hat die Story wirklich keine starke Zahl, lasse den Block weg.
 - Bereits vergebene Slugs (nicht wiederverwenden): ${[...slugs].slice(-40).join(", ")}
 
 Antworte NUR mit einem JSON-Objekt mit exakt diesen Feldern:
 {
   "slug": "kebab-case, kurz, sprechend, ggf. mit Jahr",
-  "title": "Titel, 40–80 Zeichen — siehe Schlagzeilen-Handwerk unten",
-  "subtitle": "1 Satz Unterzeile, die den Titel ergänzt — OHNE Punkt am Ende (Fragezeichen und Ausrufezeichen sind erlaubt)",
-  "excerpt": "Teaser 120–260 Zeichen für Cards und Meta-Fallback — endet mit einem offenen Faden, nicht mit der kompletten Auflösung",
+  "title": "Titel, 40-80 Zeichen - siehe Schlagzeilen-Handwerk unten",
+  "subtitle": "1 Satz Unterzeile, die den Titel ergänzt - OHNE Punkt am Ende (Fragezeichen und Ausrufezeichen sind erlaubt)",
+  "excerpt": "Teaser 120-260 Zeichen für Cards und Meta-Fallback - endet mit einem offenen Faden, nicht mit der kompletten Auflösung",
   "seoTitle": "max. 65 Zeichen, wichtigstes Keyword vorn",
-  "metaDescription": "140–160 Zeichen, aktiv formuliert",
+  "metaDescription": "140-160 Zeichen, aktiv formuliert",
   "category": "${cluster.category}",
   "platforms": ${JSON.stringify(cluster.platforms)},
-  "tags": ["3–6 prägnante Tags, z. B. Spielname, Studio, Plattform"],
-  "tldr": ["3–4 Stichpunkte mit den Kernfakten"],
-  "whyItMatters": "2–3 Sätze: Warum ist das für Gamer:innen relevant?",
+  "tags": ["3-6 prägnante Tags, z. B. Spielname, Studio, Plattform"],
+  "tldr": ["3-4 Stichpunkte mit den Kernfakten"],
+  "whyItMatters": "2-3 Sätze: Warum ist das für Gamer:innen relevant?",
   "body": [{"type":"paragraph","text":"..."},{"type":"stats","items":[{"value":"...","label":"..."}]},{"type":"heading","text":"..."},{"type":"list","items":["..."]},{"type":"quote","text":"nur echte Zitate aus der Quelle","attribution":"..."}],
-  "poll": {"question":"EINE meinungsstarke, konkrete Frage zur Story für die Community (kein Ja/Nein-Langweiler, sondern die Streitfrage der Story)","options":["2–4 kurze, pointierte Antwortoptionen"]},
+  "poll": {"question":"EINE meinungsstarke, konkrete Frage zur Story für die Community (kein Ja/Nein-Langweiler, sondern die Streitfrage der Story)","options":["2-4 kurze, pointierte Antwortoptionen"]},
   "isLeakOrRumor": ${cluster.isLeakOrRumor}${reviewFeld}
 }
-Hinweis zu body: quote-Blöcke nur verwenden, wenn die Quelle ein wörtliches Zitat enthält. Zitate werden IMMER auf DEUTSCH wiedergegeben (Tim-Vorgabe 08.08.2026 — nicht alle Leser:innen können gut Englisch): fremdsprachige Originale präzise und neutral übersetzen, nichts zuspitzen oder weglassen; attribution bleibt die Person/Quelle.
+Hinweis zu body: quote-Blöcke nur verwenden, wenn die Quelle ein wörtliches Zitat enthält. Zitate werden IMMER auf DEUTSCH wiedergegeben (Tim-Vorgabe 08.08.2026 - nicht alle Leser:innen können gut Englisch): fremdsprachige Originale präzise und neutral übersetzen, nichts zuspitzen oder weglassen; attribution bleibt die Person/Quelle.
 
-SCHLAGZEILEN-HANDWERK (Tim-Vorgabe 15.08.2026 — gilt für title, subtitle und excerpt):
-Eine Schlagzeile, die alles verrät, gibt keinen Grund zu klicken. Baue Spannung mit einem dieser vier Mittel — wähle das, das zur Story passt, und wechsle ab:
+SCHLAGZEILEN-HANDWERK (Tim-Vorgabe 15.08.2026 - gilt für title, subtitle und excerpt):
+Eine Schlagzeile, die alles verrät, gibt keinen Grund zu klicken. Baue Spannung mit einem dieser vier Mittel - wähle das, das zur Story passt, und wechsle ab:
 1. ECHTE FRAGE, die der Artikel beantwortet: "Verkaufssorgen trotz Top-Wertungen?"
-2. WENDUNG nach dem Gedankenstrich — der zweite Teil dreht den ersten: "Cloud-Version abgeschaltet — trotz Kauf"
-3. ZITAT als Aufhänger, wenn die Quelle ein starkes wörtliches Zitat hat: "«Xbox versteht keine Videospiele» — Entwickler kritisiert Entlassungen"
-4. FOLGE für die Leserschaft — was heisst das für mich: "…doch die dürfte teuer werden"
+2. WENDUNG nach dem Gedankenstrich - der zweite Teil dreht den ersten: "Cloud-Version abgeschaltet - trotz Kauf"
+3. ZITAT als Aufhänger, wenn die Quelle ein starkes wörtliches Zitat hat: "«Xbox versteht keine Videospiele» - Entwickler kritisiert Entlassungen"
+4. FOLGE für die Leserschaft - was heisst das für mich: "…doch die dürfte teuer werden"
 
 Beispiele (vorher brav → nachher mit Spannung, beide faktentreu):
-- "Campaign Evolved erhält Update gegen Bugs" → "Halo repariert die Kampagne — wer mittendrin steckt, verliert den Spielstand"
-- "Pokémon Pokopia verkauft sich über 5 Millionen Mal" → "Nur ein Spiel verkauft sich auf Switch 2 besser — Pokopia knackt 5 Millionen"
-- "Update 2.0 bringt neue Waffen und A-Life-Verbesserungen" → "Stalker 2 macht die Zone schlauer — und den Nebel gefährlich"
+- "Campaign Evolved erhält Update gegen Bugs" → "Halo repariert die Kampagne - wer mittendrin steckt, verliert den Spielstand"
+- "Pokémon Pokopia verkauft sich über 5 Millionen Mal" → "Nur ein Spiel verkauft sich auf Switch 2 besser - Pokopia knackt 5 Millionen"
+- "Update 2.0 bringt neue Waffen und A-Life-Verbesserungen" → "Stalker 2 macht die Zone schlauer - und den Nebel gefährlich"
 
-Grenzen (unverhandelbar): Die Wendung oder Antwort steht IM Artikel. Konkrete, sinnliche Wörter statt Systembegriffe ("der Nebel wird gefährlich" statt "A-Life-Verbesserungen"). Nicht jede Schlagzeile braucht ein Stilmittel — eine starke Nachricht darf nüchtern bleiben ("GTA 6 kostet 80 Dollar").`;
+Grenzen (unverhandelbar): Die Wendung oder Antwort steht IM Artikel. Konkrete, sinnliche Wörter statt Systembegriffe ("der Nebel wird gefährlich" statt "A-Life-Verbesserungen"). Nicht jede Schlagzeile braucht ein Stilmittel - eine starke Nachricht darf nüchtern bleiben ("GTA 6 kostet 80 Dollar").`;
 
-  // Artikeltext bleibt vorerst auf Sonnet (MODELL_TEXT) — der Wechsel auf
+  // Artikeltext bleibt vorerst auf Sonnet (MODELL_TEXT) - der Wechsel auf
   // Opus wartet auf Tims direkten Vergleich an denselben Quellen. Budget von
   // 8000 auf 12000 erhöht: Das Nachdenken teilt sich das Budget mit der
   // Antwort, und genau dieser Abbruch kostete am 10.08. zwei Posts.
@@ -278,7 +278,7 @@ Grenzen (unverhandelbar): Die Wendung oder Antwort steht IM Artikel. Konkrete, s
 
   // AUSGESCHRIEBENE UMLAUTE (Tim, 14.08.2026): "ueberrascht" statt
   // "überrascht" und Verwandtes. Hier nur eine WARNUNG, nicht wie bei
-  // Instagram ein Verwerfen — und das ist eine bewusste Abwägung:
+  // Instagram ein Verwerfen - und das ist eine bewusste Abwägung:
   //   - Ein Artikel ist lang; die Trefferfläche für einen Fehlalarm bei
   //     einem Eigennamen ist deutlich grösser als bei einer Schlagzeile.
   //   - Website-Text lässt sich nachträglich korrigieren, ein geposteter
@@ -286,7 +286,7 @@ Grenzen (unverhandelbar): Die Wendung oder Antwort steht IM Artikel. Konkrete, s
   // Die Warnung färbt den Lauf sichtbar, statt still durchzulassen.
   // NUR DEN TEXT PRUEFEN, NICHT DAS JSON (Fehler 14.08.2026): Die erste
   // Fassung gab JSON.stringify(draft) hinein. Satzzeichen und Feldnamen
-  // klebten dort an echte Woerter — der Lauf um 11:00 meldete drei
+  // klebten dort an echte Woerter - der Lauf um 11:00 meldete drei
   // Fehlalarme, alle aus JSON-Syntax. Gesammelt werden jetzt nur die
   // Zeichenketten-Werte, also der Text, den Leser sehen.
   const textStuecke = [];
@@ -303,20 +303,20 @@ Grenzen (unverhandelbar): Die Wendung oder Antwort steht IM Artikel. Konkrete, s
   }
 
   // UNTERZEILE OHNE SCHLUSSPUNKT (Tim, 13.08.2026): Von 172 Artikeln endeten
-  // 97 mit Punkt und 75 ohne — reiner Zufall, weil die Vorgabe im Prompt
+  // 97 mit Punkt und 75 ohne - reiner Zufall, weil die Vorgabe im Prompt
   // dazu schwieg. Die Unterzeile ist ein Teaser, kein Fliesstext; ohne Punkt
   // liest sie sich leichter. Die Regel steht jetzt im Prompt UND hier: Eine
   // Regel, die nur im Prompt steht, ist keine Regel (Lehre aus dem
   // Schlagzeilen-Wächter vom 11.08.2026). Fragezeichen, Ausrufezeichen und
   // Auslassungspunkte bleiben unangetastet.
-  // Abkürzungen behalten ihren Punkt — er gehört zum Wort, nicht zum Satz.
+  // Abkürzungen behalten ihren Punkt - er gehört zum Wort, nicht zum Satz.
   const ABKUERZUNG_AM_ENDE = /\b(usw|etc|u\.\s?a|o\.\s?Ä|u\.\s?Ä|ff)\.$/i;
   if (typeof draft.subtitle === "string") {
     const s = draft.subtitle.trim();
     draft.subtitle = ABKUERZUNG_AM_ENDE.test(s) ? s : s.replace(/(?<!\.)\.$/, "");
   }
 
-  // Von der Pipeline kontrollierte Felder — das Modell entscheidet hier nicht.
+  // Von der Pipeline kontrollierte Felder - das Modell entscheidet hier nicht.
   const words = (draft.body ?? [])
     .map((b) => (b.type === "list" ? (b.items ?? []).join(" ") : b.text ?? ""))
     .join(" ")
@@ -332,7 +332,7 @@ Grenzen (unverhandelbar): Die Wendung oder Antwort steht IM Artikel. Konkrete, s
     readingTimeMinutes: Math.max(1, Math.round(words / 220)),
     heroVariant: HERO_VARIANTS[parseInt(hashId(draft.slug ?? primary.link), 16) % HERO_VARIANTS.length],
     // Dedupe nach URL: Zwei Feed-Items desselben Clusters können auf
-    // denselben Beitrag zeigen — der erzeugte Artikel listete die Quelle
+    // denselben Beitrag zeigen - der erzeugte Artikel listete die Quelle
     // dann doppelt (von Tim am 07.08.2026 bemerkt).
     sources: clusterItems
       .filter((it, i, arr) => arr.findIndex((o) => o.link === it.link) === i)
@@ -349,7 +349,7 @@ Grenzen (unverhandelbar): Die Wendung oder Antwort steht IM Artikel. Konkrete, s
 
 // Korrekturlese-Pass (Betreiber-Vorgabe 08.08.2026, Anlass: "Erdgebnis"
 // statt "Ergebnis" im Cloud-Gaming-Artikel): Ein separater, eng geführter
-// Claude-Durchgang sucht NUR Tippfehler/Buchstabendreher — keine
+// Claude-Durchgang sucht NUR Tippfehler/Buchstabendreher - keine
 // Stiländerungen. Wörtliche Zitate (quote-Blöcke) bleiben unangetastet,
 // ebenso Slug, URLs und Quellen. Schlägt der Pass fehl, erscheint der
 // Artikel unkorrigiert (Korrektur darf den Publish nie blockieren).
@@ -369,7 +369,7 @@ async function proofreadArticle(article) {
     .filter(Boolean)
     .join("\n");
 
-  const prompt = `Korrekturlesen — finde AUSSCHLIESSLICH echte Fehler: Tippfehler, Buchstabendreher, Rechtschreib- und Grammatikfehler. KEINE Stil- oder Formulierungsänderungen. SCHWEIZER Rechtschreibung ist vorgegeben: "ss" statt "ß" ist KORREKT und kein Fehler. Eigennamen (Spiele, Firmen, Personen) nie "korrigieren".
+  const prompt = `Korrekturlesen - finde AUSSCHLIESSLICH echte Fehler: Tippfehler, Buchstabendreher, Rechtschreib- und Grammatikfehler. KEINE Stil- oder Formulierungsänderungen. SCHWEIZER Rechtschreibung ist vorgegeben: "ss" statt "ß" ist KORREKT und kein Fehler. Eigennamen (Spiele, Firmen, Personen) nie "korrigieren".
 
 TEXT:
 ${pruefText}
@@ -380,7 +380,7 @@ Wenn fehlerfrei: {"fixes":[]}`;
   try {
     // HANDWERK, BEWUSST DAS KLEINERE MODELL (Tim, 14.08.2026): Dieser
     // Schritt darf AUSSCHLIESSLICH Tippfehler finden. Opus 5 neigt dazu,
-    // einen Auftrag auszuweiten und ungefragt Formulierungen zu verbessern —
+    // einen Auftrag auszuweiten und ungefragt Formulierungen zu verbessern -
     // hier wäre das kein Gewinn, sondern ein Risiko. Denktiefe "low", weil
     // Rechtschreibung kein Nachdenken braucht.
     //
@@ -403,7 +403,7 @@ Wenn fehlerfrei: {"fixes":[]}`;
     if (fixes.length === 0) return article;
 
     // Typsicher (Fix 09.08.2026): Stats-Kacheln haben Objekt-Einträge
-    // ({value, label}) — ein replaceAll auf Objekten liess das gesamte
+    // ({value, label}) - ein replaceAll auf Objekten liess das gesamte
     // Korrekturlesen bei jedem Artikel mit Zahlen-Kacheln still scheitern
     // ("s.replaceAll is not a function").
     const fixText = (s) => {
@@ -460,12 +460,12 @@ async function main() {
 
   console.log(`2/5 ${candidates.length} neue Kandidaten (Fenster ${MAX_CANDIDATE_AGE_H}h)`);
   if (candidates.length === 0) {
-    console.log("Nichts Neues — Lauf beendet.");
+    console.log("Nichts Neues - Lauf beendet.");
     return;
   }
   if (process.env.DRY_RUN) {
     for (const c of candidates.slice(0, 40)) console.log(`  [${c.feedId}] ${c.title}`);
-    console.log("DRY_RUN — Ende vor Auswahl/Generierung.");
+    console.log("DRY_RUN - Ende vor Auswahl/Generierung.");
     return;
   }
 
@@ -495,7 +495,7 @@ async function main() {
       let article = await generateArticle(cluster, items, sourceTexts, slugs);
       let check = validateArticle(article, slugs, cluster.depth);
       if (!check.ok) {
-        console.log(`  Validierung fehlgeschlagen (${check.errors.join("; ")}) — 1 Wiederholung`);
+        console.log(`  Validierung fehlgeschlagen (${check.errors.join("; ")}) - 1 Wiederholung`);
         article = await generateArticle(cluster, items, sourceTexts, slugs);
         check = validateArticle(article, slugs, cluster.depth);
       }
@@ -508,13 +508,13 @@ async function main() {
       article.relatedSlugs = pickRelatedSlugs(article);
 
       // Einbettungen der Quelle (Trailer, Tweet eines Leaks, Reddit-Thread)
-      // direkt nach dem einleitenden Absatz — die KI erzeugt die URLs nicht
+      // direkt nach dem einleitenden Absatz - die KI erzeugt die URLs nicht
       // selbst, um Tippfehler und Fehlzuordnungen zu vermeiden.
       //
       // NACH GEGENSTAND STATT NACH RANGFOLGE (Tim, 11.08.2026): Vorher galt
       // stur X vor Reddit vor YouTube. Da auf Nachrichtenseiten fast immer
       // ein X-Link steht, verdrängte er den Trailer auch dann, wenn die
-      // Meldung vom Trailer handelte — geprüft an sechs Video-Storys: vier
+      // Meldung vom Trailer handelte - geprüft an sechs Video-Storys: vier
       // ganz ohne Einbettung, eine mit Tweet statt Video. Handelt die Story
       // von Bewegtbild, gewinnt jetzt das Video; sonst bleibt es beim Tweet
       // als Beleg. Beides zusammen ist erlaubt, wenn beides vorliegt: erst
@@ -522,7 +522,7 @@ async function main() {
       // VORERST NUR EINE EINBETTUNG (Tim, 11.08.2026): waehleEinbettungen()
       // liefert die vollständige Rangfolge, wir nehmen aber nur die erste.
       // Grund: Zwei Zustimmungsboxen direkt untereinander wirken schwerfällig
-      // — beide sehen gleich aus, bevor der Leser klickt. Die Auswahl ist der
+      // - beide sehen gleich aus, bevor der Leser klickt. Die Auswahl ist der
       // Gewinn, das Doppel wäre nur ein Extra. Sobald die Optik dafür steht,
       // genügt es, diese Begrenzung zu lockern.
       // Platzierung unverändert: direkt nach dem Einleitungsabsatz.
@@ -562,9 +562,9 @@ async function main() {
       // sondern eine Entscheidung des Modells (typisch bei Hack- und
       // Leak-Themen). Der Cluster fällt weg, der Lauf geht weiter.
       if (err instanceof ClaudeAblehnung) {
-        console.log(`  Abgelehnt bei "${label}" (${err.kategorie ?? "ohne Kategorie"}) — Cluster übersprungen`);
+        console.log(`  Abgelehnt bei "${label}" (${err.kategorie ?? "ohne Kategorie"}) - Cluster übersprungen`);
       } else {
-        console.log(`  Fehler bei "${label}": ${err.message} — Cluster übersprungen`);
+        console.log(`  Fehler bei "${label}": ${err.message} - Cluster übersprungen`);
       }
     }
   }
@@ -589,7 +589,7 @@ async function main() {
   }
 
   // GUIDE-PFLEGE, STUFE 1 (Tim-Entscheid 15.08.2026): Guides veralten,
-  // wenn zum selben Spiel Neues passiert — ein GTA-6-Sammelguide muss von
+  // wenn zum selben Spiel Neues passiert - ein GTA-6-Sammelguide muss von
   // jeder neuen GTA-6-Meldung wissen. Diese Stufe ERKENNT das nur und
   // meldet es sichtbar im Lauf-Protokoll; aktualisiert wird über die
   // Guide-Werkstatt (gleiches Thema, neue Quelle dazu). Automatische
@@ -607,11 +607,11 @@ async function main() {
       try { neu = JSON.parse(readFileSync(join(ARTICLES_DIR, `${slug}.json`), "utf8")); } catch { continue; }
       const neueTags = (neu.tags ?? []).map((t) => String(t).toLowerCase());
       for (const g of guides) {
-        // Erster Tag = Spielname (Konvention aus getRelated) — nur der
+        // Erster Tag = Spielname (Konvention aus getRelated) - nur der
         // zählt, sonst schlagen Allerwelts-Tags wie "Update" ständig an.
         const spiel = String(g.tags?.[0] ?? "").toLowerCase();
         if (spiel && neueTags.includes(spiel)) {
-          console.log(`::warning::Guide möglicherweise veraltet: "${g.title}" (${g.slug}) — neue Meldung zum selben Spiel: ${slug}. Aktualisieren über Guide-Werkstatt (gleiches Thema, neue Quelle dazu).`);
+          console.log(`::warning::Guide möglicherweise veraltet: "${g.title}" (${g.slug}) - neue Meldung zum selben Spiel: ${slug}. Aktualisieren über Guide-Werkstatt (gleiches Thema, neue Quelle dazu).`);
         }
       }
     }
@@ -622,7 +622,7 @@ async function main() {
 }
 
 // NUR BEIM DIREKTEN AUFRUF STARTEN (14.08.2026): Vorher lief die ganze
-// Pipeline schon beim blossen Importieren dieser Datei — damit war keine
+// Pipeline schon beim blossen Importieren dieser Datei - damit war keine
 // einzelne Funktion daraus pruefbar, ohne echte Artikel zu veroeffentlichen.
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   main().catch((err) => {

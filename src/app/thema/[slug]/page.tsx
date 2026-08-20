@@ -17,8 +17,8 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   const thema = getThema(params.slug);
   if (!thema) return {};
   return {
-    title: `${thema.label} News – alle Meldungen, Leaks & Reviews`,
-    description: `${thema.label} bei Republic of Pixels: ${thema.articles.length} Artikel — News, Leaks und Einordnung, laufend aktualisiert und ohne Clickbait.`,
+    title: `${thema.label} News - alle Meldungen, Leaks & Reviews`,
+    description: `${thema.label} bei Republic of Pixels: ${thema.articles.length} Artikel - News, Leaks und Einordnung, laufend aktualisiert und ohne Clickbait.`,
     alternates: { canonical: `/thema/${thema.slug}` },
   };
 }
@@ -40,7 +40,7 @@ export default function ThemaPage({ params }: { params: { slug: string } }) {
           {thema.label}
         </h1>
         <p className="mt-3 max-w-2xl text-text-secondary">
-          Alle News, Leaks und Reviews zu {thema.label} — {thema.articles.length}{" "}
+          Alle News, Leaks und Reviews zu {thema.label} - {thema.articles.length}{" "}
           Artikel, laufend aktualisiert.
         </p>
 

@@ -35,7 +35,7 @@
           "label": "Ab diesem Datum wird der Einlösecode für ausgewählte Teilnehmende bereitgestellt"
         },
         {
-          "value": "21.–24. Aug.",
+          "value": "21.-24. Aug.",
           "label": "Zeitraum, in dem der Network-Test tatsächlich stattfindet"
         },
         {
@@ -63,11 +63,11 @@
     {
       "type": "list",
       "items": [
-        "21. August (Freitag), 12:00–16:00 Uhr (MESZ)",
-        "22. August (Samstag), 4:00–8:00 Uhr (MESZ)",
-        "22. August (Samstag), 20:00–0:00 Uhr (MESZ)",
-        "23. August (Sonntag), 12:00–16:00 Uhr (MESZ)",
-        "24. August (Montag), 4:00–8:00 Uhr (MESZ)"
+        "21. August (Freitag), 12:00-16:00 Uhr (MESZ)",
+        "22. August (Samstag), 4:00-8:00 Uhr (MESZ)",
+        "22. August (Samstag), 20:00-0:00 Uhr (MESZ)",
+        "23. August (Sonntag), 12:00-16:00 Uhr (MESZ)",
+        "24. August (Montag), 4:00-8:00 Uhr (MESZ)"
       ]
     },
     {

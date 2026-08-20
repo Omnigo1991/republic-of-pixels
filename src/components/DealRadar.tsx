@@ -16,7 +16,7 @@ interface Deal {
 
 // Deal-Radar: aktuelle Steam-Angebote (EUR), von der Pipeline im
 // 3-Stunden-Takt via pipeline/deals.mjs aktualisiert. Bewusst als
-// "PC-Deals via Steam" gekennzeichnet — für PSN/eShop/Xbox gibt es
+// "PC-Deals via Steam" gekennzeichnet - für PSN/eShop/Xbox gibt es
 // keine sauberen freien Preis-APIs. Aufbau analog Release-Radar:
 // Cyan-Badge (Rabatt statt Datum), Titel, Streichpreis, Restlaufzeit.
 export function DealRadar() {
@@ -55,7 +55,7 @@ export function DealRadar() {
             >
               {d.image ? (
                 <div className="relative h-14 w-28 shrink-0 overflow-hidden rounded-lg border border-border-subtle">
-                  {/* Steam-Kapselbild vom offiziellen CDN (kein Cookie, kein Skript) —
+                  {/* Steam-Kapselbild vom offiziellen CDN (kein Cookie, kein Skript) -
                       bewusst plain <img>, damit keine CDN-Domain in der
                       next/image-Allowlist gepflegt werden muss. */}
                   {/* eslint-disable-next-line @next/next/no-img-element */}

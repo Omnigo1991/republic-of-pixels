@@ -32,7 +32,7 @@ const PILL: Record<EventStatus, { label: string; klasse: string }> = {
   geruecht: { label: "GERÜCHT", klasse: "text-warning border-warning/40 bg-warning/10" },
 };
 
-// Kalendertag-Differenz in Zürich (UTC-Mitternacht-Fallen vermeiden —
+// Kalendertag-Differenz in Zürich (UTC-Mitternacht-Fallen vermeiden -
 // Lektion aus dem Zeitzonen-Bug vom 08.08.2026).
 function tageBis(iso: string): number {
   const heute = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Zurich" }).format(new Date());
@@ -45,7 +45,7 @@ export function EventRadar() {
   const heute = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Zurich" }).format(new Date());
   // STATUS AUS DEN DATEN ABLEITEN (Tim, 12.08.2026): Der Status war ein
   // eigenes Feld, das man beim Eintragen eines bestätigten Termins vergessen
-  // konnte — genau das war bei den Game Awards passiert: Termin am 11.08.
+  // konnte - genau das war bei den Game Awards passiert: Termin am 11.08.
   // von Geoff Keighley bestätigt, bei uns stand weiter "ERWARTET". Ein
   // konkretes Startdatum IST die Bestätigung; steht eines da, gilt der
   // Termin als fixiert, egal was im Statusfeld steht. Damit kann die Pille
@@ -77,14 +77,14 @@ export function EventRadar() {
         </h2>
       </div>
       <SectionDivider />
-      {/* Grosse Event-Buehne links, Karten rechts (Tim, 15.08.2026 —
+      {/* Grosse Event-Buehne links, Karten rechts (Tim, 15.08.2026 -
           das Layout aus dem abgenommenen Entwurf): Das naechste Event
           bekommt eine stehende Cyan-Flaeche mit grossem Navy-Countdown
-          (Navy-Umbau 17.08.2026 — vorher umgekehrt). */}
+          (Navy-Umbau 17.08.2026 - vorher umgekehrt). */}
       <div className={hero ? "grid gap-4 lg:grid-cols-[400px_1fr]" : ""}>
       {hero && (
         <div className="relative flex flex-col overflow-hidden rounded-2xl bg-accent p-6 sm:p-7">
-          {/* Volle dunkle Pille mit Cyan-Schrift — dieselbe Loesung wie
+          {/* Volle dunkle Pille mit Cyan-Schrift - dieselbe Loesung wie
               beim Anmelden-Knopf im Kopf (Tim, 19.08.2026). Die blosse
               Kontur ging auf dem Verlauf fast unter. */}
           <span className={`${PILL_REZEPT} self-start border-transparent bg-navy text-accent`}>

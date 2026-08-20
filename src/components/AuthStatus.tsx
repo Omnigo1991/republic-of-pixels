@@ -61,7 +61,7 @@ export function AuthStatus() {
     profilLaden(session.user.id);
   }, [session, profilLaden]);
 
-  // Punktestand fürs Menü — leichtgewichtig (nur Zählungen, keine Listen).
+  // Punktestand fürs Menü - leichtgewichtig (nur Zählungen, keine Listen).
   useEffect(() => {
     if (!profil) {
       setPunkte(null);

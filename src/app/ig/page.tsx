@@ -8,7 +8,7 @@ import type { Article } from "@/lib/types";
 import { formatDateTime } from "@/lib/format";
 
 // Link-in-Bio-Landeseite für Instagram (Betreiber-Freigabe 07.08.2026):
-// In der Instagram-Bio steht republicofpixels.com/ig — wer nach einem Post
+// In der Instagram-Bio steht republicofpixels.com/ig - wer nach einem Post
 // "Link in Bio" antippt, findet hier die Artikel der letzten Posts als
 // antippbare Karten, den neuesten zuoberst. Die Liste pflegt sich selbst:
 // Das Instagram-Autoposting (pipeline/instagram.mjs) vermerkt jeden Post in
@@ -19,12 +19,12 @@ import { formatDateTime } from "@/lib/format";
 export const metadata: Metadata = {
   title: "Aus unseren Instagram-Posts",
   description:
-    "Die Artikel hinter den Instagram-Posts von Republic of Pixels — ein Klick genügt.",
+    "Die Artikel hinter den Instagram-Posts von Republic of Pixels - ein Klick genügt.",
   robots: { index: false, follow: true },
 };
 
 function instagramArticles(): { articles: Article[]; ausInstagram: boolean } {
-  // Nur die posted-Zuordnung lesen — state.json enthält auch Pipeline-Interna
+  // Nur die posted-Zuordnung lesen - state.json enthält auch Pipeline-Interna
   // (u. a. Zugriffsdaten), die nie in Seiten-Props landen dürfen.
   let posted: Record<string, string> = {};
   let unlisted: string[] = [];
@@ -33,7 +33,7 @@ function instagramArticles(): { articles: Article[]; ausInstagram: boolean } {
       readFileSync(join(process.cwd(), "pipeline", "state.json"), "utf8")
     );
     posted = state.instagram?.posted ?? {};
-    // unlisted: Posts, die Tim auf Instagram gelöscht hat — sie bleiben im
+    // unlisted: Posts, die Tim auf Instagram gelöscht hat - sie bleiben im
     // posted-Gedächtnis (verhindert erneutes Posten), erscheinen aber nicht
     // mehr auf dieser Seite.
     unlisted = state.instagram?.unlisted ?? [];
@@ -67,11 +67,11 @@ export default function InstagramLandingPage() {
       <header className="text-center">
         {/* Wortmarke EXAKT wie im Header (MastheadNav, nicht die veraltete
             Logo-Komponente): Inter font-black, tracking-tight, "OF PIXELS"
-            abgesetzt — hier auf Navy in Cyan statt der 60%-Deckkraft der
+            abgesetzt - hier auf Navy in Cyan statt der 60%-Deckkraft der
             Cyan-Leiste (Tim-Feedback 07.08.2026). */}
         <Link
           href="/"
-          aria-label="Republic of Pixels – Startseite"
+          aria-label="Republic of Pixels - Startseite"
           className="inline-flex items-center gap-3.5"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -81,7 +81,7 @@ export default function InstagramLandingPage() {
           </span>
         </Link>
         <p className="mt-4 text-sm leading-relaxed text-text-tertiary">
-          Du kommst von Instagram? Hier sind die Artikel aus unseren Posts —
+          Du kommst von Instagram? Hier sind die Artikel aus unseren Posts -
           ein Klick genügt.
         </p>
       </header>

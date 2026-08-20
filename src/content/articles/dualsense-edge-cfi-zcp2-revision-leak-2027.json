@@ -1,8 +1,8 @@
 {
   "slug": "dualsense-edge-cfi-zcp2-revision-leak-2027",
-  "title": "Neuer DualSense Edge geleakt — die grosse Revolution bleibt aus",
-  "subtitle": "FCC-Dokumente nennen die Modellnummer CFI-ZCP2 — und deuten auf eine Änderung hin, die vor allem der EU zu verdanken sein dürfte",
-  "excerpt": "Sonys 240-Euro-Pro-Controller bekommt offenbar seine erste Revision seit 2023. Die Unterlagen der US-Zulassungsbehörde verraten eine Modellnummer, ein Datum — und legen nahe, worum es Sony wirklich geht.",
+  "title": "Neuer DualSense Edge geleakt - die grosse Revolution bleibt aus",
+  "subtitle": "FCC-Dokumente nennen die Modellnummer CFI-ZCP2 - und deuten auf eine Änderung hin, die vor allem der EU zu verdanken sein dürfte",
+  "excerpt": "Sonys 240-Euro-Pro-Controller bekommt offenbar seine erste Revision seit 2023. Die Unterlagen der US-Zulassungsbehörde verraten eine Modellnummer, ein Datum - und legen nahe, worum es Sony wirklich geht.",
   "seoTitle": "DualSense Edge CFI-ZCP2: Neues Modell 2027 geleakt",
   "metaDescription": "FCC-Dokumente deuten auf einen überarbeiteten DualSense Edge mit der Kennung CFI-ZCP2 hin. Was das neue Modell bringt und wann es kommen könnte.",
   "category": "leaks",
@@ -18,12 +18,12 @@
     "Leak"
   ],
   "tldr": [
-    "In der FCC-Datenbank ist ein Sony-Produkt mit der Kennung CFI-ZCP2 aufgetaucht — der aktuelle DualSense Edge trägt CFI-ZCP1.",
+    "In der FCC-Datenbank ist ein Sony-Produkt mit der Kennung CFI-ZCP2 aufgetaucht - der aktuelle DualSense Edge trägt CFI-ZCP1.",
     "Teile der Unterlagen, darunter Handbuch und Platinenfotos, sind bis zum 31. Januar 2027 unter Verschluss. Ein Marktstart im ersten Quartal 2027 gilt als wahrscheinlich.",
     "Die gängige Theorie: kein neues Design, sondern ein leichter zugänglicher Akku, um der EU-Richtlinie zum Recht auf Reparatur zu entsprechen.",
-    "Sony hat sich bislang nicht geäussert — alle Details sind unbestätigt."
+    "Sony hat sich bislang nicht geäussert - alle Details sind unbestätigt."
   ],
-  "whyItMatters": "Der DualSense Edge ist mit rund 240 Euro das teuerste offizielle PS5-Zubehör, und seine schwache Akkulaufzeit ist seit dem Start ein Dauerthema. Eine Revision entscheidet darüber, ob sich das Warten lohnt — oder ob wer jetzt kauft, in wenigen Monaten das ältere Modell in der Hand hält.",
+  "whyItMatters": "Der DualSense Edge ist mit rund 240 Euro das teuerste offizielle PS5-Zubehör, und seine schwache Akkulaufzeit ist seit dem Start ein Dauerthema. Eine Revision entscheidet darüber, ob sich das Warten lohnt - oder ob wer jetzt kauft, in wenigen Monaten das ältere Modell in der Hand hält.",
   "body": [
     {
       "type": "paragraph",
@@ -41,8 +41,8 @@
           "label": "bis dahin sind zentrale FCC-Dokumente gesperrt"
         },
         {
-          "value": "5–6 Std.",
-          "label": "Akkulaufzeit — die grösste Schwäche des Edge"
+          "value": "5-6 Std.",
+          "label": "Akkulaufzeit - die grösste Schwäche des Edge"
         }
       ]
     },
@@ -52,11 +52,11 @@
     },
     {
       "type": "paragraph",
-      "text": "Entdeckt wurde der Eintrag von einem Nutzer im Forum ResetEra, aufgegriffen hat ihn zunächst das Portal TwistedVoxel. Der Clou steckt in der Modellnummer: Der bisherige DualSense Edge läuft unter CFI-ZCP1, das neue Gerät unter CFI-ZCP2. Eine solche Anpassung der Typenbezeichnung steht bei Sony-Hardware traditionell für eine Revision des bestehenden Produkts — nicht für ein völlig neues Gerät. Wer also auf einen Edge der zweiten Generation mit neuem Formfaktor, Hall-Effekt-Sticks oder anderen grösseren Änderungen hofft, sollte die Erwartungen vorerst dämpfen."
+      "text": "Entdeckt wurde der Eintrag von einem Nutzer im Forum ResetEra, aufgegriffen hat ihn zunächst das Portal TwistedVoxel. Der Clou steckt in der Modellnummer: Der bisherige DualSense Edge läuft unter CFI-ZCP1, das neue Gerät unter CFI-ZCP2. Eine solche Anpassung der Typenbezeichnung steht bei Sony-Hardware traditionell für eine Revision des bestehenden Produkts - nicht für ein völlig neues Gerät. Wer also auf einen Edge der zweiten Generation mit neuem Formfaktor, Hall-Effekt-Sticks oder anderen grösseren Änderungen hofft, sollte die Erwartungen vorerst dämpfen."
     },
     {
       "type": "heading",
-      "text": "Der Akku steht im Zentrum — und die EU auch"
+      "text": "Der Akku steht im Zentrum - und die EU auch"
     },
     {
       "type": "paragraph",
@@ -68,7 +68,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Offen bleibt die spannendere Frage — legt Sony auch bei der Laufzeit nach? Fünf bis sechs Stunden sind seit Tag eins die grösste Schwachstelle des Edge, verursacht durch die zusätzliche Technik im Inneren. Ein Präzedenzfall existiert: Ende 2025 begann Sony, den überarbeiteten Standard-DualSense (CFI-ZCT2W) auszuliefern, der dank entschlacktem Innenleben länger durchhält. Belegt ist ein solcher Schritt für den Edge allerdings nicht.",
+      "text": "Offen bleibt die spannendere Frage - legt Sony auch bei der Laufzeit nach? Fünf bis sechs Stunden sind seit Tag eins die grösste Schwachstelle des Edge, verursacht durch die zusätzliche Technik im Inneren. Ein Präzedenzfall existiert: Ende 2025 begann Sony, den überarbeiteten Standard-DualSense (CFI-ZCT2W) auszuliefern, der dank entschlacktem Innenleben länger durchhält. Belegt ist ein solcher Schritt für den Edge allerdings nicht.",
       "text_note": ""
     },
     {
@@ -77,13 +77,13 @@
     },
     {
       "type": "paragraph",
-      "text": "Ein Releasedatum nennen die Unterlagen nicht — wohl aber eine Sperrfrist. Handbuch, Fotos des Platinen-Layouts und Angaben zu den Testaufbauten bleiben bis zum 31. Januar 2027 unter Verschluss. Hersteller nutzen solche Fristen üblicherweise, um Produktdetails bis kurz vor dem Verkaufsstart zu schützen. Ein Marktstart im ersten Quartal 2027 ist damit plausibel — passend zum Inkrafttreten der EU-Vorgaben. Möglich ist auch, dass Sony das Thema schon vorher offiziell anspricht."
+      "text": "Ein Releasedatum nennen die Unterlagen nicht - wohl aber eine Sperrfrist. Handbuch, Fotos des Platinen-Layouts und Angaben zu den Testaufbauten bleiben bis zum 31. Januar 2027 unter Verschluss. Hersteller nutzen solche Fristen üblicherweise, um Produktdetails bis kurz vor dem Verkaufsstart zu schützen. Ein Marktstart im ersten Quartal 2027 ist damit plausibel - passend zum Inkrafttreten der EU-Vorgaben. Möglich ist auch, dass Sony das Thema schon vorher offiziell anspricht."
     },
     {
       "type": "list",
       "items": [
         "Bestätigt: Ein Sony-Gerät mit der Kennung CFI-ZCP2 ist in der öffentlichen FCC-Datenbank gelistet.",
-        "Unbestätigt: Welche konkreten Änderungen Sony vornimmt — die Dokumente schweigen dazu.",
+        "Unbestätigt: Welche konkreten Änderungen Sony vornimmt - die Dokumente schweigen dazu.",
         "Unbestätigt: Ob die Akkulaufzeit steigt oder nur die Wechselbarkeit verbessert wird.",
         "Kein Hinweis: Für den regulären DualSense liegen derzeit keine vergleichbaren neuen Dokumente vor."
       ]
@@ -94,13 +94,13 @@
     },
     {
       "type": "paragraph",
-      "text": "Der DualSense Edge hat sein Publikum gefunden: verstellbare Trigger-Stops, austauschbare Stick-Module und frei belegbare Rücktasten rechtfertigen für viele den hohen Preis. Genau deshalb ist eine Revision aber weniger spektakulär, als sie klingt — CFI-ZCP2 dürfte in erster Linie eine regulatorische Pflichtübung sein, kein Generationswechsel. Wer aktuell mit dem Kauf liebäugelt und ohnehin bis 2027 warten kann, gewinnt womöglich einen leichter tauschbaren Akku. Alle anderen verpassen nach heutigem Stand wenig. Und wer auf eine Neuauflage des normalen DualSense spekuliert, wartet vergeblich: Das überarbeitete Standard-Pad rollt seit Ende 2025 schrittweise in den Handel."
+      "text": "Der DualSense Edge hat sein Publikum gefunden: verstellbare Trigger-Stops, austauschbare Stick-Module und frei belegbare Rücktasten rechtfertigen für viele den hohen Preis. Genau deshalb ist eine Revision aber weniger spektakulär, als sie klingt - CFI-ZCP2 dürfte in erster Linie eine regulatorische Pflichtübung sein, kein Generationswechsel. Wer aktuell mit dem Kauf liebäugelt und ohnehin bis 2027 warten kann, gewinnt womöglich einen leichter tauschbaren Akku. Alle anderen verpassen nach heutigem Stand wenig. Und wer auf eine Neuauflage des normalen DualSense spekuliert, wartet vergeblich: Das überarbeitete Standard-Pad rollt seit Ende 2025 schrittweise in den Handel."
     }
   ],
   "poll": {
     "question": "Was müsste die Edge-Revision bieten, damit ihr zugreift?",
     "options": [
-      "Deutlich mehr Akkulaufzeit — sonst nichts",
+      "Deutlich mehr Akkulaufzeit - sonst nichts",
       "Ein leicht tauschbarer Akku reicht mir",
       "Nur mit driftfreien Hall-Effekt-Sticks",
       "Bei 240 Euro gar nichts"
@@ -128,7 +128,7 @@
   ],
   "image": {
     "src": "/images/articles/dualsense-edge-cfi-zcp2-revision-leak-2027.webp",
-    "alt": "Neuer DualSense Edge geleakt — die grosse Revolution bleibt aus",
+    "alt": "Neuer DualSense Edge geleakt - die grosse Revolution bleibt aus",
     "credit": "Bild: Eurogamer.de",
     "sourceUrl": "https://www.eurogamer.de/ps5-dualsense-edge-neues-modell-leak",
     "sourceWidth": 690,

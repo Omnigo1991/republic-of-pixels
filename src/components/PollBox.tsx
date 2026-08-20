@@ -6,7 +6,7 @@ import { getSupabase } from "@/lib/supabase";
 
 // Community-Umfrage zur Story (fester Artikel-Bauplan-Bestandteil,
 // Tim-Vorgabe 08.08.2026: Beteiligung im Lesefluss statt blossem Scrollen).
-// Bewusst OHNE Login-Pflicht — eine Stimme pro Besucher-Kennung (dieselbe
+// Bewusst OHNE Login-Pflicht - eine Stimme pro Besucher-Kennung (dieselbe
 // anonyme localStorage-ID wie der Besuchszähler; Server erzwingt die
 // Einmaligkeit zusätzlich per Unique-Constraint). Ergebnisse kommen aus der
 // aggregierten View poll_ergebnisse (schema-v7.sql), nie aus Rohdaten.
@@ -38,7 +38,7 @@ export function PollBox({ articleSlug, poll }: { articleSlug: string; poll: Poll
       const eigen = localStorage.getItem(`rop_poll_${articleSlug}`);
       if (eigen !== null) setEigene(Number(eigen));
     } catch {
-      // ohne localStorage keine Eigene-Stimme-Markierung — unkritisch
+      // ohne localStorage keine Eigene-Stimme-Markierung - unkritisch
     }
     laden();
   }, [articleSlug, laden]);
@@ -106,7 +106,7 @@ export function PollBox({ articleSlug, poll }: { articleSlug: string; poll: Poll
       </div>
       <p className="mt-3 text-xs text-[#8A8FA3]">
         {abgestimmt
-          ? `${total.toLocaleString("de-DE")} ${total === 1 ? "Stimme" : "Stimmen"} — danke fürs Mitmachen!`
+          ? `${total.toLocaleString("de-DE")} ${total === 1 ? "Stimme" : "Stimmen"} - danke fürs Mitmachen!`
           : "Anonym abstimmen und sehen, was die Community denkt."}
       </p>
     </div>

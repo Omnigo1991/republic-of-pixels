@@ -1,7 +1,7 @@
 // Auswahl der Einbettungen für einen Artikel.
 //
 // NACH GEGENSTAND STATT NACH RANGFOLGE (Tim, 11.08.2026): Vorher entschied
-// in extract.mjs eine feste Reihenfolge — X vor Reddit vor YouTube. Da auf
+// in extract.mjs eine feste Reihenfolge - X vor Reddit vor YouTube. Da auf
 // Nachrichtenseiten fast immer irgendein X-Link steht, und sei es nur ein
 // Teilen-Knopf, gewann X praktisch immer und verdrängte den Trailer selbst
 // dort, wo die Meldung vom Trailer handelte. Nachgemessen an sechs
@@ -10,7 +10,7 @@
 // Jetzt sammelt extract.mjs nur noch alle Kandidaten; entschieden wird hier,
 // wo der Artikelgegenstand bekannt ist. Handelt die Story von Bewegtbild,
 // gewinnt das Video; sonst bleibt der Tweet als Beleg vorn. Liegt beides
-// vor, kommt beides — erst ansehen, dann die Quelle dazu.
+// vor, kommt beides - erst ansehen, dann die Quelle dazu.
 
 // Wörter, die auf eine Bewegtbild-Meldung hindeuten. Bewusst grosszügig:
 // Ein zu Unrecht gezeigter Trailer stört weit weniger als ein fehlender.

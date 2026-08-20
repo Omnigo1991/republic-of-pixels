@@ -5,7 +5,7 @@ import { getAllArticles } from "./articles";
 // werden automatisch Landeseiten pro Spiel/Thema (/thema/gta-6 …) erzeugt.
 // Ziel: Rankings für Spielnamen-Suchen ("GTA 6 News") und topische Autorität
 // durch gebündelte interne Verlinkung. Nur Themen mit genügend Substanz
-// bekommen eine Seite — Thin-Content-Seiten schaden bei Google mehr, als
+// bekommen eine Seite - Thin-Content-Seiten schaden bei Google mehr, als
 // sie nützen.
 
 export interface Thema {
@@ -17,7 +17,7 @@ export interface Thema {
 const MIN_ARTIKEL = 3;
 
 // Offensichtliche Tag-Duplikate zusammenführen (Ziel-Tag in Kleinschreibung).
-// Bewusst kurz gehalten und nur für belegte Fälle — die Pipeline vergibt
+// Bewusst kurz gehalten und nur für belegte Fälle - die Pipeline vergibt
 // Tags frei, hier wird nur vereinheitlicht, was nachweislich doppelt läuft.
 const ALIAS: Record<string, string> = {
   "nintendo switch 2": "switch 2",
@@ -66,7 +66,7 @@ function buildThemen(): Map<string, Thema> {
     cache.set(slug, {
       slug,
       label,
-      // getAllArticles liefert bereits neueste zuerst — Reihenfolge erhalten.
+      // getAllArticles liefert bereits neueste zuerst - Reihenfolge erhalten.
       articles: bucket.articles,
     });
   }

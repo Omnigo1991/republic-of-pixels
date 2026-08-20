@@ -13,13 +13,13 @@ import sharp from "sharp";
 // WARUM SIE LEER WIRKTE: Nicht wegen zu wenig Schmuck, sondern wegen zu
 // viel am falschen Ort. Klammern und Pixel sassen weit aussen und haben die
 // leere Fläche EINGERAHMT statt sie zu füllen. Die Schlagzeile stand in der
-// Größe der Bild-Karte mittig — dort trägt aber ein Foto die restliche
+// Größe der Bild-Karte mittig - dort trägt aber ein Foto die restliche
 // Fläche.
 //
 // TIMS VORGABE (wörtlich): "Layout genau gleich wie Postvorlage (R unten,
 // Quelle unten links) / Hintergrund in Navy, voll ausgefüllt / Schrift genau
 // wie bei unserer Postvorlage, nur nicht links, sondern mittig / Keine
-// weiteren Linien etc." — dazu Variante D2: Cyan-Icons je Kategorie,
+// weiteren Linien etc." - dazu Variante D2: Cyan-Icons je Kategorie,
 // gestreut in der Navy-Fläche.
 //
 // Abweichungen von der Bild-Karte, alle von Tim abgenommen:
@@ -32,7 +32,7 @@ import sharp from "sharp";
 //      Bildnachweis; hier gibt es kein Bild und nichts nachzuweisen. Ein
 //      Datum als Platzfüller hat Tim ausdrücklich abgelehnt.
 //
-// Alle übrigen Werte sind unverändert aus instagram-card.mjs übernommen —
+// Alle übrigen Werte sind unverändert aus instagram-card.mjs übernommen -
 // Kopfzeile 26 px, Notiz 47 px, Ränder 60 px, Logohöhe 44 px, gerendert in
 // 1080×1350 mit doppelter Pixeldichte. Damit sind die Zahlen hier direkt mit
 // der Bild-Karte vergleichbar.
@@ -40,7 +40,7 @@ import sharp from "sharp";
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
 const LOGO = join(ROOT, "public", "brand", "r-mark.png");
 
-// Aus instagram-card.mjs — bei Änderungen dort mitziehen.
+// Aus instagram-card.mjs - bei Änderungen dort mitziehen.
 const G = 60;
 const LOGO_H = 44;
 
@@ -50,7 +50,7 @@ const TITEL_MIN = 72;
 // ---------- Icons ----------
 //
 // Flächige Formen auf einem 24×24-Raster, ausschliesslich gefüllt. Ein
-// früher Entwurf mischte Füllung und Kontur — der Controller wurde dadurch
+// früher Entwurf mischte Füllung und Kontur - der Controller wurde dadurch
 // zum Klumpen. Aussparungen sind in Navy übergemalt, nicht ausgestanzt; das
 // funktioniert, weil die Icons frei auf der Navy-Fläche liegen.
 const NAVY = "#0C0B1A";
@@ -71,7 +71,7 @@ const FORMEN = {
 //
 // Bewusst eine feste Zuordnung im Code statt einer Wahl durch Claude: Das
 // ist eine Entscheidung weniger pro Post, die danebengreifen kann, und sie
-// braucht keinen eigenen Wächter. "pixel" steht in jedem Satz — es zitiert
+// braucht keinen eigenen Wächter. "pixel" steht in jedem Satz - es zitiert
 // die Pixel-Spur unseres R und hält die Kategorien optisch zusammen.
 const KATEGORIE_ICONS = {
   breaking: ["blitz", "ausrufe", "stern", "pixel"],
@@ -84,7 +84,7 @@ const STANDARD_ICONS = KATEGORIE_ICONS.news;
 // Streumuster aus Variante D2. Feste Plätze.
 //
 // TEXTBAND FREIHALTEN: Der Textblock belegt gemessen y 485 bis 864. Kein
-// Platz darf dort hineinragen — auch nicht knapp. Ein Icon bei y 520 sass im
+// Platz darf dort hineinragen - auch nicht knapp. Ein Icon bei y 520 sass im
 // ersten Entwurf direkt am "N" von NETFLIX und las sich als Schmutz. Alle
 // Plätze enden deshalb spätestens bei y 470 oder beginnen frühestens bei
 // y 880 (Platz + eigene Größe gerechnet).
@@ -108,7 +108,7 @@ const PLAETZE = [
 // derselben Kategorie sehen aber unterschiedlich aus.
 // REIHUM STATT GEWÜRFELT (Korrektur 14.08.2026): Der erste Entwurf zog für
 // jeden Platz ein zufälliges Icon. Beim ersten Testbild ergab das sieben
-// Sterne, drei Herzen und keinen einzigen Controller — die Kategorie war
+// Sterne, drei Herzen und keinen einzigen Controller - die Kategorie war
 // nicht mehr erkennbar. Jetzt werden die Icons reihum vergeben, sodass jedes
 // gleich oft vorkommt; aus dem Text abgeleitet wird nur noch, bei welchem
 // Icon die Reihe beginnt.
@@ -140,7 +140,7 @@ function escapeHtml(s) {
 }
 
 function headlineHtml(headlineLines) {
-  // Jede Zeile ein eigener Block mit nowrap — nie heimlich umbrechen, sondern
+  // Jede Zeile ein eigener Block mit nowrap - nie heimlich umbrechen, sondern
   // die Schrift verkleinern. Gleiche Regel wie bei der Bild-Karte.
   return headlineLines
     .map(
@@ -158,7 +158,7 @@ function headlineHtml(headlineLines) {
 
 /**
  * @param {boolean} [o.icons=true] Icon-Streuung zeichnen. Abschaltbar, damit
- *   die Mittigkeit des Textblocks am fertigen Bild NACHGEMESSEN werden kann —
+ *   die Mittigkeit des Textblocks am fertigen Bild NACHGEMESSEN werden kann -
  *   mit Icons misst jede Tinte-Prüfung die Icons mit und ist wertlos. Das ist
  *   keine Test-Hintertür, sondern die Voraussetzung dafür, dass wir die
  *   Ausrichtung überhaupt prüfen können statt sie zu behaupten.
@@ -193,12 +193,12 @@ export async function renderTypoCard({
   .kicker { font-family:'Inter',sans-serif; font-weight:900; font-size:26px;
     letter-spacing:0.20em; text-transform:uppercase; color:#02F0D1; margin-bottom:17px; }
   /* ZEILENABSTAND 1.34 wie bei der Bild-Karte: Der Marker-Kasten hängt an
-     einem Wort INNERHALB der Zeile und beansprucht keine eigene Höhe —
+     einem Wort INNERHALB der Zeile und beansprucht keine eigene Höhe -
      padding vergrössert die Zeilenbox nicht. Ohne diese Luft läuft der
      Kasten in die Zeile darunter. */
   /* width:100% ist PFLICHT: In einem Flex-Stapel schrumpft ein Block-Kind
      sonst auf seine Inhaltsbreite, und die Einpassung misst die Zeile gegen
-     sich selbst — sie wäre immer zufrieden. */
+     sich selbst - sie wäre immer zufrieden. */
   .titel { font-family:'Inter',sans-serif; font-weight:900; text-transform:uppercase;
     width:100%; text-align:center; font-size:${TITEL_GROESSE}px; line-height:1.34;
     letter-spacing:-0.02em; color:#FFFFFF;
@@ -206,7 +206,7 @@ export async function renderTypoCard({
   .titel .zeile { display:block; white-space:nowrap; }
   .titel .cy { background:linear-gradient(100deg,#02F0D1,#FF2E97); color:#0B0616;
     padding:1px 9px 5px 9px; text-shadow:none; }
-  /* transform-origin mittig statt links — sonst kippt die Notiz aus der
+  /* transform-origin mittig statt links - sonst kippt die Notiz aus der
      Mittelachse. */
   .notiz { font-family:'Caveat',cursive; font-weight:700; font-size:47px; line-height:1.0;
     color:#02F0D1; margin-top:24px; transform:rotate(-2deg); transform-origin:center center; }
@@ -234,7 +234,7 @@ export async function renderTypoCard({
     });
     // NICHT AUF "networkidle" WARTEN (Fund 13.08.2026): Der Abruf der
     // Google-Schriften laeuft gelegentlich in die 30-Sekunden-Grenze, und
-    // Playwright wirft dann einen Fehler — in GitHub Actions kostet das den
+    // Playwright wirft dann einen Fehler - in GitHub Actions kostet das den
     // ganzen Lauf. Zuverlaessiger: auf "load" warten und dann gezielt
     // darauf, dass die Schriften wirklich da sind. Das ist sogar strenger,
     // denn mit Ersatzschrift gemessene Breiten waeren falsch.
@@ -275,7 +275,7 @@ export async function renderTypoCard({
       { min: TITEL_MIN },
     );
 
-    // WAAGRECHTE MITTE — die nachgestellte Buchstabenlücke ausgleichen
+    // WAAGRECHTE MITTE - die nachgestellte Buchstabenlücke ausgleichen
     // (Tim, 14.08.2026: "bitte sicherstellen, dass es absolut mittig ist").
     //
     // Bei letter-spacing bekommt AUCH DER LETZTE Buchstabe seinen Abstand
@@ -296,7 +296,7 @@ export async function renderTypoCard({
       }
     });
 
-    // SENKRECHTE MITTE — an den gemalten Pixeln ausgerichtet, nicht an der
+    // SENKRECHTE MITTE - an den gemalten Pixeln ausgerichtet, nicht an der
     // Elementbox. Elementboxen tragen oben und unten unterschiedlich viel
     // Zeilenluft, und die gedrehte Notiz vergrössert ihre Box zusätzlich.
     // Gemessen am fertigen Bild sass der Block 3.5 px zu tief.
@@ -324,7 +324,7 @@ export async function renderTypoCard({
 
     if (!einpassung.passt) {
       console.log(
-        `  Hinweis: Typo-Schlagzeile passt auch bei ${einpassung.groesse}px nicht — Zeile zu lang`,
+        `  Hinweis: Typo-Schlagzeile passt auch bei ${einpassung.groesse}px nicht - Zeile zu lang`,
       );
     } else if (einpassung.groesse < TITEL_GROESSE * 0.9) {
       console.log(
@@ -345,7 +345,7 @@ export async function renderTypoCard({
 /**
  * Bestimmt, um wieviele CSS-Pixel der Textblock verschoben werden muss,
  * damit seine gemalte Tinte senkrecht mittig sitzt.
- * Das Logo unten wird ausgeklammert — es steht fest und gehört nicht zum Block.
+ * Das Logo unten wird ausgeklammert - es steht fest und gehört nicht zum Block.
  */
 async function senkrechterVersatz(png) {
   const { data, info } = await sharp(png).greyscale().raw().toBuffer({ resolveWithObject: true });
@@ -374,7 +374,7 @@ async function senkrechterVersatz(png) {
 
   const mitteIst = (oben + unten) / 2 / skala;
   const versatz = 1350 / 2 - mitteIst;
-  // Nur eingreifen, wenn es sich lohnt — und nie wild verschieben, falls
+  // Nur eingreifen, wenn es sich lohnt - und nie wild verschieben, falls
   // die Messung durch etwas Unerwartetes danebengeht.
   if (Math.abs(versatz) < 0.5 || Math.abs(versatz) > 80) return null;
   return Math.round(versatz * 10) / 10;

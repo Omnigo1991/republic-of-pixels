@@ -26,7 +26,7 @@ export default function DatenschutzPage() {
           <li>Konto- und Profildaten bei Registrierung (Benutzername, E-Mail, Avatar, Login-Anbieter)</li>
           <li>Kommentare und Reaktionen, die du auf der Plattform veröffentlichst</li>
           <li>Technische Zugriffsdaten (z. B. gekürzte IP-Adresse, Browsertyp) zur Sicherheit und Reichweitenmessung</li>
-          <li>Technisch notwendige lokale Speicherung im Browser (keine Tracking-Cookies) — Details siehe <a href="/cookies">Cookies</a></li>
+          <li>Technisch notwendige lokale Speicherung im Browser (keine Tracking-Cookies) - Details siehe <a href="/cookies">Cookies</a></li>
         </ul>
 
         <h2>3. Login über Google, Discord oder E-Mail</h2>

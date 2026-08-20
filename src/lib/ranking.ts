@@ -1,5 +1,5 @@
 // Ranking-System der Community (Betreiber-Vorgabe 05.08.2026):
-// Punkte belohnen Aktivität — Kommentare zählen 3, erhaltene Upvotes 2,
+// Punkte belohnen Aktivität - Kommentare zählen 3, erhaltene Upvotes 2,
 // vergebene Upvotes 1. Ränge werden als Badges verliehen.
 // Der Master-Account (MASTER_NICKNAME) trägt den exklusiven REDAKTION-Badge
 // und wird überall hervorgehoben.
@@ -12,7 +12,7 @@ export function punkteBerechnen(stats: {
   vergebeneVotes: number;
 }): number {
   // Bewusst konservativ (05.08.2026): Kommentar +2, erhaltener Upvote +1.
-  // Vergebene Upvotes zählen NICHT — sonst liesse sich der Rang durch
+  // Vergebene Upvotes zählen NICHT - sonst liesse sich der Rang durch
   // Massen-Voten farmen und alle wären schnell high-level.
   return stats.kommentare * 2 + stats.erhalteneVotes;
 }
@@ -35,7 +35,7 @@ export const RAENGE: Rang[] = [
     ab: 0,
     icon: "spark",
     klasse: "border-border-default text-text-secondary bg-text-primary/[0.04]",
-    beschreibung: "Frisch in der Republic — willkommen!",
+    beschreibung: "Frisch in der Republic - willkommen!",
   },
   {
     name: "Bürger:in",
@@ -64,7 +64,7 @@ export const RAENGE: Rang[] = [
     icon: "crown",
     klasse:
       "border-transparent text-[#0F0D2C] bg-gradient-to-r from-accent via-[#7DF3E1] to-warning font-bold",
-    beschreibung: "Der höchste Rang der Republic — legendär.",
+    beschreibung: "Der höchste Rang der Republic - legendär.",
   },
 ];
 

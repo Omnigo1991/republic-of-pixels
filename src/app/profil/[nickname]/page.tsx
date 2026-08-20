@@ -4,7 +4,7 @@ import { ProfilAnsicht } from "@/components/ProfilAnsicht";
 
 export function generateMetadata({ params }: { params: { nickname: string } }): Metadata {
   return {
-    title: `${decodeURIComponent(params.nickname)} — Profil`,
+    title: `${decodeURIComponent(params.nickname)} - Profil`,
     robots: { index: false },
   };
 }

@@ -1,9 +1,9 @@
 {
   "slug": "intel-razor-lake-tsmc-n2x-amd-fertigungskapazitaet-2026",
-  "title": "Intel bucht TSMCs 2 nm — und für AMD bleibt weniger Platz",
-  "subtitle": "Ein Bericht aus Taiwan legt nahe, dass Intel gleich zwei CPU-Generationen teilweise bei TSMC fertigen lässt — mit Folgen für AMDs Nachschub",
+  "title": "Intel bucht TSMCs 2 nm - und für AMD bleibt weniger Platz",
+  "subtitle": "Ein Bericht aus Taiwan legt nahe, dass Intel gleich zwei CPU-Generationen teilweise bei TSMC fertigen lässt - mit Folgen für AMDs Nachschub",
   "excerpt": "Nova Lake und Razor Lake sollen laut Berichten beide teilweise in TSMCs 2-nm-Fabriken entstehen. Der eigentliche Effekt trifft aber gar nicht Intels eigene Roadmap, sondern die Konkurrenz.",
-  "seoTitle": "Intel Razor Lake soll TSMC N2X nutzen — Druck auf AMD",
+  "seoTitle": "Intel Razor Lake soll TSMC N2X nutzen - Druck auf AMD",
   "metaDescription": "Leaks: Intels Nova Lake und Razor Lake sollen teils bei TSMC in 2 nm entstehen. Was das für AMDs Kapazitäten und kommende Gaming-CPUs bedeutet.",
   "category": "leaks",
   "platforms": [
@@ -19,15 +19,15 @@
   ],
   "tldr": [
     "Unbestätigte Berichte: Intel fertigt Nova Lake und Razor Lake nicht komplett im eigenen Haus, sondern teilweise bei TSMC in 2 nm (N2P bzw. N2X).",
-    "Nova Lake soll ab etwa Januar 2027 in die Massenfertigung gehen und mit einem grossen Last-Level-Cache (bLLC) gegen AMDs X3D-Chips antreten — bis zu 288 MB bei den 52-Kern-Modellen.",
+    "Nova Lake soll ab etwa Januar 2027 in die Massenfertigung gehen und mit einem grossen Last-Level-Cache (bLLC) gegen AMDs X3D-Chips antreten - bis zu 288 MB bei den 52-Kern-Modellen.",
     "Notebook-Ableger von Nova Lake könnten laut dem Bericht ausfallen und erst mit Razor Lake HX kommen.",
     "Indirekte Folge: Weil TSMCs Kapazitäten knapp sind, kommt AMD schwerer an zusätzliche Fertigungsplätze."
   ],
-  "whyItMatters": "Wer 2027 einen neuen Gaming-PC plant, trifft die Entscheidung zwischen Intel und AMD womöglich nicht nur nach Benchmarks, sondern nach Verfügbarkeit und Preis. Denn Fertigungskapazität bei TSMC ist derzeit das knappste Gut der Branche — und wer sie belegt, bestimmt mit, wie viele Chips die Konkurrenz überhaupt ausliefern kann.",
+  "whyItMatters": "Wer 2027 einen neuen Gaming-PC plant, trifft die Entscheidung zwischen Intel und AMD womöglich nicht nur nach Benchmarks, sondern nach Verfügbarkeit und Preis. Denn Fertigungskapazität bei TSMC ist derzeit das knappste Gut der Branche - und wer sie belegt, bestimmt mit, wie viele Chips die Konkurrenz überhaupt ausliefern kann.",
   "body": [
     {
       "type": "paragraph",
-      "text": "Intel soll für gleich zwei kommende Prozessorgenerationen auf die Fertigung von TSMC zurückgreifen — und zwar auf die modernste, die der taiwanische Auftragsfertiger derzeit hochfährt. Nach Angaben der taiwanischen Commercial Times, aufgegriffen von Wccftech, entsteht Nova Lake teilweise in TSMCs N2P-Prozess, die Nachfolgegeneration Razor Lake dann teilweise in N2X. Sämtliche Angaben stammen aus Berichten und Leaks; Intel hat nichts davon bestätigt."
+      "text": "Intel soll für gleich zwei kommende Prozessorgenerationen auf die Fertigung von TSMC zurückgreifen - und zwar auf die modernste, die der taiwanische Auftragsfertiger derzeit hochfährt. Nach Angaben der taiwanischen Commercial Times, aufgegriffen von Wccftech, entsteht Nova Lake teilweise in TSMCs N2P-Prozess, die Nachfolgegeneration Razor Lake dann teilweise in N2X. Sämtliche Angaben stammen aus Berichten und Leaks; Intel hat nichts davon bestätigt."
     },
     {
       "type": "embed",
@@ -57,7 +57,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Ursprünglich galt Nova Lake als reines Heimspiel für Intels eigene 18A-Fertigung. Die jüngsten Informationen zeichnen ein anderes Bild: Die Produktion soll zwischen 18A und TSMCs N2P aufgeteilt werden. Bei Razor Lake soll sich das Muster wiederholen — hier ist von N2X die Rede, einer auf hohe Taktraten ausgelegten Variante der 2-nm-Plattform. TSMC positioniert N2X für Hochfrequenz-CPUs sowie KI- und HPC-Chips, technisch wechselt die Plattform von FinFET auf Nanosheet-Transistoren."
+      "text": "Ursprünglich galt Nova Lake als reines Heimspiel für Intels eigene 18A-Fertigung. Die jüngsten Informationen zeichnen ein anderes Bild: Die Produktion soll zwischen 18A und TSMCs N2P aufgeteilt werden. Bei Razor Lake soll sich das Muster wiederholen - hier ist von N2X die Rede, einer auf hohe Taktraten ausgelegten Variante der 2-nm-Plattform. TSMC positioniert N2X für Hochfrequenz-CPUs sowie KI- und HPC-Chips, technisch wechselt die Plattform von FinFET auf Nanosheet-Transistoren."
     },
     {
       "type": "paragraph",
@@ -69,11 +69,11 @@
     },
     {
       "type": "paragraph",
-      "text": "TSMCs Fertigungsplätze sind aktuell stark ausgelastet. Jeder Wafer, den Intel bucht, fehlt jemand anderem — und der grösste Mitbewerber im x86-Geschäft lässt bekanntlich ebenfalls bei TSMC produzieren. Der Leaker Jukan formuliert es so:"
+      "text": "TSMCs Fertigungsplätze sind aktuell stark ausgelastet. Jeder Wafer, den Intel bucht, fehlt jemand anderem - und der grösste Mitbewerber im x86-Geschäft lässt bekanntlich ebenfalls bei TSMC produzieren. Der Leaker Jukan formuliert es so:"
     },
     {
       "type": "quote",
-      "text": "Eines habe ich gelernt: Allein dadurch, dass Intel seine derzeitige Kapazitätszuteilung bei TSMC erhöht — oder auch nur hält —, kann es AMD daran hindern, sich mehr Server-CPU-Kapazität bei TSMC zu sichern und seine CPU-Auslieferungen hochzufahren. Mehr Leute als erwartet scheinen optimistisch, was AMDs TSMC-Kapazität angeht …",
+      "text": "Eines habe ich gelernt: Allein dadurch, dass Intel seine derzeitige Kapazitätszuteilung bei TSMC erhöht - oder auch nur hält -, kann es AMD daran hindern, sich mehr Server-CPU-Kapazität bei TSMC zu sichern und seine CPU-Auslieferungen hochzufahren. Mehr Leute als erwartet scheinen optimistisch, was AMDs TSMC-Kapazität angeht …",
       "attribution": "Jukan (@jukan05) auf X"
     },
     {
@@ -82,7 +82,7 @@
     },
     {
       "type": "heading",
-      "text": "288 MB Cache — Intels Antwort auf X3D"
+      "text": "288 MB Cache - Intels Antwort auf X3D"
     },
     {
       "type": "paragraph",
@@ -107,11 +107,11 @@
     },
     {
       "type": "paragraph",
-      "text": "Nichts davon ist offiziell, und Roadmaps dieser Grössenordnung verschieben sich regelmässig — die Kehrtwende von «Nova Lake komplett auf 18A» hin zu «geteilte Fertigung» zeigt genau das. Bemerkenswert bleibt die Stossrichtung: Intel greift den einzigen Bereich an, in dem AMD bei Spielen zuletzt unangefochten war, und sichert sich parallel Produktionskapazität, auf die die Konkurrenz ebenfalls angewiesen ist. Für die Leserschaft heisst das vorerst vor allem: abwarten. Erst 2027 wird sich zeigen, ob aus grossen Cache-Zahlen auch echte Bilder pro Sekunde werden — und ob sich der Wettbewerb am Ende in besseren Preisen niederschlägt oder in knapperer Verfügbarkeit auf beiden Seiten."
+      "text": "Nichts davon ist offiziell, und Roadmaps dieser Grössenordnung verschieben sich regelmässig - die Kehrtwende von «Nova Lake komplett auf 18A» hin zu «geteilte Fertigung» zeigt genau das. Bemerkenswert bleibt die Stossrichtung: Intel greift den einzigen Bereich an, in dem AMD bei Spielen zuletzt unangefochten war, und sichert sich parallel Produktionskapazität, auf die die Konkurrenz ebenfalls angewiesen ist. Für die Leserschaft heisst das vorerst vor allem: abwarten. Erst 2027 wird sich zeigen, ob aus grossen Cache-Zahlen auch echte Bilder pro Sekunde werden - und ob sich der Wettbewerb am Ende in besseren Preisen niederschlägt oder in knapperer Verfügbarkeit auf beiden Seiten."
     }
   ],
   "poll": {
-    "question": "Intels riesiger Cache gegen AMDs X3D — worauf setzt ihr für euren nächsten Gaming-PC?",
+    "question": "Intels riesiger Cache gegen AMDs X3D - worauf setzt ihr für euren nächsten Gaming-PC?",
     "options": [
       "Intel Nova Lake, wenn der bLLC liefert",
       "AMD bleibt mit X3D vorn",
@@ -136,7 +136,7 @@
   ],
   "image": {
     "src": "/images/articles/intel-razor-lake-tsmc-n2x-amd-fertigungskapazitaet-2026.webp",
-    "alt": "Intel bucht TSMCs 2 nm — und für AMD bleibt weniger Platz",
+    "alt": "Intel bucht TSMCs 2 nm - und für AMD bleibt weniger Platz",
     "credit": "Bild: Wccftech",
     "sourceUrl": "https://wccftech.com/intels-razor-lake-will-reportedly-tap-tsmcs-2nm-n2x-process-squeezing-amd-out-of-already-constrained-fab-capacity/",
     "sourceWidth": 1456,

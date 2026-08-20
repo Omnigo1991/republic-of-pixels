@@ -11,7 +11,7 @@ import { fileURLToPath } from "node:url";
 // 11.08.2026 geprueft; sechs bestanden. Bewusst NICHT dabei:
 //   - Steam: hat gar keine offizielle Statusquelle. Der bekannte Dienst
 //     steamstat.us sperrt automatisierte Abrufe (403). Lieber kein Eintrag
-//     als eine falsche Entwarnung — wer bei uns "alles online" liest und
+//     als eine falsche Entwarnung - wer bei uns "alles online" liest und
 //     trotzdem nicht reinkommt, kommt nicht wieder.
 //   - Blizzard, Roblox, Minecraft: nichts oeffentlich Zugaengliches.
 //   - Rockstar, EA, Ubisoft: liefen in Zeitueberschreitungen, noch offen.
@@ -20,7 +20,7 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const ZIEL = join(ROOT, "src", "content", "serverstatus.json");
-// Warteschlange fuer erkannte Stoerungen — bewusst NICHT unter src/content,
+// Warteschlange fuer erkannte Stoerungen - bewusst NICHT unter src/content,
 // weil sie kein Seiteninhalt ist, sondern ein Auftrag an die Pipeline.
 const MELDUNGEN = join(ROOT, "pipeline", "stoerungen.json");
 const UA = "RepublicOfPixelsBot/1.0 (+https://www.republicofpixels.com)";
@@ -35,7 +35,7 @@ const DIENSTE = [
     lesen: (d) => {
       // ACHTUNG (Fehlalarm am 11.08.2026 beim ersten Lauf): "status" ist ein
       // ARRAY, kein Text. Ein LEERES Array heisst "keine Vorfaelle". Die
-      // erste Fassung prüfte `s.status && s.status !== "operational"` — ein
+      // erste Fassung prüfte `s.status && s.status !== "operational"` - ein
       // leeres Array ist in JavaScript wahr, also meldete sie fuer JEDEN
       // Dienst eine Stoerung. Ausserdem heisst das Namensfeld serviceName,
       // nicht name. Nur nicht-leere status-Arrays zaehlen.
@@ -82,7 +82,7 @@ const DIENSTE = [
       if (laufend > 0) return { zustand: "stoerung", detail: `${laufend} Dienst(e) betroffen` };
 
       const zeit = (s) => {
-        // Format: "Monday, August 17, 2026 10 :00 PM" — das Leerzeichen vor
+        // Format: "Monday, August 17, 2026 10 :00 PM" - das Leerzeichen vor
         // dem Doppelpunkt macht Date.parse sonst unbrauchbar.
         const t = Date.parse(String(s ?? "").replace(/\s+:/, ":"));
         return Number.isFinite(t) ? t : null;
@@ -122,7 +122,7 @@ const DIENSTE = [
     lesen: (d) => {
       // ACHTUNG (Fehlalarm am 11.08.2026 beim ersten Lauf): Riot laesst alte
       // Hinweise monatelang in der Liste stehen. Beim ersten Lauf zaehlte
-      // ich alle drei "incidents" als Stoerung — zwei stammten aus dem
+      // ich alle drei "incidents" als Stoerung - zwei stammten aus dem
       // Maerz und trugen die Stufe "info". Gezaehlt wird jetzt nur, was
       // wirklich stoert (warning/critical) UND in den letzten 24 Stunden
       // angelegt oder aktualisiert wurde.
@@ -158,7 +158,7 @@ const DIENSTE = [
   },
 ];
 
-// Statuspage.io liefert ueberall dieselbe Struktur — einmal auswerten reicht.
+// Statuspage.io liefert ueberall dieselbe Struktur - einmal auswerten reicht.
 function statuspage(d) {
   const ind = d?.status?.indicator;
   const beschreibung = d?.status?.description ?? "";
@@ -194,9 +194,9 @@ async function main() {
       const daten = await hole(dienst.url);
       const { zustand, detail } = dienst.lesen(daten);
       eintraege.push({ id: dienst.id, name: dienst.name, plattform: dienst.plattform, zustand, detail });
-      console.log(`  ${dienst.name.padEnd(24)} ${zustand}${detail ? " — " + detail : ""}`);
+      console.log(`  ${dienst.name.padEnd(24)} ${zustand}${detail ? " - " + detail : ""}`);
     } catch (err) {
-      // Quelle nicht erreichbar heisst NICHT "Dienst gestoert" — das waere
+      // Quelle nicht erreichbar heisst NICHT "Dienst gestoert" - das waere
       // eine Falschmeldung. Wir sagen ehrlich, dass wir es nicht wissen.
       eintraege.push({
         id: dienst.id,
@@ -210,7 +210,7 @@ async function main() {
   }
 
   // NEUE Störungen erkennen (Tim, 11.08.2026): Der Radar ist als Leser-
-  // Feature schwach — Downdetector besetzt diese Suchanfragen seit Jahren
+  // Feature schwach - Downdetector besetzt diese Suchanfragen seit Jahren
   // und hat mit Nutzermeldungen ein Signal, das wir nicht haben. Als
   // ARTIKEL-AUSLÖSER ist er dagegen stark: Wir sind eine Nachrichtenseite,
   // und "PSN gestört" innerhalb einer Minute zu melden, während andere
@@ -222,7 +222,7 @@ async function main() {
     const alt = JSON.parse(readFileSync(ZIEL, "utf8"));
     for (const d of alt.dienste ?? []) vorher[d.id] = d.zustand;
   } catch {
-    // Erster Lauf — dann gibt es nichts zu vergleichen.
+    // Erster Lauf - dann gibt es nichts zu vergleichen.
   }
   const neueStoerungen = eintraege.filter(
     (e) => e.zustand === "stoerung" && vorher[e.id] && vorher[e.id] !== "stoerung"
@@ -246,7 +246,7 @@ async function main() {
       ) + "\n"
     );
     for (const s of neueStoerungen) {
-      console.log(`::warning::Neue Störung erkannt: ${s.name} — ${s.detail}`);
+      console.log(`::warning::Neue Störung erkannt: ${s.name} - ${s.detail}`);
     }
   }
 

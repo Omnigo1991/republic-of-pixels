@@ -1,7 +1,7 @@
 // Charts-Radar-Datenbeschaffung: holt die meistgespielten Steam-Spiele
 // (offizieller Charts-Endpoint, kein API-Schlüssel nötig) und schreibt die
 // Top 8 nach src/content/charts.json. Läuft als Schritt der News-Pipeline,
-// aktualisiert aber nur MONTAGS (Wochen-Charts, "jeden Montag neu") — plus
+// aktualisiert aber nur MONTAGS (Wochen-Charts, "jeden Montag neu") - plus
 // Nachhol-Logik, falls alle Montags-Läufe ausfielen oder die Datei fehlt.
 import { writeFileSync, readFileSync } from "node:fs";
 import { join, dirname } from "node:path";
@@ -20,12 +20,12 @@ const istMontag =
 //
 // WELCHE WOCHE HIER STEHT (Tim, 12.08.2026): Steam liefert immer die
 // ABGESCHLOSSENE Woche. Am Montag geholt, decken die Zahlen die Woche davor
-// ab — der Stempel beschreibt also den Zeitraum der Daten, nicht den
+// ab - der Stempel beschreibt also den Zeitraum der Daten, nicht den
 // Abrufzeitpunkt. Bisher stimmte das nur zufällig: Die Rechnung las die
 // UTC-Anteile, und der Montags-Lauf fiel auf 01:04 Zürich, was in London
 // noch Sonntag war. Wäre der Lauf um 12 Uhr gewesen, hätte dort fälschlich
 // die laufende Woche gestanden. Jetzt wird bewusst die Vorwoche in Zürcher
-// Zeit berechnet — richtig unabhängig von der Uhrzeit des Laufs.
+// Zeit berechnet - richtig unabhängig von der Uhrzeit des Laufs.
 function isoWoche(d = new Date()) {
   const [jahr, monat, tag_] = zuerichTag(d).split("-").map(Number);
   const dt = new Date(Date.UTC(jahr, monat - 1, tag_ - 7));
@@ -39,7 +39,7 @@ let bestehend = null;
 try {
   bestehend = JSON.parse(readFileSync(OUT, "utf8"));
 } catch {
-  // keine Datei — erster Lauf schreibt sie
+  // keine Datei - erster Lauf schreibt sie
 }
 
 const letztesUpdate = bestehend?.updatedAt ? new Date(bestehend.updatedAt) : null;
@@ -48,7 +48,7 @@ const heuteSchonAktualisiert = letztesUpdate && zuerichTag(letztesUpdate) === zu
 const faellig = !bestehend || alterTage > 8 || (istMontag && !heuteSchonAktualisiert);
 
 if (!faellig) {
-  console.log(`Charts aktuell (Stand ${bestehend.updatedAt}) — kein Update fällig.`);
+  console.log(`Charts aktuell (Stand ${bestehend.updatedAt}) - kein Update fällig.`);
   process.exit(0);
 }
 
@@ -57,7 +57,7 @@ const res = await fetch(
   { headers: UA, signal: AbortSignal.timeout(20000) }
 );
 if (!res.ok) {
-  console.error(`Steam-Charts-API antwortet mit ${res.status} — charts.json bleibt unverändert.`);
+  console.error(`Steam-Charts-API antwortet mit ${res.status} - charts.json bleibt unverändert.`);
   process.exit(0); // Pipeline nie blockieren, alte Charts bleiben stehen
 }
 const ranks = (await res.json())?.response?.ranks ?? [];
@@ -80,7 +80,7 @@ for (const eintrag of ranks) {
     );
     const data = (await dres.json())?.[eintrag.appid];
     if (!data?.success || !data.data?.name) {
-      console.log(`  App ${eintrag.appid}: keine Details — übersprungen`);
+      console.log(`  App ${eintrag.appid}: keine Details - übersprungen`);
       continue;
     }
     games.push({
@@ -96,16 +96,16 @@ for (const eintrag of ranks) {
     });
     await new Promise((r) => setTimeout(r, 300)); // Steam nicht hämmern
   } catch (err) {
-    console.log(`  App ${eintrag.appid}: ${err.message} — übersprungen`);
+    console.log(`  App ${eintrag.appid}: ${err.message} - übersprungen`);
   }
 }
 
 if (games.length < 4) {
-  console.error(`Nur ${games.length} Spiele auflösbar — charts.json bleibt unverändert.`);
+  console.error(`Nur ${games.length} Spiele auflösbar - charts.json bleibt unverändert.`);
   process.exit(0);
 }
 
-// Anzeige-Reihenfolge: nach Wochen-Spitze (die Zahl, die wir zeigen) —
+// Anzeige-Reihenfolge: nach Wochen-Spitze (die Zahl, die wir zeigen) -
 // Steams interne Sortierung mischt aktuelle Spielerzahlen rein und wirkt
 // neben den Spitzenwerten unlogisch. Der Trend bleibt Steams eigener
 // Wochenvergleich (last_week_rank vs. rank) und damit in sich stimmig.

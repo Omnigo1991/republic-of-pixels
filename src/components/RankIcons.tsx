@@ -1,7 +1,7 @@
 export type RankIconKey = "spark" | "gamepad" | "shield" | "medal" | "crown";
 
 // Rang-Icons als einfache, gefüllte Glyphen im Stil von PlatformIcon/BoltIcon
-// (viewBox 24×24, fill=currentColor) — ersetzt die anfangs verwendeten Emojis,
+// (viewBox 24×24, fill=currentColor) - ersetzt die anfangs verwendeten Emojis,
 // die auf der übrigen Seite nirgends vorkommen (Betreiber-Feedback: "richtige
 // Icons in Cyan" statt Emoji). Verlauf spark → gamepad → shield → medal →
 // crown bildet den steigenden Rang bildlich ab.
@@ -15,7 +15,7 @@ const PATHS: Record<RankIconKey, string> = {
 };
 
 // Jede Glyphe hat von Natur aus eine andere Tinten-Bounding-Box (Schild z. B.
-// 16×20px, Gamepad 20×10px, Medaille 10×17px — per SVG getBBox() gemessen,
+// 16×20px, Gamepad 20×10px, Medaille 10×17px - per SVG getBBox() gemessen,
 // Betreiber-Feedback: "Schild wirkt grösser"). transform normalisiert jede
 // Glyphe auf dieselbe maximale Ausdehnung (16px) um ihr eigenes Zentrum, damit
 // alle optisch gleich gross wirken statt nur dieselbe viewBox zu teilen.

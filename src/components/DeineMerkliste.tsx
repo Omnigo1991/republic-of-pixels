@@ -13,7 +13,7 @@ interface Eintrag {
 }
 
 // Persönliche Merkliste verfolgter Themen/Spiele (schema-v6.sql). Nur für
-// eingeloggte Nutzer:innen sichtbar — kein leerer Platzhalter für Gäste.
+// eingeloggte Nutzer:innen sichtbar - kein leerer Platzhalter für Gäste.
 export function DeineMerkliste() {
   const supabase = useMemo(() => getSupabase(), []);
   const [session, setSession] = useState<Session | null>(null);

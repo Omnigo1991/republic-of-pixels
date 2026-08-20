@@ -7,7 +7,7 @@ import { AnmeldeDialog } from "./AuthDialog";
 
 // Daumen mit durchgehend gerundeten Ecken (Tim, 09.08.2026): Die vorherige
 // Fassung hatte einen hart abgeschnittenen Handballen und einen Zacken am
-// rechten Rand — im Grossformat deutlich sichtbar. Der Daumen nach unten
+// rechten Rand - im Grossformat deutlich sichtbar. Der Daumen nach unten
 // ist dieselbe Form, um 180 Grad gedreht, damit beide exakt gleich wirken.
 const DAUMEN_PFAD =
   "M3.7 9.7h2.1c.6 0 1.1.5 1.1 1.1v8.4c0 .6-.5 1.1-1.1 1.1H3.7c-.6 0-1.1-.5-1.1-1.1v-8.4c0-.6.5-1.1 1.1-1.1zM8.9 20.3V10.1c0-.45.18-.88.5-1.2l4.5-4.5c.32-.32.78-.44 1.2-.32.66.19 1.06.86.93 1.53l-.78 4.03h4.4c1.28 0 2.24 1.16 2 2.42l-1.16 6.3c-.2 1.1-1.16 1.9-2.28 1.9H8.9z";
@@ -48,7 +48,7 @@ function DisappointedIcon({ className }: { className?: string }) {
 
 // Artikel-Reaktionen für angemeldete Leser: eine Reaktion pro Person und
 // Artikel, umschaltbar. Datenhaltung: Tabelle article_reactions
-// (supabase/schema-v2.sql — muss einmalig im SQL-Editor ausgeführt werden).
+// (supabase/schema-v2.sql - muss einmalig im SQL-Editor ausgeführt werden).
 const REAKTIONEN: {
   key: string;
   Icon: (props: { className?: string }) => JSX.Element;
@@ -75,7 +75,7 @@ export function ArticleReactions({ articleSlug }: { articleSlug: string }) {
         .select("reaction, user_id")
         .eq("article_slug", articleSlug);
       if (error) {
-        // Tabelle existiert noch nicht (schema-v2.sql nicht ausgeführt) —
+        // Tabelle existiert noch nicht (schema-v2.sql nicht ausgeführt) -
         // Reaktionen werden ausgeblendet statt Fehler zu zeigen.
         setVerfuegbar(false);
         return;
@@ -144,7 +144,7 @@ export function ArticleReactions({ articleSlug }: { articleSlug: string }) {
                   : "border-border-default text-text-secondary hover:border-accent/50 hover:text-text-primary"
               }`}
             >
-              {/* Icon IMMER links vom Text (Tim, 09.08.2026) — vorher stand
+              {/* Icon IMMER links vom Text (Tim, 09.08.2026) - vorher stand
                   es hier rechts und anderswo links. */}
               <r.Icon className="h-4 w-4" />
               <span>{r.label}</span>

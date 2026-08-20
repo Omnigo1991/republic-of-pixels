@@ -1,7 +1,7 @@
 // Generiert src/lib/articles.generated.ts aus allen JSON-Dateien in
 // src/content/articles/. Läuft automatisch vor jedem `npm run dev` und
 // `npm run build` (siehe package.json pre-Scripts). Die News-Pipeline muss
-// dadurch nur eine JSON-Datei ablegen — kein Code-Eingriff nötig.
+// dadurch nur eine JSON-Datei ablegen - kein Code-Eingriff nötig.
 import { readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -35,7 +35,7 @@ const list = files.map((_, i) => `a${i}`).join(", ");
 
 writeFileSync(
   outFile,
-  `// AUTOMATISCH GENERIERT von scripts/generate-article-index.mjs — nicht von Hand bearbeiten.
+  `// AUTOMATISCH GENERIERT von scripts/generate-article-index.mjs - nicht von Hand bearbeiten.
 import type { Article } from "./types";
 
 ${imports}

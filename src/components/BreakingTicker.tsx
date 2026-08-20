@@ -6,7 +6,7 @@ const BREAKING_MAX_AGE_MS = 24 * 60 * 60 * 1000;
 
 // Schmales Breaking-Band direkt unter dem Header: erscheint automatisch,
 // sobald die Pipeline einen Breaking-Artikel veröffentlicht, und verschwindet
-// nach 24 Stunden von selbst (statischer Build — Bewertung zur Build-Zeit,
+// nach 24 Stunden von selbst (statischer Build - Bewertung zur Build-Zeit,
 // jeder Pipeline-Lauf baut die Seite neu).
 export function BreakingTicker() {
   const latest = getAllArticles().find(

@@ -3,7 +3,7 @@
 // deutsche Zitate direkt aus der Pipeline (run.mjs-Prompt); dieses Skript
 // zieht die 64 Bestandsartikel nach. Start: GitHub → Actions →
 // "Zitate übersetzen" → Run workflow. Danach kann der Workflow bleiben
-// (er ist idempotent — deutsche Zitate bleiben unangetastet).
+// (er ist idempotent - deutsche Zitate bleiben unangetastet).
 import { readFileSync, writeFileSync, readdirSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -12,7 +12,7 @@ import { askClaude, parseJsonResponse, MODELL_HANDWERK } from "./lib/claude.mjs"
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const ARTICLES_DIR = join(ROOT, "src", "content", "articles");
 
-const SYSTEM = `Du bist Übersetzungsredaktion eines deutschsprachigen Gaming-Magazins (SCHWEIZER Rechtschreibung: NIEMALS "ß", immer "ss"). Du übersetzt wörtliche Zitate präzise und neutral ins Deutsche — nichts zuspitzen, nichts weglassen, Fachbegriffe der Gaming-Branche natürlich übertragen.`;
+const SYSTEM = `Du bist Übersetzungsredaktion eines deutschsprachigen Gaming-Magazins (SCHWEIZER Rechtschreibung: NIEMALS "ß", immer "ss"). Du übersetzt wörtliche Zitate präzise und neutral ins Deutsche - nichts zuspitzen, nichts weglassen, Fachbegriffe der Gaming-Branche natürlich übertragen.`;
 
 async function uebersetze(batch) {
   const liste = batch.map((z, i) => `${i} | ${z.text}`).join("\n");
@@ -22,7 +22,7 @@ ${liste}
 
 Antworte NUR mit JSON, erstes Zeichen "{": {"uebersetzungen":[{"index":0,"deutsch":"..."}]}
 Wenn alle bereits deutsch sind: {"uebersetzungen":[]}`;
-  // Übersetzen ist Handwerk, kein Urteil — das kleinere Modell reicht.
+  // Übersetzen ist Handwerk, kein Urteil - das kleinere Modell reicht.
   // Bewusst MODELL_HANDWERK statt MODELL_TEXT: Seit dem 14.08.2026 laeuft
   // der Artikeltext auf Opus, das Uebersetzen soll dort NICHT mitwandern.
   // Budget 9000, weil sich das Nachdenken das Budget mit der Antwort teilt.

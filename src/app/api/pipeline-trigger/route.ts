@@ -3,7 +3,7 @@ export const dynamic = "force-dynamic";
 // Auslöser der News-Pipeline (Stand 07.08.2026, Takt: alle 3 Stunden):
 // - Vercel-Cron (täglich, Hobby-Plan) ruft mit "Authorization: Bearer <CRON_SECRET>" auf.
 // - Ein externer Gratis-Pinger (cron-job.org, stündlich) ruft mit ?key=<PING_KEY> auf.
-// Sicherheit: Vor jedem Dispatch wird der letzte Workflow-Lauf bei GitHub geprüft —
+// Sicherheit: Vor jedem Dispatch wird der letzte Workflow-Lauf bei GitHub geprüft -
 // liegt er weniger als 170 Minuten zurück, wird übersprungen. Der weiterhin
 // stündliche externe Ping verpufft dadurch wirkungslos (kein Eingriff bei
 // cron-job.org nötig), und mutwilliges Dauerfeuer auf diese URL kann nie mehr
@@ -33,12 +33,12 @@ export async function GET(req: Request) {
   // Rate-Limit: letzter Lauf < 170 Min → nicht erneut auslösen.
   // WICHTIG: fail-closed. Die frühere fail-open-Variante (bei
   // fehlgeschlagener Prüfung trotzdem dispatchen) hat den 3-Stunden-Takt
-  // ausgehebelt — der stündliche externe Ping kam ungebremst durch und
+  // ausgehebelt - der stündliche externe Ping kam ungebremst durch und
   // die Pipeline lief weiter stündlich (entdeckt 07.08.2026). Kann die
   // Route den letzten Lauf nicht verifizieren, löst sie NICHT aus; der
   // GitHub-Schedule (alle 3 Std.) ist ohnehin der primäre Taktgeber.
   // cache: "no-store" ist hier ESSENZIELL: Next.js cached fetch()-Antworten
-  // in Route-Handlern standardmässig im Data Cache — ohne no-store verglich
+  // in Route-Handlern standardmässig im Data Cache - ohne no-store verglich
   // der Guard gegen eine eingefrorene, tagealte "letzter Lauf"-Antwort und
   // liess deshalb jeden Ping durch (die eigentliche Wurzel des
   // Stunden-Takt-Bugs vom 07.08.2026).
@@ -49,7 +49,7 @@ export async function GET(req: Request) {
   if (!lastRes.ok) {
     return Response.json({
       triggered: false,
-      skipped: `Letzter-Lauf-Prüfung fehlgeschlagen (HTTP ${lastRes.status}) — vorsichtshalber kein Dispatch`,
+      skipped: `Letzter-Lauf-Prüfung fehlgeschlagen (HTTP ${lastRes.status}) - vorsichtshalber kein Dispatch`,
     });
   }
   const data = await lastRes.json();
@@ -57,7 +57,7 @@ export async function GET(req: Request) {
   if (!last) {
     return Response.json({
       triggered: false,
-      skipped: "Kein bisheriger Lauf auffindbar — vorsichtshalber kein Dispatch (GitHub-Schedule übernimmt)",
+      skipped: "Kein bisheriger Lauf auffindbar - vorsichtshalber kein Dispatch (GitHub-Schedule übernimmt)",
     });
   }
   if (Date.now() - new Date(last).getTime() < MIN_INTERVAL_MS) {

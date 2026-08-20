@@ -1,7 +1,7 @@
 {
   "slug": "pokemon-center-ceva-datenleck-deutschland-uk-2026",
-  "title": "Pokémon Center trifft dasselbe Datenleck wie Steam — Bestellungen storniert",
-  "subtitle": "Der Angriff auf Logistikdienstleister CEVA betrifft nun auch Kundschaft in Deutschland und Grossbritannien — mitten im Jubiläumsgeschäft",
+  "title": "Pokémon Center trifft dasselbe Datenleck wie Steam - Bestellungen storniert",
+  "subtitle": "Der Angriff auf Logistikdienstleister CEVA betrifft nun auch Kundschaft in Deutschland und Grossbritannien - mitten im Jubiläumsgeschäft",
   "excerpt": "Erst Valves Steam-Hardware, jetzt der offizielle Pokémon-Shop: Dasselbe Datenleck beim Versandpartner CEVA trifft Kundschaft in Deutschland und Grossbritannien. Eine Konsequenz geht diesmal deutlich weiter.",
   "seoTitle": "Pokémon Center: Datenleck bei CEVA trifft Deutschland und UK",
   "metaDescription": "Nach Valves Steam-Hardware meldet auch Pokémon Center ein Datenleck beim Versandpartner CEVA. Betroffene Bestellungen aus Deutschland und UK wurden storniert.",
@@ -19,11 +19,11 @@
   ],
   "tldr": [
     "Der Datenvorfall beim Logistikdienstleister CEVA Logistics betrifft nun auch Pokémon Center in Deutschland und Grossbritannien",
-    "Abgeflossen sein können Namen, Anschriften, Telefonnummern, E-Mail-Adressen und Bestelldetails inklusive Inhalt — Zahlungsdaten laut Pokémon Center nicht",
+    "Abgeflossen sein können Namen, Anschriften, Telefonnummern, E-Mail-Adressen und Bestelldetails inklusive Inhalt - Zahlungsdaten laut Pokémon Center nicht",
     "Anders als Valve storniert Pokémon Center die Bestellungen betroffener Kundschaft, darunter Produkte zum 30-jährigen Jubiläum",
     "Der Angriff soll zwischen dem 29. Juli und dem 1. August stattgefunden haben; die britische Website meldet zudem Versandverzögerungen"
   ],
-  "whyItMatters": "Wer im offiziellen Pokémon-Shop bestellt hat, muss sich nicht nur mit einer möglichen Offenlegung von Namen, Adresse und Bestellinhalt auseinandersetzen, sondern auch mit einer stornierten Bestellung — und das ausgerechnet bei begehrten Jubiläumsartikeln. Der Fall zeigt zugleich, dass ein einziger Dienstleister ausreicht, um Kundendaten mehrerer grosser Gaming-Marken gleichzeitig zu gefährden.",
+  "whyItMatters": "Wer im offiziellen Pokémon-Shop bestellt hat, muss sich nicht nur mit einer möglichen Offenlegung von Namen, Adresse und Bestellinhalt auseinandersetzen, sondern auch mit einer stornierten Bestellung - und das ausgerechnet bei begehrten Jubiläumsartikeln. Der Fall zeigt zugleich, dass ein einziger Dienstleister ausreicht, um Kundendaten mehrerer grosser Gaming-Marken gleichzeitig zu gefährden.",
   "body": [
     {
       "type": "paragraph",
@@ -38,7 +38,7 @@
       "type": "stats",
       "items": [
         {
-          "value": "29. Juli – 1. Aug.",
+          "value": "29. Juli - 1. Aug.",
           "label": "Zeitraum, in dem der Angriff stattgefunden haben soll"
         },
         {
@@ -47,7 +47,7 @@
         },
         {
           "value": "0",
-          "label": "Zahlungs- und Kartendaten — die teilt Pokémon Center nicht mit CEVA"
+          "label": "Zahlungs- und Kartendaten - die teilt Pokémon Center nicht mit CEVA"
         }
       ]
     },
@@ -57,7 +57,7 @@
     },
     {
       "type": "paragraph",
-      "text": "CEVA Logistics ist in Europa Versandpartner von Pokémon Center. Damit Pakete überhaupt zugestellt werden können, gibt der Shop bestimmte Informationen an den Dienstleister weiter — und genau dieser Datenbestand steht nun im Zentrum des Vorfalls. Laut der Benachrichtigung an die Kundschaft kann es sich um folgende Angaben handeln:"
+      "text": "CEVA Logistics ist in Europa Versandpartner von Pokémon Center. Damit Pakete überhaupt zugestellt werden können, gibt der Shop bestimmte Informationen an den Dienstleister weiter - und genau dieser Datenbestand steht nun im Zentrum des Vorfalls. Laut der Benachrichtigung an die Kundschaft kann es sich um folgende Angaben handeln:"
     },
     {
       "type": "list",
@@ -71,7 +71,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Die gute Nachricht: Zahlungs- und Kartendaten sind nach Angaben von Pokémon Center nicht betroffen, weil der Shop diese Informationen gar nicht erst an CEVA weitergibt. Für Betroffene bleibt trotzdem ein unangenehmer Rest — die Kombination aus Name, Wohnadresse und der Information, welche Sammlerware dorthin geliefert werden sollte, ist eine Vorlage für gezielte Betrugsmails, die täuschend echt wirken können. Wer eine solche Benachrichtigung erhalten hat, sollte E-Mails mit angeblichen Bestellrückfragen entsprechend kritisch prüfen."
+      "text": "Die gute Nachricht: Zahlungs- und Kartendaten sind nach Angaben von Pokémon Center nicht betroffen, weil der Shop diese Informationen gar nicht erst an CEVA weitergibt. Für Betroffene bleibt trotzdem ein unangenehmer Rest - die Kombination aus Name, Wohnadresse und der Information, welche Sammlerware dorthin geliefert werden sollte, ist eine Vorlage für gezielte Betrugsmails, die täuschend echt wirken können. Wer eine solche Benachrichtigung erhalten hat, sollte E-Mails mit angeblichen Bestellrückfragen entsprechend kritisch prüfen."
     },
     {
       "type": "heading",
@@ -79,7 +79,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Inhaltlich ähnelt die Benachrichtigung von Pokémon Center jener, die Steam-Hardware-Kundschaft in Europa erhalten hat. Es gibt allerdings einen entscheidenden Unterschied: Pokémon Center hat die Bestellungen der betroffenen Personen storniert. Wer also auf ein Paket gewartet hat, bekommt es nicht — und muss stattdessen neu bestellen. Eine Garantie, dass der gewünschte Artikel dann noch verfügbar ist, gibt es nicht."
+      "text": "Inhaltlich ähnelt die Benachrichtigung von Pokémon Center jener, die Steam-Hardware-Kundschaft in Europa erhalten hat. Es gibt allerdings einen entscheidenden Unterschied: Pokémon Center hat die Bestellungen der betroffenen Personen storniert. Wer also auf ein Paket gewartet hat, bekommt es nicht - und muss stattdessen neu bestellen. Eine Garantie, dass der gewünschte Artikel dann noch verfügbar ist, gibt es nicht."
     },
     {
       "type": "paragraph",
@@ -100,7 +100,7 @@
     },
     {
       "type": "paragraph",
-      "text": "Der Angriff soll zwischen dem 29. Juli und dem 1. August stattgefunden haben. Weitere Details nannte Pokémon Center in der Benachrichtigung an die Kundschaft nicht — etwa dazu, wie viele Personen konkret betroffen sind oder warum eine Stornierung als notwendig erachtet wurde."
+      "text": "Der Angriff soll zwischen dem 29. Juli und dem 1. August stattgefunden haben. Weitere Details nannte Pokémon Center in der Benachrichtigung an die Kundschaft nicht - etwa dazu, wie viele Personen konkret betroffen sind oder warum eine Stornierung als notwendig erachtet wurde."
     },
     {
       "type": "heading",
@@ -108,15 +108,15 @@
     },
     {
       "type": "paragraph",
-      "text": "Weder Valve noch Pokémon Center wurden selbst angegriffen. Kompromittiert wurde ein gemeinsamer Dienstleister — und genau darin liegt die eigentliche Lehre dieses Falls. Grosse Marken lagern Logistik an spezialisierte Partner aus, die dafür Adressdaten aus dutzenden Shops bündeln. Fällt ein solcher Knotenpunkt aus, betrifft das nicht eine Firma, sondern alle, die dort andocken. Dass innerhalb weniger Tage zwei der bekanntesten Namen der Branche dieselbe Meldung verschicken mussten, zeigt, wie konzentriert dieses Risiko inzwischen ist."
+      "text": "Weder Valve noch Pokémon Center wurden selbst angegriffen. Kompromittiert wurde ein gemeinsamer Dienstleister - und genau darin liegt die eigentliche Lehre dieses Falls. Grosse Marken lagern Logistik an spezialisierte Partner aus, die dafür Adressdaten aus dutzenden Shops bündeln. Fällt ein solcher Knotenpunkt aus, betrifft das nicht eine Firma, sondern alle, die dort andocken. Dass innerhalb weniger Tage zwei der bekanntesten Namen der Branche dieselbe Meldung verschicken mussten, zeigt, wie konzentriert dieses Risiko inzwischen ist."
     },
     {
       "type": "paragraph",
-      "text": "Für Betroffene bleibt kurzfristig wenig zu tun, ausser wachsam zu sein und — wer die Jubiläumsware unbedingt will — den Shop im Auge zu behalten. Ob und wie Pokémon Center Kundinnen und Kunden entgegenkommt, deren limitierte Bestellung durch die Stornierung verloren ging, ist bislang offen."
+      "text": "Für Betroffene bleibt kurzfristig wenig zu tun, ausser wachsam zu sein und - wer die Jubiläumsware unbedingt will - den Shop im Auge zu behalten. Ob und wie Pokémon Center Kundinnen und Kunden entgegenkommt, deren limitierte Bestellung durch die Stornierung verloren ging, ist bislang offen."
     }
   ],
   "poll": {
-    "question": "Eure Bestellung wurde storniert — was macht ihr jetzt?",
+    "question": "Eure Bestellung wurde storniert - was macht ihr jetzt?",
     "options": [
       "Sofort neu bestellen und auf Restbestände hoffen",
       "Abwarten, bis der Shop eine Entschädigung anbietet",
@@ -141,7 +141,7 @@
   ],
   "image": {
     "src": "/images/articles/pokemon-center-ceva-datenleck-deutschland-uk-2026.webp",
-    "alt": "Pokémon Center trifft dasselbe Datenleck wie Steam — Bestellungen storniert",
+    "alt": "Pokémon Center trifft dasselbe Datenleck wie Steam - Bestellungen storniert",
     "credit": "Bild: Eurogamer",
     "sourceUrl": "https://www.eurogamer.net/pokemon-center-ceva-data-breach-europe-steam-hardware",
     "sourceWidth": 690,

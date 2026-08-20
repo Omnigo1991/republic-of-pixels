@@ -1,4 +1,4 @@
-// AUTOMATISCH GENERIERT von scripts/generate-article-index.mjs — nicht von Hand bearbeiten.
+// AUTOMATISCH GENERIERT von scripts/generate-article-index.mjs - nicht von Hand bearbeiten.
 import type { Article } from "./types";
 
 import a0 from "@/content/articles/007-first-light-4-millionen-verkaeufe-roadmap-2026.json";

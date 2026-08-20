@@ -2,7 +2,7 @@
   "slug": "radeon-rx-7800-xt-rx-7600-fsr-4-1-nachtest",
   "title": "Radeon RX 7800 XT und RX 7600 im Nachtest mit FSR Upscaling 4.1",
   "subtitle": "ComputerBase hat beide RDNA-3-Grafikkarten im aktualisierten Testparcours erneut vermessen",
-  "excerpt": "Seit RDNA 3 FSR Upscaling 4.1 unterstützt, waren die Testparcours-Werte der RX 7800 XT und RX 7600 veraltet. ComputerBase hat beide Karten neu benchmarkt – mit spürbaren Verschiebungen im Vergleich zur Konkurrenz.",
+  "excerpt": "Seit RDNA 3 FSR Upscaling 4.1 unterstützt, waren die Testparcours-Werte der RX 7800 XT und RX 7600 veraltet. ComputerBase hat beide Karten neu benchmarkt - mit spürbaren Verschiebungen im Vergleich zur Konkurrenz.",
   "seoTitle": "RX 7800 XT & RX 7600: Neuer Test mit FSR 4.1",
   "metaDescription": "ComputerBase testet Radeon RX 7800 XT und RX 7600 mit FSR Upscaling 4.1 neu und zeigt, wie sich die Kräfteverhältnisse zur Konkurrenz verschieben.",
   "category": "reviews",
@@ -27,7 +27,7 @@
   "body": [
     {
       "type": "paragraph",
-      "text": "Der im Mai erneuerte Grafikkarten-Testparcours von ComputerBase lief bei der Radeon RX 7800 XT und der Radeon RX 7600 zunächst noch mit FSR Upscaling 3.1. Nur wenige Tage nach der Einführung des neuen Parcours kündigte AMD jedoch an, dass RDNA 3 künftig auch das modernere FSR Upscaling 4.1 unterstützen werde – ursprünglich für Juli angekündigt, letztlich bereits im Juni verfügbar. Damit waren die bestehenden Werte beider Karten im Testparcours nicht mehr aktuell, denn FSR 4.1 kostet zwar etwas Leistung gegenüber FSR 3.1, verbessert dafür aber die Bildqualität spürbar. ComputerBase hat beide Modelle deshalb neu benchmarkt."
+      "text": "Der im Mai erneuerte Grafikkarten-Testparcours von ComputerBase lief bei der Radeon RX 7800 XT und der Radeon RX 7600 zunächst noch mit FSR Upscaling 3.1. Nur wenige Tage nach der Einführung des neuen Parcours kündigte AMD jedoch an, dass RDNA 3 künftig auch das modernere FSR Upscaling 4.1 unterstützen werde - ursprünglich für Juli angekündigt, letztlich bereits im Juni verfügbar. Damit waren die bestehenden Werte beider Karten im Testparcours nicht mehr aktuell, denn FSR 4.1 kostet zwar etwas Leistung gegenüber FSR 3.1, verbessert dafür aber die Bildqualität spürbar. ComputerBase hat beide Modelle deshalb neu benchmarkt."
     },
     {
       "type": "heading",
@@ -35,7 +35,7 @@
     },
     {
       "type": "paragraph",
-      "text": "In 2.560 × 1.440 Pixeln verliert die RX 7800 XT durch den Wechsel auf FSR 4.1 sieben Prozent Leistung bei Rasterizer-Grafik und fünf Prozent bei Raytracing gegenüber FSR 3.1. Bei der RX 7600 fällt der Verlust mit neun beziehungsweise sieben Prozent noch etwas grösser aus. Laut ComputerBase verlieren eigentlich schnellere Grafikkarten tendenziell mehr Leistung als langsamere Modelle – bei der RX 7600 stösst FSR 4.1 in einigen Spielen jedoch an das Speicherlimit der Karte, da das Verfahren geringfügig mehr Videospeicher benötigt. Das erklärt das von der Norm abweichende Verhalten."
+      "text": "In 2.560 × 1.440 Pixeln verliert die RX 7800 XT durch den Wechsel auf FSR 4.1 sieben Prozent Leistung bei Rasterizer-Grafik und fünf Prozent bei Raytracing gegenüber FSR 3.1. Bei der RX 7600 fällt der Verlust mit neun beziehungsweise sieben Prozent noch etwas grösser aus. Laut ComputerBase verlieren eigentlich schnellere Grafikkarten tendenziell mehr Leistung als langsamere Modelle - bei der RX 7600 stösst FSR 4.1 in einigen Spielen jedoch an das Speicherlimit der Karte, da das Verfahren geringfügig mehr Videospeicher benötigt. Das erklärt das von der Norm abweichende Verhalten."
     },
     {
       "type": "heading",
@@ -51,11 +51,11 @@
     },
     {
       "type": "paragraph",
-      "text": "ComputerBase weist zudem darauf hin, dass die alten Messwerte mit dem Treiber Adrenalin 26.3.1 entstanden sind, die neuen dagegen mit Adrenalin 26.6.4 – kleinere Abweichungen durch den Treiberwechsel seien daher möglich. Aus Gründen der Vergleichbarkeit bleiben die alten FSR-3.1-Werte im Testparcours weiterhin einsehbar, sind dort aber ausdrücklich als Ergebnisse mit schlechterer Bildqualität gekennzeichnet."
+      "text": "ComputerBase weist zudem darauf hin, dass die alten Messwerte mit dem Treiber Adrenalin 26.3.1 entstanden sind, die neuen dagegen mit Adrenalin 26.6.4 - kleinere Abweichungen durch den Treiberwechsel seien daher möglich. Aus Gründen der Vergleichbarkeit bleiben die alten FSR-3.1-Werte im Testparcours weiterhin einsehbar, sind dort aber ausdrücklich als Ergebnisse mit schlechterer Bildqualität gekennzeichnet."
     },
     {
       "type": "paragraph",
-      "text": "Für den Testparcours bedeutet der Wechsel vor allem eines: Die RX-7000-Riege ist mit FSR 4.1 zwar etwas langsamer unterwegs als zuvor, liefert dafür aber die Upscaling-Qualität, die RDNA-3-Besitzer in der Praxis auch tatsächlich nutzen sollten – und ist damit erstmals wieder direkt und fair mit der aktuellen RX-9000-Serie vergleichbar."
+      "text": "Für den Testparcours bedeutet der Wechsel vor allem eines: Die RX-7000-Riege ist mit FSR 4.1 zwar etwas langsamer unterwegs als zuvor, liefert dafür aber die Upscaling-Qualität, die RDNA-3-Besitzer in der Praxis auch tatsächlich nutzen sollten - und ist damit erstmals wieder direkt und fair mit der aktuellen RX-9000-Serie vergleichbar."
     }
   ],
   "isLeakOrRumor": false,

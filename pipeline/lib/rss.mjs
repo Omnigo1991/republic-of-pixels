@@ -48,7 +48,7 @@ function imageOf(item) {
 }
 
 // Ruft einen Feed ab und normalisiert RSS-2.0- wie Atom-Einträge.
-// Wirft nie — ein toter Feed darf den Lauf nicht stoppen.
+// Wirft nie - ein toter Feed darf den Lauf nicht stoppen.
 export async function fetchFeed(feed, { timeoutMs = 15000 } = {}) {
   try {
     const res = await fetch(feed.url, {

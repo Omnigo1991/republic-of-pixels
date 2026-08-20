@@ -99,7 +99,7 @@ export function SearchPanel({
   );
 }
 
-// AUSFAHRENDES SUCHFELD (Tim, 15.08.2026): kein Pop-up-Fenster mehr —
+// AUSFAHRENDES SUCHFELD (Tim, 15.08.2026): kein Pop-up-Fenster mehr -
 // ein Klick auf die Lupe faehrt das Feld direkt in der Kopfzeile aus.
 // Die Trefferliste haengt darunter als Panel, Escape und Klick daneben
 // schliessen wieder.

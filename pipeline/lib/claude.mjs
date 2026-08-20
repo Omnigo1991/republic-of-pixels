@@ -4,16 +4,16 @@ const API_URL = "https://api.anthropic.com/v1/messages";
 
 // EIN MODELL PRO AUFGABE (Tim, 14.08.2026).
 //
-// Bis heute ging jeder Aufruf an dasselbe Modell — Themenauswahl,
+// Bis heute ging jeder Aufruf an dasselbe Modell - Themenauswahl,
 // Artikeltext, Korrekturlesen und Instagram-Texte. Das war nie entschieden:
 // Die Zeile stand seit dem ersten Commit da und wurde nie hinterfragt.
 //
 // Jetzt entscheidet die AUFGABE. Die Namen sagen, warum:
 //
-//   URTEIL    — Aufgaben, bei denen etwas beurteilt wird: Welche Meldung ist
+//   URTEIL    - Aufgaben, bei denen etwas beurteilt wird: Welche Meldung ist
 //               es wert? Welcher Ton trifft? Welcher Bildausschnitt wirkt?
 //               Wenige Aufrufe pro Tag, hoher Hebel.
-//   TEXT      — Artikel schreiben. Der Grossteil des Verbrauchs. Seit dem
+//   TEXT      - Artikel schreiben. Der Grossteil des Verbrauchs. Seit dem
 //               14.08.2026 auf Opus, nach Tims Entscheid am direkten
 //               Vergleich: Beide Modelle schrieben dieselben drei Quellen,
 //               Opus stellte in jedem Fall den Bezug zum Spielen her, wo
@@ -21,10 +21,10 @@ const API_URL = "https://api.anthropic.com/v1/messages";
 //               das die Existenzberechtigung des Artikels.
 //               Nebenbefund derselben Messung: Der Prompt verlangt bei
 //               "standard" 550 bis 700 Woerter. Sonnet lieferte 368, 489 und
-//               499 — durchgehend zu wenig. Opus lieferte 539, 540 und 696.
+//               499 - durchgehend zu wenig. Opus lieferte 539, 540 und 696.
 //               Das staerkere Modell haelt sich also an eine Vorgabe, die das
 //               kleinere ignoriert hat.
-//   HANDWERK  — Korrekturlesen und Uebersetzen. BEWUSST das kleinere Modell, nicht aus
+//   HANDWERK  - Korrekturlesen und Uebersetzen. BEWUSST das kleinere Modell, nicht aus
 //               Sparsamkeit: Opus 5 neigt dazu, einen Auftrag auszuweiten und
 //               Dinge zu verbessern, nach denen niemand gefragt hat. Bei
 //               einem Schritt, der ausschliesslich Tippfehler finden und
@@ -37,24 +37,24 @@ export const MODELL_HANDWERK = "claude-sonnet-5";
 export const MODEL = MODELL_TEXT;
 
 // Server-seitiger Rückfall bei Ablehnung (siehe ClaudeAblehnung unten).
-// Nur für Modelle, die ihn unterstützen — bei den übrigen würde der
+// Nur für Modelle, die ihn unterstützen - bei den übrigen würde der
 // Parameter die Anfrage ungültig machen.
 const FALLBACK_BETA = "server-side-fallback-2026-07-01";
 const MIT_FALLBACK = new Set(["claude-opus-5", "claude-fable-5"]);
 
 // ZEITGRENZE (heraufgesetzt 14.08.2026): 180 Sekunden waren auf Sonnet
 // zugeschnitten. Opus denkt vor der Antwort länger nach; bei langen Artikeln
-// kam das der alten Grenze gefährlich nahe. Sieben Minuten sind grosszügig —
+// kam das der alten Grenze gefährlich nahe. Sieben Minuten sind grosszügig -
 // ein Abbruch kostet einen ganzen Lauf, ein paar Minuten Wartezeit nicht.
 const ZEITGRENZE_MS = 420000;
 
 // Listenpreise je Million Token [Eingang, Ausgang], Stand 14.08.2026.
 // Sonnet 5 läuft derzeit auf einem niedrigeren Einführungspreis, der Ende
-// August ausläuft — wir rechnen bewusst mit dem regulären Preis. Damit ist
+// August ausläuft - wir rechnen bewusst mit dem regulären Preis. Damit ist
 // die ausgewiesene Summe eine Obergrenze und wird nicht plötzlich falsch,
 // wenn die Einführungsphase endet.
 // claude-opus-4-8 steht mit drin, weil der Rückfall bei einer Ablehnung
-// dorthin führen kann — die Antwort trägt dann DIESEN Modellnamen. Ohne den
+// dorthin führen kann - die Antwort trägt dann DIESEN Modellnamen. Ohne den
 // Eintrag hätte der Bericht die Kosten still als 0 ausgewiesen (gefunden
 // beim Prüflauf 14.08.2026, bevor es echtes Geld betraf).
 const PREISE = {
@@ -70,7 +70,7 @@ const PREISE = {
  *
  * WARUM EIGENE FEHLERART (Tim, 14.08.2026): Opus 5 hat schärfere Filter als
  * Sonnet, unter anderem bei Hacking-Themen. Wir berichten über Leaks,
- * Datendiebstähle und Angriffe auf Studios — das kann sie auslösen.
+ * Datendiebstähle und Angriffe auf Studios - das kann sie auslösen.
  *
  * Eine Ablehnung sah für den alten Code aus wie eine leere Antwort. Er hätte
  * dieselbe Anfrage dreimal wiederholt (die zwangsläufig dreimal abgelehnt
@@ -93,7 +93,7 @@ export class ClaudeAblehnung extends Error {
 
 // VERBRAUCH MITSCHREIBEN (Tim, 14.08.2026): Bisher haben wir über
 // geschätzte Kosten geredet. Die API liefert den echten Verbrauch bei jedem
-// Aufruf mit — wir haben ihn nur weggeworfen. Jetzt wird er summiert und am
+// Aufruf mit - wir haben ihn nur weggeworfen. Jetzt wird er summiert und am
 // Ende des Laufs ausgegeben, damit die nächste Modellentscheidung auf
 // gemessenen Zahlen steht statt auf meiner Schätzung.
 const verbrauch = new Map();
@@ -125,14 +125,14 @@ export function verbrauchBericht() {
     const kosten = (e.ein / 1e6) * pEin + (e.aus / 1e6) * pAus;
     summe += kosten;
     console.log(
-      `  ${modell}: ${e.aufrufe} Aufrufe, ${e.ein} ein / ${e.aus} aus — ` +
+      `  ${modell}: ${e.aufrufe} Aufrufe, ${e.ein} ein / ${e.aus} aus - ` +
         (preis ? `$${kosten.toFixed(4)}` : "Preis unbekannt, NICHT in der Summe"),
     );
   }
   console.log(`  Summe: $${summe.toFixed(4)}`);
   if (unbekannt) {
     console.log(
-      `::warning::Claude-Verbrauch: Für mindestens ein Modell fehlt der Preis — die Summe ist zu niedrig. PREISE in pipeline/lib/claude.mjs ergänzen.`,
+      `::warning::Claude-Verbrauch: Für mindestens ein Modell fehlt der Preis - die Summe ist zu niedrig. PREISE in pipeline/lib/claude.mjs ergänzen.`,
     );
   }
 }
@@ -142,10 +142,10 @@ export function verbrauchBericht() {
  * @param {string}  o.system      Systemvorgabe
  * @param {string} [o.prompt]     Anfrage als reiner Text
  * @param {Array}  [o.content]    Anfrage als Blöcke (Text UND Bilder). Wird
- *                                gesetzt, wenn Claude etwas ANSCHAUEN soll —
+ *                                gesetzt, wenn Claude etwas ANSCHAUEN soll -
  *                                gebraucht vom Bild-Tor. Schliesst prompt aus.
  * @param {number} [o.maxTokens]  Obergrenze für NACHDENKEN UND ANTWORT
- *                                zusammen — siehe Hinweis unten.
+ *                                zusammen - siehe Hinweis unten.
  * @param {number} [o.retries]    Wiederholungen bei technischen Fehlern
  * @param {string} [o.model]      Modell (MODELL_URTEIL / _TEXT / _HANDWERK)
  * @param {string} [o.effort]     Denktiefe: low | medium | high | xhigh | max
@@ -168,7 +168,7 @@ export async function askClaude({
 
   // NACHDENKEN TEILT SICH DAS BUDGET MIT DER ANTWORT (Fund 14.08.2026):
   // Wir setzen den Parameter "thinking" nirgends. Bei Sonnet 5 und Opus 5
-  // heisst "nicht gesetzt" aber EINGESCHALTET — bei den Vorgängerversionen
+  // heisst "nicht gesetzt" aber EINGESCHALTET - bei den Vorgängerversionen
   // hiess es ausgeschaltet, und die Umstellung ist still passiert.
   //
   // Folge: maxTokens ist eine gemeinsame Obergrenze für das Nachdenken UND
@@ -220,7 +220,7 @@ export async function askClaude({
         // SICHERHEITSNETZ FÜR DEN RÜCKFALL-PARAMETER (14.08.2026).
         //
         // Der Rückfall bei Ablehnung ist eine junge API-Funktion. Ob unser
-        // Konto sie akzeptiert, konnte ich beim Bauen nicht prüfen — hier
+        // Konto sie akzeptiert, konnte ich beim Bauen nicht prüfen - hier
         // liegt kein Schlüssel. Wird sie abgelehnt, kommt HTTP 400, und
         // JEDER Opus-Aufruf scheitert: Die Themenauswahl stirbt, und mit ihr
         // der ganze Lauf. Ein Tag ohne Artikel wegen eines Parameters, der
@@ -228,11 +228,11 @@ export async function askClaude({
         //
         // Darum: Einmal ohne den Parameter wiederholen. Wir verlieren dann
         // den automatischen Rückfall (eine Ablehnung überspringt eben den
-        // Beitrag) — aber der Lauf läuft. Die Warnung macht sichtbar, dass
+        // Beitrag) - aber der Lauf läuft. Die Warnung macht sichtbar, dass
         // nachgebessert werden muss, statt es still zu verschlucken.
         if (res.status === 400 && mitFallback) {
           console.log(
-            `::warning::Claude: Rückfall-Parameter abgelehnt (HTTP 400) — Wiederholung ohne ihn. Bitte pipeline/lib/claude.mjs prüfen. Antwort: ${rumpf.slice(0, 200)}`,
+            `::warning::Claude: Rückfall-Parameter abgelehnt (HTTP 400) - Wiederholung ohne ihn. Bitte pipeline/lib/claude.mjs prüfen. Antwort: ${rumpf.slice(0, 200)}`,
           );
           delete koerper.fallbacks;
           delete kopf["anthropic-beta"];
@@ -241,7 +241,7 @@ export async function askClaude({
           // Versuch gewesen, würfe die Schleife sonst "undefined" statt
           // einer Fehlermeldung.
           lastError = new Error(`Claude API HTTP 400 (Rückfall-Parameter): ${rumpf.slice(0, 200)}`);
-          // Dieser Versuch zählt nicht — er war ein Konfigurationsfehler auf
+          // Dieser Versuch zählt nicht - er war ein Konfigurationsfehler auf
           // unserer Seite, kein Ausfall der Gegenstelle.
           if (attempt === retries) retries++;
           continue;
@@ -249,7 +249,7 @@ export async function askClaude({
         throw new Error(`Claude API HTTP ${res.status}: ${rumpf}`);
       }
       // ROHTEXT ZUERST (Nachbesserung 10.08.2026): Beim 20:10-Lauf kam die
-      // Antwort mit Status 200 und LEEREM RUMPF — res.json() scheiterte
+      // Antwort mit Status 200 und LEEREM RUMPF - res.json() scheiterte
       // selbst ("Unexpected end of JSON input"), also noch bevor die
       // Leer-Prüfung weiter unten greifen konnte. Darum wird der Rumpf jetzt
       // als Text gelesen und erst danach ausgewertet. Beide Fälle (leerer
@@ -277,13 +277,13 @@ export async function askClaude({
         throw lastError;
       }
 
-      // Verbrauch auch bei abgebrochenen oder abgelehnten Antworten buchen —
+      // Verbrauch auch bei abgebrochenen oder abgelehnten Antworten buchen -
       // bezahlt wird trotzdem, und genau die Fälle wollen wir sehen.
       verbuche(data.model ?? model, data.usage);
 
       // ABLEHNUNG VOR DEM INHALT PRÜFEN (14.08.2026): Bei einer Ablehnung
       // kommt Status 200 mit leerem Inhalt. Ohne diese Prüfung landet der
-      // Fall in der Leer-Antwort-Wiederholung weiter unten — dieselbe
+      // Fall in der Leer-Antwort-Wiederholung weiter unten - dieselbe
       // Anfrage wird dreimal gestellt und dreimal abgelehnt, dann stirbt der
       // Lauf. Eine Ablehnung ist kein Schluckauf, sondern eine Entscheidung:
       // nicht wiederholen, sondern diesen einen Beitrag überspringen.
@@ -300,18 +300,18 @@ export async function askClaude({
         .join("");
       // LEERE ANTWORT ZÄHLT ALS FEHLVERSUCH (Fund 10.08.2026): Die API kann
       // mit Status 200 und leerem Inhalt antworten. Bisher galt das als
-      // Erfolg — die leere Zeichenkette lief weiter bis zum JSON-Parser, der
+      // Erfolg - die leere Zeichenkette lief weiter bis zum JSON-Parser, der
       // abbrach und den GESAMTEN Lauf beendete. Am 10.08. kostete das den
       // 19:38-Lauf und damit zwei Posts, weil der nächste planmässige Lauf
       // erst nach Fensterschluss kam. Jetzt wird stattdessen wiederholt.
       // ABGESCHNITTENE ANTWORT (Fund 10.08.2026): Reicht das Token-Budget
       // nicht, liefert die API eine gueltige, aber MITTENDRIN abgebrochene
-      // Antwort — das JSON ist dann unlesbar ("Unterminated string"). Das
+      // Antwort - das JSON ist dann unlesbar ("Unterminated string"). Das
       // kostete am 10.08. zwei Posts und war schwer zu finden, weil der
       // Fehler erst beim Parser auftauchte. stop_reason sagt es direkt.
       if (data.stop_reason === "max_tokens") {
         lastError = new Error(
-          `Claude API brach die Antwort ab (Token-Budget ${maxTokens} erschoepft) — Budget erhoehen`,
+          `Claude API brach die Antwort ab (Token-Budget ${maxTokens} erschoepft) - Budget erhoehen`,
         );
         if (attempt < retries) {
           await new Promise((r) => setTimeout(r, 5000));
@@ -331,7 +331,7 @@ export async function askClaude({
       }
       return text;
     } catch (err) {
-      // Eine Ablehnung wird NIE wiederholt — siehe ClaudeAblehnung oben.
+      // Eine Ablehnung wird NIE wiederholt - siehe ClaudeAblehnung oben.
       if (err instanceof ClaudeAblehnung) throw err;
       lastError = err;
       if (attempt < retries) await new Promise((r) => setTimeout(r, 10000));
@@ -352,11 +352,28 @@ export function parseJsonResponse(text) {
     );
   }
   const slice = candidate.slice(start).trim();
+  let geparst;
   try {
-    return JSON.parse(slice);
+    geparst = JSON.parse(slice);
   } catch {
-    return JSON.parse(repariereJson(slice));
+    geparst = JSON.parse(repariereJson(slice));
   }
+  return ohneLangeStriche(geparst);
+}
+
+// KEINE LANGEN STRICHE (Tim, 20.08.2026). Das Modell setzt Geviert- und
+// Halbgeviertstriche von sich aus, besonders in Schlagzeilen. Der Prompt
+// sagt es ihm zwar, aber eine Regel, die nur im Prompt steht, ist keine
+// Regel - genau daran sind schon acht Instagram-Posts gescheitert. Darum
+// wird JEDE Modellausgabe hier durchgereicht, egal aus welchem Ablauf
+// (Artikel, Instagram, Guides, Zitate).
+function ohneLangeStriche(wert) {
+  if (typeof wert === "string") return wert.replaceAll("\u2014", "-").replaceAll("\u2013", "-");
+  if (Array.isArray(wert)) return wert.map(ohneLangeStriche);
+  if (wert && typeof wert === "object") {
+    return Object.fromEntries(Object.entries(wert).map(([k, v]) => [k, ohneLangeStriche(v)]));
+  }
+  return wert;
 }
 
 // Modelle schreiben gelegentlich ungültiges JSON: rohe Zeilenumbrüche mitten
@@ -364,7 +381,7 @@ export function parseJsonResponse(text) {
 // schliessenden Objekt. Beides kostete am 08.08.2026 vier Instagram-Läufe
 // ("Unterminated string in JSON"). Diese Reparatur escapet Steuerzeichen
 // innerhalb von String-Literalen und schneidet das erste balancierte
-// Objekt/Array aus — sie kann gültiges JSON nie verschlechtern, weil rohe
+// Objekt/Array aus - sie kann gültiges JSON nie verschlechtern, weil rohe
 // Steuerzeichen in JSON-Strings per Spezifikation verboten sind.
 function repariereJson(text) {
   let out = "";
