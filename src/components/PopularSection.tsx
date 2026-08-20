@@ -89,7 +89,7 @@ function SliderArrow({
       onClick={onClick}
       disabled={disabled}
       aria-label={direction === "prev" ? "Vorherige Artikel" : "Weitere Artikel"}
-      className="flex h-9 w-9 items-center justify-center rounded-full border border-border-default text-text-secondary transition-colors hover:border-accent/60 hover:text-accent disabled:cursor-default disabled:opacity-35 disabled:hover:border-border-default disabled:hover:text-text-secondary"
+      className="blaetterpfeil flex h-9 w-9 items-center justify-center rounded-full border border-border-default text-text-secondary transition-colors hover:border-accent/60 hover:text-accent disabled:cursor-default disabled:opacity-35 disabled:hover:border-border-default disabled:hover:text-text-secondary"
     >
       <svg
         viewBox="0 0 24 24"

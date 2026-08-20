@@ -438,8 +438,17 @@ a[class*="rounded-full"][class*="border-accent"] {
   /* Runde Symbolknoepfe muessen quadratisch bleiben: die Mindesthoehe
      allein macht aus einem 36-px-Quadrat ein Oval (gemessen 20.08.2026
      an Suche, Menue und den Blaetterpfeilen). */
-  button[class*="rounded-full"][class*="w-9"],
-  button[class*="rounded-full"][class*="w-10"],
+  /* Die Blaetterpfeile sind ausgenommen: sie sollen auf jeder Breite
+     exakt 36 x 36 px messen wie auf der Live-Seite (Tim, 20.08.2026).
+     Damit liegen sie bewusst unter dem 44-px-Mass. */
+  .blaetterpfeil {
+    min-width: 36px !important;
+    min-height: 36px !important;
+    height: 36px;
+    width: 36px;
+  }
+  button[class*="rounded-full"][class*="w-9"]:not(.blaetterpfeil),
+  button[class*="rounded-full"][class*="w-10"]:not(.blaetterpfeil),
   button[class*="rounded-full"][class*="w-11"],
   a[class*="rounded-full"][class*="w-9"],
   a[class*="rounded-full"][class*="w-10"],
