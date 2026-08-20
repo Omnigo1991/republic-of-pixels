@@ -1,17 +1,6 @@
 {
-  "updatedAt": "2026-08-20T07:04:30.174Z",
+  "updatedAt": "2026-08-20T09:57:27.917Z",
   "deals": [
-    {
-      "appId": 2552430,
-      "title": "KINGDOM HEARTS -HD 1.5+2.5 ReMIX-",
-      "discountPercent": 70,
-      "originalPrice": 4999,
-      "finalPrice": 1499,
-      "currency": "EUR",
-      "endsAt": "2026-08-20T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/2552430/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2552430/capsule_184x69.jpg?t=1779418330"
-    },
     {
       "appId": 1771300,
       "title": "Kingdom Come: Deliverance II",
@@ -22,6 +11,17 @@
       "endsAt": "2026-08-24T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/1771300/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1771300/93e28946c46f09d761bbfab1e17e8c1c4a8323a0/capsule_184x69.jpg?t=1777975568"
+    },
+    {
+      "appId": 2688950,
+      "title": "Planet Coaster 2",
+      "discountPercent": 60,
+      "originalPrice": 4999,
+      "finalPrice": 1999,
+      "currency": "EUR",
+      "endsAt": "2026-08-25T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/2688950/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2688950/capsule_184x69.jpg?t=1787133907"
     },
     {
       "appId": 2764460,
@@ -54,7 +54,7 @@
       "currency": "EUR",
       "endsAt": "2026-09-02T17:00:37.000Z",
       "url": "https://store.steampowered.com/app/4132330/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4132330/30e0db1cba795cfaefd61c946efe97c5df73ab0c/capsule_184x69.jpg?t=1787166636"
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4132330/30e0db1cba795cfaefd61c946efe97c5df73ab0c/capsule_184x69.jpg?t=1787218826"
     },
     {
       "appId": 2950790,
