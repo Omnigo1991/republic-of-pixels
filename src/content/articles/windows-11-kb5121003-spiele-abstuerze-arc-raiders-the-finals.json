@@ -1,0 +1,157 @@
+{
+  "slug": "windows-11-kb5121003-spiele-abstuerze-arc-raiders-the-finals",
+  "title": "Windows-11-Update crasht Spiele — Microsoft sucht noch die Ursache",
+  "subtitle": "KB5121003 lässt unter anderem ARC Raiders, The Finals und Marvel Tōkon einfrieren, einen Fix gibt es bislang nicht",
+  "excerpt": "Microsoft bestätigt Abstürze nach dem August-Patchday: Spiele frieren ein, PCs starten ohne Warnung neu. Es gibt einen Notausgang — der reisst dafür Sicherheitslücken wieder auf.",
+  "seoTitle": "Windows 11: KB5121003 lässt Spiele und PCs abstürzen",
+  "metaDescription": "Microsoft bestätigt Abstürze nach dem Windows-11-Update KB5121003: Spiele frieren ein, PCs starten neu. Betroffen sind 24H2 und 25H2 — ein Fix fehlt.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "tags": [
+    "Windows 11",
+    "Microsoft",
+    "ARC Raiders",
+    "The Finals",
+    "PC-Gaming"
+  ],
+  "tldr": [
+    "Das Windows-11-Update KB5121003 vom 11. August führt laut Microsoft zu Abstürzen in Spielen und teils zu Bluescreens.",
+    "Namentlich genannt werden ARC Raiders, Marvel Tōkon: Fighting Souls und The Finals; betroffen sind die Versionen 24H2 und 25H2.",
+    "Microsoft untersucht noch, ob das Problem überhaupt vom Unternehmen verursacht wurde, und bittet um Feedback über den Feedback Hub.",
+    "Die Deinstallation des Updates hilft laut Nutzerberichten, öffnet aber bereits aktiv ausgenutzte Sicherheitslücken erneut."
+  ],
+  "whyItMatters": "Wer am PC spielt, steht hier vor einer unangenehmen Wahl: stabile Spielesitzungen oder ein vollständig gepatchtes System. Weil Microsoft die Ursache noch nicht kennt und keinen Fix liefert, bleibt das Risiko vorerst bei der Spielerschaft — und betrifft mit ARC Raiders und The Finals ausgerechnet Titel mit grosser Online-Basis.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Das August-Update für Windows 11 sorgt bei Spielerinnen und Spielern für Frust. Microsoft bestätigt im eigenen Release-Health-Dashboard, dass es nach der Installation von KB5121003 vermehrt Beschwerden gab: Einzelne Spiele frieren mitten in der Sitzung ein, schliessen sich unerwartet oder reissen gleich den kompletten Rechner mit. Einen Fix gibt es bislang nicht — und selbst die Frage, wer das Problem verursacht hat, ist offiziell noch nicht geklärt."
+    },
+    {
+      "type": "embed",
+      "platform": "reddit",
+      "url": "https://www.reddit.com/r/ArcRaiders/comments/1vmm7k3/any_pc_players_experiencing_frequent_crashes/"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "11. Aug.",
+          "label": "Veröffentlichung des Updates KB5121003, seither treten die Probleme auf"
+        },
+        {
+          "value": "24H2 & 25H2",
+          "label": "Die beiden von Microsoft als betroffen gelisteten Windows-11-Versionen"
+        },
+        {
+          "value": "3 Titel",
+          "label": "Von Microsoft namentlich genannte Spiele mit Absturzberichten"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Von Einfrieren bis Bluescreen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Symptome, die Microsoft im Dashboard auflistet, reichen von harmlos ärgerlich bis richtig unangenehm. Im besten Fall hängt sich das Spiel auf und muss beendet werden, im schlechtesten Fall verabschiedet sich das ganze System. Betroffene berichten unter anderem auf Reddit über entsprechende Vorfälle."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Spiele hängen sich während der Nutzung ohne erkennbaren Auslöser auf",
+        "Spiele werden unerwartet beendet, teils mit der Fehlermeldung \"EXCEPTION_ACCESS_VIOLATION\"",
+        "Vollständige Neustarts des Windows-11-Systems ohne vorherige Warnung",
+        "In manchen Fällen komplette PC-Abstürze mit Bluescreen (BSOD)"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Diese Spiele stehen auf der Liste"
+    },
+    {
+      "type": "paragraph",
+      "text": "Als Beispiele nennt Microsoft ARC Raiders, Marvel Tōkon: Fighting Souls und The Finals. Die Aufzählung ist ausdrücklich nicht abschliessend, der Konzern spricht von mehreren betroffenen Videospielen. Dass es gerade Online-Titel mit laufenden Matches trifft, macht die Sache für die Spielerschaft besonders unangenehm: Ein Absturz mitten in einer Runde bedeutet nicht nur eine unterbrochene Sitzung, sondern im Zweifel auch ein verlorenes Match für das ganze Team."
+    },
+    {
+      "type": "paragraph",
+      "text": "Eingegrenzt ist immerhin die Plattformseite. Laut Microsoft betreffen die Probleme die Windows-11-Versionen 24H2 und 25H2. Wer weiterhin unter Windows 10 spielt, dürfte von diesem Fehlerbild also nicht betroffen sein."
+    },
+    {
+      "type": "heading",
+      "text": "Microsoft untersucht — und weiss noch nicht, wer schuld ist"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ungewöhnlich offen bleibt Microsoft bei der Ursache. Im Dashboard hält der Konzern lediglich fest, dass die Analyse läuft, und bittet Betroffene, ihre Fälle über die Feedback-Hub-App zu melden. Weitere Informationen sollen folgen, sobald sie verfügbar sind."
+    },
+    {
+      "type": "quote",
+      "text": "Wir untersuchen derzeit, ob dieses Problem von Microsoft verursacht wurde.",
+      "attribution": "Microsoft, Release-Health-Dashboard"
+    },
+    {
+      "type": "paragraph",
+      "text": "Diese Formulierung lässt bewusst offen, ob der Auslöser im Update selbst steckt oder im Zusammenspiel mit Software von Drittanbietern. Für Betroffene ändert das kurzfristig wenig — ein Patch ist erst zu erwarten, wenn die Ursache feststeht."
+    },
+    {
+      "type": "heading",
+      "text": "Der Notausgang hat einen Preis"
+    },
+    {
+      "type": "paragraph",
+      "text": "Wer nicht warten will, kann das August-Update deinstallieren. Auf Reddit bestätigen mehrere Nutzer, dass sie danach wieder ungestört spielen konnten. Diese Lösung ist allerdings kein Freifahrtschein: KB5121003 war ein Patchday-Update und hat eine ganze Reihe von Sicherheitslücken geschlossen, von denen einige bereits aktiv ausgenutzt wurden. Ein Rollback öffnet genau diese Lücken wieder."
+    },
+    {
+      "type": "paragraph",
+      "text": "Damit läuft es auf eine Abwägung hinaus, die eigentlich niemand treffen müssen sollte: stabile Spielesitzungen gegen ein vollständig abgesichertes System. Wer auf dem Rechner arbeitet, sensible Daten verwaltet oder ihn mit anderen teilt, fährt mit dem installierten Update und ein paar Wochen Geduld deutlich besser. Wer eine reine Spielemaschine betreibt und ohnehin mit Bedacht surft, kann das Risiko anders bewerten."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Fall zeigt erneut das strukturelle Problem monatlicher Sammel-Updates: Sicherheit und Funktionsänderungen kommen im selben Paket, eine selektive Rücknahme einzelner Bestandteile ist für normale Anwender nicht vorgesehen. Solange Microsoft die Ursache nicht benennt, bleibt Betroffenen nur die Wahl zwischen zwei unbefriedigenden Optionen. Praktikabel ist zumindest ein Zwischenweg: Feedback über den Hub einreichen, damit Microsoft mehr Datenpunkte erhält, und das Dashboard im Auge behalten. Wir aktualisieren, sobald ein Fix oder eine offizielle Erklärung vorliegt."
+    }
+  ],
+  "poll": {
+    "question": "Sicherheitspatch oder stabile Spielesitzung — wie würdest du entscheiden?",
+    "options": [
+      "Update bleibt drauf, ich warte auf den Fix",
+      "Runter damit, ich will spielen",
+      "Rollback nur auf der Gaming-Kiste",
+      "Ich bin noch auf Windows 10 und habe das Problem nicht"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-20T07:04:25.964Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "waveform",
+  "sources": [
+    {
+      "title": "Microsoft: Windows-11-Update l�sst Spiele und PCs abst�rzen",
+      "url": "https://www.golem.de/news/microsoft-windows-11-update-laesst-spiele-und-pcs-abstuerzen-2608-212113.html",
+      "publisher": "Golem.de Games"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/windows-11-kb5121003-spiele-abstuerze-arc-raiders-the-finals.webp",
+    "alt": "Windows-11-Update crasht Spiele — Microsoft sucht noch die Ursache",
+    "credit": "Bild: Golem.de Games",
+    "sourceUrl": "https://www.golem.de/news/microsoft-windows-11-update-laesst-spiele-und-pcs-abstuerzen-2608-212113.html",
+    "sourceWidth": 1200,
+    "sourceHeight": 675
+  },
+  "relatedSlugs": [
+    "windows-11-august-update-kb5121003-spiele-crashes-2026",
+    "bethesda-onebgs-save-our-devs-rally-entlassungen-2026",
+    "epic-games-store-linux-client-bestaetigt-2026"
+  ]
+}

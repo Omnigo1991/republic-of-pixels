@@ -1,6 +1,17 @@
 {
-  "updatedAt": "2026-08-20T04:06:58.205Z",
+  "updatedAt": "2026-08-20T07:04:30.174Z",
   "deals": [
+    {
+      "appId": 2552430,
+      "title": "KINGDOM HEARTS -HD 1.5+2.5 ReMIX-",
+      "discountPercent": 70,
+      "originalPrice": 4999,
+      "finalPrice": 1499,
+      "currency": "EUR",
+      "endsAt": "2026-08-20T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/2552430/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2552430/capsule_184x69.jpg?t=1779418330"
+    },
     {
       "appId": 1771300,
       "title": "Kingdom Come: Deliverance II",
@@ -24,26 +35,15 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2764460/f0a29d6c91be4e91e9fa2f384dd5ae695bfd6b5b/capsule_184x69.jpg?t=1786703049"
     },
     {
-      "appId": 2358720,
-      "title": "Black Myth: Wukong",
+      "appId": 1643320,
+      "title": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
       "discountPercent": 30,
       "originalPrice": 5999,
       "finalPrice": 4199,
       "currency": "EUR",
-      "endsAt": "2026-08-25T16:00:00.000Z",
-      "url": "https://store.steampowered.com/app/2358720/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2358720/b7f722ddd5e23503f598586aa3700dd4d827bb2d/capsule_184x69.jpg?t=1760601605"
-    },
-    {
-      "appId": 2950790,
-      "title": "IRON NEST: Heavy Turret Simulator",
-      "discountPercent": 25,
-      "originalPrice": 1999,
-      "finalPrice": 1499,
-      "currency": "EUR",
-      "endsAt": "2026-08-20T17:00:32.000Z",
-      "url": "https://store.steampowered.com/app/2950790/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2950790/922472560f653fd897313ab7a10dd86b018d373f/capsule_184x69.jpg?t=1786639727"
+      "endsAt": "2026-08-31T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1643320/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1643320/290a107e6d65baf58523dfce8bc1d8310a2ee938/capsule_184x69.jpg?t=1787159375"
     },
     {
       "appId": 4132330,
@@ -57,15 +57,15 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4132330/30e0db1cba795cfaefd61c946efe97c5df73ab0c/capsule_184x69.jpg?t=1787166636"
     },
     {
-      "appId": 1067360,
-      "title": "Pax Autocratica",
-      "discountPercent": 17,
-      "originalPrice": 2999,
-      "finalPrice": 2489,
+      "appId": 2950790,
+      "title": "IRON NEST: Heavy Turret Simulator",
+      "discountPercent": 25,
+      "originalPrice": 1999,
+      "finalPrice": 1499,
       "currency": "EUR",
-      "endsAt": "2026-08-24T17:00:04.000Z",
-      "url": "https://store.steampowered.com/app/1067360/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1067360/0e2383a66d23ea67d7b9618a3a53fa52ca5db032/capsule_184x69.jpg?t=1786694191"
+      "endsAt": "2026-08-20T17:00:32.000Z",
+      "url": "https://store.steampowered.com/app/2950790/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2950790/922472560f653fd897313ab7a10dd86b018d373f/capsule_184x69.jpg?t=1786639727"
     }
   ]
 }

@@ -5866,7 +5866,24 @@
     "966d63a9302422a3": "2026-08-20T04:06:56.996Z",
     "b5e324f27e4c93c8": "2026-08-20T04:06:56.996Z",
     "9e085b619ffe8f83": "2026-08-20T04:06:56.996Z",
-    "f9ccef945dcdcc80": "2026-08-20T04:06:56.996Z"
+    "f9ccef945dcdcc80": "2026-08-20T04:06:56.996Z",
+    "9c8f3fe48f28dba5": "2026-08-20T07:04:29.364Z",
+    "d1921ba14679d68b": "2026-08-20T07:04:29.364Z",
+    "0815487b6940d1b2": "2026-08-20T07:04:29.364Z",
+    "0a7693192c47b7f6": "2026-08-20T07:04:29.364Z",
+    "30b0581d945f7d53": "2026-08-20T07:04:29.364Z",
+    "d7b8cc981f1cdca8": "2026-08-20T07:04:29.364Z",
+    "c63e410b8e652e82": "2026-08-20T07:04:29.364Z",
+    "1317f2bb7ffc6411": "2026-08-20T07:04:29.364Z",
+    "2703574ddb4ee419": "2026-08-20T07:04:29.364Z",
+    "be6330711dc99919": "2026-08-20T07:04:29.364Z",
+    "9ff904bbb4a1a402": "2026-08-20T07:04:29.364Z",
+    "f709d49d8e6c6e5c": "2026-08-20T07:04:29.364Z",
+    "914c56382926cec1": "2026-08-20T07:04:29.364Z",
+    "d1c67b2b780a5fa8": "2026-08-20T07:04:29.364Z",
+    "466715fba09abe9b": "2026-08-20T07:04:29.364Z",
+    "78145bf947b2db53": "2026-08-20T07:04:29.364Z",
+    "2ca5f86c7c4adc24": "2026-08-20T07:04:29.364Z"
   },
   "instagram": {
     "posted": {
@@ -5917,12 +5934,10 @@
       "star-citizen-entwickler-stream-abbruch-vertrauenskrise-2026": "2026-08-18T15:57:20.344Z",
       "gta-6-gameplay-leak-cyberleek-2026": "2026-08-19T07:46:32.148Z",
       "gta-6-leak-sechs-sterne-fahndungssystem-2026": "2026-08-19T13:05:31.036Z",
-      "modern-warfare-4-platzhalter-bild-ki-verdacht-2026": "2026-08-19T13:05:45.863Z"
+      "modern-warfare-4-platzhalter-bild-ki-verdacht-2026": "2026-08-19T13:05:45.863Z",
+      "call-of-duty-modern-warfare-4-multiplayer-trailer-beta-2026": "2026-08-20T07:05:51.370Z"
     },
     "cards": {
-      "/social/ig-witcher-3-npc-muetter-babys-bug-philipp-weber-2026.jpg": "2026-08-16T15:45:52.694Z",
-      "/social/ig-fortnite-kapitel-7-saison-4-override-gaming-legends-2026.mp4": "2026-08-16T18:55:25.653Z",
-      "/social/ig-elder-scrolls-6-untertitel-sentinel-starfield-easter-egg-2026.mp4": "2026-08-17T07:04:57.151Z",
       "/social/ig-halo-campaign-evolved-outsourcing-15-studios-leak-2026.jpg": "2026-08-17T10:05:25.082Z",
       "/social/ig-ps6-release-termin-offen-ceo-totoki-2026.mp4": "2026-08-17T13:05:35.675Z",
       "/social/ig-hayden-panettiere-gestorben-until-dawn-kingdom-hearts-2026.jpg": "2026-08-17T15:49:28.302Z",
@@ -5932,14 +5947,15 @@
       "/social/ig-star-citizen-entwickler-stream-abbruch-vertrauenskrise-2026.jpg": "2026-08-18T15:57:20.344Z",
       "/social/ig-gta-6-gameplay-leak-cyberleek-2026.mp4": "2026-08-19T07:46:32.148Z",
       "/social/ig-gta-6-leak-sechs-sterne-fahndungssystem-2026.jpg": "2026-08-19T13:05:31.036Z",
-      "/social/ig-modern-warfare-4-platzhalter-bild-ki-verdacht-2026.mp4": "2026-08-19T13:05:45.863Z"
+      "/social/ig-modern-warfare-4-platzhalter-bild-ki-verdacht-2026.mp4": "2026-08-19T13:05:45.863Z",
+      "/social/ig-call-of-duty-modern-warfare-4-multiplayer-trailer-beta-2026.mp4": "2026-08-20T07:05:51.370Z"
     },
     "unlisted": [
       "gta-6-preis-80-dollar-zelnick-schnaeppchen-2026"
     ],
     "wechsel": {
-      "day": "2026-08-19",
-      "nichtBreaking": 3
+      "day": "2026-08-20",
+      "nichtBreaking": 1
     },
     "tokenCheckedAt": "2026-08-15T09:48:57.921Z",
     "token": {
@@ -5972,7 +5988,7 @@
       "until dawn": 1,
       "hogwarts legacy": 1,
       "star citizen": 1,
-      "call of duty: modern warfare 4": 1
+      "call of duty: modern warfare 4": 2
     },
     "uebersprungen": {
       "br1-infinite-echtgeld-kills-unbestaetigt-2026": "2026-08-09T08:04:01.341Z",
@@ -6008,6 +6024,9 @@
       },
       "2026-08-19": {
         "Vorschlag unvollständig": 1
+      },
+      "2026-08-20": {
+        "Schlagzeile regelwidrig": 1
       }
     }
   },
