@@ -155,17 +155,6 @@ export function NewsletterBlock({ artikelBilder }: { artikelBilder: Article[] })
               Anmelden
             </button>
           </div>
-          <p className="mt-[14px] text-[12.5px] leading-[1.5] text-navy/65">
-            Wir bauen gerade den Versand — bis dahin:{" "}
-            <a
-              href="https://www.instagram.com/republicofpixels"
-              target="_blank"
-              rel="noreferrer noopener"
-              className="font-semibold text-navy underline decoration-navy/40 underline-offset-4 hover:decoration-navy"
-            >
-              @republicofpixels auf Instagram
-            </a>
-          </p>
         </div>
         {/* Zwei Sticker mit Pixel-Treppen-Rahmen (Fassung vor der
             Polygon-Collage — Tim, 16.08.2026). */}

@@ -188,7 +188,9 @@ h3 { font-weight: 800; color: #F2F8FF; }
 body, h1, h2, h3, h4, p, li, a, button, span, time, input, label {
   font-family: var(--font-inter), Inter, system-ui, -apple-system, sans-serif;
 }
-.text-accent { color: #02F0D1; text-shadow: 0 0 9px rgba(2, 240, 209, 0.6); }
+/* Ohne Schimmer (Tim, 20.08.2026): das Leuchten wirkte beim
+   Ueberfahren wie ein Effekt, nicht wie Gestaltung. */
+.text-accent { color: #02F0D1; }
 
 /* ---------- K11: Kappecke statt Pixel-Treppe ----------
    Zwei Ecken diagonal abgeschnitten (Tim-Entscheid 18.08.2026).
@@ -198,7 +200,6 @@ body, h1, h2, h3, h4, p, li, a, button, span, time, input, label {
 .treppe-tr {
   background: linear-gradient(150deg, #02F0D1, #B14CFF 60%, #FF2E97);
   padding: 3px;
-  filter: drop-shadow(0 0 14px rgba(2, 240, 209, 0.32));
   clip-path: polygon(0 0, calc(100% - var(--kappe)) 0, 100% var(--kappe), 100% 100%,
     var(--kappe) 100%, 0 calc(100% - var(--kappe)));
 }
@@ -236,36 +237,23 @@ body, h1, h2, h3, h4, p, li, a, button, span, time, input, label {
   overflow-wrap: anywhere;
 }
 
-/* ---------- C1: die Kartenfassung, RUND ----------
-   Die Kappecke bleibt den Artikeln vorbehalten (Aufmacher, Kacheln,
-   Guides). Radare, Pixel-Raten, Merkliste und die Boxen der
-   Artikelseite tragen dieselbe Fassung mit runden Ecken —
-   Tim, 19.08.2026.
-
-   Die Verlaufskante entsteht ueber zwei Hintergruende: die Fuellung
-   liegt in der Innenflaeche (padding-box), der Verlauf in der
-   Randflaeche (border-box). Der Clip-Pfad von vorher konnte keine
-   runden Ecken. */
+/* ---------- Werkzeugkarten: ruhige Cyan-Haarlinie ----------
+   Vorher trugen Artikelkacheln UND Werkzeugkarten dieselbe
+   Verlaufskante — auf der Startseite lagen rund zwanzig davon
+   gleichzeitig im Bild, und der Verlauf wurde Tapete. Er bleibt jetzt
+   den Artikeln vorbehalten (Tim, 20.08.2026). */
 .bg-surface-card {
-  position: relative;
-  border: 2px solid transparent !important;
+  background: #14122E;
+  border: 1px solid rgba(2, 240, 209, 0.30);
   border-radius: 18px;
-  background:
-    linear-gradient(#14122E, #14122E) padding-box,
-    linear-gradient(150deg, #02F0D1, #B14CFF 58%, #FF2E97) border-box;
-  clip-path: none;
 }
 .bg-surface-card:hover {
-  background:
-    linear-gradient(#1B1840, #1B1840) padding-box,
-    linear-gradient(150deg, #7DF9FF, #B14CFF 58%, #FF2E97) border-box;
+  background: #1B1840;
+  border-color: rgba(2, 240, 209, 0.55);
 }
 .bg-surface-panel, .bg-bg-elevated {
   border: 1px solid rgba(2, 240, 209, 0.28);
 }
-/* Nur wo die Flaeche nicht ausdruecklich rund sein will. Sonst
-   ueberschreibt die Regel die Filter-Pillen auf der Suchseite und
-   macht 16 px daraus (gemessen 19.08.2026). */
 .bg-surface-panel:not([class*="rounded-full"]),
 .bg-bg-elevated:not([class*="rounded-full"]) {
   border-radius: 16px;
@@ -276,7 +264,6 @@ body, h1, h2, h3, h4, p, li, a, button, span, time, input, label {
    es sind keine Artikel. */
 .personenkachel {
   background: linear-gradient(120deg, #FF2E97, #FF6BC0 40%, #02F0D1 115%);
-  box-shadow: 0 0 40px -10px rgba(255, 46, 151, 0.4);
 }
 .personenkachel a { color: #0B0616; }
 
@@ -290,7 +277,6 @@ body, h1, h2, h3, h4, p, li, a, button, span, time, input, label {
   background: linear-gradient(150deg, #02F0D1, #B14CFF 60%, #FF2E97);
   clip-path: polygon(0 0, calc(100% - var(--kappe)) 0, 100% var(--kappe), 100% 100%,
     var(--kappe) 100%, 0 calc(100% - var(--kappe)));
-  filter: drop-shadow(0 0 12px rgba(2, 240, 209, 0.25));
 }
 .artikelkante__innen {
   background: #14122E;
@@ -302,7 +288,6 @@ body, h1, h2, h3, h4, p, li, a, button, span, time, input, label {
 /* ---------- Volles Cyan wird Verlauf ---------- */
 .bg-accent {
   background: linear-gradient(112deg, #FF2E97, #FF6BC0 44%, #02F0D1 122%);
-  box-shadow: 0 0 38px rgba(255, 46, 151, 0.28);
 }
 .bg-accent h2, .bg-accent p, .bg-accent span, .bg-accent div,
 .bg-accent dt, .bg-accent dd, .bg-accent .text-accent {
@@ -318,7 +303,6 @@ body, h1, h2, h3, h4, p, li, a, button, span, time, input, label {
 /* ---------- Linien, Kopf und Fuss ---------- */
 .bg-accent.h-0\.5, [class*="h-0.5"][class*="w-full"] {
   background: linear-gradient(90deg, #02F0D1, #FF2E97, #E8FF3D);
-  box-shadow: 0 0 10px rgba(2, 240, 209, 0.7);
   height: 2px;
 }
 /* ---------- Kopfband im Verlauf (Tim, 19.08.2026) ----------
@@ -394,7 +378,6 @@ button, a[class*="rounded-full"], input[class*="rounded-full"] {
    Knoepfe im Menue cyan (Tim, 19.08.2026). */
 a[class*="rounded-full"][class*="border-accent"] {
   border-color: rgba(2, 240, 209, 0.6);
-  box-shadow: 0 0 14px rgba(2, 240, 209, 0.22);
 }
 
 /* Newsletter-Ecke folgt derselben Form. Der Teilen-Knopf NICHT: er ist
