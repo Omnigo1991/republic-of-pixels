@@ -192,6 +192,15 @@ body, h1, h2, h3, h4, p, li, a, button, span, time, input, label {
    Ueberfahren wie ein Effekt, nicht wie Gestaltung. */
 .text-accent { color: #02F0D1; }
 
+/* ---------- Sektionsbanner ----------
+   Einzeilig auf jeder Breite. Am Handy sorgt der kleinere Faktor
+   dafuer, dass auch "WILLKOMMEN IN DER REPUBLIC" auf eine Zeile
+   passt (Tim, 20.08.2026). */
+.banner svg { width: min(100%, var(--bw)); }
+@media (max-width: 640px) {
+  .banner svg { width: min(100%, var(--bw-klein)); }
+}
+
 /* ---------- K11: Kappecke statt Pixel-Treppe ----------
    Zwei Ecken diagonal abgeschnitten (Tim-Entscheid 18.08.2026).
    Klassennamen bleiben, damit die Bauteile unveraendert bleiben. */
@@ -398,6 +407,18 @@ a[class*="rounded-full"][class*="border-accent"] {
   input:not([type="checkbox"]):not([type="radio"]),
   select,
   a[class*="rounded-full"] {
+    min-height: 44px;
+  }
+  /* Runde Symbolknoepfe muessen quadratisch bleiben: die Mindesthoehe
+     allein macht aus einem 36-px-Quadrat ein Oval (gemessen 20.08.2026
+     an Suche, Menue und den Blaetterpfeilen). */
+  button[class*="rounded-full"][class*="w-9"],
+  button[class*="rounded-full"][class*="w-10"],
+  button[class*="rounded-full"][class*="w-11"],
+  a[class*="rounded-full"][class*="w-9"],
+  a[class*="rounded-full"][class*="w-10"],
+  a[class*="rounded-full"][class*="w-11"] {
+    min-width: 44px;
     min-height: 44px;
   }
 

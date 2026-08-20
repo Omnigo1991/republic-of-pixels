@@ -54,34 +54,30 @@ export function SektionsBanner({
     fontFamily: "var(--font-inter), Inter, system-ui, sans-serif",
   } as const;
 
+  // Skalierung: 0.43 am Desktop (1536 × 0.43 = 660 px, die gemessene
+  // Breite der Live-Seite), 0.23 am Handy. Bei 0.23 passt selbst der
+  // laengste Titel einzeilig auf 390 px UND alle Banner werden exakt
+  // gleich hoch — bei 0.28 war der kuerzeste 5 px hoeher, weil er die
+  // Breitenbegrenzung nicht erreichte (Tim, 20.08.2026).
   return (
-    <div className={`mb-5 ${className}`}>
-      {/* Einzeilig ab 640 px */}
+    <div
+      className={`banner mb-5 ${className}`}
+      style={{ ["--bw" as string]: `${Math.round(breite * 0.43)}px`,
+               ["--bw-klein" as string]: `${Math.round(breite * 0.23)}px` }}
+    >
       <svg
         viewBox={`0 0 ${breite} 100`}
         role="heading"
         aria-level={2}
         aria-label={`${titel} ${cyan}`}
         id={id}
-        style={{ width: `min(100%, ${zielBreite}px)` }}
-        className="hidden h-auto overflow-visible sm:block"
+        className="block h-auto overflow-visible"
       >
         <text x="0" y="78" textLength={breite} lengthAdjust="spacingAndGlyphs" {...schriftMerkmale}>
           <tspan fill="currentColor">{links}</tspan>
           <tspan fill="#02F0D1">{trenner + rechts}</tspan>
         </text>
       </svg>
-
-      {/* Auf dem Handy KEIN SVG: Ein gedehnter Schriftzug auf 358 px
-          Breite faellt je nach Titellaenge auf 23 bis 45 px Hoehe — die
-          Groesse haengt dann an der Zeichenzahl statt an der Gestaltung.
-          Echter Text bricht stattdessen um und behaelt ueberall
-          dieselbe Groesse. */}
-      <h2 className="text-[30px] font-black uppercase leading-[0.95] tracking-[-0.03em] text-text-primary sm:hidden">
-        {links}
-        {trenner}
-        <span className="text-accent">{rechts}</span>
-      </h2>
     </div>
   );
 }

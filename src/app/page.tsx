@@ -55,7 +55,7 @@ export default async function HomePage() {
             Gruss→Aufmacher bleiben gleich gross und sind an der
             gerenderten Schriftflaeche nachgemessen. */}
         <div className="mx-auto max-w-content px-4 pt-[42px] sm:px-6 sm:pt-[52px] lg:px-8">
-          <SektionsBanner titel="Willkommen in der" cyan="Republic" className="mb-[41px] sm:mb-[52px]" />
+          <SektionsBanner titel="Willkommen in der" cyan="Republic" className="mb-[42px] sm:mb-[52px]" />
           <div className="grid gap-8 lg:grid-cols-[1fr_372px] lg:gap-11">
             <div>
               <TopStory article={topStory} />
@@ -96,7 +96,7 @@ export default async function HomePage() {
 
         <section id="guides" className="scroll-mt-16 lg:scroll-mt-[88px] pt-14 sm:pt-16">
           <Reveal>
-            <SektionsBanner titel="Die grossen Republic-" cyan="Guides" />
+            <SektionsBanner titel="Die Republic-" cyan="Guides" />
             <SektionsKopf titel="Alle Guides" />
             <SectionDivider />
             <div className="grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-5">
