@@ -61,7 +61,7 @@ export function SearchPanel({
               <button
                 key={tag}
                 onClick={() => setQuery(tag)}
-                className="rounded-full border border-border-default bg-surface-panel px-3.5 py-1.5 text-sm text-text-secondary transition-colors hover:border-accent/50 hover:text-text-primary"
+                className="rounded-full border border-border-subtle bg-surface-card px-3.5 py-1.5 text-sm font-semibold text-text-primary transition-colors hover:border-accent/50"
               >
                 {tag}
               </button>
@@ -182,7 +182,7 @@ export function SearchTrigger() {
                 <p className="text-[11px] font-extrabold tracking-[0.06em] text-accent">
                   {CATEGORY_LABELS[a.category].toUpperCase()}
                 </p>
-                <p className="mt-0.5 text-[14.5px] font-bold leading-snug text-text-primary line-clamp-2">
+                <p className="mt-0.5 text-[14.5px] font-bold leading-snug text-text-primary line-clamp-3">
                   {a.title}
                 </p>
               </Link>

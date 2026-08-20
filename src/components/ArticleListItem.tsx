@@ -24,12 +24,12 @@ export function ArticleListItem({ article }: { article: Article }) {
           {!istNews && (
             <span className="text-text-tertiary"> · {CATEGORY_LABELS[article.category].toUpperCase()}</span>
           )}
-          <span className="text-text-tertiary"> · {article.readingTimeMinutes} MIN.</span>
+          <span className="whitespace-nowrap text-text-tertiary"> · {article.readingTimeMinutes} MIN.</span>
         </p>
-        <h3 className="text-[17px] font-extrabold leading-[1.32] text-text-primary group-hover:text-accent transition-colors line-clamp-2 sm:text-[20px]">
+        <h3 className="text-[17px] font-extrabold leading-[1.32] text-text-primary group-hover:text-accent transition-colors line-clamp-4 sm:line-clamp-3 sm:text-[20px]">
           {article.title}
         </h3>
-        <p className="mt-2 hidden text-[15.5px] leading-relaxed text-text-secondary line-clamp-2 sm:block">
+        <p className="mt-2 hidden text-[15.5px] leading-relaxed text-text-secondary sm:line-clamp-2">
           {article.excerpt}
         </p>
       </div>

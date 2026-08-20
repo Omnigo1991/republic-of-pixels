@@ -30,10 +30,10 @@ export function InlineArticleCard({ article }: { article: Article }) {
             {kicker}
           </p>
         )}
-        <h3 className="text-base sm:text-lg font-semibold leading-snug text-text-primary group-hover:text-accent transition-colors line-clamp-2">
+        <h3 className="text-base sm:text-lg font-semibold leading-snug text-text-primary group-hover:text-accent transition-colors line-clamp-3">
           {headline}
         </h3>
-        <p className="mt-1.5 hidden sm:block text-sm text-text-secondary line-clamp-2">
+        <p className="mt-1.5 hidden text-sm text-text-secondary sm:line-clamp-2">
           {article.excerpt}
         </p>
       </div>

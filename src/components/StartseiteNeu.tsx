@@ -55,6 +55,10 @@ export function NeuesteRail({ articles }: { articles: Article[] }) {
 // eigener Navy-Zone darunter - die Standardkarte des neuen Looks.
 export function NotchKarte({
   article,
+  /** Kompakte Schrift fuer die 5er-Reihe (Guides): Bei 205 px Kartenbreite
+      frisst die 16-px-Schlagzeile mit vier Zeilen sonst fast das ganze
+      Bild. */
+  klein = false,
   // AM HANDY DEUTLICH KLEINER ALS DER AUFMACHER (Tim, 20.08.2026): Mit
   // fester Hoehe von 280 px war das Bild praktisch so gross wie der
   // Aufmacher (300 px) - die zweite Meldung wirkte damit wichtiger als
@@ -64,6 +68,7 @@ export function NotchKarte({
   randCyan = false,
 }: {
   article: Article;
+  klein?: boolean;
   bildHoehe?: string;
   /** Cyan-Rand statt Navy - bei den Guides (Tim, 17.08.2026). */
   randCyan?: boolean;
@@ -78,12 +83,18 @@ export function NotchKarte({
           </div>
           {/* Polygon-Scrim (aus deren CSS): nur auf der Textbox, untere
               Haelfte flach 80%, obere Haelfte laeuft aus. */}
+          {/* UEBERGANG HALB SO LANG (Tim, 20.08.2026): Die 76 px Auslauf
+              stammen vom grossen Aufmacher. Auf den kleinen Kacheln (Guides,
+              News-Reihe) frassen sie fast das halbe Bild - "massiv zu hoch
+              und zu stark". Jetzt 36 px, und die Zwischenstufen setzen
+              spaeter ein. Der deckende Sockel unter der Schrift bleibt,
+              sonst wird der Text unlesbar. */}
           <div
-            className="absolute inset-x-0 bottom-0 px-3.5 pb-3.5 pt-[76px]"
-            style={{ background: "linear-gradient(0deg, #0F0E20 0px, #0F0E20 calc(100% - 76px), rgba(15,14,32,0.9) calc(100% - 64px), rgba(15,14,32,0.68) calc(100% - 48px), rgba(15,14,32,0.4) calc(100% - 32px), rgba(15,14,32,0.16) calc(100% - 16px), rgba(15,14,32,0) 100%)" }}
+            className="absolute inset-x-0 bottom-0 px-3.5 pb-3.5 pt-[36px]"
+            style={{ background: "linear-gradient(0deg, #0F0E20 0px, #0F0E20 calc(100% - 36px), rgba(15,14,32,0.85) calc(100% - 30px), rgba(15,14,32,0.58) calc(100% - 22px), rgba(15,14,32,0.3) calc(100% - 14px), rgba(15,14,32,0.11) calc(100% - 7px), rgba(15,14,32,0) 100%)" }}
           >
             {kicker && (
-              <p className="mb-1 text-[10px] font-extrabold tracking-[0.08em] text-accent line-clamp-1 sm:text-[11px]">
+              <p className="mb-1 text-[10px] font-extrabold tracking-[0.05em] text-accent line-clamp-1 sm:text-[11px]">
                 {kicker.toUpperCase()}
               </p>
             )}
@@ -92,7 +103,7 @@ export function NotchKarte({
                 Schrift und zwei Zeilen brach fast jede Schlagzeile mitten
                 im Wort ab - auf der Startseite waren 19 Ueberschriften
                 abgeschnitten. Ab sm bleibt alles wie bisher. */}
-            <h3 className="min-h-[3.9em] text-[13.5px] font-extrabold leading-[1.3] text-white line-clamp-4 sm:min-h-[2.6em] sm:text-[16px] sm:leading-[1.35] sm:line-clamp-2">{headline}</h3>
+            <h3 className={`min-h-[3.9em] text-[13.5px] font-extrabold leading-[1.3] text-white line-clamp-5 sm:min-h-[2.6em] sm:line-clamp-4 ${klein ? "sm:text-[14px] sm:leading-[1.3]" : "sm:text-[16px] sm:leading-[1.35]"}`}>{headline}</h3>
           </div>
         </div>
       </div>
@@ -158,9 +169,14 @@ export function NewsletterBlock({ artikelBilder }: { artikelBilder: Article[] })
               aria-label="E-Mail-Adresse"
               className="min-w-0 flex-1 rounded-full border-2 border-navy/20 bg-white/70 px-5 py-3.5 text-[15px] text-navy placeholder:text-navy/45"
             />
+            {/* Farbe als style, nicht als Klasse: Die Verlaufsflaeche
+                (.bg-accent) zwingt jede text-accent-Schrift auf Dunkel -
+                der Knopf war dunkle Schrift auf dunkler Pille, also
+                unsichtbar. Ein Inline-Stil schlaegt diese Regel. */}
             <button
               disabled
-              className="cursor-not-allowed rounded-full bg-navy px-8 py-3.5 text-[15px] font-extrabold tracking-[0.01em] text-accent opacity-80"
+              style={{ color: "#02F0D1" }}
+              className="cursor-not-allowed rounded-full bg-[#0B0616] px-8 py-3.5 text-[15px] font-extrabold tracking-[0.01em] opacity-80"
             >
               Anmelden
             </button>

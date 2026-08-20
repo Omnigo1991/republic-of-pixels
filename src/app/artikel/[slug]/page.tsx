@@ -242,7 +242,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           <div className="mt-10 text-center">
             <Link
               href={`/kategorie/${article.category}`}
-              className="inline-flex items-center gap-2 rounded-full border border-border-default px-5 py-2.5 text-sm font-medium text-text-secondary hover:border-accent/50 hover:text-accent transition-colors"
+              className="inline-flex items-center gap-2 rounded-full border border-accent/45 px-5 py-2.5 text-sm font-medium text-text-secondary hover:border-accent/70 hover:text-accent transition-colors"
             >
               Weiterlesen in {CATEGORY_LABELS[article.category]}
             </Link>

@@ -137,11 +137,11 @@ function PopularCard({ article, rank }: { article: Article; rank: number }) {
             <CategoryPill category={article.category} />
           </div>
           {kicker && (
-            <p className="text-[11px] font-bold uppercase tracking-wider text-accent line-clamp-1">
+            <p className="text-[11px] font-bold uppercase tracking-[0.05em] text-accent line-clamp-1">
               {kicker}
             </p>
           )}
-          <h3 className="text-[15px] font-semibold leading-snug text-text-primary transition-colors group-hover:text-accent line-clamp-2">
+          <h3 className="text-[15px] font-semibold leading-snug text-text-primary transition-colors group-hover:text-accent line-clamp-3">
             {headline}
           </h3>
         </div>

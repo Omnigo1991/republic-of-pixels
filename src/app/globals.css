@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 html {
+  /* Grund hinter der Seite (Gummiband unten): Navy statt Browser-Weiss. */
+  background-color: #0C0B1A;
   scroll-behavior: smooth;
 }
 
@@ -105,19 +107,6 @@ h3 {
   .prose-rop blockquote:where(:not(.not-prose, .not-prose *)) {
     font-size: 1.15rem;
   }
-}
-
-.line-clamp-2 {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-.line-clamp-3 {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 }
 
 /* Scroll-Reveal (Apple-Stil): Sektionen blenden beim Hereinscrollen sanft ein.
@@ -230,6 +219,29 @@ body, h1, h2, h3, h4, p, li, a, button, span, time, input, label {
   border-color: rgba(2, 240, 209, 0.35) !important;
 }
 
+/* ---------- Lange Woerter in Titeln ----------
+   "Datenschutzerklaerung" passte bei 30 px nicht in die Handy-Spalte und
+   schob die ganze Seite 32 px ins Querscrollen. Notbremse fuer alle
+   Titel: Ein Wort, das breiter ist als die Zeile, darf brechen.
+   BEWUSST OHNE hyphens:auto - das hatte Schlagzeilen wie "MILLIO-NEN"
+   im Hero getrennt. Der harte Umbruch greift nur im Ausnahmefall eines
+   uebermaessig langen Einzelworts. */
+h1 {
+  overflow-wrap: break-word;
+}
+
+/* ---------- Code-Begriffe im Fliesstext ----------
+   <code> fiele sonst in die Mono-Schrift des Browsers - die einzige
+   fremde Schrift auf der ganzen Seite (aufgefallen auf /cookies).
+   Gleiche Schrift, leichte Cyan-Auszeichnung. */
+code {
+  font-family: inherit;
+  background: rgba(2, 240, 209, 0.12);
+  border-radius: 6px;
+  padding: 1px 6px 2px;
+  font-size: 0.92em;
+}
+
 /* ---------- Sektionsbanner ----------
    Einzeilig auf jeder Breite. Am Handy sorgt der kleinere Faktor
    dafuer, dass auch "WILLKOMMEN IN DER REPUBLIC" auf eine Zeile
@@ -292,6 +304,11 @@ body, h1, h2, h3, h4, p, li, a, button, span, time, input, label {
 .bg-surface-card {
   background: #14122E;
   border: 1px solid rgba(2, 240, 209, 0.30);
+}
+/* Rundung nur, wo nicht ohnehin eine Pille gewollt ist - sonst drueckt
+   diese Regel (ausserhalb der Tailwind-Schichten) rounded-full auf 18 px
+   herunter (aufgefallen an den Suche-Chips). */
+.bg-surface-card:not([class*="rounded-full"]) {
   border-radius: 18px;
 }
 .bg-surface-card:hover {
@@ -415,7 +432,7 @@ body, h1, h2, h3, h4, p, li, a, button, span, time, input, label {
      Erster Versuch war nur "padding-top: env(safe-area-inset-top)".
      Das half nicht: Meldet Safari die Hoehe der Statusleiste nicht,
      bleibt der Wert null und es passiert gar nichts - genau so war es.
-     Jetzt unabhaengig davon: Das Kopfband zieht seine Flaeche um 140 px
+     Jetzt unabhaengig davon: Das Kopfband zieht seine Flaeche um 300 px
      nach oben (negativer Aussenabstand) und schiebt den Inhalt um
      denselben Betrag wieder herunter (Innenabstand). Die Flaeche reicht
      damit weit ueber die obere Kante hinaus, der Inhalt sitzt
@@ -423,19 +440,20 @@ body, h1, h2, h3, h4, p, li, a, button, span, time, input, label {
      Verlauf ist, entsteht keine Naht - ein zweites Element darueber
      haette den Verlauf neu begonnen und einen sichtbaren Absatz
      erzeugt.
-     140 px liegen ueber jeder Statusleiste (iPhone: 47-59 px) und sind
-     bei nicht gescrollter Seite ausserhalb des Bildschirms. Der Zusatz
-     von env() bleibt fuer die Faelle, in denen Safari den Wert doch
-     liefert. */
+     300 px Reserve: Die Statusleiste ist 47-59 px hoch, aber das
+     iOS-Gummiband beim Ueberziehen kann deutlich weiter reissen - mit
+     140 px Reserve kam bei kraeftigem Ziehen wieder Navy zum Vorschein.
+     Der Zusatz von env() bleibt fuer die Faelle, in denen Safari den
+     Wert doch liefert. */
   /* Der Klebepunkt muss mitwandern: Mit "top: 0" klemmt der Browser die
      Oberkante beim Kleben auf null fest, und die 140 px landen UNTER der
      Bildschirmkante statt darueber - das Band wurde dadurch einfach
      140 px hoeher. Mit "top: -140px" klebt die Flaeche 140 px oberhalb
      der Kante, der Inhalt landet genau an der Kante (bzw. unterhalb der
      Statusleiste, wenn Safari deren Hoehe meldet). */
-  top: -140px;
-  margin-top: -140px;
-  padding-top: calc(140px + env(safe-area-inset-top, 0px));
+  top: -300px;
+  margin-top: -300px;
+  padding-top: calc(300px + env(safe-area-inset-top, 0px));
 }
 .kopfband,
 .kopfband a,

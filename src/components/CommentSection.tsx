@@ -155,7 +155,7 @@ export function CommentSection({ articleSlug }: { articleSlug: string }) {
         ) : (
           <button
             onClick={() => setLoginOffen(true)}
-            className="rounded-full border border-accent/50 px-4 py-1.5 text-sm font-medium text-accent hover:bg-accent/10 transition-colors"
+            className="rounded-full bg-[#0B0616] px-4 py-1.5 text-sm font-extrabold text-accent transition-opacity hover:opacity-80"
           >
             Anmelden
           </button>

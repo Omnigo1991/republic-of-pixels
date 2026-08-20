@@ -25,7 +25,7 @@ export function ArticleCard({ article }: { article: Article }) {
             {kicker}
           </p>
         )}
-        <h3 className="text-lg font-semibold leading-snug text-text-primary group-hover:text-accent transition-colors line-clamp-2">
+        <h3 className="text-lg font-semibold leading-snug text-text-primary group-hover:text-accent transition-colors line-clamp-3">
           {headline}
         </h3>
         <p className="text-sm text-text-secondary line-clamp-2">{article.excerpt}</p>
