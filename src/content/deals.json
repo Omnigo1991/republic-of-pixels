@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T13:04:41.668Z",
+  "updatedAt": "2026-08-20T15:56:58.639Z",
   "deals": [
     {
       "appId": 1771300,
@@ -24,6 +24,17 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2688950/capsule_184x69.jpg?t=1787133907"
     },
     {
+      "appId": 4001890,
+      "title": "How to Fish",
+      "discountPercent": 38,
+      "originalPrice": 749,
+      "finalPrice": 464,
+      "currency": "EUR",
+      "endsAt": "2026-08-27T17:00:36.000Z",
+      "url": "https://store.steampowered.com/app/4001890/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4001890/8f65bb2b78d37a9147aa79c970a51610e6955bf1/capsule_184x69.jpg?t=1787234618"
+    },
+    {
       "appId": 2764460,
       "title": "Sandustry",
       "discountPercent": 35,
@@ -43,29 +54,18 @@
       "currency": "EUR",
       "endsAt": "2026-09-03T17:00:08.000Z",
       "url": "https://store.steampowered.com/app/2163330/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2163330/765e6898cbb4faffa34991912775d813be58cc56/capsule_184x69.jpg?t=1787228521"
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2163330/765e6898cbb4faffa34991912775d813be58cc56/capsule_184x69.jpg?t=1787234279"
     },
     {
-      "appId": 2358720,
-      "title": "Black Myth: Wukong",
+      "appId": 1643320,
+      "title": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
       "discountPercent": 30,
       "originalPrice": 5999,
       "finalPrice": 4199,
       "currency": "EUR",
-      "endsAt": "2026-08-25T16:00:00.000Z",
-      "url": "https://store.steampowered.com/app/2358720/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2358720/b7f722ddd5e23503f598586aa3700dd4d827bb2d/capsule_184x69.jpg?t=1760601605"
-    },
-    {
-      "appId": 2950790,
-      "title": "IRON NEST: Heavy Turret Simulator",
-      "discountPercent": 25,
-      "originalPrice": 1999,
-      "finalPrice": 1499,
-      "currency": "EUR",
-      "endsAt": "2026-08-20T17:00:32.000Z",
-      "url": "https://store.steampowered.com/app/2950790/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2950790/922472560f653fd897313ab7a10dd86b018d373f/capsule_184x69.jpg?t=1786639727"
+      "endsAt": "2026-08-31T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1643320/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1643320/87ade1fa0e9869388368228258d758e040a3f651/capsule_184x69_alt_assets_7_german.jpg?t=1787231306"
     }
   ]
 }
