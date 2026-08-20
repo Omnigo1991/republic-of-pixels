@@ -94,11 +94,12 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
                   onClick={() => setOpen(false)}
                   className="flex items-center justify-between border-t-2 border-navy px-0.5 py-3 text-[23px] font-black tracking-tight text-navy transition-opacity hover:opacity-70 sm:py-3.5"
                 >
+                  {/* Ohne Pfeil (Tim, 20.08.2026): eine Zeile im Menue ist
+                      ohnehin erkennbar anklickbar. */}
                   <span className="flex items-center gap-3">
                     {r.label}
                     {r.puls && <span className="h-2 w-2 rounded-full bg-navy animate-pulseDot" />}
                   </span>
-                  <span aria-hidden="true" className="text-[21px]">→</span>
                 </Link>
               ))}
               <div className="flex items-center justify-between border-y-2 border-navy px-0.5 py-3 sm:py-3.5">
