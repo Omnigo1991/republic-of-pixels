@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T09:57:27.917Z",
+  "updatedAt": "2026-08-20T13:04:41.668Z",
   "deals": [
     {
       "appId": 1771300,
@@ -35,26 +35,26 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2764460/f0a29d6c91be4e91e9fa2f384dd5ae695bfd6b5b/capsule_184x69.jpg?t=1786703049"
     },
     {
-      "appId": 1643320,
-      "title": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+      "appId": 2163330,
+      "title": "Yet Another Zombie Survivors",
+      "discountPercent": 35,
+      "originalPrice": 1479,
+      "finalPrice": 961,
+      "currency": "EUR",
+      "endsAt": "2026-09-03T17:00:08.000Z",
+      "url": "https://store.steampowered.com/app/2163330/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2163330/765e6898cbb4faffa34991912775d813be58cc56/capsule_184x69.jpg?t=1787228521"
+    },
+    {
+      "appId": 2358720,
+      "title": "Black Myth: Wukong",
       "discountPercent": 30,
       "originalPrice": 5999,
       "finalPrice": 4199,
       "currency": "EUR",
-      "endsAt": "2026-08-31T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1643320/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1643320/290a107e6d65baf58523dfce8bc1d8310a2ee938/capsule_184x69.jpg?t=1787159375"
-    },
-    {
-      "appId": 4132330,
-      "title": "Pizza House Simulator🍕",
-      "discountPercent": 25,
-      "originalPrice": 1349,
-      "finalPrice": 1011,
-      "currency": "EUR",
-      "endsAt": "2026-09-02T17:00:37.000Z",
-      "url": "https://store.steampowered.com/app/4132330/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4132330/30e0db1cba795cfaefd61c946efe97c5df73ab0c/capsule_184x69.jpg?t=1787218826"
+      "endsAt": "2026-08-25T16:00:00.000Z",
+      "url": "https://store.steampowered.com/app/2358720/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2358720/b7f722ddd5e23503f598586aa3700dd4d827bb2d/capsule_184x69.jpg?t=1760601605"
     },
     {
       "appId": 2950790,
