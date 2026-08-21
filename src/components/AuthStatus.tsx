@@ -260,7 +260,7 @@ export function AuthStatus() {
     <>
       <button
         onClick={() => setDialogOffen(true)}
-        className="shrink-0 rounded-full bg-accent px-3 py-1.5 text-[12.5px] font-extrabold text-[#0F0D2C] transition-opacity hover:opacity-85 sm:px-4 sm:py-2 sm:text-[13.5px] lg:px-5 lg:py-2.5 lg:text-[14px]"
+        className="hidden shrink-0 rounded-full bg-accent px-3 py-1.5 text-[12.5px] font-extrabold text-[#0F0D2C] transition-opacity hover:opacity-85 sm:inline-block sm:px-4 sm:py-2 sm:text-[13.5px] lg:px-5 lg:py-2.5 lg:text-[14px]"
       >
         Anmelden
       </button>

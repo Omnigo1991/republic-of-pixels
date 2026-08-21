@@ -66,9 +66,12 @@ export function Masthead({
           <span className="hidden lg:block">
             <SearchTrigger />
           </span>
-          <span className="hidden sm:block">
-            <AuthStatus />
-          </span>
+          {/* Auch am Handy sichtbar (Tim, 21.08.2026): In der alten
+              Fassung sass hier das Profil-Icon mit dem Menue (inkl.
+              Statistik) - das "hidden sm:block" hatte es am Handy
+              wegrasiert, angemeldet gab es dadurch keinen Weg mehr
+              dorthin. */}
+          <AuthStatus />
           <MobileNav instagramUrl="https://www.instagram.com/republicofpixels" />
         </div>
       </div>

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { PLATFORM_NAV } from "@/lib/articles";
 import { PlatformIcon } from "./PlatformIcons";
 import { getSupabase } from "@/lib/supabase";
+import { SearchPanel } from "./SearchOverlay";
 
 // DER CYAN-VORHANG (Tim, 15.08.2026 abends): Das Menü ist eine
 // Markenbühne - ein voller Cyan-Vorhang, der von rechts hereingleitet
@@ -35,6 +36,7 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
   // die Sitzung und beschriftet den Knopf entsprechend.
   const supabase = useMemo(() => getSupabase(), []);
   const [angemeldet, setAngemeldet] = useState(false);
+  const [sucheAktiv, setSucheAktiv] = useState(false);
   useEffect(() => {
     supabase.auth.getSession().then(({ data }) => setAngemeldet(!!data.session));
     const { data: sub } = supabase.auth.onAuthStateChange((_ereignis, sitzung) => {
@@ -56,13 +58,15 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
 
   return (
     <div className="flex items-center gap-1">
-      <Link
-        href="/suche"
+      {/* Direkt tippen statt Seitenwechsel (Tim, 21.08.2026): Die Lupe
+          oeffnet den Vorhang gleich im Suchmodus. */}
+      <button
+        onClick={() => { setSucheAktiv(true); setOpen(true); }}
         aria-label="Suche öffnen"
         className="flex h-10 w-10 items-center justify-center rounded-full text-current hover:opacity-70 transition-opacity lg:hidden"
       >
         <SearchIcon className="h-5 w-5" />
-      </Link>
+      </button>
       <button
         onClick={() => setOpen(true)}
         aria-label="Menü öffnen"
@@ -85,29 +89,49 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
           />
           <aside className="absolute inset-y-0 right-0 flex w-full flex-col overflow-hidden bg-accent px-7 pb-[calc(1.75rem+env(safe-area-inset-bottom,0px))] pt-[calc(1.25rem+env(safe-area-inset-top,0px))] shadow-[-30px_0_80px_-20px_rgba(12,11,26,0.45)] animate-vorhang sm:w-[430px]">
             <button
-              onClick={() => setOpen(false)}
+              onClick={() => { setOpen(false); setSucheAktiv(false); }}
               aria-label="Menü schliessen"
               className="flex h-10 w-10 items-center justify-center self-end text-navy hover:opacity-70"
             >
               <CloseIcon className="h-[26px] w-[26px]" />
             </button>
 
-            <Link
-              href="/suche"
-              onClick={() => setOpen(false)}
-              className="mb-5 mt-1 flex items-center gap-3 rounded-2xl bg-[#0C0B1A]/10 px-4 py-3.5 text-[15px] font-semibold text-[#0B0616]"
-            >
-              Suche nach Spielen, News, Guides …
-              <SearchIcon className="ml-auto h-5 w-5 shrink-0" />
-            </Link>
+            {/* DIREKTE EINGABE STATT SEITENWECHSEL (Tim, 21.08.2026):
+                Der Klick springt nicht mehr nach /suche, sondern klappt
+                das echte Suchfeld samt Treffern hier im Menue auf. */}
+            {!sucheAktiv && (
+              <button
+                onClick={() => setSucheAktiv(true)}
+                className="mb-4 mt-1 flex w-full items-center gap-3 rounded-2xl bg-[#0C0B1A]/10 px-4 py-3 text-left text-[15px] font-semibold text-[#0B0616]"
+              >
+                Suche nach Spielen, News, Guides …
+                <SearchIcon className="ml-auto h-5 w-5 shrink-0" />
+              </button>
+            )}
+            {sucheAktiv && (
+              <div className="flex min-h-0 flex-1 flex-col">
+                <button
+                  onClick={() => setSucheAktiv(false)}
+                  className="mb-3 mt-1 self-start text-[14px] font-bold text-navy hover:opacity-70"
+                >
+                  &larr; Zurück zum Menü
+                </button>
+                {/* Navy-Teppich, damit die dunkle Such-Optik auf dem
+                    Cyan-Vorhang lesbar bleibt. */}
+                <div className="suchliste min-h-0 flex-1 overflow-y-auto rounded-2xl bg-bg-base p-4">
+                  <SearchPanel onNavigate={() => { setSucheAktiv(false); setOpen(false); }} />
+                </div>
+              </div>
+            )}
 
+            {!sucheAktiv && (
             <nav className="flex min-h-0 flex-1 flex-col overflow-y-auto" aria-label="Menü">
               {RUBRIKEN.map((r) => (
                 <Link
                   key={r.label}
                   href={r.href}
                   onClick={() => setOpen(false)}
-                  className="flex items-center justify-between border-t-2 border-navy px-0.5 py-3 text-[23px] font-black tracking-tight text-navy transition-opacity hover:opacity-70 sm:py-3.5"
+                  className="flex items-center justify-between border-t-2 border-navy px-0.5 py-2 text-[20px] font-black tracking-tight text-navy transition-opacity hover:opacity-70 min-[380px]:py-2.5 min-[380px]:text-[22px] sm:py-3.5 sm:text-[23px]"
                 >
                   {/* Ohne Pfeil (Tim, 20.08.2026): eine Zeile im Menue ist
                       ohnehin erkennbar anklickbar. */}
@@ -117,8 +141,8 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
                   </span>
                 </Link>
               ))}
-              <div className="flex items-center justify-between border-y-2 border-navy px-0.5 py-3 sm:py-3.5">
-                <span className="text-[23px] font-black tracking-tight text-navy">Plattformen</span>
+              <div className="flex items-center justify-between border-y-2 border-navy px-0.5 py-2 min-[380px]:py-2.5 sm:py-3.5">
+                <span className="text-[20px] font-black tracking-tight text-navy min-[380px]:text-[22px] sm:text-[23px]">Plattformen</span>
                 <span className="flex items-center gap-3">
                   {PLATFORM_NAV.map((p) => (
                     <Link
@@ -138,12 +162,12 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
               <Link
                 href="/profil"
                 onClick={() => setOpen(false)}
-                className="mt-6 flex items-center justify-center gap-2 rounded-full bg-navy py-3.5 text-[15px] font-extrabold text-accent sm:hidden"
+                className="mt-4 flex items-center justify-center gap-2 rounded-full bg-navy py-3 text-[15px] font-extrabold text-accent sm:hidden"
               >
                 {angemeldet ? "Mein Konto" : "Anmelden"}
               </Link>
 
-              <div className="mt-6 flex gap-3.5">
+              <div className="mt-4 flex gap-3.5 pb-1">
                 <a
                   href={instagramUrl}
                   target="_blank"
@@ -162,6 +186,7 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
                 </a>
               </div>
             </nav>
+            )}
 
           </aside>
         </div>,
