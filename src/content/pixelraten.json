@@ -1,20 +1,20 @@
 {
-  "datum": "2026-08-20",
-  "nummer": 12,
-  "loesung": "The Elder Scrolls V: Skyrim",
+  "datum": "2026-08-21",
+  "nummer": 13,
+  "loesung": "Cities: Skylines",
   "akzeptiert": [
-    "theelderscrollsvskyrim",
-    "skyrim"
+    "citiesskylines",
+    "citiesskylines"
   ],
   "hinweise": [
-    "Erschienen 2011 · Rollenspiel",
-    "Bethesda"
+    "Erschienen 2015 · Städtebau",
+    "Verkehrsplanung"
   ],
   "bilder": [
-    "/images/pixelraten/2026-08-20-s1.jpg",
-    "/images/pixelraten/2026-08-20-s2.jpg",
-    "/images/pixelraten/2026-08-20-s3.jpg",
-    "/images/pixelraten/2026-08-20-s4.jpg",
-    "/images/pixelraten/2026-08-20-s5.jpg"
+    "/images/pixelraten/2026-08-21-s1.jpg",
+    "/images/pixelraten/2026-08-21-s2.jpg",
+    "/images/pixelraten/2026-08-21-s3.jpg",
+    "/images/pixelraten/2026-08-21-s4.jpg",
+    "/images/pixelraten/2026-08-21-s5.jpg"
   ]
 }
