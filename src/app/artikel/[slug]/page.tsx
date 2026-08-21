@@ -17,6 +17,7 @@ import { PollBox } from "@/components/PollBox";
 import { ShareButtons } from "@/components/ShareButtons";
 import { CommentSection } from "@/components/CommentSection";
 import { ArticleReactions } from "@/components/ArticleReactions";
+import { HypeMeter } from "@/components/HypeMeter";
 import { NotchKarte } from "@/components/StartseiteNeu";
 import { SectionDivider } from "@/components/SectionDivider";
 import { formatDateTime, splitTitle } from "@/lib/format";
@@ -220,6 +221,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
         <WeiterlesenBox articles={related.slice(1)} />
 
         <div className="my-8 flex flex-wrap items-center justify-between gap-4 border-y border-border-subtle py-6">
+          <HypeMeter articleSlug={article.slug} />
           <ArticleReactions articleSlug={article.slug} />
           <ShareButtons title={article.title} />
         </div>

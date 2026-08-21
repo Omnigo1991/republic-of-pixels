@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { KommentarZahl } from "./KommentarZahl";
 import type { Article } from "@/lib/types";
 import { ArticleMedia } from "./ArticleMedia";
 import { CATEGORY_LABELS } from "@/lib/types";
@@ -25,6 +26,7 @@ export function ArticleListItem({ article }: { article: Article }) {
             <span className="text-text-tertiary"> · {CATEGORY_LABELS[article.category].toUpperCase()}</span>
           )}
           <span className="whitespace-nowrap text-text-tertiary"> · {article.readingTimeMinutes} MIN.</span>
+          <KommentarZahl slug={article.slug} />
         </p>
         <h3 className="text-[17px] font-extrabold leading-[1.32] text-text-primary group-hover:text-accent transition-colors line-clamp-4 sm:line-clamp-3 sm:text-[20px]">
           {article.title}

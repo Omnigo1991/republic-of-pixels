@@ -1,0 +1,33 @@
+{
+  "gta-6": {
+    "fakten": [
+      { "k": "Release", "v": "19. November 2026" },
+      { "k": "Plattformen", "v": "PS5 · Xbox Series" },
+      { "k": "Entwickler", "v": "Rockstar Games" },
+      { "k": "Publisher", "v": "Take-Two Interactive" }
+    ]
+  },
+  "the-duskbloods": {
+    "fakten": [
+      { "k": "Release", "v": "2026" },
+      { "k": "Plattform", "v": "Switch-2-exklusiv" },
+      { "k": "Entwickler", "v": "FromSoftware" },
+      { "k": "Director", "v": "Hidetaka Miyazaki" }
+    ]
+  },
+  "nintendo-switch-2": {
+    "fakten": [
+      { "k": "Release", "v": "5. Juni 2025" },
+      { "k": "Typ", "v": "Hybrid-Konsole" },
+      { "k": "Hersteller", "v": "Nintendo" }
+    ]
+  },
+  "battlefield-6": {
+    "fakten": [
+      { "k": "Release", "v": "10. Oktober 2025" },
+      { "k": "Plattformen", "v": "PC · PS5 · Xbox Series" },
+      { "k": "Entwickler", "v": "DICE u. a." },
+      { "k": "Publisher", "v": "Electronic Arts" }
+    ]
+  }
+}

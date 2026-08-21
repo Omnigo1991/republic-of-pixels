@@ -7,6 +7,7 @@ import { SektionsBanner } from "@/components/SektionsBanner";
 import { PopularSection } from "@/components/PopularSection";
 import { ReleaseRadar } from "@/components/ReleaseRadar";
 import { DealRadar } from "@/components/DealRadar";
+import { PatchRadar } from "@/components/PatchRadar";
 import { ChartsRadar } from "@/components/ChartsRadar";
 import { EventRadar } from "@/components/EventRadar";
 import { GeradeImGespraech } from "@/components/GeradeImGespraech";
@@ -136,6 +137,7 @@ export default async function HomePage() {
           </Reveal>
           <Reveal>
             <DealRadar />
+          <PatchRadar />
           </Reveal>
         </section>
 

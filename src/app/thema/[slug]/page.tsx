@@ -4,6 +4,7 @@ import Link from "next/link";
 import { getAlleThemen, getThema } from "@/lib/themen";
 import { ArticleListItem } from "@/components/ArticleListItem";
 import { Masthead } from "@/components/Masthead";
+import { ThemenSteckbrief } from "@/components/ThemenSteckbrief";
 
 // Themen-Hub (SEO-Baustein, 08.08.2026): Landeseite pro Spiel/Thema,
 // automatisch aus den Artikel-Tags erzeugt (nur Themen mit >=3 Artikeln,
@@ -43,6 +44,8 @@ export default function ThemaPage({ params }: { params: { slug: string } }) {
           Alle News, Leaks und Reviews zu {thema.label} - {thema.articles.length}{" "}
           Artikel, laufend aktualisiert.
         </p>
+
+        <ThemenSteckbrief slug={thema.slug} />
 
         <div className="mt-10 flex flex-col">
           {thema.articles.map((article) => (
