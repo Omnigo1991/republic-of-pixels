@@ -1,0 +1,141 @@
+{
+  "slug": "stalker-2-update-2-0-xbox-series-performance-2026",
+  "title": "Stalker 2 Update 2.0 auf Xbox - stabile 60 FPS, aber nicht überall",
+  "subtitle": "Das kostenlose Grossupdate hebt die Zone auf eine neue Unreal-Engine-Version - die ersten Eindrücke von Series X und Series S fallen widersprüchlich aus",
+  "excerpt": "Update 2.0 nennt das Team selbst die grösste Überarbeitung seit Launch. Auf Xbox Series X sieht das erste Gameplay-Material rund aus - doch ein Detail schränkt den guten Eindruck deutlich ein.",
+  "seoTitle": "Stalker 2 Update 2.0: Performance auf Xbox Series X|S",
+  "metaDescription": "Stalker 2 Update 2.0 bringt neue Unreal-Engine-Version, A-Life-Änderungen und Waffen. So läuft das Grossupdate laut ersten Eindrücken auf Xbox Series X und S.",
+  "category": "news",
+  "platforms": [
+    "xbox"
+  ],
+  "tags": [
+    "Stalker 2",
+    "GSC Game World",
+    "Xbox Series X|S",
+    "Update",
+    "Cost of Hope"
+  ],
+  "tldr": [
+    "Das kostenlose Update 2.0 für Stalker 2 bringt eine neue Unreal-Engine-Version, zahlreiche A-Life-Änderungen, neue Waffen und mehr Einstellungsmöglichkeiten",
+    "GSC Game World bezeichnet es als grösste Überarbeitung der Zone seit dem Launch",
+    "Auf Xbox Series X zeigt kursierendes Videomaterial stabile 30 FPS im Qualitäts- und 60 FPS im Performance-Modus - allerdings nicht in belebten Siedlungen",
+    "Die Series-S-Fassung bleibt bei 30 FPS, wirkt im Bild aber schärfer als zuvor"
+  ],
+  "whyItMatters": "Stalker 2 kämpfte auf den Konsolen seit dem Start mit Bildrate und Bildschärfe - besonders auf der Series S. Update 2.0 ist der bislang grösste Versuch, diese Baustellen zu schliessen, und entscheidet für viele darüber, ob sich die Rückkehr in die Zone jetzt lohnt.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Während sich die Aufmerksamkeit rund um Stalker 2 zuletzt vor allem auf die neue Erweiterung «Cost of Hope» und deren sehr positive Wertungen richtete, ist der technisch weitaus grössere Eingriff kostenlos: Update 2.0 hebt das Spiel auf eine neue Unreal-Engine-Version, verändert das A-Life-System an zahlreichen Stellen, ergänzt neue Waffen und erweitert die Optionen, mit denen sich das Spielerlebnis anpassen lässt. GSC Game World selbst bezeichnet den Patch als grösste Überarbeitung der Zone seit dem Release."
+    },
+    {
+      "type": "embed",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=0A8ENB05Mfw"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "60 FPS",
+          "label": "im Performance-Modus der Xbox Series X - im gezeigten Abschnitt stabil"
+        },
+        {
+          "value": "30 FPS",
+          "label": "im Qualitäts-Modus der Series X und durchgehend auf der Series S"
+        },
+        {
+          "value": "2.0",
+          "label": "Versionsnummer des kostenlosen Grossupdates inklusive Engine-Sprung"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Was das Update umkrempelt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die vollständigen Patch Notes hat das Studio auf der offiziellen Steam-Seite von Stalker 2 veröffentlicht - und sie fallen umfangreich aus. Im Kern stehen vier Bereiche:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Upgrade auf eine neue Unreal-Engine-Version als technisches Fundament",
+        "Zahlreiche Anpassungen am A-Life-System, das Mutanten und Fraktionen in der Zone steuert",
+        "Neue Waffen für das Arsenal",
+        "Erweiterte Möglichkeiten, das eigene Spielerlebnis zu individualisieren"
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "Unsere grösste Überarbeitung davon, wie die Zone aussieht, sich anfühlt und lebt, seit dem Launch.",
+      "attribution": "GSC Game World über Update 2.0"
+    },
+    {
+      "type": "heading",
+      "text": "Xbox Series X: stabil - aber nur im ruhigen Gelände"
+    },
+    {
+      "type": "paragraph",
+      "text": "Wie sich das auf den Konsolen niederschlägt, ist die entscheidende Frage. Gameplay-Material des Kanals Fuzion Xbox Testing zeigt auf der Series X ein festes Bild: 30 FPS im Qualitäts-Modus, 60 FPS im Performance-Modus, jeweils ohne sichtbare Einbrüche. Die Einschränkung liefert die Community gleich mit - aufgenommen wurde in einem bestimmten Areal, nicht in den CPU-lastigen Siedlungen, die schon vor dem Update als Problemzonen galten. Ein belastbares Urteil über die gesamte Zone lässt das Material also nicht zu."
+    },
+    {
+      "type": "heading",
+      "text": "Series S profitiert vor allem beim Bild"
+    },
+    {
+      "type": "paragraph",
+      "text": "Interessanter ist der Sprung auf der kleineren Konsole. Die Series-S-Fassung bleibt auf 30 FPS festgenagelt, wirkt im gezeigten Material aber deutlich weniger verwaschen als bisher. Gerade die matschige Bildschärfe war seit dem Start eine der grössten Beschwerden der Series-S-Fraktion - hier könnte Update 2.0 der spürbarere Gewinn sein als bei der Bildrate."
+    },
+    {
+      "type": "heading",
+      "text": "Die Rückmeldungen gehen auseinander"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ein einheitliches Bild ergeben die ersten Eindrücke jedoch nicht. Manche Spielerinnen und Spieler berichten, dass Stalker 2 nach dem Update besser aussieht und flüssiger läuft. Andere finden es schlechter oder zumindest schlicht «anders» - bei weiterhin unzuverlässiger Performance. Ein Engine-Wechsel mitten im Lebenszyklus verändert eben nicht nur Zahlen, sondern auch die Bildwirkung, und nicht jede Veränderung wird als Verbesserung empfunden."
+    },
+    {
+      "type": "paragraph",
+      "text": "Einordnung: Update 2.0 ist der ambitionierteste Eingriff, den GSC Game World seit dem Launch gewagt hat - und er wirkt auf dem Papier wie eine Antwort auf die meistgenannten Kritikpunkte der Konsolenfassung. Wer eine belastbare Aussage zur Performance will, sollte allerdings abwarten, bis ausführliche Tests aus den belebten Siedlungen vorliegen. Genau dort entscheidet sich, ob aus einem guten Eindruck ein gutes Spielgefühl wird."
+    }
+  ],
+  "poll": {
+    "question": "Was ist euch bei Stalker 2 auf Konsole wichtiger?",
+    "options": [
+      "Stabile 60 FPS, auch wenn das Bild leidet",
+      "Schärferes Bild bei 30 FPS",
+      "Erst mal Ruhe in den Siedlungen - alles andere danach",
+      "Mich interessiert nur die neue Erweiterung"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-21T19:08:28.393Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "particles",
+  "sources": [
+    {
+      "title": "Here s What The New Stalker 2.0 Update Looks Like On Xbox Series X|S",
+      "url": "https://www.purexbox.com/news/2026/08/heres-what-the-new-stalker-2-0-update-looks-like-on-xbox-series-xs",
+      "publisher": "Pure Xbox"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/stalker-2-update-2-0-xbox-series-performance-2026.webp",
+    "alt": "Stalker 2 Update 2.0 auf Xbox - stabile 60 FPS, aber nicht überall",
+    "credit": "Bild: Pure Xbox",
+    "sourceUrl": "https://www.purexbox.com/news/2026/08/heres-what-the-new-stalker-2-0-update-looks-like-on-xbox-series-xs",
+    "sourceWidth": 1920,
+    "sourceHeight": 1080
+  },
+  "relatedSlugs": [
+    "stalker-2-xbox-dynamischer-hintergrund-cost-of-hope",
+    "stalker-2-update-2-0-cost-of-hope-2026",
+    "stalker-2-cost-of-hope-test-kritik-2026"
+  ]
+}
