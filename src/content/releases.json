@@ -2,45 +2,161 @@
   {
     "title": "Marvel Tōkon: Fighting Souls",
     "date": "2026-08-06",
-    "platforms": ["playstation", "pc"]
+    "platforms": [
+      "playstation",
+      "pc"
+    ]
   },
   {
     "title": "Star Wars Zero Company",
     "date": "2026-08-27",
-    "platforms": ["pc", "playstation", "xbox"]
+    "platforms": [
+      "pc",
+      "playstation",
+      "xbox"
+    ]
   },
   {
     "title": "The Immortal John Triptych",
     "date": "2026-08-27",
-    "platforms": ["pc", "playstation", "xbox", "nintendo"]
+    "platforms": [
+      "pc",
+      "playstation",
+      "xbox",
+      "nintendo"
+    ]
   },
   {
     "title": "Captain Tsubasa 2: World Fighters",
     "date": "2026-08-28",
-    "platforms": ["pc", "playstation", "xbox", "nintendo"]
+    "platforms": [
+      "pc",
+      "playstation",
+      "xbox",
+      "nintendo"
+    ]
   },
   {
     "title": "Crimson Moon",
     "date": "2026-09-01",
-    "platforms": ["playstation", "xbox", "pc"],
+    "platforms": [
+      "playstation",
+      "xbox",
+      "pc"
+    ],
     "articleSlug": "crimson-moon-release-september-2026"
+  },
+  {
+    "title": "The Blood of Dawnwalker",
+    "date": "2026-09-03",
+    "platforms": [
+      "pc",
+      "playstation",
+      "xbox"
+    ],
+    "articleSlug": "blood-of-dawnwalker-konsolen-grafikmodi-40-fps-2026"
+  },
+  {
+    "title": "Marvel's Wolverine",
+    "date": "2026-09-15",
+    "platforms": [
+      "playstation"
+    ],
+    "articleSlug": "marvels-wolverine-insomniac-preview-2026"
   },
   {
     "title": "Fire Emblem: Fortune's Weave",
     "date": "2026-09-17",
-    "platforms": ["nintendo"],
+    "platforms": [
+      "nintendo"
+    ],
     "articleSlug": "fire-emblem-fortunes-weave-direct-details-2026"
   },
   {
     "title": "The Walking Dead: Streets of Survival",
     "date": "2026-09-18",
-    "platforms": ["playstation", "xbox", "nintendo", "pc"],
+    "platforms": [
+      "playstation",
+      "xbox",
+      "nintendo",
+      "pc"
+    ],
     "articleSlug": "walking-dead-streets-of-survival-release"
+  },
+  {
+    "title": "Dune: Awakening (PS5/Xbox)",
+    "date": "2026-09-22",
+    "platforms": [
+      "playstation",
+      "xbox"
+    ],
+    "articleSlug": "dune-awakening-ps5-xbox-release-september-2026"
   },
   {
     "title": "EA Sports FC 27",
     "date": "2026-09-25",
-    "platforms": ["playstation", "xbox", "pc"],
+    "platforms": [
+      "playstation",
+      "xbox",
+      "pc"
+    ],
     "articleSlug": "ea-fc-27-the-grounds-nba-2k-vorbild"
+  },
+  {
+    "title": "Ghost of Yotei: Complete Edition",
+    "date": "2026-10-01",
+    "platforms": [
+      "playstation"
+    ],
+    "articleSlug": "ghost-of-yotei-complete-edition-echoes-of-sekigahara-2026"
+  },
+  {
+    "title": "Ace Combat 8: Wings of Theve",
+    "date": "2026-10-02",
+    "platforms": [
+      "playstation"
+    ],
+    "articleSlug": "ace-combat-8-wings-of-theve-sound-dev-diary-2026"
+  },
+  {
+    "title": "Star Wars: Galactic Racer",
+    "date": "2026-10-06",
+    "platforms": [
+      "pc",
+      "playstation",
+      "xbox"
+    ],
+    "articleSlug": "star-wars-galactic-racer-anakin-skywalker-2026"
+  },
+  {
+    "title": "Final Fantasy Resonance",
+    "date": "2026-10-22",
+    "platforms": [
+      "playstation",
+      "xbox",
+      "pc",
+      "nintendo"
+    ],
+    "articleSlug": "octopath-traveler-3-asano-jubilaeum-update-2026"
+  },
+  {
+    "title": "CoD: Modern Warfare 4",
+    "date": "2026-10-23",
+    "platforms": [
+      "pc",
+      "playstation",
+      "xbox",
+      "nintendo"
+    ],
+    "articleSlug": "call-of-duty-modern-warfare-4-multiplayer-trailer-beta-2026"
+  },
+  {
+    "title": "Phantom Blade Zero",
+    "date": "2026-10-29",
+    "platforms": [
+      "pc",
+      "playstation"
+    ],
+    "articleSlug": "phantom-blade-zero-fertigstellung-praesentation-2026"
   }
 ]

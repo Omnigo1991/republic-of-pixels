@@ -42,7 +42,7 @@ export function ReleaseRadar() {
               {/* Navy-Umbau: Die Karte ist jetzt Cyan, also kehrt sich das
                   Datumskaestchen um - Navy-Flaeche mit Cyan-Schrift.
                   Vorher stand Cyan auf Cyan und der Monat verschwand. */}
-              <div className="flex h-14 w-14 shrink-0 flex-col items-center justify-center rounded-2xl bg-navy">
+              <div className="flex h-14 w-14 shrink-0 flex-col items-center justify-center rounded-full bg-navy">
                 <span className="text-lg font-bold leading-none text-accent">
                   {r.date.slice(8, 10)}
                 </span>
