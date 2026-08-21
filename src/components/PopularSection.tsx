@@ -115,37 +115,39 @@ function PopularCard({ article, rank }: { article: Article; rank: number }) {
           rund = Werkzeug. Aussen der Verlauf als Rand, innen die Flaeche -
           zwei Ebenen, weil ein Beschnitt sonst den Rand an der Schraege
           wegschneiden wuerde. */}
+      {/* EXAKT DIE GUIDES-BAUART (Tim, 21.08.2026): Text IM Bild auf dem
+          76-px-Verlauf statt unter dem Bild - vorher trugen gleich grosse
+          Kacheln zwei verschiedene Uebergaenge. Verlauf, Textlage und
+          Schrift sind 1:1 aus der NotchKarte uebernommen; Rangnummer und
+          Kategorie-Pille bleiben als Beliebt-Merkmale. */}
       <Link
         href={`/artikel/${article.slug}`}
         className="artikelkante group block h-full transition-all duration-300"
       >
-        <span className="artikelkante__innen flex h-full flex-col overflow-hidden">
-        <div className="bildfeder relative aspect-[16/9] overflow-hidden">
-          <ArticleMedia
-            article={article}
-            sizes="320px"
-            className="h-full w-full transition-transform duration-500 group-hover:scale-105"
-          />
-          <span className="absolute left-3 top-3 flex h-7 w-7 items-center justify-center rounded-full bg-bg-elevated/85 text-xs font-bold text-accent backdrop-blur">
+        <span className="artikelkante__innen relative block h-[280px] overflow-hidden">
+          <span className="absolute inset-0 block [&_img]:h-full [&_img]:w-full [&_img]:object-cover transition-transform duration-500 group-hover:scale-[1.03]">
+            <ArticleMedia article={article} sizes="320px" className="h-full w-full" />
+          </span>
+          <span className="absolute left-3 top-3 z-10 flex h-7 w-7 items-center justify-center rounded-full bg-bg-elevated/85 text-xs font-bold text-accent backdrop-blur">
             {String(rank).padStart(2, "0")}
           </span>
-        </div>
-        {/* Zusaetzlicher Innenabstand links: der Anschnitt frisst die
-            untere linke Ecke, sonst wirkt die Schlagzeile abgesaegt. */}
-        <div className="flex flex-1 flex-col gap-2 p-4 pl-[30px]">
-          <div>
-            <CategoryPill category={article.category} />
-          </div>
-          {kicker && (
-            <p className="text-[11px] font-bold uppercase tracking-[0.05em] text-accent line-clamp-1">
-              {kicker}
-            </p>
-          )}
-          <h3 className="text-[15px] font-semibold leading-snug text-text-primary transition-colors group-hover:text-accent line-clamp-3">
-            {headline}
-          </h3>
-        </div>
-      </span>
+          <span
+            className="absolute inset-x-0 bottom-0 block px-3.5 pb-3.5 pl-[30px] pt-[76px]"
+            style={{ background: "linear-gradient(0deg, #0F0E20 0px, #0F0E20 calc(100% - 76px), rgba(15,14,32,0.9) calc(100% - 64px), rgba(15,14,32,0.68) calc(100% - 48px), rgba(15,14,32,0.4) calc(100% - 32px), rgba(15,14,32,0.16) calc(100% - 16px), rgba(15,14,32,0) 100%)" }}
+          >
+            <span className="mb-1.5 block">
+              <CategoryPill category={article.category} />
+            </span>
+            {kicker && (
+              <span className="mb-1 block text-[10px] font-extrabold tracking-[0.08em] text-accent line-clamp-1 sm:text-[11px]">
+                {kicker.toUpperCase()}
+              </span>
+            )}
+            <span className="block min-h-[2.6em] text-[16px] font-extrabold leading-[1.35] text-white line-clamp-2">
+              {headline}
+            </span>
+          </span>
+        </span>
       </Link>
     </article>
   );
