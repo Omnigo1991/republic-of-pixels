@@ -50,6 +50,21 @@ export function NeuesteRail({ articles }: { articles: Article[] }) {
   );
 }
 
+// EINE QUELLE FUER DEN KACHEL-UEBERGANG (Tim, 21.08.2026, "ein fuer
+// alle Mal"): Verlauf und Textklassen liegen genau HIER und nirgendwo
+// sonst. Jede Kachel mit Text im Bild (NotchKarte, Beliebt bei Lesern)
+// importiert sie - damit koennen die Uebergaenge nie wieder
+// auseinanderlaufen.
+export const KACHEL_SCRIM_STIL = {
+  background:
+    "linear-gradient(0deg, #0F0E20 0px, #0F0E20 calc(100% - 76px), rgba(15,14,32,0.9) calc(100% - 64px), rgba(15,14,32,0.68) calc(100% - 48px), rgba(15,14,32,0.4) calc(100% - 32px), rgba(15,14,32,0.16) calc(100% - 16px), rgba(15,14,32,0) 100%)",
+} as const;
+export const KACHEL_SCRIM_KLASSE = "absolute inset-x-0 bottom-0 px-3.5 pb-3.5 pt-[76px]";
+export const KACHEL_KICKER_KLASSE =
+  "mb-1 text-[10px] font-extrabold tracking-[0.08em] text-accent line-clamp-1 sm:text-[11px]";
+export const KACHEL_TITEL_KLASSE =
+  "min-h-[3.9em] text-[13.5px] font-extrabold leading-[1.3] text-white line-clamp-3 sm:min-h-[2.6em] sm:text-[16px] sm:leading-[1.35] sm:line-clamp-2";
+
 // Bildkarte mit Pixel-Treppe oben rechts: Artwork oben KOMPLETT
 // unangetastet (Tim, 15.08.2026: "gar nicht abdunkeln"), Beschriftung auf
 // eigener Navy-Zone darunter - die Standardkarte des neuen Looks.
@@ -82,15 +97,8 @@ export function NotchKarte({
               Die 36-px-Kurzfassung wirkte hart ("beschissen") - seit die
               Guides-Kacheln Trio-Groesse haben, passt die lange Fassung
               wieder ueberall. */}
-          <div
-            className="absolute inset-x-0 bottom-0 px-3.5 pb-3.5 pt-[76px]"
-            style={{ background: "linear-gradient(0deg, #0F0E20 0px, #0F0E20 calc(100% - 76px), rgba(15,14,32,0.9) calc(100% - 64px), rgba(15,14,32,0.68) calc(100% - 48px), rgba(15,14,32,0.4) calc(100% - 32px), rgba(15,14,32,0.16) calc(100% - 16px), rgba(15,14,32,0) 100%)" }}
-          >
-            {kicker && (
-              <p className="mb-1 text-[10px] font-extrabold tracking-[0.08em] text-accent line-clamp-1 sm:text-[11px]">
-                {kicker.toUpperCase()}
-              </p>
-            )}
+          <div className={KACHEL_SCRIM_KLASSE} style={KACHEL_SCRIM_STIL}>
+            {kicker && <p className={KACHEL_KICKER_KLASSE}>{kicker.toUpperCase()}</p>}
             {/* AM HANDY KLEINER UND DREIZEILIG (Tim, 20.08.2026): In zwei
                 Spalten ist eine Karte nur rund 167 px breit. Mit 16 px
                 Schrift und zwei Zeilen brach fast jede Schlagzeile mitten
@@ -101,7 +109,7 @@ export function NotchKarte({
                 Rechner exakt zwei Zeilen (min-h = clamp), lange Titel
                 enden mit Punkten. Der Kern-ohne-Wendung-Versuch liess
                 Einzeiler mit grosser Leerflaeche zurueck. */}
-            <h3 className="min-h-[3.9em] text-[13.5px] font-extrabold leading-[1.3] text-white line-clamp-4 sm:min-h-[2.6em] sm:text-[16px] sm:leading-[1.35] sm:line-clamp-2">{headline}</h3>
+            <h3 className={KACHEL_TITEL_KLASSE}>{headline}</h3>
           </div>
         </div>
       </div>

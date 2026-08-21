@@ -5,6 +5,12 @@ import Link from "next/link";
 import type { Article } from "@/lib/types";
 import { ArticleMedia } from "./ArticleMedia";
 import { CategoryPill } from "./Badges";
+import {
+  KACHEL_KICKER_KLASSE,
+  KACHEL_SCRIM_KLASSE,
+  KACHEL_SCRIM_STIL,
+  KACHEL_TITEL_KLASSE,
+} from "./StartseiteNeu";
 import { SectionDivider } from "./SectionDivider";
 import { splitTitle } from "@/lib/format";
 
@@ -111,43 +117,29 @@ function PopularCard({ article, rank }: { article: Article; rank: number }) {
   const { kicker, headline } = splitTitle(article.title, article.tags);
   return (
     <article className="w-[280px] shrink-0 snap-start sm:w-[320px]">
-      {/* Kappecke wie bei allen Artikeln (Tim, 19.08.2026): eckig = Artikel,
-          rund = Werkzeug. Aussen der Verlauf als Rand, innen die Flaeche -
-          zwei Ebenen, weil ein Beschnitt sonst den Rand an der Schraege
-          wegschneiden wuerde. */}
-      {/* EXAKT DIE GUIDES-BAUART (Tim, 21.08.2026): Text IM Bild auf dem
-          76-px-Verlauf statt unter dem Bild - vorher trugen gleich grosse
-          Kacheln zwei verschiedene Uebergaenge. Verlauf, Textlage und
-          Schrift sind 1:1 aus der NotchKarte uebernommen; Rangnummer und
-          Kategorie-Pille bleiben als Beliebt-Merkmale. */}
-      <Link
-        href={`/artikel/${article.slug}`}
-        className="artikelkante group block h-full transition-all duration-300"
-      >
-        <span className="artikelkante__innen relative block h-[280px] overflow-hidden">
-          <span className="absolute inset-0 block [&_img]:h-full [&_img]:w-full [&_img]:object-cover transition-transform duration-500 group-hover:scale-[1.03]">
-            <ArticleMedia article={article} sizes="320px" className="h-full w-full" />
-          </span>
-          <span className="absolute left-3 top-3 z-10 flex h-7 w-7 items-center justify-center rounded-full bg-bg-elevated/85 text-xs font-bold text-accent backdrop-blur">
-            {String(rank).padStart(2, "0")}
-          </span>
-          <span
-            className="absolute inset-x-0 bottom-0 block px-3.5 pb-3.5 pl-[30px] pt-[76px]"
-            style={{ background: "linear-gradient(0deg, #0F0E20 0px, #0F0E20 calc(100% - 76px), rgba(15,14,32,0.9) calc(100% - 64px), rgba(15,14,32,0.68) calc(100% - 48px), rgba(15,14,32,0.4) calc(100% - 32px), rgba(15,14,32,0.16) calc(100% - 16px), rgba(15,14,32,0) 100%)" }}
-          >
-            <span className="mb-1.5 block">
+      {/* WOERTLICHER ZWILLING DER GUIDES-KACHEL (Tim, 21.08.2026, "ein
+          fuer alle Mal"): Huelle, Verlauf und Textklassen kommen aus
+          derselben Quelle wie bei der NotchKarte (StartseiteNeu) - hier
+          steht kein eigener Stil mehr, der abweichen koennte. Eigen sind
+          nur Rangnummer und Kategorie-Pille als Overlay oben links. */}
+      <Link href={`/artikel/${article.slug}`} className="group block h-full">
+        <div className="treppe-tr h-full">
+          <div className="treppe-innen h-[280px]">
+            <div className="absolute inset-0 [&_img]:h-full [&_img]:w-full [&_img]:object-cover transition-transform duration-500 group-hover:scale-[1.03]">
+              <ArticleMedia article={article} sizes="320px" className="h-full w-full" />
+            </div>
+            <span className="absolute left-3 top-3 z-10 flex items-center gap-2">
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-bg-elevated/85 text-xs font-bold text-accent backdrop-blur">
+                {String(rank).padStart(2, "0")}
+              </span>
               <CategoryPill category={article.category} />
             </span>
-            {kicker && (
-              <span className="mb-1 block text-[10px] font-extrabold tracking-[0.08em] text-accent line-clamp-1 sm:text-[11px]">
-                {kicker.toUpperCase()}
-              </span>
-            )}
-            <span className="block min-h-[2.6em] text-[16px] font-extrabold leading-[1.35] text-white line-clamp-2">
-              {headline}
-            </span>
-          </span>
-        </span>
+            <div className={KACHEL_SCRIM_KLASSE} style={KACHEL_SCRIM_STIL}>
+              {kicker && <p className={KACHEL_KICKER_KLASSE}>{kicker.toUpperCase()}</p>}
+              <h3 className={KACHEL_TITEL_KLASSE}>{headline}</h3>
+            </div>
+          </div>
+        </div>
       </Link>
     </article>
   );
