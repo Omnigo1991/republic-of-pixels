@@ -16,18 +16,20 @@ function InstagramIcon({ className }: { className?: string }) {
 
 export function Footer() {
   return (
-    <footer className="relative mt-16 overflow-hidden">
+    <footer className="relative overflow-hidden">
       <div className="relative mx-auto max-w-content px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
         {/* Wasserzeichen: gross, gedreht, rechts angeschnitten */}
         <InstagramIcon className="pointer-events-none absolute -right-16 top-1/2 h-[340px] w-[340px] -translate-y-1/2 rotate-[8deg] text-[#0B0616] opacity-[0.14] sm:-right-8" />
         <div className="relative">
-          <p className="mb-2.5 text-[12px] font-extrabold tracking-[0.14em] text-[#0B0616]/90">
-            DIE REPUBLIC AUF INSTAGRAM
+          {/* Exakt die Schrift des Newsletterblocks (Tim, 22.08.2026):
+              gleiche Kopfzeile, gleiche h2-Stufen, gleicher Untertext. */}
+          <p className="text-[12px] font-extrabold uppercase tracking-[0.16em] text-navy/85">
+            Die Republic auf Instagram
           </p>
-          <p className="mb-3 max-w-[16ch] text-[34px] font-black leading-[1.05] tracking-[-0.02em] text-[#0B0616] sm:text-[42px]">
+          <h2 className="mt-[10px] max-w-[16ch] text-[30px] font-black leading-[1.08] tracking-[-0.02em] text-navy sm:text-[44px]">
             Kein Post. Kein Reel. Verpasst.
-          </p>
-          <p className="mb-7 max-w-[44ch] text-[15px] leading-relaxed text-[#0B0616]/85 sm:text-[16px]">
+          </h2>
+          <p className="mt-[18px] mb-7 max-w-[46ch] text-[16px] leading-[1.55] text-navy/85 sm:text-[17px]">
             Breaking-Karten, Reels und die besten Bilder - täglich im Feed.
           </p>
           <a
