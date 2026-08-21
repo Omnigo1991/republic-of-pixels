@@ -42,12 +42,19 @@ export function ReleaseRadar() {
               {/* Navy-Umbau: Die Karte ist jetzt Cyan, also kehrt sich das
                   Datumskaestchen um - Navy-Flaeche mit Cyan-Schrift.
                   Vorher stand Cyan auf Cyan und der Monat verschwand. */}
+              {/* EXAKT mittig (Tim, 21.08.2026): beide Zeilen ohne
+                  Zeilen-Luft (leading-none), die Sperrung der Monatszeile
+                  wird rechts abgeschnitten erzeugt sonst einen sichtbaren
+                  Linksdrall - deshalb gleicht pl den Nachlauf des letzten
+                  Buchstabens aus. Monatspunkt ("Aug.") entfaellt. */}
               <div className="flex h-14 w-14 shrink-0 flex-col items-center justify-center rounded-full bg-navy">
                 <span className="text-lg font-bold leading-none text-accent">
                   {r.date.slice(8, 10)}
                 </span>
-                <span className="mt-0.5 text-[10px] font-semibold uppercase tracking-wide text-accent/80">
-                  {new Date(r.date + "T12:00:00").toLocaleDateString("de-DE", { month: "short" })}
+                <span className="mt-1 pl-[0.05em] text-[10px] font-semibold uppercase leading-none tracking-[0.05em] text-accent/80">
+                  {new Date(r.date + "T12:00:00")
+                    .toLocaleDateString("de-DE", { month: "short" })
+                    .replace(".", "")}
                 </span>
               </div>
               <div className="min-w-0">
