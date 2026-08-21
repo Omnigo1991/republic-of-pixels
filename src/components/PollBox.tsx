@@ -70,10 +70,10 @@ export function PollBox({ articleSlug, poll }: { articleSlug: string; poll: Poll
   const abgestimmt = eigene !== null;
 
   return (
-    {/* Gleiche Kartenhuelle wie Kurzfassung, Hype-Meter und Quellen
-        (Tim, 21.08.2026): Das flache Navy ohne Rand war der letzte
-        Sonderling im Artikel-Bauplan - randlos zwischen zwei gerahmten
-        Karten wirkte es wie ein Loch im Raster. */}
+    // Gleiche Kartenhuelle wie Kurzfassung, Hype-Meter und Quellen
+    // (Tim, 21.08.2026): Das flache Navy ohne Rand war der letzte
+    // Sonderling im Artikel-Bauplan - randlos zwischen zwei gerahmten
+    // Karten wirkte es wie ein Loch im Raster.
     <div className="my-8 rounded-2xl border border-border-default bg-surface-card p-6">
       <p className="text-[13px] font-semibold tracking-wide text-accent">COMMUNITY-UMFRAGE</p>
       <p className="mt-2 font-semibold text-white">{poll.question}</p>
