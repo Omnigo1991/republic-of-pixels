@@ -1,0 +1,150 @@
+{
+  "slug": "duskbloods-netzwerktest-serverprobleme-abbruch-2026",
+  "title": "Duskbloods-Netzwerktest endet nach zwei Stunden - ohne einen einzigen Login",
+  "subtitle": "FromSoftware bricht die erste Session des Switch-2-Exklusivtests ab und lässt offen, wie es mit den weiteren Terminen weitergeht",
+  "excerpt": "Der erste Closed Network Test zu The Duskbloods sollte um 11 Uhr BST starten - stattdessen hingen alle Teilnehmenden im Hauptmenü fest. Nach rund zwei Stunden zog FromSoftware den Stecker. Was das für die nächsten Sessions heisst, bleibt unklar.",
+  "seoTitle": "The Duskbloods: Netzwerktest nach Serverproblemen beendet",
+  "metaDescription": "FromSoftware bricht die erste Testsession von The Duskbloods ab: Niemand kam auf die Server. Was jetzt mit den weiteren Terminen am Wochenende passiert.",
+  "category": "news",
+  "platforms": [
+    "nintendo"
+  ],
+  "tags": [
+    "The Duskbloods",
+    "FromSoftware",
+    "Nintendo Switch 2",
+    "Netzwerktest",
+    "Server"
+  ],
+  "tldr": [
+    "Die erste Session des Closed Network Tests zu The Duskbloods scheiterte komplett - laut Berichten kam niemand über den Login hinaus.",
+    "Nach rund zwei Stunden mit Fehlermeldungen erklärte FromSoftware die Session per Statement für beendet und entschuldigte sich.",
+    "Ob die für denselben Abend und das Wochenende geplanten Sessions stattfinden, liess das Studio offen.",
+    "Beim Netzwerktest zu Elden Ring Nightreign gab es ein ähnliches Server-Debakel - dort zog FromSoftware eine Zusatzsession in Erwägung."
+  ],
+  "whyItMatters": "The Duskbloods ist FromSoftwares erster Switch-2-Exklusivtitel und setzt vollständig auf Online-Sessions - ohne funktionierende Server gibt es schlicht kein Spiel. Der Fehlstart des Tests zeigt, wie viel Arbeit vor dem für dieses Jahr geplanten Release noch ansteht, und trifft ausgerechnet eine Plattform, deren Online-Infrastruktur ohnehin einen zwiespältigen Ruf hat.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Es war der Termin, auf den viele Switch-2-Besitzer:innen seit Tagen hingefiebert hatten - und er endete, bevor er richtig begonnen hatte: FromSoftware hat die erste Session des Closed Network Tests zu The Duskbloods vorzeitig abgebrochen. Der Test sollte um 11 Uhr britischer Zeit starten, doch statt in die vampirisch angehauchte PvPvE-Action zu kommen, hingen die Teilnehmenden im Hauptmenü fest. Immer wieder erschien dieselbe Meldung: Die Anmeldung am Spielserver ist fehlgeschlagen. Nach rund zwei Stunden zog das Studio die Reissleine."
+    },
+    {
+      "type": "embed",
+      "platform": "twitter",
+      "url": "https://x.com/fromsoftware_pr/status/2090766523422101948"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "11:00 BST",
+          "label": "geplanter Start der ersten Testsession"
+        },
+        {
+          "value": "~2 Std.",
+          "label": "vergebliche Login-Versuche bis zum Abbruch"
+        },
+        {
+          "value": "0",
+          "label": "Spieler:innen, die laut Berichten in die Session kamen"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Login-Schleife statt Blutrausch"
+    },
+    {
+      "type": "paragraph",
+      "text": "Das Muster war überall dasselbe: Wer die Verbindung bestätigte, sah einen ein- bis zweiminütigen Ladebildschirm - und danach erneut die Fehlermeldung. Laut Kotaku kam über mehrere Stunden hinweg niemand in den Test hinein. FromSoftware bestätigte zwischenzeitlich, dass man von dem Problem wisse und daran arbeite. Gelöst wurde es an diesem Vormittag nicht mehr. Kurios: Bevor die Server komplett kapitulierten, hatte das Studio noch recht altmodische Ratschläge für Betroffene ausgegeben - näher an den Router setzen oder gleich per Netzwerkkabel verbinden. Gegen ein flächendeckendes Serverproblem half beides erwartungsgemäss wenig."
+    },
+    {
+      "type": "heading",
+      "text": "Ein Statement, das Fragen offen lässt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Absage kam schliesslich über die Social-Media-Kanäle des Studios. Der Wortlaut ist eindeutig - zumindest was den Vormittag betrifft."
+    },
+    {
+      "type": "quote",
+      "text": "Wir entschuldigen uns aufrichtig für die Unannehmlichkeiten, die allen entstanden sind, die aufgrund der Serverprobleme auf den ersten Netzwerktest zu The Duskbloods gewartet haben. Wir müssen leider mitteilen, dass die heutige Session nun geschlossen ist. Wir arbeiten weiter an der Verbesserung der Server und werden künftige Termine zu einem späteren Zeitpunkt bekannt geben.",
+      "attribution": "FromSoftware, Support-Statement auf X"
+    },
+    {
+      "type": "paragraph",
+      "text": "Genau der letzte Satz sorgt für Verwirrung. Denn im Kalender stehen bereits weitere Sessions - eine noch am selben Abend, dazu mehrere über das Wochenende. Ob diese Termine bestehen bleiben, ob sie verschoben werden oder ob am Ende Zusatzsessions dazukommen, sagt das Statement nicht. Berichte weisen zudem darauf hin, dass die Mitteilung ausschliesslich auf Englisch veröffentlicht wurde, während andere Posts des Studios üblicherweise aus dem Japanischen übersetzt erscheinen - ein Detail, das die Deutung zusätzlich erschwert."
+    },
+    {
+      "type": "heading",
+      "text": "Ein bekanntes Muster aus Limveld"
+    },
+    {
+      "type": "paragraph",
+      "text": "Neu ist die Situation für FromSoftware nicht. Auch der Netzwerktest zu Elden Ring Nightreign startete seinerzeit mit massiven Serverproblemen; damals stellte das Studio laut einem IGN-Bericht eine zusätzliche Session in Aussicht. Nightreign läuft heute stabil, hatte aber ebenfalls eine holprige Phase hinter sich. The Duskbloods stellt allerdings eine grössere Hürde dar: Es ist FromSoftwares bislang ambitioniertestes Online-Konzept und erscheint exklusiv für Switch 2 - eine Plattform, deren Online-Bilanz zwischen exzellent (Splatoon) und ernüchternd schwankt."
+    },
+    {
+      "type": "heading",
+      "text": "Was Teilnehmende jetzt wissen sollten"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Die erste Session ist offiziell beendet - erneutes Warten am Login-Screen bringt nichts.",
+        "Der Client bleibt heruntergeladen und installiert; für kommende Sessions ist kein neuer Download nötig.",
+        "Weitere Termine standen für denselben Abend und das Wochenende im Plan, sind aber nicht bestätigt.",
+        "Neue Zeitfenster will FromSoftware zu einem späteren Zeitpunkt ankündigen - die offiziellen Kanäle sind derzeit die einzige verlässliche Informationsquelle."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ein Netzwerktest, der die Grenzen des Netzwerks findet, hat seinen Zweck streng genommen erfüllt - dieser Trost zirkuliert derzeit in den Kommentarspalten, und er ist nicht ganz falsch. Ein Totalausfall am Launchtag wäre ungleich teurer als ein verpatzter Testvormittag. Bitter bleibt es trotzdem für alle, die früh aufgestanden sind oder nur ein einziges Zeitfenster einplanen konnten. Entscheidend ist nun, wie schnell FromSoftware nachliefert: Bleiben die restlichen Sessions stabil, war das hier eine Fussnote. Wiederholt sich das Bild, wird aus dem Fehlstart eine ernsthafte Frage an einen Titel, der ohne funktionierende Server schlicht nicht existiert. Ein Release ist weiterhin für dieses Jahr vorgesehen."
+    }
+  ],
+  "poll": {
+    "question": "Fehlstart beim Duskbloods-Test - wie ordnet ihr das ein?",
+    "options": [
+      "Genau dafür gibt es Tests, kein Drama",
+      "Peinlich, aber reparierbar bis zum Release",
+      "Warnsignal für die Online-Server am Launchtag",
+      "FromSoftware schuldet allen eine Zusatzsession"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-21T13:04:16.550Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "particles",
+  "sources": [
+    {
+      "title": "The Duskbloods Network Test Session Closed After Disastrous Server Issues",
+      "url": "https://www.nintendolife.com/news/2026/08/the-duskbloods-network-test-session-closed-after-disastrous-server-issues",
+      "publisher": "Nintendo Life"
+    },
+    {
+      "title": "FromSoftware Gives Up On Today s The Duskbloods Network Test After Two Hours Of Failed Logins",
+      "url": "https://kotaku.com/fromsoftware-gives-up-duskbloods-network-test-2000726612",
+      "publisher": "Kotaku"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/duskbloods-netzwerktest-serverprobleme-abbruch-2026.webp",
+    "alt": "Duskbloods-Netzwerktest endet nach zwei Stunden - ohne einen einzigen Login",
+    "credit": "Bild: Nintendo Life",
+    "sourceUrl": "https://www.nintendolife.com/news/2026/08/the-duskbloods-network-test-session-closed-after-disastrous-server-issues",
+    "sourceWidth": 1920,
+    "sourceHeight": 1080
+  },
+  "relatedSlugs": [
+    "fromsoftware-miyazaki-singleplayer-duskbloods-2026",
+    "the-duskbloods-miyazaki-hands-on-tokio-2026",
+    "the-duskbloods-network-test-teilnahme-pruefen-2026"
+  ]
+}

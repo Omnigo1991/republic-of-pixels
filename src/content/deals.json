@@ -1,6 +1,17 @@
 {
-  "updatedAt": "2026-08-21T09:59:24.102Z",
+  "updatedAt": "2026-08-21T13:04:20.343Z",
   "deals": [
+    {
+      "appId": 1771300,
+      "title": "Kingdom Come: Deliverance II",
+      "discountPercent": 60,
+      "originalPrice": 5999,
+      "finalPrice": 2399,
+      "currency": "EUR",
+      "endsAt": "2026-08-24T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1771300/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1771300/93e28946c46f09d761bbfab1e17e8c1c4a8323a0/capsule_184x69.jpg?t=1777975568"
+    },
     {
       "appId": 4001890,
       "title": "How to Fish",
@@ -24,17 +35,6 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2764460/f0a29d6c91be4e91e9fa2f384dd5ae695bfd6b5b/capsule_184x69.jpg?t=1787306087"
     },
     {
-      "appId": 2163330,
-      "title": "Yet Another Zombie Survivors",
-      "discountPercent": 35,
-      "originalPrice": 1479,
-      "finalPrice": 961,
-      "currency": "EUR",
-      "endsAt": "2026-09-03T17:00:08.000Z",
-      "url": "https://store.steampowered.com/app/2163330/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2163330/765e6898cbb4faffa34991912775d813be58cc56/capsule_184x69.jpg?t=1787234279"
-    },
-    {
       "appId": 2358720,
       "title": "Black Myth: Wukong",
       "discountPercent": 30,
@@ -54,7 +54,7 @@
       "currency": "EUR",
       "endsAt": "2026-08-31T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/1643320/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1643320/87ade1fa0e9869388368228258d758e040a3f651/capsule_184x69_alt_assets_7_german.jpg?t=1787263142"
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1643320/87ade1fa0e9869388368228258d758e040a3f651/capsule_184x69_alt_assets_7_german.jpg?t=1787314871"
     },
     {
       "appId": 3065940,
@@ -65,7 +65,7 @@
       "currency": "EUR",
       "endsAt": "2026-09-03T17:00:12.000Z",
       "url": "https://store.steampowered.com/app/3065940/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3065940/8b129934c39739bc486f62fbd72d9356d230d6bb/capsule_184x69_alt_assets_0.jpg?t=1787263077"
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3065940/8b129934c39739bc486f62fbd72d9356d230d6bb/capsule_184x69_alt_assets_0.jpg?t=1787315713"
     }
   ]
 }
