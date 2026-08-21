@@ -1,0 +1,169 @@
+{
+  "slug": "gta-6-leaks-take-two-subpoenas-microsoft-discord-2026",
+  "title": "Take-Two jagt «Cyberleek» - und verlangt IP-Logs von Discord",
+  "subtitle": "Der GTA-6-Publisher fordert per Gerichtsbeschluss Kontodaten, Gerätekennungen und OneDrive-Inhalte an, während der Leaker weiter Videos veröffentlicht",
+  "excerpt": "Sechs geleakte GTA-6-Videos in vier Tagen - jetzt zieht Take-Two vor ein US-Bundesgericht und verlangt von Microsoft und Discord alles, was zur Identität von «Cyberleek» führen könnte.",
+  "seoTitle": "GTA 6 Leaks: Take-Two subpoeniert Microsoft und Discord",
+  "metaDescription": "Take-Two fordert per DMCA-Subpoena Kontodaten von Microsoft und Discord, um den GTA-6-Leaker «Cyberleek» zu identifizieren. Frist: 4. September.",
+  "category": "news",
+  "platforms": [
+    "pc",
+    "playstation",
+    "xbox"
+  ],
+  "tags": [
+    "GTA 6",
+    "Take-Two",
+    "Rockstar Games",
+    "Discord",
+    "Microsoft",
+    "Leaks"
+  ],
+  "tldr": [
+    "Take-Two hat am 20. August am US-Bundesgericht für den Southern District of New York mehrere DMCA-Subpoenas eingereicht.",
+    "Microsoft und Discord sollen Kontodaten, IP- und Login-Logs, Gerätekennungen sowie GTA-bezogene OneDrive-Inhalte zur Persona «Cyberleek» herausgeben.",
+    "Die Frist für die Herausgabe läuft laut Polygon bis zum 4. September, 10 Uhr EDT.",
+    "Trotz Löschwelle erschien am 21. August das sechste mutmassliche Gameplay-Video - eine Woche vor der offiziellen Netflix-Präsentation."
+  ],
+  "whyItMatters": "Der Fall zeigt, wie weit ein Publisher gehen kann, wenn Material vor dem Release durchsickert: Take-Two verlangt Daten nicht nur zum mutmasslichen Leaker, sondern zu allen Mitgliedern bestimmter Discord-Server. Für alle, die in solchen Communities unterwegs sind, ist das ein handfestes Datenschutzthema - und für GTA-Fans entscheidet der Ausgang mit darüber, wie viel vom Spiel vor dem 19. November noch ungespoilert bleibt.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Take-Two Interactive hat im Kampf gegen die anhaltende GTA-6-Leakwelle den Rechtsweg eingeschlagen. Der Rockstar-Mutterkonzern reichte am 20. August beim US-Bundesgericht für den Southern District of New York mehrere Subpoenas nach dem Digital Millennium Copyright Act (DMCA) ein. Adressaten sind Microsoft und Discord - beide sollen Daten herausgeben, die zur Identität der Person oder Gruppe hinter der Persona «Cyberleek» führen. Zuerst berichtete Kotaku über die Gerichtsdokumente."
+    },
+    {
+      "type": "embed",
+      "platform": "twitter",
+      "url": "https://x.com/DarkViperAU/status/2090807149186470231"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "6",
+          "label": "mutmassliche GTA-6-Gameplay-Videos in einer Woche"
+        },
+        {
+          "value": "4. Sept.",
+          "label": "Frist für Microsoft und Discord zur Datenherausgabe"
+        },
+        {
+          "value": "19. Nov.",
+          "label": "geplanter Release von GTA 6 für PS5 und Xbox Series X"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Was Take-Two konkret verlangt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Umfang der Anfrage ist bemerkenswert. Von Discord fordert Take-Two laut Polygon sämtliche identifizierenden Angaben zu allen Nutzerkonten, die zwischen dem 1. Juni 2025 und heute Mitglied bestimmter Server und Kanäle waren. Für jedes dieser Konten soll die Plattform Server-Metadaten und Telemetrie, ursprüngliche Nachrichtenprotokolle, IP-Zugriffslogs, E-Mail-Adressen, Telefonnummern, verknüpfte Konten, Registrierungszeitpunkte sowie Geräte-Identifikatoren wie MachineGuid oder MSA liefern."
+    },
+    {
+      "type": "paragraph",
+      "text": "Bei Microsoft - dem Eigentümer von GitHub und Xbox - zielt Take-Two zusätzlich auf die interne Ermittlungsarbeit des Konzerns. Verlangt werden alle internen Geschäfts- und Untersuchungsunterlagen zur Persona «Cyberleek», die zur Identifikation der dahinterstehenden Person oder Personen ausreichen. Dazu kommen Konto-IDs, Registrierungs-E-Mails, Registrierungs- und Last-Login-IP-Adressen, Telefonnummern, verknüpfte Google- oder Xbox-Konten sowie sämtliche Inhalte mit Bezug zu GTA, Rockstar oder Cyberleek aus den jeweiligen OneDrive-Konten. Beide Unternehmen sollen die Unterlagen bis zum 4. September, 10 Uhr EDT, vorlegen."
+    },
+    {
+      "type": "paragraph",
+      "text": "Take-Two glaubt laut den Dokumenten, mehrere Discord-Handles der Person identifiziert zu haben, darunter CYBERLEEK und CINEMATICROCKSTAR, sowie Server wie Ødyssey.gg. In der Eingabe heisst es zur Begründung:"
+    },
+    {
+      "type": "quote",
+      "text": "Das urheberrechtlich geschützte Material umfasst unter anderem audiovisuelle Inhalte, Artworks, Bilder, Dialoge oder andere kreative Elemente. Take-Two hat über seinen Rechtsbeistand eine eidesstattliche Erklärung eingereicht, die bestätigt, dass die DMCA-Subpoena dem Zweck dient, die Identität eines mutmasslichen Rechtsverletzers oder mehrerer Rechtsverletzer zu ermitteln, und dass diese Informationen ausschliesslich zum Schutz der Rechte von Take-Two verwendet werden.",
+      "attribution": "Auszug aus der Gerichtseingabe von Take-Two"
+    },
+    {
+      "type": "heading",
+      "text": "Ein Creator gerät unfreiwillig ins Visier"
+    },
+    {
+      "type": "paragraph",
+      "text": "Für Aufsehen sorgte, dass in der Eingabe auch der Server «discord.gg/darkviperau» auftaucht, beschrieben als Editoren-Server von DarkViperAU. Hinter dem Namen steht der australische GTA-Content-Creator Matthew «Matt» Judge, der auf YouTube 2,27 Millionen Abonnentinnen und Abonnenten hat und in dieser Woche detaillierte Analysen der geleakten Videos veröffentlichte. Judge wies jede Verbindung öffentlich zurück."
+    },
+    {
+      "type": "quote",
+      "text": "Ich weiss nichts. Das ist nicht der Discord meiner Editoren. In keinem meiner Discords gibt es überhaupt Clips der Leaks. Ich bin verwirrt. Ich habe mehrfach gesagt, dass er nicht fahren kann - vielleicht habe ich ihn dazu gebracht, «Cyberleek kann nicht fahren» auf die neuesten Clips zu schreiben? Vielleicht war er in meinem Discord, ich weiss es nicht. Rockstar hat mir nicht geschrieben; ich vermute, das würden sie tun, wenn sie glaubten, dass ich persönlich etwas weiss. Alle reden über diese Leaks, ich bin nichts Besonderes, hoffentlich.",
+      "attribution": "Matthew «DarkViperAU» Judge auf X"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Fall illustriert das Grundproblem der Aktion: Take-Two fragt nicht nur nach einem Konto, sondern nach ganzen Mitgliederlisten. Wer in einem der genannten Server war, ohne je einen Leak angefasst zu haben, könnte trotzdem in der Datenanfrage landen."
+    },
+    {
+      "type": "heading",
+      "text": "Die Leaks laufen trotzdem weiter"
+    },
+    {
+      "type": "paragraph",
+      "text": "Parallel zur juristischen Offensive hat Take-Two die ganze Woche über Löschanträge verschickt. Konten und Videos verschwanden von mehreren Plattformen - gestoppt hat das den Leaker nicht. Am 21. August erschien der vierte Tag in Folge neues Material: ein Clip mit Supersportwagen-Gameplay, das sechste mutmassliche GTA-6-Video innerhalb einer Woche. Gezeigt wurden bislang unter anderem Szenen mit Protagonist Jason, Kämpfe und sogar Basketball."
+    },
+    {
+      "type": "paragraph",
+      "text": "Auffällig ist die Monetarisierungsspur: Die Videos werben für einen Memecoin. Ein GTA-Fan verfolgte diese Spur zu einer auf den Seychellen ansässigen Kryptobörse - ein möglicher Ansatzpunkt, um den Leaker zu identifizieren. Das Wasserzeichen des jüngsten Clips liest sich entsprechend: «HIGHER MARKET CAP = MORE LEEKS». Als Motiv nennen die Leaker eine Reihe von Beschwerden gegenüber Rockstar, unter anderem die rein digitale Veröffentlichung von GTA 6."
+    },
+    {
+      "type": "heading",
+      "text": "Timing kurz vor dem grossen Auftritt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Zeitpunkt könnte für Rockstar kaum unglücklicher sein. Am 27. August erscheint «Grand Theft Auto 6: An Extended Look», eine ausführliche offizielle Präsentation, die zunächst sechs Stunden lang exklusiv auf Netflix läuft, bevor sie auf Plattformen wie YouTube wandert. Statt eines kontrollierten Enthüllungsmoments dominieren nun unautorisierte Handyaufnahmen aus einem älteren Build die Diskussion."
+    },
+    {
+      "type": "paragraph",
+      "text": "Weder Rockstar noch Take-Two haben sich öffentlich zu den Leaks geäussert. Anfragen von IGN an beide Unternehmen blieben zum Zeitpunkt der Berichterstattung unbeantwortet. GTA 6 soll am 19. November für PlayStation 5 und Xbox Series X erscheinen."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "DMCA-Subpoenas sind ein vergleichsweise schnelles Instrument: Sie brauchen keine laufende Klage, sondern nur die eidesstattliche Versicherung, dass die Daten der Identifikation eines Rechtsverletzers dienen. Genau das macht sie für Plattformen heikel, denn die Anfrage reicht hier deutlich über eine einzelne Person hinaus. Ob Microsoft und Discord in vollem Umfang liefern, sich auf Datenschutzgründe berufen oder den Umfang gerichtlich beschränken lassen, dürfte sich bis Anfang September zeigen. Und selbst wenn die Herausgabe klappt: Solange neue Clips im Tagesrhythmus auftauchen, gewinnt Take-Two den juristischen Kampf schneller als den um die Deutungshoheit."
+    }
+  ],
+  "poll": {
+    "question": "Take-Two fordert Daten zu ALLEN Mitgliedern bestimmter Discord-Server - berechtigt oder überzogen?",
+    "options": [
+      "Berechtigt - bei Leaks dieser Grössenordnung muss man hart durchgreifen",
+      "Überzogen - Unbeteiligte dürfen nicht mit abgefischt werden",
+      "Egal, wer entscheidet, Plattformen sollten so etwas nie herausgeben",
+      "Ich will vor allem, dass die Leaks aufhören"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-21T15:55:26.840Z",
+  "readingTimeMinutes": 4,
+  "heroVariant": "particles",
+  "sources": [
+    {
+      "title": "Take-Two Seeks Information From Microsoft and Discord in Hunt for GTA 6 Leaker, Files Multiple Subpoenas in Federal Court",
+      "url": "https://www.ign.com/articles/take-two-seeks-information-from-microsoft-and-discord-in-hunt-for-gta-6-leaker-files-multiple-subpoenas-in-federal-court",
+      "publisher": "IGN"
+    },
+    {
+      "title": "GTA 6 Leaks: Take-Two Goes After Microsoft, Discord in New Legal Action",
+      "url": "https://www.polygon.com/gta-6-leaks-microsoft-discord-subpoenas-rockstar-games/",
+      "publisher": "Polygon"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/gta-6-leaks-take-two-subpoenas-microsoft-discord-2026.webp",
+    "alt": "Take-Two jagt «Cyberleek» - und verlangt IP-Logs von Discord",
+    "credit": "Bild: IGN",
+    "sourceUrl": "https://www.ign.com/articles/take-two-seeks-information-from-microsoft-and-discord-in-hunt-for-gta-6-leaker-files-multiple-subpoenas-in-federal-court",
+    "sourceWidth": 4434,
+    "sourceHeight": 2493
+  },
+  "relatedSlugs": [
+    "gta-6-leak-cyberleek-spielbarer-build-2026",
+    "gta-6-leak-dmca-cyberleek-stop-killing-games-2026",
+    "rockstar-34-gta-6-kein-boykott-solidaritaets-shirts-2026"
+  ]
+}
