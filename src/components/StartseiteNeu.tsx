@@ -188,19 +188,23 @@ export function NewsletterBlock({ artikelBilder }: { artikelBilder: Article[] })
             </button>
           </div>
         </div>
-        {/* Polygon-Collage (Tim, 21.08.2026): festes Bild statt der zwei
-            rotierenden Sticker - Master Chief, LEGO-Mario, GTA-6-Figur und
-            Bond-Lucia, freigestellt aus unseren eigenen Pressebildern mit
-            weisser Sticker-Kontur (public/brand/newsletter-collage.webp).
-            Ragt bewusst leicht ueber die Panelkante, der Beschnitt kommt
-            vom overflow-hidden des Blocks. */}
-        <div className="relative hidden h-[300px] lg:flex items-center justify-end" aria-hidden="true">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/brand/newsletter-collage.webp"
-            alt=""
-            className="pointer-events-none -mr-8 -mt-10 h-[420px] w-auto max-w-none drop-shadow-[0_22px_40px_rgba(11,6,22,0.35)]"
-          />
+        {/* Zwei Sticker mit Pixel-Treppen-Rahmen (Fassung vor der
+            Polygon-Collage - Tim, 16.08.2026). */}
+        <div className="relative hidden h-[300px] lg:block" aria-hidden="true">
+          {artikelBilder[0] && (
+            <div className="treppe-tr absolute left-0 top-0 h-[250px] w-[250px] -rotate-[5deg]">
+              <div className="treppe-innen h-full w-full [&_img]:h-full [&_img]:w-full [&_img]:object-cover">
+                <ArticleMedia article={artikelBilder[0]} sizes="500px" className="h-full w-full" />
+              </div>
+            </div>
+          )}
+          {artikelBilder[1] && (
+            <div className="treppe-tl absolute bottom-0 right-0 h-[250px] w-[250px] rotate-[4deg]">
+              <div className="treppe-innen h-full w-full [&_img]:h-full [&_img]:w-full [&_img]:object-cover">
+                <ArticleMedia article={artikelBilder[1]} sizes="500px" className="h-full w-full" />
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
