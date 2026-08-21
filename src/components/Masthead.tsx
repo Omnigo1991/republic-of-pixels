@@ -31,14 +31,17 @@ export function Masthead({
             {/* Schriftzug IMMER voll und einzeilig (Tim, 16.08.2026) -
                 auf schmalen Geraeten faellt er kleiner aus, statt zu
                 kuerzen oder umzubrechen. */}
-            {/* Zweizeiler 3b (Tim-Freigabe 22.08.2026): kompakter
-                Markenblock mit Gewicht - "OF PIXELS" bekommt die eigene
-                Cyan-Zeile statt im Fliesstext unterzugehen. */}
+            {/* Lockup S3+Z3 (Tim-Freigabe 22.08.2026): REPUBLIC gross und
+                mit Druckversatz (Cyan/Magenta, wie die Schlagzeilen der
+                Seite), darunter OF PIXELS klein und gesperrt in Cyan -
+                das Prinzip grosser Zeitungsmarken. Der Versatz liegt in
+                globals.css (.kopfband .versatz), weil das Kopfband sonst
+                jeden Schatten unterdrueckt. */}
             <span className="translate-y-[1px]">
-              <span className="block text-[13px] font-black leading-[1.05] tracking-[0.035em] sm:text-[15px] lg:text-[19px]">
+              <span className="versatz block text-[16px] font-black leading-[1.05] tracking-[0.01em] sm:text-[18px] lg:text-[23px]">
                 REPUBLIC
               </span>
-              <span className="block text-[13px] font-black leading-[1.05] tracking-[0.035em] text-accent sm:text-[15px] lg:text-[19px]">
+              <span className="mt-[2px] block text-[7.5px] font-black leading-[1.05] tracking-[0.33em] text-accent sm:text-[8.5px] lg:text-[10.5px] lg:tracking-[0.36em]">
                 OF PIXELS
               </span>
             </span>

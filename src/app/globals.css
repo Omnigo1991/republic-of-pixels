@@ -70,15 +70,38 @@ h3 {
   /* Auf Navy tragen Zwischenüberschriften wieder Weiss. */
   color: #F1F0F2;
 }
+/* Pull-Quote "Riesen-Anfuehrung" (Tim-Wahl 21.08.2026, P5 aus der
+   Screenshot-Runde): Das deutsche Anfuehrungszeichen wird zum
+   Architekturelement - riesig, im Markenverlauf, links neben dem
+   Zitat. Die Anfuehrungszeichen IM Text entfallen dafuer
+   (ArticleBody.tsx rendert sie nicht mehr). */
 .prose-rop blockquote:where(:not(.not-prose, .not-prose *)) {
-  margin: 2em 0;
-  padding: 0.25rem 0 0.25rem 1.25rem;
-  border-left: 6px solid #02f0d1;
-  color: #F1F0F2;
+  margin: 2.4em 0;
+  position: relative;
+  padding: 0 0 0 124px;
+  border-left: 0;
+  color: #F2F8FF;
   font-style: normal;
-  font-weight: 700;
-  font-size: 1.375rem;
-  line-height: 1.4;
+  font-weight: 900;
+  font-size: 1.625rem;
+  line-height: 1.42;
+  letter-spacing: -0.3px;
+}
+.prose-rop blockquote:where(:not(.not-prose, .not-prose *))::before {
+  /* Ein tiefgestelltes „ - seine Tinte sitzt am unteren Rand des
+     Schriftkegels, deshalb der stark negative top-Wert. */
+  content: "\201E";
+  position: absolute;
+  left: -8px;
+  top: -58px;
+  font-size: 150px;
+  font-weight: 900;
+  line-height: 1;
+  background: linear-gradient(150deg, #02F0D1, #FF2E97);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  pointer-events: none;
 }
 .prose-rop ul:where(:not(.not-prose, .not-prose *)) {
   margin: 1.25em 0;
@@ -105,7 +128,13 @@ h3 {
     font-size: 1.0625rem;
   }
   .prose-rop blockquote:where(:not(.not-prose, .not-prose *)) {
-    font-size: 1.15rem;
+    font-size: 1.25rem;
+    padding-left: 64px;
+  }
+  .prose-rop blockquote:where(:not(.not-prose, .not-prose *))::before {
+    font-size: 88px;
+    left: -4px;
+    top: -30px;
   }
 }
 
@@ -449,6 +478,13 @@ body > footer a { text-shadow: none; }
 /* Kein Leuchten im Kopf: sonst schimmert "OF PIXELS" staerker als
    "REPUBLIC" und die beiden Haelften wirken wie zwei Schriften. */
 .kopfband, .kopfband * { text-shadow: none !important; }
+/* Ausnahme Druckversatz (Tim-Freigabe 22.08.2026, Lockup S3+Z3):
+   REPUBLIC traegt den Cyan/Magenta-Versatz der Schlagzeilen. Muss
+   NACH der Ausschaltzeile stehen und !important tragen, sonst
+   gewinnt "text-shadow: none". */
+.kopfband .versatz {
+  text-shadow: 1.5px 0 0 rgba(255, 46, 151, 0.6), -1.5px 0 0 rgba(2, 240, 209, 0.6) !important;
+}
 .kopfband a:hover, .kopfband button:hover { opacity: 0.72; }
 /* Plattform-Chips und Suchknopf: heller Schleier statt dunkler Block -
    dieselbe Fassung wie das Suchfeld im Menue (Tim, 19.08.2026). */
