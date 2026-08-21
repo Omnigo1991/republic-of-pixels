@@ -155,7 +155,7 @@ export function ProfilAnsicht({ nickname }: { nickname: string }) {
               <span className={`inline-flex items-center justify-center gap-1.5 rounded-full border px-3.5 py-[5px] text-[11px] leading-none ${rang.klasse}`}>
                 {istMaster ? (
                   // eslint-disable-next-line @next/next/no-img-element
-                  <img src="/brand/r-avatar-navy.png" alt="" className="h-3.5 w-3.5" />
+                  <img src="/brand/r-avatar.png" alt="" className="h-3.5 w-3.5" />
                 ) : (
                   <RankIcon iconKey={rang.icon} className="h-3.5 w-3.5" />
                 )}

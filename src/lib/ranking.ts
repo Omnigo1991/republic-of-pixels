@@ -48,7 +48,10 @@ export const RAENGE: Rang[] = [
     name: "Ratsmitglied",
     ab: 75,
     icon: "shield",
-    klasse: "border-accent text-[#0F0D2C] bg-accent font-bold",
+    // Feste Hexfarbe statt bg-accent: bg-accent ist seitweit ein
+    // Magenta-Cyan-Verlauf geworden - der Badge fiel damit aus der
+    // Familie (Tim, 21.08.2026).
+    klasse: "border-transparent text-[#0B0616] bg-[#02F0D1] font-bold",
     beschreibung: "Prägt die Diskussionen sichtbar mit.",
   },
   {
@@ -72,7 +75,10 @@ export const MASTER_RANG: Rang = {
   name: "REDAKTION",
   ab: 0,
   icon: "crown",
-  klasse: "border-accent bg-accent text-[#0F0D2C] font-black tracking-wide",
+  // Dunkle Pille mit Cyan-Schrift - dieselbe Sprache wie Anmelden im
+  // Kopfband. Vorher bg-accent, das inzwischen ein Verlauf ist - der
+  // REDAKTION-Badge sah dadurch anders aus als alle anderen.
+  klasse: "border-accent/60 bg-[#0B0616] text-accent font-black tracking-wide",
   beschreibung: "Offizieller Account der Redaktion von Republic of Pixels.",
 };
 

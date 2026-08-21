@@ -1,3 +1,7 @@
+"use client";
+
+import { useLayoutEffect, useRef, useState } from "react";
+
 // Sektionstitel als SVG-Schriftzug (Tim, 17.08.2026): fett, versal, ueber
 // die Spaltenbreite gezogen, letztes Wort in Cyan.
 //
@@ -26,6 +30,9 @@ export function SektionsBanner({
   id?: string;
   className?: string;
 }) {
+  const textRef = useRef<SVGTextElement>(null);
+  const [gemessen, setGemessen] = useState<number | null>(null);
+
   const links = titel.toUpperCase();
   const rechts = cyan.toUpperCase();
   // Kein Leerzeichen, wenn der erste Teil auf einem Bindestrich endet
@@ -33,10 +40,30 @@ export function SektionsBanner({
   const trenner = links.endsWith("-") ? "" : " ";
   const zeichen = links.length + trenner.length + rechts.length;
 
-  // 72 = gemessene Durchschnittsbreite eines Zeichens bei font-size 100
-  // in Inter Black. Der Faktor 1.12 erlaubt hoechstens 12 % Dehnung -
-  // darueber wirkt die Schrift verzogen statt gesetzt.
-  const breite = Math.min(1536, Math.round(zeichen * 72 * 1.12));
+  // ERST SCHAETZEN, DANN MESSEN (Tim, 21.08.2026, Edge-Fehler): Vorher
+  // wurde der Text per textLength auf eine GESCHAETZTE Breite gezwungen
+  // (72 px pro Zeichen). Laedt der Browser eine andere Schrift - Edge
+  // mit erzwungenen Schriftarten, Schrift noch nicht geladen -, wird
+  // der Text auf die falsche Breite auseinandergezogen oder gestaucht,
+  // und die Banner sind unterschiedlich gross. Jetzt: Schaetzung nur
+  // fuers erste Bild, danach misst getComputedTextLength() die ECHTE
+  // Breite und der Kasten schmiegt sich an. Kein textLength mehr -
+  // damit gibt es nichts mehr, was ziehen koennte.
+  const schaetzung = Math.min(1536, Math.round(zeichen * 68));
+  const breite = gemessen ?? schaetzung;
+
+  useLayoutEffect(() => {
+    const t = textRef.current;
+    if (!t) return;
+    const messen = () => {
+      const l = t.getComputedTextLength();
+      if (l > 0) setGemessen((alt) => (alt !== null && Math.abs(alt - l) < 1 ? alt : Math.ceil(l + 2)));
+    };
+    messen();
+    // Nachmessen, sobald die echte Schrift da ist.
+    document.fonts?.ready?.then(messen).catch(() => {});
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [titel, cyan]);
 
   // WICHTIG: Die Schrifthoehe muss konstant sein, nicht die Kastenbreite.
   // Vorher war die Breite auf 660 px begrenzt - ein kurzer Titel wie
@@ -73,7 +100,7 @@ export function SektionsBanner({
         id={id}
         className="block h-auto overflow-visible"
       >
-        <text x="0" y="78" textLength={breite} lengthAdjust="spacingAndGlyphs" {...schriftMerkmale}>
+        <text ref={textRef} x="0" y="78" {...schriftMerkmale}>
           <tspan fill="currentColor">{links}</tspan>
           <tspan fill="#02F0D1">{trenner + rechts}</tspan>
         </text>

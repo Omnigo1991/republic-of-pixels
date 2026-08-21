@@ -221,7 +221,7 @@ export function PixelRaten() {
               return (
                 <span
                   key={i}
-                  className={`flex h-9 w-9 items-center justify-center rounded-2xl border text-sm font-bold ${
+                  className={`flex h-9 w-9 items-center justify-center rounded-full border text-sm font-bold ${
                     erfolg
                       ? "border-accent bg-accent/15 text-accent"
                       : falsch
