@@ -1,17 +1,6 @@
 {
-  "updatedAt": "2026-08-21T07:16:33.396Z",
+  "updatedAt": "2026-08-21T09:59:24.102Z",
   "deals": [
-    {
-      "appId": 1771300,
-      "title": "Kingdom Come: Deliverance II",
-      "discountPercent": 60,
-      "originalPrice": 5999,
-      "finalPrice": 2399,
-      "currency": "EUR",
-      "endsAt": "2026-08-24T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1771300/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1771300/93e28946c46f09d761bbfab1e17e8c1c4a8323a0/capsule_184x69.jpg?t=1777975568"
-    },
     {
       "appId": 4001890,
       "title": "How to Fish",
@@ -32,7 +21,7 @@
       "currency": "EUR",
       "endsAt": "2026-08-27T17:00:09.000Z",
       "url": "https://store.steampowered.com/app/2764460/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2764460/f0a29d6c91be4e91e9fa2f384dd5ae695bfd6b5b/capsule_184x69.jpg?t=1786703049"
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2764460/f0a29d6c91be4e91e9fa2f384dd5ae695bfd6b5b/capsule_184x69.jpg?t=1787306087"
     },
     {
       "appId": 2163330,
@@ -44,6 +33,17 @@
       "endsAt": "2026-09-03T17:00:08.000Z",
       "url": "https://store.steampowered.com/app/2163330/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2163330/765e6898cbb4faffa34991912775d813be58cc56/capsule_184x69.jpg?t=1787234279"
+    },
+    {
+      "appId": 2358720,
+      "title": "Black Myth: Wukong",
+      "discountPercent": 30,
+      "originalPrice": 5999,
+      "finalPrice": 4199,
+      "currency": "EUR",
+      "endsAt": "2026-08-25T16:00:00.000Z",
+      "url": "https://store.steampowered.com/app/2358720/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2358720/b7f722ddd5e23503f598586aa3700dd4d827bb2d/capsule_184x69.jpg?t=1760601605"
     },
     {
       "appId": 1643320,
