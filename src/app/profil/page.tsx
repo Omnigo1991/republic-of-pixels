@@ -19,7 +19,12 @@ export default function ProfilWeiche() {
 
   useEffect(() => {
     let aktiv = true;
-    (async () => {
+    // Nach erfolgreichem Login im Dialog sofort weiterleiten, nicht
+    // auf einen Neuaufruf der Seite warten.
+    const { data: sub } = supabase.auth.onAuthStateChange((ereignis) => {
+      if (ereignis === "SIGNED_IN") pruefen();
+    });
+    async function pruefen() {
       const { data } = await supabase.auth.getSession();
       if (!aktiv) return;
       const user = data.session?.user;
@@ -35,9 +40,11 @@ export default function ProfilWeiche() {
       if (!aktiv) return;
       const nickname = (profil as { nickname?: string } | null)?.nickname;
       router.replace(nickname ? `/profil/${encodeURIComponent(nickname)}` : "/einstellungen");
-    })();
+    }
+    pruefen();
     return () => {
       aktiv = false;
+      sub.subscription.unsubscribe();
     };
   }, [supabase, router]);
 

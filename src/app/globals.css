@@ -142,32 +142,11 @@ h3 {
    Erst lagen zwei Farbschleier darauf (Aufmacher stand auf anderem
    Grund), dann ein Netz - beides ist raus (Tim, 18.08.2026). Der
    Grund ist jetzt ueberall dieselbe Flaeche. */
-/* Bildschirmzeilen (CRT) */
-body::after {
-  content: "";
-  position: fixed;
-  /* KEIN ROEHRENBILD IM KOPFBAND (Tim, 20.08.2026): Die Linien lagen
-     bisher ueber der ganzen Seite, also auch ueber dem Kopfband. Der
-     Schleier beginnt jetzt erst unterhalb des Bandes. Ueber die
-     Stapelebene loesen liesse es sich nicht: Ein hoeherer Wert am
-     Kopfband wuerde es auch ueber das Menue und die Suche legen. */
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: calc(65px + env(safe-area-inset-top, 0px));
-  z-index: 9998;
-  pointer-events: none;
-  background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.26) 0 1px, transparent 1px 3px);
-  mix-blend-mode: multiply;
-  opacity: 0.42;
-}
-@media (prefers-reduced-motion: reduce) {
-  body::after { opacity: 0.25; }
-}
-/* Am Rechner ist das Kopfband hoeher (88 px plus Trennlinie). */
-@media (min-width: 1024px) {
-  body::after { top: 89px; }
-}
+/* Roehrenbild komplett entfernt (Tim, 21.08.2026): Der feststehende
+   Zeilen-Schleier erzeugte beim Scrollen ein sichtbares Flimmern -
+   die Linien standen still, waehrend der Inhalt darunter wanderte.
+   Die Instagram-Vorlagen behalten ihre Roehren-Textur, dort ist das
+   Bild statisch. */
 main, header, footer { position: relative; z-index: 1; }
 
 /* ---------- Schrift: cyberpunk, aber lesbar ----------
@@ -330,7 +309,27 @@ code {
   border-color: rgba(2, 240, 209, 0.28);
 }
 
-/* ---------- Kein Bildauslauf auf Karten mit Text UNTER dem Bild ----------
+/* ---------- Minimale Bildfeder ----------
+   Dritter Abstimmungsstand (Tim, 21.08.2026): ganz ohne Uebergang
+   wirkte die Kante wieder hart, jeder laengere Verlauf frass Motiv.
+   Die Feder ist 16 px - der halbe Zentimeter des Aufmachers - und
+   macht nur die unterste Bildkante weich. NICHT verlaengern. */
+.bildfeder::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 16px;
+  pointer-events: none;
+  background: linear-gradient(0deg,
+    #14122E 0px,
+    rgba(20, 18, 46, 0.7) 5px,
+    rgba(20, 18, 46, 0.32) 10px,
+    rgba(20, 18, 46, 0) 16px);
+}
+
+/* ---------- Kein LANGER Bildauslauf auf Karten mit Text UNTER dem Bild ----------
    Endgueltig entschieden nach vier Anlaeufen (Tim, 20.08.2026): Bei
    "Beliebt bei Lesern" und der Artikelkarte steht der Text unterhalb
    des Bildes - dort endet das Bild wie auf der alten Cyan-Fassung

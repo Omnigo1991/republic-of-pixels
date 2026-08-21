@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
 import { PLATFORM_NAV } from "@/lib/articles";
 import { PlatformIcon } from "./PlatformIcons";
+import { getSupabase } from "@/lib/supabase";
 
 // DER CYAN-VORHANG (Tim, 15.08.2026 abends): Das Menü ist eine
 // Markenbühne - ein voller Cyan-Vorhang, der von rechts hereingleitet
@@ -27,6 +28,20 @@ const RUBRIKEN: { label: string; href: string; puls?: boolean }[] = [
 ];
 
 export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
+
+  // ANGEMELDET-ZUSTAND (Tim, 21.08.2026): Der Knopf zeigte stur
+  // "Anmelden", auch nach erfolgreichem Login - am Handy gibt es keine
+  // andere Stelle, die den Zustand anzeigt. Jetzt hoert das Menue auf
+  // die Sitzung und beschriftet den Knopf entsprechend.
+  const supabase = useMemo(() => getSupabase(), []);
+  const [angemeldet, setAngemeldet] = useState(false);
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data }) => setAngemeldet(!!data.session));
+    const { data: sub } = supabase.auth.onAuthStateChange((_ereignis, sitzung) => {
+      setAngemeldet(!!sitzung);
+    });
+    return () => sub.subscription.unsubscribe();
+  }, [supabase]);
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
 
@@ -125,7 +140,7 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
                 onClick={() => setOpen(false)}
                 className="mt-6 flex items-center justify-center gap-2 rounded-full bg-navy py-3.5 text-[15px] font-extrabold text-accent sm:hidden"
               >
-                Anmelden
+                {angemeldet ? "Mein Konto" : "Anmelden"}
               </Link>
 
               <div className="mt-6 flex gap-3.5">
