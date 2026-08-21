@@ -102,7 +102,7 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
             {!sucheAktiv && (
               <button
                 onClick={() => setSucheAktiv(true)}
-                className="mb-4 mt-1 flex w-full items-center gap-3 rounded-2xl bg-[#0C0B1A]/10 px-4 py-3 text-left text-[15px] font-semibold text-[#0B0616]"
+                className="mb-3 mt-0.5 flex w-full items-center gap-3 rounded-2xl bg-[#0C0B1A]/10 px-4 py-2.5 text-left text-[15px] font-semibold text-[#0B0616]"
               >
                 Suche nach Spielen, News, Guides …
                 <SearchIcon className="ml-auto h-5 w-5 shrink-0" />
@@ -162,12 +162,12 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
               <Link
                 href="/profil"
                 onClick={() => setOpen(false)}
-                className="mt-4 flex items-center justify-center gap-2 rounded-full bg-navy py-3 text-[15px] font-extrabold text-accent sm:hidden"
+                className="mt-3 flex items-center justify-center gap-2 rounded-full bg-navy py-2.5 text-[15px] font-extrabold text-accent sm:hidden"
               >
                 {angemeldet ? "Mein Konto" : "Anmelden"}
               </Link>
 
-              <div className="mt-4 flex gap-3.5 pb-1">
+              <div className="mt-3 flex items-center justify-between gap-3.5">
                 <a
                   href={instagramUrl}
                   target="_blank"
@@ -184,6 +184,30 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
                 >
                   <MailIcon className="h-5 w-5" />
                 </a>
+                {/* Rechtliches hier statt im Footer (Tims Idee,
+                    21.08.2026): der Footer gehoert jetzt den
+                    Social-Kanaelen. Kompakt neben den Kreisen, damit
+                    auch kleine Geraete ohne Scrollen auskommen. */}
+                <span className="flex max-w-[210px] flex-wrap items-center justify-end gap-x-3 gap-y-1 text-right">
+                  {[
+                    ["Über uns", "/ueber-uns"],
+                    ["Impressum", "/impressum"],
+                    ["Datenschutz", "/datenschutz"],
+                    ["Cookies", "/cookies"],
+                  ].map(([label, href]) => (
+                    <Link
+                      key={href}
+                      href={href}
+                      onClick={() => setOpen(false)}
+                      className="text-[12px] font-semibold text-navy/70 hover:text-navy"
+                    >
+                      {label}
+                    </Link>
+                  ))}
+                  <a href="mailto:redaktion@republicofpixels.com" className="text-[12px] font-semibold text-navy/70 hover:text-navy">
+                    Kontakt
+                  </a>
+                </span>
               </div>
             </nav>
             )}
