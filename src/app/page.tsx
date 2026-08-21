@@ -4,7 +4,7 @@ import { TopStory } from "@/components/TopStory";
 import { NewsListe } from "@/components/NewsListe";
 import { NeuesteRail, NotchKarte, NewsletterBlock, SektionsKopf, MehrPille } from "@/components/StartseiteNeu";
 import { SektionsBanner } from "@/components/SektionsBanner";
-import { RepublicGruss } from "@/components/RepublicGruss";
+import { TagesGruss } from "@/components/TagesGruss";
 import { PopularSection } from "@/components/PopularSection";
 import { ReleaseRadar } from "@/components/ReleaseRadar";
 import { DealRadar } from "@/components/DealRadar";
@@ -56,7 +56,7 @@ export default async function HomePage() {
             Gruss→Aufmacher bleiben gleich gross und sind an der
             gerenderten Schriftflaeche nachgemessen. */}
         <div className="mx-auto max-w-content px-4 pt-[42px] sm:px-6 sm:pt-[52px] lg:px-8">
-          <RepublicGruss />
+          <TagesGruss />
           <div className="grid gap-8 lg:grid-cols-[1fr_372px] lg:gap-11">
             <div>
               <TopStory article={topStory} />
