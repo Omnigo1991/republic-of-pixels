@@ -1,0 +1,159 @@
+{
+  "slug": "mortal-shell-2-balance-patch-glimpses-rueckerstattung",
+  "title": "Mortal Shell 2 nerft die Bosse - und erstattet vergeudete Glimpses",
+  "subtitle": "Der erste grosse Balance-Patch von Cold Symmetry macht Gegner schwächer, Ressourcen billiger und gibt eine knappe Währung zurück",
+  "excerpt": "Wenige Tage nach dem Launch dreht Cold Symmetry an fast jeder Stellschraube von Mortal Shell 2: Bosse werden entschärft, Gold fliesst reichlicher - und wer Glimpses falsch investiert hat, bekommt sie wieder.",
+  "seoTitle": "Mortal Shell 2: Erster Balance-Patch nerft Bosse",
+  "metaDescription": "Mortal Shell 2 bekommt seinen ersten Balance-Patch: Bosse werden entschärft, Gold-Drops steigen deutlich, Glimpses werden erstattet. Alle Änderungen im Überblick.",
+  "category": "news",
+  "platforms": [
+    "pc",
+    "playstation",
+    "xbox"
+  ],
+  "tags": [
+    "Mortal Shell 2",
+    "Cold Symmetry",
+    "Playstack",
+    "Soulslike",
+    "Patch"
+  ],
+  "tldr": [
+    "Cold Symmetry veröffentlicht den ersten grossen Balance-Patch für Mortal Shell 2 - zuerst auf dem PC, Konsolen folgen später",
+    "Shell-Fundorte kosten künftig Gloom statt der knappen Glimpses; bereits ausgegebene Glimpses werden erstattet",
+    "Gold-Drops steigen deutlich, in Mammon sogar auf das Doppelte, Schmelzen am Tarforge kostet 75 Prozent weniger Gloom",
+    "Bosse wie The Lost Child und Monolith sowie mehrere Standardgegner werden abgeschwächt, Waffen und Tarstones gebufft"
+  ],
+  "whyItMatters": "Mortal Shell 2 gilt vielen als eines der stärksten Soulslikes seit Elden Ring - aber sein Ressourcensystem hat Fehlentscheidungen bisher hart bestraft. Der Patch entschärft genau diese Frustpunkte und macht das Spiel für Einsteigende zugänglicher, ohne den Kern anzutasten. Wer noch mit dem Kauf zögert oder mitten in einem Durchlauf feststeckt, sollte die Änderungen kennen.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Nur wenige Tage nach dem Launch legt Cold Symmetry den ersten grossen Balance-Patch für Mortal Shell 2 nach - und der geht praktisch ausnahmslos zugunsten der Spielerschaft aus. Gegner verlieren Lebenspunkte, Ressourcen werden billiger, Waffen schlagen härter zu, und eine besonders knappe Währung wird nachträglich erstattet. Die Patch Notes hat ein Studiomitglied im Mortal-Shell-Subreddit veröffentlicht, zusätzlich stehen sie im offiziellen Discord-Server. Das Update erscheint zuerst auf dem PC, die Konsolenfassungen folgen später."
+    },
+    {
+      "type": "embed",
+      "platform": "reddit",
+      "url": "https://www.reddit.com/r/MortalShell/comments/1vttz2d/balance_patch_1/"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "-52 %",
+          "label": "maximale Lebenspunkte bei Infested Stalkers"
+        },
+        {
+          "value": "-75 %",
+          "label": "Gloom-Kosten beim Schmelzen einer Waffe am Tarforge"
+        },
+        {
+          "value": "x2",
+          "label": "Gold-Drops von Gegnern in Mammon"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Glimpses zurück, Gold in Strömen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die auffälligste Änderung betrifft die Ökonomie. Bisher mussten Spielende Glimpses ausgeben, um die Fundorte der Shells auf der Karte freizuschalten - ausgerechnet jene Währung, die anderweitig dringend gebraucht wird. Künftig übernimmt das reichlicher verfügbare Gloom diese Rolle. Wer bereits Glimpses für Shell-Karten investiert hat, bekommt sie zurückerstattet."
+    },
+    {
+      "type": "quote",
+      "text": "Die Lieblings-Shell zu finden, sollte nicht die Möglichkeit kosten, sich mit ihr zu verbinden.",
+      "attribution": "Cold Symmetry in den Patch Notes"
+    },
+    {
+      "type": "paragraph",
+      "text": "Auch beim Gold dreht das Studio kräftig an der Schraube: Die Drops von Gegnern steigen laut Cold Symmetry deutlich, in der Region Mammon fällt sogar doppelt so viel Gold wie bisher. Und das Schmelzen einer Waffe am Tarforge kostet 75 Prozent weniger Gloom - die Entwickler räumen selbst ein, dass die bisherigen Kosten \"exorbitant hoch\" angesetzt waren."
+    },
+    {
+      "type": "heading",
+      "text": "Bosse und Gegner verlieren Zähne"
+    },
+    {
+      "type": "paragraph",
+      "text": "Wer an bestimmten Kämpfen hängengeblieben ist, dürfte den zweiten Block der Patch Notes mit Erleichterung lesen. Gleich mehrere Bosse und Standardgegner wurden abgeschwächt, bei Monolith wurden zusätzlich einzelne Angriffe im Timing angepasst, damit sie fairer reagieren."
+    },
+    {
+      "type": "list",
+      "items": [
+        "The Lost Child und Monolith wurden abgeschwächt, einige Monolith-Angriffe neu getimt",
+        "Mace Cultists, Caerinid-Spinnen und mit Hellebarden bewaffnete Rusted Knaves treffen weniger hart",
+        "Infested Stalkers verlieren 52 Prozent ihrer maximalen Lebenspunkte"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Waffen und Tarstones schlagen zurück"
+    },
+    {
+      "type": "paragraph",
+      "text": "Auf der Gegenseite bekommt das eigene Arsenal Verstärkung. Eine ganze Reihe Waffen und Tarstones wurde gebufft - besonders drastisch bei Troubador's Lute, deren Angriffsschaden um 100 Prozent steigt. Der Bulwark Stone reduziert eingehenden Schaden ebenfalls \"deutlich\" stärker als zuvor. In Summe verschiebt sich das Kräfteverhältnis in praktisch jeder Begegnung spürbar."
+    },
+    {
+      "type": "heading",
+      "text": "Ein Zwischenschritt, kein Endpunkt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Cold Symmetry macht deutlich, dass dieser Patch bewusst schlank gehalten ist. Ein grösseres Update sei bereits in Arbeit, brauche aber mehr Testzeit."
+    },
+    {
+      "type": "quote",
+      "text": "Während wir an einem grösseren Patch arbeiten, der gründlich getestet werden muss, möchten wir einen schnellen Balance- und Crashfix-Patch nachreichen, um das Erlebnis stärker an die Open Beta des Spiels und an unsere eigene Vision für MS2 anzugleichen.",
+      "attribution": "Cold Symmetry in den Patch Notes"
+    },
+    {
+      "type": "paragraph",
+      "text": "Für die Zukunft kündigt das Studio Erweiterungen beliebter Features an - genannt werden Night Mode, Tarstones und PP-Items. Neben den Balance-Anpassungen enthält das Update ausserdem Absturz-Fixes."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bemerkenswert ist weniger das Was als das Warum: Cold Symmetry korrigiert nicht in Richtung eines allgemeinen Easy Mode, sondern zurück in Richtung Open Beta. Die Launch-Version war offenbar an mehreren Stellen härter kalibriert als das, was das Studio selbst als seine Vision beschreibt - insbesondere bei den Ressourcenkosten, die Fehlinvestitionen unnötig hart bestraft haben. Dass Glimpses rückwirkend erstattet werden, ist dabei die freundlichste Geste: Niemand wird dafür bestraft, das Spiel vor dem Patch gespielt zu haben. Der Start von Mortal Shell 2 verlief solide, GamesRadar bezeichnete es im Test als \"das beste Soulslike, das ich seit Elden Ring gespielt habe\". Wer das Spiel bislang als zu hart oder zu einschränkend empfunden hat, bekommt mit diesem Update einen zweiten, deutlich milderen Anlauf - PC-Spielende zuerst, alle anderen müssen sich noch etwas gedulden."
+    }
+  ],
+  "poll": {
+    "question": "Balance-Patches kurz nach Launch: Kurskorrektur oder Verwässerung?",
+    "options": [
+      "Richtig so - Frust durch Ressourcenkosten gehört korrigiert",
+      "Die Gegner-Nerfs gehen zu weit, das war der Reiz",
+      "Mir egal, Hauptsache die Crashes sind weg",
+      "So etwas gehört vor den Launch, nicht danach"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-21T21:46:39.462Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "controller",
+  "sources": [
+    {
+      "title": "First Mortal Shell 2 balance patch stacks the deck for players: refunds for anyone who wasted Glimpses, bosses nerfed, and gold drops buffed massively",
+      "url": "https://www.gamesradar.com/games/action-rpg/first-mortal-shell-2-balance-patch-stacks-the-deck-for-players-refunds-for-anyone-who-wasted-glimpses-bosses-nerfed-and-gold-drops-buffed-massively/",
+      "publisher": "GamesRadar"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/mortal-shell-2-balance-patch-glimpses-rueckerstattung.webp",
+    "alt": "Mortal Shell 2 nerft die Bosse - und erstattet vergeudete Glimpses",
+    "credit": "Bild: GamesRadar",
+    "sourceUrl": "https://www.gamesradar.com/games/action-rpg/first-mortal-shell-2-balance-patch-stacks-the-deck-for-players-refunds-for-anyone-who-wasted-glimpses-bosses-nerfed-and-gold-drops-buffed-massively/",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "mortal-shell-2-test-resolve-ausdauerleiste-2026",
+    "mortal-shell-2-test-kritik-ausdauerleiste-2026",
+    "another-crabs-treasure-switch-2-edition-gratis-upgrade"
+  ]
+}
