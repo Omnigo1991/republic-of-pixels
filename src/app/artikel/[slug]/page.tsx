@@ -183,16 +183,14 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
 
         <ArticleBody blocks={article.body} inlineRelated={related[0]} />
 
-        {/* Fester Bauplan-Platz der Community-Umfrage (08.08.2026):
-            direkt nach der Textstrecke, vor der Einordnung. */}
+        {/* Einordnung VOR der Beteiligung (Tim, 21.08.2026): erst sagt
+            die Redaktion, warum die Meldung zaehlt, dann fragt sie die
+            Leserschaft - Umfrage und Hype-Meter stehen als Paar dahinter. */}
+        <WhyItMattersBox text={article.whyItMatters} />
+
         {article.poll && <PollBox articleSlug={article.slug} poll={article.poll} />}
 
-        {/* Hype-Meter direkt unter der Umfrage (Tim, 21.08.2026): beide
-            fragen die Leserschaft - so stehen sie beieinander, und der
-            Kasten traegt dieselbe Bauart wie alle anderen. */}
         <HypeMeter articleSlug={article.slug} />
-
-        <WhyItMattersBox text={article.whyItMatters} />
 
         {article.review && <ReviewBox review={article.review} />}
 
