@@ -188,23 +188,24 @@ export function NewsletterBlock({ artikelBilder }: { artikelBilder: Article[] })
             </button>
           </div>
         </div>
-        {/* Zwei Sticker mit Pixel-Treppen-Rahmen (Fassung vor der
-            Polygon-Collage - Tim, 16.08.2026). */}
+        {/* Umschlag-Wasserzeichen (Tim-Freigabe 22.08.2026): dieselbe
+            Logik wie das Instagram-Zeichen im Footer. WICHTIG: ein
+            einziger SVG-Pfad - ein Pfad uebermalt sich selbst nicht,
+            deshalb entstehen an den Beruehrungspunkten von Rahmen und
+            Lasche keine dunkleren Kreuzungen. */}
         <div className="relative hidden h-[300px] lg:block" aria-hidden="true">
-          {artikelBilder[0] && (
-            <div className="treppe-tr absolute left-0 top-0 h-[250px] w-[250px] -rotate-[5deg]">
-              <div className="treppe-innen h-full w-full [&_img]:h-full [&_img]:w-full [&_img]:object-cover">
-                <ArticleMedia article={artikelBilder[0]} sizes="500px" className="h-full w-full" />
-              </div>
-            </div>
-          )}
-          {artikelBilder[1] && (
-            <div className="treppe-tl absolute bottom-0 right-0 h-[250px] w-[250px] rotate-[4deg]">
-              <div className="treppe-innen h-full w-full [&_img]:h-full [&_img]:w-full [&_img]:object-cover">
-                <ArticleMedia article={artikelBilder[1]} sizes="500px" className="h-full w-full" />
-              </div>
-            </div>
-          )}
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#0B0616"
+            strokeOpacity="0.15"
+            strokeWidth="1.4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="absolute right-0 top-1/2 h-[330px] w-[330px] -translate-y-1/2 rotate-[8deg]"
+          >
+            <path d="M5 4h14a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3M2.4 6.6 12 13.6l9.6-7" />
+          </svg>
         </div>
       </div>
     </div>

@@ -369,10 +369,13 @@ code {
   background: linear-gradient(112deg, #FF2E97, #FF6BC0 44%, #02F0D1 122%);
 }
 .bg-accent h2, .bg-accent p, .bg-accent span, .bg-accent div,
-.bg-accent dt, .bg-accent dd, .bg-accent .text-accent {
+.bg-accent dt, .bg-accent dd, .bg-accent .text-accent,
+body > footer h2, body > footer p {
   color: #0B0616;
   text-shadow: none;
 }
+/* Die CTA-Pille im Footer behaelt ihre Cyan-Schrift. */
+body > footer a { text-shadow: none; }
 /* Dunkle Flaechen IN der Verlaufsbox behalten helle Schrift
    (gemessen: sonst 1.05:1). */
 .bg-accent [class*="bg-navy"],
