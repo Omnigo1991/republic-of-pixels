@@ -187,6 +187,11 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
             direkt nach der Textstrecke, vor der Einordnung. */}
         {article.poll && <PollBox articleSlug={article.slug} poll={article.poll} />}
 
+        {/* Hype-Meter direkt unter der Umfrage (Tim, 21.08.2026): beide
+            fragen die Leserschaft - so stehen sie beieinander, und der
+            Kasten traegt dieselbe Bauart wie alle anderen. */}
+        <HypeMeter articleSlug={article.slug} />
+
         <WhyItMattersBox text={article.whyItMatters} />
 
         {article.review && <ReviewBox review={article.review} />}
@@ -221,7 +226,6 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
         <WeiterlesenBox articles={related.slice(1)} />
 
         <div className="my-8 flex flex-wrap items-center justify-between gap-4 border-y border-border-subtle py-6">
-          <HypeMeter articleSlug={article.slug} />
           <ArticleReactions articleSlug={article.slug} />
           <ShareButtons title={article.title} />
         </div>

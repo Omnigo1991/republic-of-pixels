@@ -69,26 +69,31 @@ export function HypeMeter({ articleSlug }: { articleSlug: string }) {
 
   if (!verfuegbar) return null;
   const gesamt = hype + kalt;
-  const anteil = gesamt === 0 ? 50 : Math.round((hype / gesamt) * 100);
+  // Ohne Stimmen bleibt der Balken leer - eine halbe Fuellung wuerde
+  // ein Ergebnis vortaeuschen, das es nicht gibt.
+  const anteil = gesamt === 0 ? 0 : Math.round((hype / gesamt) * 100);
 
   return (
-    <div className="my-8 rounded-2xl border border-border-subtle bg-surface-card p-5 sm:p-6">
-      <div className="mb-3 flex items-center justify-between">
-        <span className="text-[12px] font-extrabold tracking-[0.08em] text-accent">HYPE-METER</span>
-        <span className="text-xs text-text-tertiary">
+    // Gleiche Bauart wie Kurzfassung und Umfrage (Tim, 21.08.2026):
+    // volle Spaltenbreite, gleiche Kopfzeile (13 px, tracking-wide),
+    // gleiche Innenabstaende - kein Sonderling im Artikel-Bauplan.
+    <div className="my-8 rounded-2xl border border-border-default bg-surface-card p-6">
+      <div className="flex items-center justify-between gap-3">
+        <p className="text-[13px] font-semibold tracking-wide text-accent">HYPE-METER</p>
+        <p className="text-xs text-text-tertiary">
           {gesamt === 0 ? "Noch keine Stimmen - gib die erste ab" : `${gesamt} ${gesamt === 1 ? "Stimme" : "Stimmen"}`}
-        </span>
+        </p>
       </div>
-      <div className="mb-4 h-3 overflow-hidden rounded-full bg-border-subtle">
+      <div className="mt-4 h-3 overflow-hidden rounded-full bg-border-subtle">
         <div
           className="h-full rounded-full bg-gradient-to-r from-accent to-magenta transition-[width] duration-500"
           style={{ width: `${anteil}%` }}
         />
       </div>
-      <div className="flex items-center justify-between gap-3">
+      <div className="mt-4 flex items-center justify-between gap-3">
         <button
           onClick={() => stimmen("hype")}
-          className={`rounded-full border px-4 py-1.5 text-sm font-bold transition-colors ${
+          className={`rounded-full border px-4 py-1.5 text-sm font-semibold transition-colors ${
             eigene === "hype"
               ? "border-transparent bg-[#02F0D1] text-[#0B0616]"
               : "border-accent/45 text-accent hover:border-accent/70"
