@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-21T02:04:28.590Z",
+  "updatedAt": "2026-08-21T04:09:23.075Z",
   "deals": [
     {
       "appId": 1771300,
@@ -35,6 +35,17 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2764460/f0a29d6c91be4e91e9fa2f384dd5ae695bfd6b5b/capsule_184x69.jpg?t=1786703049"
     },
     {
+      "appId": 2163330,
+      "title": "Yet Another Zombie Survivors",
+      "discountPercent": 35,
+      "originalPrice": 1479,
+      "finalPrice": 961,
+      "currency": "EUR",
+      "endsAt": "2026-09-03T17:00:08.000Z",
+      "url": "https://store.steampowered.com/app/2163330/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2163330/765e6898cbb4faffa34991912775d813be58cc56/capsule_184x69.jpg?t=1787234279"
+    },
+    {
       "appId": 3065940,
       "title": "Gallipoli",
       "discountPercent": 25,
@@ -44,17 +55,6 @@
       "endsAt": "2026-09-03T17:00:12.000Z",
       "url": "https://store.steampowered.com/app/3065940/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3065940/8b129934c39739bc486f62fbd72d9356d230d6bb/capsule_184x69_alt_assets_0.jpg?t=1787263077"
-    },
-    {
-      "appId": 2432860,
-      "title": "MENACE",
-      "discountPercent": 25,
-      "originalPrice": 3999,
-      "finalPrice": 2999,
-      "currency": "EUR",
-      "endsAt": "2026-09-03T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/2432860/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2432860/f3da7e906c7a3126ad95691f10ee9e8eb8650e09/capsule_184x69.jpg?t=1786634291"
     },
     {
       "appId": 4294490,

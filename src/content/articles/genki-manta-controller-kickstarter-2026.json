@@ -1,0 +1,143 @@
+{
+  "slug": "genki-manta-controller-kickstarter-2026",
+  "title": "Controller mit 2,9-Zoll-Display - und einem Preis von 279 Dollar",
+  "subtitle": "Genki bringt mit dem Manta seinen ersten komplett eigenen Controller auf Kickstarter - mit Bildschirm, Makro-Recorder und Triggern in drei Stufen",
+  "excerpt": "Genkis Manta packt ein 2,9-Zoll-LCD mitten in den Controller, dazu analoge Face-Buttons und Trigger mit drei Modi. Nur: Der Spass hat einen stolzen Preis - und läuft über Crowdfunding.",
+  "seoTitle": "Genki Manta: Controller mit Display startet auf Kickstarter",
+  "metaDescription": "Genki zeigt den Manta: Controller mit 2,9-Zoll-Display, TMR-Sticks, Makro-Recorder und Tristage-Triggern. Frühbucher zahlen 189 Dollar, regulär 279 Dollar.",
+  "category": "news",
+  "platforms": [
+    "pc",
+    "nintendo",
+    "playstation",
+    "xbox"
+  ],
+  "tags": [
+    "Genki",
+    "Manta",
+    "Controller",
+    "Hardware",
+    "Kickstarter"
+  ],
+  "tldr": [
+    "Genki stellt mit dem Manta den ersten komplett selbst entwickelten Controller vor - Kickstarter-Start ist heute",
+    "Ein 2,9-Zoll-LCD unterhalb von Sticks und Tasten dient als Einstellungszentrale, angetrieben von einem Raspberry-Pi-Chip RP2350",
+    "Highlights: Tristage-Trigger, analoge Face-Buttons mit einstellbarem Auslösepunkt, TMR-Sticks, wechselbarer 2600-mAh-Akku",
+    "Frühe Unterstützer zahlen 189 Dollar, der reguläre Verkaufspreis soll bei 279 Dollar liegen"
+  ],
+  "whyItMatters": "Controller mit eingebautem Display sind bisher eine Nische, doch der Manta verlagert damit das komplette Feintuning vom PC-Tool auf die Hardware selbst - inklusive Makros, Deadzones und Auslösepunkten pro Spiel. Wer plattformübergreifend spielt, bekommt ein Gerät, das sich ohne Begleit-App an jede Konsole und jedes Genre anpassen lässt. Der Haken: Der Preis liegt deutlich über dem üblicher Pro-Controller, und gekauft wird über Crowdfunding.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Genki hat seinen ersten von Grund auf selbst entwickelten Controller vorgestellt. Der Manta fällt sofort durch sein ungewöhnliches Layout auf: Sticks und Tasten sitzen oberhalb eines grossen 2,9-Zoll-LCDs, was das Gerät sichtbar klobiger wirken lässt als klassische Gamepads. Die Kickstarter-Kampagne startet heute, frühe Unterstützer zahlen 189 Dollar, der spätere Verkaufspreis soll bei 279 Dollar liegen."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "189 $",
+          "label": "Frühbucherpreis auf Kickstarter"
+        },
+        {
+          "value": "279 $",
+          "label": "geplanter regulärer Verkaufspreis"
+        },
+        {
+          "value": "2,9 Zoll",
+          "label": "Diagonale des integrierten LCDs"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Der Bildschirm ersetzt die Begleit-App"
+    },
+    {
+      "type": "paragraph",
+      "text": "Controller mit eingebautem Display gibt es bereits, etwa von Anbernic. Der Unterschied liegt beim Manta in der Tiefe der Einstellungen: Ein eigener Mikrocontroller vom Typ Raspberry Pi RP2350 treibt die Oberfläche an, über die sich der Controller ohne zusätzliche Software am Rechner konfigurieren lässt. Mehrere Profile für Konsolen, einzelne Spiele und verschiedene Nutzer lassen sich anlegen und direkt am Gerät wechseln."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Stick-Reaktion und Deadzones anpassen",
+        "Intensität des haptischen Feedbacks erhöhen",
+        "Tastenbelegung frei umlegen",
+        "Makros aufnehmen, bearbeiten und mehrere Tastendrücke kombinieren",
+        "Zwischen Profilen für Konsole, Spiel und Nutzerin oder Nutzer umschalten"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Trigger in drei Stufen, Tasten mit Tiefenregler"
+    },
+    {
+      "type": "paragraph",
+      "text": "Zwei umschaltbare Trigger-Modi - kurzer Hub für Shooter, langer Weg für Rennspiele - gehören bei teureren Controllern längst zum Standard. Genki setzt beim Manta eine dritte Stufe obendrauf, die das Unternehmen als \"Tristage-Trigger\" bezeichnet: eine Zwischenposition, die laut Hersteller auf möglichst schnelle Wiederholungsdrücke ausgelegt ist. Dazu kommen analoge Face-Buttons, bei denen sich pro Taste festlegen lässt, wie weit sie gedrückt werden muss, bis der Eingabebefehl registriert wird. Wer eine Taste besonders empfindlich oder bewusst träge haben will, regelt das also einzeln."
+    },
+    {
+      "type": "paragraph",
+      "text": "Auf der Rückseite sitzen zwei Paar programmierbare Zusatztasten, hinzu kommen zwei Sätze übergrosser Schultertasten. Insgesamt sind es sechs zusätzlich belegbare Knöpfe auf Rückseite und Schultern - genug, um Handkameragriffe und Klettersprünge auch ohne Daumenakrobatik unterzubringen."
+    },
+    {
+      "type": "heading",
+      "text": "TMR-Sticks, wechselbarer Akku und ein Maus-Modus"
+    },
+    {
+      "type": "paragraph",
+      "text": "Gegen Stick-Drift setzt Genki auf TMR-Sensorik (tunneling magnetoresistance), die Federspannung der Sticks lässt sich anpassen. Für die Haptik sind lineare magnetische LRA-Motoren in den Griffen zuständig, die die Vibration gezielt in die Handflächen leiten sollen. Der 2600-mAh-Akku ist vom Anwender selbst austauschbar - ein Detail, das bei fest verklebten Konkurrenzmodellen regelmässig für Frust sorgt, sobald die Laufzeit nachlässt."
+    },
+    {
+      "type": "paragraph",
+      "text": "Praktisch für den Wohnzimmerbetrieb: Eine eigene Taste schaltet den Manta in einen Tastatur- und Maus-Modus, mit dem sich etwa ein Browser bedienen lässt, ohne zu einem zweiten Eingabegerät greifen zu müssen. Verbunden wird per Bluetooth, wer Latenz vermeiden will, nutzt den beiliegenden 2,4-GHz-Dongle oder schliesst den Controller per USB-C direkt an die Konsole an."
+    },
+    {
+      "type": "heading",
+      "text": "Neunte Crowdfunding-Kampagne - und das Restrisiko"
+    },
+    {
+      "type": "paragraph",
+      "text": "Genki ist im Zubehörmarkt kein Neuling: Vor zwei Jahren entstand ein Gamepad in Zusammenarbeit mit 8BitDo, der Manta ist nun der erste Controller aus eigener Entwicklung. Es ist zugleich das neunte Gerät, das die Firma über Crowdfunding finanziert. Ein Restrisiko bleibt bei Kickstarter-Projekten immer, Genki hat allerdings eine gute Bilanz beim Ausliefern seiner Kampagnenprodukte."
+    },
+    {
+      "type": "paragraph",
+      "text": "Einordnung: 279 Dollar sind eine Ansage - das liegt im Bereich der teuersten Pro-Controller am Markt. Dafür bekommt man ein Gerät, das nahezu jede Einstellung direkt am Bildschirm regelt, statt sie in Herstellersoftware zu verstecken. Ob sich das lohnt, dürfte davon abhängen, wie oft man tatsächlich zwischen Genres und Plattformen wechselt. Wer permanent zwischen Shooter, Rennspiel und Prügler springt, bekommt hier ein Werkzeug, das sich jedes Mal mitverwandelt. Wer sein Gamepad einmal einrichtet und dann in Ruhe lässt, zahlt vor allem für Möglichkeiten, die er nie nutzt."
+    }
+  ],
+  "poll": {
+    "question": "Ein Display im Controller - sinnvolles Werkzeug oder teurer Ballast?",
+    "options": [
+      "Genial: Endlich Einstellungen ohne Begleit-App",
+      "Nett, aber keine 279 Dollar wert",
+      "Zu klobig - ich will einen schlanken Controller",
+      "Ich warte erst ab, ob geliefert wird"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-21T04:08:22.645Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "particles",
+  "sources": [
+    {
+      "title": "Genki’s new customizable controller has a big screen and adjustable buttons",
+      "url": "https://www.theverge.com/tech/981536/genki-manta-wireless-customizable-controller-tmr-screen",
+      "publisher": "The Verge Games"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/genki-manta-controller-kickstarter-2026.webp",
+    "alt": "Controller mit 2,9-Zoll-Display - und einem Preis von 279 Dollar",
+    "credit": "Bild: The Verge Games",
+    "sourceUrl": "https://www.theverge.com/tech/981536/genki-manta-wireless-customizable-controller-tmr-screen",
+    "sourceWidth": 1500,
+    "sourceHeight": 1000
+  },
+  "relatedSlugs": [
+    "nintendo-switch-2-preiserhoehung-uk-irland-september-2026",
+    "sandisk-bics9-bics10-bics11-nand-roadmap-2026",
+    "ps6-kein-release-termin-totoki-chipknappheit-2026"
+  ]
+}
