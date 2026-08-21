@@ -388,17 +388,17 @@ code {
    Derselbe Verlauf wie das Menue. Damit wechselt die Schrift dort auf
    Dunkel - Weiss auf Magenta misst 1.5:1 und waere nicht lesbar. */
 .kopfband {
-  /* WAAGRECHT, NICHT SCHRAEG (Tim, 20.08.2026): Der Verlauf lief mit
-     100 Grad, also leicht schraeg. Solange das Band 65 px hoch war,
-     fiel das nicht auf. Seit die Flaeche 140 px ueber die
-     Bildschirmkante hinausreicht, wandern die Farben ueber diese
-     Strecke sichtbar: Gemessen lagen Streifen und Band um bis zu 9
-     Farbstufen auseinander - ein feiner Absatz genau an der Kante.
-     Bei 90 Grad ist der Verlauf senkrecht gleichfoermig, der Abstand
-     betraegt an jeder Stelle exakt 0. */
-  background: linear-gradient(90deg, #FF2E97, #FF6BC0 42%, #02F0D1 118%);
-  border-bottom: 1px solid rgba(11, 6, 22, 0.35);
-  box-shadow: 0 6px 26px -8px rgba(255, 46, 151, 0.45);
+  /* NAVY MIT VERLAUFS-HAARLINIE (Tim, 21.08.2026, Variante E aus dem
+     Vergleich): Das Band traegt die Seitenfarbe, der Verlauf lebt als
+     3-px-Linie an der Unterkante weiter. Grund: Safari kann den
+     Streifen hinter Uhrzeit und Akku nur EINFARBIG faerben - mit dem
+     Verlauf als Flaeche gab es dort immer eine Naht. Navy auf Navy ist
+     nahtlos wie die alte Cyan-Fassung, und Logo plus Schriftzug
+     leuchten wieder in Cyan statt dunkel auf Pink. */
+  background: #0C0B1A;
+  border-style: solid;
+  border-width: 0 0 3px 0;
+  border-image: linear-gradient(90deg, #FF2E97, #FF6BC0 42%, #02F0D1 118%) 1;
   /* DURCHGEHEND GEFUELLT BIS ZUR BILDSCHIRMKANTE (Tim, 20.08.2026).
      Erster Versuch war nur "padding-top: env(safe-area-inset-top)".
      Das half nicht: Meldet Safari die Hoehe der Statusleiste nicht,
@@ -430,8 +430,8 @@ code {
 .kopfband a,
 .kopfband button,
 .kopfband span,
-.kopfband svg { color: #0B0616; }
-.kopfband .text-accent { color: #0B0616; }
+.kopfband svg { color: #EAF6FF; }
+.kopfband .text-accent { color: #02F0D1; }
 /* Kein Leuchten im Kopf: sonst schimmert "OF PIXELS" staerker als
    "REPUBLIC" und die beiden Haelften wirken wie zwei Schriften. */
 .kopfband, .kopfband * { text-shadow: none !important; }
@@ -448,15 +448,16 @@ code {
 .kopfband nav[aria-label="Plattformen"],
 .kopfband a[aria-label*="Suche"],
 .kopfband button[aria-label*="Suche"] {
-  background: rgba(11, 6, 22, 0.13) !important;
-  border-color: rgba(11, 6, 22, 0.22) !important;
+  background: #14122E !important;
+  border-color: rgba(2, 240, 209, 0.22) !important;
 }
-.kopfband [class*="border-"] { border-color: rgba(11, 6, 22, 0.22); }
+.kopfband [class*="border-"] { border-color: rgba(2, 240, 209, 0.22); }
 /* "Anmelden" kehrt sich um: dunkle Pille mit Cyan-Schrift, damit sie
    auf dem Verlauf ueberhaupt als Knopf lesbar bleibt. */
 .kopfband a[class*="bg-accent"],
 .kopfband button[class*="bg-accent"] {
-  background: #0B0616 !important;
+  background: #14122E !important;
+  border: 1px solid rgba(2, 240, 209, 0.5) !important;
   color: #02F0D1 !important;
 }
 .kopfband a[class*="bg-accent"] span,
