@@ -1,12 +1,12 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
 import { PLATFORM_NAV } from "@/lib/articles";
 import { PlatformIcon } from "./PlatformIcons";
 import { getSupabase } from "@/lib/supabase";
-import { SearchPanel } from "./SearchOverlay";
+import { useRouter } from "next/navigation";
 
 // DER CYAN-VORHANG (Tim, 15.08.2026 abends): Das Menü ist eine
 // Markenbühne - ein voller Cyan-Vorhang, der von rechts hereingleitet
@@ -35,8 +35,10 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
   // andere Stelle, die den Zustand anzeigt. Jetzt hoert das Menue auf
   // die Sitzung und beschriftet den Knopf entsprechend.
   const supabase = useMemo(() => getSupabase(), []);
+  const router = useRouter();
   const [angemeldet, setAngemeldet] = useState(false);
-  const [sucheAktiv, setSucheAktiv] = useState(false);
+  const [suchwert, setSuchwert] = useState("");
+  const suchfeldRef = useRef<HTMLInputElement>(null);
   useEffect(() => {
     supabase.auth.getSession().then(({ data }) => setAngemeldet(!!data.session));
     const { data: sub } = supabase.auth.onAuthStateChange((_ereignis, sitzung) => {
@@ -61,7 +63,7 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
       {/* Direkt tippen statt Seitenwechsel (Tim, 21.08.2026): Die Lupe
           oeffnet den Vorhang gleich im Suchmodus. */}
       <button
-        onClick={() => { setSucheAktiv(true); setOpen(true); }}
+        onClick={() => { setOpen(true); setTimeout(() => suchfeldRef.current?.focus(), 350); }}
         aria-label="Suche öffnen"
         className="flex h-10 w-10 items-center justify-center rounded-full text-current hover:opacity-70 transition-opacity lg:hidden"
       >
@@ -89,42 +91,40 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
           />
           <aside className="absolute inset-y-0 right-0 flex w-full flex-col overflow-hidden bg-accent px-7 pb-[calc(1.75rem+env(safe-area-inset-bottom,0px))] pt-[calc(1.25rem+env(safe-area-inset-top,0px))] shadow-[-30px_0_80px_-20px_rgba(12,11,26,0.45)] animate-vorhang sm:w-[430px]">
             <button
-              onClick={() => { setOpen(false); setSucheAktiv(false); }}
+              onClick={() => setOpen(false)}
               aria-label="Menü schliessen"
               className="flex h-10 w-10 items-center justify-center self-end text-navy hover:opacity-70"
             >
               <CloseIcon className="h-[26px] w-[26px]" />
             </button>
 
-            {/* DIREKTE EINGABE STATT SEITENWECHSEL (Tim, 21.08.2026):
-                Der Klick springt nicht mehr nach /suche, sondern klappt
-                das echte Suchfeld samt Treffern hier im Menue auf. */}
-            {!sucheAktiv && (
-              <button
-                onClick={() => setSucheAktiv(true)}
-                className="mb-3 mt-0.5 flex h-11 w-full items-center gap-3 rounded-full bg-[#0C0B1A]/10 px-5 text-left text-[15px] font-semibold text-[#0B0616]"
-              >
-                Suche nach Spielen, News, Guides …
-                <SearchIcon className="ml-auto h-5 w-5 shrink-0" />
-              </button>
-            )}
-            {sucheAktiv && (
-              <div className="flex min-h-0 flex-1 flex-col">
-                <button
-                  onClick={() => setSucheAktiv(false)}
-                  className="mb-3 mt-1 self-start text-[14px] font-bold text-navy hover:opacity-70"
-                >
-                  &larr; Zurück zum Menü
-                </button>
-                {/* Navy-Teppich, damit die dunkle Such-Optik auf dem
-                    Cyan-Vorhang lesbar bleibt. */}
-                <div className="suchliste animate-einblenden min-h-0 flex-1 overflow-y-auto rounded-2xl bg-bg-base p-3">
-                  <SearchPanel onNavigate={() => { setSucheAktiv(false); setOpen(false); }} />
-                </div>
-              </div>
-            )}
+            {/* NICHTS KLAPPT AUF (Tim, 22.08.2026, Vorbild play3): Das
+                Feld ist ein echtes Eingabefeld im Menue. Tippen, Enter -
+                und die Suchseite oeffnet mit den Treffern. Aufklappende
+                Flaechen gibt es nur im Kopf am Rechner. */}
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                const wert = suchwert.trim();
+                if (!wert) return;
+                setOpen(false);
+                setSuchwert("");
+                router.push(`/suche?q=${encodeURIComponent(wert)}`);
+              }}
+              className="relative mb-3 mt-0.5"
+            >
+              <SearchIcon className="pointer-events-none absolute left-4 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-[#0B0616]/70" />
+              <input
+                ref={suchfeldRef}
+                value={suchwert}
+                onChange={(e) => setSuchwert(e.target.value)}
+                placeholder="Spiele, News, Guides …"
+                enterKeyHint="search"
+                className="h-11 w-full rounded-full bg-[#0C0B1A]/10 pl-11 pr-5 text-[15px] font-semibold text-[#0B0616] placeholder:text-[#0B0616]/55 focus:outline-none"
+              />
+            </form>
 
-            {!sucheAktiv && (
+            {(
             <nav className="flex min-h-0 flex-1 flex-col overflow-y-auto" aria-label="Menü">
               {RUBRIKEN.map((r) => (
                 <Link

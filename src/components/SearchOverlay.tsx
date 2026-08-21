@@ -161,7 +161,7 @@ export function SearchTrigger() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Spiele, Themen, Guides …"
-          className="h-10 w-[340px] rounded-full border border-[rgba(2,240,209,0.35)] bg-[#11102A] px-5 text-[14px] text-[#EAF6FF] placeholder:text-[#93A6BC] focus:border-[rgba(2,240,209,0.7)] focus:outline-none"
+          className="h-10 w-[340px] rounded-full border-2 border-[rgba(2,240,209,0.35)] bg-[#11102A] px-5 text-[14px] text-[#EAF6FF] placeholder:text-[#93A6BC] focus:border-[rgba(2,240,209,0.7)] focus:outline-none"
         />
       </div>
 
