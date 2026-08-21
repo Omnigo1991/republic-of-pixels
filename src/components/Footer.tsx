@@ -35,7 +35,11 @@ export function Footer() {
     <footer className="relative overflow-hidden">
       <div className="relative mx-auto max-w-content px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
         {/* Wasserzeichen: gross, gedreht, rechts angeschnitten */}
-        <InstagramIcon className="pointer-events-none absolute -right-16 top-1/2 h-[340px] w-[340px] -translate-y-1/2 rotate-[8deg] text-[#0B0616] opacity-[0.14] sm:-right-8" />
+        {/* Wasserzeichen-Trio (Tim, 22.08.2026): Instagram gross, X und
+            TikTok daneben - alle in derselben leisen Kontur. */}
+        <InstagramIcon className="pointer-events-none absolute -right-10 top-1/2 h-[320px] w-[320px] -translate-y-[62%] rotate-[8deg] text-[#0B0616] opacity-[0.14] sm:right-0" />
+        <XIcon className="pointer-events-none absolute right-[430px] top-[16%] hidden h-[140px] w-[140px] -rotate-[7deg] text-[#0B0616] opacity-[0.12] lg:block" />
+        <TikTokIcon className="pointer-events-none absolute right-[400px] top-[58%] hidden h-[160px] w-[160px] rotate-[5deg] text-[#0B0616] opacity-[0.12] lg:block" />
         <div className="relative">
           {/* Exakt die Schrift des Newsletterblocks (Tim, 22.08.2026):
               gleiche Kopfzeile, gleiche h2-Stufen, gleicher Untertext. */}
@@ -48,35 +52,15 @@ export function Footer() {
           <p className="mt-[18px] mb-7 max-w-[46ch] text-[16px] leading-[1.55] text-navy/85 sm:text-[17px]">
             Breaking-Karten, Reels und die besten Bilder - täglich im Feed.
           </p>
-          <div className="flex flex-wrap items-center gap-3">
-            <a
-              href="https://www.instagram.com/republicofpixels"
-              target="_blank"
-              rel="noreferrer noopener"
-              className="inline-flex items-center gap-2.5 rounded-full bg-[#0B0616] px-6 py-3.5 text-[15px] font-extrabold text-[#02F0D1] transition-opacity hover:opacity-85"
-            >
-              <InstagramIcon className="h-5 w-5" />
-              @republicofpixels folgen
-            </a>
-            <a
-              href="https://x.com/republic_pixels"
-              target="_blank"
-              rel="noreferrer noopener"
-              aria-label="Republic of Pixels auf X"
-              className="flex h-[52px] w-[52px] items-center justify-center rounded-full bg-[#0B0616] text-[#02F0D1] transition-opacity hover:opacity-85"
-            >
-              <XIcon className="h-5 w-5" />
-            </a>
-            <a
-              href="https://www.tiktok.com/@republicofpixels"
-              target="_blank"
-              rel="noreferrer noopener"
-              aria-label="Republic of Pixels auf TikTok"
-              className="flex h-[52px] w-[52px] items-center justify-center rounded-full bg-[#0B0616] text-[#02F0D1] transition-opacity hover:opacity-85"
-            >
-              <TikTokIcon className="h-5 w-5" />
-            </a>
-          </div>
+          <a
+            href="https://www.instagram.com/republicofpixels"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="inline-flex items-center gap-2.5 rounded-full bg-[#0B0616] px-6 py-3.5 text-[15px] font-extrabold text-[#02F0D1] transition-opacity hover:opacity-85"
+          >
+            <InstagramIcon className="h-5 w-5" />
+            @republicofpixels folgen
+          </a>
         </div>
         <p className="relative mt-12 text-[12px] font-semibold text-[#0B0616]/80">
           © 2026 Republic of Pixels - unabhängige, deutschsprachige Gaming-News.

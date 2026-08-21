@@ -27,17 +27,25 @@ export function Masthead({
         <div className="relative mx-auto flex h-16 max-w-content items-center gap-5 px-4 sm:px-6 lg:h-[88px] lg:gap-7 lg:px-8">
           <Link href="/" aria-label="Republic of Pixels - Startseite" className="mr-auto flex min-w-0 items-center gap-2.5 sm:gap-3 lg:gap-4">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/brand/r-mark.png" alt="" aria-hidden="true" className="h-7 w-auto min-[380px]:h-8 sm:h-9 lg:h-12" />
+            <img src="/brand/r-mark.png" alt="" aria-hidden="true" className="h-10 w-auto sm:h-11 lg:h-14" />
             {/* Schriftzug IMMER voll und einzeilig (Tim, 16.08.2026) -
                 auf schmalen Geraeten faellt er kleiner aus, statt zu
                 kuerzen oder umzubrechen. */}
-            <span className="translate-y-[1px] whitespace-nowrap text-[14px] font-black leading-none tracking-tight min-[380px]:text-[15.5px] sm:text-[21px] lg:text-[28px]">
-              REPUBLIC<span className="text-accent"> OF PIXELS</span>
+            {/* Zweizeiler 3b (Tim-Freigabe 22.08.2026): kompakter
+                Markenblock mit Gewicht - "OF PIXELS" bekommt die eigene
+                Cyan-Zeile statt im Fliesstext unterzugehen. */}
+            <span className="translate-y-[1px]">
+              <span className="block text-[13px] font-black leading-[1.05] tracking-[0.035em] sm:text-[15px] lg:text-[19px]">
+                REPUBLIC
+              </span>
+              <span className="block text-[13px] font-black leading-[1.05] tracking-[0.035em] text-accent sm:text-[15px] lg:text-[19px]">
+                OF PIXELS
+              </span>
             </span>
           </Link>
 
           {/* Pure Textlinks mit Sprungzielen (ohne Pillenbox, Tim-Vorgabe). */}
-          <nav className="hidden items-center gap-7 lg:flex" aria-label="Bereiche">
+          <nav className="hidden items-center gap-7 lg:ml-10 lg:flex" aria-label="Bereiche">
             <Link href="/#news" className="text-[16.5px] font-bold text-white transition-colors hover:text-accent">
               News
             </Link>
