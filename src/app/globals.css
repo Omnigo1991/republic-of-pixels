@@ -471,9 +471,10 @@ header {
 /* ---------- Fussleiste ----------
    Zurueck auf die schlichte dunkle Fassung (Tim, 19.08.2026): der
    Verlauf wurde wieder verworfen. */
+/* Footer = Social-Panel (Tim, 21.08.2026, Variante A): vollflaechiger
+   Newsletter-Verlauf, dunkle Schrift, Instagram-Wasserzeichen. */
 body > footer {
-  border-top: 1px solid rgba(2, 240, 209, 0.4);
-  background: rgba(12, 11, 26, 0.92);
+  background: linear-gradient(112deg, #FF2E97, #FF6BC0 44%, #02F0D1 122%);
 }
 
 /* ---------- EIN Takt fuer alle wiederkehrenden Abstaende ----------

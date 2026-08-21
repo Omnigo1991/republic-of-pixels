@@ -131,7 +131,7 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
                   key={r.label}
                   href={r.href}
                   onClick={() => setOpen(false)}
-                  className="flex items-center justify-between border-t-2 border-navy px-0.5 py-2 text-[20px] font-black tracking-tight text-navy transition-opacity hover:opacity-70 min-[380px]:py-2.5 min-[380px]:text-[22px] sm:py-3.5 sm:text-[23px]"
+                  className="flex items-center justify-between border-t-2 border-navy px-0.5 py-[6px] text-[19px] font-black tracking-tight text-navy transition-opacity hover:opacity-70 min-[380px]:py-2.5 min-[380px]:text-[22px] sm:py-3.5 sm:text-[23px]"
                 >
                   {/* Ohne Pfeil (Tim, 20.08.2026): eine Zeile im Menue ist
                       ohnehin erkennbar anklickbar. */}
@@ -141,8 +141,8 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
                   </span>
                 </Link>
               ))}
-              <div className="flex items-center justify-between border-y-2 border-navy px-0.5 py-2 min-[380px]:py-2.5 sm:py-3.5">
-                <span className="text-[20px] font-black tracking-tight text-navy min-[380px]:text-[22px] sm:text-[23px]">Plattformen</span>
+              <div className="flex items-center justify-between border-y-2 border-navy px-0.5 py-[6px] min-[380px]:py-2.5 sm:py-3.5">
+                <span className="text-[19px] font-black tracking-tight text-navy min-[380px]:text-[22px] sm:text-[23px]">Plattformen</span>
                 <span className="flex items-center gap-3">
                   {PLATFORM_NAV.map((p) => (
                     <Link
@@ -158,6 +158,17 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
                   ))}
                 </span>
               </div>
+
+              {/* Ueber uns als eigene Zeile unter den Plattformen
+                  (Tim, 21.08.2026) - aus der Kleingedruckt-Zeile
+                  herausgeloest. */}
+              <Link
+                href="/ueber-uns"
+                onClick={() => setOpen(false)}
+                className="flex items-center justify-between border-b-2 border-navy px-0.5 py-[6px] text-[19px] font-black tracking-tight text-navy transition-opacity hover:opacity-70 min-[380px]:py-2.5 min-[380px]:text-[22px] sm:py-3.5 sm:text-[23px]"
+              >
+                Über uns
+              </Link>
 
               <Link
                 href="/profil"
@@ -190,7 +201,6 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
                     auch kleine Geraete ohne Scrollen auskommen. */}
                 <span className="flex max-w-[210px] flex-wrap items-center justify-end gap-x-3 gap-y-1 text-right">
                   {[
-                    ["Über uns", "/ueber-uns"],
                     ["Impressum", "/impressum"],
                     ["Datenschutz", "/datenschutz"],
                     ["Cookies", "/cookies"],

@@ -8,6 +8,16 @@
     ]
   },
   {
+    "title": "Mortal Shell 2",
+    "date": "2026-08-20",
+    "platforms": [
+      "pc",
+      "playstation",
+      "xbox"
+    ],
+    "articleSlug": "mortal-shell-2-test-kritik-ausdauerleiste-2026"
+  },
+  {
     "title": "Star Wars Zero Company",
     "date": "2026-08-27",
     "platforms": [
@@ -57,6 +67,16 @@
     "articleSlug": "blood-of-dawnwalker-konsolen-grafikmodi-40-fps-2026"
   },
   {
+    "title": "Onimusha: Way of the Sword",
+    "date": "2026-09-04",
+    "platforms": [
+      "pc",
+      "playstation",
+      "xbox",
+      "nintendo"
+    ]
+  },
+  {
     "title": "Marvel's Wolverine",
     "date": "2026-09-15",
     "platforms": [
@@ -91,6 +111,13 @@
       "xbox"
     ],
     "articleSlug": "dune-awakening-ps5-xbox-release-september-2026"
+  },
+  {
+    "title": "Dragon Quest XI S: Definitive Edition",
+    "date": "2026-09-24",
+    "platforms": [
+      "nintendo"
+    ]
   },
   {
     "title": "EA Sports FC 27",
@@ -129,6 +156,32 @@
     "articleSlug": "star-wars-galactic-racer-anakin-skywalker-2026"
   },
   {
+    "title": "Gears of War: E-Day",
+    "date": "2026-10-06",
+    "platforms": [
+      "xbox",
+      "pc"
+    ]
+  },
+  {
+    "title": "Dragon's Dogma 2: Dark Arisen",
+    "date": "2026-10-09",
+    "platforms": [
+      "pc",
+      "playstation",
+      "xbox"
+    ]
+  },
+  {
+    "title": "Planet Zoo 2",
+    "date": "2026-10-13",
+    "platforms": [
+      "pc",
+      "playstation",
+      "xbox"
+    ]
+  },
+  {
     "title": "Final Fantasy Resonance",
     "date": "2026-10-22",
     "platforms": [
@@ -158,5 +211,32 @@
       "playstation"
     ],
     "articleSlug": "phantom-blade-zero-fertigstellung-praesentation-2026"
+  },
+  {
+    "title": "GTA 6",
+    "date": "2026-11-19",
+    "platforms": [
+      "playstation",
+      "xbox"
+    ],
+    "articleSlug": "gta-6-take-two-release-datum-bestaetigt-2026"
+  },
+  {
+    "title": "Dawn of War IV",
+    "date": "2026-12-03",
+    "platforms": [
+      "pc"
+    ],
+    "articleSlug": "dawn-of-war-4-verschiebung-dezember-2026"
+  },
+  {
+    "title": "Persona 4 Revival",
+    "date": "2027-02-18",
+    "platforms": [
+      "playstation",
+      "xbox",
+      "pc"
+    ],
+    "articleSlug": "persona-4-revival-yukiko-amagi-trailer-2026"
   }
 ]

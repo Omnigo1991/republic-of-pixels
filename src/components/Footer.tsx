@@ -1,117 +1,48 @@
-import Link from "next/link";
-import { LogoMark } from "./Logo";
-import { CATEGORY_NAV, PLATFORM_NAV } from "@/lib/articles";
-import { PlatformIcon } from "./PlatformIcons";
+// Footer = Social-Panel (Tim-Freigabe 21.08.2026, Variante A aus dem
+// Vergleich): Der komplette Footer ist die Instagram-Buehne im
+// Newsletter-Verlauf - grosse Ansage, dunkle CTA-Pille, das Logo als
+// Wasserzeichen. Bewusst OHNE Verweis auf X/TikTok, bis die Kanaele
+// wirklich laufen. Rechtliches wohnt im Menue; hier bleibt nur die
+// Copyright-Zeile.
+function InstagramIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className={className} aria-hidden="true">
+      <rect x="2" y="2" width="20" height="20" rx="5" />
+      <circle cx="12" cy="12" r="4.2" />
+      <circle cx="17.4" cy="6.6" r="1.3" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
 
 export function Footer() {
   return (
-    // Kein Aussenabstand mehr (Hell-Umbau): Auf der Startseite schliesst
-    // der Navy-Newsletter-Block direkt an - ein weisses Band dazwischen
-    // zerriss die dunkle Schlusszone. Unterseiten bringen ihren eigenen
-    // Abstand über das Seiten-Padding mit.
-    <footer className="border-t border-navy-border bg-navy">
-      <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-2 gap-10 md:grid-cols-5">
-          <div className="col-span-2">
-            {/* Nur das R-Markenzeichen in Logo-Cyan, ohne Wortmarke (Vorgabe 04.08.2026). */}
-            <Link href="/" aria-label="Republic of Pixels - Startseite" className="inline-block">
-              <LogoMark className="h-10 w-auto text-accent" />
-            </Link>
-            <p className="mt-5 max-w-xs text-sm leading-relaxed text-navy-muted">
-              Republic of Pixels ist eine unabhängige, deutschsprachige Gaming-Newsplattform.
-              Wir ordnen ein, statt nur zu melden - ruhig, ehrlich und ohne Clickbait.
-            </p>
-            <a
-              href="https://www.instagram.com/republicofpixels"
-              target="_blank"
-              rel="noreferrer noopener"
-              className="mt-6 inline-flex items-center gap-2 rounded-full border border-accent/40 px-4 py-2 text-sm font-medium text-accent hover:bg-accent/10 transition-colors"
-            >
-              @republicofpixels auf Instagram
-            </a>
-          </div>
-
-          <div>
-            <p className="mb-4 text-[12px] font-semibold tracking-[0.2em] text-navy-dim">
-              HOME
-            </p>
-            <ul className="flex flex-col gap-3">
-              {CATEGORY_NAV.map((c) => (
-                <li key={c.key}>
-                  <Link href={`/kategorie/${c.key}`} className="text-sm text-navy-muted hover:text-accent transition-colors">
-                    {c.label}
-                  </Link>
-                </li>
-              ))}
-              <li>
-                {/* Guides bewusst nur hier, noch nicht im Header: Der Reiter
-                    oben kommt, wenn genug Guides da sind (Tim, 15.08.2026). */}
-                <Link href="/guides" className="text-sm text-navy-muted hover:text-accent transition-colors">
-                  Guides
-                </Link>
-              </li>
-              <li>
-                <Link href="/themen" className="text-sm text-navy-muted hover:text-accent transition-colors">
-                  Themen
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <p className="mb-4 text-[12px] font-semibold tracking-[0.2em] text-navy-dim">
-              PLATTFORMEN
-            </p>
-            <ul className="flex flex-col gap-3">
-              {PLATFORM_NAV.map((p) => (
-                <li key={p.key}>
-                  <Link href={`/kategorie/${p.key}`} className="inline-flex items-center gap-2 text-sm text-navy-muted hover:text-accent transition-colors">
-                    <PlatformIcon platform={p.key} className="h-3.5 w-3.5 text-navy-dim" />
-                    {p.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <p className="mb-4 text-[12px] font-semibold tracking-[0.2em] text-navy-dim">
-              RECHTLICHES
-            </p>
-            <ul className="flex flex-col gap-3">
-              <li>
-                <Link href="/ueber-uns" className="text-sm text-navy-muted hover:text-accent transition-colors">
-                  Über uns
-                </Link>
-              </li>
-              <li>
-                <Link href="/impressum" className="text-sm text-navy-muted hover:text-accent transition-colors">
-                  Impressum
-                </Link>
-              </li>
-              <li>
-                <Link href="/datenschutz" className="text-sm text-navy-muted hover:text-accent transition-colors">
-                  Datenschutz
-                </Link>
-              </li>
-              <li>
-                <Link href="/cookies" className="text-sm text-navy-muted hover:text-accent transition-colors">
-                  Cookies
-                </Link>
-              </li>
-              <li>
-                <a href="mailto:redaktion@republicofpixels.com" className="text-sm text-navy-muted hover:text-accent transition-colors">
-                  Kontakt
-                </a>
-              </li>
-            </ul>
-          </div>
+    <footer className="relative mt-16 overflow-hidden">
+      <div className="relative mx-auto max-w-content px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
+        {/* Wasserzeichen: gross, gedreht, rechts angeschnitten */}
+        <InstagramIcon className="pointer-events-none absolute -right-16 top-1/2 h-[340px] w-[340px] -translate-y-1/2 rotate-[8deg] text-[#0B0616] opacity-[0.14] sm:-right-8" />
+        <div className="relative">
+          <p className="mb-2.5 text-[12px] font-extrabold tracking-[0.14em] text-[#0B0616]/90">
+            DIE REPUBLIC AUF INSTAGRAM
+          </p>
+          <p className="mb-3 max-w-[16ch] text-[34px] font-black leading-[1.05] tracking-[-0.02em] text-[#0B0616] sm:text-[42px]">
+            Kein Post. Kein Reel. Verpasst.
+          </p>
+          <p className="mb-7 max-w-[44ch] text-[15px] leading-relaxed text-[#0B0616]/85 sm:text-[16px]">
+            Breaking-Karten, Reels und die besten Bilder - täglich im Feed.
+          </p>
+          <a
+            href="https://www.instagram.com/republicofpixels"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="inline-flex items-center gap-2.5 rounded-full bg-[#0B0616] px-6 py-3.5 text-[15px] font-extrabold text-[#02F0D1] transition-opacity hover:opacity-85"
+          >
+            <InstagramIcon className="h-5 w-5" />
+            @republicofpixels folgen
+          </a>
         </div>
-
-        <div className="mt-14 flex flex-col gap-4 border-t border-navy-border pt-8 text-xs text-navy-dim sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Republic of Pixels. Alle Rechte vorbehalten.</p>
-          <p>Unabhängige Berichterstattung. Bildmaterial mit Quellenangabe, Quellen in jedem Artikel verlinkt.</p>
-        </div>
+        <p className="relative mt-12 text-[12px] font-semibold text-[#0B0616]/80">
+          © 2026 Republic of Pixels - unabhängige, deutschsprachige Gaming-News.
+        </p>
       </div>
     </footer>
   );

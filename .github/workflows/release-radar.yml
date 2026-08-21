@@ -1,0 +1,37 @@
+name: Release-Radar
+
+# Am Ersten jedes Monats: Radar aus dem Artikelbestand nachfuellen und
+# die Abdeckung pruefen (laufender Monat + Folgemonat). Ist sie zu
+# duenn, wird der Lauf ROT und faellt auf - stilles Ausduennen gibt es
+# nicht. Zusaetzlich von Hand startbar.
+on:
+  schedule:
+    - cron: "15 5 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  radar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Radar nachfuellen und Abdeckung pruefen
+        run: node pipeline/release-radar.mjs
+      - name: Aenderungen committen
+        if: always()
+        run: |
+          git config user.name "Republic-Radar"
+          git config user.email "redaktion@republicofpixels.com"
+          if ! git diff --quiet src/content/releases.json; then
+            git add src/content/releases.json
+            git commit -m "Release-Radar: automatischer Monats-Nachtrag"
+            git pull --rebase --autostash origin main
+            git push
+          else
+            echo "Keine neuen Eintraege."
+          fi
