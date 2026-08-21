@@ -1,0 +1,183 @@
+{
+  "slug": "metal-gear-solid-4-master-collection-pc-test-2026",
+  "title": "MGS4 verlässt die PS3 nach 18 Jahren - doch bei 60 fps ist Schluss",
+  "subtitle": "Die Kritik feiert den Master-Collection-Port von Guns of the Patriots als beste Fassung des Spiels - mit einem technischen Haken",
+  "excerpt": "Solid Snakes letzte Mission war 18 Jahre lang an die PlayStation 3 gefesselt. Jetzt läuft sie in 4K - aber Konami hat sich an einer Stelle sichtbar zurückgehalten.",
+  "seoTitle": "Metal Gear Solid 4 im Test: PC-Port mit 4K, aber 60-fps-Sperre",
+  "metaDescription": "MGS4 erscheint am 27. August 2026 für PC: 4K, stabile 60 fps, Steam Deck Verified. Was die Kritik am Master-Collection-Port lobt - und was sie bemängelt.",
+  "category": "reviews",
+  "platforms": [
+    "pc"
+  ],
+  "tags": [
+    "Metal Gear Solid 4",
+    "Konami",
+    "Kojima Productions",
+    "Master Collection",
+    "PC",
+    "Stealth"
+  ],
+  "tldr": [
+    "Metal Gear Solid 4: Guns of the Patriots erscheint am 27. August 2026 als Master-Collection-Port für 50 US-Dollar bzw. 40 Pfund",
+    "Das Spiel war seit 2008 exklusiv an die PlayStation 3 gebunden - 18 Jahre ohne Neuauflage",
+    "Der Port bietet 4K-Auflösung und Steam Deck Verified, ist aber auf 60 fps festgenagelt",
+    "Die Kritik nennt ihn trotz Minimalaufwand die beste Art, MGS4 heute zu spielen"
+  ],
+  "whyItMatters": "MGS4 galt lange als der grosse Fehlende im Metal-Gear-Katalog: Wer keine PlayStation 3 mehr im Schrank hat, kam schlicht nicht mehr an Solid Snakes letzte Mission heran. Der Port beendet diese Lücke - und zeigt zugleich, wie viel handgebautes Stealth-Design in den Jahren der Open-World-Dominanz verloren gegangen ist.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Achtzehn Jahre lang war Metal Gear Solid 4: Guns of the Patriots ein Gespenst: gefeiert, oft zitiert, aber praktisch unspielbar für alle, die keine PlayStation 3 mehr besitzen. Am 27. August 2026 endet dieser Zustand. Konami bringt Solid Snakes letzte Mission als Teil der Master Collection auf den PC - und die Kritik von PC Gamer kommt zu einem klaren Schluss: Es ist die beste Fassung, die das Spiel je hatte. Perfekt ist sie deshalb nicht."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "27. Aug.",
+          "label": "Release des Master-Collection-Ports 2026"
+        },
+        {
+          "value": "50 $ / 40 £",
+          "label": "angesetzter Verkaufspreis"
+        },
+        {
+          "value": "18 Jahre",
+          "label": "war MGS4 an die PlayStation 3 gefesselt"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Ein Spiel, das aus der Zeit gefallen war"
+    },
+    {
+      "type": "paragraph",
+      "text": "MGS4 erschien 2008 und war damals Vorreiter jener Verschiebung, die Stealth vom eigenständigen Genre zur optionalen Spielweise degradierte. Danach blieb es liegen. Während die Master Collection Volume 1 im Jahr 2023 die klassischen Teile auf den PC hievte, fehlte ausgerechnet der Abschluss von Snakes Geschichte. Wer ihn nachholen wollte, brauchte alte Hardware. Entsprechend gross ist der Nachrichtenwert des Ports: Er schliesst die letzte grosse Lücke im Metal-Gear-Katalog auf dem PC."
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Kritik beschreibt das Wiedersehen als Beleg dafür, dass MGS4 keine kollektive Halluzination von 2008 war, sondern eine eigenwillige Meditation über Kriegsmüdigkeit, Automatisierung, abgestumpfte Gewalt - und Rückenschmerzen. Besonders Kojimas Bild einer Welt, die von Gier getrieben und von entscheidungsfreudigen KI-Systemen beschleunigt wird, wirke aus heutiger Sicht unangenehm treffsicher."
+    },
+    {
+      "type": "heading",
+      "text": "Was der Port technisch bringt - und wo er spart"
+    },
+    {
+      "type": "list",
+      "items": [
+        "4K-Auflösung, dafür eine feste Sperre bei 60 fps statt freier Bildrate",
+        "Auf der PS3 kämpfte das Spiel mit sehr unzuverlässigen 30 fps - die Verbesserung ist damit deutlich spürbar",
+        "Der Master-Collection-Launcher ist laut Test weniger sperrig als noch beim PC-Start von Volume 1 im Jahr 2023",
+        "Steam Deck Verified, getestet wurde zusätzlich auf einem High-End-PC mit RTX 5090",
+        "Kein Mehrspielermodus enthalten",
+        "Verkaufspreis: 50 US-Dollar beziehungsweise 40 Pfund"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Das Urteil dazu fällt zweigeteilt aus: Konami habe gute Arbeit geleistet, streckenweise aber eben auch nur das Nötigste. Die 60-fps-Sperre ist der offensichtlichste Kritikpunkt - 2026 rechnen viele PC-Spieler:innen mit offenen Bildraten. Gemessen an der Alternative, nämlich gar keinem spielbaren MGS4, wirke Haarspalterei allerdings unangebracht. Der Port funktioniere für sich genommen ebenso wie im Verbund mit Peace Walker."
+    },
+    {
+      "type": "heading",
+      "text": "Warum das Schleichen 2026 stärker wirkt als damals"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der eigentliche Gewinner des Wiedersehens ist laut Test das Stealth-Design. Snake trägt Betäubungspistole, nicht-tödliches CQC-Training und den OctoCamo-Anzug, der sich automatisch an die Umgebung anpasst. Gleichzeitig schleppt er genug Feuerkraft für einen Sturmtrupp mit sich herum - MPs, Schrotflinten, Sturmgewehre, Raketenwerfer, sogar eine Railgun, dazu Aufsätze im Baukastenprinzip. Das Spiel nimmt es niemandem übel, wenn er es wie einen Shooter spielt. Nur setzt Snake das unter erheblichen Stress."
+    },
+    {
+      "type": "paragraph",
+      "text": "Vor allem die Akte 1 und 2 gelten im Test als Stealth-Sandkästen, wie es sie heute kaum noch gibt: kompakte, lineare Karten voller Optionen, patrouilliert von Wachen, deren Verhalten nachvollziehbar und erlernbar ist. PMC-Soldaten können hören, ohne zu sehen, oder sehen, ohne genug zu erkennen; ihre Reaktionen kommunizieren die Alarmstufe über Körpersprache und Gerede statt über eingeblendete Erkennungsbalken. Dazwischen liegt die \"Evasion\"-Phase, in der Wachen hektisch die Umgebung absuchen - ein System, das Spannung erzeugt, wo moderne Spiele oft nur einen Timer ablaufen lassen."
+    },
+    {
+      "type": "paragraph",
+      "text": "Dazu kommt Kojimas Hang, die Spielenden mit Werkzeugen zu überschütten, deren Funktionen sich erst beim Ausprobieren erschliessen: der fahrbare Mark-2-Roboter mit Tarnung und Elektroschocker, mit dem sich Gegenstände aus riskanten Ecken bergen lassen, ein gutes Dutzend Wege, eine Wache auszuschalten, und ja, auch Playboy-Hefte als Ablenkungsmittel."
+    },
+    {
+      "type": "quote",
+      "text": "Guns of the Patriots wurde so lange so gründlich ignoriert, dass Haarspalterei hier schwerfällt - das ist die neue beste Art, einen meiner Favoriten zu spielen.",
+      "attribution": "PC Gamer, Test zu Metal Gear Solid 4"
+    },
+    {
+      "type": "heading",
+      "text": "Handgebaute Schlachtfelder statt offener Welt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Interessant ist die Einordnung gegenüber dem eigenen Nachfolger: Der Test nennt MGS5 ausdrücklich ein geliebtes Spiel, sieht dessen kleine, von allen Seiten begehbare Aussenposten aber von den dichten Schlachtfeldern des Vorgängers geschlagen. Als Höhepunkt gilt der Angriff auf Liquids Anwesen in Akt 2, bei dem Snake mehrere aktive Kriegszonen passieren muss - entweder indem er Partei ergreift oder indem er sich im Chaos verbirgt. Auf kleinem Raum stecken dort viele absichtsvoll versteckte Routen, vom Spalt in einer Erdwallkante bis zum Tauchgang unter einem flachen Fluss."
+    },
+    {
+      "type": "paragraph",
+      "text": "Diese Dichte macht den Vergleich mit aktuellen Produktionen unbarmherzig: Zwischen Wachen hindurchzukriechen, getarnt als Stück Erdboden, sei aufregender als das Ducken im hohen Gras von Horizon, Ghost of Tsushima oder modernen Assassin's-Creed-Teilen. Die Parallelbeschäftigung mit Splinter Cell: Chaos Theory im selben Jahr verstärkt den Befund, wie fade offene Welten das Leveldesign gemacht hätten."
+    },
+    {
+      "type": "heading",
+      "text": "Wo der Lack ab ist"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ungeschoren kommt MGS4 nicht davon. Der Test hält fest, dass die mäandernde Handlung und teils zähe Zwischensequenzen mit den Jahren nicht besser geworden sind. Reizvoll bleibt dafür die konservierte Zeitkapsel: der voll funktionsfähige iPod im Spiel (allerdings ohne Konamis damalige offizielle Metal-Gear-Podcasts) und Kojimas offenkundige Begeisterung für Waffen wie XM8 und P90."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Für Konami ist der Port ein Pflichtabschluss, für Spieler:innen ein Zugang, den es seit 2008 nicht gab. Wer MGS4 nie gespielt hat, bekommt zum ersten Mal eine technisch verlässliche Fassung; wer es kennt, findet ein Stealth-Design vor, das im Rückblick eher gewonnen als verloren hat. Die Sperre bei 60 fps bleibt der wunde Punkt einer Neuauflage, die an einigen Stellen erkennbar den kürzesten Weg gewählt hat - gemessen an achtzehn Jahren Wartezeit fällt dieser Makel jedoch überschaubar aus."
+    }
+  ],
+  "poll": {
+    "question": "4K ja, aber fest auf 60 fps begrenzt - wie schwer wiegt das für euch?",
+    "options": [
+      "Deal-Breaker, 2026 gehört die Bildrate entsperrt",
+      "Stabile 60 fps reichen mir völlig",
+      "Egal, Hauptsache MGS4 läuft endlich am PC",
+      "Ich warte auf Patch oder Sale"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": {
+    "label": "Klare Empfehlung",
+    "strengths": [
+      "Ausbalanciertes Stealth mit reaktiven, lesbaren Wachen und einer eigenen Evasion-Phase",
+      "Dichte, mehrdeutig begehbare Schlachtfelder - laut Kritik stärker als die offenen Areale von MGS5",
+      "Riesiges Arsenal an Werkzeugen, CQC-Moves und Gadgets wie dem Mark-2-Roboter",
+      "4K, stabile Bildrate und Steam Deck Verified statt der unzuverlässigen 30 fps der PS3-Fassung"
+    ],
+    "weaknesses": [
+      "Bildrate fest auf 60 fps begrenzt",
+      "Portierung wirkt stellenweise wie das absolute Minimum",
+      "Mäandernde Handlung und teils zähe Zwischensequenzen"
+    ],
+    "forWhom": "Für Stealth-Fans, die handgebaute Level statt offener Welten suchen, und für alle, die MGS4 mangels PlayStation 3 nie nachholen konnten.",
+    "verdict": "Die Kritik bewertet den Master-Collection-Port als die klar beste Art, Guns of the Patriots heute zu spielen: technisch aufgeräumt, wenn auch mit spürbarem Minimalaufwand seitens Konami. Inhaltlich gewinnt das Spiel im Rückblick vor allem durch sein Stealth-Design, während Erzähltempo und Zwischensequenzen gealtert sind.",
+    "recommendation": "Wer MGS4 nachholen oder wiedersehen will, kann zum Release am 27. August 2026 zugreifen - nur wer auf entsperrte Bildraten besteht, wartet besser auf einen Patch."
+  },
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-21T07:15:31.134Z",
+  "readingTimeMinutes": 4,
+  "heroVariant": "particles",
+  "sources": [
+    {
+      "title": "Metal Gear Solid 4: Guns of the Patriots review",
+      "url": "https://www.pcgamer.com/games/third-person-shooter/metal-gear-solid-4-guns-of-the-patriots-review/",
+      "publisher": "PC Gamer"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/metal-gear-solid-4-master-collection-pc-test-2026.webp",
+    "alt": "MGS4 verlässt die PS3 nach 18 Jahren - doch bei 60 fps ist Schluss",
+    "credit": "Bild: PC Gamer",
+    "sourceUrl": "https://www.pcgamer.com/games/third-person-shooter/metal-gear-solid-4-guns-of-the-patriots-review/",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "metal-gear-solid-4-switch-ps3-detail-entfernt-2026",
+    "metal-gear-solid-master-collection-vol-2-test-2026",
+    "marvel-tokon-fighting-souls-review-2026"
+  ]
+}

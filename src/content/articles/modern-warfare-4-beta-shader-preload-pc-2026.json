@@ -1,0 +1,150 @@
+{
+  "slug": "modern-warfare-4-beta-shader-preload-pc-2026",
+  "title": "Modern Warfare 4 beendet das Shader-Warten - ausser auf Steam",
+  "subtitle": "Infinity Ward und Beenox lassen die Shader künftig im Hintergrund vorladen, doch nicht jede Plattform profitiert gleich stark",
+  "excerpt": "Mit der Beta zu Call of Duty: Modern Warfare 4 soll der berüchtigte «Compiling Shaders»-Bildschirm am PC verschwinden. Nur wer über Steam startet, sieht ihn beim ersten Mal trotzdem noch.",
+  "seoTitle": "Modern Warfare 4: Shader-Preload beendet PC-Wartezeit",
+  "metaDescription": "Die Beta von Call of Duty: Modern Warfare 4 lädt Shader im Hintergrund vor und reduziert Zwangsneustarts. Was auf PC, PS5, Xbox und Switch 2 gilt.",
+  "category": "news",
+  "platforms": [
+    "pc",
+    "playstation",
+    "xbox",
+    "nintendo"
+  ],
+  "tags": [
+    "Call of Duty: Modern Warfare 4",
+    "Infinity Ward",
+    "Beenox",
+    "PC",
+    "Beta"
+  ],
+  "tldr": [
+    "Die MW-4-Beta lädt Shader am PC im Hintergrund vor, sobald der Download fertig ist - der lange «Compiling Shaders»-Bildschirm entfällt weitgehend",
+    "Standardmässig läuft der Preload nur im Battle.net-Launcher; auf Steam bleibt beim allerersten Start noch ein (verkürzter) Kompiliervorgang",
+    "Zum Full Release sollen Shader nur noch ein einziges Mal kompiliert werden - auch nach grossen Season-Updates",
+    "Erzwungene Neustarts nach Patches werden reduziert: PC und PS5 profitieren sofort, Xbox später, Switch 2 gar nicht"
+  ],
+  "whyItMatters": "Das Kompilieren von Shadern kostet PC-Spieler:innen bei jedem Treiber-Update und jedem grossen Patch Minuten, die sie lieber im Match verbringen würden. Wenn ausgerechnet die grösste Shooter-Reihe der Welt dieses Problem angeht, setzt das einen Massstab, an dem sich andere Publisher messen lassen müssen.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Infinity Ward und Co-Entwickler Beenox haben die letzten Details zur Beta von Call of Duty: Modern Warfare 4 nachgereicht - und neben Preload-Zeiten und PC-Anforderungen eine Neuerung angekündigt, die viele PC-Spieler:innen mehr interessieren dürfte als jede neue Map: Der berüchtigte «Compiling Shaders»-Bildschirm soll weitgehend verschwinden. Ab der Beta kann Call of Duty die Shader bereits vorladen, bevor das Spiel überhaupt gestartet wird."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "21. Aug.",
+          "label": "Start der ersten Beta-Phase, direkt nach dem «Call of Duty: Next»-Event"
+        },
+        {
+          "value": "20. Aug., 18 Uhr",
+          "label": "seitdem läuft der Preload der Beta-Daten"
+        },
+        {
+          "value": "1x",
+          "label": "so oft sollen Shader zum Full Release noch kompiliert werden - statt nach jedem Season-Update"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Warum das Warten überhaupt entsteht"
+    },
+    {
+      "type": "paragraph",
+      "text": "Zur Erinnerung: Shader teilen der Grafikkarte mit, wie sie das Bild berechnen soll - Beleuchtung, Schatten, Oberflächen, Effekte. Damit das Spiel mitten im Match nicht ins Stottern gerät, kompiliert es diese Anweisungen vorab. Das kostet Zeit, und zwar immer wieder: beim allerersten Start, nach einem GPU-Treiber-Update und nach jedem grossen Patch. Konsolen bleiben davon verschont, weil Hard- und Software dort standardisiert sind und die Downloads die fertigen Shader gleich mitbringen. Am PC ist das Warten inzwischen so selbstverständlich geworden, dass eher dessen Abwesenheit auffällt."
+    },
+    {
+      "type": "paragraph",
+      "text": "Genau hier setzt die Neuerung an. Sobald der Download abgeschlossen ist, startet der Shader-Preload im Hintergrund - ohne dass das Spiel laufen muss. Wer sich anschliessend einloggt, soll direkt ins Menü kommen statt auf einen Fortschrittsbalken zu starren."
+    },
+    {
+      "type": "heading",
+      "text": "Battle.net zuerst, Steam mit Einschränkung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ganz reibungslos läuft das während der Beta allerdings noch nicht. Am zuverlässigsten funktioniert das Feature im Battle.net-Launcher, denn nur dort startet der Preload standardmässig von allein. Auf Steam ist die Funktion zwar ebenfalls aktiv, beim allerersten Start bleibt der klassische Kompilier-Bildschirm aber bestehen - laut den Entwicklern immerhin deutlich kürzer als bisher. Ab dem zweiten Start greift dann auch dort der Preload."
+    },
+    {
+      "type": "paragraph",
+      "text": "Der eigentliche Gewinn kommt ohnehin erst später: Zum Full Release sollen die Shader auf dem PC nur noch ein einziges Mal kompiliert werden. Das wiederkehrende Warten nach jedem grossen Season-Update, das heute noch zum Alltag gehört, würde damit entfallen."
+    },
+    {
+      "type": "heading",
+      "text": "Weniger Zwangsneustarts - je nach Plattform"
+    },
+    {
+      "type": "paragraph",
+      "text": "Parallel dazu nimmt sich die Beta ein zweites Dauerärgernis vor: die Meldung «Update erfordert Neustart». Call-of-Duty-Veteran:innen kennen das Ritual - Spiel starten, Patch laden, Spiel neu starten, gelegentlich mehrfach hintereinander, weil das System die Updates nicht zusammenfasst. Besonders häufig trifft es jene, die längere Zeit pausiert haben. Künftig soll das Spiel mehr Arten von Patches herunterladen können, ohne dass sofort ein Neustart nötig wird."
+    },
+    {
+      "type": "paragraph",
+      "text": "Verschwinden wird das Problem nicht. Wer wegen eines Updates aus einem laufenden Match fliegt, muss weiterhin neu starten. Und der Fortschritt verteilt sich ungleich über die Plattformen:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "PC (unabhängig vom Store) und PlayStation 5: Verbesserung greift sofort",
+        "Xbox: Updates erfordern vorerst weiterhin einen Neustart, bis zum Launch soll das reduziert werden",
+        "Nintendo Switch 2: keine Verbesserung - weder in der Beta noch zum Release"
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "Das «Update erfordert Neustart»-Problem verschwindet zwar nicht komplett, aber unser Ziel ist simpel: Weniger erzwungene Neustarts und weniger Unterbrechungen zwischen euch und eurem nächsten Match.",
+      "attribution": "Infinity Ward im Entwickler-Blogpost"
+    },
+    {
+      "type": "heading",
+      "text": "Was ihr vor dem Beta-Start prüfen solltet"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die erste Beta-Phase beginnt am 21. August direkt im Anschluss an das Live-Event «Call of Duty: Next», auf dem ein Grossteil der neuen Maps und Modi gezeigt wird. Der Preload läuft bereits seit dem 20. August um 18:00 Uhr. Wichtig für alle am PC: TPM 2.0 und Secure Boot müssen aktiviert sein, sonst startet das Spiel gar nicht erst - eine Hürde, auf die Activision bereits mit einem eigenen Guide zu den strengen Anti-Cheat-Vorgaben reagiert hat."
+    },
+    {
+      "type": "paragraph",
+      "text": "Einordnung: Technische Komfortfunktionen machen selten Schlagzeilen, doch hier trifft eine Serie mit riesiger PC-Spielerschaft auf ein Problem, das die gesamte Branche plagt. Dass ausgerechnet Call of Duty den Shader-Preload zur Standardlösung erklärt, erhöht den Druck auf andere Publisher. Endgültig bewerten lässt sich der Fortschritt aber erst zum Release - denn das Versprechen, Shader wirklich nur noch einmal kompilieren zu müssen, muss ausgerechnet den Season-Update-Zyklus überstehen, an dem bisher jede vergleichbare Lösung gescheitert ist."
+    }
+  ],
+  "poll": {
+    "question": "Shader-Kompilieren am PC: Wie sehr nervt euch das Warten wirklich?",
+    "options": [
+      "Extrem - jede Minute vor dem Match ist verlorene Zeit",
+      "Geht so, solange es nur einmal passiert",
+      "Stört mich kaum, ich starte das Spiel nebenbei",
+      "Mich nervt viel mehr der Neustart-Zwang nach Patches"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-21T07:16:29.758Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "grid",
+  "sources": [
+    {
+      "title": "Call of Duty: Modern Warfare 4 - Beta beendet nerviges Shader-Kompilieren am PC",
+      "url": "https://www.eurogamer.de/call-of-duty-modern-warfare-4-beta-shader",
+      "publisher": "Eurogamer.de"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/modern-warfare-4-beta-shader-preload-pc-2026.webp",
+    "alt": "Modern Warfare 4 beendet das Shader-Warten - ausser auf Steam",
+    "credit": "Bild: Eurogamer.de",
+    "sourceUrl": "https://www.eurogamer.de/call-of-duty-modern-warfare-4-beta-shader",
+    "sourceWidth": 690,
+    "sourceHeight": 388
+  },
+  "relatedSlugs": [
+    "steam-gratis-aktion-over-the-top-wwi-front-mission-3-remake",
+    "call-of-duty-modern-warfare-4-multiplayer-trailer-beta-2026",
+    "marvel-tokon-raubkopie-performance-anti-cheat-2026"
+  ]
+}

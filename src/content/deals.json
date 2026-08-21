@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-21T07:04:38.368Z",
+  "updatedAt": "2026-08-21T07:16:33.396Z",
   "deals": [
     {
       "appId": 1771300,
@@ -35,15 +35,15 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2764460/f0a29d6c91be4e91e9fa2f384dd5ae695bfd6b5b/capsule_184x69.jpg?t=1786703049"
     },
     {
-      "appId": 2358720,
-      "title": "Black Myth: Wukong",
-      "discountPercent": 30,
-      "originalPrice": 5999,
-      "finalPrice": 4199,
+      "appId": 2163330,
+      "title": "Yet Another Zombie Survivors",
+      "discountPercent": 35,
+      "originalPrice": 1479,
+      "finalPrice": 961,
       "currency": "EUR",
-      "endsAt": "2026-08-25T16:00:00.000Z",
-      "url": "https://store.steampowered.com/app/2358720/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2358720/b7f722ddd5e23503f598586aa3700dd4d827bb2d/capsule_184x69.jpg?t=1760601605"
+      "endsAt": "2026-09-03T17:00:08.000Z",
+      "url": "https://store.steampowered.com/app/2163330/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2163330/765e6898cbb4faffa34991912775d813be58cc56/capsule_184x69.jpg?t=1787234279"
     },
     {
       "appId": 1643320,
