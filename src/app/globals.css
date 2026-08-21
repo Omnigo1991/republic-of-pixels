@@ -109,6 +109,17 @@ h3 {
   }
 }
 
+/* Weiches Erscheinen fuer Suchflaechen (Tim, 22.08.2026): kein
+   Aufpoppen, sondern ein kurzer, sanfter Tritt nach oben. */
+@keyframes einblenden {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-einblenden { animation: einblenden 180ms cubic-bezier(0.22, 1, 0.36, 1); }
+@media (prefers-reduced-motion: reduce) {
+  .animate-einblenden { animation: none; }
+}
+
 /* Scroll-Reveal (Apple-Stil): Sektionen blenden beim Hereinscrollen sanft ein.
    Gesteuert von src/components/Reveal.tsx via data-revealed. */
 .reveal {

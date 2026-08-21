@@ -42,14 +42,14 @@ export function SearchPanel({
   return (
     <div className="w-full">
       <div className="relative">
-        <SearchIcon className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-text-tertiary" />
+        <SearchIcon className="pointer-events-none absolute left-4 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-text-tertiary" />
         <input
           autoFocus
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Suche nach Spielen, Plattformen, Themen…"
-          className="w-full rounded-2xl border border-border-default bg-surface-panel py-4 pl-12 pr-4 text-lg text-text-primary placeholder:text-text-tertiary focus:outline-none focus:border-accent/60 focus:ring-2 focus:ring-accent/20"
+          className="h-11 w-full rounded-full border border-accent/30 bg-surface-panel pl-11 pr-4 text-[15px] text-text-primary placeholder:text-text-tertiary focus:border-accent/60 focus:outline-none"
         />
       </div>
 
@@ -152,7 +152,7 @@ export function SearchTrigger() {
           verdraengen (sonst wird das Logo weggeschoben). */}
       <div
         className={`absolute right-11 top-1/2 -translate-y-1/2 overflow-hidden rounded-full transition-[width,opacity] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-          open ? "w-[360px] opacity-100" : "pointer-events-none w-0 opacity-0"
+          open ? "w-[340px] opacity-100" : "pointer-events-none w-0 opacity-0"
         }`}
       >
         <input
@@ -161,14 +161,14 @@ export function SearchTrigger() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Spiele, Themen, Guides …"
-          className="h-10 w-[360px] rounded-full border-2 border-[rgba(2,240,209,0.35)] bg-[#11102A] px-5 text-[14px] text-[#EAF6FF] placeholder:text-[#93A6BC] focus:border-[rgba(2,240,209,0.7)] focus:outline-none"
+          className="h-10 w-[340px] rounded-full border border-[rgba(2,240,209,0.35)] bg-[#11102A] px-5 text-[14px] text-[#EAF6FF] placeholder:text-[#93A6BC] focus:border-[rgba(2,240,209,0.7)] focus:outline-none"
         />
       </div>
 
       {/* Trefferliste haengt AUSSERHALB des Animations-Containers, sonst
           wuerde sie vom overflow-hidden abgeschnitten. */}
       {open && query.trim() && (
-        <div className="suchliste absolute right-0 top-[52px] z-10 w-[400px] overflow-hidden rounded-2xl border border-border-subtle shadow-elevated">
+        <div className="suchliste animate-einblenden absolute right-0 top-[50px] z-10 w-[380px] overflow-hidden rounded-2xl border border-border-subtle shadow-elevated">
           {treffer.length === 0 ? (
             <p className="px-4 py-4 text-sm text-text-secondary">Nichts gefunden für «{query}».</p>
           ) : (
@@ -177,7 +177,7 @@ export function SearchTrigger() {
                 key={a.slug}
                 href={`/artikel/${a.slug}`}
                 onClick={() => { setOpen(false); setQuery(""); }}
-                className="block border-b border-border-subtle px-4 py-3 last:border-b-0 hover:bg-surface-panel"
+                className="block border-b border-border-subtle px-4 py-2.5 last:border-b-0 hover:bg-surface-panel"
               >
                 <p className="text-[11px] font-extrabold tracking-[0.06em] text-accent">
                   {CATEGORY_LABELS[a.category].toUpperCase()}

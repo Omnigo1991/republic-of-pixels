@@ -102,7 +102,7 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
             {!sucheAktiv && (
               <button
                 onClick={() => setSucheAktiv(true)}
-                className="mb-3 mt-0.5 flex w-full items-center gap-3 rounded-2xl bg-[#0C0B1A]/10 px-4 py-2.5 text-left text-[15px] font-semibold text-[#0B0616]"
+                className="mb-3 mt-0.5 flex h-11 w-full items-center gap-3 rounded-full bg-[#0C0B1A]/10 px-5 text-left text-[15px] font-semibold text-[#0B0616]"
               >
                 Suche nach Spielen, News, Guides …
                 <SearchIcon className="ml-auto h-5 w-5 shrink-0" />
@@ -118,7 +118,7 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
                 </button>
                 {/* Navy-Teppich, damit die dunkle Such-Optik auf dem
                     Cyan-Vorhang lesbar bleibt. */}
-                <div className="suchliste min-h-0 flex-1 overflow-y-auto rounded-2xl bg-bg-base p-4">
+                <div className="suchliste animate-einblenden min-h-0 flex-1 overflow-y-auto rounded-2xl bg-bg-base p-3">
                   <SearchPanel onNavigate={() => { setSucheAktiv(false); setOpen(false); }} />
                 </div>
               </div>
