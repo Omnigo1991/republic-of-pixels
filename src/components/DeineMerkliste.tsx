@@ -100,7 +100,9 @@ export function DeineMerkliste() {
         {eintraege.map((e) => (
           <div
             key={e.tag}
-            className="group relative rounded-2xl border border-border-subtle bg-surface-card p-4"
+            // Senkrecht exakt mittig (Tim, 21.08.2026): Das Nachbarfeld
+            // (Eingabe) macht die Zeile hoeher - der Text klebte oben.
+            className="group relative flex flex-col justify-center rounded-2xl border border-border-subtle bg-surface-card p-4"
           >
             <button
               onClick={() => entfernen(e.tag)}
