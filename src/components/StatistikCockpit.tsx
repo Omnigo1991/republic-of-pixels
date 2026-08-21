@@ -300,7 +300,7 @@ export function StatistikCockpit() {
           href="https://vercel.com/omnigo/republic-of-pixels-preview/analytics"
           target="_blank"
           rel="noreferrer noopener"
-          className="rounded-full border border-border-default px-4 py-2 text-sm text-text-secondary hover:border-accent/50 hover:text-accent transition-colors"
+          className="rounded-full border border-border-default px-4 py-2 text-center text-sm text-text-secondary hover:border-accent/50 hover:text-accent transition-colors max-sm:mx-auto"
         >
           Vercel Analytics öffnen ↗
         </a>

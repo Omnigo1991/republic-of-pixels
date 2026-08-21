@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getTopStory, getChronological, getByCategory, getPopularArticlesLive } from "@/lib/articles";
 import { TopStory } from "@/components/TopStory";
 import { NewsListe } from "@/components/NewsListe";
-import { NeuesteRail, NotchKarte, TickerBand, NewsletterBlock, SektionsKopf, MehrPille } from "@/components/StartseiteNeu";
+import { NeuesteRail, NotchKarte, NewsletterBlock, SektionsKopf, MehrPille } from "@/components/StartseiteNeu";
 import { SektionsBanner } from "@/components/SektionsBanner";
 import { PopularSection } from "@/components/PopularSection";
 import { ReleaseRadar } from "@/components/ReleaseRadar";
@@ -41,7 +41,6 @@ export default async function HomePage() {
     ...guides,
     ...chronological.filter((a) => a.category !== "guides").slice(8, 8 + Math.max(0, 4 - guides.length)),
   ].slice(0, 4);
-  const ticker = chronological.slice(0, 2);
   // Kleine Slider-Leiste vor den News (Tim, 19.08.2026) - dieselbe
   // Stelle wie auf der Live-Seite.
   const beliebt = await getPopularArticlesLive(8);
@@ -168,9 +167,6 @@ export default async function HomePage() {
         </section>
       </div>
 
-      <div className="mt-16">
-        <TickerBand articles={ticker} />
-      </div>
     </>
   );
 }
