@@ -1,0 +1,149 @@
+{
+  "slug": "windows-11-rgb-software-inpoutx64-bluescreens-2026",
+  "title": "Windows 11 stürzt ab - schuld ist laut Microsoft eure RGB-Beleuchtung",
+  "subtitle": "Ein Treiber namens inpoutx64 gerät mit Anti-Cheat aneinander und reisst Arc Raiders, The Finals und im schlimmsten Fall das ganze System mit",
+  "excerpt": "Nach dem Update KB5121003 häufen sich Freezes und Bluescreens. Microsoft hat die Ursache eingegrenzt - und zeigt auf eine Software, die auf fast jedem Gaming-PC läuft.",
+  "seoTitle": "Windows 11: RGB-Software verursacht Bluescreens in Spielen",
+  "metaDescription": "Microsoft bestätigt: RGB-Software löst nach dem Update KB5121003 Abstürze und Bluescreens in Arc Raiders, The Finals und Marvel Tokon aus. Das hilft jetzt.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "tags": [
+    "Windows 11",
+    "Microsoft",
+    "Arc Raiders",
+    "The Finals",
+    "Embark Studios",
+    "PC-Hardware"
+  ],
+  "tldr": [
+    "Nach dem Windows-11-Update KB5121003 melden Nutzer:innen Freezes, Spielabstürze und Bluescreens mit der Meldung EXCEPTION_ACCESS_VIOLATION.",
+    "Microsoft nennt als Auslöser Software für Peripherie und Bauteile mit RGB-Beleuchtung, konkret Treiberkomponenten mit Namen wie inpoutx64.",
+    "Besonders betroffen sind Online-Titel wie Arc Raiders, Marvel Tokon: Fighting Souls und The Finals.",
+    "Als Zwischenlösung lässt sich der Treiber über den Registry-Editor deaktivieren - Embark Studios empfiehlt denselben Weg."
+  ],
+  "whyItMatters": "RGB-Software läuft auf unzähligen Gaming-PCs im Hintergrund und gilt als harmlose Spielerei. Genau diese Software kann derzeit mitten im Match zum Totalabsturz führen - ohne dass die Ursache offensichtlich wäre. Wer weiss, wo er suchen muss, spart sich stundenlange Fehlersuche an Grafiktreibern und Spieldateien.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Wer seit dem jüngsten Windows-11-Update mitten in einer Runde Arc Raiders eingefroren ist, hat vermutlich zuerst den Grafiktreiber verdächtigt. Microsoft kommt nach eigener Untersuchung zu einem anderen Schluss: Verantwortlich für Freezes, Spielabstürze und im schlimmsten Fall Bluescreens ist demnach die Software, die auf vielen PCs nichts anderes tut, als Lüfter, Tastaturen und Arbeitsspeicher bunt leuchten zu lassen."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "KB5121003",
+          "label": "das monatliche Windows-11-Update, seit dem die Abstürze gehäuft auftreten"
+        },
+        {
+          "value": "25H2",
+          "label": "die Windows-11-Version, auf deren Health-Status-Seite Microsoft das Problem führt"
+        },
+        {
+          "value": "3 Spiele",
+          "label": "werden bislang namentlich als besonders betroffen genannt"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Ein Absturzmuster, das sich wiederholt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Berichte ähneln sich frappierend: Das Spiel hängt plötzlich und reagiert nicht mehr, danach folgt ein Bluescreen mit der Fehlermeldung EXCEPTION_ACCESS_VIOLATION, anschliessend startet der Rechner automatisch neu. Auffällig oft trifft es Online-Titel - genannt werden Arc Raiders, Marvel Tokon: Fighting Souls und The Finals. Also ausgerechnet Spiele, in denen ein Absturz nicht nur einen Spielstand kostet, sondern eine ganze Runde inklusive Beute oder Ranglistenpunkten."
+    },
+    {
+      "type": "paragraph",
+      "text": "Auf der Health-Status-Seite zu Windows 11 25H2 hat Microsoft das Problem inzwischen offiziell eingetragen und benennt die Richtung, in die es sucht."
+    },
+    {
+      "type": "quote",
+      "text": "Dieses Problem steht im Zusammenhang mit Peripheriegeräten oder internen Gerätekomponenten, die über RGB-Beleuchtungsfunktionen verfügen.",
+      "attribution": "Microsoft, Windows-11-25H2-Health-Status"
+    },
+    {
+      "type": "heading",
+      "text": "Der Verdächtige heisst inpoutx64"
+    },
+    {
+      "type": "paragraph",
+      "text": "Konkret geht es um Treiber und Codebestandteile, die RGB-Programme mitinstallieren, um die Beleuchtung überhaupt ansteuern zu können. Microsoft nennt Dateinamen in der Art von «inpoutx64». Startet ein bestimmtes Spiel, löst diese Komponente den Fehler aus."
+    },
+    {
+      "type": "paragraph",
+      "text": "Warum das so ist, hat Microsoft bislang nicht erklärt. Die naheliegende Erklärung: Solche Steuerungstreiber arbeiten im Kernel-Modus, also auf der höchsten Rechteebene des Systems, während die zugehörige Anwendung selbst im normalen Benutzerbereich läuft. Für moderne Anti-Cheat-Systeme ist genau diese Konstellation ein potenzielles Einfallstor für Manipulationen - sie blockieren den Treiber daher vorsorglich. Will die RGB-Software danach eine Lichtfarbe ändern oder einen Temperatursensor auslesen, läuft sie ins Leere. Wird der Treiber mitten in der Ausführung gestoppt, entsteht ein kritischer Kernel-Fehler, aus dem sich Windows nicht mehr sauber zurückholen kann - und schaltet zum Schutz der Hardware auf Bluescreen."
+    },
+    {
+      "type": "heading",
+      "text": "Was ihr jetzt tun könnt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Einen Patch gibt es noch nicht. Bis dahin bleibt nur die Notlösung, den fraglichen Treiber manuell über den Registry-Editor zu deaktivieren. Bemerkenswert: Embark Studios, Entwickler von Arc Raiders und The Finals, empfiehlt betroffenen Spieler:innen denselben Weg."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Betroffenen Treiber per Registry-Editor deaktivieren - dabei können einzelne RGB-Funktionen wegfallen",
+        "Alternativ auf universelle Tools wie SignalRGB oder OpenRGB ausweichen, sofern die Hardware unterstützt wird - deren Treiber arbeiten mit eng definierten Whitelists und lösen bei Anti-Cheat keinen Alarm aus",
+        "Abstürze über den Feedback-Hub melden: Microsoft priorisiert Fehler unter anderem anhand dieser Rückmeldungen"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Microsoft räumt selbst ein, den Zusammenhang noch nicht vollständig zu verstehen."
+    },
+    {
+      "type": "quote",
+      "text": "Wir arbeiten derzeit daran, die Beziehung zwischen diesen RGB-Komponenten und den Spielen zu verstehen, die dieses Problem auslösen.",
+      "attribution": "Microsoft, Windows-11-25H2-Health-Status"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Fall zeigt exemplarisch, wie eng verzahnt der PC als Spielplattform inzwischen ist: ein monatliches Systemupdate, ein Kernel-Treiber aus dem Zubehör-Ökosystem und ein Anti-Cheat, das seinen Job macht - drei Komponenten, die unabhängig voneinander funktionieren und gemeinsam den Rechner in die Knie zwingen. Die Schuldfrage bleibt entsprechend umstritten: Microsoft verweist auf die RGB-Software, in den Kommentarspalten wird dagegen argumentiert, dass es Microsofts Kernel und Microsofts System sei, in dem so etwas nicht passieren dürfe. Bis eine offizielle Korrektur erscheint, gilt für PC-Spieler:innen mit beleuchteter Hardware vor allem eines: Wer plötzlich mitten im Match einfriert, sollte zuerst die Lightshow ausschalten, bevor er den Grafiktreiber neu installiert."
+    }
+  ],
+  "poll": {
+    "question": "Wer trägt bei diesem Absturz-Chaos die Verantwortung?",
+    "options": [
+      "Microsoft - es ist ihr Kernel und ihr Update",
+      "Die Hersteller mit ihren Kernel-Treibern für Lichteffekte",
+      "Anti-Cheat-Systeme, die immer tiefer ins System greifen",
+      "Egal - Hauptsache, es gibt schnell einen Fix"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-22T18:57:16.660Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "controller",
+  "sources": [
+    {
+      "title": "Microsoft blames RGB peripherals for crashing Windows 11 — RGB software is causing blue screens, crashes, and game freezes",
+      "url": "https://www.tomshardware.com/software/windows/microsoft-blames-rgb-peripherals-for-crashing-windows-11-rgb-software-is-causing-blue-screens-crashes-and-game-freezes",
+      "publisher": "Tom's Hardware"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/windows-11-rgb-software-inpoutx64-bluescreens-2026.webp",
+    "alt": "Windows 11 stürzt ab - schuld ist laut Microsoft eure RGB-Beleuchtung",
+    "credit": "Bild: Tom's Hardware",
+    "sourceUrl": "https://www.tomshardware.com/software/windows/microsoft-blames-rgb-peripherals-for-crashing-windows-11-rgb-software-is-causing-blue-screens-crashes-and-game-freezes",
+    "sourceWidth": 1280,
+    "sourceHeight": 549
+  },
+  "relatedSlugs": [
+    "windows-11-august-update-kb5121003-spiele-crashes-2026",
+    "windows-11-kb5121003-spiele-abstuerze-arc-raiders-the-finals",
+    "arc-raiders-expeditions-pause-2027"
+  ]
+}
