@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { getTopStory, getChronological, getByCategory, getPopularArticlesLive } from "@/lib/articles";
 import { NewsListe } from "@/components/NewsListe";
-import { NotchKarte, NewsletterBlock, SektionsKopf, MehrPille } from "@/components/StartseiteNeu";
-import { SektionsBanner } from "@/components/SektionsBanner";
+import { NotchKarte, NewsletterBlock, MehrPille } from "@/components/StartseiteNeu";
+import { SektionsTitel, EventCountdown } from "@/components/next/SektionsTitel";
 import { ReleaseRadar } from "@/components/ReleaseRadar";
 import { DealRadar } from "@/components/DealRadar";
 import { PatchRadar } from "@/components/PatchRadar";
@@ -11,7 +11,6 @@ import { EventRadar } from "@/components/EventRadar";
 import { GeradeImGespraech } from "@/components/GeradeImGespraech";
 import { PixelRaten } from "@/components/PixelRaten";
 import { DeineMerkliste } from "@/components/DeineMerkliste";
-import { SectionDivider } from "@/components/SectionDivider";
 import { Reveal } from "@/components/Reveal";
 import { KinoHero, BeliebtSlider } from "@/components/next/KinoHero";
 import { BentoMosaik } from "@/components/next/BentoMosaik";
@@ -59,12 +58,10 @@ export default async function HomePage() {
       <BeliebtSlider artikel={beliebt} />
       <BentoMosaik kacheln={bentoKacheln} meldungen={bentoMeldungen} />
 
-      <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
+      <div className="flaechen-glas mx-auto max-w-content px-4 sm:px-6 lg:px-8">
         <section id="news" className="scroll-mt-16 lg:scroll-mt-[88px] pt-14 sm:pt-16">
           <Reveal>
-            <SektionsBanner titel="News aus der" cyan="Republic" />
-            <SektionsKopf titel="Alle News" />
-            <SectionDivider />
+            <SektionsTitel titel="Alle News" unter="Chronologisch, ohne Umwege - das Neueste zuerst." />
             <NewsListe articles={chronological} />
           </Reveal>
         </section>
@@ -77,9 +74,7 @@ export default async function HomePage() {
 
         <section id="guides" className="scroll-mt-16 lg:scroll-mt-[88px] pt-14 sm:pt-16">
           <Reveal>
-            <SektionsBanner titel="Die Republic-" cyan="Guides" />
-            <SektionsKopf titel="Alle Guides" />
-            <SectionDivider />
+            <SektionsTitel titel="Guides" unter="Tipps, Einstiege und Erklärstücke aus der Republic." />
             {/* GLEICH GROSS WIE DIE KARTEN UNTER DEM HERO (Tim, 20.08.2026):
                 vier Spalten auf voller Breite ergeben dieselbe Kartenbreite
                 (~310 px) wie die Dreierreihe neben der Seitenleiste. */}
@@ -97,9 +92,11 @@ export default async function HomePage() {
         {/* Ein Dach ueber die vier Radare (Tim, 17.08.2026): oben der
             Sektionstitel im Bannerstil, darunter die Radare mit ihren
             schlichten Ueberschriften wie auf der Live-Seite. */}
+        <EventCountdown />
+
         <section id="radare" className="scroll-mt-16 lg:scroll-mt-[88px] pt-14 sm:pt-16">
           <Reveal>
-            <SektionsBanner titel="Die Republic-" cyan="Radare" />
+            <SektionsTitel titel="Die Radare" unter="Alles Wichtige im Blick. Automatisch aktuell." mittig />
           </Reveal>
           <Reveal>
             <ReleaseRadar />
@@ -125,7 +122,7 @@ export default async function HomePage() {
             Sie stehen deshalb unter einem gemeinsamen Titel. */}
         <section className="pt-14 sm:pt-16">
           <Reveal>
-            <SektionsBanner titel="Deine" cyan="Republic" />
+            <SektionsTitel titel="Deine Republic" unter="Was du dir gemerkt hast - und was du rätst." />
           </Reveal>
           {/* MERKLEISTE UEBER DIE NACHBARSEKTION HEBEN (Tim, 20.08.2026):
               Jedes Reveal blendet mit einer Transformation ein und bildet
