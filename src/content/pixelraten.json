@@ -1,20 +1,19 @@
 {
-  "datum": "2026-08-21",
-  "nummer": 13,
-  "loesung": "Cities: Skylines",
+  "datum": "2026-08-22",
+  "nummer": 14,
+  "loesung": "Celeste",
   "akzeptiert": [
-    "citiesskylines",
-    "citiesskylines"
+    "celeste"
   ],
   "hinweise": [
-    "Erschienen 2015 · Städtebau",
-    "Verkehrsplanung"
+    "Erschienen 2018 · Plattformer",
+    "Berg-Besteigung"
   ],
   "bilder": [
-    "/images/pixelraten/2026-08-21-s1.jpg",
-    "/images/pixelraten/2026-08-21-s2.jpg",
-    "/images/pixelraten/2026-08-21-s3.jpg",
-    "/images/pixelraten/2026-08-21-s4.jpg",
-    "/images/pixelraten/2026-08-21-s5.jpg"
+    "/images/pixelraten/2026-08-22-s1.jpg",
+    "/images/pixelraten/2026-08-22-s2.jpg",
+    "/images/pixelraten/2026-08-22-s3.jpg",
+    "/images/pixelraten/2026-08-22-s4.jpg",
+    "/images/pixelraten/2026-08-22-s5.jpg"
   ]
 }
