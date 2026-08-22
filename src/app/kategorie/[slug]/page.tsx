@@ -8,7 +8,6 @@ import {
 } from "@/lib/articles";
 import type { Category, Platform } from "@/lib/types";
 import { ArticleListItem } from "@/components/ArticleListItem";
-import { CategoryChipBar } from "@/components/CategoryChipBar";
 import { Masthead } from "@/components/Masthead";
 
 const CATEGORY_KEYS = CATEGORY_NAV.map((c) => c.key) as Category[];
@@ -65,7 +64,10 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
   return (
     <>
       <Masthead variant="section" word={label} />
-      <CategoryChipBar active={slug} />
+      {/* Keine Pillen-Leiste mehr (Tim, 23.08.2026): Desktop hat sie
+          nie gehabt, am Handy sah die aktive Pille schlecht aus. Die
+          Rubriken bleiben über das Menü erreichbar - Mobile und
+          Desktop zeigen jetzt dasselbe Bild. */}
       <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
         <h1 className="text-[30px] font-black tracking-tight text-text-primary sm:text-[36px]">
           {label}
