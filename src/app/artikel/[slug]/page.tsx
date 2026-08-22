@@ -8,6 +8,7 @@ import {
 } from "@/lib/articles";
 import { CATEGORY_LABELS } from "@/lib/types";
 import { ArticleMedia } from "@/components/ArticleMedia";
+import { BildKachel } from "@/components/next/Bausteine";
 import { LeakBanner } from "@/components/Badges";
 import { PlatformIcon } from "@/components/PlatformIcons";
 import { ArticleBody } from "@/components/ArticleBody";
@@ -237,7 +238,9 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           </h2>
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {related.map((a) => (
-              <NotchKarte key={a.slug} article={a} />
+              <div key={a.slug} className="h-[230px]">
+                <BildKachel article={a} />
+              </div>
             ))}
           </div>
           <div className="mt-10 text-center">

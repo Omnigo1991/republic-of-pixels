@@ -406,11 +406,10 @@ code {
 
 /* ---------- Volles Cyan wird Verlauf ---------- */
 .bg-accent {
-  background: linear-gradient(112deg, #FF2E97, #FF6BC0 44%, #02F0D1 122%);
+  background: linear-gradient(120deg, rgba(2, 240, 209, 0.92) 0%, rgba(2, 240, 209, 0.84) 46%, rgba(255, 46, 151, 0.84) 100%);
 }
 .bg-accent h2, .bg-accent p, .bg-accent span, .bg-accent div,
-.bg-accent dt, .bg-accent dd, .bg-accent .text-accent,
-body > footer h2, body > footer p {
+.bg-accent dt, .bg-accent dd, .bg-accent .text-accent {
   color: #0B0616;
   text-shadow: none;
 }
@@ -526,9 +525,8 @@ header {
    Verlauf wurde wieder verworfen. */
 /* Footer = Social-Panel (Tim, 21.08.2026, Variante A): vollflaechiger
    Newsletter-Verlauf, dunkle Schrift, Instagram-Wasserzeichen. */
-body > footer {
-  background: linear-gradient(112deg, #FF2E97, #FF6BC0 44%, #02F0D1 122%);
-}
+/* Die Social-Buehne des neuen Designs traegt den Seitengrund - der
+   Verlauf lebt in der Schrift und im Lichtschein weiter. */
 
 /* ---------- EIN Takt fuer alle wiederkehrenden Abstaende ----------
    Gemessen war Banner→Unterueberschrift 20 px bei News und Guides,

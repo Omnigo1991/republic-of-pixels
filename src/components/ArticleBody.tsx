@@ -105,12 +105,14 @@ export function ArticleBody({
                   // dunkel - Cyan auf Magenta waere nicht lesbar.
                   <div
                     key={j}
-                    className="personenkachel relative overflow-hidden rounded-2xl px-5 py-6 text-left"
+                    className="relative overflow-hidden rounded-[18px] border border-white/[0.14] bg-white/[0.07] px-5 py-5 text-left backdrop-blur-[18px]"
                   >
-                    <p className={`font-black leading-[1.15] tracking-tight text-[#0B0616] ${wertGroesse}`}>
+                    {/* Neues Design (22.08.2026): Glaskachel, die Zahl im
+                        Markenverlauf statt einer bunten Vollfläche. */}
+                    <p className={`w-fit bg-[linear-gradient(120deg,#02F0D1,#FF2E97)] bg-clip-text font-extrabold leading-[1.15] tracking-tight text-transparent ${wertGroesse}`}>
                       {s.value}
                     </p>
-                    <p className="mt-2 break-words text-[13px] leading-snug text-[#0B0616]/85">{s.label}</p>
+                    <p className="mt-1.5 break-words text-[12.5px] leading-snug text-[#8F95A9]">{s.label}</p>
                   </div>
                 ))}
               </div>
