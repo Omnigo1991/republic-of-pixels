@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T06:58:16.746Z",
+  "updatedAt": "2026-08-22T09:49:48.223Z",
   "deals": [
     {
       "appId": 1771300,
@@ -11,17 +11,6 @@
       "endsAt": "2026-08-24T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/1771300/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1771300/93e28946c46f09d761bbfab1e17e8c1c4a8323a0/capsule_184x69.jpg?t=1777975568"
-    },
-    {
-      "appId": 1868140,
-      "title": "DAVE THE DIVER",
-      "discountPercent": 50,
-      "originalPrice": 1999,
-      "finalPrice": 999,
-      "currency": "EUR",
-      "endsAt": "2026-08-30T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1868140/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1868140/cfdc3d184fb5f3cbf9fff9b25bb1bce6f1baf673/capsule_184x69.jpg?t=1786442860"
     },
     {
       "appId": 4001890,
@@ -66,6 +55,17 @@
       "endsAt": "2026-08-31T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/1643320/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1643320/87ade1fa0e9869388368228258d758e040a3f651/capsule_184x69_alt_assets_7_german.jpg?t=1787314871"
+    },
+    {
+      "appId": 3065940,
+      "title": "Gallipoli",
+      "discountPercent": 25,
+      "originalPrice": 2999,
+      "finalPrice": 2249,
+      "currency": "EUR",
+      "endsAt": "2026-09-03T17:00:12.000Z",
+      "url": "https://store.steampowered.com/app/3065940/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3065940/8b129934c39739bc486f62fbd72d9356d230d6bb/capsule_184x69_alt_assets_0.jpg?t=1787348331"
     }
   ]
 }
