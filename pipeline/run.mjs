@@ -32,6 +32,10 @@ const ARTICLES_DIR = join(ROOT, "src", "content", "articles");
 const PUBLIC_DIR = join(ROOT, "public");
 
 const MAX_ARTICLES_PER_RUN = Number(process.env.MAX_ARTICLES_PER_RUN ?? 2);
+// Manueller Nachzug (Tim, 23.08.2026, nach dem verpassten Elite-3-Leak):
+// MANUAL_URLS umgeht die Feeds und schickt vorgegebene Quell-Links durch
+// die NORMALE Strecke - Auswahl, Generierung und alle Wächter unverändert.
+const MANUAL_URLS = (process.env.MANUAL_URLS ?? "").split(/[\s,]+/).filter(Boolean);
 const MAX_CANDIDATE_AGE_H = 48;
 const STATE_RETENTION_DAYS = 21;
 const HERO_VARIANTS = ["circuit", "controller", "particles", "waveform", "grid"];
@@ -143,7 +147,7 @@ ${publishedBlock}
 
 Aufgaben:
 1. Erkenne Duplikate: Meldungen zur selben Nachricht bilden einen Cluster (Indizes zusammenfassen).
-2. Wähle die maximal ${MAX_ARTICLES_PER_RUN} relevantesten Cluster für unser Magazin aus. Kriterien: Nachrichtenwert für deutschsprachige Gamer:innen, Aktualität, Substanz. Ausdrücklich erwünscht sind auch Hardware- und Konsolen-Themen mit Gaming-Relevanz: kommende Konsolen und Leaks dazu (z. B. PlayStation 6, nächste Xbox/Project Helix, Switch-Nachfolger), GPUs/CPUs fürs Gaming, Handhelds. NICHT erwünscht: reine Deals-/Gewinnspiel-/Guide-Meldungen, Kleinst-Hardware ohne Gaming-Bezug (Peripherie-Restposten, Büro-Hardware), Meldungen über einzelne Streamer.
+2. Wähle die maximal ${MAX_ARTICLES_PER_RUN} relevantesten Cluster für unser Magazin aus. Kriterien: Nachrichtenwert für deutschsprachige Gamer:innen, Aktualität, Substanz. Ausdrücklich erwünscht sind auch Hardware- und Konsolen-Themen mit Gaming-Relevanz: kommende Konsolen und Leaks dazu (z. B. PlayStation 6, nächste Xbox/Project Helix, Switch-Nachfolger), GPUs/CPUs fürs Gaming, Handhelds, sowie offizielle First-Party-Controller und -Zubehör (z. B. ein neuer Elite-Controller oder DualSense-Nachfolger) - auch als Leak. NICHT erwünscht: reine Deals-/Gewinnspiel-/Guide-Meldungen, Dritthersteller-Kleinst-Hardware ohne Gaming-Bezug (Peripherie-Restposten, Büro-Hardware), Meldungen über einzelne Streamer.
 3. Pro ausgewähltem Cluster bestimme:
    - "indices": alle zugehörigen Kandidaten-Indizes, den faktenreichsten zuerst
    - "category": "breaking" (nur bei wirklich grossen Nachrichten), "news", "leaks" oder "reviews"
@@ -441,18 +445,64 @@ Wenn fehlerfrei: {"fixes":[]}`;
   return article;
 }
 
+// Baut aus vorgegebenen URLs Kandidaten für die normale Auswahl: Titel und
+// Anriss kommen aus dem <title>- bzw. description-Tag der Quellseite.
+async function manuelleKandidaten(urls) {
+  const items = [];
+  for (const url of urls) {
+    let titel = url;
+    let anriss = "";
+    try {
+      const res = await fetch(url, {
+        headers: { "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)", Accept: "text/html,*/*" },
+        signal: AbortSignal.timeout(15000),
+        redirect: "follow",
+      });
+      const html = await res.text();
+      const t = html.match(/<title[^>]*>([^<]+)</i);
+      if (t) titel = t[1].trim();
+      const d =
+        html.match(/<meta[^>]+property=["']og:description["'][^>]+content=["']([^"']+)/i) ||
+        html.match(/<meta[^>]+name=["']description["'][^>]+content=["']([^"']+)/i);
+      if (d) anriss = d[1];
+    } catch (err) {
+      console.log(`  Warnung: ${url} nicht lesbar (${err.message}) - Titel bleibt die URL`);
+    }
+    items.push({
+      guid: url,
+      link: url,
+      title: titel,
+      summary: anriss,
+      feedId: "manuell",
+      feedName: "Manuell",
+      lang: "en",
+      publishedAt: new Date(),
+    });
+  }
+  return items;
+}
+
 async function main() {
   console.log(`Pipeline-Lauf ${new Date().toISOString()} (max. ${MAX_ARTICLES_PER_RUN} Artikel)`);
   const state = loadState();
   const slugs = existingSlugs();
 
-  console.log("1/5 Feeds abrufen …");
-  const results = await fetchAllFeeds(FEEDS);
+  console.log(MANUAL_URLS.length ? `1/5 Manueller Lauf: ${MANUAL_URLS.length} vorgegebene Quellen` : "1/5 Feeds abrufen …");
+  const results = MANUAL_URLS.length
+    ? [{ items: await manuelleKandidaten(MANUAL_URLS) }]
+    : await fetchAllFeeds(FEEDS);
   const cutoff = Date.now() - MAX_CANDIDATE_AGE_H * 3600000;
+  // DREI CHANCEN STATT EINER (Tim, 23.08.2026): Vorher wurde jeder
+  // Kandidat nach EINEM Lauf als gesehen begraben - wer in einem
+  // nachrichtenstarken Lauf nicht unter die Top 2 kam, war für immer weg
+  // (so verpassten wir den Elite-3-Leak). Jetzt darf ein Kandidat bis zu
+  // drei Auswahlrunden antreten, danach ist Schluss.
+  const verbraucht = (eintrag) =>
+    !!eintrag && (typeof eintrag === "string" ? true : (eintrag.n ?? 3) >= 3);
   const candidates = results
     .flatMap((r) => r.items)
     .filter((it) => it.publishedAt && it.publishedAt.getTime() > cutoff)
-    .filter((it) => !state.seen[hashId(it.guid)])
+    .filter((it) => !verbraucht(state.seen[hashId(it.guid)]))
     // Bei 26 Feeds: nur die 150 neuesten Kandidaten in die Auswahl geben,
     // damit der Auswahl-Prompt fokussiert bleibt.
     .sort((a, b) => b.publishedAt.getTime() - a.publishedAt.getTime())
@@ -573,10 +623,20 @@ async function main() {
   // sie im nächsten Lauf nicht erneut bewertet werden. State-Einträge älter
   // als STATE_RETENTION_DAYS werden entfernt.
   const now = new Date().toISOString();
-  for (const c of candidates) state.seen[hashId(c.guid)] = now;
+  const gewaehlt = new Set(selected.flatMap((s) => s.indices.map((i) => candidates[i]?.guid)));
+  for (const c of candidates) {
+    const k = hashId(c.guid);
+    const alt = state.seen[k];
+    // Gewählte Kandidaten sind endgültig verbraucht; nicht gewählte
+    // sammeln eine Runde und dürfen (bis n=3) erneut antreten. Alte
+    // Einträge im Zeitstempel-Format gelten als verbraucht.
+    const runden = typeof alt === "object" && alt ? (alt.n ?? 3) + 1 : 1;
+    state.seen[k] = { t: now, n: gewaehlt.has(c.guid) ? 3 : Math.min(runden, 3) };
+  }
   const keepAfter = Date.now() - STATE_RETENTION_DAYS * 86400000;
   for (const [k, v] of Object.entries(state.seen)) {
-    if (new Date(v).getTime() < keepAfter) delete state.seen[k];
+    const zeit = typeof v === "string" ? v : v?.t;
+    if (new Date(zeit).getTime() < keepAfter) delete state.seen[k];
   }
   writeFileSync(STATE_FILE, JSON.stringify(state, null, 2) + "\n");
 

@@ -16,6 +16,10 @@ on:
         description: "Maximale Artikel in diesem Lauf"
         default: "2"
         required: false
+      manual_urls:
+        description: "Manueller Nachzug: Quell-URLs (durch Leerzeichen oder Komma getrennt) statt Feeds"
+        default: ""
+        required: false
 
 concurrency:
   group: news-pipeline
@@ -74,6 +78,7 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           MAX_ARTICLES_PER_RUN: ${{ github.event.inputs.max_articles || '2' }}
+          MANUAL_URLS: ${{ github.event.inputs.manual_urls || '' }}
           # Fuer die Story-Radar-Warteschlange. Der Anon-Schluessel ist
           # oeffentlich (er steckt ohnehin im Browser-Buendel); fehlen die
           # Werte, werden Auftraege einfach uebersprungen.

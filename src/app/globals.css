@@ -424,7 +424,10 @@ body > footer a { text-shadow: none; }
 
 /* ---------- Linien, Kopf und Fuss ---------- */
 .bg-accent.h-0\.5, [class*="h-0.5"][class*="w-full"] {
-  background: linear-gradient(90deg, #02F0D1, #FF2E97, #E8FF3D);
+  /* Zwei Töne statt drei (Tim, 23.08.2026): Das Gelb am Linienende war
+     die einzige dritte Akzentfarbe der Seite - jetzt läuft die Linie wie
+     das Kopfband von Magenta nach Cyan. */
+  background: linear-gradient(90deg, #FF2E97, #02F0D1);
   height: 2px;
 }
 /* ---------- Kopfband im Verlauf (Tim, 19.08.2026) ----------
