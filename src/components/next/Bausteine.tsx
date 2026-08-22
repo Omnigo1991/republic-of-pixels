@@ -27,9 +27,17 @@ export function spielName(a: Article): string {
   return CATEGORY_LABELS[a.category].toUpperCase();
 }
 
-/** Leaks tragen Magenta, alles andere Cyan. */
+/** Leaks tragen Magenta, alles andere Cyan - für Punkte und Flächen. */
 export function punktFarbe(a: Article): string {
   return a.category === "leaks" || a.isLeakOrRumor ? "#FF2E97" : "#02F0D1";
+}
+
+/** Dieselbe Unterscheidung für SCHRIFT: Das satte Magenta erreicht auf
+ *  Navy nur 4,19:1 und liegt damit unter der Lesbarkeitsnorm für kleine
+ *  Schrift (gemessen 22.08.2026). Der hellere Ton der Markenfamilie
+ *  schafft 6,4:1 - der Punkt daneben bleibt satt. */
+export function labelFarbe(a: Article): string {
+  return a.category === "leaks" || a.isLeakOrRumor ? "#FF6BC0" : "#02F0D1";
 }
 
 export function KategorieChip({ article, klein = false }: { article: Article; klein?: boolean }) {
@@ -100,7 +108,7 @@ export function MeldungsZeile({ article, erste }: { article: Article; erste: boo
       </span>
       <span
         className="mt-1.5 block text-[10px] font-bold uppercase tracking-[0.08em]"
-        style={{ color: punktFarbe(article) }}
+        style={{ color: labelFarbe(article) }}
       >
         {spielName(article)}
       </span>

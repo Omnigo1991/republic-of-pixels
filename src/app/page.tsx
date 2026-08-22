@@ -58,6 +58,8 @@ export default async function HomePage() {
       <BeliebtSlider artikel={beliebt} />
       <BentoMosaik kacheln={bentoKacheln} meldungen={bentoMeldungen} />
 
+      <EventCountdown />
+
       <div className="flaechen-glas mx-auto max-w-content px-4 sm:px-6 lg:px-8">
         <section id="news" className="scroll-mt-16 lg:scroll-mt-[88px] pt-14 sm:pt-16">
           <Reveal>
@@ -65,12 +67,6 @@ export default async function HomePage() {
             <NewsListe articles={chronological} />
           </Reveal>
         </section>
-
-        {/* Newsletter direkt nach den News (Tim, 16.08.2026), als Kachel
-            in der Inhaltsspalte wie bei Polygon - nicht randlos. */}
-        <div className="mt-14 sm:mt-16">
-          <NewsletterBlock artikelBilder={[topStory, ...kleinreihe].slice(0, 3)} />
-        </div>
 
         <section id="guides" className="scroll-mt-16 lg:scroll-mt-[88px] pt-14 sm:pt-16">
           <Reveal>
@@ -92,8 +88,6 @@ export default async function HomePage() {
         {/* Ein Dach ueber die vier Radare (Tim, 17.08.2026): oben der
             Sektionstitel im Bannerstil, darunter die Radare mit ihren
             schlichten Ueberschriften wie auf der Live-Seite. */}
-        <EventCountdown />
-
         <section id="radare" className="scroll-mt-16 lg:scroll-mt-[88px] pt-14 sm:pt-16">
           <Reveal>
             <SektionsTitel titel="Die Radare" unter="Alles Wichtige im Blick. Automatisch aktuell." mittig />
@@ -137,6 +131,11 @@ export default async function HomePage() {
           <Reveal>
             <PixelRaten />
           </Reveal>
+          {/* Newsletter am Ende neben den persönlichen Bauteilen -
+              dieselbe Stelle wie im abgenommenen Entwurf. */}
+          <div className="mt-8">
+            <NewsletterBlock artikelBilder={[topStory, ...kleinreihe].slice(0, 3)} />
+          </div>
         </section>
       </div>
 

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Article } from "@/lib/types";
 import { PlaceholderArt } from "@/components/PlaceholderArt";
-import { CHIP, VERLAUFSTEXT, KategorieChip, punktFarbe, spielName } from "./Bausteine";
+import { CHIP, VERLAUFSTEXT, KategorieChip, punktFarbe, labelFarbe, spielName } from "./Bausteine";
 
 // Kino-Hero (Tim-Freigabe 22.08.2026, Variante HC): Der Aufmacher füllt
 // die Bühne, Titel und Anriss stehen im Bild, darunter schweben drei
@@ -64,7 +64,7 @@ export function KinoHero({ artikel, weitere }: { artikel: Article; weitere: Arti
               >
                 <span
                   className="block text-[10px] font-bold uppercase tracking-[0.07em]"
-                  style={{ color: punktFarbe(a) }}
+                  style={{ color: labelFarbe(a) }}
                 >
                   {spielName(a)}
                 </span>
