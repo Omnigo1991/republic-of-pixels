@@ -71,12 +71,12 @@ export function RadarBento({ getestete }: { getestete: Article[] }) {
             {termine.map((e) => (
               <div key={e.name} className="flex items-center gap-3.5 rounded-[14px] bg-white/[0.06] px-4 py-3.5">
                 <span className="shrink-0 whitespace-nowrap text-[11px] font-extrabold tracking-[0.03em] text-accent">
-                  {e.dateLabel ?? e.dateStart}
+                  {(e.dateLabel ?? e.dateStart ?? "").replace(/\s*\((Gerücht|erwartet)\)\s*$/i, "")}
                 </span>
                 <span className="text-[14.5px] font-semibold text-[#F2F8FF]">{e.name}</span>
-                {e.status === "geruecht" && (
+                {(e.status === "geruecht" || e.status === "erwartet") && (
                   <span className="ml-auto shrink-0 rounded-full border border-magenta/40 bg-magenta/[0.16] px-2.5 py-[3px] text-[10px] font-bold uppercase tracking-[0.06em] text-[#FF6BC0]">
-                    Gerücht
+                    {e.status === "geruecht" ? "Gerücht" : "Erwartet"}
                   </span>
                 )}
               </div>
