@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
 import { getTopStory, getChronological, getByCategory, getPopularArticlesLive } from "@/lib/articles";
-import { TopStory } from "@/components/TopStory";
 import { NewsListe } from "@/components/NewsListe";
-import { NeuesteRail, NotchKarte, NewsletterBlock, SektionsKopf, MehrPille } from "@/components/StartseiteNeu";
-import { SektionsBanner } from "@/components/SektionsBanner";
-import { TagesGruss } from "@/components/TagesGruss";
-import { PopularSection } from "@/components/PopularSection";
+import { NotchKarte, NewsletterBlock, MehrPille } from "@/components/StartseiteNeu";
+import { SektionsTitel, EventCountdown } from "@/components/next/SektionsTitel";
 import { ReleaseRadar } from "@/components/ReleaseRadar";
 import { DealRadar } from "@/components/DealRadar";
 import { PatchRadar } from "@/components/PatchRadar";
@@ -14,9 +11,9 @@ import { EventRadar } from "@/components/EventRadar";
 import { GeradeImGespraech } from "@/components/GeradeImGespraech";
 import { PixelRaten } from "@/components/PixelRaten";
 import { DeineMerkliste } from "@/components/DeineMerkliste";
-import { SectionDivider } from "@/components/SectionDivider";
 import { Reveal } from "@/components/Reveal";
-import { Masthead } from "@/components/Masthead";
+import { KinoHero, BeliebtSlider } from "@/components/next/KinoHero";
+import { BentoMosaik } from "@/components/next/BentoMosaik";
 
 // Canonical gegen Host-Duplikate (Google-Meldung 08.08.2026): die
 // Startseite deklariert ihre Originaladresse explizit.
@@ -33,7 +30,6 @@ export const metadata: Metadata = {
 export default async function HomePage() {
   const topStory = getTopStory();
   const chronological = getChronological(topStory.slug);
-  const rail = chronological.slice(0, 5);
   const kleinreihe = chronological.slice(5, 8);
   const guides = getByCategory("guides");
   // Guide-Reihe: echte Guides zuerst, aufgefüllt mit den neuesten
@@ -45,51 +41,27 @@ export default async function HomePage() {
   // Kleine Slider-Leiste vor den News (Tim, 19.08.2026) - dieselbe
   // Stelle wie auf der Live-Seite.
   const beliebt = await getPopularArticlesLive(8);
+  // Mosaik: 14 Bildkacheln, danach 9 Schlagzeilen für die Glasspalte.
+  // Alles, was oben schon steht, fällt weg - nichts doppelt sich.
+  const obenGezeigt = new Set([topStory.slug, ...kleinreihe.map((a) => a.slug), ...beliebt.map((a) => a.slug)]);
+  const fuersMosaik = chronological.filter((a) => !obenGezeigt.has(a.slug));
+  const bentoKacheln = fuersMosaik.slice(0, 14);
+  const bentoMeldungen = fuersMosaik.slice(14, 23);
 
   return (
     <>
-      <Masthead variant="brand" />
-      <section>
-        {/* Willkommensgruss ueber dem Aufmacher (Tim, 18.08.2026): jetzt
-            in derselben Sektionsbeschriftung wie alle anderen Sektionen,
-            nicht mehr in Handschrift. Die Abstaende Kopf→Gruss und
-            Gruss→Aufmacher bleiben gleich gross und sind an der
-            gerenderten Schriftflaeche nachgemessen. */}
-        <div className="mx-auto max-w-content px-4 pt-[42px] sm:px-6 sm:pt-[52px] lg:px-8">
-          <TagesGruss />
-          <div className="grid gap-8 lg:grid-cols-[1fr_372px] lg:gap-11">
-            <div>
-              <TopStory article={topStory} />
-              {/* WIE BEI DEN GUIDES (Tim, 20.08.2026): zwei Karten
-                  nebeneinander im Verhaeltnis 4:3. Vorher stand am Handy
-                  EINE Karte mit 280 px hohem Bild da - fast so gross wie
-                  der Aufmacher daneben, wodurch die zweite Meldung
-                  wichtiger wirkte als die erste. Jetzt passen zwei
-                  Artikel in denselben Platz, und der Aufmacher bleibt
-                  eindeutig der Aufmacher. Ab sm wieder alle drei. */}
-              <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5">
-                {kleinreihe.map((a, i) => (
-                  <div key={a.slug} className={i > 1 ? "hidden sm:block" : ""}>
-                    <NotchKarte article={a} bildHoehe="aspect-[4/5] h-auto sm:aspect-auto sm:h-[280px]" />
-                  </div>
-                ))}
-              </div>
-            </div>
-            <NeuesteRail articles={rail} />
-          </div>
-        </div>
-      </section>
+      {/* NEUES DESIGN (Tim-Freigabe 22.08.2026, Entwurf "Republic Next"):
+          Kino-Hero mit dem Aufmacher über die volle Bühne, darunter die
+          Beliebt-Reihe und das Bento-Mosaik. Der Tagesgruss entfällt hier
+          - die Schlagzeile im Markenverlauf ist der Auftakt. */}
+      <KinoHero artikel={topStory} weitere={kleinreihe} />
+      <BeliebtSlider artikel={beliebt} />
+      <BentoMosaik kacheln={bentoKacheln} meldungen={bentoMeldungen} />
 
-      <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
-        <Reveal>
-          <PopularSection articles={beliebt} />
-        </Reveal>
-
+      <div className="flaechen-glas mx-auto max-w-content px-4 sm:px-6 lg:px-8">
         <section id="news" className="scroll-mt-16 lg:scroll-mt-[88px] pt-14 sm:pt-16">
           <Reveal>
-            <SektionsBanner titel="News aus der" cyan="Republic" />
-            <SektionsKopf titel="Alle News" />
-            <SectionDivider />
+            <SektionsTitel titel="Alle News" unter="Chronologisch, ohne Umwege - das Neueste zuerst." />
             <NewsListe articles={chronological} />
           </Reveal>
         </section>
@@ -102,9 +74,7 @@ export default async function HomePage() {
 
         <section id="guides" className="scroll-mt-16 lg:scroll-mt-[88px] pt-14 sm:pt-16">
           <Reveal>
-            <SektionsBanner titel="Die Republic-" cyan="Guides" />
-            <SektionsKopf titel="Alle Guides" />
-            <SectionDivider />
+            <SektionsTitel titel="Guides" unter="Tipps, Einstiege und Erklärstücke aus der Republic." />
             {/* GLEICH GROSS WIE DIE KARTEN UNTER DEM HERO (Tim, 20.08.2026):
                 vier Spalten auf voller Breite ergeben dieselbe Kartenbreite
                 (~310 px) wie die Dreierreihe neben der Seitenleiste. */}
@@ -122,9 +92,11 @@ export default async function HomePage() {
         {/* Ein Dach ueber die vier Radare (Tim, 17.08.2026): oben der
             Sektionstitel im Bannerstil, darunter die Radare mit ihren
             schlichten Ueberschriften wie auf der Live-Seite. */}
+        <EventCountdown />
+
         <section id="radare" className="scroll-mt-16 lg:scroll-mt-[88px] pt-14 sm:pt-16">
           <Reveal>
-            <SektionsBanner titel="Die Republic-" cyan="Radare" />
+            <SektionsTitel titel="Die Radare" unter="Alles Wichtige im Blick. Automatisch aktuell." mittig />
           </Reveal>
           <Reveal>
             <ReleaseRadar />
@@ -150,7 +122,7 @@ export default async function HomePage() {
             Sie stehen deshalb unter einem gemeinsamen Titel. */}
         <section className="pt-14 sm:pt-16">
           <Reveal>
-            <SektionsBanner titel="Deine" cyan="Republic" />
+            <SektionsTitel titel="Deine Republic" unter="Was du dir gemerkt hast - und was du rätst." />
           </Reveal>
           {/* MERKLEISTE UEBER DIE NACHBARSEKTION HEBEN (Tim, 20.08.2026):
               Jedes Reveal blendet mit einer Transformation ein und bildet

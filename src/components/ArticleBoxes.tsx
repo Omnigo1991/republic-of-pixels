@@ -2,16 +2,19 @@ import type { Review, Source } from "@/lib/types";
 import { ReviewLabelBadge } from "./Badges";
 
 export function TldrBox({ items }: { items: string[] }) {
+  // Neues Design (22.08.2026): Glaskarte, Chip mit Cyan-Punkt, Punkte
+  // mit hängendem Einzug - gleiche Schriftgrösse wie der Leak-Hinweis.
   return (
-    <div className="my-8 rounded-2xl border border-border-default bg-surface-card p-6">
-      <p className="mb-3 flex items-center gap-2 text-[13px] font-semibold tracking-wide text-accent">
-        <BoltIcon className="h-4 w-4" /> KURZFASSUNG
-      </p>
-      <ul className="flex flex-col gap-2.5">
+    <div className="my-8 rounded-[22px] border border-white/[0.14] bg-white/[0.07] p-6 text-[16px] leading-[1.5] text-[#D7D9E5] backdrop-blur-[18px] sm:px-7">
+      <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/[0.22] bg-white/[0.12] px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.08em] text-white backdrop-blur-[14px]">
+        <span className="h-[7px] w-[7px] rounded-full bg-accent" />
+        Kurzfassung
+      </span>
+      <ul className="m-0 list-none p-0">
         {items.map((item, i) => (
-          <li key={i} className="flex gap-2.5 text-[15px] leading-relaxed text-text-primary">
-            <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent" />
-            {item}
+          <li key={i} className="mb-2.5 flex gap-3">
+            <span className="mt-[9px] h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+            <span className="flex-1">{item}</span>
           </li>
         ))}
       </ul>
@@ -20,15 +23,14 @@ export function TldrBox({ items }: { items: string[] }) {
 }
 
 export function WhyItMattersBox({ text }: { text: string }) {
+  // Neues Design (22.08.2026): getönte Glasbühne statt Cyan-Vollfläche -
+  // Farbe mit Bedeutung, ohne dem Fliesstext die Ruhe zu nehmen.
   return (
-    // Cyan statt Navy (Tim, 17.08.2026): EINE Kachelfarbe auf der ganzen
-    // Seite - wie Event-Buehne, Newsletter und Radar-Karten. Auf
-    // Navy-Grund ginge eine Navy-Box unter.
-    <div className="my-8 rounded-2xl bg-accent p-6">
-      <p className="mb-2 text-[13px] font-semibold tracking-wide text-navy/70">
-        WARUM DAS WICHTIG IST
-      </p>
-      <p className="text-[15px] leading-relaxed text-navy">{text}</p>
+    <div className="my-9 rounded-[20px] border border-accent/30 bg-[linear-gradient(135deg,rgba(2,240,209,0.16),rgba(255,46,151,0.1))] p-6 sm:px-7">
+      <span className="text-[11px] font-bold uppercase tracking-[0.1em] text-accent">
+        Warum das wichtig ist
+      </span>
+      <p className="mt-3 text-[17px] leading-[1.5] text-[#EAF6FF] sm:text-[18px]">{text}</p>
     </div>
   );
 }

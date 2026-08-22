@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
-import { Masthead } from "@/components/Masthead";
 
 export const metadata: Metadata = { title: "Cookies" };
 
 export default function CookiesPage() {
   return (
     <>
-      <Masthead />
     <div className="mx-auto max-w-article px-4 sm:px-6 py-14">
       <h1 className="text-[30px] font-black tracking-tight sm:text-[36px] text-text-primary">Cookies</h1>
 

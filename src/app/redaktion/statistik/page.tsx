@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Masthead } from "@/components/Masthead";
 import { StatistikCockpit } from "@/components/StatistikCockpit";
 
 export const metadata: Metadata = {
@@ -10,7 +9,6 @@ export const metadata: Metadata = {
 export default function StatistikSeite() {
   return (
     <>
-      <Masthead />
       <StatistikCockpit />
     </>
   );

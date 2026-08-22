@@ -31,15 +31,13 @@ export function CategoryPill({ category, onDark = false }: { category: Category;
 }
 
 export function LeakBanner() {
+  // Kompakte Zeile statt eigener Warnbox (Tim, 22.08.2026): Der Hinweis
+  // nahm zu viel Platz, der Kicker oben nennt den Leak ohnehin schon.
   return (
-    <div className="flex items-start gap-3 rounded-2xl border border-warning/30 bg-warning/[0.08] px-4 py-3">
-      <span className="mt-0.5 text-warning">⚠</span>
-      <p className="text-sm leading-relaxed text-text-primary">
-        <strong className="text-warning">Gerücht / Leak:</strong> Dieser Artikel behandelt unbestätigte
-        Informationen aus Leaks oder Insider-Quellen. Wir kennzeichnen das klar und ordnen ein, was
-        gesichert ist und was Spekulation bleibt.
-      </p>
-    </div>
+    <p className="rounded-[18px] border border-white/[0.14] bg-white/[0.07] px-5 py-3.5 text-[13px] leading-[1.45] text-[#8F95A9] backdrop-blur-[18px]">
+      <strong className="font-bold text-magenta">Gerücht / Leak:</strong> unbestätigte Informationen -
+      wir kennzeichnen, was gesichert ist.
+    </p>
   );
 }
 

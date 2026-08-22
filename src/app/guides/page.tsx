@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getByCategory } from "@/lib/articles";
 import { ArticleListItem } from "@/components/ArticleListItem";
-import { Masthead } from "@/components/Masthead";
 
 // Guides-Rubrik (Tim-Freigabe 15.08.2026, "Schritt 1").
 //
@@ -26,7 +25,6 @@ export default function GuidesPage() {
 
   return (
     <>
-      <Masthead />
       <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
         <header className="mb-8">
           <h1 className="text-[30px] font-black tracking-tight sm:text-[36px] text-text-primary">

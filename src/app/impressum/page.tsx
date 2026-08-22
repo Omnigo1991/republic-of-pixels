@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
-import { Masthead } from "@/components/Masthead";
 
 export const metadata: Metadata = { title: "Impressum" };
 
 export default function ImpressumPage() {
   return (
     <>
-      <Masthead />
     <div className="mx-auto max-w-article px-4 sm:px-6 py-14">
       <h1 className="text-[30px] font-black tracking-tight sm:text-[36px] text-text-primary">Impressum</h1>
 

@@ -2,7 +2,6 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
-import { Masthead } from "@/components/Masthead";
 import { AnmeldeDialog } from "@/components/AuthDialog";
 import { getSupabase } from "@/lib/supabase";
 
@@ -50,7 +49,6 @@ export default function ProfilWeiche() {
 
   return (
     <>
-      <Masthead />
       <div className="mx-auto max-w-content px-4 py-16 text-center text-sm text-text-tertiary sm:px-6">
         {status === "laedt" && <p>Einen Moment …</p>}
       </div>

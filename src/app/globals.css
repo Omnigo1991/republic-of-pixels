@@ -406,11 +406,10 @@ code {
 
 /* ---------- Volles Cyan wird Verlauf ---------- */
 .bg-accent {
-  background: linear-gradient(112deg, #FF2E97, #FF6BC0 44%, #02F0D1 122%);
+  background: linear-gradient(120deg, rgba(2, 240, 209, 0.92) 0%, rgba(2, 240, 209, 0.84) 46%, rgba(255, 46, 151, 0.84) 100%);
 }
 .bg-accent h2, .bg-accent p, .bg-accent span, .bg-accent div,
-.bg-accent dt, .bg-accent dd, .bg-accent .text-accent,
-body > footer h2, body > footer p {
+.bg-accent dt, .bg-accent dd, .bg-accent .text-accent {
   color: #0B0616;
   text-shadow: none;
 }
@@ -526,9 +525,8 @@ header {
    Verlauf wurde wieder verworfen. */
 /* Footer = Social-Panel (Tim, 21.08.2026, Variante A): vollflaechiger
    Newsletter-Verlauf, dunkle Schrift, Instagram-Wasserzeichen. */
-body > footer {
-  background: linear-gradient(112deg, #FF2E97, #FF6BC0 44%, #02F0D1 122%);
-}
+/* Die Social-Buehne des neuen Designs traegt den Seitengrund - der
+   Verlauf lebt in der Schrift und im Lichtschein weiter. */
 
 /* ---------- EIN Takt fuer alle wiederkehrenden Abstaende ----------
    Gemessen war Banner→Unterueberschrift 20 px bei News und Guides,
@@ -595,4 +593,74 @@ a[class*="rounded-full"][class*="border-accent"] {
   .text-\[11px\] {
     font-size: 12px;
   }
+}
+
+/* ---------- Neues Design (Zweig redesign-next, ab 22.08.2026) ----------
+   Bento-Mosaik: sechs Spalten mit festen Plätzen, ab 900 px eine Spalte.
+   Zwei Spalten hatten die Kacheln so verschmälert, dass der Titel das
+   Bild verdeckte (Tims Fund am 22.08.2026). */
+.bento {
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 212px;
+}
+@media (max-width: 900px) {
+  .bento { grid-template-columns: 1fr; grid-auto-rows: auto; }
+  .bento > div { grid-area: auto !important; min-height: 264px; }
+  .bento > .spalte { min-height: 0; height: auto; }
+}
+
+/* Neues Design: Schlagzeilen laufen in Gross-Kleinschreibung und ohne
+   Farbversatz - der Markenverlauf ersetzt beides. Die alte Regel für
+   h1/h2 gilt weiter für die bestehenden Sektionen. */
+.schrift-normal,
+.schrift-normal h1,
+.schrift-normal h2 {
+  text-transform: none !important;
+  text-shadow: none !important;
+}
+
+/* Das Kopfband schwebt - der Inhalt beginnt darunter. Der Kino-Hero
+   auf der Startseite läuft bewusst dahinter durch (er trägt sein
+   eigenes Dunkel oben). */
+main { padding-top: 76px; }
+main:has(> .hero-voll) { padding-top: 0; }
+
+/* Menue im neuen Design: dunkles Glas statt Cyan-Vorhang. Die alten
+   Regeln faerbten jeden Text darin auf Navy - hier wieder auf Hell. */
+.menue-glas, .menue-glas * { color: #F2F8FF; }
+.menue-glas .text-accent, .menue-glas [class*="text-accent"] { color: #02F0D1; }
+.menue-glas [class*="bg-navy"], .menue-glas [class*="bg-surface"] {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+.menue-glas [class*="border-"] { border-color: rgba(255, 255, 255, 0.14); }
+.menue-glas input {
+  background: rgba(255, 255, 255, 0.07) !important;
+  color: #F2F8FF !important;
+  border-color: rgba(255, 255, 255, 0.16) !important;
+}
+.menue-glas input::placeholder { color: #8F95A9 !important; }
+
+/* ---------- Angleich der bestehenden Sektionen (Etappe 4) ----------
+   Die Radare, Karten und Listen tragen noch die Flächen des alten
+   Designs. Statt jedes Bauteil einzeln umzuschreiben, werden ihre
+   Flächen hier auf Glas umgestellt - eine Quelle, ein Aussehen.
+   Ausgenommen bleibt alles im neuen Bento (dort steht Glas schon). */
+.flaechen-glas .bg-surface-card,
+.flaechen-glas .bg-surface-panel,
+.flaechen-glas [class*="bg-surface-card"],
+.flaechen-glas [class*="bg-surface-panel"] {
+  background: rgba(255, 255, 255, 0.07) !important;
+  backdrop-filter: blur(18px);
+  border-color: rgba(255, 255, 255, 0.14) !important;
+}
+.flaechen-glas [class*="border-border-"] { border-color: rgba(255, 255, 255, 0.14) !important; }
+/* Kappecken weichen runden Ecken - das neue Design kennt nur Radien. */
+.flaechen-glas .treppe-tl,
+.flaechen-glas .treppe-tr,
+.flaechen-glas .treppe-innen {
+  clip-path: none !important;
+  border-radius: 22px !important;
+  background: transparent !important;
+  padding: 0 !important;
 }
