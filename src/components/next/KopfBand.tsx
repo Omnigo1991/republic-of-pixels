@@ -34,10 +34,10 @@ export function KopfBand() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/brand/r-mark.png" alt="" aria-hidden="true" className="h-[26px] w-auto sm:h-[30px]" />
             <span className="leading-[1.05]">
-              <span className="block text-[12px] font-extrabold tracking-[0.02em] sm:text-[13px]">
+              <span className="block text-[13px] font-bold tracking-[-0.015em] sm:text-[14px]">
                 REPUBLIC
               </span>
-              <span className="mt-[2px] block text-[7px] font-extrabold tracking-[0.34em] text-accent sm:text-[7.5px]">
+              <span className="mt-[2px] block text-[7.5px] font-bold tracking-[0.2em] text-accent sm:text-[8px]">
                 OF PIXELS
               </span>
             </span>
@@ -45,7 +45,11 @@ export function KopfBand() {
 
           <nav className="hidden items-center gap-8 lg:flex" aria-label="Bereiche">
             {BEREICHE.map((b) => (
-              <Link key={b.href} href={b.href} className="transition-opacity hover:opacity-70">
+              <Link
+                key={b.href}
+                href={b.href}
+                className="text-[14.5px] font-bold tracking-[-0.015em] transition-opacity hover:opacity-70"
+              >
                 {b.text}
               </Link>
             ))}
