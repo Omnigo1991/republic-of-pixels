@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Article } from "@/lib/types";
 import { GLAS } from "./Bausteine";
+import { NewsletterKachel } from "./SchlussKacheln";
 import charts from "@/content/charts.json";
 import deals from "@/content/deals.json";
 import releases from "@/content/releases.json";
@@ -156,9 +157,10 @@ export function RadarBento({ getestete }: { getestete: Article[] }) {
         </div>
       </div>
 
-      {/* Deal-Radar in eigener Box */}
+      {/* Deal-Radar neben dem Newsletter - Pixel-Raten ist vorerst raus */}
+      <div className="mt-4 grid gap-4 lg:grid-cols-[3fr_2fr]">
       {dealListe.length > 0 && (
-        <div className={`${KARTE} mt-4`}>
+        <div className={KARTE}>
           <Kopf titel="Deal-Radar" rechts="Steam · echte Rabatte, keine Fake-Streichpreise" />
           <div className="grid gap-3 sm:grid-cols-3">
             {dealListe.map((d) => (
@@ -179,6 +181,8 @@ export function RadarBento({ getestete }: { getestete: Article[] }) {
           </div>
         </div>
       )}
+        <NewsletterKachel />
+      </div>
     </div>
   );
 }

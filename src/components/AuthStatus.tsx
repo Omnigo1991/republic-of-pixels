@@ -148,11 +148,11 @@ export function AuthStatus() {
             <img
               src={profil.avatar_url}
               alt=""
-              className="h-7 w-7 rounded-full border border-current/20"
+              className="h-7 w-7 shrink-0 rounded-full border border-current/20"
               referrerPolicy="no-referrer"
             />
           ) : (
-            <span className="flex h-7 w-7 items-center justify-center rounded-full border border-current/40 text-xs font-bold">
+            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-current/40 text-xs font-bold">
               {name.slice(0, 1).toUpperCase()}
             </span>
           )}

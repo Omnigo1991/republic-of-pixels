@@ -588,7 +588,11 @@ a[class*="rounded-full"][class*="border-accent"] {
   button[class*="rounded-full"][class*="w-11"],
   a[class*="rounded-full"][class*="w-9"],
   a[class*="rounded-full"][class*="w-10"],
-  a[class*="rounded-full"][class*="w-11"] {
+  a[class*="rounded-full"][class*="w-11"],
+  a[class*="rounded-full"][class*="w-[34px]"],
+  button[class*="rounded-full"][class*="w-[34px]"],
+  a[class*="rounded-full"][class*="w-[38px]"],
+  button[class*="rounded-full"][class*="w-[38px]"] {
     min-width: 44px;
     min-height: 44px;
   }
@@ -692,9 +696,9 @@ main:has(> .hero-voll) { padding-top: 0; }
   margin-bottom: 6px;
 }
 
-/* Pixel-Raten als kompakte Kachel wie im Entwurf (gemessen: dort
-   632x193 px, Raetselbild 190x130 quer - hier war es 720x550 mit einem
-   hohen Bild). */
+/* Pixel-Raten als kompakte Kachel wie im Entwurf (dort 632x193 mit
+   Raetselbild 190x130 quer). Die Innenkarte ist das DRITTE Kind der
+   Sektion - Kopf, Trennlinie, Karte (nachgesehen im Baum 22.08.2026). */
 .raten-kachel > section { padding: 0 !important; }
 .raten-kachel h2 {
   font-size: 20px !important;
@@ -703,8 +707,7 @@ main:has(> .hero-voll) { padding-top: 0; }
   text-transform: none !important;
 }
 .raten-kachel [class*="h-0.5"] { display: none !important; }
-/* Innenkarte wird zur Zeile ohne eigene Flaeche */
-.raten-kachel > section > div:nth-child(2) {
+.raten-kachel section > div:nth-child(3) {
   flex-direction: row !important;
   align-items: center !important;
   gap: 26px !important;
@@ -712,20 +715,24 @@ main:has(> .hero-voll) { padding-top: 0; }
   border: 0 !important;
   background: transparent !important;
   border-radius: 0 !important;
+  margin: 0 !important;
 }
-/* Raetselbild klein und quer */
-.raten-kachel section > div:nth-of-type(2) > div:nth-of-type(1),
-.raten-kachel [class*="sm:w-"] {
+/* Raetselbild klein, quer, ohne Leerraum darunter */
+.raten-kachel section > div:nth-child(3) > div:nth-of-type(1) {
   width: 190px !important;
-  min-width: 190px !important;
-  max-width: 190px !important;
   flex: 0 0 190px !important;
+  align-self: center !important;
+  height: auto !important;
   border-radius: 14px !important;
 }
 .raten-kachel img { aspect-ratio: 19 / 13 !important; }
-/* Text kompakter */
-.raten-kachel p { font-size: 14.5px !important; line-height: 1.4 !important; }
-.raten-kachel [class*="h-9"] { height: 30px !important; width: 30px !important; font-size: 12.5px !important; }
+/* Textspalte: Frage, Beschreibung, Eingabe - Stufenknoepfe und
+   Hinweiszeile kennt der Entwurf nicht. */
+.raten-kachel section > div:nth-child(3) > div:nth-of-type(2) { align-self: center !important; }
+.raten-kachel section > div:nth-child(3) > div:nth-of-type(2) > div:nth-of-type(1),
+.raten-kachel section > div:nth-child(3) > div:nth-of-type(2) > div:nth-of-type(3) { display: none !important; }
+.raten-kachel section > div:nth-child(3) > div:nth-of-type(2) > p:nth-of-type(1) { font-size: 16px !important; }
+.raten-kachel section > div:nth-child(3) > div:nth-of-type(2) > p:nth-of-type(2) { font-size: 14.5px !important; line-height: 1.4 !important; }
 
 /* Letzte Reste des alten Kleids: Cyan-Raender und Alt-Flaechen werden
    auf die Glas-Rezeptur gezogen (Tim, 22.08.2026: nichts aus der alten

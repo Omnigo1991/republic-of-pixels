@@ -66,7 +66,7 @@ export function MenueKarte() {
         onClick={() => setOffen((v) => !v)}
         aria-label={offen ? "Menü schliessen" : "Menü öffnen"}
         aria-expanded={offen}
-        className="grid h-[34px] w-[34px] place-items-center rounded-full bg-white/[0.14] sm:h-[38px] sm:w-[38px]"
+        className="grid h-[34px] w-[34px] shrink-0 place-items-center rounded-full bg-white/[0.14] sm:h-[38px] sm:w-[38px]"
       >
         <svg viewBox="0 0 16 16" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" className="h-4 w-4">
           {offen ? <path d="M3.5 3.5l9 9M12.5 3.5l-9 9" /> : <path d="M2 4h12M2 8h12M2 12h12" />}

@@ -103,7 +103,7 @@ export function TeilenKnopf() {
           <div
             role="dialog"
             aria-label="Seite teilen"
-            className="fixed inset-x-0 bottom-0 z-50 rounded-t-2xl border-t border-border-subtle bg-bg-elevated p-4 pb-6 shadow-elevated sm:inset-x-auto sm:bottom-24 sm:right-5 sm:w-[328px] sm:rounded-2xl sm:border sm:pb-4"
+            className="fixed inset-x-0 bottom-0 z-50 rounded-t-[24px] border-t border-white/[0.16] bg-[rgba(18,18,30,0.92)] p-4 pb-6 backdrop-blur-[22px] sm:inset-x-auto sm:bottom-24 sm:right-5 sm:w-[328px] sm:rounded-[24px] sm:border sm:pb-4"
           >
             <div className="mx-auto mb-4 h-1 w-9 rounded-full bg-border-default sm:hidden" />
             <div className="mb-4 flex items-center gap-3">
@@ -149,7 +149,7 @@ export function TeilenKnopf() {
         onClick={teilen}
         aria-label="Diese Seite teilen"
         aria-expanded={offen}
-        className={`fixed bottom-[calc(1.25rem+env(safe-area-inset-bottom,0px))] right-5 z-50 h-[52px] w-[52px] items-center justify-center rounded-full border border-accent/35 bg-[rgba(18,17,38,0.85)] text-accent backdrop-blur transition-all duration-300 hover:border-accent/70 sm:bottom-[calc(1.5rem+env(safe-area-inset-bottom,0px))] sm:right-6 sm:flex ${offen ? "hidden" : "flex"} ${
+        className={`fixed bottom-[calc(1.25rem+env(safe-area-inset-bottom,0px))] right-5 z-50 h-[52px] w-[52px] items-center justify-center rounded-full border border-white/[0.16] bg-[rgba(12,11,26,0.78)] text-[#F2F8FF] backdrop-blur-[22px] backdrop-saturate-150 transition-all duration-300 hover:border-white/[0.3] sm:bottom-[calc(1.5rem+env(safe-area-inset-bottom,0px))] sm:right-6 sm:flex ${offen ? "hidden" : "flex"} ${
           sichtbar || offen
             ? "translate-y-0 opacity-100"
             : "pointer-events-none translate-y-4 opacity-0"

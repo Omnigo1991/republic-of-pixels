@@ -10,7 +10,7 @@ import { GLAS, VERLAUFSTEXT, BildKachel, MeldungsZeile } from "./Bausteine";
 // 900 px bricht alles in EINE Spalte um: bei zwei Spalten waren die
 // Kacheln so schmal, dass der Titel das Bild verdeckte (Tim, 22.08.).
 const PLAETZE: { bereich: string; titel: string }[] = [
-  { bereich: "1/1/3/5", titel: "text-[22px] sm:text-[30px]" },
+  { bereich: "1/1/3/5", titel: "text-[17px] lg:text-[30px]" },
   { bereich: "1/5/2/7", titel: "text-[17px]" },
   { bereich: "2/5/3/7", titel: "text-[17px]" },
   { bereich: "3/1/4/3", titel: "text-[17px]" },
