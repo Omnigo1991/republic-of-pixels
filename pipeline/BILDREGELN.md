@@ -181,3 +181,32 @@ einen Slot verfallen lassen als etwas Mittelmässiges zeigen.
 
 Das ist die wichtigste Zeile in dieser Datei. Sie entscheidet jeden Fall, den
 die Regeln oben nicht abdecken.
+
+---
+
+## Website: das Hero-Bild der Startseite
+
+**Der Aufmacher trägt die ganze Bühne** (Kino-Hero seit 22.08.2026): Das
+Bild läuft randlos über 540 bis 960 Pixel Höhe, die Schlagzeile steht
+darin. Deshalb gelten hier dieselben zwei Regeln wie für Instagram -
+und eine dritte dazu:
+
+**1. Auflösung ist Ausschlusskriterium.** Das Bild wird auf volle
+Fensterbreite gezogen (bis 1440 px und mehr). Alles unter 1400 px
+Breite wird sichtbar weich. Unsere Pipeline erzeugt 1600-px-WebPs -
+wer das ändert, bricht den Hero.
+
+**2. Das Motiv muss den Ausschnitt vertragen.** Der Hero zeigt einen
+Ausschnitt bei 42 Prozent Höhe. Bilder, deren Hauptmotiv ganz oben
+oder ganz unten sitzt, verlieren es. Weiträumige Totalen ohne
+Hauptmotiv wirken auf dieser Fläche beliebig.
+
+**3. Die Schrift muss tragen, egal wie hell das Bild ist.** Der Hero
+hat zwei Schleier: einen senkrechten (Übergang in den Seitengrund) und
+einen waagrechten (Träger der Schlagzeile). Sie sind das Sicherheitsnetz
+für helle, unruhige Motive - wer sie anfasst, muss die Lesbarkeit neu
+messen (Tims Fund vom 22.08.2026: Schlagzeile auf hellem Artwork
+unlesbar).
+
+**Geprüft wird automatisch** im Abnahmeskript: Es meldet jedes sichtbare
+Bild, dessen natürliche Breite kleiner ist als seine Anzeigebreite.
