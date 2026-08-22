@@ -1,144 +1,69 @@
 import type { Metadata } from "next";
-import { getTopStory, getChronological, getByCategory, getPopularArticlesLive } from "@/lib/articles";
-import { NewsListe } from "@/components/NewsListe";
-import { NotchKarte, NewsletterBlock, MehrPille } from "@/components/StartseiteNeu";
-import { SektionsTitel, EventCountdown } from "@/components/next/SektionsTitel";
-import { ReleaseRadar } from "@/components/ReleaseRadar";
-import { DealRadar } from "@/components/DealRadar";
-import { PatchRadar } from "@/components/PatchRadar";
-import { ChartsRadar } from "@/components/ChartsRadar";
-import { EventRadar } from "@/components/EventRadar";
-import { GeradeImGespraech } from "@/components/GeradeImGespraech";
+import { getTopStory, getChronological, getPopularArticlesLive, getAllArticles } from "@/lib/articles";
+import { NewsletterBlock } from "@/components/StartseiteNeu";
 import { PixelRaten } from "@/components/PixelRaten";
-import { DeineMerkliste } from "@/components/DeineMerkliste";
 import { Reveal } from "@/components/Reveal";
 import { KinoHero, BeliebtSlider } from "@/components/next/KinoHero";
 import { BentoMosaik } from "@/components/next/BentoMosaik";
+import { SektionsTitel, EventCountdown } from "@/components/next/SektionsTitel";
+import { RadarBento } from "@/components/next/RadarBento";
 
-// Canonical gegen Host-Duplikate (Google-Meldung 08.08.2026): die
-// Startseite deklariert ihre Originaladresse explizit.
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
-// HELL-UMBAU (Tim-Freigabe 15.08.2026, abgenommener Polygon-Entwurf):
-// Held mit Pixel-Treppe + "Neueste"-Spalte daneben, drei beschriftete
-// Karten darunter, Guide-Kartenreihe, dann die Radare, das Cyan-Band und
-// der Navy-Newsletter-Block. "Alle News" bleibt erhalten (Kernprodukt,
-// stand nicht im Entwurf, fliegt aber nicht raus) - "Beliebt bei Lesern"
-// ist bewusst gewichen: Die Neueste-Spalte übernimmt die Aktualität.
+// STARTSEITE NACH DEM ABGENOMMENEN ENTWURF (Tim, 22.08.2026: "genau so
+// wie der Entwurf - EXAKT"): Kino-Hero, Beliebt-Reihe, Bento-Mosaik mit
+// Meldungsspalte, gamescom-Countdown, die Radare als Glaskarten, zum
+// Schluss Pixel-Raten neben dem Newsletter. Die Sektionen der alten
+// Seite (chronologische Newsliste, Guides-Reihe, Patch-Radar, Gerade im
+// Gespräch, Merkliste) kennt der Entwurf nicht - sie sind entfallen.
 export default async function HomePage() {
   const topStory = getTopStory();
   const chronological = getChronological(topStory.slug);
-  const kleinreihe = chronological.slice(5, 8);
-  const guides = getByCategory("guides");
-  // Guide-Reihe: echte Guides zuerst, aufgefüllt mit den neuesten
-  // Meldungen, bis fünf Karten stehen.
-  const guideReihe = [
-    ...guides,
-    ...chronological.filter((a) => a.category !== "guides").slice(8, 8 + Math.max(0, 4 - guides.length)),
-  ].slice(0, 4);
-  // Kleine Slider-Leiste vor den News (Tim, 19.08.2026) - dieselbe
-  // Stelle wie auf der Live-Seite.
+  const kleinreihe = chronological.slice(0, 3);
   const beliebt = await getPopularArticlesLive(8);
-  // Mosaik: 14 Bildkacheln, danach 9 Schlagzeilen für die Glasspalte.
-  // Alles, was oben schon steht, fällt weg - nichts doppelt sich.
+
   const obenGezeigt = new Set([topStory.slug, ...kleinreihe.map((a) => a.slug), ...beliebt.map((a) => a.slug)]);
   const fuersMosaik = chronological.filter((a) => !obenGezeigt.has(a.slug));
   const bentoKacheln = fuersMosaik.slice(0, 14);
   const bentoMeldungen = fuersMosaik.slice(14, 23);
 
+  // Wertungs-Radar aus unseren eigenen Tests - keine erfundenen Zahlen.
+  const getestete = getAllArticles()
+    .filter((a) => a.review)
+    .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
+    .slice(0, 3);
+
   return (
     <>
-      {/* NEUES DESIGN (Tim-Freigabe 22.08.2026, Entwurf "Republic Next"):
-          Kino-Hero mit dem Aufmacher über die volle Bühne, darunter die
-          Beliebt-Reihe und das Bento-Mosaik. Der Tagesgruss entfällt hier
-          - die Schlagzeile im Markenverlauf ist der Auftakt. */}
       <KinoHero artikel={topStory} weitere={kleinreihe} />
       <BeliebtSlider artikel={beliebt} />
       <BentoMosaik kacheln={bentoKacheln} meldungen={bentoMeldungen} />
 
       <EventCountdown />
 
-      <div className="flaechen-glas mx-auto max-w-content px-4 sm:px-6 lg:px-8">
-        <section id="news" className="scroll-mt-16 lg:scroll-mt-[88px] pt-14 sm:pt-16">
-          <Reveal>
-            <SektionsTitel titel="Alle News" unter="Chronologisch, ohne Umwege - das Neueste zuerst." />
-            <NewsListe articles={chronological} />
-          </Reveal>
-        </section>
-
-        <section id="guides" className="scroll-mt-16 lg:scroll-mt-[88px] pt-14 sm:pt-16">
-          <Reveal>
-            <SektionsTitel titel="Guides" unter="Tipps, Einstiege und Erklärstücke aus der Republic." />
-            {/* GLEICH GROSS WIE DIE KARTEN UNTER DEM HERO (Tim, 20.08.2026):
-                vier Spalten auf voller Breite ergeben dieselbe Kartenbreite
-                (~310 px) wie die Dreierreihe neben der Seitenleiste. */}
-            <div className="grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-4">
-              {guideReihe.map((a) => (
-                <NotchKarte key={a.slug} article={a} bildHoehe="aspect-[4/5] h-auto sm:aspect-auto sm:h-[280px]" randCyan />
-              ))}
-            </div>
-            {/* Gleiche Pille und derselbe Abstand (mt-8) wie unter der
-                Nachrichtenliste - Tim, 19.08.2026. */}
-            <MehrPille href="/guides" />
-          </Reveal>
-        </section>
-
-        {/* Ein Dach ueber die vier Radare (Tim, 17.08.2026): oben der
-            Sektionstitel im Bannerstil, darunter die Radare mit ihren
-            schlichten Ueberschriften wie auf der Live-Seite. */}
-        <section id="radare" className="scroll-mt-16 lg:scroll-mt-[88px] pt-14 sm:pt-16">
+      <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
+        <section id="radare" className="scroll-mt-24">
           <Reveal>
             <SektionsTitel titel="Die Radare" unter="Alles Wichtige im Blick. Automatisch aktuell." mittig />
           </Reveal>
           <Reveal>
-            <ReleaseRadar />
-          </Reveal>
-          <Reveal>
-            <EventRadar />
-          </Reveal>
-          <Reveal>
-            <ChartsRadar />
-          </Reveal>
-          <Reveal>
-            <DealRadar />
-          <PatchRadar />
+            <RadarBento getestete={getestete} />
           </Reveal>
         </section>
 
-        <Reveal>
-          <GeradeImGespraech />
-        </Reveal>
-
-        {/* Zweites Dach (Tim, 17.08.2026): Merkliste und Pixel-Raten sind
-            beide persoenlich - was DU dir gemerkt hast, was DU raetst.
-            Sie stehen deshalb unter einem gemeinsamen Titel. */}
-        <section className="pt-14 sm:pt-16">
-          <Reveal>
-            <SektionsTitel titel="Deine Republic" unter="Was du dir gemerkt hast - und was du rätst." />
-          </Reveal>
-          {/* MERKLEISTE UEBER DIE NACHBARSEKTION HEBEN (Tim, 20.08.2026):
-              Jedes Reveal blendet mit einer Transformation ein und bildet
-              dadurch eine eigene Stapelebene. Bei gleichrangigen Ebenen
-              gewinnt die spaetere im Dokument - Pixel-Raten lag also ueber
-              der Merkleiste, und ihre Vorschlagsliste verschwand dahinter.
-              Ein hoeherer Wert an der Liste selbst half nicht: Er wirkt nur
-              INNERHALB der eigenen Stapelebene. */}
-          <Reveal className="relative z-20">
-            <DeineMerkliste />
-          </Reveal>
+        {/* Zum Schluss die beiden persönlichen Kacheln nebeneinander -
+            wie im Entwurf: Pixel-Raten links, Newsletter rechts. */}
+        <div className="flaechen-glas mt-16 grid gap-4 lg:grid-cols-[3fr_2fr]">
           <Reveal>
             <PixelRaten />
           </Reveal>
-          {/* Newsletter am Ende neben den persönlichen Bauteilen -
-              dieselbe Stelle wie im abgenommenen Entwurf. */}
-          <div className="mt-8">
+          <Reveal>
             <NewsletterBlock artikelBilder={[topStory, ...kleinreihe].slice(0, 3)} />
-          </div>
-        </section>
+          </Reveal>
+        </div>
       </div>
-
     </>
   );
 }

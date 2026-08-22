@@ -147,7 +147,7 @@ export function TickerBand({ articles }: { articles: Article[] }) {
 export function NewsletterBlock({ artikelBilder }: { artikelBilder: Article[] }) {
   return (
     <div className="overflow-hidden rounded-2xl bg-accent">
-      <div className="grid items-center gap-10 px-5 py-10 sm:px-10 sm:py-12 lg:grid-cols-[1fr_400px] lg:px-14 lg:py-14">
+      <div className="grid items-center gap-8 px-5 py-9 sm:px-8 sm:py-10 lg:px-10 lg:py-11">
         <div>
           {/* Schrift und Abstaende ueberarbeitet (Tim, 17.08.2026).
               Vorher trugen beide Zeilen dieselbe Groesse und unterschieden

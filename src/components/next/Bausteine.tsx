@@ -20,24 +20,27 @@ export const CHIP =
 export const VERLAUFSTEXT =
   "w-fit bg-[linear-gradient(120deg,#02F0D1,#FF2E97)] bg-clip-text text-transparent";
 
-/** Spielname statt Kategorie: "GTA 6" sagt mehr als "News". */
+/** Spielname statt Kategorie (Tim, 22.08.2026): "GTA 6" sagt mehr als
+ *  "News" - und "LEAKS" ist erst recht kein Spielname. Reihenfolge:
+ *  erstes Schlagwort, sonst das erste tragende Wort des Titels. */
+const RUBRIKEN = new Set(["news", "leaks", "reviews", "guides", "breaking", "republic"]);
+
 export function spielName(a: Article): string {
-  const t = a.tags?.[0];
-  if (t && t.length <= 22) return t.toUpperCase();
-  return CATEGORY_LABELS[a.category].toUpperCase();
+  const tag = a.tags?.find((x) => x && x.length <= 22 && !RUBRIKEN.has(x.toLowerCase()));
+  if (tag) return tag.toUpperCase();
+  // Aus dem Titel: bis zum ersten Doppelpunkt oder Gedankenstrich
+  const kopf = a.title.split(/[:\u2013-]/)[0].trim();
+  const worte = kopf.split(/\s+/).slice(0, 3).join(" ");
+  return (worte.length > 22 ? worte.slice(0, 22) : worte).toUpperCase();
 }
 
-/** Leaks tragen Magenta, alles andere Cyan - für Punkte und Flächen. */
-export function punktFarbe(a: Article): string {
-  return a.category === "leaks" || a.isLeakOrRumor ? "#FF2E97" : "#02F0D1";
+/** Im Entwurf sind ALLE Spielnamen cyan - eine Farbe, ein Signal. */
+export function punktFarbe(_a: Article): string {
+  return "#02F0D1";
 }
 
-/** Dieselbe Unterscheidung für SCHRIFT: Das satte Magenta erreicht auf
- *  Navy nur 4,19:1 und liegt damit unter der Lesbarkeitsnorm für kleine
- *  Schrift (gemessen 22.08.2026). Der hellere Ton der Markenfamilie
- *  schafft 6,4:1 - der Punkt daneben bleibt satt. */
-export function labelFarbe(a: Article): string {
-  return a.category === "leaks" || a.isLeakOrRumor ? "#FF6BC0" : "#02F0D1";
+export function labelFarbe(_a: Article): string {
+  return "#02F0D1";
 }
 
 export function KategorieChip({ article, klein = false }: { article: Article; klein?: boolean }) {

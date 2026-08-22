@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MobileNav } from "@/components/MobileNav";
+import { MenueKarte } from "./MenueKarte";
 import { AuthStatus } from "@/components/AuthStatus";
 import { GLAS } from "./Bausteine";
 
@@ -20,7 +20,7 @@ const BEREICHE = [
 export function KopfBand() {
   return (
     <div className="pointer-events-none fixed inset-x-0 top-0 z-50 pb-2.5 pt-3 sm:pt-4">
-      <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-content px-4 sm:px-6 lg:px-8">
         <div
           className={`pointer-events-auto flex h-[52px] items-center gap-3 rounded-full border border-white/[0.16] bg-[rgba(12,11,26,0.78)] pl-4 pr-2 text-[13px] font-medium text-[#F2F8FF] backdrop-blur-[22px] backdrop-saturate-150 sm:h-[58px] sm:gap-8 sm:pl-5.5 sm:pr-3`}
         >
@@ -68,7 +68,7 @@ export function KopfBand() {
           </Link>
 
           <AuthStatus />
-          <MobileNav instagramUrl="https://www.instagram.com/republicofpixels" />
+          <MenueKarte />
         </div>
       </div>
     </div>
@@ -109,20 +109,7 @@ export function SocialBuehne() {
         ))}
       </div>
       <div className="mx-auto mt-16 max-w-content border-t border-white/[0.12] pt-[30px] text-[12px] text-[#8F95A9]">
-        <p>
-          Die Berichterstattung basiert auf verlinkten Originalquellen. Leaks und Gerüchte sind als
-          unbestätigt gekennzeichnet.
-        </p>
-        <p className="mt-2.5">
-          <Link href="/impressum" className="hover:text-[#F2F8FF]">Impressum</Link>
-          {" · "}
-          <Link href="/datenschutz" className="hover:text-[#F2F8FF]">Datenschutz</Link>
-          {" · "}
-          <Link href="/cookies" className="hover:text-[#F2F8FF]">Cookies</Link>
-          {" · "}
-          <Link href="/ueber-uns" className="hover:text-[#F2F8FF]">Über uns</Link>
-        </p>
-        <p className="mt-2.5">Copyright © 2026 Republic of Pixels. Alle Rechte vorbehalten.</p>
+        Copyright © 2026 Republic of Pixels. Alle Rechte vorbehalten.
       </div>
     </footer>
   );
