@@ -6776,6 +6776,66 @@
     "736ccfa8e459f9fd": {
       "t": "2026-08-22T06:58:15.938Z",
       "n": 3
+    },
+    "bc5543f2e12f77b0": {
+      "t": "2026-08-22T07:08:20.382Z",
+      "n": 3
+    },
+    "3c403882f82a9c56": {
+      "t": "2026-08-22T07:08:20.382Z",
+      "n": 1
+    },
+    "cd92c295b74baf53": {
+      "t": "2026-08-22T07:08:20.382Z",
+      "n": 1
+    },
+    "3f13652c80ac90dd": {
+      "t": "2026-08-22T07:08:20.382Z",
+      "n": 1
+    },
+    "faf36751baf1c49e": {
+      "t": "2026-08-22T07:08:20.382Z",
+      "n": 1
+    },
+    "8aa007c14c4657ef": {
+      "t": "2026-08-22T07:08:20.382Z",
+      "n": 3
+    },
+    "d5e7266a4575aee3": {
+      "t": "2026-08-22T07:08:20.382Z",
+      "n": 1
+    },
+    "55146762e278a3b9": {
+      "t": "2026-08-22T07:08:20.382Z",
+      "n": 1
+    },
+    "6da8cbec41c53b7b": {
+      "t": "2026-08-22T07:08:20.382Z",
+      "n": 1
+    },
+    "27643a88ee6109f1": {
+      "t": "2026-08-22T07:08:20.382Z",
+      "n": 1
+    },
+    "9f24ae3c492ce10d": {
+      "t": "2026-08-22T07:08:20.382Z",
+      "n": 1
+    },
+    "9b3bd998952b8e46": {
+      "t": "2026-08-22T07:08:20.382Z",
+      "n": 1
+    },
+    "bb7ec26d56a21d21": {
+      "t": "2026-08-22T07:08:20.382Z",
+      "n": 1
+    },
+    "0571b845f2d494e0": {
+      "t": "2026-08-22T07:08:20.382Z",
+      "n": 1
+    },
+    "c8234407123d05b8": {
+      "t": "2026-08-22T07:08:20.382Z",
+      "n": 3
     }
   },
   "instagram": {
@@ -6835,10 +6895,10 @@
       "2xko-entwicklungsende-dezember-2026": "2026-08-21T07:05:20.127Z",
       "god-of-war-serie-dave-bautista-kratos-2026": "2026-08-21T13:05:05.807Z",
       "duskbloods-netzwerktest-serverprobleme-abbruch-2026": "2026-08-21T13:05:42.617Z",
-      "gta-6-leaks-take-two-subpoenas-microsoft-discord-2026": "2026-08-21T15:57:11.393Z"
+      "gta-6-leaks-take-two-subpoenas-microsoft-discord-2026": "2026-08-21T15:57:11.393Z",
+      "gta-6-leak-verkehrskameras-autodiebstahl-2026": "2026-08-22T07:09:04.397Z"
     },
     "cards": {
-      "/social/ig-star-citizen-entwickler-stream-abbruch-vertrauenskrise-2026.jpg": "2026-08-18T15:57:20.344Z",
       "/social/ig-gta-6-gameplay-leak-cyberleek-2026.mp4": "2026-08-19T07:46:32.148Z",
       "/social/ig-gta-6-leak-sechs-sterne-fahndungssystem-2026.jpg": "2026-08-19T13:05:31.036Z",
       "/social/ig-modern-warfare-4-platzhalter-bild-ki-verdacht-2026.mp4": "2026-08-19T13:05:45.863Z",
@@ -6849,14 +6909,15 @@
       "/social/ig-2xko-entwicklungsende-dezember-2026.mp4": "2026-08-21T07:05:20.127Z",
       "/social/ig-god-of-war-serie-dave-bautista-kratos-2026.jpg": "2026-08-21T13:05:05.807Z",
       "/social/ig-duskbloods-netzwerktest-serverprobleme-abbruch-2026.mp4": "2026-08-21T13:05:42.617Z",
-      "/social/ig-gta-6-leaks-take-two-subpoenas-microsoft-discord-2026.jpg": "2026-08-21T15:57:11.393Z"
+      "/social/ig-gta-6-leaks-take-two-subpoenas-microsoft-discord-2026.jpg": "2026-08-21T15:57:11.393Z",
+      "/social/ig-gta-6-leak-verkehrskameras-autodiebstahl-2026.mp4": "2026-08-22T07:09:04.397Z"
     },
     "unlisted": [
       "gta-6-preis-80-dollar-zelnick-schnaeppchen-2026"
     ],
     "wechsel": {
-      "day": "2026-08-21",
-      "nichtBreaking": 4
+      "day": "2026-08-22",
+      "nichtBreaking": 1
     },
     "tokenCheckedAt": "2026-08-15T09:48:57.921Z",
     "token": {
@@ -6876,7 +6937,7 @@
       "halo: campaign evolved": 2,
       "super mario sunshine": 1,
       "marvel's wolverine": 2,
-      "grand theft auto vi": 8,
+      "grand theft auto vi": 9,
       "pokémon pokopia": 1,
       "helldivers 2": 1,
       "god of war laufey": 1,
