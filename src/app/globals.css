@@ -593,8 +593,10 @@ a[class*="rounded-full"][class*="border-accent"] {
   button[class*="rounded-full"][class*="w-[34px]"],
   a[class*="rounded-full"][class*="w-[38px]"],
   button[class*="rounded-full"][class*="w-[38px]"] {
-    min-width: 44px;
-    min-height: 44px;
+    min-width: 38px !important;
+    min-height: 38px !important;
+    width: 38px !important;
+    height: 38px !important;
   }
 
   /* 11 px ist auf dem Handy zu klein fuer Kicker, Statuszeilen und

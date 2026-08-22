@@ -102,7 +102,7 @@ export function RadarBento({ getestete }: { getestete: Article[] }) {
               </div>
               <div className="h-[9px] overflow-hidden rounded-[5px] bg-white/[0.08]">
                 <div
-                  className="h-full rounded-[5px] bg-[linear-gradient(90deg,rgba(2,240,209,0.7),rgba(255,46,151,0.7))]"
+                  className="h-full rounded-[5px] bg-[linear-gradient(90deg,rgba(2,240,209,0.84),rgba(255,46,151,0.84))]"
                   style={{ width: `${Math.round((e.peak / maxSpieler) * 100)}%` }}
                 />
               </div>
@@ -169,12 +169,14 @@ export function RadarBento({ getestete }: { getestete: Article[] }) {
                 href={d.url ?? "#"}
                 target="_blank"
                 rel="noreferrer noopener"
-                className="flex items-center justify-between gap-3 rounded-[16px] bg-white/[0.06] px-4 py-3.5"
+                className="rounded-[16px] bg-white/[0.06] px-4 py-3.5"
               >
-                <span className="text-[15px] font-semibold text-[#F2F8FF]">{d.title}</span>
-                <span className="shrink-0 text-right">
-                  <span className="block text-[17px] font-bold text-[#F2F8FF]">{(d.finalPrice / 100).toFixed(2).replace(".", ",")} €</span>
-                  <span className="block text-[13px] font-semibold text-[#FF6BC0]">-{d.discountPercent}%</span>
+                <span className="block truncate text-[14.5px] font-semibold text-[#F2F8FF]">{d.title}</span>
+                <span className="mt-1.5 flex items-baseline gap-2.5">
+                  <span className="text-[17px] font-bold text-[#F2F8FF]">
+                    {(d.finalPrice / 100).toFixed(2).replace(".", ",")} €
+                  </span>
+                  <span className="text-[13px] font-semibold text-[#FF6BC0]">-{d.discountPercent}%</span>
                 </span>
               </a>
             ))}
