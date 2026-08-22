@@ -41,15 +41,17 @@ export function KinoHero({ artikel, weitere }: { artikel: Article; weitere: Arti
             />
             {spielName(artikel)}
           </span>
-          <h1
-            className={`${VERLAUFSTEXT} mt-3.5 max-w-[780px] pb-1.5 text-[26px] font-bold leading-[1.08] tracking-[-0.015em] sm:mt-4 sm:text-[44px] lg:text-[64px]`}
-          >
-            {artikel.title}
-          </h1>
-          {/* Am Handy führt der Titel allein - der Anriss wartet im Artikel. */}
-          <p className="mt-3.5 hidden max-w-[620px] text-[20px] leading-[1.4] text-white/[0.78] sm:block">
-            {artikel.excerpt}
-          </p>
+          <Link href={`/artikel/${artikel.slug}`} className="block">
+            <h1
+              className={`${VERLAUFSTEXT} mt-3.5 max-w-[780px] pb-1.5 text-[26px] font-bold leading-[1.08] tracking-[-0.015em] sm:mt-4 sm:text-[44px] lg:text-[64px]`}
+            >
+              {artikel.title}
+            </h1>
+            {/* Am Handy führt der Titel allein - der Anriss wartet im Artikel. */}
+            <p className="mt-3.5 hidden max-w-[620px] text-[20px] leading-[1.4] text-white/[0.78] sm:block">
+              {artikel.excerpt}
+            </p>
+          </Link>
           <div className="mt-3.5 sm:mt-6">
             <Link
               href={`/artikel/${artikel.slug}`}
