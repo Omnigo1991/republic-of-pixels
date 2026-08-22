@@ -101,14 +101,14 @@ export function ArticleBody({
                   // dunkel - Cyan auf Magenta waere nicht lesbar.
                   <div
                     key={j}
-                    className="relative overflow-hidden rounded-[18px] bg-[linear-gradient(120deg,rgba(2,240,209,0.92)_0%,rgba(2,240,209,0.84)_46%,rgba(255,46,151,0.84)_100%)] px-5 py-5 text-left"
+                    className="relative overflow-hidden rounded-[18px] bg-[linear-gradient(120deg,#02F0D1,#FF2E97)] px-5 py-5 text-left"
                   >
                     {/* Standard-Verlauf wie die Newsletter-Kachel (Tim,
                         22.08.2026), Zahl und Text in Navy. */}
                     <p className={`font-extrabold leading-[1.15] tracking-tight text-[#0C0B1A] ${wertGroesse}`}>
                       {s.value}
                     </p>
-                    <p className="mt-1.5 break-words text-[12.5px] font-medium leading-snug text-[#0C0B1A]">{s.label}</p>
+                    <p className="mt-1.5 break-words text-[13px] font-semibold leading-snug text-[#0C0B1A]">{s.label}</p>
                   </div>
                 ))}
               </div>

@@ -58,8 +58,8 @@ export function BentoMosaik({
               Weitere Meldungen
             </div>
             <div className="overflow-hidden">
-              {meldungen.map((a, i) => (
-                <MeldungsZeile key={a.slug} article={a} erste={i === 0} />
+              {meldungen.map((a) => (
+                <MeldungsZeile key={a.slug} article={a} />
               ))}
             </div>
             <div className="mt-auto pt-4">

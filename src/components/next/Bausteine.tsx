@@ -100,11 +100,11 @@ export function BildKachel({
 }
 
 /** Zeile in der Meldungsspalte: Titel plus Spielname. */
-export function MeldungsZeile({ article, erste }: { article: Article; erste: boolean }) {
+export function MeldungsZeile({ article }: { article: Article; erste?: boolean }) {
   return (
     <Link
       href={`/artikel/${article.slug}`}
-      className={`block py-3.5 ${erste ? "" : "border-t border-white/10"}`}
+      className="block py-3"
     >
       <span className="block text-[14.5px] font-semibold leading-[1.32] text-[#F2F8FF]">
         {article.title}

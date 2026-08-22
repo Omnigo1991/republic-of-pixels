@@ -81,9 +81,7 @@ h3 {
      alten Designs entfaellt. */
   margin: 2.6em 0;
   padding: 28px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.14);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
-  border-left: 0;
+  border: 0;
   text-align: center;
   font-style: normal;
   font-weight: 700;
@@ -281,7 +279,7 @@ code {
 :root { --kappe: 26px; }
 .treppe-tl,
 .treppe-tr {
-  background: linear-gradient(150deg, #02F0D1, #B14CFF 60%, #FF2E97);
+  background: linear-gradient(120deg, #02F0D1, #FF2E97);
   padding: 3px;
   clip-path: polygon(0 0, calc(100% - var(--kappe)) 0, 100% var(--kappe), 100% 100%,
     var(--kappe) 100%, 0 calc(100% - var(--kappe)));
@@ -387,7 +385,7 @@ code {
    Verlauf wie im Kopfband (Tim, 19.08.2026). Die Form bleibt rund -
    es sind keine Artikel. */
 .personenkachel {
-  background: linear-gradient(120deg, #FF2E97, #FF6BC0 40%, #02F0D1 115%);
+  background: linear-gradient(120deg, #02F0D1, #FF2E97);
 }
 .personenkachel a { color: #0B0616; }
 
@@ -398,7 +396,7 @@ code {
 .artikelkante {
   display: block;
   padding: 3px;
-  background: linear-gradient(150deg, #02F0D1, #B14CFF 60%, #FF2E97);
+  background: linear-gradient(120deg, #02F0D1, #FF2E97);
   clip-path: polygon(0 0, calc(100% - var(--kappe)) 0, 100% var(--kappe), 100% 100%,
     var(--kappe) 100%, 0 calc(100% - var(--kappe)));
 }
@@ -411,7 +409,7 @@ code {
 
 /* ---------- Volles Cyan wird Verlauf ---------- */
 .bg-accent {
-  background: linear-gradient(120deg, rgba(2, 240, 209, 0.92) 0%, rgba(2, 240, 209, 0.84) 46%, rgba(255, 46, 151, 0.84) 100%);
+  background: linear-gradient(120deg, #02F0D1, #FF2E97);
 }
 .bg-accent h2, .bg-accent p, .bg-accent span, .bg-accent div,
 .bg-accent dt, .bg-accent dd, .bg-accent .text-accent {
@@ -431,7 +429,7 @@ body > footer a { text-shadow: none; }
   /* Zwei Töne statt drei (Tim, 23.08.2026): Das Gelb am Linienende war
      die einzige dritte Akzentfarbe der Seite - jetzt läuft die Linie wie
      das Kopfband von Magenta nach Cyan. */
-  background: linear-gradient(90deg, #FF2E97, #02F0D1);
+  background: linear-gradient(120deg, #02F0D1, #FF2E97);
   height: 2px;
 }
 /* ---------- Kopfband im Verlauf (Tim, 19.08.2026) ----------
@@ -448,7 +446,7 @@ body > footer a { text-shadow: none; }
   background: #0C0B1A;
   border-style: solid;
   border-width: 0 0 3px 0;
-  border-image: linear-gradient(90deg, #FF2E97, #FF6BC0 42%, #02F0D1 118%) 1;
+  border-image: linear-gradient(120deg, #02F0D1, #FF2E97) 1;
   /* DURCHGEHEND GEFUELLT BIS ZUR BILDSCHIRMKANTE (Tim, 20.08.2026).
      Erster Versuch war nur "padding-top: env(safe-area-inset-top)".
      Das half nicht: Meldet Safari die Hoehe der Statusleiste nicht,

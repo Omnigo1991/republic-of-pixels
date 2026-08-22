@@ -97,7 +97,7 @@ export function MenueKarte() {
               </div>
             ))}
           </div>
-          <div className="mt-[22px] border-t border-white/[0.14] pt-[26px] text-left text-[12.5px] text-[#86868b]">
+          <div className="mt-[26px] pt-[4px] text-left text-[12.5px] text-[#86868b]">
             {RECHTLICHES.map((r, i) => (
               <span key={r.href}>
                 {i > 0 && " · "}

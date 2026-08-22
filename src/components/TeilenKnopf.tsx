@@ -103,7 +103,7 @@ export function TeilenKnopf() {
           <div
             role="dialog"
             aria-label="Seite teilen"
-            className="fixed inset-x-0 bottom-0 z-50 rounded-t-[24px] border-t border-white/[0.16] bg-[rgba(18,18,30,0.92)] p-4 pb-6 backdrop-blur-[22px] sm:inset-x-auto sm:bottom-24 sm:right-5 sm:w-[328px] sm:rounded-[24px] sm:border sm:pb-4"
+            className="fixed inset-x-0 bottom-0 z-50 rounded-t-[24px] bg-[rgba(18,18,30,0.92)] p-4 pb-6 backdrop-blur-[22px] sm:inset-x-auto sm:bottom-24 sm:right-5 sm:w-[328px] sm:rounded-[24px] sm:border sm:pb-4"
           >
             <div className="mx-auto mb-4 h-1 w-9 rounded-full bg-border-default sm:hidden" />
             <div className="mb-4 flex items-center gap-3">

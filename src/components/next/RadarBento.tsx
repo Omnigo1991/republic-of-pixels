@@ -102,7 +102,7 @@ export function RadarBento({ getestete }: { getestete: Article[] }) {
               </div>
               <div className="h-[9px] overflow-hidden rounded-[5px] bg-white/[0.08]">
                 <div
-                  className="h-full rounded-[5px] bg-[linear-gradient(90deg,rgba(2,240,209,0.84),rgba(255,46,151,0.84))]"
+                  className="h-full rounded-[5px] bg-[linear-gradient(90deg,#02F0D1,#FF2E97)]"
                   style={{ width: `${Math.round((e.peak / maxSpieler) * 100)}%` }}
                 />
               </div>

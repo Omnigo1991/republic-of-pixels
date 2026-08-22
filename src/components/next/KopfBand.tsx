@@ -162,7 +162,7 @@ export function SocialBuehne() {
           </a>
         ))}
       </div>
-      <div className="mx-auto mt-16 max-w-content border-t border-white/[0.12] pt-[30px] text-[12px] text-[#8F95A9]">
+      <div className="mx-auto mt-16 max-w-content pt-[30px] text-[12px] text-[#8F95A9]">
         Copyright © 2026 Republic of Pixels. Alle Rechte vorbehalten.
       </div>
     </footer>
