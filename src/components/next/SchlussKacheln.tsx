@@ -6,7 +6,7 @@ import { GLAS } from "./Bausteine";
 // Farbfläche der Seite - beide gleich hoch, ohne eigene Sektionstitel.
 export function SchlussKacheln() {
   return (
-    <div className="mt-16 grid gap-4 lg:grid-cols-[3fr_2fr]">
+    <div className="mt-4 grid gap-4 lg:grid-cols-[3fr_2fr]">
       <div className={`${GLAS} raten-kachel overflow-hidden rounded-[22px] p-6 sm:p-7`}>
         <PixelRaten />
       </div>

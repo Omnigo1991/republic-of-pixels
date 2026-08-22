@@ -77,17 +77,45 @@ export function KopfBand() {
 
 /** Fussbereich: die Social-Bühne schliesst die Seite ab. */
 export function SocialBuehne() {
+  // Zeichen und Beschriftung exakt wie im Entwurf (Pfaddaten daraus
+  // uebernommen, 22.08.2026).
   const kanaele = [
-    { name: "Instagram", href: "https://www.instagram.com/republicofpixels/" },
-    { name: "X", href: "https://x.com/republic_pixels" },
-    { name: "TikTok", href: "https://www.tiktok.com/@republicofpixels" },
+    {
+      name: "Instagram",
+      href: "https://www.instagram.com/republicofpixels/",
+      zeichen: (
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2">
+          <rect x="3" y="3" width="18" height="18" rx="5.5" />
+          <circle cx="12" cy="12" r="4.2" />
+          <circle cx="17.4" cy="6.6" r="1.2" fill="#fff" stroke="none" />
+        </svg>
+      ),
+    },
+    {
+      name: "X",
+      href: "https://x.com/republic_pixels",
+      zeichen: (
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="#fff">
+          <path d="M3 2.5h5l4.7 6.3 5.4-6.3h2.6l-6.8 8 7.4 11h-5l-5-7-6 7H2.7l7.3-8.6z" />
+        </svg>
+      ),
+    },
+    {
+      name: "TikTok",
+      href: "https://www.tiktok.com/@republicofpixels",
+      zeichen: (
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="#fff">
+          <path d="M16.2 2c.4 2.6 1.9 4.2 4.6 4.4v3.1c-1.8 0-3.3-.5-4.6-1.5v6.8a6.3 6.3 0 1 1-6.3-6.3c.4 0 .7 0 1.1.1v3.3a3.1 3.1 0 1 0 2.1 2.9V2h3.1z" />
+        </svg>
+      ),
+    },
   ];
   return (
     <footer className="schrift-normal mt-20 bg-[radial-gradient(ellipse_50%_70%_at_50%_112%,rgba(255,46,151,0.18),transparent),radial-gradient(ellipse_44%_60%_at_22%_108%,rgba(2,240,209,0.12),transparent)] px-4 pb-8 pt-[90px] text-center sm:px-6 lg:px-8">
       <div className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#8F95A9]">
         Die Republic auf Social Media
       </div>
-      <div className="mx-auto mt-3 w-fit bg-[linear-gradient(120deg,#02F0D1,#FF2E97)] bg-clip-text text-[30px] font-bold leading-[1.1] tracking-[-0.02em] text-transparent sm:text-[44px] lg:text-[52px]">
+      <div className="mx-auto mt-3 w-fit bg-[linear-gradient(120deg,#02F0D1,#FF2E97)] bg-clip-text text-[30px] font-bold leading-[1.1] tracking-[-0.02em] text-transparent sm:text-[46px] lg:text-[60px]">
         Kein Post. Kein Reel.
         <br />
         Verpasst.
@@ -102,8 +130,9 @@ export function SocialBuehne() {
             href={k.href}
             target="_blank"
             rel="noreferrer noopener"
-            className={`${GLAS} rounded-full px-5 py-3 text-[15px] font-semibold text-[#F2F8FF]`}
+            className="inline-flex items-center gap-2.5 rounded-full border border-white/[0.22] bg-white/[0.12] px-6 py-3.5 text-[15px] font-semibold text-[#F2F8FF] backdrop-blur-[14px]"
           >
+            {k.zeichen}
             {k.name}
           </a>
         ))}

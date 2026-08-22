@@ -690,16 +690,17 @@ main:has(> .hero-voll) { padding-top: 0; }
   margin-bottom: 4px;
 }
 
-/* Pixel-Raten sitzt im neuen Design in einer Glaskachel - sein alter
-   Sektionskopf mit Versalschrift und Cyan-Linie entfaellt dort. */
-.raten-kachel h2,
-.raten-kachel [class*="h-0.5"],
-.raten-kachel [class*="border-b"] { display: none !important; }
-.raten-kachel section, .raten-kachel > div { padding: 0 !important; margin: 0 !important; }
-.raten-kachel [class*="bg-surface"], .raten-kachel [class*="rounded-2xl"] {
-  background: transparent !important;
-  border: 0 !important;
+/* Pixel-Raten sitzt im neuen Design in einer Glaskachel. Nur der alte
+   Sektionskopf entfaellt - alles andere bleibt unangetastet (eine zu
+   breite Regel hatte den ganzen Inhalt verschluckt, 22.08.2026). */
+.raten-kachel > section { padding: 0 !important; }
+.raten-kachel h2 {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.015em !important;
+  text-transform: none !important;
 }
+.raten-kachel [class*="h-0.5"] { display: none !important; }
 
 /* Letzte Reste des alten Kleids: Cyan-Raender und Alt-Flaechen werden
    auf die Glas-Rezeptur gezogen (Tim, 22.08.2026: nichts aus der alten

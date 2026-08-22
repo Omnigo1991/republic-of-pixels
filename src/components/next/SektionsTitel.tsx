@@ -77,7 +77,7 @@ export function EventCountdown({
       </div>
       <Link href={href} className="mt-2.5 block">
         <span
-          className={`${VERLAUFSTEXT} mx-auto block text-[36px] font-bold leading-[1.05] tracking-[-0.02em] sm:text-[54px] lg:text-[68px]`}
+          className={`${VERLAUFSTEXT} mx-auto block text-[36px] font-bold leading-[1.05] tracking-[-0.02em] sm:text-[56px] lg:text-[72px]`}
         >
           {name}.
         </span>
