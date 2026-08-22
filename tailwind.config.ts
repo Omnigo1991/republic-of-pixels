@@ -93,7 +93,9 @@ const config: Config = {
       },
       maxWidth: {
         article: "44rem",
-        content: "80rem",
+        // 70rem = 1120 px - die Breite des abgenommenen Entwurfs
+        // (gemessen 22.08.2026: Entwurf 1072 Inhalt, Seite war 1216).
+        content: "70rem",
       },
       boxShadow: {
         card: "0 1px 0 0 rgba(255,255,255,0.5) inset, 0 8px 24px -12px rgba(12,11,26,0.14)",

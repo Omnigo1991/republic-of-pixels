@@ -5,7 +5,6 @@ import Link from "next/link";
 import type { Session } from "@supabase/supabase-js";
 import { getSupabase, type Kommentar, type Profil } from "@/lib/supabase";
 import { AnmeldeDialog, NicknameWahl } from "./AuthDialog";
-import { SectionDivider } from "./SectionDivider";
 import { MASTER_NICKNAME, MASTER_RANG } from "@/lib/ranking";
 
 // Echtes Kommentarsystem (ersetzt die frühere Demo-Attrappe).
@@ -162,7 +161,6 @@ export function CommentSection({ articleSlug }: { articleSlug: string }) {
         )}
         </div>
       </div>
-      <SectionDivider />
 
       {session && !profil && !laden && <NicknameWahl onFertig={neuLadenNachProfil} />}
 
@@ -394,7 +392,7 @@ function KommentarFormular({
         <button
           onClick={senden}
           disabled={sendet || !text.trim()}
-          className="rounded-full bg-accent px-5 py-2 text-sm font-semibold text-[#0F0D2C] transition-opacity hover:opacity-90 disabled:opacity-40"
+          className="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-[#0C0B1A] transition-opacity hover:opacity-90 disabled:opacity-40"
         >
           {sendet ? "Wird gesendet …" : parentId ? "Antworten" : "Kommentieren"}
         </button>

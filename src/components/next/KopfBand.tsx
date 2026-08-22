@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { MenueKarte } from "./MenueKarte";
+import { PlatformIcon } from "@/components/PlatformIcons";
+import { PLATFORM_NAV } from "@/lib/articles";
 import { AuthStatus } from "@/components/AuthStatus";
 import { GLAS } from "./Bausteine";
 
@@ -45,6 +47,25 @@ export function KopfBand() {
             {BEREICHE.map((b) => (
               <Link key={b.href} href={b.href} className="transition-opacity hover:opacity-70">
                 {b.text}
+              </Link>
+            ))}
+          </nav>
+
+          {/* Plattformen als Zeichengruppe im neuen Kleid (Tim,
+              22.08.2026): eine Glasflaeche, Zeichen in Weiss. */}
+          <nav
+            aria-label="Plattformen"
+            className="hidden items-center gap-1 rounded-full bg-white/[0.08] px-2.5 py-1.5 lg:flex"
+          >
+            {PLATFORM_NAV.map((p) => (
+              <Link
+                key={p.key}
+                href={`/kategorie/${p.key}`}
+                title={p.label}
+                aria-label={p.label}
+                className="px-1.5 text-[#C7CAD8] transition-colors hover:text-white"
+              >
+                <PlatformIcon platform={p.key} className="h-[18px] w-[18px]" />
               </Link>
             ))}
           </nav>

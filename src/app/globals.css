@@ -670,29 +670,31 @@ main:has(> .hero-voll) { padding-top: 0; }
   padding: 0 !important;
 }
 
-/* Kontomenue im neuen Design: dunkles Glas, helle Schrift, Trennlinien
-   wie im Entwurf. */
+/* Kontomenue im neuen Design: dunkles Glas, flache Zeilen, eine
+   Trennlinie vor dem Abmelden - keine Kaestchen im Kaestchen. */
 .konto-glas, .konto-glas * { color: #F2F8FF; }
 .konto-glas [class*="text-accent"] { color: #02F0D1; }
 .konto-glas [class*="text-text-tertiary"], .konto-glas [class*="text-text-secondary"] { color: #8F95A9; }
 .konto-glas [class*="border-"] { border-color: rgba(255, 255, 255, 0.12) !important; }
-.konto-glas [class*="bg-surface"], .konto-glas [class*="bg-bg-"] { background: rgba(255, 255, 255, 0.06) !important; }
+.konto-glas [class*="bg-surface"], .konto-glas [class*="bg-bg-"] { background: transparent !important; }
 .konto-glas a, .konto-glas button {
-  border-radius: 16px;
-  padding: 11px 14px;
+  display: block;
+  width: 100%;
+  text-align: left;
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: transparent !important;
 }
-.konto-glas a:hover, .konto-glas button:hover { background: rgba(255, 255, 255, 0.07); }
-/* Die Kopfzeile mit Bild und Punkten bleibt eine ruhige Flaeche. */
+.konto-glas a:hover, .konto-glas button:hover { background: rgba(255, 255, 255, 0.07) !important; }
 .konto-glas > div:first-child {
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.06);
-  border-bottom: 0 !important;
-  margin-bottom: 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+  padding-bottom: 12px;
+  margin-bottom: 6px;
 }
 
-/* Pixel-Raten sitzt im neuen Design in einer Glaskachel. Nur der alte
-   Sektionskopf entfaellt - alles andere bleibt unangetastet (eine zu
-   breite Regel hatte den ganzen Inhalt verschluckt, 22.08.2026). */
+/* Pixel-Raten als kompakte Kachel wie im Entwurf (gemessen: dort
+   632x193 px, Raetselbild 190x130 quer - hier war es 720x550 mit einem
+   hohen Bild). */
 .raten-kachel > section { padding: 0 !important; }
 .raten-kachel h2 {
   font-size: 20px !important;
@@ -701,6 +703,29 @@ main:has(> .hero-voll) { padding-top: 0; }
   text-transform: none !important;
 }
 .raten-kachel [class*="h-0.5"] { display: none !important; }
+/* Innenkarte wird zur Zeile ohne eigene Flaeche */
+.raten-kachel > section > div:nth-child(2) {
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 26px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+}
+/* Raetselbild klein und quer */
+.raten-kachel section > div:nth-of-type(2) > div:nth-of-type(1),
+.raten-kachel [class*="sm:w-"] {
+  width: 190px !important;
+  min-width: 190px !important;
+  max-width: 190px !important;
+  flex: 0 0 190px !important;
+  border-radius: 14px !important;
+}
+.raten-kachel img { aspect-ratio: 19 / 13 !important; }
+/* Text kompakter */
+.raten-kachel p { font-size: 14.5px !important; line-height: 1.4 !important; }
+.raten-kachel [class*="h-9"] { height: 30px !important; width: 30px !important; font-size: 12.5px !important; }
 
 /* Letzte Reste des alten Kleids: Cyan-Raender und Alt-Flaechen werden
    auf die Glas-Rezeptur gezogen (Tim, 22.08.2026: nichts aus der alten
