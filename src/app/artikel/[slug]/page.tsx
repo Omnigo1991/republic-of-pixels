@@ -125,7 +125,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                   {kicker}
                 </p>
               )}
-              <h1 className="text-[32px] font-black leading-[1.12] tracking-[-0.015em] text-text-primary sm:text-[46px]">
+              <h1 className="schrift-normal w-fit bg-[linear-gradient(120deg,#02F0D1,#FF2E97)] bg-clip-text pb-1.5 text-[29px] font-bold leading-[1.13] tracking-[-0.015em] text-transparent sm:text-[42px]">
                 {headline}
               </h1>
             </>
@@ -157,18 +157,17 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
             INNERHALB der Box (Tim, 19.08.2026) und haelt links Abstand
             zum Anschnitt, damit sie unten links mit dem Rand aufgeht. */}
         <figure className="mt-8">
-          <div className="treppe-tl">
-            <div className="treppe-innen">
+          {/* Neues Design (22.08.2026): schlichter Glasrahmen statt
+              Kappecke, die Bildquelle sitzt als Chip unten links IM Bild. */}
+          <div className="overflow-hidden rounded-[22px]">
+            <div>
               <div className="relative aspect-[16/9]">
                 <ArticleMedia article={article} priority sizes="(max-width: 768px) 100vw, 680px" className="h-full w-full" />
                 {article.image?.credit && (
                   // Ohne eigene Flaeche (Tim, 19.08.2026): die Angabe liegt
                   // auf dem Bild, der Schlagschatten traegt sie ueber jedem
                   // Motiv. Links haelt sie Abstand zum Anschnitt.
-                  <figcaption
-                    className="absolute bottom-2.5 left-0 right-4 pl-[calc(var(--kappe)+8px)] text-xs text-white/80"
-                    style={{ textShadow: "0 1px 4px rgba(0,0,0,.9), 0 0 12px rgba(0,0,0,.7)" }}
-                  >
+                  <figcaption className="absolute bottom-3 left-3 rounded-full border border-white/[0.16] bg-[rgba(12,11,26,0.62)] px-2.5 py-1 text-[11px] text-[#D7D9E5] backdrop-blur-[10px]">
                     {article.image.credit}
                   </figcaption>
                 )}
