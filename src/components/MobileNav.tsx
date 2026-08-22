@@ -89,7 +89,7 @@ export function MobileNav({ instagramUrl }: { instagramUrl: string }) {
             onClick={() => setOpen(false)}
             className="absolute inset-0 bg-navy/40"
           />
-          <aside className="absolute inset-y-0 right-0 flex w-full flex-col overflow-hidden bg-accent px-7 pb-[calc(1.75rem+env(safe-area-inset-bottom,0px))] pt-[calc(1.25rem+env(safe-area-inset-top,0px))] shadow-[-30px_0_80px_-20px_rgba(12,11,26,0.45)] animate-vorhang sm:w-[430px]">
+          <aside className="menue-glas absolute inset-y-0 right-0 flex w-full flex-col overflow-hidden border-l border-white/[0.16] bg-[rgba(14,13,30,0.94)] px-7 backdrop-blur-[24px] pb-[calc(1.75rem+env(safe-area-inset-bottom,0px))] pt-[calc(1.25rem+env(safe-area-inset-top,0px))] shadow-[-30px_0_80px_-20px_rgba(12,11,26,0.45)] animate-vorhang sm:w-[430px]">
             <button
               onClick={() => setOpen(false)}
               aria-label="Menü schliessen"

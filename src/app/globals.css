@@ -626,3 +626,19 @@ a[class*="rounded-full"][class*="border-accent"] {
    eigenes Dunkel oben). */
 main { padding-top: 76px; }
 main:has(> .hero-voll) { padding-top: 0; }
+
+/* Menue im neuen Design: dunkles Glas statt Cyan-Vorhang. Die alten
+   Regeln faerbten jeden Text darin auf Navy - hier wieder auf Hell. */
+.menue-glas, .menue-glas * { color: #F2F8FF; }
+.menue-glas .text-accent, .menue-glas [class*="text-accent"] { color: #02F0D1; }
+.menue-glas [class*="bg-navy"], .menue-glas [class*="bg-surface"] {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+.menue-glas [class*="border-"] { border-color: rgba(255, 255, 255, 0.14); }
+.menue-glas input {
+  background: rgba(255, 255, 255, 0.07) !important;
+  color: #F2F8FF !important;
+  border-color: rgba(255, 255, 255, 0.16) !important;
+}
+.menue-glas input::placeholder { color: #8F95A9 !important; }
