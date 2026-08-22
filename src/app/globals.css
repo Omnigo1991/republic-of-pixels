@@ -596,3 +596,27 @@ a[class*="rounded-full"][class*="border-accent"] {
     font-size: 12px;
   }
 }
+
+/* ---------- Neues Design (Zweig redesign-next, ab 22.08.2026) ----------
+   Bento-Mosaik: sechs Spalten mit festen Plätzen, ab 900 px eine Spalte.
+   Zwei Spalten hatten die Kacheln so verschmälert, dass der Titel das
+   Bild verdeckte (Tims Fund am 22.08.2026). */
+.bento {
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 212px;
+}
+@media (max-width: 900px) {
+  .bento { grid-template-columns: 1fr; grid-auto-rows: auto; }
+  .bento > div { grid-area: auto !important; min-height: 264px; }
+  .bento > .spalte { min-height: 0; height: auto; }
+}
+
+/* Neues Design: Schlagzeilen laufen in Gross-Kleinschreibung und ohne
+   Farbversatz - der Markenverlauf ersetzt beides. Die alte Regel für
+   h1/h2 gilt weiter für die bestehenden Sektionen. */
+.schrift-normal,
+.schrift-normal h1,
+.schrift-normal h2 {
+  text-transform: none !important;
+  text-shadow: none !important;
+}
