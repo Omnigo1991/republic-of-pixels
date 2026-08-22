@@ -1,0 +1,150 @@
+{
+  "slug": "xbox-elite-series-3-prototyp-leak-lcd-display-2026",
+  "title": "Elite Series 3 für 200 Dollar gekauft - und er lässt sich nicht koppeln",
+  "subtitle": "Ein angeblicher Prototyp des nächsten Xbox-Pro-Controllers zeigt LCD-Display, Scrollräder und einen Wechselakku - bestätigt ist davon nichts",
+  "excerpt": "Ein Reddit-Nutzer will den unangekündigten Xbox Elite Series 3 auf einem Gebrauchtmarktplatz erstanden haben. Die Fotos zeigen Features, die es beim Vorgänger nicht gab - nur starten lässt sich das Gerät nicht.",
+  "seoTitle": "Xbox Elite Series 3: Prototyp mit LCD-Display geleakt",
+  "metaDescription": "Ein angeblicher Xbox Elite Series 3 taucht für 200 Dollar auf: LCD-Display, zwei Scrollräder, Wechselakku mit 1.528 mAh. Was der Leak zeigt - und was offen bleibt.",
+  "category": "leaks",
+  "platforms": [
+    "xbox",
+    "pc"
+  ],
+  "tags": [
+    "Xbox Elite Series 3",
+    "Xbox",
+    "Microsoft",
+    "Controller",
+    "Leak"
+  ],
+  "tldr": [
+    "Ein Reddit-Nutzer will für 200 US-Dollar einen Prototyp des unangekündigten Xbox Elite Series 3 über den Marktplatz OfferUp gekauft haben",
+    "Die Bilder zeigen ein kleines Display neben dem Pairing-Knopf, zwei Scrollräder an der Unterseite und einen entnehmbaren Akku mit 1.528 mAh",
+    "Der Controller lässt sich weder per Kabel noch drahtlos mit Xbox oder PC verbinden - eine Devkit-Sperre gilt als Vermutung",
+    "Microsoft hat sich zu dem Leak nicht geäussert; alle Angaben sind unbestätigt"
+  ],
+  "whyItMatters": "Der Elite Series 2 ist seit 2019 auf dem Markt und steht seit Jahren wegen Stick-Drift und Haltbarkeit in der Kritik. Ein Nachfolger mit Wechselakku und neuen Eingaben würde genau diese Schwachstellen adressieren - vorausgesetzt, die Leaks stimmen und Microsoft liefert auch bei den Sticks nach.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Ein Controller, den es offiziell nicht gibt, liegt angeblich auf einem privaten Wohnzimmertisch in Seattle: Ein Reddit-Nutzer mit dem Handle ssuberlex berichtet, er habe für 200 US-Dollar über den Gebrauchtmarktplatz OfferUp ein Gerät gekauft, das stark nach dem unangekündigten Xbox Elite Series 3 aussieht. Am 11. August veröffentlichte er mindestens sechs Fotos und fragte die Community, ob es sich tatsächlich um das ungezeigte Modell handle. Bestätigt ist bislang nichts - Microsoft schweigt, und Beitrag wie Konto wurden inzwischen gelöscht. Einzelne Bilder kursieren noch in den Kommentaren."
+    },
+    {
+      "type": "embed",
+      "platform": "reddit",
+      "url": "https://www.reddit.com/r/Controller/comments/1vllg3j/anyone_know_what_controller_this_is_is_this_the/"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "200 $",
+          "label": "zahlte der Käufer für den mutmasslichen Prototyp"
+        },
+        {
+          "value": "1.528 mAh",
+          "label": "Akkukapazität - der Elite Series 2 hat 2.050 mAh"
+        },
+        {
+          "value": "2019",
+          "label": "erschien der bislang letzte Elite-Controller"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Vom Behördenleak zum Gebrauchtmarkt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Neu ist der Elite Series 3 als Gerücht nicht. Im Mai 2026 stellte eine brasilianische Regulierungsbehörde offenbar versehentlich Bilder unveröffentlichter Xbox-Hardware online. Schon damals fielen zwei zusätzliche Eingaben an der Unterseite auf, die für Scrollräder gehalten werden. Gerüchte über gleich mehrere neue Xbox-Controller kursieren seit 2025, und viele rechneten mit einer Enthüllung beim Xbox Games Showcase im Juni 2026. Gezeigt wurde dort allerdings nur der Xbox Wireless Controller X25 Special Edition - eine reine Farbvariante ohne neue Funktionen."
+    },
+    {
+      "type": "heading",
+      "text": "Ein Display neben dem Pairing-Knopf"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die auffälligste Neuerung auf den Fotos sitzt an der Oberseite: ein kleines Display direkt neben Pairing-Taste und USB-C-Anschluss. Wofür es gedacht ist, sagt der Leak nicht. Naheliegend wäre eine Anzeige für die Verbindungsverwaltung, denn dem Gerät wird nachgesagt, sich mit deutlich mehr Quellen koppeln zu können als sein Vorgänger - inklusive eines eigenen WLAN-Funkmoduls, das direkt mit Cloud-Gaming-Servern spricht. Auch das bleibt ein Gerücht. Ebenso offen ist der Zweck der beiden Scrollräder an der Unterseite. Denkbar sind Trimm- und Schubregler in Flugsimulationen oder schlicht eine Lautstärkeregelung am Griff."
+    },
+    {
+      "type": "heading",
+      "text": "Wechselakku - mit weniger Kapazität"
+    },
+    {
+      "type": "paragraph",
+      "text": "Praktisch relevanter dürfte eine andere Änderung sein: Der Akku sitzt in einem eigenen Fach und lässt sich entnehmen. Auf der Zelle prangt der Aufdruck «Prototype: NOT For Sale», die angegebene Kapazität liegt bei 1.528 mAh. Das ist spürbar weniger als die 2.050 mAh des Elite Series 2, der beim reinen Durchhaltevermögen also überlegen sein könnte. Dafür fällt beim Nachfolger weg, was Besitzer des Vorgängers bislang zur Bastelei zwingt: Wer dort einen verschlissenen Akku ersetzen will, muss den Controller zerlegen. Der Käufer selbst hat auf einen Teardown verzichtet - bei einem 200-Dollar-Einzelstück nachvollziehbar."
+    },
+    {
+      "type": "heading",
+      "text": "Ein Controller, der nichts tut"
+    },
+    {
+      "type": "paragraph",
+      "text": "So vollständig der Blick auf die Hardware ist, so ernüchternd ist ihr Nutzen. Weder Xbox-Konsole noch Windows-PC erkennen das Gerät, kabelgebunden wie kabellos."
+    },
+    {
+      "type": "quote",
+      "text": "Er lässt sich weder mit einer Xbox noch per Kabel koppeln. Nur das rote Licht blinkt, aber kabelgebunden wie kabellos passiert nichts.",
+      "attribution": "ssuberlex, Reddit"
+    },
+    {
+      "type": "paragraph",
+      "text": "In den Kommentaren vermuten mehrere Nutzer, es handle sich um Devkit-Hardware, die nur mit freigeschalteten Konsolen oder Rechnern funktioniert. Haptisch beschreibt der Käufer das Gerät als weitgehend vertraut - es fühle sich an wie der Standard-Controller der Xbox Series X, nur «klickiger»."
+    },
+    {
+      "type": "heading",
+      "text": "Die entscheidende Frage bleibt offen"
+    },
+    {
+      "type": "paragraph",
+      "text": "In der Diskussion drehte sich am meisten um ein Detail, das die Fotos nicht verraten: Setzt Microsoft endlich auf TMR- oder Hall-Effekt-Sticks? Stick-Drift gehört zu den häufigsten Beschwerden über den Elite Series 2, die mangelnde Haltbarkeit zieht sich durch die Amazon-Bewertungen und treibt Käufer regelmässig zu günstigeren Alternativen von Drittanbietern. Ein Pro-Controller für Enthusiasten, der nach zwei Jahren driftet, ist genau das Problem, das ein Nachfolger lösen müsste."
+    },
+    {
+      "type": "paragraph",
+      "text": "Einzuordnen ist der Fund vorsichtig. Ein Prototyp im Umlauf spricht dafür, dass die Entwicklung weit fortgeschritten ist - garantiert ist damit weder ein Termin noch ein finales Featureset, denn bis zur Serienreife sind weitere Revisionen möglich. Kein Insider nennt bislang ein Release-Datum, und Microsoft hat für 2026 ausser den angekündigten Sondereditionen zu Gears of War: E-Day nichts in Richtung Elite-Controller angedeutet. Der erste Elite erschien 2015, der zweite 2019 - die Lücke ist gross genug, dass ein dritter Anlauf für viele überfällig wirkt. Bis zu einer offiziellen Ankündigung gilt: alles unbestätigt."
+    }
+  ],
+  "poll": {
+    "question": "Was müsste der Elite Series 3 vor allem besser machen?",
+    "options": [
+      "Driftfreie Sticks - alles andere ist zweitrangig",
+      "Wechselakku statt fest verbautem Pack",
+      "Neue Eingaben wie Scrollräder und Display",
+      "Vor allem: nicht noch teurer werden"
+    ]
+  },
+  "isLeakOrRumor": true,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-22T06:58:14.316Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "particles",
+  "sources": [
+    {
+      "title": "Xbox Elite Series 3 controller sample leaks with LCD screen and replaceable battery - Notebookcheck News",
+      "url": "https://www.notebookcheck.net/Xbox-Elite-Series-3-controller-sample-leaks-with-LCD-screen-and-replaceable-battery.1365931.0.html",
+      "publisher": "Manuell"
+    },
+    {
+      "title": "Brand-New Leaked Xbox Controller Spotted in the Wild",
+      "url": "https://gamerant.com/new-xbox-controller-leak-elite-series-3-images/",
+      "publisher": "Manuell"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/xbox-elite-series-3-prototyp-leak-lcd-display-2026.webp",
+    "alt": "Elite Series 3 für 200 Dollar gekauft - und er lässt sich nicht koppeln",
+    "credit": "Bild: Manuell",
+    "sourceUrl": "https://www.notebookcheck.net/Xbox-Elite-Series-3-controller-sample-leaks-with-LCD-screen-and-replaceable-battery.1365931.0.html",
+    "sourceWidth": 2000,
+    "sourceHeight": 1500
+  },
+  "relatedSlugs": [
+    "xbox-series-x25-preis-release-leak-2026",
+    "blizzard-top-performing-studio-xbox-leak-2026",
+    "dualsense-edge-cfi-zcp2-revision-leak-2027"
+  ]
+}
