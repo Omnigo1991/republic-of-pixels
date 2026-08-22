@@ -1,0 +1,154 @@
+{
+  "slug": "playstation-agb-mails-digitalbesitz-psblackout-2026",
+  "title": "«Die Software wird lizenziert, nicht verkauft» - Sonys Mail zur Unzeit",
+  "subtitle": "Mitten in der Disc-Debatte schickt PlayStation automatisierte AGB-Mails, die Millionen Konten daran erinnern, wem die digitalen Spiele wirklich gehören",
+  "excerpt": "PSN-Konten erhielten diese Woche die kompletten Nutzungsbedingungen per Mail - inklusive der Passage zum Digitalbesitz. Fünf Tage vor einem geplanten Protest gegen das Disc-Aus 2028 könnte das Timing kaum unglücklicher sein.",
+  "seoTitle": "PlayStation AGB-Mail: Digitale Spiele nur lizenziert",
+  "metaDescription": "Sony verschickt automatisierte AGB-Mails an PSN-Nutzer - inklusive Passage zum Digitalbesitz. Kurz vor dem #PSBlackout-Protest gegen das Disc-Aus 2028.",
+  "category": "news",
+  "platforms": [
+    "playstation"
+  ],
+  "tags": [
+    "PlayStation",
+    "Sony",
+    "Physische Spiele",
+    "Digitalvertrieb",
+    "PSN"
+  ],
+  "tldr": [
+    "PSN-Konten erhielten in der Woche ab dem 18. August automatisierte Mails mit den vollständigen PlayStation-Nutzungsbedingungen",
+    "Enthalten ist Abschnitt 1.4 des Software-EULA: Digitale Spiele werden lizenziert, nicht verkauft",
+    "Ab Januar 2028 gibt es neue PlayStation-Spiele laut Sony nur noch digital - ein Rückzieher ist laut Earnings Call nicht geplant",
+    "Vom 23. bis 30. August läuft der Protest #PSBlackout, initiiert unter anderem von DoesItPlay?"
+  ],
+  "whyItMatters": "Ab 2028 fällt für neue PlayStation-Spiele die physische Alternative weg - damit wird das Kleingedruckte zum einzigen Regelwerk, das den Zugriff auf eure Bibliothek bestimmt. Die Mail zeigt schwarz auf weiss, wie eng dieser Rahmen gesteckt ist: kein Weiterverkauf, kein Verleih, nicht einmal eine Vererbung des Kontos.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Sony kämpft seit dem Sommer mit dem Ärger über eine Ankündigung, die kaum jemand hören wollte: Ab 2028 soll Schluss sein mit neuen PlayStation-Discs. Ausgerechnet mitten in diese Debatte hinein verschickte das Unternehmen diese Woche automatisierte Mails an PSN-Konten - mit den vollständigen Nutzungsbedingungen im Text. Darunter jene Passage, die erklärt, dass digital gekaufte Spiele nicht wirklich den Spielerinnen und Spielern gehören."
+    },
+    {
+      "type": "embed",
+      "platform": "twitter",
+      "url": "https://x.com/TheStebe/status/2091218769511125088"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "Jan. 2028",
+          "label": "ab dann sollen neue PlayStation-Spiele ausschliesslich digital erscheinen"
+        },
+        {
+          "value": "23.-30. Aug.",
+          "label": "Zeitraum des angekündigten Protests #PSBlackout"
+        },
+        {
+          "value": "18. Aug.",
+          "label": "Tag, an dem die AGB-Mail im Subreddit PlayStation Solutions auftauchte"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Eine Mail, die niemand angefordert hat"
+    },
+    {
+      "type": "paragraph",
+      "text": "Aufgetaucht ist das Schreiben am 18. August im Subreddit PlayStation Solutions. Der Text beginnt mit der Feststellung, man habe «kürzlich die folgenden PlayStation-Bedingungen akzeptiert» - Nutzungsbedingungen, Verhaltenskodex, Endbenutzer-Lizenzvertrag und Datenschutzrichtlinie. Zur «Bequemlichkeit und künftigen Referenz» habe man vollständige Kopien beigelegt. Genau das sorgte für Verwirrung: Viele Empfängerinnen und Empfänger hatten ihre PS4 oder PS5 seit Monaten nicht mehr eingeschaltet und konnten sich an keine Zustimmung erinnern. Auf X kursierte zudem die Frage, ob es sich um dieselbe Mail handle, die bereits am 12. August verschickt worden war."
+    },
+    {
+      "type": "paragraph",
+      "text": "Statt schlicht auf die Dokumente zu verlinken, packte Sony die Abschnitte komplett in die Nachricht. Für europäische Konten landete damit auch Abschnitt 1.4 des Software-EULA im Postfach, überschrieben mit «Lizenz für dich» - jener Teil, der Digitalkäufe regelt. Also exakt den Vertriebsweg, der ab Januar 2028 der einzige für neue Spiele sein soll."
+    },
+    {
+      "type": "heading",
+      "text": "Abschnitt 1.4 - das Kleingedruckte zum Digitalkauf"
+    },
+    {
+      "type": "quote",
+      "text": "Die Software wird dir lizenziert, nicht verkauft. Dir wird eine beschränkte, nicht exklusive, nicht übertragbare und persönliche Lizenz gewährt, die Software für deinen privaten, nicht kommerziellen Gebrauch auf dem dafür vorgesehenen System oder Gerät zu spielen oder zu nutzen.",
+      "attribution": "PlayStation Software-EULA, Abschnitt 1.4"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Klausel hält weiter fest, dass alle Rechte, die nicht ausdrücklich eingeräumt werden, beim Unternehmen verbleiben - inklusive sämtlicher geistiger Eigentumsrechte. Es folgt eine Aufzählung dessen, was mit den eigenen Digitalspielen nicht erlaubt ist:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Vermieten oder Verleasen der Software",
+        "Verändern der Software",
+        "Bezug der Software über andere als die von Sony autorisierten Vertriebswege",
+        "Weitergabe des PSN-Kontos samt Spielebibliothek an eine andere Person - auch nicht im Erbfall"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Damit fasst die Mail unfreiwillig genau jene Einschränkungen zusammen, die einen Teil der Wut über das Disc-Aus überhaupt erst befeuert haben. Denn die Kritik zerfällt in zwei Lager: Die einen wollen physische Medien grundsätzlich erhalten wissen. Die anderen könnten mit einer rein digitalen Zukunft leben - aber nur, wenn dabei belastbare Verbraucherrechte gelten statt Regeln, die der Plattformbetreiber allein festlegt und jederzeit anpassen kann."
+    },
+    {
+      "type": "heading",
+      "text": "#PSBlackout: eine Woche Funkstille"
+    },
+    {
+      "type": "paragraph",
+      "text": "Das Timing der Mail fällt in die Tage unmittelbar vor einem koordinierten Protest. Vom 23. bis 30. August läuft der #PSBlackout, getragen von Fans und Verfechterinnen und Verfechtern physischer Medien. Zu den Organisatoren zählt der Account DoesItPlay?, der auf X zum Ausstieg auf Zeit aufruft."
+    },
+    {
+      "type": "quote",
+      "text": "Wir wollen, dass physische Spiele bleiben! Eine rein digitale Zukunft ohne Eigentum und Verbraucherschutzrecht ist inakzeptabel! Loggt euch aus, spielt nicht, kauft nicht, kündigt Abos, werdet zu Geistern, bis Sony seinen Fehler erkennt!",
+      "attribution": "DoesItPlay? auf X"
+    },
+    {
+      "type": "paragraph",
+      "text": "Es ist nicht die erste Aktion dieser Art. Zuletzt überschwemmten Protestierende mit dem Slogan «No Disc No Buy» den Livechat und die Kommentarspalten von Sonys Showcase zu Phantom Blade Zero. Auch das Zusammenstreichen des Onlineshops von Crunchyroll wird von vielen als weiterer Baustein in Sonys Abkehr vom physischen Besitz gelesen."
+    },
+    {
+      "type": "heading",
+      "text": "Sony bleibt bei der Linie"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ein Einlenken ist bislang nicht in Sicht: Im jüngsten Earnings Call bekräftigte das Unternehmen, dass es keine Pläne gibt, den Kurs zu korrigieren. Als bewusste Provokation war die AGB-Mail mit Sicherheit nicht gedacht - sie dürfte schlicht aus einem automatisierten Prozess stammen. Doch sie liefert der Protestbewegung ausgerechnet in der Woche vor dem Blackout das Argument frei Haus, das sie ohnehin vorbringt: Was ab 2028 im PlayStation-Konto liegt, ist juristisch betrachtet kein Besitz, sondern eine Erlaubnis auf Widerruf."
+    }
+  ],
+  "poll": {
+    "question": "Was müsste Sony liefern, damit ihr eine rein digitale PlayStation-Zukunft akzeptiert?",
+    "options": [
+      "Nichts - Discs müssen bleiben",
+      "Vererbbare Konten und Weitergaberecht",
+      "Garantierte Verfügbarkeit gekaufter Spiele",
+      "Digital ist mir längst egal"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-22T21:44:05.435Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "particles",
+  "sources": [
+    {
+      "title": "PlayStation Chooses The Worst Possible Time To Blast Players With Reminders That They Don t Own Their Digital Games",
+      "url": "https://kotaku.com/playstation-chooses-the-worst-possible-time-to-blast-players-with-reminders-that-they-dont-own-their-digital-games-2000727054",
+      "publisher": "Kotaku"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/playstation-agb-mails-digitalbesitz-psblackout-2026.webp",
+    "alt": "«Die Software wird lizenziert, nicht verkauft» - Sonys Mail zur Unzeit",
+    "credit": "Bild: Kotaku",
+    "sourceUrl": "https://kotaku.com/playstation-chooses-the-worst-possible-time-to-blast-players-with-reminders-that-they-dont-own-their-digital-games-2000727054",
+    "sourceWidth": 1280,
+    "sourceHeight": 721
+  },
+  "relatedSlugs": [
+    "capcom-physische-spiele-digitalverkauf-2026",
+    "ps6-disc-aus-analyst-1000-dollar-2026",
+    "ps-store-preise-digital-only-navok-2026"
+  ]
+}
