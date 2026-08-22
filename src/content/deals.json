@@ -1,17 +1,6 @@
 {
-  "updatedAt": "2026-08-22T13:05:53.357Z",
+  "updatedAt": "2026-08-22T13:22:11.780Z",
   "deals": [
-    {
-      "appId": 1142710,
-      "title": "Total War: WARHAMMER III",
-      "discountPercent": 85,
-      "originalPrice": 5999,
-      "finalPrice": 899,
-      "currency": "EUR",
-      "endsAt": "2026-08-27T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1142710/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1142710/capsule_184x69.jpg?t=1786634522"
-    },
     {
       "appId": 1771300,
       "title": "Kingdom Come: Deliverance II",
@@ -66,6 +55,17 @@
       "endsAt": "2026-08-31T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/1643320/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1643320/87ade1fa0e9869388368228258d758e040a3f651/capsule_184x69_alt_assets_7_german.jpg?t=1787314871"
+    },
+    {
+      "appId": 3065940,
+      "title": "Gallipoli",
+      "discountPercent": 25,
+      "originalPrice": 2999,
+      "finalPrice": 2249,
+      "currency": "EUR",
+      "endsAt": "2026-09-03T17:00:12.000Z",
+      "url": "https://store.steampowered.com/app/3065940/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3065940/8b129934c39739bc486f62fbd72d9356d230d6bb/capsule_184x69_alt_assets_0.jpg?t=1787348331"
     }
   ]
 }
