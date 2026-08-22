@@ -66,7 +66,7 @@ export function MenueKarte() {
         onClick={() => setOffen((v) => !v)}
         aria-label={offen ? "Menü schliessen" : "Menü öffnen"}
         aria-expanded={offen}
-        className="grid h-[34px] w-[34px] shrink-0 place-items-center rounded-full bg-white/[0.14] sm:h-[38px] sm:w-[38px]"
+        className="grid h-[44px] w-[44px] shrink-0 place-items-center rounded-full bg-white/[0.14] sm:h-[38px] sm:w-[38px]"
       >
         <svg viewBox="0 0 16 16" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" className="h-4 w-4">
           {offen ? <path d="M3.5 3.5l9 9M12.5 3.5l-9 9" /> : <path d="M2 4h12M2 8h12M2 12h12" />}
@@ -74,14 +74,14 @@ export function MenueKarte() {
       </button>
 
       {offen && (
-        <div className="animate-einblenden absolute right-4 top-[64px] z-[60] w-[calc(100%-2rem)] rounded-[24px] border border-white/[0.18] bg-[rgba(18,18,30,0.92)] p-6 backdrop-blur-[22px] sm:right-6 sm:top-[74px] sm:w-[560px] sm:p-7 lg:right-8">
-          <div className="grid grid-cols-2 gap-5 text-left sm:grid-cols-3 sm:gap-6">
+        <div className="animate-einblenden absolute inset-x-0 top-[72px] z-[60] w-auto rounded-[24px] border border-white/[0.18] bg-[rgba(13,12,26,0.97)] p-6 backdrop-blur-[22px] sm:inset-x-auto sm:right-6 sm:top-[74px] sm:w-[560px] sm:p-7 lg:right-8">
+          <div className="grid grid-cols-1 gap-4 text-left sm:grid-cols-3 sm:gap-6">
             {SPALTEN.map((s) => (
               <div key={s.titel}>
                 <div className="mb-2 text-[11px] font-bold uppercase tracking-[0.1em] text-[#86868b]">
                   {s.titel}
                 </div>
-                <ul className="space-y-2">
+                <ul className="flex flex-wrap gap-x-5 gap-y-2 sm:block sm:space-y-2">
                   {s.punkte.map((p) => (
                     <li key={p.text}>
                       <Link
