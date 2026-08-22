@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
-import { Footer } from "@/components/Footer";
+import { KopfBand, SocialBuehne } from "@/components/next/KopfBand";
 import { VisitTracker } from "@/components/VisitTracker";
 import { TeilenKnopf } from "@/components/TeilenKnopf";
 
@@ -122,9 +122,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organisationJsonLd) }}
         />
-        {/* Masthead wird pro Seitentyp gerendert (Masthead.tsx: brand/section/slim). */}
+        {/* Neues Design (Tim-Freigabe 22.08.2026): Das Kopfband schwebt
+            über allen Seiten, die Social-Bühne schliesst sie ab. */}
+        <KopfBand />
         <main>{children}</main>
-        <Footer />
+        <SocialBuehne />
         {/* Teilt immer die aktuelle Seite (Tim, 09.08.2026) - deshalb im
             Layout und nicht pro Seite. */}
         <TeilenKnopf />

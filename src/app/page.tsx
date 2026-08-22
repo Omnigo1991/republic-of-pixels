@@ -13,7 +13,6 @@ import { PixelRaten } from "@/components/PixelRaten";
 import { DeineMerkliste } from "@/components/DeineMerkliste";
 import { SectionDivider } from "@/components/SectionDivider";
 import { Reveal } from "@/components/Reveal";
-import { Masthead } from "@/components/Masthead";
 import { KinoHero, BeliebtSlider } from "@/components/next/KinoHero";
 import { BentoMosaik } from "@/components/next/BentoMosaik";
 
@@ -52,7 +51,6 @@ export default async function HomePage() {
 
   return (
     <>
-      <Masthead variant="brand" />
       {/* NEUES DESIGN (Tim-Freigabe 22.08.2026, Entwurf "Republic Next"):
           Kino-Hero mit dem Aufmacher über die volle Bühne, darunter die
           Beliebt-Reihe und das Bento-Mosaik. Der Tagesgruss entfällt hier

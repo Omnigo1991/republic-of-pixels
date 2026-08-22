@@ -21,7 +21,6 @@ import { HypeMeter } from "@/components/HypeMeter";
 import { NotchKarte } from "@/components/StartseiteNeu";
 import { SectionDivider } from "@/components/SectionDivider";
 import { formatDateTime, splitTitle } from "@/lib/format";
-import { Masthead } from "@/components/Masthead";
 import { themenFuerArtikel } from "@/lib/themen";
 import { PLATFORM_LABELS } from "@/lib/types";
 
@@ -88,7 +87,6 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
 
   return (
     <>
-      <Masthead />
       <script
         type="application/ld+json"
         // eslint-disable-next-line react/no-danger

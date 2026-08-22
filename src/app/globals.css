@@ -620,3 +620,9 @@ a[class*="rounded-full"][class*="border-accent"] {
   text-transform: none !important;
   text-shadow: none !important;
 }
+
+/* Das Kopfband schwebt - der Inhalt beginnt darunter. Der Kino-Hero
+   auf der Startseite läuft bewusst dahinter durch (er trägt sein
+   eigenes Dunkel oben). */
+main { padding-top: 76px; }
+main:has(> .hero-voll) { padding-top: 0; }

@@ -9,7 +9,7 @@ import { CHIP, VERLAUFSTEXT, KategorieChip, punktFarbe, spielName } from "./Baus
 // weniger stark herangezoomt wird.
 export function KinoHero({ artikel, weitere }: { artikel: Article; weitere: Article[] }) {
   return (
-    <div className="schrift-normal relative h-[540px] sm:h-[760px] lg:h-[960px]">
+    <div className="hero-voll schrift-normal relative h-[540px] sm:h-[760px] lg:h-[960px]">
       {artikel.image ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img
