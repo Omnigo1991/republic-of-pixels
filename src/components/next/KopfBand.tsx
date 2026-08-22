@@ -14,7 +14,6 @@ import { GLAS } from "./Bausteine";
 // in Ruhe im neuen Layout zurueck.
 const BEREICHE = [
   { href: "/kategorie/news", text: "News" },
-  { href: "/kategorie/leaks", text: "Leaks" },
   { href: "/#radare", text: "Radare" },
 ];
 

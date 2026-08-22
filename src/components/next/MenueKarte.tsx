@@ -11,10 +11,6 @@ const SPALTEN: { titel: string; punkte: { text: string; href: string }[] }[] = [
     titel: "Entdecken",
     punkte: [
       { text: "News", href: "/kategorie/news" },
-      { text: "Guides", href: "/guides" },
-      { text: "Leaks", href: "/kategorie/leaks" },
-      { text: "Reviews", href: "/kategorie/reviews" },
-      { text: "Themen", href: "/themen" },
       { text: "Suche", href: "/suche" },
     ],
   },

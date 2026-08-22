@@ -4,7 +4,7 @@ import { SchlussKacheln } from "@/components/next/SchlussKacheln";
 import { Reveal } from "@/components/Reveal";
 import { KinoHero, BeliebtSlider } from "@/components/next/KinoHero";
 import { BentoMosaik } from "@/components/next/BentoMosaik";
-import { SektionsTitel, EventCountdown } from "@/components/next/SektionsTitel";
+import { EventCountdown } from "@/components/next/SektionsTitel";
 import { RadarBento } from "@/components/next/RadarBento";
 
 export const metadata: Metadata = {
@@ -44,9 +44,6 @@ export default async function HomePage() {
 
       <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
         <section id="radare" className="scroll-mt-24">
-          <Reveal>
-            <SektionsTitel titel="Die Radare" unter="Alles Wichtige im Blick. Automatisch aktuell." mittig />
-          </Reveal>
           <Reveal>
             <RadarBento getestete={getestete} />
           </Reveal>

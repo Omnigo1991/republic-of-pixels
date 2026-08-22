@@ -12,7 +12,6 @@ import {
   rangFuer,
 } from "@/lib/ranking";
 import { splitTitle, formatRelative } from "@/lib/format";
-import { SectionDivider } from "./SectionDivider";
 import { RankIcon } from "./RankIcons";
 
 interface LetzterKommentar {
@@ -261,10 +260,9 @@ export function ProfilAnsicht({ nickname }: { nickname: string }) {
       )}
 
       {/* Letzte Kommentare */}
-      <h2 className="mt-12 mb-3 text-xl font-semibold tracking-tight text-text-primary">
+      <h2 className="mb-4 mt-12 text-[22px] font-bold tracking-[-0.015em] text-[#F2F8FF]">
         Letzte Kommentare
       </h2>
-      <SectionDivider />
       {letzte.length === 0 && (
         <p className="text-sm text-text-tertiary">Noch keine Kommentare geschrieben.</p>
       )}

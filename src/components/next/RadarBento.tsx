@@ -62,6 +62,29 @@ export function RadarBento({ getestete }: { getestete: Article[] }) {
 
   return (
     <div className="flaechen-glas mt-8">
+      {/* Event-Radar wie im Entwurf: Termine zweispaltig, Geruechte
+          tragen einen Magenta-Chip. */}
+      {termine.length > 0 && (
+        <div className={`${KARTE} mb-4`}>
+          <Kopf titel="Event-Radar" rechts="Messen, Shows und Termine" />
+          <div className="grid gap-3 sm:grid-cols-2">
+            {termine.map((e) => (
+              <div key={e.name} className="flex items-center gap-3.5 rounded-[14px] bg-white/[0.06] px-4 py-3.5">
+                <span className="shrink-0 whitespace-nowrap text-[11px] font-extrabold tracking-[0.03em] text-accent">
+                  {e.dateLabel ?? e.dateStart}
+                </span>
+                <span className="text-[14.5px] font-semibold text-[#F2F8FF]">{e.name}</span>
+                {e.status === "geruecht" && (
+                  <span className="ml-auto shrink-0 rounded-full border border-magenta/40 bg-magenta/[0.16] px-2.5 py-[3px] text-[10px] font-bold uppercase tracking-[0.06em] text-[#FF6BC0]">
+                    Gerücht
+                  </span>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
       <div className="grid gap-4 lg:grid-cols-2">
         {/* Charts als Balken */}
         <div className={KARTE}>
@@ -132,29 +155,6 @@ export function RadarBento({ getestete }: { getestete: Article[] }) {
           )}
         </div>
       </div>
-
-      {/* Event-Radar wie im Entwurf: Termine zweispaltig, Geruechte
-          tragen einen Magenta-Chip. */}
-      {termine.length > 0 && (
-        <div className={`${KARTE} mt-4`}>
-          <Kopf titel="Event-Radar" rechts="Messen, Shows und Termine" />
-          <div className="grid gap-3 sm:grid-cols-2">
-            {termine.map((e) => (
-              <div key={e.name} className="flex items-center gap-3.5 rounded-[14px] bg-white/[0.06] px-4 py-3.5">
-                <span className="shrink-0 whitespace-nowrap text-[11px] font-extrabold tracking-[0.03em] text-accent">
-                  {e.dateLabel ?? e.dateStart}
-                </span>
-                <span className="text-[14.5px] font-semibold text-[#F2F8FF]">{e.name}</span>
-                {e.status === "geruecht" && (
-                  <span className="ml-auto shrink-0 rounded-full border border-magenta/40 bg-magenta/[0.16] px-2.5 py-[3px] text-[10px] font-bold uppercase tracking-[0.06em] text-[#FF6BC0]">
-                    Gerücht
-                  </span>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
 
       {/* Deal-Radar in eigener Box */}
       {dealListe.length > 0 && (
