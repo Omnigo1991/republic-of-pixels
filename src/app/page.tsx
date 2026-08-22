@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { getTopStory, getChronological, getPopularArticlesLive, getAllArticles } from "@/lib/articles";
-import { NewsletterBlock } from "@/components/StartseiteNeu";
-import { PixelRaten } from "@/components/PixelRaten";
+import { SchlussKacheln } from "@/components/next/SchlussKacheln";
 import { Reveal } from "@/components/Reveal";
 import { KinoHero, BeliebtSlider } from "@/components/next/KinoHero";
 import { BentoMosaik } from "@/components/next/BentoMosaik";
@@ -53,16 +52,7 @@ export default async function HomePage() {
           </Reveal>
         </section>
 
-        {/* Zum Schluss die beiden persönlichen Kacheln nebeneinander -
-            wie im Entwurf: Pixel-Raten links, Newsletter rechts. */}
-        <div className="flaechen-glas mt-16 grid gap-4 lg:grid-cols-[3fr_2fr]">
-          <Reveal>
-            <PixelRaten />
-          </Reveal>
-          <Reveal>
-            <NewsletterBlock artikelBilder={[topStory, ...kleinreihe].slice(0, 3)} />
-          </Reveal>
-        </div>
+        <SchlussKacheln />
       </div>
     </>
   );

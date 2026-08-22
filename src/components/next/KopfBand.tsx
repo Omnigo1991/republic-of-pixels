@@ -10,11 +10,12 @@ import { GLAS } from "./Bausteine";
 // Der Glasgrund ist bewusst dunkel (78 Prozent Navy): Über hellen
 // Artikelbildern war die durchscheinende Fassung nicht mehr lesbar
 // (gemessen 22.08.2026).
+// Guides und Themen sind vorerst raus (Tim, 22.08.2026) - sie kommen
+// in Ruhe im neuen Layout zurueck.
 const BEREICHE = [
-  { href: "/#news", text: "News" },
-  { href: "/guides", text: "Guides" },
+  { href: "/kategorie/news", text: "News" },
+  { href: "/kategorie/leaks", text: "Leaks" },
   { href: "/#radare", text: "Radare" },
-  { href: "/themen", text: "Themen" },
 ];
 
 export function KopfBand() {

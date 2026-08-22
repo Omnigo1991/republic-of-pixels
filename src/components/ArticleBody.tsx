@@ -54,10 +54,6 @@ export function ArticleBody({
                 {block.text}
                 {block.attribution && (
                   <footer className="mt-4 flex items-center gap-2.5 border-0 not-italic">
-                    <span
-                      aria-hidden="true"
-                      className="h-[3px] w-[26px] rounded-[2px] bg-[linear-gradient(90deg,#02F0D1,#FF2E97)]"
-                    />
                     <span className="text-[13.5px] font-bold text-[#8F95A9]">
                       {block.attribution}
                     </span>

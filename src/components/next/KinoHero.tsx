@@ -28,7 +28,7 @@ export function KinoHero({ artikel, weitere }: { artikel: Article; weitere: Arti
           Schrift auf hellen, unruhigen Motiven nicht lesbar (Tim,
           22.08.2026). */}
       <span className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.5)_0%,rgba(0,0,0,0.06)_26%,rgba(6,6,16,0.62)_62%,rgba(9,8,20,0.92)_84%,#0C0B1A_99%)]" />
-      <span className="absolute inset-0 bg-[linear-gradient(100deg,rgba(6,6,16,0.88)_0%,rgba(6,6,16,0.72)_38%,rgba(6,6,16,0.24)_62%,transparent_82%)]" />
+      <span className="absolute inset-0 bg-[linear-gradient(100deg,rgba(6,6,16,0.88)_0%,rgba(6,6,16,0.72)_38%,rgba(6,6,16,0.24)_62%,transparent_82%)] [mask-image:linear-gradient(180deg,transparent_0%,black_28%,black_74%,transparent_97%)] [-webkit-mask-image:linear-gradient(180deg,transparent_0%,black_28%,black_74%,transparent_97%)]" />
 
       <div className="absolute inset-x-0 bottom-4 z-[5] sm:bottom-11 lg:bottom-16">
         <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">

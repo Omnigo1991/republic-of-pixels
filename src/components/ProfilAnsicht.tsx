@@ -129,7 +129,7 @@ export function ProfilAnsicht({ nickname }: { nickname: string }) {
   return (
     <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
       {/* Kopf */}
-      <div className={`relative overflow-hidden rounded-2xl border p-6 shadow-card sm:p-8 ${istMaster ? "border-accent/35 bg-accent-wash/30" : "border-border-subtle bg-surface-panel"}`}>
+      <div className={`relative overflow-hidden rounded-[22px] border border-white/[0.14] bg-white/[0.07] p-6 backdrop-blur-[18px] sm:p-8 ${istMaster ? "" : ""}`}>
         {!istMaster && (
           <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-accent-wash/30 to-transparent" />
         )}
@@ -179,7 +179,7 @@ export function ProfilAnsicht({ nickname }: { nickname: string }) {
 
       {/* Statistiken */}
       <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
-        <div className="rounded-2xl border border-accent/35 bg-accent-wash/30 p-5 text-center">
+        <div className="rounded-[18px] border border-white/[0.14] bg-white/[0.07] p-5 text-center backdrop-blur-[18px]">
           <IconStar className="mx-auto h-5 w-5 text-accent" />
           <p className="mt-2 text-2xl font-bold text-accent">{punkte}</p>
           <p className="mt-1 text-xs text-text-secondary">Punkte</p>
@@ -189,7 +189,7 @@ export function ProfilAnsicht({ nickname }: { nickname: string }) {
           { wert: stats.erhalteneVotes, label: "Upvotes erhalten", Icon: IconArrowUp },
           { wert: stats.vergebeneVotes, label: "Upvotes vergeben", Icon: IconArrowUp },
         ].map((s) => (
-          <div key={s.label} className="rounded-2xl border border-border-subtle bg-surface-panel p-5 text-center">
+          <div key={s.label} className="rounded-[18px] border border-white/[0.14] bg-white/[0.07] p-5 text-center backdrop-blur-[18px]">
             <s.Icon className="mx-auto h-5 w-5 text-text-tertiary" />
             <p className="mt-2 text-2xl font-bold text-text-primary">{s.wert}</p>
             <p className="mt-1 text-xs text-text-tertiary">{s.label}</p>
@@ -199,7 +199,7 @@ export function ProfilAnsicht({ nickname }: { nickname: string }) {
 
       {/* Rang-Fortschritt */}
       {next && (
-        <div className="mt-6 rounded-2xl border border-border-subtle bg-surface-panel p-5">
+        <div className="mt-6 rounded-[18px] border border-white/[0.14] bg-white/[0.07] p-5 backdrop-blur-[18px]">
           <div className="mb-2 flex items-center justify-between text-sm">
             <span className="inline-flex items-center gap-1.5 text-text-secondary">
               Nächster Rang:
@@ -224,7 +224,7 @@ export function ProfilAnsicht({ nickname }: { nickname: string }) {
 
       {/* Alle Ränge */}
       {!istMaster && (
-        <div className="mt-6 rounded-2xl border border-border-subtle bg-surface-panel p-5">
+        <div className="mt-6 rounded-[18px] border border-white/[0.14] bg-white/[0.07] p-5 backdrop-blur-[18px]">
           <div className="overflow-x-auto pt-2 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             <div className="grid min-w-[420px] grid-cols-5">
               {RAENGE.map((r, i) => {

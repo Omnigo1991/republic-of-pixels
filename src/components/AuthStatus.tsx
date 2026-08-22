@@ -169,7 +169,7 @@ export function AuthStatus() {
                 ref={menueRef}
                 role="menu"
                 style={{ top: menuePos.top, right: menuePos.right }}
-                className="konto-glas fixed z-[70] w-72 overflow-hidden rounded-[22px] border border-white/[0.18] bg-[rgba(18,18,30,0.92)] text-[#F2F8FF] shadow-[0_24px_60px_-20px_rgba(0,0,0,0.7)] backdrop-blur-[22px]"
+                className="konto-glas fixed z-[70] w-[288px] overflow-hidden rounded-[24px] border border-white/[0.18] bg-[rgba(18,18,30,0.92)] p-2 text-[#F2F8FF] shadow-[0_24px_60px_-20px_rgba(0,0,0,0.7)] backdrop-blur-[22px]"
               >
                 <div className="flex items-center gap-3 border-b border-border-subtle p-4">
                   {istMaster ? (

@@ -198,9 +198,10 @@ main, header, footer { position: relative; z-index: 1; }
    Farbversatz NUR auf Sektionsebene. Artikelueberschriften und
    Fliesstext bleiben normal gesetzt. */
 h1, h2 {
-  text-transform: uppercase;
-  font-weight: 900;
-  text-shadow: -1px 0 rgba(255, 46, 151, 0.55), 1px 0 rgba(2, 240, 209, 0.55);
+  text-transform: none;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  text-shadow: none;
 }
 h3, h4, p, li { text-transform: none; text-shadow: none; }
 h3 { font-weight: 800; color: #F2F8FF; }
@@ -676,4 +677,47 @@ main:has(> .hero-voll) { padding-top: 0; }
 .konto-glas [class*="text-text-tertiary"], .konto-glas [class*="text-text-secondary"] { color: #8F95A9; }
 .konto-glas [class*="border-"] { border-color: rgba(255, 255, 255, 0.12) !important; }
 .konto-glas [class*="bg-surface"], .konto-glas [class*="bg-bg-"] { background: rgba(255, 255, 255, 0.06) !important; }
+.konto-glas a, .konto-glas button {
+  border-radius: 16px;
+  padding: 11px 14px;
+}
 .konto-glas a:hover, .konto-glas button:hover { background: rgba(255, 255, 255, 0.07); }
+/* Die Kopfzeile mit Bild und Punkten bleibt eine ruhige Flaeche. */
+.konto-glas > div:first-child {
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  border-bottom: 0 !important;
+  margin-bottom: 4px;
+}
+
+/* Pixel-Raten sitzt im neuen Design in einer Glaskachel - sein alter
+   Sektionskopf mit Versalschrift und Cyan-Linie entfaellt dort. */
+.raten-kachel h2,
+.raten-kachel [class*="h-0.5"],
+.raten-kachel [class*="border-b"] { display: none !important; }
+.raten-kachel section, .raten-kachel > div { padding: 0 !important; margin: 0 !important; }
+.raten-kachel [class*="bg-surface"], .raten-kachel [class*="rounded-2xl"] {
+  background: transparent !important;
+  border: 0 !important;
+}
+
+/* Letzte Reste des alten Kleids: Cyan-Raender und Alt-Flaechen werden
+   auf die Glas-Rezeptur gezogen (Tim, 22.08.2026: nichts aus der alten
+   Seite einfach uebernehmen). */
+main [class*="border-accent"],
+main [class*="border-border-default"],
+main [class*="border-border-subtle"] {
+  border-color: rgba(255, 255, 255, 0.14) !important;
+}
+main [class*="bg-surface-card"],
+main [class*="bg-surface-panel"],
+main [class*="bg-bg-elevated"] {
+  background: rgba(255, 255, 255, 0.07) !important;
+  backdrop-filter: blur(18px);
+}
+main .treppe-tl, main .treppe-tr, main .treppe-innen {
+  clip-path: none !important;
+  border-radius: 22px !important;
+  background: transparent !important;
+  padding: 0 !important;
+}
