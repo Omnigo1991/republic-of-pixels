@@ -1,0 +1,143 @@
+{
+  "slug": "ryzen-7-5800x3d-x370-vs-x570-test-2026",
+  "title": "Ryzen 7 5800X3D auf uraltem Board - und kaum ein FPS geht verloren",
+  "subtitle": "Ein Vergleich zwischen X370 und X570 zeigt, wie wenig das Mainboard beim neu aufgelegten 3D-V-Cache-Chip ausmacht - mit einer Einschränkung",
+  "excerpt": "Lohnt sich zum neu aufgelegten Ryzen 7 5800X3D auch ein neues Mainboard? Ein Vergleich zwischen X370 und X570 liefert eine überraschend klare Antwort - und einen Haken beim Arbeitsspeicher.",
+  "seoTitle": "Ryzen 7 5800X3D: X370 gegen X570 im Gaming-Vergleich",
+  "metaDescription": "Linus Tech Tips vergleicht den neu aufgelegten Ryzen 7 5800X3D auf X370 und X570. Das Ergebnis in Cyberpunk 2077, CS2 und Cities: Skylines II überrascht.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "tags": [
+    "AMD",
+    "Ryzen 7 5800X3D",
+    "AM4",
+    "Hardware",
+    "PC-Upgrade"
+  ],
+  "tldr": [
+    "Linus Tech Tips hat den neu aufgelegten Ryzen 7 5800X3D auf einem alten X370- und einem neueren X570-Board gegeneinander antreten lassen",
+    "In Cyberpunk 2077 liegt der Unterschied bei 1 bis 2 FPS, CS2 zeigt mehr Abstand, im Spielgefühl aber kaum spürbar",
+    "Auch das CPU-lastige Cities: Skylines II profitiert kaum vom moderneren Chipsatz",
+    "Knackpunkt bleibt der Arbeitsspeicher: Auf dem alten Board liess sich der RAM nur schwer auf optimale Taktraten bringen"
+  ],
+  "whyItMatters": "DDR5-Preise sind derzeit volatil, ein kompletter Plattformwechsel aus CPU, Mainboard und Speicher entsprechend teuer. Wer noch auf AM4 sitzt, bekommt hier eine handfeste Entscheidungshilfe: Ein CPU-Tausch allein kann reichen, das alte Mainboard darf bleiben.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Wer noch einen AM4-Rechner unter dem Schreibtisch stehen hat, stellt sich beim Blick auf den neu aufgelegten Ryzen 7 5800X3D dieselbe Frage: Braucht der 3D-V-Cache-Chip zwingend ein modernes Mainboard, oder verschenkt man auf einer älteren Platine Leistung? Linus Tech Tips hat genau das gegeneinander gestellt - einmal auf einem betagten X370-Board, einmal auf einem X570. Das Ergebnis fällt für Aufrüstwillige erfreulich unspektakulär aus."
+    },
+    {
+      "type": "embed",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=DXK-F0SjC_E"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "1-2 FPS",
+          "label": "Unterschied in Cyberpunk 2077 zwischen X370 und X570"
+        },
+        {
+          "value": "339,95 $",
+          "label": "Preis des neu aufgelegten Ryzen 7 5800X3D bei Amazon"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Alter Chipsatz, neuer Prozessor"
+    },
+    {
+      "type": "paragraph",
+      "text": "Für den Vergleich baute Linus Tech Tips zwei möglichst identische Testsysteme auf. Als Grafikkarte kam eine GeForce RTX 4070 Ti zum Einsatz, dazu DDR4-Speicher - also bewusst kein Aufbau, der die CPU in Spielen künstlich zum alleinigen Flaschenhals macht. Unterschied war der Unterbau: hier X370, dort X570."
+    },
+    {
+      "type": "paragraph",
+      "text": "Schon der Start war fummelig. Den frisch aufgelegten 5800X3D überhaupt dazu zu bringen, vom älteren Board erkannt zu werden, erwies sich als knifflig. Auch der Arbeitsspeicher liess sich auf der alten Kombination nur schwer auf seine optimierten Taktraten bringen - was die Erwartung nahelegte, dass die betagte Plattform in Spielen zurückfällt."
+    },
+    {
+      "type": "heading",
+      "text": "Drei Spiele, kaum Unterschiede"
+    },
+    {
+      "type": "paragraph",
+      "text": "Genau das passierte allerdings nicht. In Cyberpunk 2077 trennten die beiden Systeme lediglich ein bis zwei Bilder pro Sekunde - ein Wert, der innerhalb jeder normalen Messschwankung liegt. In CS2 fiel der Abstand grösser aus, war im tatsächlichen Spielverlauf aber kaum wahrnehmbar. Und selbst Cities: Skylines II, das als besonders CPU-lastiger Härtetest ins Rennen geschickt wurde, zeigte nur vernachlässigbare Zugewinne auf dem moderneren Chipsatz."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Cyberpunk 2077: 1 bis 2 FPS Differenz zwischen X370 und X570",
+        "CS2: messbar grösserer Abstand, im Spielgefühl praktisch irrelevant",
+        "Cities: Skylines II: trotz hoher CPU-Last nur minimale Unterschiede"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Wo das neuere Board trotzdem punktet"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ganz gleichwertig sind die beiden Plattformen deshalb nicht. X370 und X570 unterscheiden sich im Funktionsumfang deutlich, allen voran bei der Unterstützung für NVMe-SSDs nach PCIe-Gen-4-Standard. Wer auf dem neueren Chipsatz sitzt, hat also mehr Spielraum beim Speicherausbau und beim restlichen Zubehör - nur eben nicht mehr Bilder pro Sekunde. Für reines Gaming ist der Chipsatz nach diesem Test der am wenigsten entscheidende Faktor im System."
+    },
+    {
+      "type": "heading",
+      "text": "Timing in der Speicherkrise"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bemerkenswert ist der Zeitpunkt. Die Preise für DDR5-Speicher bewegen sich derzeit stark, ein vollständiger Plattformwechsel aus neuer CPU, neuem Mainboard und neuem RAM ist entsprechend teuer geworden - und der Aufwand bei der Auswahl kommt obendrauf. Vor diesem Hintergrund wirkt AMDs lange Unterstützung der AM4-Plattform, die bis zur Neuauflage des 5800X3D reicht, wie eine Versicherung gegen genau diese Marktlage."
+    },
+    {
+      "type": "paragraph",
+      "text": "Für Besitzerinnen und Besitzer eines AM4-Systems mit einem Ryzen ohne 3D-V-Cache ergibt sich daraus eine simple Rechnung: Ein Prozessor für rund 340 US-Dollar bei Amazon steht gegen ein komplettes neues Fundament. Das alte Board bleibt drin, der DDR4-Speicher ebenfalls - und der Leistungssprung kommt aus dem grossen Cache des Chips, nicht aus dem Chipsatz darunter."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Test ist kein Freibrief für ewiges Aufschieben: Wer ohnehin schnelle SSDs oder moderne Anschlüsse braucht, fährt mit der neueren Plattform besser. Für alle anderen liefert der Vergleich aber ein seltenes Ergebnis in der PC-Hardware - das teure Upgrade lässt sich mit gutem Gewissen auslassen. Solange die Speicherpreise unberechenbar bleiben, ist die günstigste Aufrüstung oft die, die den grössten Teil des Rechners unangetastet lässt."
+    }
+  ],
+  "poll": {
+    "question": "Wie geht ihr mit eurem AM4-System um?",
+    "options": [
+      "5800X3D rein, Board bleibt - fertig",
+      "Ich wechsle trotzdem komplett die Plattform",
+      "Ich warte, bis die Speicherpreise fallen",
+      "AM4 ist bei mir längst Geschichte"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-23T04:09:12.642Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "waveform",
+  "sources": [
+    {
+      "title": "AMD’s AM4 CPUs Like The Re-Launched Ryzen 7 5800X3D Deliver Negligible Gaming Improvements In Newer Motherboards, Making Older Hardware Relevant During DRAM Crisis",
+      "url": "https://wccftech.com/amd-ryzen-7-5800x3d-am4-motherboard-performance-dram-crisis/",
+      "publisher": "Wccftech"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/ryzen-7-5800x3d-x370-vs-x570-test-2026.webp",
+    "alt": "Ryzen 7 5800X3D auf uraltem Board - und kaum ein FPS geht verloren",
+    "credit": "Bild: Wccftech",
+    "sourceUrl": "https://wccftech.com/amd-ryzen-7-5800x3d-am4-motherboard-performance-dram-crisis/",
+    "sourceWidth": 1456,
+    "sourceHeight": 819
+  },
+  "relatedSlugs": [
+    "amd-radeon-rx-9000-preiserhoehung-2026",
+    "us-konsolenmarkt-juli-2026-speicherpreise-circana",
+    "genki-manta-controller-kickstarter-2026"
+  ]
+}
