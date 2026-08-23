@@ -131,12 +131,8 @@ h3 {
   }
   .prose-rop blockquote:where(:not(.not-prose, .not-prose *)) {
     font-size: 1.25rem;
-    padding-left: 64px;
-  }
-  .prose-rop blockquote:where(:not(.not-prose, .not-prose *))::before {
-    font-size: 88px;
-    left: -4px;
-    top: -30px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 

@@ -28,7 +28,7 @@ const SPALTEN: { titel: string; punkte: { text: string; href: string }[] }[] = [
     titel: "Republic",
     punkte: [
       { text: "Über uns", href: "/ueber-uns" },
-      { text: "Pixel-Raten", href: "/#raten" },
+      { text: "Pixel-Raten", href: "/kategorie/news" },
       { text: "Instagram", href: "https://www.instagram.com/republicofpixels/" },
       { text: "Einstellungen", href: "/einstellungen" },
     ],

@@ -145,12 +145,7 @@ export function CommentSection({ articleSlug }: { articleSlug: string }) {
         </h2>
         <div className="absolute right-0 top-1/2 flex -translate-y-1/2 items-center gap-2">
         {session ? (
-          <button
-            onClick={() => supabase.auth.signOut()}
-            className="text-sm text-text-tertiary hover:text-text-primary transition-colors"
-          >
-            {profil ? `Angemeldet als ${profil.nickname}` : "Angemeldet"} · Abmelden
-          </button>
+          <span />
         ) : (
           <button
             onClick={() => setLoginOffen(true)}

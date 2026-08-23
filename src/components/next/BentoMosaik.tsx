@@ -64,7 +64,7 @@ export function BentoMosaik({
             </div>
             <div className="mt-auto pt-4">
               <Link
-                href="/#news"
+                href="/kategorie/news"
                 className={`${GLAS} block rounded-full py-2.5 text-center text-[14px] font-semibold text-[#F2F8FF]`}
               >
                 Alle News
