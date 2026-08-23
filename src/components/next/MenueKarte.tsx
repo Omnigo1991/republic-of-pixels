@@ -25,20 +25,16 @@ const SPALTEN: { titel: string; punkte: { text: string; href: string }[] }[] = [
     ],
   },
   {
+    // Nur diese vier Punkte (Tim, 23.08.2026) - das Rechtliche steht
+    // damit in der Spalte statt in einer eigenen Zeile darunter.
     titel: "Republic",
     punkte: [
       { text: "Über uns", href: "/ueber-uns" },
-      { text: "Pixel-Raten", href: "/kategorie/news" },
-      { text: "Instagram", href: "https://www.instagram.com/republicofpixels/" },
-      { text: "Einstellungen", href: "/einstellungen" },
+      { text: "Impressum", href: "/impressum" },
+      { text: "Datenschutz", href: "/datenschutz" },
+      { text: "Cookies", href: "/cookies" },
     ],
   },
-];
-
-const RECHTLICHES = [
-  { text: "Impressum", href: "/impressum" },
-  { text: "Datenschutz", href: "/datenschutz" },
-  { text: "Cookies", href: "/cookies" },
 ];
 
 export function MenueKarte() {
@@ -95,16 +91,6 @@ export function MenueKarte() {
                   ))}
                 </ul>
               </div>
-            ))}
-          </div>
-          <div className="mt-[26px] pt-[4px] text-left text-[12.5px] text-[#86868b]">
-            {RECHTLICHES.map((r, i) => (
-              <span key={r.href}>
-                {i > 0 && " · "}
-                <Link href={r.href} onClick={() => setOffen(false)} className="hover:text-[#F2F8FF]">
-                  {r.text}
-                </Link>
-              </span>
             ))}
           </div>
         </div>
