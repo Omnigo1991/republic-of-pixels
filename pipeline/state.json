@@ -7502,7 +7502,59 @@
       "n": 3
     },
     "163d4f73dceb863d": {
-      "t": "2026-08-23T04:09:15.352Z",
+      "t": "2026-08-23T07:03:56.465Z",
+      "n": 2
+    },
+    "9f7c993b1f26e767": {
+      "t": "2026-08-23T07:03:56.465Z",
+      "n": 3
+    },
+    "da82a02e922fad25": {
+      "t": "2026-08-23T07:03:56.465Z",
+      "n": 1
+    },
+    "d342a750aabc6517": {
+      "t": "2026-08-23T07:03:56.465Z",
+      "n": 3
+    },
+    "ffc4c7ea814582a5": {
+      "t": "2026-08-23T07:03:56.465Z",
+      "n": 1
+    },
+    "b1597ec05ef5b13f": {
+      "t": "2026-08-23T07:03:56.465Z",
+      "n": 1
+    },
+    "be1a3f3e9a5e1b66": {
+      "t": "2026-08-23T07:03:56.465Z",
+      "n": 1
+    },
+    "6833e350d933f3cb": {
+      "t": "2026-08-23T07:03:56.465Z",
+      "n": 1
+    },
+    "682a91a83ea421dc": {
+      "t": "2026-08-23T07:03:56.465Z",
+      "n": 1
+    },
+    "e64ad79af582ad41": {
+      "t": "2026-08-23T07:03:56.465Z",
+      "n": 1
+    },
+    "d66a5715fa688a17": {
+      "t": "2026-08-23T07:03:56.465Z",
+      "n": 1
+    },
+    "7cdf6a10d1f562ca": {
+      "t": "2026-08-23T07:03:56.465Z",
+      "n": 2
+    },
+    "63e45a7b7be73f0a": {
+      "t": "2026-08-23T07:03:56.465Z",
+      "n": 1
+    },
+    "eb6f87b3a61e54b0": {
+      "t": "2026-08-23T07:03:56.465Z",
       "n": 1
     }
   },
@@ -7568,7 +7620,8 @@
       "modern-warfare-4-switch-2-digital-legends-erste-eindruecke-2026": "2026-08-22T13:07:04.117Z",
       "gta-6-leak-rockstar-schreier-bericht-2026": "2026-08-22T13:07:42.484Z",
       "gta-6-cyberleek-werbeplaetze-leaks-2026": "2026-08-22T15:46:15.511Z",
-      "gta-6-cyberleek-website-offline-take-two-2026": "2026-08-22T18:57:58.230Z"
+      "gta-6-cyberleek-website-offline-take-two-2026": "2026-08-22T18:57:58.230Z",
+      "gta-6-leaks-cyberleek-take-two-subpoena-2026": "2026-08-23T07:04:49.390Z"
     },
     "cards": {
       "/social/ig-call-of-duty-modern-warfare-4-multiplayer-trailer-beta-2026.mp4": "2026-08-20T07:05:51.370Z",
@@ -7583,14 +7636,15 @@
       "/social/ig-modern-warfare-4-switch-2-digital-legends-erste-eindruecke-2026.jpg": "2026-08-22T13:07:04.117Z",
       "/social/ig-gta-6-leak-rockstar-schreier-bericht-2026.mp4": "2026-08-22T13:07:42.484Z",
       "/social/ig-gta-6-cyberleek-werbeplaetze-leaks-2026.jpg": "2026-08-22T15:46:15.511Z",
-      "/social/ig-gta-6-cyberleek-website-offline-take-two-2026.mp4": "2026-08-22T18:57:58.231Z"
+      "/social/ig-gta-6-cyberleek-website-offline-take-two-2026.mp4": "2026-08-22T18:57:58.231Z",
+      "/social/ig-gta-6-leaks-cyberleek-take-two-subpoena-2026.mp4": "2026-08-23T07:04:49.390Z"
     },
     "unlisted": [
       "gta-6-preis-80-dollar-zelnick-schnaeppchen-2026"
     ],
     "wechsel": {
-      "day": "2026-08-22",
-      "nichtBreaking": 5
+      "day": "2026-08-23",
+      "nichtBreaking": 1
     },
     "tokenCheckedAt": "2026-08-22T13:07:43.233Z",
     "token": {
@@ -7610,7 +7664,7 @@
       "halo: campaign evolved": 2,
       "super mario sunshine": 1,
       "marvel's wolverine": 2,
-      "grand theft auto vi": 12,
+      "grand theft auto vi": 13,
       "pokémon pokopia": 1,
       "helldivers 2": 1,
       "god of war laufey": 1,
@@ -7685,6 +7739,9 @@
       },
       "2026-08-22": {
         "Schlagzeile regelwidrig": 3
+      },
+      "2026-08-23": {
+        "ausgeschriebene Umlaute": 1
       }
     }
   },

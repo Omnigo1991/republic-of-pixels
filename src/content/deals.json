@@ -1,6 +1,17 @@
 {
-  "updatedAt": "2026-08-23T04:09:16.492Z",
+  "updatedAt": "2026-08-23T07:03:57.353Z",
   "deals": [
+    {
+      "appId": 2161700,
+      "title": "Persona 3 Reload",
+      "discountPercent": 65,
+      "originalPrice": 5999,
+      "finalPrice": 2099,
+      "currency": "EUR",
+      "endsAt": "2026-08-24T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/2161700/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2161700/capsule_184x69.jpg?t=1764776430"
+    },
     {
       "appId": 1771300,
       "title": "Kingdom Come: Deliverance II",
@@ -11,6 +22,17 @@
       "endsAt": "2026-08-24T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/1771300/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1771300/93e28946c46f09d761bbfab1e17e8c1c4a8323a0/capsule_184x69.jpg?t=1777975568"
+    },
+    {
+      "appId": 1332010,
+      "title": "Stray",
+      "discountPercent": 50,
+      "originalPrice": 2849,
+      "finalPrice": 1424,
+      "currency": "EUR",
+      "endsAt": "2026-09-05T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1332010/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1332010/01489897d641b7f2e734a436dfabdd74afd4c677/capsule_184x69.jpg?t=1785424330"
     },
     {
       "appId": 4001890,
@@ -44,28 +66,6 @@
       "endsAt": "2026-08-25T16:00:00.000Z",
       "url": "https://store.steampowered.com/app/2358720/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2358720/b7f722ddd5e23503f598586aa3700dd4d827bb2d/capsule_184x69.jpg?t=1760601605"
-    },
-    {
-      "appId": 1643320,
-      "title": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
-      "discountPercent": 30,
-      "originalPrice": 5999,
-      "finalPrice": 4199,
-      "currency": "EUR",
-      "endsAt": "2026-08-31T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1643320/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1643320/87ade1fa0e9869388368228258d758e040a3f651/capsule_184x69_alt_assets_7_german.jpg?t=1787314871"
-    },
-    {
-      "appId": 2432860,
-      "title": "MENACE",
-      "discountPercent": 25,
-      "originalPrice": 3999,
-      "finalPrice": 2999,
-      "currency": "EUR",
-      "endsAt": "2026-09-03T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/2432860/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2432860/f3da7e906c7a3126ad95691f10ee9e8eb8650e09/capsule_184x69.jpg?t=1786634291"
     }
   ]
 }

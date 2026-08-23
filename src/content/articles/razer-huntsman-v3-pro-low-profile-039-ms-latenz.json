@@ -1,0 +1,135 @@
+{
+  "slug": "razer-huntsman-v3-pro-low-profile-039-ms-latenz",
+  "title": "0,39 ms verspricht Razer - doch die Messung hat Grenzen",
+  "subtitle": "Die Huntsman V3 Pro Low-profile bringt analog-optische Taster in ein 19,5 Millimeter flaches Gehäuse - zum Aufpreis von rund 80 Euro",
+  "excerpt": "Razers neue Flachtastatur soll 52 Prozent schneller schalten als die schnellste Konkurrenz. Nur: Was genau da gemessen wurde, verrät der Hersteller nur zum Teil.",
+  "seoTitle": "Razer Huntsman V3 Pro Low-profile: 0,39 ms Latenz",
+  "metaDescription": "Razer bringt die Huntsman V3 Pro Low-profile mit analog-optischen Tastern, 8.000 Hz und 0,39 ms Latenz. Was hinter der Zahl steckt und was sie kostet.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "tags": [
+    "Razer",
+    "Tastaturen",
+    "Gaming-Hardware",
+    "PC",
+    "Peripherie"
+  ],
+  "tldr": [
+    "Razer kündigt die Huntsman V3 Pro Low-profile Tenkeyless 8KHz mit analog-optischen Tastern an",
+    "19,5 Millimeter Höhe an der Vorderkante, 2,8 Millimeter Hub, Auslösepunkt in 0,1-Millimeter-Schritten einstellbar",
+    "0,39 Millisekunden Durchschnittslatenz laut Razer-eigener Messung - 52 Prozent weniger als beim schnellsten Vergleichsmodell, das aber nicht genannt wird",
+    "259,99 Euro im europäischen Razer-Shop, aktuell noch als «demnächst verfügbar» gelistet"
+  ],
+  "whyItMatters": "Analoge Taster mit frei wählbarem Auslösepunkt sind längst zum Standard im kompetitiven Segment geworden - Razer bringt die Technik nun in ein flaches Gehäuse, das bislang eher Office-Tastaturen vorbehalten war. Wer den kurzen Hub mag, bekommt erstmals Rapid Trigger und Dynamic Keystroke dazu. Gleichzeitig zeigt die Latenz-Angabe, wie schwer Hersteller-Benchmarks vergleichbar sind.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Razer erweitert seine Huntsman-Reihe um ein Modell, das zwei Dinge zusammenbringen soll, die sich sonst eher ausschliessen: eine sehr flache Bauform und die Technik aus dem kompetitiven Oberhaus. Die Huntsman V3 Pro Low-profile Tenkeyless 8KHz setzt auf analog-optische Taster mit frei wählbarem Auslösepunkt und soll laut Herstellerangabe im Schnitt 0,39 Millisekunden Latenz erreichen - 52 Prozent weniger als das schnellste Modell im eigenen Vergleichsfeld."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "0,39 ms",
+          "label": "durchschnittliche Latenz laut Razers eigener Messung"
+        },
+        {
+          "value": "19,5 mm",
+          "label": "Höhe an der Vorderkante des Gehäuses"
+        },
+        {
+          "value": "259,99 €",
+          "label": "Listenpreis im europäischen Razer-Shop"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Kurzer Weg, freie Wahl beim Auslösepunkt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Mit 19,5 Millimetern an der Vorderkante fällt das Gehäuse deutlich niedriger aus als bei klassischen mechanischen Tastaturen. Die Taster bieten 2,8 Millimeter Hub, der Auslösepunkt lässt sich in Schritten von 0,1 Millimetern über die gesamte Strecke zwischen 0,1 und 2,8 Millimetern festlegen. Technisch handelt es sich um eine flachere Variante von Razers analog-optischen Schaltern: Eine Lichtschranke erkennt nicht nur, ob eine Taste gedrückt wurde, sondern auch, wie weit."
+    },
+    {
+      "type": "paragraph",
+      "text": "Daraus ergeben sich die üblichen Verdächtigen im Funktionsumfang. Rapid Trigger verzichtet auf einen festen Rücksetzpunkt, eine Taste kann also erneut auslösen, sobald sie sich wieder nach oben bewegt. Snap Flex legt auf Drücken und Loslassen jeweils eine eigene Aktion fest, Dynamic Keystroke erlaubt abhängig von der Eindrücktiefe bis zu vier Belegungen pro Taste. Einstellungen wandern in den Speicher der Tastatur oder lassen sich ohne installierte Software über Synapse Web anpassen."
+    },
+    {
+      "type": "heading",
+      "text": "Was die 0,39 Millisekunden tatsächlich abbilden"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Verbindung zum PC wird mit 8.000 Hertz abgefragt. Die genannte Latenz stammt aus Razers eigenen Messungen - und die haben klar benannte Grenzen. Erfasst wurde ausschliesslich die Zeitspanne zwischen dem Auslösen des Tasters und dem Eintreffen des Signals am USB-Anschluss. Alles, was danach passiert, bleibt aussen vor:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Die Verarbeitung durch das Betriebssystem fliesst nicht in den Wert ein",
+        "Verzögerungen durch Spiel-Engine und Monitor bleiben unberücksichtigt",
+        "Alle Testkandidaten wurden auf 0,1 Millimeter Auslöseweg gestellt",
+        "Welche Konkurrenztastatur als schnellster Vergleichswert diente, nennt Razer nicht"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Ausstattung und Preis"
+    },
+    {
+      "type": "paragraph",
+      "text": "Das Tenkeyless-Layout streicht den Nummernblock, behält aber Pfeil- und Funktionstasten. Geschmierte Taster und eine dicke Schaumstoffdämmung sollen das Tippgeräusch dämpfen, dazu kommen Doubleshot-PBT-Tastenkappen, ein Drehregler und RGB-Beleuchtung. Erscheinen soll die Tastatur mit deutschem, französischem und US-amerikanischem Layout. Im europäischen Razer-Shop steht sie mit 259,99 Euro, ist dort aktuell aber noch als «demnächst verfügbar» markiert."
+    },
+    {
+      "type": "paragraph",
+      "text": "Damit liegt das flache Pro-Modell rund 80 Euro über der im Mai vorgestellten Huntsman V3 Tenkeyless in normaler Bauhöhe. Der Aufpreis kauft vor allem den analogen Unterbau mit einstellbarem Auslösepunkt und die 8.000-Hertz-Abfrage - und eben die Bauform."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Analoge Taster sind im kompetitiven Segment kein Alleinstellungsmerkmal mehr, flache Gehäuse in dieser Preisklasse dagegen schon eher. Wer den kurzen Hub bevorzugt, bekommt hier erstmals das volle Funktionspaket dazu. Die Latenzangabe sollte man dagegen als das lesen, was sie ist: ein Herstellerwert unter idealisierten Bedingungen, gemessen gegen einen ungenannten Gegner. Ob sich die 0,39 Millisekunden im Spiel bemerkbar machen, klärt erst der unabhängige Test."
+    }
+  ],
+  "poll": {
+    "question": "Razer verlangt 260 Euro für 0,39 Millisekunden und eine flache Bauform - lohnt sich das?",
+    "options": [
+      "Ja, im kompetitiven Spiel zählt jede Millisekunde",
+      "Nur wegen der flachen Bauform, nicht wegen der Latenz",
+      "Nein, ohne unabhängigen Test glaube ich die Zahl nicht",
+      "260 Euro sind für eine Tastatur generell zu viel"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-23T07:03:52.384Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "grid",
+  "sources": [
+    {
+      "title": "0,39 ms Reaktionszeit: Razers flache Tastatur schaltet schneller",
+      "url": "https://www.computerbase.de/news/tastaturen/0-39-ms-reaktionszeit-razers-flache-tastatur-schaltet-schneller.98985/",
+      "publisher": "ComputerBase"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/razer-huntsman-v3-pro-low-profile-039-ms-latenz.webp",
+    "alt": "0,39 ms verspricht Razer - doch die Messung hat Grenzen",
+    "credit": "Bild: ComputerBase",
+    "sourceUrl": "https://www.computerbase.de/news/tastaturen/0-39-ms-reaktionszeit-razers-flache-tastatur-schaltet-schneller.98985/",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "foxhole-charlie-krieg-71-tage-entwickler-eingriff",
+    "epic-games-store-newzoo-analyst-erholung-2026",
+    "modern-warfare-4-beta-shader-preload-pc-2026"
+  ]
+}
