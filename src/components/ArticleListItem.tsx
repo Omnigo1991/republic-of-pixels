@@ -3,7 +3,7 @@ import { KommentarZahl } from "./KommentarZahl";
 import type { Article } from "@/lib/types";
 import { ArticleMedia } from "./ArticleMedia";
 import { CATEGORY_LABELS } from "@/lib/types";
-import { relativeZeit } from "./StartseiteNeu";
+import { spielName } from "./next/Bausteine";
 
 // Chronologische Newsliste, an die "Neueste"-Spalte angelehnt (Tim,
 // 15.08.2026): gleiche Anatomie - Cyan-Zeitzeile, fetter Titel, Bild
@@ -21,10 +21,7 @@ export function ArticleListItem({ article }: { article: Article }) {
       </div>
       <div className="min-w-0">
         <p className="mb-2 text-[13px] font-extrabold tracking-[0.06em] text-accent">
-          {relativeZeit(article.publishedAt)}
-          {!istNews && (
-            <span className="text-text-tertiary"> · {CATEGORY_LABELS[article.category].toUpperCase()}</span>
-          )}
+          {spielName(article)}
           <span className="whitespace-nowrap text-text-tertiary"> · {article.readingTimeMinutes} MIN.</span>
           <KommentarZahl slug={article.slug} />
         </p>
