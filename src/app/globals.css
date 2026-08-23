@@ -512,11 +512,10 @@ body > footer a { text-shadow: none; }
 .kopfband a[class*="bg-accent"] span,
 .kopfband button[class*="bg-accent"] span { color: #02F0D1; }
 
-header {
-  background: rgba(12, 11, 26, 0.9);
-  border-bottom: 1px solid rgba(255, 46, 151, 0.45);
-  backdrop-filter: blur(8px);
-}
+/* Die Kopfleiste des neuen Designs ist kein <header> mehr, deshalb traf
+   diese alte Regel nur noch Inhaltsköpfe - und zog ihnen eine
+   Magenta-Haarlinie unter den Text (Tim, 23.08.2026, auf /ig gefunden).
+   Ersatzlos gestrichen. */
 /* ---------- Fussleiste ----------
    Zurueck auf die schlichte dunkle Fassung (Tim, 19.08.2026): der
    Verlauf wurde wieder verworfen. */
