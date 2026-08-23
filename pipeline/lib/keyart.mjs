@@ -278,17 +278,37 @@ export async function holeSpielBildKandidaten({
         if ((meta.height ?? 0) < 900) continue;
         const pfad = `${outPrefix}-${index}.jpg`;
         await writeFile(pfad, roh);
+        const verhaeltnis = (meta.width ?? 1) / (meta.height ?? 1);
         kandidaten.push({
           pfad,
           credit: `Bild: ${publisher}`,
           herkunft: index === 0 ? "offizielles Key Art" : `offizieller Screenshot ${index}`,
           poolIndex: index,
+          verhaeltnis,
+          // Alles, was nicht deutlich breiter als hoch ist, überlebt den
+          // Schnitt auf 4:5 fast unbeschadet.
+          hochformat: verhaeltnis <= 1.05,
         });
         break;
       }
     }
 
     if (kandidaten.length === 0) return null;
+
+    // HOCHFORMAT ZUERST (Tim, 23.08.2026). Ein 16:9-Bild verliert beim
+    // Schnitt auf 4:5 über die Hälfte seiner Breite, und senkrecht bleibt
+    // kein Spielraum: Die Höhe passt exakt, es lässt sich nichts
+    // verschieben. Was im Bild unten liegt, liegt zwangsläufig hinter dem
+    // Textblock. Hochformatige Vorlagen haben dieses Problem nicht, darum
+    // gehen sie dem Bild-Tor zuerst unter die Augen. Die Reihenfolge
+    // innerhalb der beiden Gruppen bleibt die Rotationsreihenfolge - sonst
+    // käme wieder bei jedem Post dasselbe Bild.
+    kandidaten.sort((a, b) => Number(b.hochformat) - Number(a.hochformat));
+    const hoch = kandidaten.filter((k) => k.hochformat).length;
+    console.log(
+      `  Spielbilder: ${kandidaten.length} Kandidaten, davon ${hoch} im Hochformat`,
+    );
+
     return { kandidaten, poolGroesse: eintraege.length, spielKey, publisher };
   } catch (err) {
     console.log(`  Spielbild-Suche fehlgeschlagen (${err.message})`);

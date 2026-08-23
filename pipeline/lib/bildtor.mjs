@@ -124,6 +124,66 @@ async function fertigerAusschnitt(pfad, zielPfad) {
  *          die naechste Story - nicht eine Typo-Karte (Tim, 14.08.2026:
  *          "Wir sind keine Typo-Account").
  */
+// WO LIEGT DAS MOTIV? (Tim, 23.08.2026)
+//
+// Der Textblock deckt das untere Drittel des Posts ab, oben rechts sitzt
+// unser Zeichen. Ein Motiv, dessen Schwerpunkt unter der Textkante liegt,
+// ist im fertigen Post halb verdeckt - genau der PS5-Fall, bei dem das
+// Logo hinter der Glaskarte verschwand.
+//
+// Gemessen wird an KANTEN, nicht an Helligkeit: Ein heller Himmel hat viel
+// Licht und kein Motiv, ein dunkles Gesicht umgekehrt. Die Zeilenenergie
+// (Unterschied zum linken Nachbarpixel) trifft beides richtig.
+//
+// Die Zahl geht doppelt in die Entscheidung ein: als harte Schranke im Code
+// und als Hinweis an das Modell. Eine Regel, die nur im Prompt steht, ist
+// keine Regel.
+const TEXTKANTE = 0.63; // ab hier liegt der Textblock ueber dem Bild
+// Ab dieser Dichte direkt unter der Textkante schneidet die Karte mitten
+// durch das Motiv. Gemessen an sechs echten Bildern (23.08.2026):
+// Miyazaki 0.44, AMD 0.83, GTA 1.14, God of War 1.15, 2XKO 1.38 - und das
+// PS5-Logo, das Tim aufgefallen ist, mit 2.29. Die Grenze 1.6 trennt genau
+// den einen echten Fehlgriff von den funktionierenden Bildern.
+const MAX_KANTENDICHTE = 1.6;
+
+async function motivSchwerpunkt(pfad) {
+  const { data, info } = await sharp(pfad)
+    .greyscale()
+    .resize(160, 200, { fit: "fill" })
+    .raw()
+    .toBuffer({ resolveWithObject: true });
+  const { width, height } = info;
+  const energie = new Array(height).fill(0);
+  for (let y = 0; y < height; y++) {
+    let summe = 0;
+    for (let x = 1; x < width; x++) {
+      summe += Math.abs(data[y * width + x] - data[y * width + x - 1]);
+    }
+    energie[y] = summe / width;
+  }
+  const gesamt = energie.reduce((a, b) => a + b, 0);
+  if (gesamt === 0) return { schwerpunkt: 0.5, anteilUnten: 0 };
+  let lauf = 0;
+  let schwerpunkt = 0.5;
+  for (let y = 0; y < height; y++) {
+    lauf += energie[y];
+    if (lauf >= gesamt / 2) { schwerpunkt = y / height; break; }
+  }
+  const grenze = Math.round(height * TEXTKANTE);
+  const unten = energie.slice(grenze).reduce((a, b) => a + b, 0);
+  // Schneidet die Karte mitten durch das Motiv? Dann ist direkt unter der
+  // Textkante ueberdurchschnittlich viel los. Der Schwerpunkt allein
+  // erkennt das nicht: Beim PS5-Logo lag er bei 58 Prozent und damit
+  // scheinbar im gruenen Bereich, waehrend die untere Haelfte des Logos
+  // hinter der Karte verschwand.
+  const mittel = gesamt / height;
+  const band = energie.slice(grenze, Math.round(height * 0.78));
+  const kantendichte = band.length
+    ? band.reduce((a, b) => a + b, 0) / band.length / (mittel || 1)
+    : 0;
+  return { schwerpunkt, anteilUnten: unten / gesamt, kantendichte };
+}
+
 export async function waehleBild({ kandidaten, schlagzeile, spielName }) {
   if (!kandidaten?.length) return { gewaehlt: null, grund: "keine Kandidaten", geprueft: 0 };
 
@@ -147,16 +207,47 @@ export async function waehleBild({ kandidaten, schlagzeile, spielName }) {
       );
       continue;
     }
-    tauglich.push({ ...k, ...schnitt, nummer: tauglich.length + 1 });
+    let lage = { schwerpunkt: 0.5, anteilUnten: 0, kantendichte: 0 };
+    try {
+      lage = await motivSchwerpunkt(schnitt.vorschau);
+    } catch (err) {
+      console.log(`  Bild-Tor: Motivlage von Kandidat ${i} nicht messbar (${err.message})`);
+    }
+    tauglich.push({ ...k, ...schnitt, ...lage, nummer: tauglich.length + 1 });
   }
 
   if (tauglich.length === 0) {
     return { gewaehlt: null, grund: "alle Kandidaten zu klein oder unlesbar", geprueft: kandidaten.length };
   }
 
+  // Motive, deren Schwerpunkt unter der Textkante liegt, fliegen raus -
+  // ABER nur, solange etwas anderes uebrig bleibt. Ohne dieses Ventil
+  // wuerde die Regel an einem Tag mit lauter breiten Vorlagen jeden Post
+  // verhindern; ein halb verdecktes Motiv ist schlechter als ein gutes,
+  // aber besser als gar kein Post.
+  const verdeckt = (t) =>
+    t.schwerpunkt > TEXTKANTE || t.kantendichte > MAX_KANTENDICHTE;
+  const frei = tauglich.filter((t) => !verdeckt(t));
+  let auswahl = tauglich;
+  if (frei.length > 0 && frei.length < tauglich.length) {
+    for (const t of tauglich.filter(verdeckt)) {
+      const warum =
+        t.schwerpunkt > TEXTKANTE
+          ? `Motiv sitzt bei ${Math.round(t.schwerpunkt * 100)}% der Hoehe`
+          : `Motiv wird von der Textkante durchschnitten (Dichte ${t.kantendichte.toFixed(2)})`;
+      console.log(`  Bild-Tor: Bild ${t.nummer} verworfen - ${warum}`);
+    }
+    auswahl = frei;
+    auswahl.forEach((t, i) => { t.nummer = i + 1; });
+  } else if (frei.length === 0) {
+    console.log(
+      "  Bild-Tor: jedes Motiv reicht in den Textbereich - es entscheidet die Beurteilung",
+    );
+  }
+
   // --- Stufe 2: Claude schaut sich die fertigen Ausschnitte an ---
   const inhalt = [];
-  for (const t of tauglich) {
+  for (const t of auswahl) {
     inhalt.push({ type: "text", text: `Bild ${t.nummer} (${t.herkunft ?? "unbekannte Quelle"}):` });
     inhalt.push({
       type: "image",
@@ -166,14 +257,20 @@ export async function waehleBild({ kandidaten, schlagzeile, spielName }) {
         data: (await sharp(t.vorschau).toBuffer()).toString("base64"),
       },
     });
+    inhalt.push({
+      type: "text",
+      text: `   (gemessen: Motivschwerpunkt bei ${Math.round(t.schwerpunkt * 100)}% der Bildhoehe, ${Math.round(t.anteilUnten * 100)}% der Bildinformation im spaeter verdeckten Bereich, Dichte an der Textkante ${t.kantendichte.toFixed(2)})`,
+    });
   }
   inhalt.push({
     type: "text",
-    text: `Das sind ${tauglich.length} Ausschnitt-Varianten fuer EINEN Instagram-Post. Sie sind bereits fertig zugeschnitten - genau so wuerden sie erscheinen.
+    text: `Das sind ${auswahl.length} Ausschnitt-Varianten fuer EINEN Instagram-Post. Sie sind bereits fertig zugeschnitten - genau so wuerden sie erscheinen.
 
 SCHLAGZEILE DES POSTS: "${schlagzeile}"${spielName ? `\nSPIEL: ${spielName}` : ""}
 
-Unten im Bild liegt spaeter unser Textblock ueber einem dunklen Verlauf (etwa das untere Drittel). Was dort liegt, verschwindet weitgehend.
+So sieht der fertige Post aus: Ueber dem unteren Drittel (ab etwa 63 Prozent der Hoehe) liegt eine Glaskarte mit Kopfzeile und Schlagzeile - was dort im Bild steht, ist praktisch weg. Oben rechts sitzt unser Zeichen. Das Motiv muss also in den oberen zwei Dritteln tragen.
+
+Zu jedem Bild steht in Klammern, wo sein Motivschwerpunkt liegt. Ueber 63 Prozent heisst: Das Wichtige verschwindet hinter der Karte.
 
 Beurteile jedes Bild nach drei Kriterien:
 1. SUJET: Passt das Motiv zur Schlagzeile? Ein Bild aus dem falschen Spiel, der falschen Ära oder dem falschen Schauplatz ist ein Ausschlussgrund - auch wenn es schoen ist.
@@ -205,7 +302,7 @@ Taugt keines: {"bestes": null, "begruendung": "ein Satz warum alle durchfallen",
     // 5 Plaetze).
     const art = err instanceof ClaudeAblehnung ? "abgelehnt" : `Fehler: ${err.message}`;
     console.log(`  Bild-Tor: Beurteilung nicht moeglich (${art}) - Story wird uebersprungen`);
-    return { gewaehlt: null, grund: `Beurteilung fehlgeschlagen (${art})`, geprueft: tauglich.length };
+    return { gewaehlt: null, grund: `Beurteilung fehlgeschlagen (${art})`, geprueft: auswahl.length };
   }
 
   for (const v of urteil.verworfen ?? []) {
