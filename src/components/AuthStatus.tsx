@@ -236,7 +236,7 @@ export function AuthStatus() {
                       Statistik
                     </Link>
                   )}
-                  <div className="mx-3 my-1 h-px bg-border-subtle" />
+                  <div className="h-1.5" />
                   <button
                     onClick={() => {
                       setMenueOffen(false);

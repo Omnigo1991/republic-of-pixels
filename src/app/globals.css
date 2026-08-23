@@ -690,8 +690,10 @@ main:has(> .hero-voll) { padding-top: 0; }
   font-weight: 700;
   letter-spacing: -0.015em;
 }
-/* Keine Trennlinien im Menue - das neue Design trennt ueber Abstand. */
+/* Keine Trennlinien im Menü - das neue Design trennt über Abstand.
+   Auch keine Haarlinien als eigene Fläche (Tim, 23.08.2026). */
 .konto-glas [class*="border-b"], .konto-glas [class*="border-t"] { border: 0 !important; }
+.konto-glas [class*="h-px"] { display: none !important; }
 
 /* Pixel-Raten als kompakte Kachel wie im Entwurf (dort 632x193 mit
    Raetselbild 190x130 quer). Die Innenkarte ist das DRITTE Kind der
