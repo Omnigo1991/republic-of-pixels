@@ -80,8 +80,26 @@ export function pruefeHeadline(headlineLines) {
   // Zwei zusammengeklebte Schlagzeilen: Der Kamiya-Post trug "Kamiya deutet
   // Comeback an" UND "Capcom schweigt" - zwei Aussagen, die um Aufmerksamkeit
   // konkurrieren. Ein Satzzeichen mitten in der Schlagzeile ist das Signal.
+  // DEUTSCHE ZAHLEN SIND KEINE SATZZEICHEN (Tim, 23.08.2026). Die Regel
+  // hat am 23.08. dieselbe Meldung dreimal in einem Lauf verworfen:
+  //   "KOSTET AB 1. SEPTEMBER / 499 EURO - TENDENZ STEIGEND"
+  //     -> der Punkt gehoert zur Ordnungszahl "1. September"
+  //   "KOSTET AB SEPTEMBER / 499,99 EURO - TENDENZ STEIGEND"
+  //     -> das Komma steht im Preis, nicht im Satz
+  // Danach gab die Redaktion auf und lieferte gar keinen Pick mehr - der
+  // Lauf ging leer aus. Fuer eine Gaming-Seite ist das keine Randnotiz:
+  // Termine und Preise sind die halbe Nachrichtenlage.
+  //
+  // Vor der Pruefung werden deshalb genau zwei Muster neutralisiert -
+  // Ziffer + Punkt (Ordnungszahl, Versionsnummer) und Ziffer + Komma +
+  // Ziffer (Dezimalzahl). Alles andere bleibt, wie es war: Ein echter
+  // Punkt zwischen zwei Aussagen faellt weiterhin auf.
   const ganzerText = proZeile.flat().join(" ");
-  if (/[.;]|,\s*\S+\s+\S+\s+\S+/.test(ganzerText)) {
+  const ohneZahlen = ganzerText
+    .replace(/(\d)\s*\.(?=\s|$)/g, "$1")   // Ordnungszahl: "1. September"
+    .replace(/(\d)\.(\d)/g, "$1$2")         // Tausender und Versionen: "1.000", "Update 2.0"
+    .replace(/(\d),(\d)/g, "$1$2");          // Dezimalzahl: "499,99"
+  if (/[.;]|,\s*\S+\s+\S+\s+\S+/.test(ohneZahlen)) {
     fehler.push("wirkt wie zwei zusammengesetzte Schlagzeilen");
   }
 
