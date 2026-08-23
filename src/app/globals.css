@@ -684,11 +684,14 @@ main:has(> .hero-voll) { padding-top: 0; }
   background: transparent !important;
 }
 .konto-glas a:hover, .konto-glas button:hover { background: rgba(255, 255, 255, 0.07) !important; }
-.konto-glas > div:first-child {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
-  padding-bottom: 12px;
-  margin-bottom: 6px;
+.konto-glas > div:first-child { padding-bottom: 10px; margin-bottom: 2px; }
+.konto-glas a, .konto-glas button {
+  font-size: 14.5px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
 }
+/* Keine Trennlinien im Menue - das neue Design trennt ueber Abstand. */
+.konto-glas [class*="border-b"], .konto-glas [class*="border-t"] { border: 0 !important; }
 
 /* Pixel-Raten als kompakte Kachel wie im Entwurf (dort 632x193 mit
    Raetselbild 190x130 quer). Die Innenkarte ist das DRITTE Kind der

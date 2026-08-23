@@ -156,7 +156,7 @@ export function AuthStatus() {
               {name.slice(0, 1).toUpperCase()}
             </span>
           )}
-          <span className="hidden max-w-[120px] truncate text-[13px] font-semibold lg:inline">
+          <span className="hidden max-w-[120px] truncate text-[14.5px] font-bold tracking-[-0.015em] lg:inline">
             {name}
           </span>
         </button>
@@ -171,7 +171,7 @@ export function AuthStatus() {
                 style={{ top: menuePos.top, right: menuePos.right }}
                 className="konto-glas fixed z-[70] w-[288px] overflow-hidden rounded-[24px] border border-white/[0.18] bg-[rgba(18,18,30,0.92)] p-2 text-[#F2F8FF] shadow-[0_24px_60px_-20px_rgba(0,0,0,0.7)] backdrop-blur-[22px]"
               >
-                <div className="flex items-center gap-3 border-b border-border-subtle p-4">
+                <div className="flex items-center gap-3 p-4">
                   {istMaster ? (
                     <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#0F0D2C]">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -191,21 +191,21 @@ export function AuthStatus() {
                     </span>
                   )}
                   <div className="min-w-0">
-                    <p className="truncate text-sm font-semibold text-text-primary">{name}</p>
+                    <p className="truncate text-[14.5px] font-bold tracking-[-0.015em] text-[#F2F8FF]">{name}</p>
                     {punkte !== null && (
-                      <p className="text-xs text-text-tertiary">{punkte} Punkte</p>
+                      <p className="text-[12px] text-[#8F95A9]">{punkte} Punkte</p>
                     )}
                   </div>
                 </div>
 
                 {next && (
-                  <div className="border-b border-border-subtle px-4 py-3">
+                  <div className="px-4 py-3">
                     <p className="mb-1.5 text-xs text-text-tertiary">
                       Noch {next.fehlend} {next.fehlend === 1 ? "Punkt" : "Punkte"} bis {next.rang.name}
                     </p>
                     <div className="h-1.5 overflow-hidden rounded-full bg-surface-panel">
                       <div
-                        className="h-full rounded-full bg-accent transition-[width]"
+                        className="h-full rounded-full bg-[linear-gradient(120deg,#02F0D1,#FF2E97)] transition-[width]"
                         style={{ width: `${Math.min(100, Math.round(((punkte ?? 0) / next.rang.ab) * 100))}%` }}
                       />
                     </div>
@@ -260,7 +260,7 @@ export function AuthStatus() {
     <>
       <button
         onClick={() => setDialogOffen(true)}
-        className="hidden shrink-0 rounded-full bg-white px-3 py-1.5 text-[12.5px] font-semibold text-[#0C0B1A] transition-opacity hover:opacity-85 sm:inline-block sm:px-4 sm:py-2 sm:text-[13.5px] lg:px-5 lg:py-2.5 lg:text-[14px]"
+        className="hidden shrink-0 rounded-full bg-white px-3 py-1.5 text-[13px] font-bold tracking-[-0.015em] text-[#0C0B1A] transition-opacity hover:opacity-85 sm:inline-block sm:px-4 sm:py-2 sm:text-[14px] lg:px-5 lg:py-2.5 lg:text-[14.5px]"
       >
         Anmelden
       </button>
