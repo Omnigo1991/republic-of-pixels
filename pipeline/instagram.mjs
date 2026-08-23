@@ -34,6 +34,7 @@ import {
   MODELL_URTEIL,
 } from "./lib/claude.mjs";
 import { renderInstagramCard } from "./lib/instagram-card.mjs";
+import { renderKarte } from "./lib/instagram-karte.mjs";
 import { renderInstagramReel } from "./lib/instagram-reel.mjs";
 import { renderTypoCard } from "./lib/instagram-typo.mjs";
 import { holeSpielBildKandidaten } from "./lib/keyart.mjs";
@@ -147,6 +148,14 @@ Regeln für "headlineLines" (die Schlagzeile auf der Post-Grafik):
 - Die Zeilen müssen optisch ausbalanciert sein: keine Zeile deutlich kürzer als ihre Nachbarn
 - Keine Anführungszeichen um die ganze Headline
 
+Regeln für "grosswort" (das grosse Wort, das auf der Grafik über der Textkarte steht):
+- EIN einziges Wort, 3 bis 12 Zeichen, keine Leerzeichen, kein Bindestrich-Ungetüm
+- Es ist der KERN der Meldung in einem Wort: "Offline", "Eingestellt", "Blackout", "Bautista", "Uralt"
+- Es darf NICHT dasselbe Wort sein wie in der Schlagzeile darunter - es kündigt an, die Schlagzeile erklärt
+- Kein Spielname (der steht schon in der Kopfzeile), kein Hilfsverb, kein Artikel
+- Es wird in Grossbuchstaben gesetzt, schreib es aber normal
+- Bei ernsten Themen sachlich, nie zugespitzt
+
 Regeln für "notiz" (die handschriftliche Zeile unter der Schlagzeile):
 - Eine REAKTION auf die Meldung, maximal 6 Wörter, normale Gross-/Kleinschreibung, kein Punkt am Ende (Fragezeichen erlaubt)
 - Sie muss eine HALTUNG haben: Einordnung, Zweifel, Vorfreude, Ernüchterung. Beispiele: "also doch kein Einzelspiel", "nur 24 Jahre gewartet", "und wer schon gekauft hat?"
@@ -176,7 +185,7 @@ Und pro Pick: "bildWahl" - die redaktionelle Bild-Entscheidung:
 - "keyart": Allgemeine Meldung (Preis, Termin, Verkaufszahlen, Update-Pläne, Studio-News) → der Post zeigt offizielles Spiel-Artwork.
 
 Antworte NUR mit JSON, erstes Zeichen "{":
-{"picks":[{"index":0,"gameName":"... oder null","bildWahl":"keyart oder pressebild","kicker":"...","headlineLines":[[{"text":"...","cyan":false}]],"notiz":"...","caption":"...","hashtags":["..."]}]}
+{"picks":[{"index":0,"gameName":"... oder null","bildWahl":"keyart oder pressebild","kicker":"...","grosswort":"...","headlineLines":[[{"text":"...","cyan":false}]],"notiz":"...","caption":"...","hashtags":["..."]}]}
 KRITISCH - striktes JSON: Zeilenumbrüche in der Caption IMMER als \\n escapen (niemals ein roher Zeilenumbruch innerhalb eines Strings), Anführungszeichen im Text als \\" - sonst ist die Antwort unbrauchbar.
 Nur wenn ein Kandidat redaktionell unhaltbar ist, darf er fehlen; im Extremfall: {"picks":[]}`;
 
@@ -663,7 +672,13 @@ async function prepare() {
           continue;
         }
       }
-      if (!cardRel && alsReel) {
+      // REELS VORERST AUS (Tim, 23.08.2026): Die neue Vorlage gibt es
+      // bisher nur als Bild-Karte. Liefen die Reels weiter in der alten
+      // Machart, stuenden im selben Feed zwei Bildsprachen nebeneinander -
+      // und Konsistenz geht Tim ueber alles. Sobald das Reel umgebaut ist,
+      // faellt diese Zeile weg.
+      const REELS_AUS = true;
+      if (!cardRel && alsReel && !REELS_AUS) {
         const reelRel = `/social/ig-${article.slug}.mp4`;
         try {
           await renderInstagramReel({
@@ -686,16 +701,18 @@ async function prepare() {
       if (!cardRel) {
         cardRel = `/social/ig-${article.slug}.jpg`;
         try {
-          await renderInstagramCard({
+          // NEUE VORLAGE (Tim-Freigabe 23.08.2026). Die alte Fassung bleibt
+          // als renderInstagramCard im Baum, bis die neue ein paar Tage
+          // gelaufen ist - der Rueckweg ist damit eine Zeile.
+          const karte = await renderKarte({
             headlineLines: pick.headlineLines,
             kicker: pick.kicker,
-            notiz: pick.notiz,
-            badge,
+            grosswort: pick.grosswort,
             imagePath,
-            credit,
             outPath: join(ROOT, "public", cardRel),
             chromium,
           });
+          console.log(`  Grosswort: "${karte.grosswort}" (${karte.wortgroesse}px, ${karte.kruemel} Kruemel)`);
         } catch (err) {
           console.log(
             `  ${article.slug}: Grafik fehlgeschlagen (${err.message}) - übersprungen`,
@@ -736,8 +753,14 @@ async function prepare() {
         // Beide Karten haben jetzt denselben Textaufbau, also gilt für beide
         // dieselbe Rechnung. Wer den Aufbau einer Karte ändert, muss hier
         // nachsehen.
-        const zeilenSoll =
-          pick.headlineLines.length + 1 + (pick.notiz ? 1 : 0);
+        // NEUE BILD-KARTE (23.08.2026): Sie traegt Grosswort, Chip und die
+        // Schlagzeile - keine Notiz mehr. Gemessen zaehlt die Abnahme das
+        // Grosswort und die Schlagzeilenzeilen sicher, den Chip je nach
+        // Helligkeit des Motivs; dafuer hat sie eine Zeile Toleranz.
+        // Die Typo-Karte ist unveraendert und behaelt ihre alte Rechnung.
+        const zeilenSoll = alsTypoKarte
+          ? pick.headlineLines.length + 1 + (pick.notiz ? 1 : 0)
+          : pick.headlineLines.length + 1;
         const abnahme = await pruefeGrafik(
           pruefPfad,
           zeilenSoll,
@@ -785,7 +808,11 @@ async function prepare() {
         .slice(0, 5)
         .map((h) => `#${String(h).replace(/[^\p{L}\p{N}]/gu, "")}`)
         .join(" ");
-      const caption = `${pick.caption}\n${hashtags}`.replaceAll("ß", "ss");
+      // BILDQUELLE IN DIE CAPTION (Tim, 23.08.2026): Sie steht nicht mehr
+      // im Bild - dadurch konnte die Glaskarte tiefer ruecken. Der Nachweis
+      // muss aber bleiben, also wandert er hierher, vor die Hashtags.
+      const quelle = credit ? `\n${credit}` : "";
+      const caption = `${pick.caption}${quelle}\n${hashtags}`.replaceAll("ß", "ss");
 
       // Alt-Text (Barrierefreiheit + Instagram-Suche, 08.08.2026):
       // beschreibt die Post-Grafik deterministisch aus Headline und

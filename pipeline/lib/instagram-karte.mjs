@@ -100,7 +100,13 @@ function einpassenQuelle() {
     // 2) Pixelstaub - Raster, Richtung und Ausduennung wie im Zeichen
     const r = wort.getBoundingClientRect();
     const eltern = wort.parentElement.getBoundingClientRect();
-    const links = r.right - eltern.left - Math.round(gr * 0.12);
+    // ABSTAND ZUM WORT (Tim, 23.08.2026): Der Kasten des Wortes traegt
+    // rechts 0.12em Polster, damit der letzte Buchstabe nicht angeschnitten
+    // wird - dort endet also die Schrift, nicht der Kasten. Von dieser
+    // Tintenkante aus bleibt eine Modulbreite Luft, bevor der erste Kruemel
+    // kommt. Vorher begann er direkt am Buchstaben und klebte daran.
+    const tinteRechts = r.right - eltern.left - Math.round(gr * 0.12);
+    const links = tinteRechts + Math.round(gr * 0.11);
     const M = Math.max(6, Math.round(gr * 0.078));
     const bandOben = r.height * 0.16;
     const bandHoehe = r.height * 0.62;
