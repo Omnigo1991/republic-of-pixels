@@ -1,16 +1,16 @@
 {
-  "updatedAt": "2026-08-23T07:03:57.353Z",
+  "updatedAt": "2026-08-23T10:37:46.565Z",
   "deals": [
     {
-      "appId": 2161700,
-      "title": "Persona 3 Reload",
-      "discountPercent": 65,
+      "appId": 1142710,
+      "title": "Total War: WARHAMMER III",
+      "discountPercent": 85,
       "originalPrice": 5999,
-      "finalPrice": 2099,
+      "finalPrice": 899,
       "currency": "EUR",
-      "endsAt": "2026-08-24T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/2161700/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2161700/capsule_184x69.jpg?t=1764776430"
+      "endsAt": "2026-08-27T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1142710/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1142710/capsule_184x69.jpg?t=1786634522"
     },
     {
       "appId": 1771300,
