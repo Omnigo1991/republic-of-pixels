@@ -120,11 +120,57 @@ function einpassenQuelle() {
       s = (s * 1103515245 + 12345) % 2147483648;
       return s / 2147483648;
     };
+    // DER LETZTE BUCHSTABE LOEST SICH AUF (Tim, 23.08.2026).
+    //
+    // Er bekommt eine Maske aus denselben Modulen wie der Staub: Links steht
+    // er noch ganz, nach rechts fallen immer mehr Kacheln weg. Der Staub
+    // danach setzt dieselbe Rasterlinie und dasselbe Abnahmegesetz fort -
+    // dadurch liest es sich als EIN Vorgang und nicht als Buchstabe plus
+    // Dekoration daneben.
+    const letzter = document.getElementById("letzter");
+    const lr = letzter.getBoundingClientRect();
+    const lLinks = lr.left - eltern.left;
+    const lBreite = lr.width;
+    // Aufloesungsstrecke: der Buchstabe plus der Bereich, in dem der Staub
+    // ausklingt. Ueber diese Strecke faellt die Dichte von 1 auf 0.
+    // Die Strecke haengt an der BUCHSTABENBREITE, nicht an der Staublaenge.
+    // Erster Versuch war 278px lang - ueber die 80px des Buchstabens fiel
+    // die Dichte damit nur von 1 auf 0.7, man sah fast nichts. Mit dem
+    // 2.4-fachen der Buchstabenbreite ist an seinem rechten Rand rund ein
+    // Drittel uebrig, danach klingt der Staub aus.
+    const strecke = lBreite * 2.4;
+    const dichteBei = (x) => Math.pow(Math.max(0, 1 - (x - lLinks) / strecke), 2.2);
+
+    // Maske bauen: weisse Kacheln bleiben stehen, fehlende werden
+    // durchsichtig. Die erste Spalte bleibt immer ganz, sonst franst der
+    // Buchstabe schon am Ansatz aus.
+    const spaltenImBuchstaben = Math.max(1, Math.ceil(lBreite / M));
+    const zeilenImBuchstaben = Math.max(1, Math.ceil(lr.height / M));
+    let kacheln = "";
+    for (let cx = 0; cx < spaltenImBuchstaben; cx++) {
+      const x = lLinks + cx * M;
+      const d = cx === 0 ? 1 : dichteBei(x);
+      for (let cy = 0; cy < zeilenImBuchstaben; cy++) {
+        if (cx > 0 && zufall() > d) continue;
+        kacheln += `<rect x="${cx * M}" y="${cy * M}" width="${M}" height="${M}" fill="#fff"/>`;
+      }
+    }
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${Math.ceil(lBreite)}" height="${Math.ceil(lr.height)}">${kacheln}</svg>`;
+    const maske = `url("data:image/svg+xml;utf8,${encodeURIComponent(svg)}")`;
+    letzter.style.webkitMaskImage = maske;
+    letzter.style.maskImage = maske;
+    letzter.style.webkitMaskRepeat = "no-repeat";
+    letzter.style.maskRepeat = "no-repeat";
+
+    const randDichte = Math.max(0.28, dichteBei(lLinks + lBreite));
     let weiteste = links;
     for (let sp = 0; sp < spalten; sp++) {
       const x = links + sp * M * 1.5;
       if (x + M > platz) break;
-      const dichte = Math.pow(1 - sp / spalten, 1.7) * staerke;
+      // Der Staub setzt dort an, wo der Buchstabe aufhoert, und klingt von
+      // da aus langsamer aus. Mit der steilen Buchstabenkurve allein waere
+      // er nach zwei Spalten weg - gemessen blieben 0 bis 2 Kruemel.
+      const dichte = randDichte * Math.pow(1 - sp / spalten, 1.4);
       const zeilen = Math.max(1, Math.round(bandHoehe / (M * 1.5)));
       for (let z = 0; z < zeilen; z++) {
         if (zufall() > dichte) continue;
@@ -229,6 +275,9 @@ export async function renderKarte({
     background:linear-gradient(120deg,#02F0D1,#FF2E97);
     -webkit-background-clip:text; background-clip:text; color:transparent;
     filter:drop-shadow(0 16px 42px rgba(0,0,0,0.62)); }
+  /* Der letzte Buchstabe wird gerastert - die Maske entsteht erst nach dem
+     Satz, weil sie die Buchstabenbreite braucht. */
+  .letzter { display:inline-block; }
   .staub { position:absolute; left:0; top:0; pointer-events:none;
     filter:drop-shadow(0 10px 26px rgba(0,0,0,0.45)); }
   .staub b { position:absolute; display:block; }
@@ -248,7 +297,7 @@ export async function renderKarte({
   <div class="bild"><img src="file://${bild}"></div>
   <img class="logo" src="file://${LOGO}">
   <div class="karte">
-    <div class="wortfeld"><span class="wort" id="wort">${escapeHtml(wort)}</span><div class="staub" id="staub"></div></div>
+    <div class="wortfeld"><span class="wort" id="wort">${escapeHtml(wort.slice(0, -1))}<span class="letzter" id="letzter">${escapeHtml(wort.slice(-1))}</span></span><div class="staub" id="staub"></div></div>
     <span class="chip"><i></i>${escapeHtml(kicker ?? "")}</span>
     <div class="titel">${zeilen.map((z) => `<span class="z">${escapeHtml(z)}</span>`).join("")}</div>
   </div>
