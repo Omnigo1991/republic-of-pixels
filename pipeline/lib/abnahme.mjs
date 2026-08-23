@@ -85,14 +85,24 @@ function linkeKante(data, breite, von, bis) {
 // Die linke Kante ist damit das verlässlichere Merkmal als die Helligkeit -
 // und sie folgt aus dem Layout, ist also keine empirische Schwelle, die
 // morgen wieder wackelt.
+// NEUE VORLAGE (Tim-Freigabe 23.08.2026): Die Schrift steht jetzt in einer
+// Glaskarte, die 56 px vom Rand liegt und selbst 54 px Innenabstand hat -
+// der Satzspiegel wanderte damit von 60 auf 110. Mit dem alten Wert fand
+// die Abnahme auf jeder neuen Karte NULL Zeilen und haette jeden Post
+// abgelehnt (nachgemessen 23.08.2026, bevor die Vorlage scharfgeschaltet
+// wurde). Beide Werte gelten, bis die alte Vorlage ganz weg ist.
 const SATZ_LINKS = 60;
+const SATZ_LINKS_NEU = 110;
 const SATZ_TOLERANZ = 20;
 
 function nurTextzeilen(zeilen, data, breite) {
   return zeilen.filter((z) => {
     const links = linkeKante(data, breite, z.von, z.bis);
     z.links = links;
-    return Math.abs(links - SATZ_LINKS) <= SATZ_TOLERANZ;
+    return (
+      Math.abs(links - SATZ_LINKS) <= SATZ_TOLERANZ ||
+      Math.abs(links - SATZ_LINKS_NEU) <= SATZ_TOLERANZ
+    );
   });
 }
 
@@ -152,7 +162,14 @@ export async function pruefeGrafik(pfad, zeilenSoll, art = "bild") {
   // zentriert, dort gilt das Merkmal nicht.
   if (!istTypo) zeilen = nurTextzeilen(zeilen, data, breite);
   messwerte.zeilen = zeilen.length;
-  if (zeilenSoll && zeilen.length !== zeilenSoll) {
+  // EINE ZEILE TOLERANZ NACH OBEN (23.08.2026): Auf der neuen Vorlage sitzt
+  // ueber der Schlagzeile ein Chip mit dem Spielnamen. Er ist klein und
+  // steht auf Glas - auf dunklen Motiven zaehlt die Messung ihn mit, auf
+  // hellen nicht (gemessen an vier Posts: dreimal 3 Zeilen, einmal 4 bei
+  // gleicher Schlagzeilenlaenge). Eine fehlende oder doppelte
+  // Schlagzeilenzeile faengt die Pruefung weiterhin - genau dafuer ist sie
+  // da -, aber am Chip soll sie nicht haengenbleiben.
+  if (zeilenSoll && (zeilen.length < zeilenSoll || zeilen.length > zeilenSoll + 1)) {
     fehler.push(`${zeilen.length} Textzeilen im Bild, erwartet ${zeilenSoll}`);
   }
   if (zeilen.length === 0) {
@@ -244,16 +261,25 @@ export async function pruefeGrafik(pfad, zeilenSoll, art = "bild") {
 
   // 5) Logo: Im unteren Bereich muss unser R stehen. Wir prüfen auf
   //    Cyan-Pixel - kein anderes Element dort trägt diese Farbe.
-  const logoPuffer = await sharp(pfad)
-    .extract({ left: 440, top: hoehe - 150, width: 200, height: 110 })
-    .raw()
-    .toBuffer({ resolveWithObject: true });
-  let cyan = 0;
-  for (let i = 0; i < logoPuffer.data.length; i += logoPuffer.info.channels) {
-    const [pr, pg, pb] = [logoPuffer.data[i], logoPuffer.data[i + 1], logoPuffer.data[i + 2]];
-    if (pg > 150 && pb > 130 && pr < 140 && pg - pr > 60) cyan++;
-  }
+  // ZWEI MOEGLICHE STELLEN (23.08.2026): Die alte Vorlage trug das Zeichen
+  // unten mittig, die neue oben rechts. Gesucht wird an beiden Stellen, es
+  // muss an EINER stehen. Sobald die alte Vorlage weg ist, faellt das
+  // untere Fenster ersatzlos weg.
+  const zaehleCyan = async (bereich) => {
+    const puffer = await sharp(pfad).extract(bereich).raw()
+      .toBuffer({ resolveWithObject: true });
+    let n = 0;
+    for (let i = 0; i < puffer.data.length; i += puffer.info.channels) {
+      const [pr, pg, pb] = [puffer.data[i], puffer.data[i + 1], puffer.data[i + 2]];
+      if (pg > 150 && pb > 130 && pr < 140 && pg - pr > 60) n++;
+    }
+    return n;
+  };
+  const cyanUnten = await zaehleCyan({ left: 440, top: hoehe - 150, width: 200, height: 110 });
+  const cyanObenRechts = await zaehleCyan({ left: breite - 230, top: 30, width: 200, height: 140 });
+  const cyan = Math.max(cyanUnten, cyanObenRechts);
   messwerte.logoPixel = cyan;
+  messwerte.logoStelle = cyanObenRechts >= cyanUnten ? "oben rechts" : "unten mittig";
   if (cyan < 300) fehler.push(`R-Logo nicht erkennbar (${cyan} Cyan-Pixel)`);
 
   return { ok: fehler.length === 0, fehler, messwerte };
