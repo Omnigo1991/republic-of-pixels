@@ -4,14 +4,15 @@ import { ReviewLabelBadge } from "./Badges";
 export function TldrBox({ items }: { items: string[] }) {
   // Exakt dieselbe Machart wie "Warum das wichtig ist" (Tim,
   // 23.08.2026): getönte Glasbühne, Cyan-Kicker in Versalien, kein
-  // Chip. Nur der Inhalt unterscheidet die beiden Boxen.
+  // Chip. Nur der Inhalt unterscheidet die beiden Boxen. Die Punkte
+  // bleiben neutral - farbige Bulletpoints will Tim nirgends.
   return (
     <div className="my-9 rounded-[20px] border border-accent/30 bg-[linear-gradient(135deg,rgba(2,240,209,0.16),rgba(255,46,151,0.1))] p-6 sm:px-7">
       <span className="text-[11px] font-bold uppercase tracking-[0.1em] text-accent">Kurzfassung</span>
       <ul className="m-0 mt-3 list-none p-0">
         {items.map((item, i) => (
           <li key={i} className="mb-2.5 flex gap-3 last:mb-0">
-            <span className="mt-[10px] h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+            <span className="mt-[10px] h-1.5 w-1.5 shrink-0 rounded-full bg-white/40" />
             <span className="flex-1 text-[17px] leading-[1.5] text-[#EAF6FF] sm:text-[18px]">{item}</span>
           </li>
         ))}

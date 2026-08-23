@@ -61,8 +61,10 @@ export function KinoHero({ artikel, weitere }: { artikel: Article; weitere: Arti
             </Link>
           </div>
 
-          {/* Drei weitere Meldungen, am Handy seitlich wischbar. */}
-          <div className="mt-3.5 flex gap-3.5 overflow-x-auto pb-1.5 [-ms-overflow-style:none] [scrollbar-width:none] sm:mt-7 [&::-webkit-scrollbar]:hidden">
+          {/* Drei weitere Meldungen, am Handy seitlich wischbar. Der
+              Abstand unter dem Knopf ist auf jeder Breite gleich 28px
+              (Tim, 23.08.2026 - am Handy klebten die Karten am Knopf). */}
+          <div className="mt-7 flex gap-3.5 overflow-x-auto pb-1.5 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             {weitere.map((a) => (
               <Link
                 key={a.slug}
