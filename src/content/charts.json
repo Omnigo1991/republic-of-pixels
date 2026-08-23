@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-08-17T01:03:48.671Z",
-  "kw": 33,
+  "updatedAt": "2026-08-23T22:04:15.633Z",
+  "kw": 34,
   "games": [
     {
       "appId": 730,
       "rank": 1,
       "lastWeekRank": 1,
       "steamRank": 1,
-      "peak": 1220956,
+      "peak": 1240760,
       "name": "Counter-Strike 2",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/730/162664aa5da85f418105350c5d67ca565f6c3713/header.jpg",
       "url": "https://store.steampowered.com/app/730/"
@@ -15,9 +15,9 @@
     {
       "appId": 570,
       "rank": 2,
-      "lastWeekRank": 3,
+      "lastWeekRank": 2,
       "steamRank": 2,
-      "peak": 914084,
+      "peak": 905862,
       "name": "Dota 2",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/570/header.jpg",
       "url": "https://store.steampowered.com/app/570/"
@@ -25,59 +25,59 @@
     {
       "appId": 578080,
       "rank": 3,
-      "lastWeekRank": 2,
+      "lastWeekRank": 3,
       "steamRank": 3,
-      "peak": 754427,
+      "peak": 737324,
       "name": "PUBG: BATTLEGROUNDS",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/578080/841ea38bc58cabb70aef65365cf50bc2d79329d9/header.jpg",
       "url": "https://store.steampowered.com/app/578080/"
     },
     {
-      "appId": 1623730,
-      "rank": 4,
-      "lastWeekRank": 5,
-      "steamRank": 6,
-      "peak": 328943,
-      "name": "Palworld",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/6912f19c43a95ff5fe514eedd35e68bf12335459/header.jpg",
-      "url": "https://store.steampowered.com/app/1623730/"
-    },
-    {
       "appId": 1172470,
-      "rank": 5,
+      "rank": 4,
       "lastWeekRank": 6,
       "steamRank": 5,
-      "peak": 277193,
+      "peak": 274669,
       "name": "Apex Legends",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172470/6cf04767652d703b6050da84b82cfb1194258d7d/header.jpg",
       "url": "https://store.steampowered.com/app/1172470/"
     },
     {
+      "appId": 1623730,
+      "rank": 5,
+      "lastWeekRank": 5,
+      "steamRank": 6,
+      "peak": 243386,
+      "name": "Palworld",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/6912f19c43a95ff5fe514eedd35e68bf12335459/header.jpg",
+      "url": "https://store.steampowered.com/app/1623730/"
+    },
+    {
       "appId": 2767030,
       "rank": 6,
-      "lastWeekRank": 7,
-      "steamRank": 9,
-      "peak": 126938,
+      "lastWeekRank": 9,
+      "steamRank": 8,
+      "peak": 112527,
       "name": "Marvel Rivals",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2767030/44ca658ecf9b75216cb652f709ced7ccde96d915/header.jpg",
       "url": "https://store.steampowered.com/app/2767030/"
     },
     {
-      "appId": 3527290,
+      "appId": 271590,
       "rank": 7,
-      "lastWeekRank": 39,
-      "steamRank": 7,
-      "peak": 112266,
-      "name": "PEAK",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3527290/89f65be18915d2dc5566de1de322379d62c1dcac/header_alt_assets_3.jpg",
-      "url": "https://store.steampowered.com/app/3527290/"
+      "lastWeekRank": 12,
+      "steamRank": 9,
+      "peak": 90266,
+      "name": "Grand Theft Auto V Legacy",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/271590/header.jpg",
+      "url": "https://store.steampowered.com/app/271590/"
     },
     {
       "appId": 553850,
       "rank": 8,
-      "lastWeekRank": 28,
-      "steamRank": 8,
-      "peak": 105503,
+      "lastWeekRank": 8,
+      "steamRank": 7,
+      "peak": 88068,
       "name": "HELLDIVERS 2",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/553850/5bd0dd81e8d8c98dc44cca6bcc58892fff3f667c/header_german.jpg",
       "url": "https://store.steampowered.com/app/553850/"

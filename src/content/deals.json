@@ -1,6 +1,17 @@
 {
-  "updatedAt": "2026-08-23T18:46:31.470Z",
+  "updatedAt": "2026-08-23T22:04:11.982Z",
   "deals": [
+    {
+      "appId": 1687950,
+      "title": "Persona 5 Royal",
+      "discountPercent": 70,
+      "originalPrice": 5999,
+      "finalPrice": 1799,
+      "currency": "EUR",
+      "endsAt": "2026-08-24T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1687950/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1687950/capsule_184x69.jpg?t=1783356822"
+    },
     {
       "appId": 2161700,
       "title": "Persona 3 Reload",
@@ -35,6 +46,17 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1332010/01489897d641b7f2e734a436dfabdd74afd4c677/capsule_184x69.jpg?t=1785424330"
     },
     {
+      "appId": 1569580,
+      "title": "Blue Prince",
+      "discountPercent": 40,
+      "originalPrice": 2999,
+      "finalPrice": 1799,
+      "currency": "EUR",
+      "endsAt": "2026-09-06T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1569580/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1569580/4f81a42ebaca088b16d5501914c6885e49f6c411/capsule_184x69.jpg?t=1783605097"
+    },
+    {
       "appId": 4001890,
       "title": "How to Fish",
       "discountPercent": 38,
@@ -44,28 +66,6 @@
       "endsAt": "2026-08-27T17:00:36.000Z",
       "url": "https://store.steampowered.com/app/4001890/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4001890/8f65bb2b78d37a9147aa79c970a51610e6955bf1/capsule_184x69.jpg?t=1787234618"
-    },
-    {
-      "appId": 2764460,
-      "title": "Sandustry",
-      "discountPercent": 35,
-      "originalPrice": 1499,
-      "finalPrice": 974,
-      "currency": "EUR",
-      "endsAt": "2026-08-27T17:00:09.000Z",
-      "url": "https://store.steampowered.com/app/2764460/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2764460/f0a29d6c91be4e91e9fa2f384dd5ae695bfd6b5b/capsule_184x69.jpg?t=1787306087"
-    },
-    {
-      "appId": 2358720,
-      "title": "Black Myth: Wukong",
-      "discountPercent": 30,
-      "originalPrice": 5999,
-      "finalPrice": 4199,
-      "currency": "EUR",
-      "endsAt": "2026-08-25T16:00:00.000Z",
-      "url": "https://store.steampowered.com/app/2358720/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2358720/b7f722ddd5e23503f598586aa3700dd4d827bb2d/capsule_184x69.jpg?t=1760601605"
     }
   ]
 }

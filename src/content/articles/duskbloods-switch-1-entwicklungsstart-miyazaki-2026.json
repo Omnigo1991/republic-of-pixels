@@ -1,0 +1,137 @@
+{
+  "slug": "duskbloods-switch-1-entwicklungsstart-miyazaki-2026",
+  "title": "«Wie sollen wir das schaffen?» - The Duskbloods lief fast auf Switch 1",
+  "subtitle": "Hidetaka Miyazaki verrät, dass FromSoftwares Nintendo-Exklusivtitel 2021 auf der alten Hardware startete - und warum die Ankündigung der Switch 2 im Studio für Erleichterung sorgte",
+  "excerpt": "FromSoftware begann The Duskbloods 2021 auf der ersten Switch - und kam technisch an eine Wand. Was Miyazaki über den Wechsel zur Switch 2 sagt und wobei Nintendo dem Studio ausgerechnet inhaltlich unter die Arme greift.",
+  "seoTitle": "The Duskbloods: Entwicklung startete 2021 auf Switch 1",
+  "metaDescription": "Miyazaki bestätigt: The Duskbloods entstand ab 2021 für die erste Switch. Erst die Switch 2 löste die technischen Probleme - Nintendo hilft zudem beim Onboarding.",
+  "category": "news",
+  "platforms": [
+    "nintendo"
+  ],
+  "tags": [
+    "The Duskbloods",
+    "FromSoftware",
+    "Hidetaka Miyazaki",
+    "Nintendo Switch 2",
+    "Nintendo"
+  ],
+  "tldr": [
+    "The Duskbloods begann laut Hidetaka Miyazaki bereits 2021 als Projekt für die erste Nintendo Switch",
+    "FromSoftware kam auf der alten Hardware technisch an Grenzen - die Switch 2 löste die Probleme laut Miyazaki",
+    "Nintendo unterstützt das Studio zusätzlich bei Onboarding und Tutorials, einer traditionellen FromSoftware-Schwäche",
+    "Das Matchmaking soll laut Studio als Ranked-System funktionieren"
+  ],
+  "whyItMatters": "The Duskbloods ist FromSoftwares erster echter Exklusivtitel für Nintendo und zugleich ein Multiplayer-Experiment abseits der gewohnten Souls-Struktur. Wie flüssig das Spiel läuft und wie verständlich es neue Spielerinnen und Spieler einführt, entscheidet darüber, ob das Konzept über die eingefleischte Fanbasis hinaus funktioniert.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "The Duskbloods war ursprünglich gar kein Switch-2-Spiel. Game Director Hidetaka Miyazaki hat gegenüber The Verge bestätigt, dass FromSoftware das Multiplayer-Projekt bereits 2021 begonnen hat - zu diesem Zeitpunkt also für die erste Nintendo Switch. Und offenbar stiess das Team dabei früh an harte Grenzen: Erst die Ankündigung der Nachfolgekonsole löste laut Miyazaki die Probleme, an denen das Studio zuvor knabberte."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "2021",
+          "label": "Jahr, in dem die Entwicklung von The Duskbloods auf der ersten Switch startete"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Vier Jahre Vorlauf - und eine Konsole, die nicht mitzog"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Zeitrechnung ist bemerkenswert: 2021 war die Switch 2 offiziell noch kein Thema, Nintendo hatte im selben Jahr das OLED-Modell der ersten Switch veröffentlicht. FromSoftware arbeitete zu diesem Zeitpunkt parallel an Elden Ring, das im Februar 2022 erschien. Dass das Studio also schon Jahre vor der Enthüllung der neuen Hardware an einem Nintendo-Projekt sass, verschiebt die Wahrnehmung dieser Partnerschaft deutlich - The Duskbloods ist kein schnell zusammengezimmerter Launch-Titel, sondern ein Projekt mit langem Anlauf."
+    },
+    {
+      "type": "paragraph",
+      "text": "Nur passte die Zielhardware nicht zum Vorhaben. Miyazaki beschreibt die Stimmung im Team offen als Ratlosigkeit, bevor Nintendo die Katze aus dem Sack liess."
+    },
+    {
+      "type": "quote",
+      "text": "Wir waren definitiv sehr glücklich, als wir von der Switch 2 hörten, weil wir uns fragten: «Wie sollen wir das schaffen?» Die Switch 2 kam - und all diese Probleme waren gelöst.",
+      "attribution": "Hidetaka Miyazaki, Game Director bei FromSoftware, gegenüber The Verge"
+    },
+    {
+      "type": "paragraph",
+      "text": "Konkrete technische Details nennt Miyazaki nicht. Naheliegend ist aber, dass ein Online-Multiplayer-Titel mit mehreren gleichzeitig verbundenen Spielenden auf der betagten Tegra-Hardware der ersten Switch schlicht nicht in der gewünschten Form realisierbar war. Der Wechsel zur Switch 2 machte The Duskbloods dann zum Exklusivtitel für die neue Konsole."
+    },
+    {
+      "type": "heading",
+      "text": "Nintendo hilft nicht nur bei der Technik"
+    },
+    {
+      "type": "paragraph",
+      "text": "Interessanter als die Hardware-Frage ist fast der zweite Punkt, den Miyazaki anspricht. Nintendo unterstützt FromSoftware demnach auch bei Systemdesign und Spielerführung - also genau dort, wo das Studio historisch seine grösste Schwachstelle hat."
+    },
+    {
+      "type": "quote",
+      "text": "The Duskbloods ist ein anspruchsvolles Spiel für uns. Es gibt viele neue Dinge beim Design der Systeme und Regeln, und es erfordert viel Feinabstimmung und Anpassung, und Nintendo hat uns dabei sehr unterstützt. Dinge wie Onboarding und Tutorials für Spieler sind etwas, worin wir historisch nicht gut sind, deshalb war die Unterstützung in diesem Bereich sehr, sehr gut, und wir glauben, dass es in dieser Hinsicht eine grossartige Beziehung war.",
+      "attribution": "Hidetaka Miyazaki, Game Director bei FromSoftware, gegenüber The Verge"
+    },
+    {
+      "type": "paragraph",
+      "text": "Dass ausgerechnet Nintendo - ein Publisher, der Spielmechaniken traditionell wortlos über Leveldesign erklärt - hier als Lehrmeister auftritt, ergibt Sinn. Bei FromSoftware haben Neueinsteigende dagegen seit jeher damit zu kämpfen, dass zentrale Systeme in Menütexten versteckt oder gar nicht erklärt werden. In einem kompetitiven Mehrspielertitel mit ungewohnter Struktur wäre das ein deutlich grösseres Problem als in einem Singleplayer-Rollenspiel, bei dem man sich Wissen über Stunden erarbeiten kann."
+    },
+    {
+      "type": "heading",
+      "text": "Was bislang über das Spiel bekannt ist"
+    },
+    {
+      "type": "list",
+      "items": [
+        "The Duskbloods entstand ursprünglich als Projekt für die erste Nintendo Switch, Entwicklungsstart 2021",
+        "Nach der Enthüllung der Switch 2 wechselte FromSoftware die Zielplattform - das Spiel wird Switch-2-exklusiv",
+        "Nintendo liefert laut Miyazaki Unterstützung bei Systemdesign, Feinabstimmung, Onboarding und Tutorials",
+        "Das Matchmaking soll gerankt funktionieren: «Wir planen definitiv, das Matchmaking-System so zu gestalten, dass es gerankt ist»"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Miyazakis Aussagen sind keine Marketingfloskel, sondern ein seltener Blick in eine Produktion, die sich mitten in der Entwicklung neu ausrichten musste. Für die Leserschaft bedeutet das zweierlei: Erstens dürfte die Performance-Frage, die FromSoftware-Titel seit Jahren begleitet, diesmal von Anfang an mitgedacht worden sein - schlicht, weil das Team die alte Hardware bereits als Sackgasse erlebt hat. Zweitens könnte The Duskbloods das erste FromSoftware-Spiel werden, das seine Regeln tatsächlich erklärt, statt sie zu verstecken. Ob dieser Einfluss dem Studio guttut oder Fans die gewohnte Kargheit vermissen, wird sich erst am fertigen Spiel zeigen."
+    }
+  ],
+  "poll": {
+    "question": "Nintendo hilft FromSoftware bei Tutorials und Onboarding - gute Idee oder Verrat am Souls-Prinzip?",
+    "options": [
+      "Endlich - die Systeme waren nie gut erklärt",
+      "In einem Multiplayer-Titel absolut nötig",
+      "Das Rätselhafte gehört zu FromSoftware dazu",
+      "Egal, Hauptsache es läuft flüssig"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-23T22:04:09.299Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "circuit",
+  "sources": [
+    {
+      "title": "The Duskbloods devs were \"definitely very happy\" with the Switch 2's reveal after FromSoftware struggled to get it running on a Switch 1",
+      "url": "https://www.gamesradar.com/games/action/the-duskbloods-devs-were-definitely-very-happy-with-the-switch-2s-reveal-after-fromsoftware-struggled-to-get-it-running-on-a-switch-1/",
+      "publisher": "GamesRadar"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/duskbloods-switch-1-entwicklungsstart-miyazaki-2026.webp",
+    "alt": "«Wie sollen wir das schaffen?» - The Duskbloods lief fast auf Switch 1",
+    "credit": "Bild: GamesRadar",
+    "sourceUrl": "https://www.gamesradar.com/games/action/the-duskbloods-devs-were-definitely-very-happy-with-the-switch-2s-reveal-after-fromsoftware-struggled-to-get-it-running-on-a-switch-1/",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "duskbloods-miyazaki-brettspiel-elemente-switch-2",
+    "duskbloods-ranked-matchmaking-brettspiel-einfluesse-2026",
+    "fromsoftware-miyazaki-singleplayer-duskbloods-2026"
+  ]
+}

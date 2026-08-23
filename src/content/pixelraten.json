@@ -1,19 +1,20 @@
 {
-  "datum": "2026-08-23",
-  "nummer": 15,
-  "loesung": "Terraria",
+  "datum": "2026-08-24",
+  "nummer": 16,
+  "loesung": "No Man's Sky",
   "akzeptiert": [
-    "terraria"
+    "nomanssky",
+    "nomanssky"
   ],
   "hinweise": [
-    "Erschienen 2011 · Sandbox",
-    "2D-Graben"
+    "Erschienen 2016 · Weltraum",
+    "18 Trillionen Planeten"
   ],
   "bilder": [
-    "/images/pixelraten/2026-08-23-s1.jpg",
-    "/images/pixelraten/2026-08-23-s2.jpg",
-    "/images/pixelraten/2026-08-23-s3.jpg",
-    "/images/pixelraten/2026-08-23-s4.jpg",
-    "/images/pixelraten/2026-08-23-s5.jpg"
+    "/images/pixelraten/2026-08-24-s1.jpg",
+    "/images/pixelraten/2026-08-24-s2.jpg",
+    "/images/pixelraten/2026-08-24-s3.jpg",
+    "/images/pixelraten/2026-08-24-s4.jpg",
+    "/images/pixelraten/2026-08-24-s5.jpg"
   ]
 }
