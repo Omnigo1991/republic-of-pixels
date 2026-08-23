@@ -24,7 +24,7 @@ export function KopfBand() {
     <div className="pointer-events-none fixed inset-x-0 top-0 z-50 pb-2.5 pt-3 sm:pt-4">
       <div className="relative mx-auto max-w-content px-4 sm:px-6 lg:px-8">
         <div
-          className={`pointer-events-auto flex h-[60px] items-center gap-3 rounded-full border border-white/[0.16] bg-[rgba(12,11,26,0.78)] pl-4 pr-2 text-[13px] font-medium text-[#F2F8FF] backdrop-blur-[22px] backdrop-saturate-150 sm:h-[58px] sm:gap-8 sm:pl-5.5 sm:pr-3`}
+          className={`kopf-leiste pointer-events-auto flex h-[60px] items-center gap-3 rounded-full border border-white/[0.16] bg-[rgba(12,11,26,0.78)] pl-4 pr-2 text-[13px] font-medium text-[#F2F8FF] backdrop-blur-[22px] backdrop-saturate-150 sm:h-[58px] sm:gap-8 sm:pl-5.5 sm:pr-3`}
         >
           <Link
             href="/"

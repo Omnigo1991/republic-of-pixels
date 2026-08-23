@@ -25,8 +25,23 @@ export function AuthStatus() {
   const menueRef = useRef<HTMLDivElement>(null);
 
   function menueUmschalten() {
-    const rect = wrapperRef.current?.getBoundingClientRect();
-    if (rect) setMenuePos({ top: rect.bottom + 8, right: window.innerWidth - rect.right });
+    // Öffnet exakt wie die Menükarte daneben (Tim, 23.08.2026). Die hängt
+    // dort an der Kopfleiste: top-[72px] am Handy, sm:top-[74px] darüber,
+    // rechts sm:right-6 und lg:right-8. Gerechnet wird ab dem Innenrand
+    // der Leiste, weil ihr Weichzeichner der Bezugsrahmen ist. Werden die
+    // Zahlen in MenueKarte.tsx geändert, müssen sie hier mitziehen.
+    const leiste = wrapperRef.current?.closest(".kopf-leiste") ?? wrapperRef.current;
+    const rect = leiste?.getBoundingClientRect();
+    if (rect && leiste) {
+      const stil = getComputedStyle(leiste);
+      const innenOben = rect.top + parseFloat(stil.borderTopWidth || "0");
+      const innenRechts = rect.right - parseFloat(stil.borderRightWidth || "0");
+      const b = window.innerWidth;
+      setMenuePos({
+        top: innenOben + (b >= 640 ? 74 : 72),
+        right: b - (innenRechts - (b >= 1024 ? 32 : b >= 640 ? 24 : 0)),
+      });
+    }
     setMenueOffen((o) => !o);
   }
 
