@@ -1,0 +1,157 @@
+{
+  "slug": "banjo-kazooie-evercade-double-pack-native-ports-2026",
+  "title": "Banjo-Kazooie neu gebaut - kein Emulator, dafür gestrichene Inhalte",
+  "subtitle": "Evercade portiert beide N64-Klassiker von Grund auf neu und holt dabei ein Feature zurück, das Rare damals aus dem Spiel geworfen hat",
+  "excerpt": "Statt die N64-ROMs zu emulieren, hat Evercade Banjo-Kazooie und Banjo-Tooie komplett neu gebaut. Das erlaubt Komfortfunktionen - und die Rückkehr eines gestrichenen Features.",
+  "seoTitle": "Banjo-Kazooie: Evercade setzt auf native Ports statt Emulation",
+  "metaDescription": "Evercade veröffentlicht Banjo-Kazooie und Banjo-Tooie als native Ports: Komfortfunktionen, ein restauriertes Cut-Feature und neue freischaltbare Geheimnisse.",
+  "category": "news",
+  "platforms": [
+    "nintendo"
+  ],
+  "tags": [
+    "Banjo-Kazooie",
+    "Banjo-Tooie",
+    "Evercade",
+    "Rare",
+    "Retro",
+    "Nintendo 64"
+  ],
+  "tldr": [
+    "Evercade bringt Banjo-Kazooie und Banjo-Tooie als physisches Double Pack - ohne Emulation der N64-Originale",
+    "Beide Spiele wurden laut Entwickler Pete Davison \"von Grund auf neu aufgebaut\", was Komfortfunktionen wie Schleich-Taste, Kamera auf den Schultertasten und überspringbare Zwischensequenzen ermöglicht",
+    "Die Rückkehr zur Hub-Welt von jedem Punkt aus ist ein gestrichenes Feature des Originals, das restauriert wurde",
+    "Neue freischaltbare Bonusinhalte verstecken sich hinter Items, die im Original unerreichbar waren"
+  ],
+  "whyItMatters": "Banjo-Kazooie gehört zu den 3D-Plattformern, die auf moderner Hardware bislang vor allem in Emulation überleben - inklusive aller Eigenheiten der N64-Steuerung. Ein nativer Port zeigt, dass sich diese Klassiker auch behutsam modernisieren lassen, ohne ihren Kern zu verändern. Und er macht sichtbar, wie viel Spielraum in Rares Katalog noch steckt, während Xbox selbst sich zu den Marken bedeckt hält.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Retro-Neuauflagen bedeuten in der Regel: ROM, Emulator, ein paar Filteroptionen, fertig. Evercade geht beim frisch erschienenen Banjo-Kazooie Double Pack einen anderen Weg. Die beiden Nintendo-64-Plattformer von Rare laufen auf den Handhelds und Konsolen des Anbieters nicht in einer emulierten 64-Bit-Umgebung, sondern als eigenständige, neu programmierte Umsetzungen. Der Grund dafür ist weniger technische Eitelkeit als eine praktische Konsequenz: Nur so liessen sich Komfortfunktionen einbauen - und Inhalte zurückholen, die es damals nicht ins fertige Spiel geschafft haben."
+    },
+    {
+      "type": "embed",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=0peCyV62FYM"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "2 Spiele",
+          "label": "Banjo-Kazooie und Banjo-Tooie im neuen Double Pack"
+        },
+        {
+          "value": "30 Titel",
+          "label": "bündelt die separat erhältliche Super Pocket Rare Edition"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Neu programmiert statt emuliert"
+    },
+    {
+      "type": "paragraph",
+      "text": "In einem ausführlichen Video zum Double Pack erklärt Entwickler Pete Davison, dass beide Titel für die Evercade-Hardware komplett neu aufgebaut wurden. Der Anspruch dabei: den Charakter der Spiele nicht antasten, aber die Reibungspunkte von 1998 und 2000 abschleifen."
+    },
+    {
+      "type": "quote",
+      "text": "Wir wollten den Kern dieser Spiele nicht zu stark verändern, aber die Entwicklung komplett neuer nativer Ports statt einer Emulation der ursprünglichen 64-Bit-Versionen hat es uns erlaubt, Komfortfunktionen einzuführen, die das Spielen aus moderner Sicht deutlich angenehmer und komfortabler machen.",
+      "attribution": "Pete Davison, Entwickler"
+    },
+    {
+      "type": "heading",
+      "text": "Was sich im Spielgefühl ändert"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die auffälligste Neuerung richtet sich an alle, die auf einem Handheld mit kleinen Sticks spielen: eine eigene Taste zum Schleichen. Banjo setzt damit langsame, vorsichtige Schritte, ohne dass der Analogstick millimetergenau angetippt werden muss. Auch die notorisch sperrige Kamera bekommt Alternativen. Die weiteren Anpassungen im Überblick:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Schleich-Taste statt millimetergenauer Stick-Eingaben",
+        "Kamerasteuerung wahlweise auf den Schultertasten oder automatisch hinter Banjo",
+        "Zwischensequenzen lassen sich überspringen",
+        "überarbeitetes Optionsmenü",
+        "Feinzielmodus für die Ego-Passagen in Banjo-Tooie",
+        "Umschalter für invertierte Kamerasteuerung"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Ein gestrichenes Feature kehrt zurück"
+    },
+    {
+      "type": "paragraph",
+      "text": "Spannender als jede Komfortfunktion ist ein Punkt auf der Liste, der eigentlich schon 1998 hätte dabei sein sollen: die Möglichkeit, von jedem beliebigen Ort aus in die Hub-Welt zurückzukehren. Laut den Portierern handelt es sich dabei um ein gestrichenes Feature der Originalveröffentlichung, das nun restauriert wurde. Wer die Level der Reihe kennt, weiss, wie viel Laufweg das spart."
+    },
+    {
+      "type": "paragraph",
+      "text": "Dazu kommen komplett neue Inhalte. Das Team spricht von freischaltbaren Bonusfunktionen und Geheimnissen, die man sich verdienen muss."
+    },
+    {
+      "type": "quote",
+      "text": "Wir haben ausserdem neue freischaltbare Bonusfunktionen und Geheimnisse hinzugefügt. Ihr werdet hart dafür arbeiten müssen, denn ihr müsst geheime Gegenstände beschaffen, die im Originalspiel normalerweise unzugänglich waren.",
+      "attribution": "Entwicklerteam des Banjo-Kazooie Double Pack"
+    },
+    {
+      "type": "heading",
+      "text": "Nicht zu verwechseln mit der Super Pocket Rare Edition"
+    },
+    {
+      "type": "paragraph",
+      "text": "Wichtig für alle, die Evercades Produktpalette nur am Rand verfolgen: Das Double Pack ist eine eigenständige physische Veröffentlichung und hat nichts mit dem Handheld Super Pocket Rare Edition zu tun. Dieses Gerät bündelt 30 Titel aus dem Katalog des Studios - darunter ebenfalls die Banjo-Spiele sowie ein Prequel zu Conker's Bad Fur Day, das jahrzehntelang auf dem Game Boy festsass. Dass ausgerechnet ein Hardware-Nischenanbieter derart tief in Rares Archiv gräbt, ist bemerkenswert."
+    },
+    {
+      "type": "paragraph",
+      "text": "Bei Xbox selbst, wo die Marke seit der Rare-Übernahme liegt, klingt es weiterhin vage. Auf die Frage nach Traditionsmarken wie Banjo-Kazooie sagte Manager Matt Booty gegenüber GamesRadar+ lediglich, es gebe Möglichkeiten für alle möglichen Dinge und man schaue sich diese ständig an. Ein Versprechen ist das nicht."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Native Ports sind aufwendiger als Emulation, aber sie eröffnen genau die Freiheiten, die man sich bei alten 3D-Plattformern wünscht: eine zähmbare Kamera, weniger Leerlauf, optionale Modernisierungen. Dass dabei auch ein gestrichenes Feature den Weg zurück ins Spiel findet, macht das Doppelpack für Sammlerinnen und Sammler interessanter als eine reine Konservierung. Bleibt die offene Frage, ob eine solche Behandlung irgendwann auch die Bärentatze auf gängigere Plattformen setzt - beantworten kann sie derzeit nur Xbox."
+    }
+  ],
+  "poll": {
+    "question": "Was ist die wichtigste Änderung an den neuen Banjo-Ports?",
+    "options": [
+      "Von überall zurück in die Hub-Welt",
+      "Endlich eine brauchbare Kamera",
+      "Die neuen versteckten Bonusinhalte",
+      "Nichts davon - ich will Banjo auf aktuellen Konsolen"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-23T14:36:45.343Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "grid",
+  "sources": [
+    {
+      "title": "New Banjo-Kazooie releases are \"native ports,\" so devs could add cut content and \"bonus features\" to the N64 classics",
+      "url": "https://www.gamesradar.com/games/platformer/new-banjo-kazooie-releases-are-native-ports-so-devs-could-add-cut-content-and-bonus-features-to-the-n64-classics/",
+      "publisher": "GamesRadar"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/banjo-kazooie-evercade-double-pack-native-ports-2026.webp",
+    "alt": "Banjo-Kazooie neu gebaut - kein Emulator, dafür gestrichene Inhalte",
+    "credit": "Bild: GamesRadar",
+    "sourceUrl": "https://www.gamesradar.com/games/platformer/new-banjo-kazooie-releases-are-native-ports-so-devs-could-add-cut-content-and-bonus-features-to-the-n64-classics/",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "evercade-nexus-doom-edition-handheld-2026",
+    "gamescom-opening-night-live-2026-stream-uhrzeit-spiele",
+    "switch-2-preis-samsung-fertigungskosten-2026"
+  ]
+}

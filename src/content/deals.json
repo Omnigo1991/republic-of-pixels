@@ -1,17 +1,6 @@
 {
-  "updatedAt": "2026-08-23T14:03:57.682Z",
+  "updatedAt": "2026-08-23T14:36:48.205Z",
   "deals": [
-    {
-      "appId": 2161700,
-      "title": "Persona 3 Reload",
-      "discountPercent": 65,
-      "originalPrice": 5999,
-      "finalPrice": 2099,
-      "currency": "EUR",
-      "endsAt": "2026-08-24T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/2161700/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2161700/capsule_184x69.jpg?t=1764776430"
-    },
     {
       "appId": 1771300,
       "title": "Kingdom Come: Deliverance II",
@@ -66,6 +55,17 @@
       "endsAt": "2026-08-25T16:00:00.000Z",
       "url": "https://store.steampowered.com/app/2358720/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2358720/b7f722ddd5e23503f598586aa3700dd4d827bb2d/capsule_184x69.jpg?t=1760601605"
+    },
+    {
+      "appId": 1643320,
+      "title": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+      "discountPercent": 30,
+      "originalPrice": 5999,
+      "finalPrice": 4199,
+      "currency": "EUR",
+      "endsAt": "2026-08-31T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1643320/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1643320/87ade1fa0e9869388368228258d758e040a3f651/capsule_184x69_alt_assets_7_german.jpg?t=1787314871"
     }
   ]
 }
