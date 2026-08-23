@@ -290,7 +290,7 @@ export function SwipeStapel({ anzahl = 12 }: { anzahl?: number }) {
                 <Link
                   href={`/artikel/${oben.slug}`}
                   onPointerDown={(e) => e.stopPropagation()}
-                  className="self-start text-[12px] font-semibold uppercase tracking-[0.1em] text-text-secondary underline-offset-4 hover:text-cyan hover:underline"
+                  className="self-start text-[12px] font-semibold uppercase tracking-[0.1em] text-text-secondary hover:text-cyan hover:"
                 >
                   Ganzen Artikel lesen →
                 </Link>

@@ -114,7 +114,7 @@ export function SourcesBox({ sources }: { sources: Source[] }) {
               href={s.url}
               target="_blank"
               rel="noreferrer noopener"
-              className="text-text-secondary hover:text-accent transition-colors underline decoration-border-default underline-offset-4"
+              className="text-text-secondary hover:text-accent transition-colors "
             >
               {s.title}
             </a>

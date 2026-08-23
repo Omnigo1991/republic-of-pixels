@@ -117,9 +117,7 @@ h3 {
 }
 .prose-rop a:where(:not(.not-prose, .not-prose *)) {
   color: #02F0D1;
-  text-decoration: underline;
-  text-decoration-color: rgba(2, 240, 209, 0.45);
-  text-underline-offset: 4px;
+  text-decoration: none;
 }
 .prose-rop a:where(:not(.not-prose, .not-prose *)):hover {
   color: #30F3D9;

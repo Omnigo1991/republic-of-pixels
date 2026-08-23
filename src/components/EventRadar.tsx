@@ -110,7 +110,7 @@ export function EventRadar() {
           {heroHub && (
             <Link
               href={`/thema/${heroHub.slug}`}
-              className="mt-3 inline-block text-sm font-semibold text-navy underline decoration-navy/40 underline-offset-4 hover:decoration-navy"
+              className="mt-3 inline-block text-sm font-semibold text-navy hover:decoration-navy"
             >
               Unsere {hero.name}-Berichterstattung →
             </Link>

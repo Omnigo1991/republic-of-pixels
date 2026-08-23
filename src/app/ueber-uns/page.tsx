@@ -51,7 +51,7 @@ export default function UeberUnsPage() {
             Aus dieser Leidenschaft ist Republic of Pixels entstanden: ein Magazin, das
             Gaming-News ernst nimmt, einordnet statt übertreibt - und so aussieht, wie sich
             modernes Gaming anfühlt. In den Kommentaren trifft man ihn als{" "}
-            <Link href="/profil/republicofpixels" className="font-semibold text-[#0B0616] underline decoration-[#0B0616]/40 underline-offset-4">republicofpixels</Link>.
+            <Link href="/profil/republicofpixels" className="font-semibold text-[#0B0616] #0B0616]/40 ">republicofpixels</Link>.
           </p>
         </div>
 

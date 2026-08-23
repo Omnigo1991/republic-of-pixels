@@ -31,7 +31,7 @@ export default function ThemaPage({ params }: { params: { slug: string } }) {
     <>
       <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
         <p className="mb-2 text-xs font-bold uppercase tracking-widest text-accent">
-          <Link href="/themen" className="hover:underline">
+          <Link href="/themen" className="hover:">
             Thema
           </Link>
         </p>
