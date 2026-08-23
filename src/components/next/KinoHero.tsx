@@ -114,7 +114,10 @@ export function BeliebtSlider({ artikel }: { artikel: Article[] }) {
             )}
             <span className="absolute inset-0 bg-[linear-gradient(200deg,rgba(0,0,0,0)_22%,rgba(0,0,0,0.9)_92%)]" />
             <span
-              className={`${CHIP} absolute left-3 top-3 grid h-[26px] w-[26px] place-items-center rounded-full text-[12.5px] font-bold leading-none text-white [font-variant-numeric:tabular-nums] [text-indent:0.5px]`}
+              // Gleiche Zahlenschreibweise wie die Ränge im Charts-Radar (Tim,
+              // 23.08.2026): dieselbe Strichstärke, normale statt
+              // Tabellenziffern. Nur die Grösse ist kleiner.
+              className={`${CHIP} absolute left-3 top-3 grid h-[26px] w-[26px] place-items-center rounded-full text-[12.5px] font-semibold leading-none text-white`}
             >
               {i + 1}
             </span>

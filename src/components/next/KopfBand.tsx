@@ -33,12 +33,13 @@ export function KopfBand() {
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/brand/r-mark.png" alt="" aria-hidden="true" className="h-[26px] w-auto sm:h-[30px]" />
-            {/* Optischer Ausgleich (gemessen 23.08.2026): Die Wortmarke
-                reicht von der Versalhoehe "REPUBLIC" bis zur Grundlinie
-                "OF PIXELS". Diese Strecke sass 1.5 bis 1.9px tiefer als
-                die Mitte des Zeichens und der Leiste. Verschoben wird nur
-                die Schrift, das R bleibt wo es ist (Tim). */}
-            <span className="block translate-y-[-1.5px] leading-[1.05] sm:translate-y-[-1.9px]">
+            {/* Nicht verschieben (23.08.2026): Ich hatte die Wortmarke
+                anhand von Schriftmassen um 1.9px angehoben - am fertigen
+                Bild nachgemessen sass sie danach 2px zu hoch. Ohne
+                Verschiebung liegt ihre Tintenmitte auf der Tintenmitte des
+                Zeichens. Wer hier etwas ändert, misst bitte am Pixel, nicht
+                an den Schriftmassen. */}
+            <span className="block leading-[1.05]">
               {/* Fassung C (Tim, 23.08.2026): wieder das feste Gewicht von
                   frueher, mit etwas engerer Laufweite - die Wortmarke bleibt
                   dadurch gleich breit wie zuvor. */}
