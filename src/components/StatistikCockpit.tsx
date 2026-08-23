@@ -330,10 +330,9 @@ export function StatistikCockpit() {
           {/* Echtzeit */}
           <div className="mb-6 rounded-2xl border border-accent/35 bg-accent-wash/30 p-6">
             <div className="flex items-center gap-2">
-              <span className="relative flex h-2.5 w-2.5">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
-                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-accent" />
-              </span>
+              {/* Neutraler Punkt statt Cyan-Puls (Tim, 23.08.2026: keine
+                  farbigen Bulletpoints). */}
+              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-white/40" />
               <p className="text-sm font-semibold text-text-primary">Gerade jetzt (letzte 5 Minuten)</p>
             </div>
             <div className="mt-4 flex gap-10">

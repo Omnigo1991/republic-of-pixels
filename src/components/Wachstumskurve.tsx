@@ -85,12 +85,16 @@ export function Wachstumskurve({ daten }: { daten: Tageswert[] }) {
     <div className="rounded-2xl border border-border-subtle bg-surface-panel p-4 sm:p-5">
       <div className="mb-4 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
         <div className="flex items-center gap-4 text-xs">
-          <span className="inline-flex items-center gap-1.5 text-text-secondary">
-            <span className="h-2 w-2 rounded-full bg-accent" />
+          {/* Kurze Striche statt Punkte (Tim, 23.08.2026: keine farbigen
+              Bulletpoints). Die Farbe muss bleiben - sie sagt, welche
+              Linie im Diagramm gemeint ist -, aber als Linienstück
+              liest sie sich als Legende und nicht als Aufzählung. */}
+          <span className="inline-flex items-center gap-2 text-text-secondary">
+            <span className="h-[2px] w-3.5 rounded-full bg-accent" />
             Aufrufe
           </span>
-          <span className="inline-flex items-center gap-1.5 text-text-tertiary">
-            <span className="h-2 w-2 rounded-full bg-text-tertiary" />
+          <span className="inline-flex items-center gap-2 text-text-tertiary">
+            <span className="h-[2px] w-3.5 rounded-full bg-text-tertiary" />
             Besucher
           </span>
         </div>
