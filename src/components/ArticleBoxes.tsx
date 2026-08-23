@@ -2,19 +2,17 @@ import type { Review, Source } from "@/lib/types";
 import { ReviewLabelBadge } from "./Badges";
 
 export function TldrBox({ items }: { items: string[] }) {
-  // Neues Design (22.08.2026): Glaskarte, Chip mit Cyan-Punkt, Punkte
-  // mit hängendem Einzug - gleiche Schriftgrösse wie der Leak-Hinweis.
+  // Exakt dieselbe Machart wie "Warum das wichtig ist" (Tim,
+  // 23.08.2026): getönte Glasbühne, Cyan-Kicker in Versalien, kein
+  // Chip. Nur der Inhalt unterscheidet die beiden Boxen.
   return (
-    <div className="my-8 rounded-[22px] border border-white/[0.14] bg-white/[0.07] p-6 text-[16px] leading-[1.5] text-[#D7D9E5] backdrop-blur-[18px] sm:px-7">
-      <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/[0.22] bg-white/[0.12] px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.08em] text-white backdrop-blur-[14px]">
-        <span className="h-[7px] w-[7px] rounded-full bg-accent" />
-        Kurzfassung
-      </span>
-      <ul className="m-0 list-none p-0">
+    <div className="my-9 rounded-[20px] border border-accent/30 bg-[linear-gradient(135deg,rgba(2,240,209,0.16),rgba(255,46,151,0.1))] p-6 sm:px-7">
+      <span className="text-[11px] font-bold uppercase tracking-[0.1em] text-accent">Kurzfassung</span>
+      <ul className="m-0 mt-3 list-none p-0">
         {items.map((item, i) => (
-          <li key={i} className="mb-2.5 flex gap-3">
-            <span className="mt-[9px] h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-            <span className="flex-1">{item}</span>
+          <li key={i} className="mb-2.5 flex gap-3 last:mb-0">
+            <span className="mt-[10px] h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+            <span className="flex-1 text-[17px] leading-[1.5] text-[#EAF6FF] sm:text-[18px]">{item}</span>
           </li>
         ))}
       </ul>
