@@ -171,7 +171,7 @@ export function AuthStatus() {
                 style={{ top: menuePos.top, right: menuePos.right }}
                 className="konto-glas fixed z-[70] w-[288px] overflow-hidden rounded-[24px] border border-white/[0.18] bg-[rgba(18,18,30,0.92)] p-2 text-[#F2F8FF] shadow-[0_24px_60px_-20px_rgba(0,0,0,0.7)] backdrop-blur-[22px]"
               >
-                <div className="flex items-center gap-3 p-4">
+                <div className="flex items-center gap-3 p-3">
                   {istMaster ? (
                     <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#0F0D2C]">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -199,7 +199,7 @@ export function AuthStatus() {
                 </div>
 
                 {next && (
-                  <div className="px-4 py-3">
+                  <div className="px-3 py-3">
                     <p className="mb-1.5 text-xs text-text-tertiary">
                       Noch {next.fehlend} {next.fehlend === 1 ? "Punkt" : "Punkte"} bis {next.rang.name}
                     </p>
@@ -212,7 +212,7 @@ export function AuthStatus() {
                   </div>
                 )}
 
-                <div className="py-1.5">
+                <div className="pt-1.5">
                   <Link
                     href={`/profil/${name}`}
                     onClick={() => setMenueOffen(false)}
@@ -236,7 +236,6 @@ export function AuthStatus() {
                       Statistik
                     </Link>
                   )}
-                  <div className="h-1.5" />
                   <button
                     onClick={() => {
                       setMenueOffen(false);
