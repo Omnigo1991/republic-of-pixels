@@ -1,15 +1,22 @@
-# Fortlaufende News-Pipeline: Prüfung der RSS-Feeds alle 3 Stunden,
+# Fortlaufende News-Pipeline: Prüfung der RSS-Feeds alle 4 Stunden,
 # Veröffentlichung sobald relevante neue Meldungen da sind (max. 2 Artikel pro
 # Lauf). Der Push löst automatisch das Vercel-Production-Deployment aus.
 # Manueller Start: GitHub → Actions → "News-Pipeline" → "Run workflow".
-# Takt-Entscheidung 07.08.2026: von stündlich auf alle 3 Std. reduziert —
+# Takt-Entscheidung 07.08.2026: von stündlich auf alle 3 Std. reduziert -
 # ~30 Artikel/Tag verdrängten Beiträge nach ~8 Std. von der sichtbaren
 # "Alle News"-Liste; Leser kamen nicht nach. Ziel: ~10-14 Artikel/Tag.
+# Takt-Entscheidung 23.08.2026 (Tim, wegen der API-Kosten): alle 4 Std.,
+# also 6 statt 8 Läufe am Tag. Der Startpunkt 02:23 UTC ist bewusst
+# gewählt und darf nicht auf "*/4" vereinfacht werden: GitHub rechnet in
+# UTC, unser Instagram-Fenster in Zürcher Zeit. Nur mit diesem Versatz
+# fallen in beiden Zeitzonen - Sommer wie Winter - drei Läufe so ins
+# Fenster 9-21 Uhr, dass die Tageskurve ihre 5 Posts erreicht. Mit
+# "*/4" wären es nur 4 Posts pro Tag (durchgerechnet 23.08.2026).
 name: News-Pipeline
 
 on:
   schedule:
-    - cron: "23 */3 * * *"
+    - cron: "23 2-23/4 * * *"
   workflow_dispatch:
     inputs:
       max_articles:
