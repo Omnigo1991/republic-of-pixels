@@ -1,17 +1,6 @@
 {
-  "updatedAt": "2026-08-22T21:44:08.007Z",
+  "updatedAt": "2026-08-23T01:04:05.538Z",
   "deals": [
-    {
-      "appId": 1142710,
-      "title": "Total War: WARHAMMER III",
-      "discountPercent": 85,
-      "originalPrice": 5999,
-      "finalPrice": 899,
-      "currency": "EUR",
-      "endsAt": "2026-08-27T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1142710/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1142710/capsule_184x69.jpg?t=1786634522"
-    },
     {
       "appId": 1771300,
       "title": "Kingdom Come: Deliverance II",
@@ -22,6 +11,17 @@
       "endsAt": "2026-08-24T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/1771300/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1771300/93e28946c46f09d761bbfab1e17e8c1c4a8323a0/capsule_184x69.jpg?t=1777975568"
+    },
+    {
+      "appId": 1332010,
+      "title": "Stray",
+      "discountPercent": 50,
+      "originalPrice": 2849,
+      "finalPrice": 1424,
+      "currency": "EUR",
+      "endsAt": "2026-09-05T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1332010/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1332010/01489897d641b7f2e734a436dfabdd74afd4c677/capsule_184x69.jpg?t=1785424330"
     },
     {
       "appId": 4001890,

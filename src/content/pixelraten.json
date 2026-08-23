@@ -1,19 +1,19 @@
 {
-  "datum": "2026-08-22",
-  "nummer": 14,
-  "loesung": "Celeste",
+  "datum": "2026-08-23",
+  "nummer": 15,
+  "loesung": "Terraria",
   "akzeptiert": [
-    "celeste"
+    "terraria"
   ],
   "hinweise": [
-    "Erschienen 2018 · Plattformer",
-    "Berg-Besteigung"
+    "Erschienen 2011 · Sandbox",
+    "2D-Graben"
   ],
   "bilder": [
-    "/images/pixelraten/2026-08-22-s1.jpg",
-    "/images/pixelraten/2026-08-22-s2.jpg",
-    "/images/pixelraten/2026-08-22-s3.jpg",
-    "/images/pixelraten/2026-08-22-s4.jpg",
-    "/images/pixelraten/2026-08-22-s5.jpg"
+    "/images/pixelraten/2026-08-23-s1.jpg",
+    "/images/pixelraten/2026-08-23-s2.jpg",
+    "/images/pixelraten/2026-08-23-s3.jpg",
+    "/images/pixelraten/2026-08-23-s4.jpg",
+    "/images/pixelraten/2026-08-23-s5.jpg"
   ]
 }
