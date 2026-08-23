@@ -1,0 +1,158 @@
+{
+  "slug": "modern-warfare-4-beta-kritik-ricochet-anticheat-2026",
+  "title": "MW4-Beta: langsamer laufen, schneller sterben - Fans sind ernüchtert",
+  "subtitle": "Infinity Ward streicht die Akrobatik, verspricht Änderungen an Spawns und Time-to-Kill - und schickt PC-Spieler:innen für den Anti-Cheat ins BIOS",
+  "excerpt": "Die Beta zu Call of Duty: Modern Warfare 4 sollte den Serien-Zirkus zurückdrehen. Stattdessen diskutiert die Community über Blitz-Tode, kaputte Spawns - und einen Anti-Cheat, der tief in den Rechner greift.",
+  "seoTitle": "Modern Warfare 4: Beta-Kritik an Spawns, TTK und Ricochet",
+  "metaDescription": "Modern Warfare 4 zeigt in der Beta blasse Maps, schnelle Tode und Spawn-Probleme. Infinity Ward kündigt Änderungen an - und der Anti-Cheat sorgt für Ärger.",
+  "category": "news",
+  "platforms": [
+    "pc",
+    "playstation",
+    "xbox",
+    "nintendo"
+  ],
+  "tags": [
+    "Call of Duty: Modern Warfare 4",
+    "Infinity Ward",
+    "Activision",
+    "Ricochet Anti-Cheat",
+    "Beta"
+  ],
+  "tldr": [
+    "Die Beta zu Call of Duty: Modern Warfare 4 lief am Wochenende - Kritik gibt es an blassen Maps, zu schneller Time-to-Kill und schlecht gesetzten Spawnpunkten.",
+    "Infinity Ward hat laut CharlieIntel bereits Anpassungen an TTK, Spawns und den Nachteilen von Waffenaufsätzen angekündigt.",
+    "Nur 3 der 12 Launch-Maps waren spielbar; das Spiel erscheint im Oktober ausschliesslich für aktuelle Konsolen inklusive Switch 2.",
+    "Auf dem PC verlangt der Ricochet-Anti-Cheat Secure Boot und TPM - in einem Fall sogar ein BIOS-Update auf einem ein Jahr alten Board."
+  ],
+  "whyItMatters": "Modern Warfare 4 ist der erste grosse Call-of-Duty-Test seit Battlefield 6 - und die Beta zeigt, wo Infinity Ward nachbessern muss, bevor im Oktober Geld fliesst. Wer auf dem PC spielt, sollte zudem wissen, welche Hürden der Anti-Cheat aufbaut, bevor die Vorbestellung klickt.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Am vergangenen Wochenende durfte die Community erstmals ausgiebig in Call of Duty: Modern Warfare 4 hineinspielen - und der Tenor fällt gemischt aus. Infinity Ward hatte über Monate versprochen, den überdrehten Actionzirkus der jüngeren Serienteile zurückzufahren. Die Beta zum inzwischen 23. Eintrag der Reihe zeigt, was damit gemeint war. Nur empfinden einige Testende die Kurskorrektur als Überkorrektur: blasse Maps, Tode in Sekundenbruchteilen und Spawnpunkte, die Runden beenden, bevor sie begonnen haben."
+    },
+    {
+      "type": "embed",
+      "platform": "twitter",
+      "url": "https://x.com/charlieINTEL/status/2091564488239505896"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "3 von 12",
+          "label": "Maps waren in der Beta spielbar - der Rest folgt zum Launch"
+        },
+        {
+          "value": "Oktober",
+          "label": "Release, ausschliesslich für aktuelle Konsolen inklusive Switch 2"
+        },
+        {
+          "value": "80 $",
+          "label": "Preis des Spiels, für das PC-Nutzer:innen Secure Boot und TPM aktivieren müssen"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Weniger Akrobatik, mehr Bodenhaftung - und weniger Funken"
+    },
+    {
+      "type": "paragraph",
+      "text": "Wandsprünge und das für Black Ops typische Omnimovement sind zusammengestrichen, an ihre Stelle tritt ein zurückhaltender Bodenslide. Das Ergebnis ist ein langsameres Spiel, in dem trotzdem schneller gestorben wird - eine Kombination, die laut Rückmeldungen aus der Beta vor allem campenden Spielweisen in die Hände spielt. Verstärkt wird das durch Schrittgeräusche, die lauter ausfallen als gewohnt und damit leisen Perks einen spürbaren Vorteil verschaffen."
+    },
+    {
+      "type": "paragraph",
+      "text": "Technisch dagegen erntet der Titel Lob: Grafik und dynamische Umgebungsdetails gelten als überzeugend genug, um den Verzicht auf die alten Konsolen zu rechtfertigen. Die Switch 2 bleibt trotzdem an Bord."
+    },
+    {
+      "type": "heading",
+      "text": "Das steht auf der Mängelliste der Beta"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Maps, die als unauffällig und wenig einprägsam wahrgenommen werden",
+        "Eine Time-to-Kill, die Duelle praktisch im ersten Treffer entscheidet",
+        "Spawnpunkte, die Gegner direkt ins Sichtfeld setzen",
+        "Waffenaufsätze, deren Nachteile den Nutzen aufwiegen",
+        "Überdurchschnittlich laute Schrittgeräusche als Balance-Problem"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Infinity Ward reagiert noch während der Testphase"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Kritik ist offensichtlich angekommen. Wie CharlieIntel unter Berufung auf ein Beta-Update berichtet, arbeitet das Studio bereits an drei der genannten Punkte: Die Time-to-Kill soll angepasst, die Zahl der Nachteile bei Waffenaufsätzen zugunsten besserer Balance reduziert und das Spawnsystem überarbeitet werden. Ob auch die Kartenauswahl überzeugt, lässt sich noch nicht beurteilen - in der Beta standen lediglich 3 der 12 Startmaps zur Verfügung. Schwerer zu beheben dürfte der Eindruck sein, dass dem Ganzen schlicht der Funke fehlt. Immerhin: Erstmals in der Serienhistorie enthielt eine Beta auch eine Mission aus der Einzelspielerkampagne."
+    },
+    {
+      "type": "heading",
+      "text": "Ricochet verlangt Secure Boot, TPM - und im Extremfall ein BIOS-Update"
+    },
+    {
+      "type": "paragraph",
+      "text": "Parallel zur Balance-Debatte kocht auf dem PC ein zweites Thema hoch. Der kernelbasierte Ricochet-Anti-Cheat setzt auf Secure Boot und aktiviertes TPM, um Manipulationen auf tiefster Systemebene zu erkennen - denn viele moderne Cheats arbeiten selbst auf Kernel-Ebene. Der Preis dafür: Die Software kann Speicher, Anwendungen und praktisch die gesamte Aktivität des Rechners einsehen. Ein Autor von Destructoid berichtet, dass er trotz einer bereits 2025 aufgespielten BIOS-Version zum erneuten Flashen aufgefordert wurde, weil die Software mit der laufenden AMD-TPM-Version nicht zurechtkam - auf Hardware, die gerade einmal ein Jahr alt ist."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ein BIOS-Update ist technisch kein Hexenwerk, birgt aber im Fehlerfall das Risiko eines unbrauchbaren Mainboards. Dass ausgerechnet ein Spiel für 80 Dollar diesen Schritt verlangt, während auf X weiterhin Clips von Cheatern in MW4 kursieren, sorgt für Unmut. Die Kampagne lässt sich immerhin ohne diese Hürden starten."
+    },
+    {
+      "type": "quote",
+      "text": "Ich werde lernen, ohne Ricochet zu leben.",
+      "attribution": "Andrej Barovic, Destructoid"
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Call of Duty steht so unter Druck wie lange nicht. Jahrelang galt als Running Gag, dass für Activision im schlimmsten Fall ein halbwegs gutes Battlefield gefährlich werden könnte - genau das lieferte Battlefield 6 im vergangenen Jahr. Microsoft, das die Activision-Übernahme 2023 abschloss, musste zuletzt öffentlich einräumen, interne Ziele verfehlt zu haben. Eine Beta ist ausdrücklich ein Test, und Infinity Ward reagiert erkennbar schnell. Doch zwischen einem Shooter-Markt, der von Puristen bis Gelegenheitsspielenden bedient wird, und einem Anti-Cheat, der Zugang bis ins BIOS verlangt, bleibt bis Oktober einiges zu beweisen."
+    }
+  ],
+  "poll": {
+    "question": "Was hält euch nach der MW4-Beta am ehesten vom Kauf ab?",
+    "options": [
+      "Die Time-to-Kill und die Spawns",
+      "Die blassen Maps",
+      "Der Anti-Cheat mit Secure-Boot- und BIOS-Zwang",
+      "Nichts - ich bin im Oktober dabei"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-23T18:45:24.425Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "waveform",
+  "sources": [
+    {
+      "title": "Maps, Spawn Issues, And Overall Lack Of Razzle Dazzle Is Leaving Some Players Cold On The Modern Warfare 4 Beta",
+      "url": "https://kotaku.com/maps-spawn-issues-and-overall-lack-of-razzle-dazzle-leaves-players-cold-on-modern-warfare-4-beta-2000727258",
+      "publisher": "Kotaku"
+    },
+    {
+      "title": "Hey, Activision: No game s anti-cheat measures should require me to update my entire BIOS",
+      "url": "https://www.destructoid.com/hey-activision-no-games-anti-cheat-measures-should-require-me-to-update-my-entire-bios/",
+      "publisher": "Destructoid"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/modern-warfare-4-beta-kritik-ricochet-anticheat-2026.webp",
+    "alt": "MW4-Beta: langsamer laufen, schneller sterben - Fans sind ernüchtert",
+    "credit": "Bild: Kotaku",
+    "sourceUrl": "https://kotaku.com/maps-spawn-issues-and-overall-lack-of-razzle-dazzle-leaves-players-cold-on-modern-warfare-4-beta-2000727258",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "modern-warfare-4-beta-update-schritt-audio-ttk-2026",
+    "modern-warfare-4-switch-2-digital-legends-erste-eindruecke-2026",
+    "modern-warfare-4-beta-shader-preload-pc-2026"
+  ]
+}
