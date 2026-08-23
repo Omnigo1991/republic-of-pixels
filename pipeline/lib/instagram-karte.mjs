@@ -20,9 +20,9 @@ import { entferneBalken } from "./letterbox.mjs";
 //   - das Zeichen gross oben rechts (Tims Wahl "A", 104 px)
 //   - ein GROSSWORT, das über die Oberkante der Glaskarte ins Bild ragt:
 //     der Kern der Meldung in einem Wort, im Markenverlauf
-//   - Pixelstaub, der das Grosswort nach rechts auflöst - abgeleitet aus
-//     dem Schweif unseres R (gemessen: quadratische Module, Richtung
-//     rechts unten, Ausdünnung nach aussen). Dosierung "fein" (Tim).
+//   - dessen letzter Buchstabe sich nach rechts in Pixel auflöst -
+//     abgeleitet aus dem Schweif unseres R (gemessen: quadratische
+//     Module). Freien Staub daneben gibt es nicht (Tim, 23.08.2026).
 //   - die Glaskarte mit Chip (Cyan-Punkt wie auf der Startseite) und der
 //     Schlagzeile in Gross-/Kleinschreibung
 //
@@ -30,10 +30,9 @@ import { entferneBalken } from "./letterbox.mjs";
 // 23.08.2026) - dadurch konnte die Karte tiefer rutschen und das Motiv
 // gewinnt oben einen Streifen zurück.
 //
-// REIHENFOLGE IST PFLICHT: Erst das Wort einpassen, dann den Staub
-// rechnen. Andersherum wächst der Staub nicht mit, wenn ein langes Wort
-// die Schrift verkleinert - bei "Eingestellt" lief er 258 px aus der
-// Karte (gefunden am 23.08.2026 im Muster, nicht im Betrieb).
+// REIHENFOLGE IST PFLICHT: Erst das Wort einpassen, dann die Auflösung
+// rechnen - sie braucht die endgültige Buchstabenbreite. Andersherum
+// passt das Raster nicht mehr zur Schrift.
 
 const HIER = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(HIER, "..", "..");
@@ -67,7 +66,7 @@ export function grosswortAusZeilen(headlineLines, kicker) {
   return woerter.sort((a, b) => b.length - a.length)[0];
 }
 
-/** Baut Wort, Staub und Schlagzeile - läuft IM Browser, nach dem Laden. */
+/** Baut Wort, Auflösung und Schlagzeile - läuft IM Browser nach dem Laden. */
 function einpassenQuelle() {
   return function einpassen(staerke) {
     const wort = document.getElementById("wort");
@@ -83,9 +82,10 @@ function einpassenQuelle() {
       return r.getBoundingClientRect().width;
     };
 
-    // 1) Grosswort einpassen - ein Viertel der Breite bleibt fuer den Staub
+    // 1) Grosswort einpassen. Ohne freien Staub braucht es rechts keinen
+    // reservierten Streifen mehr - nur noch etwas Luft.
     let gr = 150;
-    while (textbreite(wort) > platz * 0.76 && gr > 70) {
+    while (textbreite(wort) > platz * 0.92 && gr > 70) {
       gr -= 2;
       wort.style.fontSize = gr + "px";
     }
@@ -97,7 +97,7 @@ function einpassenQuelle() {
     feldEl.style.height = `${gr}px`;
     karte.style.paddingTop = `${ueberhang + 46}px`;
 
-    // 2) Pixelstaub - Raster, Richtung und Ausduennung wie im Zeichen
+    // 2) Auflösung des letzten Buchstabens
     const r = wort.getBoundingClientRect();
     const eltern = wort.parentElement.getBoundingClientRect();
     // ABSTAND ZUM WORT (Tim, 23.08.2026): Der Kasten des Wortes traegt
@@ -122,22 +122,18 @@ function einpassenQuelle() {
     };
     // DER LETZTE BUCHSTABE LOEST SICH AUF (Tim, 23.08.2026).
     //
-    // Er bekommt eine Maske aus denselben Modulen wie der Staub: Links steht
-    // er noch ganz, nach rechts fallen immer mehr Kacheln weg. Der Staub
-    // danach setzt dieselbe Rasterlinie und dasselbe Abnahmegesetz fort -
-    // dadurch liest es sich als EIN Vorgang und nicht als Buchstabe plus
-    // Dekoration daneben.
+    // Er bekommt eine Maske aus quadratischen Modulen im Raster unseres
+    // Zeichens: Links steht er noch ganz, nach rechts fallen immer mehr
+    // Kacheln weg.
     const letzter = document.getElementById("letzter");
     const lr = letzter.getBoundingClientRect();
     const lLinks = lr.left - eltern.left;
     const lBreite = lr.width;
-    // Aufloesungsstrecke: der Buchstabe plus der Bereich, in dem der Staub
-    // ausklingt. Ueber diese Strecke faellt die Dichte von 1 auf 0.
-    // Die Strecke haengt an der BUCHSTABENBREITE, nicht an der Staublaenge.
-    // Erster Versuch war 278px lang - ueber die 80px des Buchstabens fiel
-    // die Dichte damit nur von 1 auf 0.7, man sah fast nichts. Mit dem
-    // 2.4-fachen der Buchstabenbreite ist an seinem rechten Rand rund ein
-    // Drittel uebrig, danach klingt der Staub aus.
+    // Ueber diese Strecke faellt die Dichte von 1 auf 0.
+    // Die Strecke haengt an der BUCHSTABENBREITE. Ein erster Versuch war
+    // 278px lang - ueber die 80px des Buchstabens fiel die Dichte damit
+    // nur von 1 auf 0.7, man sah fast nichts. Mit dem 2.4-fachen der
+    // Buchstabenbreite ist an seinem rechten Rand rund ein Drittel uebrig.
     const strecke = lBreite * 2.4;
     const dichteBei = (x) => Math.pow(Math.max(0, 1 - (x - lLinks) / strecke), 2.2);
 
@@ -162,33 +158,11 @@ function einpassenQuelle() {
     letzter.style.webkitMaskRepeat = "no-repeat";
     letzter.style.maskRepeat = "no-repeat";
 
-    const randDichte = Math.max(0.28, dichteBei(lLinks + lBreite));
-    let weiteste = links;
-    for (let sp = 0; sp < spalten; sp++) {
-      const x = links + sp * M * 1.5;
-      if (x + M > platz) break;
-      // Der Staub setzt dort an, wo der Buchstabe aufhoert, und klingt von
-      // da aus langsamer aus. Mit der steilen Buchstabenkurve allein waere
-      // er nach zwei Spalten weg - gemessen blieben 0 bis 2 Kruemel.
-      const dichte = randDichte * Math.pow(1 - sp / spalten, 1.4);
-      const zeilen = Math.max(1, Math.round(bandHoehe / (M * 1.5)));
-      for (let z = 0; z < zeilen; z++) {
-        if (zufall() > dichte) continue;
-        const y = bandOben + z * M * 1.5 + sp * M * 0.34;
-        const b = document.createElement("b");
-        b.style.width = M + "px";
-        b.style.height = M + "px";
-        b.style.left = Math.round(x) + "px";
-        b.style.top = Math.round(y) + "px";
-        const t = Math.min(1, 0.55 + (sp / spalten) * 0.45);
-        b.style.background =
-          "rgb(" + Math.round(2 + 253 * t) + "," + Math.round(240 - 194 * t) +
-          "," + Math.round(209 - 58 * t) + ")";
-        b.style.opacity = (0.95 - (sp / spalten) * 0.55).toFixed(2);
-        feld.appendChild(b);
-        weiteste = Math.max(weiteste, x + M);
-      }
-    }
+    // KEIN FREIER STAUB MEHR (Tim, 23.08.2026). Die einzelnen Kruemel
+    // neben dem Wort sind raus - was bleibt, ist die Aufloesung des
+    // letzten Buchstabens selbst. Das Feld bleibt im Aufbau, damit ein
+    // Zurueck eine Sache von wenigen Zeilen ist.
+    const weiteste = wort.getBoundingClientRect().right - eltern.left;
 
     // 3) Schlagzeile einpassen
     let ts = 50;
