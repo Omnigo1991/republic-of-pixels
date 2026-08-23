@@ -33,7 +33,7 @@ export function KinoHero({ artikel, weitere }: { artikel: Article; weitere: Arti
       <div className="absolute inset-x-0 bottom-4 z-[5] sm:bottom-11 lg:bottom-16">
         <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
           <span
-            className={`${CHIP} inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.08em] text-white`}
+            className={`${CHIP} inline-flex items-center gap-2 rounded-full py-1.5 pl-3.5 pr-[calc(0.875rem-0.08em)] text-[11px] font-semibold uppercase tracking-[0.08em] text-white`}
           >
             <span
               className="h-[7px] w-[7px] rounded-full"

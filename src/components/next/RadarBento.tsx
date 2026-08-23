@@ -76,7 +76,7 @@ export function RadarBento({ getestete }: { getestete: Article[] }) {
                 </span>
                 <span className="text-[14.5px] font-semibold text-[#F2F8FF]">{e.name}</span>
                 {(e.status === "geruecht" || e.status === "erwartet") && (
-                  <span className="ml-auto shrink-0 rounded-full border border-magenta/40 bg-magenta/[0.16] px-2.5 py-[3px] text-[10px] font-bold uppercase tracking-[0.06em] text-[#FF6BC0]">
+                  <span className="ml-auto shrink-0 rounded-full border border-magenta/40 bg-magenta/[0.16] py-[3px] pl-2.5 pr-[calc(0.625rem-0.06em)] text-[10px] font-bold uppercase tracking-[0.06em] text-[#FF6BC0]">
                     {e.status === "geruecht" ? "Gerücht" : "Erwartet"}
                   </span>
                 )}

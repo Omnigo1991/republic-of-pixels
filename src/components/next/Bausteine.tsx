@@ -46,8 +46,14 @@ export function labelFarbe(_a: Article): string {
 export function KategorieChip({ article, klein = false }: { article: Article; klein?: boolean }) {
   return (
     <span
+      // Die Laufweite haengt hinter dem letzten Buchstaben als leerer Raum
+      // und schob den Inhalt um 0.4px nach links (gemessen 23.08.2026).
+      // Der rechte Innenabstand wird deshalb um genau diese Laufweite
+      // gekuerzt - danach sitzt die Schrift exakt mittig.
       className={`${CHIP} inline-flex items-center gap-1.5 rounded-full font-bold uppercase tracking-[0.08em] text-white ${
-        klein ? "px-2.5 py-1 text-[10px]" : "px-3 py-1.5 text-[11px]"
+        klein
+          ? "py-1 pl-2.5 pr-[calc(0.625rem-0.08em)] text-[10px]"
+          : "py-1.5 pl-3 pr-[calc(0.75rem-0.08em)] text-[11px]"
       }`}
     >
       <span
