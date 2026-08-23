@@ -12,11 +12,16 @@
 # fallen in beiden Zeitzonen - Sommer wie Winter - drei Läufe so ins
 # Fenster 9-21 Uhr, dass die Tageskurve ihre 5 Posts erreicht. Mit
 # "*/4" wären es nur 4 Posts pro Tag (durchgerechnet 23.08.2026).
+# Die Minute 05 ist ebenfalls Absicht: GitHub startet geplante Läufe
+# nachweislich 17 bis 101 Minuten zu spät (gemessen an den letzten
+# sechs Läufen am 22./23.08.2026). Je früher in der Stunde wir
+# einsteigen, desto mehr Verspätung verträgt der letzte Lauf im
+# Instagram-Fenster, bevor er hinten hinausfällt.
 name: News-Pipeline
 
 on:
   schedule:
-    - cron: "23 2-23/4 * * *"
+    - cron: "5 2-23/4 * * *"
   workflow_dispatch:
     inputs:
       max_articles:
