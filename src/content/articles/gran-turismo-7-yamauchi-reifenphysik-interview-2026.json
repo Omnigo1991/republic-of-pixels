@@ -1,0 +1,154 @@
+{
+  "slug": "gran-turismo-7-yamauchi-reifenphysik-interview-2026",
+  "title": "«Das haben wir einfach noch nicht» - Gran Turismos hartnäckigste Hürde",
+  "subtitle": "Kazunori Yamauchi erklärt, warum ausgerechnet vier Stücke Gummi die Rennsimulation seit Jahrzehnten ausbremsen",
+  "excerpt": "Fahrwerk und Antriebsstrang bekommt Polyphony Digital nach eigener Aussage nahezu deckungsgleich hin. Bei einem Bauteil aber stösst das Team seit Jahren an eine Wand - und die Hersteller helfen nicht.",
+  "seoTitle": "Gran Turismo 7: Yamauchi über die Reifen-Hürde",
+  "metaDescription": "Kazunori Yamauchi verrät im evo-Interview, warum Reifen die grösste Hürde in Gran Turismo 7 bleiben - und wie lange ein einzelnes Auto heute braucht.",
+  "category": "news",
+  "platforms": [
+    "playstation"
+  ],
+  "tags": [
+    "Gran Turismo 7",
+    "Polyphony Digital",
+    "Kazunori Yamauchi",
+    "PlayStation",
+    "Rennspiele"
+  ],
+  "tldr": [
+    "Yamauchi nennt im Gespräch mit dem Magazin evo die Reifensimulation als grösste technische Hürde von Gran Turismo 7",
+    "Hersteller geben ihre Reifendaten nur ungern heraus, Graining und der wandernde Kontaktpunkt fehlen bis heute",
+    "Ein einzelnes Fahrzeug braucht rund acht Monate Arbeit, die Nordschleife kostete vier Jahre",
+    "Spardruck durch Sony gab es laut Yamauchi vor allem bis Gran Turismo 5"
+  ],
+  "whyItMatters": "Die Reifenphysik entscheidet in einer Rennsimulation über nahezu jedes Fahrgefühl - vom Einlenken bis zum Kontrollverlust. Wer verstehen will, warum sich Gran Turismo 7 nach jedem Physik-Patch anders anfühlt und warum neue Autos so selten in Schwärmen erscheinen, bekommt hier die Erklärung direkt vom Serienschöpfer.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Gran Turismo trägt den Zusatz «The Real Driving Simulator» seit Jahrzehnten vor sich her - doch selbst nach mehr als 25 Jahren gibt es einen Bereich, an dem sich Polyphony Digital weiterhin die Zähne ausbeisst. Serienschöpfer Kazunori Yamauchi hat gegenüber dem britischen Automagazin evo erklärt, welcher das ist: die Reifen. Das Gespräch entstand bereits vor einiger Zeit beim FAT Ice Race im österreichischen Zell am See, wo Yamauchi gemeinsam mit Polestar auftrat - Hintergrund war die Zusammenarbeit rund um den Polestar 5 und «Gran Turismo 7»."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "100 Mio.",
+          "label": "verkaufte Einheiten hat die Reihe im vergangenen Jahr überschritten"
+        },
+        {
+          "value": "8 Monate",
+          "label": "dauert heute die Fertigstellung eines einzelnen Fahrzeugs"
+        },
+        {
+          "value": "4 Jahre",
+          "label": "kostete allein der Nachbau der Nürburgring-Nordschleife"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Fahrwerk kein Problem - der Kontaktpunkt schon"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nach der grössten technischen Hürde bei der Physiksimulation gefragt, muss Yamauchi nicht lange überlegen. Komponenten wie Fahrwerk oder Antriebsstrang liessen sich seiner Einschätzung nach nahezu deckungsgleich mit der Realität abbilden. Bei den Reifen sei das anders: Die Hersteller rücken ihre Geheimnisse nur ungern heraus, entsprechend müsse das Team mit dem arbeiten, was verfügbar ist. Besonders knifflig ist die Kontaktfläche zwischen Gummi und Asphalt, die sich je nach Hitze, Verschleiss und Streckenzustand permanent verändert."
+    },
+    {
+      "type": "quote",
+      "text": "Wie sich der Kontaktpunkt verändert, ist etwas, das wir nicht so leicht herausfinden können. Das Ausmass an Graining, das unter bestimmten Bedingungen auf der Strecke auftritt, ist etwas, das wir einfach noch nicht haben.",
+      "attribution": "Kazunori Yamauchi, Polyphony Digital"
+    },
+    {
+      "type": "paragraph",
+      "text": "Dass die Arbeit daran nicht abgeschlossen ist, zeigt das jüngste Update 1.71 für «Gran Turismo 7». Es überarbeitete den Reifen-Algorithmus erneut und schraubte dabei an gleich mehreren Stellschrauben:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Schlupfverhalten",
+        "Rollwiderstand",
+        "Aufheizung der Reifen",
+        "Verschleiss",
+        "Grip-Verlust"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Moderne Elektronik macht es nicht leichter"
+    },
+    {
+      "type": "paragraph",
+      "text": "Erschwerend kommt hinzu, dass sich aktuelle Fahrzeuge immer stärker über Software definieren. Elektronische Steuerungen für Antrieb und Differenzial unterscheiden sich laut Yamauchi massiv von Modell zu Modell und von Hersteller zu Hersteller. Als anschauliches Beispiel nennt er ausgerechnet den Wagen, mit dem er beim Ice Race unterwegs war: Der Polestar 5 verhalte sich auf Eis deutlich anders als ein Porsche Taycan. Für ein Studio, das jedes Auto einzeln kalibriert, bedeutet das jedes Mal Grundlagenarbeit."
+    },
+    {
+      "type": "heading",
+      "text": "Acht Monate pro Auto - und Yamauchi fährt jedes selbst"
+    },
+    {
+      "type": "paragraph",
+      "text": "Wie viel Aufwand hinter einem einzigen Fahrzeug steckt, macht ein Vergleich deutlich: Rund acht Monate dauert heute die Fertigstellung inklusive Grafikmodell und Fahrphysik. Zu Zeiten des ersten «Gran Turismo» waren es etwa zwei Stunden pro Wagen. Am Ende der Entwicklung setzt sich Yamauchi selbst hinters Steuer, bevor ein Auto ins Spiel darf."
+    },
+    {
+      "type": "quote",
+      "text": "Ich fahre das Auto am Ende Probe, um sicherzustellen, dass alles in Ordnung ist. Dann braucht man nicht nur Strecken, sondern auch ansprechende Umgebungen.",
+      "attribution": "Kazunori Yamauchi, Polyphony Digital"
+    },
+    {
+      "type": "paragraph",
+      "text": "Auch dieser Teil frisst Zeit: Der Nachbau der Nürburgring-Nordschleife beschäftigte das Team vier Jahre lang. Bemerkenswert ist in diesem Zusammenhang Yamauchis Antwort auf die Frage, ob Sony Interactive Entertainment ihn je zum Sparen oder zu schnellerer Arbeit gedrängt habe: «Bis etwa Gran Turismo 5, ja. Heutzutage nicht mehr so sehr.» Ausgerechnet «Gran Turismo 5» hatte mit zwei angekündigten Verschiebungen einen der längsten Entwicklungszyklen der Reihe hinter sich."
+    },
+    {
+      "type": "heading",
+      "text": "Wie ein Auto überhaupt ins Spiel kommt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Einen festen Plan für die Fahrzeugauswahl gibt es nicht. Mal treten Hersteller mit neuen Modellen an Polyphony Digital heran, mal will Yamauchi ein bestimmtes Auto schlicht selbst im Spiel haben. Und auch die Community redet mit - etwa mit dem anhaltenden Wunsch nach japanischen Sportwagen der 90er-Jahre oder nach Nutzfahrzeugen. Welche Marken er bereits ablehnen musste, wollte er allerdings nicht verraten: «Das kann ich nicht beantworten», lautete die knappe Antwort."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Aussagen erklären zwei Dinge, die Teile der Community regelmässig diskutieren: warum neue Fahrzeuge in kleinen Portionen erscheinen - und warum Polyphony die Reifenphysik immer wieder anfasst, statt sie irgendwann für fertig zu erklären. Die Reihe hat im vergangenen Jahr die Marke von 100 Millionen verkauften Einheiten überschritten, Ende 2027 wird «Gran Turismo» 30 Jahre alt. Der Anspruch, ein echter Fahrsimulator zu sein, bleibt damit ein bewegliches Ziel."
+    }
+  ],
+  "poll": {
+    "question": "Woran soll Polyphony Digital bei Gran Turismo 7 zuerst weiterarbeiten?",
+    "options": [
+      "Noch feinere Reifenphysik samt Graining",
+      "Mehr Autos pro Update",
+      "Neue Strecken in Nordschleifen-Qualität",
+      "Endlich 90er-JDM und Nutzfahrzeuge"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-23T10:03:51.327Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "circuit",
+  "sources": [
+    {
+      "title": "Gran Turismo 7: Yamauchi erklärt die größte Herausforderung der Rennsimulation",
+      "url": "https://www.play3.de/2026/08/23/gran-turismo-7-yamauchi-erklaert-die-groesste-herausforderung-der-rennsimulation/",
+      "publisher": "play3.de"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/gran-turismo-7-yamauchi-reifenphysik-interview-2026.webp",
+    "alt": "«Das haben wir einfach noch nicht» - Gran Turismos hartnäckigste Hürde",
+    "credit": "Bild: play3.de",
+    "sourceUrl": "https://www.play3.de/2026/08/23/gran-turismo-7-yamauchi-erklaert-die-groesste-herausforderung-der-rennsimulation/",
+    "sourceWidth": 1920,
+    "sourceHeight": 1080
+  },
+  "relatedSlugs": [
+    "gran-turismo-7-mazda-rx-vision-gt3-evo-2026",
+    "playstation-agb-mails-digitalbesitz-psblackout-2026",
+    "naughty-dog-the-last-of-us-online-mehrheit-studio-schreier-2026"
+  ]
+}
