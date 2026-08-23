@@ -71,7 +71,7 @@ export default function InstagramLandingPage() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/brand/r-mark.png" alt="" aria-hidden="true" className="h-[52px] w-auto" />
           <span className="text-left leading-[1.05]">
-            <span className="block text-[26px] font-bold tracking-[-0.015em] text-[#F2F8FF]">
+            <span className="block text-[26px] font-black tracking-[-0.02em] text-[#F2F8FF]">
               REPUBLIC
             </span>
             <span className="mt-[3px] block text-[15px] font-bold tracking-[0.2em] text-accent">

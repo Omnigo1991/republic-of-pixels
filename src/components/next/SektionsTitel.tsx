@@ -20,7 +20,7 @@ export function SektionsTitel({
   return (
     <div className={`schrift-normal ${mittig ? "text-center" : ""} mb-6`}>
       <h2 className="text-[26px] font-bold leading-[1.1] sm:text-[34px] lg:text-[40px]">
-        <span className={`${VERLAUFSTEXT} ${mittig ? "mx-auto" : ""}`}>{titel}</span>
+        <span className={`${VERLAUFSTEXT} pb-[0.06em] mb-[-0.06em] ${mittig ? "mx-auto" : ""}`}>{titel}</span>
       </h2>
       {unter && (
         <p className={`mt-2 text-[15px] text-[#a1a1a6] sm:text-[17px] ${mittig ? "mx-auto max-w-[560px]" : ""}`}>
@@ -77,7 +77,13 @@ export function EventCountdown({
       </div>
       <Link href={href} className="mt-2.5 block">
         <span
-          className={`${VERLAUFSTEXT} mx-auto block text-[36px] font-bold leading-[1.05] tracking-[-0.02em] sm:text-[56px] lg:text-[72px]`}
+          // Der Verlauf malt nur innerhalb des Kastens. Bei einer
+          // Zeilenhöhe von 1.05 ragt die Unterlänge des "g" darunter
+          // hinaus und blieb unsichtbar (gemessen: 11.7px bei 72px
+          // Schrift, Tim 23.08.2026). Das Polster gibt dem Kasten
+          // Platz, der negative Aussenabstand nimmt ihn dem Layout
+          // wieder weg - die Seite verschiebt sich also nicht.
+          className={`${VERLAUFSTEXT} mx-auto block pb-[0.18em] mb-[-0.18em] text-[36px] font-bold leading-[1.05] tracking-[-0.02em] sm:text-[56px] lg:text-[72px]`}
         >
           {name}.
         </span>

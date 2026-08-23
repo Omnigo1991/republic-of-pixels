@@ -33,8 +33,16 @@ export function KopfBand() {
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/brand/r-mark.png" alt="" aria-hidden="true" className="h-[26px] w-auto sm:h-[30px]" />
-            <span className="leading-[1.05]">
-              <span className="block text-[13px] font-bold tracking-[-0.015em] sm:text-[14px]">
+            {/* Optischer Ausgleich (gemessen 23.08.2026): Die Wortmarke
+                reicht von der Versalhoehe "REPUBLIC" bis zur Grundlinie
+                "OF PIXELS". Diese Strecke sass 1.5 bis 1.9px tiefer als
+                die Mitte des Zeichens und der Leiste. Verschoben wird nur
+                die Schrift, das R bleibt wo es ist (Tim). */}
+            <span className="block translate-y-[-1.5px] leading-[1.05] sm:translate-y-[-1.9px]">
+              {/* Fassung C (Tim, 23.08.2026): wieder das feste Gewicht von
+                  frueher, mit etwas engerer Laufweite - die Wortmarke bleibt
+                  dadurch gleich breit wie zuvor. */}
+              <span className="block text-[13px] font-black tracking-[-0.02em] sm:text-[14px]">
                 REPUBLIC
               </span>
               <span className="mt-[2px] block text-[7.5px] font-bold tracking-[0.2em] text-accent sm:text-[8px]">
