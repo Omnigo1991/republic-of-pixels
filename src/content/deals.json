@@ -1,16 +1,16 @@
 {
-  "updatedAt": "2026-08-23T22:04:11.982Z",
+  "updatedAt": "2026-08-23T22:35:44.295Z",
   "deals": [
     {
-      "appId": 1687950,
-      "title": "Persona 5 Royal",
-      "discountPercent": 70,
+      "appId": 1142710,
+      "title": "Total War: WARHAMMER III",
+      "discountPercent": 85,
       "originalPrice": 5999,
-      "finalPrice": 1799,
+      "finalPrice": 899,
       "currency": "EUR",
-      "endsAt": "2026-08-24T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1687950/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1687950/capsule_184x69.jpg?t=1783356822"
+      "endsAt": "2026-08-27T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1142710/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1142710/capsule_184x69.jpg?t=1786634522"
     },
     {
       "appId": 2161700,
