@@ -27,8 +27,21 @@ jobs:
           cache: npm
       - name: Dependencies installieren
         run: npm ci
-      - name: Browser installieren
-        run: npx playwright install --with-deps chromium
+
+      - name: Playwright-Browser cachen
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-chromium-${{ runner.os }}
+
+      # Genau wie in der News-Pipeline: playwright bewusst --no-save, weil
+      # sein Postinstall sonst bei jedem Vercel-Deploy 120 MB Browser
+      # herunterlaedt. Der erste Anlauf am 24.08. ist genau daran
+      # gescheitert - "npm ci" allein kennt playwright nicht.
+      - name: Playwright bereitstellen
+        run: |
+          npm install --no-save playwright
+          npx playwright install --with-deps chromium
       - name: Probelauf
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
