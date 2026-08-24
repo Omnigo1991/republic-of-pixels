@@ -40,7 +40,6 @@ const LOGO = join(ROOT, "public", "brand", "r-mark.png");
 const BREITE = 1080;
 const HOEHE = 1350;
 const RAND = 56;
-const STAUB_STAERKE = 0.55; // Tims Wahl: fein
 
 function escapeHtml(s) {
   return String(s ?? "").replace(/[&<>"]/g, (z) =>
@@ -65,9 +64,9 @@ export function grosswortAusZeilen(headlineLines, kicker) {
   return woerter.sort((a, b) => b.length - a.length)[0];
 }
 
-/** Baut Wort, Auflösung und Schlagzeile - läuft IM Browser nach dem Laden. */
+/** Baut Wort und Schlagzeile - läuft IM Browser nach dem Laden. */
 function einpassenQuelle() {
-  return function einpassen(staerke) {
+  return function einpassen() {
     const wort = document.getElementById("wort");
     const karte = document.querySelector(".karte");
     const titel = document.querySelector(".titel");
@@ -224,7 +223,7 @@ export async function renderKarte({
     }
 
     const mass = await page.evaluate(
-      `(${einpassenQuelle().toString()})(${STAUB_STAERKE})`,
+      `(${einpassenQuelle().toString()})()`,
     );
     if (!mass.passt) {
       console.log(
