@@ -16,7 +16,13 @@ export const FEEDS = [
   // Deutschsprachige Quellen (Markt- und Themennähe)
   { id: "gamestar", name: "GameStar", url: "https://www.gamestar.de/news/rss/news.rss", lang: "de", weight: 1.0 },
   { id: "play3", name: "play3.de", url: "https://www.play3.de/feed/", lang: "de", weight: 0.9 },
-  // GamePro blockt Bot-Abrufe serverseitig (HTTP 403, geprüft 04.08.2026) - entfernt.
+  // GamePro: stand seit 04.08.2026 als "blockt Bot-Abrufe (HTTP 403)" auf der
+  // Streichliste. Nachgeprüft am 24.08.2026 - die Sperre war nie das Problem,
+  // die EINGETRAGENE ADRESSE war falsch. Der Feed, den GamePro selbst im
+  // Seitenkopf angibt, antwortet unserem eigenen Bot mit HTTP 200 und 50
+  // Einträgen. Zwanzig Tage lang haben wir eine der grössten deutschen
+  // Quellen umsonst nicht gelesen.
+  { id: "gamepro", name: "GamePro", url: "https://www.gamepro.de/rss/gpnews.rss", lang: "de", weight: 1.0 },
   // Hardware & Konsolen-Ökosystem (05.08.2026: PS6-/Xbox-Helix-Leaks, GPUs, Handhelds)
   { id: "computerbase", name: "ComputerBase", url: "https://www.computerbase.de/rss/news.xml", lang: "de", weight: 0.9 },
   { id: "tomshardware", name: "Tom's Hardware", url: "https://www.tomshardware.com/feeds/all", lang: "en", weight: 0.9 },
