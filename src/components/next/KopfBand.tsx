@@ -14,9 +14,14 @@ import { GLAS } from "./Bausteine";
 // (gemessen 22.08.2026).
 // Guides und Themen sind vorerst raus (Tim, 22.08.2026) - sie kommen
 // in Ruhe im neuen Layout zurueck.
+// Drei Ressorts im Kopf (Tim, 24.08.2026): News ist die chronologische
+// Gesamtliste, Games und Hardware die beiden Ressorts. Die Radare rutschen
+// ins Menue - sie sind ein Werkzeug, kein Ressort, und im Kopf ist Platz
+// fuer genau drei Punkte, bevor es am Handy eng wird.
 const BEREICHE = [
   { href: "/kategorie/news", text: "News" },
-  { href: "/#radare", text: "Radare" },
+  { href: "/ressort/games", text: "Games" },
+  { href: "/ressort/hardware", text: "Hardware" },
 ];
 
 export function KopfBand() {

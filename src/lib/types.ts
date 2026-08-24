@@ -1,4 +1,13 @@
 export type Category = "breaking" | "news" | "leaks" | "reviews" | "guides";
+
+/**
+ * Ressort (Tim, 24.08.2026): Der Header trennt News / Games / Hardware.
+ * "games" ist alles rund um Spiele, "hardware" alles rund um Geräte -
+ * Grafikkarten, Prozessoren, Konsolen als Produkt, Controller, Handhelds,
+ * Monitore, Peripherie. Fehlt das Feld bei älteren Artikeln, gilt "games";
+ * die Zuordnung passiert dann über bereichVonArtikel().
+ */
+export type Bereich = "games" | "hardware";
 export type Platform = "pc" | "playstation" | "xbox" | "nintendo";
 export type HeroVariant = "circuit" | "controller" | "particles" | "waveform" | "grid";
 export type ReviewLabel =
@@ -69,6 +78,8 @@ export interface Article {
   seoTitle?: string;
   metaDescription?: string;
   isLeakOrRumor: boolean;
+  /** Ressort für die Header-Navigation; fehlt bei Artikeln vor dem 24.08.2026. */
+  bereich?: Bereich;
   tags: string[];
   tldr: string[];
   whyItMatters: string;

@@ -1,4 +1,4 @@
-import type { Article, Category, Platform } from "./types";
+import type { Article, Bereich, Category, Platform } from "./types";
 import { ALL_ARTICLES } from "./articles.generated";
 
 export function getAllArticles(): Article[] {
@@ -75,6 +75,37 @@ export function getChronological(excludeSlug?: string): Article[] {
 
 export function getByCategory(category: Category): Article[] {
   return getAllArticles().filter((a) => a.category === category);
+}
+
+// RESSORT-ZUORDNUNG (Tim, 24.08.2026).
+//
+// Neue Artikel bringen das Feld "bereich" mit, das die Redaktion setzt.
+// Für die rund 400 Artikel davor braucht es eine Herleitung - und die
+// bleibt bewusst hier im Code statt in einem Einmal-Skript: So gilt für
+// alte und neue Artikel dieselbe Definition, und wer sie ändert, ändert
+// sie an einer Stelle.
+//
+// Die Wortliste ist an unserem eigenen Bestand geprüft, nicht geraten. Sie
+// fragt nach GERÄTEN, nicht nach Firmen: "Sony kündigt Spiel an" ist Games,
+// "Sony senkt PS5-Preis" ist Hardware.
+//
+// GEPRÜFT WIRD NUR DER TITEL. Erster Versuch nahm Untertitel und Tags dazu
+// und lieferte 42 statt 23 Treffer - darunter ein Koop-Rätselspiel, weil in
+// seinen Tags "Steam Deck" als unterstützte Plattform stand, und eine
+// Zelda-VR-Mod wegen des Wortes "Headset" im Untertitel. Eine
+// Nebenerwähnung macht einen Artikel nicht zum Hardware-Artikel; der Titel
+// sagt, worum es geht.
+const HARDWARE_WOERTER =
+  /\b(RTX|Radeon|GeForce|Ryzen|Threadripper|Intel Core|GPU|CPU|APU|Grafikkarte|Prozessor|Chipsatz|Monitor|Headset|Kopfhörer|Maus|Tastatur|Controller|DualSense|Joy-Con|Handheld|Steam Deck|ROG Ally|SSD|NAND|Netzteil|Mainboard|Arbeitsspeicher|Laptop|Notebook|Lüfter|Kühler|Latenz|Razer|Logitech|Corsair|SteelSeries|ASUS|MSI|Gigabyte|Nvidia|Sandisk|TSMC)\b/i;
+
+/** Ressort eines Artikels - gesetztes Feld schlägt die Herleitung. */
+export function bereichVonArtikel(a: Article): Bereich {
+  if (a.bereich) return a.bereich;
+  return HARDWARE_WOERTER.test(a.title) ? "hardware" : "games";
+}
+
+export function getByBereich(bereich: Bereich): Article[] {
+  return getChronological().filter((a) => bereichVonArtikel(a) === bereich);
 }
 
 export function getByPlatform(platform: Platform): Article[] {

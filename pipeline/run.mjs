@@ -154,11 +154,12 @@ Aufgaben:
    - "category": "breaking" (nur bei wirklich grossen Nachrichten), "news", "leaks" oder "reviews"
    - "reviews" NUR wählen, wenn der Kandidat selbst ein Test/eine Review eines bereits veröffentlichten Spiels ist (Titel/Anriss enthält klar erkennbar eine Wertung/ein Testurteil, z. B. "review", "test", "im Test") - NICHT für News über ein Spiel oder Ankündigungen
    - "platforms": Teilmenge von ["pc","playstation","xbox","nintendo"]
+   - "bereich": "hardware" oder "games". Hardware sind Meldungen ueber GERAETE - Grafikkarten, Prozessoren, Konsolen als Produkt (Preis, Absatz, Technik), Controller, Handhelds, Monitore, Speicher, Peripherie. Alles andere ist "games", auch wenn eine Hardware-Firma vorkommt: "Sony kuendigt Spiel an" ist games, "Sony senkt den PS5-Preis" ist hardware. Ein Test zaehlt dorthin, wo der Gegenstand gehoert - ein Laptop-Test ist hardware, ein Spiele-Test ist games.
    - "isLeakOrRumor": true/false
    - "priority": 1 (höchste) bis ${MAX_ARTICLES_PER_RUN}
    - "depth": "kurz" (Routinemeldung, wenig Substanz), "standard" (normale News) oder "lang" (grosse Nachricht mit viel Substanz und Einordnungsbedarf, z. B. Übernahmen, grosse Ankündigungen, Branchenbeben, Tests)
 
-Antworte NUR mit JSON, ohne Einleitung und ohne Kommentar - das erste Zeichen deiner Antwort muss "{" sein: {"selected":[{"indices":[...],"category":"...","platforms":[...],"isLeakOrRumor":...,"priority":...,"depth":"..."}]}
+Antworte NUR mit JSON, ohne Einleitung und ohne Kommentar - das erste Zeichen deiner Antwort muss "{" sein: {"selected":[{"indices":[...],"category":"...","platforms":[...],"bereich":"games oder hardware","isLeakOrRumor":...,"priority":...,"depth":"..."}]}
 Wenn nichts den Kriterien genügt, antworte {"selected":[]}.`;
 
   // Ein fehlgeschlagener Parse wird einmal wiederholt - die Auswahl ist der
@@ -245,6 +246,7 @@ Antworte NUR mit einem JSON-Objekt mit exakt diesen Feldern:
   "metaDescription": "140-160 Zeichen, aktiv formuliert",
   "category": "${cluster.category}",
   "platforms": ${JSON.stringify(cluster.platforms)},
+  "bereich": ${JSON.stringify(cluster.bereich === "hardware" ? "hardware" : "games")},
   "tags": ["3-6 prägnante Tags, z. B. Spielname, Studio, Plattform"],
   "tldr": ["3-4 Stichpunkte mit den Kernfakten"],
   "whyItMatters": "2-3 Sätze: Warum ist das für Gamer:innen relevant?",
