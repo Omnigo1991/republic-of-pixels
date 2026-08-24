@@ -1,0 +1,154 @@
+{
+  "slug": "vapor-world-over-the-mind-ki-zwischensequenzen-backlash",
+  "title": "100'000 Wunschlisten - und dann kam die erste Zwischensequenz",
+  "subtitle": "Vapor World: Over The Mind startet in den Early Access und wird von KI-generierten Cutscenes ausgebremst - das Studio hat sie inzwischen entfernt",
+  "excerpt": "Ein Soulslike-Metroidvania aus Korea trifft mit seiner Demo den Nerv der Steam-Community. Beim Early-Access-Start reden dann alle über etwas anderes: die erste Zwischensequenz.",
+  "seoTitle": "Vapor World: KI-Cutscenes lösen Steam-Backlash aus",
+  "metaDescription": "Vapor World: Over The Mind startet mit 100'000 Wunschlisten - und stürzt wegen KI-generierter Zwischensequenzen in negative Steam-Reviews. Studio reagiert.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "tags": [
+    "Vapor World: Over The Mind",
+    "Alive In",
+    "Steam",
+    "Generative KI",
+    "Early Access"
+  ],
+  "tldr": [
+    "Vapor World: Over The Mind startete am 19. August mit rund 100'000 Wunschlisten in den Early Access.",
+    "Statt über Kampfsystem und Artdesign diskutierte die Community fast nur über die offensichtlich KI-generierten Zwischensequenzen.",
+    "Die Steam-Wertung rutschte auf «grösstenteils negativ» bei 64 Reviews ab.",
+    "Studiochef Young Kim entschuldigte sich und liess die KI-Sequenzen noch am selben Wochenende ersetzen."
+  ],
+  "whyItMatters": "Der Fall zeigt, wie kompromisslos die Steam-Community derzeit auf generative KI in Spielen reagiert - selbst bei einem Fünf-Personen-Studio, dessen restliche Arbeit hohes Lob erhält. Für Spielerinnen und Spieler heisst das: Der Umgang mit KI wird zum Kaufkriterium, das über Reviews unmittelbar auf die Sichtbarkeit eines Spiels durchschlägt.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Es hätte ein Vorzeige-Start werden können: Vapor World: Over The Mind, ein Soulslike-Metroidvania mit malerischem Artdesign des koreanischen Studios Alive In, ging am 19. August in den Steam Early Access - mit rund 100'000 Wunschlisten im Rücken, aufgebaut vor allem über eine Demo, die seit Januar 2025 verfügbar war. Doch statt über das fordernde Kampfsystem oder das eigenwillige Worldbuilding sprach die Community fast ausschliesslich über etwas, das in der Demo noch gar nicht enthalten war: sehr offensichtlich generative KI."
+    },
+    {
+      "type": "embed",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=AxLikQwnHWw"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "100'000",
+          "label": "Wunschlisten kurz vor dem Early-Access-Start"
+        },
+        {
+          "value": "64",
+          "label": "Steam-Reviews, Gesamtwertung «grösstenteils negativ»"
+        },
+        {
+          "value": "5",
+          "label": "Personen umfasst das Team von Alive In nach eigenen Angaben"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Die erste Cutscene kippt den Launch"
+    },
+    {
+      "type": "paragraph",
+      "text": "Wer Vapor World startet, sieht die Zwischensequenz noch vor dem ersten Gameplay - und genau dort liegt das Problem. In der als besonders hilfreich markierten Steam-Rezension heisst es, die generative KI habe es nicht einmal geschafft, das Modell der Hauptfigur konsistent zu halten. Die Wertung des Spiels rutschte innerhalb weniger Tage auf «grösstenteils negativ» bei 64 Reviews ab. Das ist bitter für ein Studio, das nach eigenen Angaben aus etwa fünf Personen besteht und dessen eigentliches Spiel spürbar viel Arbeit erkennen lässt."
+    },
+    {
+      "type": "quote",
+      "text": "Aus den Trailern sah das Gameplay ziemlich spassig aus, aber ich unterstütze Menschen, keine Roboter. Wenn der Look, den ihr anstrebt, ausserhalb dessen liegt, was ihr derzeit erreichen könnt, dann ändert ihn oder wartet, bis ihr die Kunst und den Stil mit Menschen produzieren könnt.",
+      "attribution": "Hilfreichste Steam-Rezension zu Vapor World: Over The Mind"
+    },
+    {
+      "type": "heading",
+      "text": "«Das war eine übereilte Entscheidung»"
+    },
+    {
+      "type": "paragraph",
+      "text": "Studiodirektor Young Kim reagierte mit einem ungewöhnlich offenen Statement - und versprach, die KI-Sequenzen «bis zu diesem Wochenende» zu ersetzen. Das ist inzwischen geschehen. Bemerkenswert ist dabei die Vorgeschichte: Laut Kim hatte das Team die Zwischensequenzen ursprünglich in der Engine gebaut und erst später durch KI-Material ersetzt."
+    },
+    {
+      "type": "quote",
+      "text": "Ich habe damit gerechnet, dass einige von euch von unserem KI-Einsatz enttäuscht sein würden. Ich habe nicht erwartet, dass es so gross wird.",
+      "attribution": "Young Kim, Studiodirektor bei Alive In"
+    },
+    {
+      "type": "paragraph",
+      "text": "Kim schildert den Griff zur KI als Verzweiflungsschritt: Man habe lange versucht, die Geschichte mit komplett selbst produzierten Zwischensequenzen zu erzählen, die Ergebnisse seien «jedes Mal verheerend» gewesen. Man sei zur Überzeugung gelangt, die komplexe Erzählung auf diesem Weg nicht transportieren zu können. Seine Schlussfolgerung im Rückblick: «Wenn diese Entscheidung eure Erfahrung beeinträchtigt hat, liegt der Fehler nicht im Werkzeug. Er liegt in unseren eigenen Unzulänglichkeiten.»"
+    },
+    {
+      "type": "heading",
+      "text": "Warum das Studio den Sturm womöglich nicht kommen sah"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ein Erklärungsansatz liegt in der Herkunft des Teams. Eine Erhebung des Pew Research Center listet Südkorea unter 25 untersuchten Ländern - darunter die USA, Grossbritannien, Australien und Indien - als das am wenigsten KI-skeptische. Während in den USA, Italien, Australien und Brasilien rund die Hälfte der Befragten den KI-Einsatz im Alltag «eher besorgt als begeistert» sieht, sind es in Südkorea nur 16 Prozent. Laut MIT Technology Review setzt auch die südkoreanische Regierung stark auf KI und versuchte unter anderem, KI-gestützte Schulbücher einzuführen - ein Vorhaben, das scheiterte. Für ein Studio aus diesem Umfeld dürfte die Wucht der internationalen Steam-Reaktion tatsächlich überraschend gekommen sein."
+    },
+    {
+      "type": "heading",
+      "text": "Ein Muster, das sich wiederholt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Alive In ist nicht das erste Studio, das nach heftiger Kritik den KI-Einsatz zurücknimmt. Auch Larian Studios und Sandfall Interactive haben nach öffentlichem Gegenwind zurückgerudert. Das Muster ist immer dasselbe: Nicht die abstrakte Debatte entscheidet, sondern die sichtbare Qualität. Wo generative KI erkennbar hinter dem restlichen Material zurückbleibt - und im Fall von Vapor World stehen die Sequenzen in scharfem Kontrast zur handgemachten Ingame-Grafik -, wird sie als Abkürzung gelesen und entsprechend abgestraft."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Vapor World: Over The Mind ist kein durchgehend KI-generiertes Spiel - der Kern stammt vom Team.",
+        "Die KI-Zwischensequenzen sind inzwischen ersetzt worden.",
+        "Die negativen Reviews aus der Startwoche bleiben in der Gesamtwertung sichtbar.",
+        "Das Spiel befindet sich weiterhin im Early Access."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Fall Vapor World beantwortet die Frage, die Kim in seinem Statement selbst aufwirft - «Wenn KI es besser kann, warum dann nicht?» - für den Moment sehr eindeutig: Sie konnte es hier nicht. Ein kleines Team hat mit einer Handvoll Minuten Zwischensequenz den Start eines Spiels beschädigt, für das 100'000 Menschen bereits Interesse signalisiert hatten. Dass die Sequenzen innerhalb von Tagen ersetzt wurden, zeigt immerhin, wie schnell Studios inzwischen reagieren. Die Lehre für die Branche: Generative KI als Sparmassnahme an sichtbarer Stelle ist derzeit kein Risiko, das sich rechnet."
+    }
+  ],
+  "poll": {
+    "question": "Vapor World hat die KI-Zwischensequenzen ersetzt - reicht das für eine zweite Chance?",
+    "options": [
+      "Ja, Fehler eingesehen, Sache erledigt",
+      "Nur wenn der Ersatz wirklich handgemacht ist",
+      "Nein, das Vertrauen ist weg",
+      "Mir egal, ich urteile nur übers Gameplay"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-24T03:14:53.212Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "grid",
+  "sources": [
+    {
+      "title": "Steam Week in Review: A touch of AI is all it takes to trigger backlash, as a promising new indie falls afoul of slop skeptics",
+      "url": "https://www.pcgamer.com/gaming-industry/steam-week-in-review-a-touch-of-ai-is-all-it-takes-to-trigger-backlash-as-a-promising-new-indie-falls-afoul-of-slop-skeptics/",
+      "publisher": "PC Gamer"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/vapor-world-over-the-mind-ki-zwischensequenzen-backlash.webp",
+    "alt": "100'000 Wunschlisten - und dann kam die erste Zwischensequenz",
+    "credit": "Bild: PC Gamer",
+    "sourceUrl": "https://www.pcgamer.com/gaming-industry/steam-week-in-review-a-touch-of-ai-is-all-it-takes-to-trigger-backlash-as-a-promising-new-indie-falls-afoul-of-slop-skeptics/",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "stars-reach-early-access-kritik-2026",
+    "starsand-island-1-0-update-kritik-2026",
+    "sally-face-2-ankuendigung-early-access-2026"
+  ]
+}

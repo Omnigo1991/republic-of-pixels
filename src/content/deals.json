@@ -1,17 +1,6 @@
 {
-  "updatedAt": "2026-08-24T02:03:57.429Z",
+  "updatedAt": "2026-08-24T03:15:58.669Z",
   "deals": [
-    {
-      "appId": 1142710,
-      "title": "Total War: WARHAMMER III",
-      "discountPercent": 85,
-      "originalPrice": 5999,
-      "finalPrice": 899,
-      "currency": "EUR",
-      "endsAt": "2026-08-27T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1142710/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1142710/capsule_184x69.jpg?t=1786634522"
-    },
     {
       "appId": 1687950,
       "title": "Persona 5 Royal",
@@ -66,6 +55,17 @@
       "endsAt": "2026-08-27T17:00:36.000Z",
       "url": "https://store.steampowered.com/app/4001890/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4001890/8f65bb2b78d37a9147aa79c970a51610e6955bf1/capsule_184x69.jpg?t=1787234618"
+    },
+    {
+      "appId": 2764460,
+      "title": "Sandustry",
+      "discountPercent": 35,
+      "originalPrice": 1499,
+      "finalPrice": 974,
+      "currency": "EUR",
+      "endsAt": "2026-08-27T17:00:09.000Z",
+      "url": "https://store.steampowered.com/app/2764460/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2764460/f0a29d6c91be4e91e9fa2f384dd5ae695bfd6b5b/capsule_184x69.jpg?t=1787306087"
     }
   ]
 }
