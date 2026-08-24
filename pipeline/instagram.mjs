@@ -35,7 +35,7 @@ import {
 } from "./lib/claude.mjs";
 import { renderInstagramCard } from "./lib/instagram-card.mjs";
 import { renderKarte } from "./lib/instagram-karte.mjs";
-import { renderInstagramReel } from "./lib/instagram-reel.mjs";
+import { renderReelKarte } from "./lib/instagram-reel-karte.mjs";
 import { renderTypoCard } from "./lib/instagram-typo.mjs";
 import { holeSpielBildKandidaten } from "./lib/keyart.mjs";
 import { waehleBild, zaehleTorEntscheidung, torBericht } from "./lib/bildtor.mjs";
@@ -672,25 +672,23 @@ async function prepare() {
           continue;
         }
       }
-      // REELS VORERST AUS (Tim, 23.08.2026): Die neue Vorlage gibt es
-      // bisher nur als Bild-Karte. Liefen die Reels weiter in der alten
-      // Machart, stuenden im selben Feed zwei Bildsprachen nebeneinander -
-      // und Konsistenz geht Tim ueber alles. Sobald das Reel umgebaut ist,
-      // faellt diese Zeile weg.
-      const REELS_AUS = true;
-      if (!cardRel && alsReel && !REELS_AUS) {
+      // REELS WIEDER AN (Tim, 24.08.2026): Der Reel-Renderer traegt jetzt
+      // dieselbe Vorlage wie die Bild-Karte - er teilt sich mit ihr sogar
+      // dieselben CSS-Bausteine (kartenCss/kartenBody in
+      // instagram-karte.mjs), damit beide niemals auseinanderlaufen
+      // koennen. Kein REELS_AUS mehr noetig.
+      if (!cardRel && alsReel) {
         const reelRel = `/social/ig-${article.slug}.mp4`;
         try {
-          await renderInstagramReel({
+          const reel = await renderReelKarte({
             headlineLines: pick.headlineLines,
             kicker: pick.kicker,
-            notiz: pick.notiz,
-            badge,
+            grosswort: pick.grosswort,
             imagePath,
-            credit,
             outPath: join(ROOT, "public", reelRel),
             chromium,
           });
+          console.log(`  Grosswort (Reel): "${reel.grosswort}" (${reel.wortgroesse}px)`);
           cardRel = reelRel;
         } catch (err) {
           console.log(
@@ -712,7 +710,7 @@ async function prepare() {
             outPath: join(ROOT, "public", cardRel),
             chromium,
           });
-          console.log(`  Grosswort: "${karte.grosswort}" (${karte.wortgroesse}px, ${karte.kruemel} Kruemel)`);
+          console.log(`  Grosswort: "${karte.grosswort}" (${karte.wortgroesse}px)`);
         } catch (err) {
           console.log(
             `  ${article.slug}: Grafik fehlgeschlagen (${err.message}) - übersprungen`,

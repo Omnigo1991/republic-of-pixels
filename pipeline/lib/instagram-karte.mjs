@@ -64,8 +64,11 @@ export function grosswortAusZeilen(headlineLines, kicker) {
   return woerter.sort((a, b) => b.length - a.length)[0];
 }
 
-/** Baut Wort und Schlagzeile - läuft IM Browser nach dem Laden. */
-function einpassenQuelle() {
+/** Baut Wort und Schlagzeile - läuft IM Browser nach dem Laden. Wird
+ * unverändert vom Reel-Renderer wiederverwendet, damit Bild und Reel nie
+ * auseinanderlaufen können (Lehre aus dem alten Reel-Renderer, der ein
+ * Duplikat der Karte war und deren Umbruch-Fehler erbte). */
+export function einpassenQuelle() {
   return function einpassen() {
     const wort = document.getElementById("wort");
     const karte = document.querySelector(".karte");
@@ -120,47 +123,18 @@ function einpassenQuelle() {
   };
 }
 
-/**
- * Rendert die neue Post-Grafik.
- *
- * @param {object}   o
- * @param {string[][]|string[]} o.headlineLines  Schlagzeile, eine Zeile je Eintrag
- * @param {string}   o.kicker      Spiel, Studio oder Hardware (Chip)
- * @param {string}  [o.grosswort]  Der Kern der Meldung in EINEM Wort
- * @param {string}   o.imagePath   Absoluter Pfad zum Motiv
- * @param {string}   o.outPath     Absoluter Zielpfad (.jpg)
- * @param {object}   o.chromium    playwright.chromium
- */
-export async function renderKarte({
-  headlineLines,
-  kicker,
-  grosswort,
-  imagePath,
-  outPath,
-  chromium,
-}) {
-  // Schwarze Balken zuerst entfernen - sonst rechnet der Ausschnittsucher
-  // sie als Bildinhalt mit (Tim, 13.08.2026, Halo-Post).
-  const balkenfrei = await entferneBalken(imagePath);
-  if (balkenfrei.beschnitten) {
-    console.log(`  Schwarze Balken entfernt (${JSON.stringify(balkenfrei.balken)})`);
-  }
-  const bild = balkenfrei.pfad;
-  const { positionX, positionY } = await besterAusschnitt(bild);
-
-  const zeilen = (headlineLines ?? []).map((z) =>
-    Array.isArray(z)
-      ? z.map((seg) => (typeof seg === "string" ? seg : seg.text)).join("")
-      : String(z),
-  );
-  const wort = grosswort || grosswortAusZeilen(headlineLines, kicker);
-
-  const html = `<!doctype html><html><head><meta charset="utf-8">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&display=swap" rel="stylesheet">
-<style>
+// GEMEINSAME VORLAGE FÜR STANDBILD UND REEL. Beide Renderer riefen früher
+// zwei getrennte Kopien dieses CSS auf - genau daraus entstand beim alten
+// Reel-Renderer ein eigener Umbruch-Fehler, den die Karte längst nicht mehr
+// hatte (Fund 11.08.2026). Jetzt gibt es nur noch eine Quelle: kartenCss()
+// liefert dieselbe Optik für beide, nur die Bildebene ist unterschiedlich -
+// im Standbild ein <img>, im Reel durchsichtig, weil ffmpeg das bewegte
+// Bild darunterlegt.
+function kartenCss({ mitBildEbene, positionX, positionY }) {
+  return `
   * { margin:0; padding:0; box-sizing:border-box; }
-  body { width:${BREITE}px; height:${HOEHE}px; background:#0C0B1A; overflow:hidden;
+  body { width:${BREITE}px; height:${HOEHE}px;
+    background:${mitBildEbene ? "#0C0B1A" : "transparent"}; overflow:hidden;
     position:relative; font-family:'Inter',sans-serif; -webkit-font-smoothing:antialiased; }
   .bild { position:absolute; inset:0; overflow:hidden; }
   .bild img { width:100%; height:100%; object-fit:cover;
@@ -192,15 +166,63 @@ export async function renderKarte({
   .chip i { display:block; width:11px; height:11px; border-radius:999px; background:#02F0D1; }
   .titel { margin-top:22px; font-size:50px; font-weight:700; line-height:1.2;
     letter-spacing:-0.025em; color:#fff; }
-  .titel .z { display:block; white-space:nowrap; }
-</style></head><body>
-  <div class="bild"><img src="file://${bild}"></div>
+  .titel .z { display:block; white-space:nowrap; }`;
+}
+
+function kartenBody({ mitBildEbene, bild, wort, kicker, zeilen }) {
+  return `
+  <div class="bild">${mitBildEbene ? `<img src="file://${bild}">` : ""}</div>
   <img class="logo" src="file://${LOGO}">
   <div class="karte">
     <div class="wortfeld"><span class="wort" id="wort">${escapeHtml(wort)}</span></div>
     <span class="chip"><i></i>${escapeHtml(kicker ?? "")}</span>
     <div class="titel">${zeilen.map((z) => `<span class="z">${escapeHtml(z)}</span>`).join("")}</div>
-  </div>
+  </div>`;
+}
+
+function zeilenAusHeadline(headlineLines) {
+  return (headlineLines ?? []).map((z) =>
+    Array.isArray(z)
+      ? z.map((seg) => (typeof seg === "string" ? seg : seg.text)).join("")
+      : String(z),
+  );
+}
+
+/**
+ * Rendert die neue Post-Grafik.
+ *
+ * @param {object}   o
+ * @param {string[][]|string[]} o.headlineLines  Schlagzeile, eine Zeile je Eintrag
+ * @param {string}   o.kicker      Spiel, Studio oder Hardware (Chip)
+ * @param {string}  [o.grosswort]  Der Kern der Meldung in EINEM Wort
+ * @param {string}   o.imagePath   Absoluter Pfad zum Motiv
+ * @param {string}   o.outPath     Absoluter Zielpfad (.jpg)
+ * @param {object}   o.chromium    playwright.chromium
+ */
+export async function renderKarte({
+  headlineLines,
+  kicker,
+  grosswort,
+  imagePath,
+  outPath,
+  chromium,
+}) {
+  // Schwarze Balken zuerst entfernen - sonst rechnet der Ausschnittsucher
+  // sie als Bildinhalt mit (Tim, 13.08.2026, Halo-Post).
+  const balkenfrei = await entferneBalken(imagePath);
+  if (balkenfrei.beschnitten) {
+    console.log(`  Schwarze Balken entfernt (${JSON.stringify(balkenfrei.balken)})`);
+  }
+  const bild = balkenfrei.pfad;
+  const { positionX, positionY } = await besterAusschnitt(bild);
+
+  const zeilen = zeilenAusHeadline(headlineLines);
+  const wort = grosswort || grosswortAusZeilen(headlineLines, kicker);
+
+  const html = `<!doctype html><html><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>${kartenCss({ mitBildEbene: true, positionX, positionY })}</style></head><body>${kartenBody({ mitBildEbene: true, bild, wort, kicker, zeilen })}
 </body></html>`;
 
   const htmlDatei = join(tmpdir(), `rop-karte-${Date.now()}.html`);
@@ -242,3 +264,5 @@ export async function renderKarte({
     await rm(htmlDatei, { force: true });
   }
 }
+
+export { kartenCss, kartenBody, zeilenAusHeadline, BREITE, HOEHE, RAND, LOGO, escapeHtml };
