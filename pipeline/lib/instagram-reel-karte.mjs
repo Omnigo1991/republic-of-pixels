@@ -117,6 +117,20 @@ export async function renderReelKarte({
   // Fenster.
   const { positionX, positionY } = await besterAusschnitt(bild);
   const { width = 0, height = 0 } = await sharp(bild).metadata();
+  // UEBERGROESSE GEGEN DAS WACKELN (Tim, 24.08.2026): ffmpeg's zoompan
+  // rundet die Zuschnittposition JEDES Bildes auf ganze Pixel. Lag die
+  // Vorlage schon exakt in Zielgroesse vor, entsprach ein Bildpunkt einem
+  // vollen Ausgabepixel - bei einem sanften 10-%-Zoom ueber 150 Bilder
+  // wandert die Kante dann im Schnitt nur 0,6 Pixel pro Bild, die Rundung
+  // sprang sichtbar hin und her statt stetig zu wandern (nachgemessen: die
+  // Kante hüpfte zwischen zwei Werten statt sich gleichmässig zu bewegen).
+  // Abhilfe: Die Vorlage geht mit der VIERFACHEN Zielgroesse in ffmpeg -
+  // zwischen zwei Ausgabepixeln liegt jetzt Platz fuer vier Quellpixel,
+  // die Rundung faellt nicht mehr auf denselben sichtbaren Bildpunkt. Bei
+  // der doppelten Groesse liess sich in der eigenen Messung noch kein
+  // klarer Unterschied nachweisen (siehe unten) - die vierfache ist die
+  // in der ffmpeg-Praxis gaengige Groessenordnung fuer diesen Fix.
+  const REEL_SKALA = 4;
   const zuschnitt = join(tmpdir(), `rop-reel-bg-${Date.now()}.jpg`);
   if (width && height) {
     const skala = Math.max(BREITE / width, HOEHE / height);
@@ -129,11 +143,14 @@ export async function renderReelKarte({
         width: fensterB,
         height: fensterH,
       })
-      .resize(BREITE, HOEHE, { fit: "fill" })
+      .resize(BREITE * REEL_SKALA, HOEHE * REEL_SKALA, { fit: "fill" })
       .jpeg({ quality: 95 })
       .toFile(zuschnitt);
   } else {
-    await sharp(bild).resize(BREITE, HOEHE, { fit: "cover" }).jpeg({ quality: 95 }).toFile(zuschnitt);
+    await sharp(bild)
+      .resize(BREITE * REEL_SKALA, HOEHE * REEL_SKALA, { fit: "cover" })
+      .jpeg({ quality: 95 })
+      .toFile(zuschnitt);
   }
 
   const overlayPng = join(tmpdir(), `rop-reel-ov-${Date.now()}.png`);
@@ -144,7 +161,7 @@ export async function renderReelKarte({
   // 09.08.2026): ohne die BT.709-Erzwingung verschiebt swscale das
   // Marken-Cyan sichtbar.
   const filter =
-    `[0:v]scale=${BREITE}:${HOEHE},` +
+    `[0:v]scale=${BREITE * REEL_SKALA}:${HOEHE * REEL_SKALA},` +
     `zoompan=z='1+0.10*on/${frames}':x='(iw-iw/zoom)/2':y='(ih-ih/zoom)/2':d=${frames}:s=${BREITE}x${HOEHE}:fps=${FPS}[bg];` +
     `[bg][1:v]overlay=0:0:format=auto,scale=out_color_matrix=bt709:out_range=tv,format=yuv420p[v]`;
 
