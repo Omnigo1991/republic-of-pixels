@@ -162,14 +162,19 @@ export async function pruefeGrafik(pfad, zeilenSoll, art = "bild") {
   // Post verworfen - eine Regel, die nur "meistens" stimmt, ist keine
   // Regel. Das Fenster reicht jetzt bis 94%, mit Prüfmarge über den
   // gemessenen 91.6% hinaus.
+  // TYPO-KARTE NEU VERMESSEN (24.08.2026): Die alte Typo-Karte setzte ihren
+  // Text mittig, darum das eigene Fenster 30-72 %. Die neue Typo-Karte ist
+  // baugleich mit der Bild-Karte - dieselbe Glaskarte, dieselbe Höhe,
+  // derselbe linke Satzspiegel; nur unter der Karte liegt Markengrund statt
+  // Foto. Mit dem alten Fenster fand die Abnahme genau EINE Textzeile
+  // statt drei und lehnte alle vier Entwürfe ab. Beide Kartenarten teilen
+  // sich jetzt Fenster und Satzspiegel-Filter; was für die Typo-Karte
+  // wirklich anders bleibt, steht weiter unten (kein Motiv, eigener
+  // Randabstand).
   const istTypo = art === "typo";
-  const textVon = Math.round(hoehe * (istTypo ? 0.3 : 0.55));
-  const textBis = Math.round(hoehe * (istTypo ? 0.72 : 0.94));
-  let zeilen = textZeilen(data, breite, hoehe, textVon, textBis);
-  // Bänder aussortieren, die nicht am Satzspiegel beginnen - helle
-  // Bildstellen. Nur beim linksbündigen Marker-Layout; die Typo-Karte ist
-  // zentriert, dort gilt das Merkmal nicht.
-  if (!istTypo) zeilen = nurTextzeilen(zeilen, data, breite);
+  const textVon = Math.round(hoehe * 0.55);
+  const textBis = Math.round(hoehe * 0.94);
+  let zeilen = nurTextzeilen(textZeilen(data, breite, hoehe, textVon, textBis), data, breite);
   messwerte.zeilen = zeilen.length;
   // EINE ZEILE TOLERANZ NACH OBEN (23.08.2026): Auf der neuen Vorlage sitzt
   // ueber der Schlagzeile ein Chip mit dem Spielnamen. Er ist klein und
@@ -223,8 +228,9 @@ export async function pruefeGrafik(pfad, zeilenSoll, art = "bild") {
   // Der Kontrast-Streifen liegt links VOM Text (x 20-80). Im Marker-Layout
   // beginnt die Schrift bei 60 - der Streifen würde sie anschneiden und den
   // Hintergrund zu hell messen. Darum dort ein schmalerer Streifen weiter aussen.
-  const streifenLinks = istTypo ? 20 : 4;
-  const streifenBreite = istTypo ? 60 : 44;
+  // Gleiche Geometrie, gleicher Streifen - siehe Vermessung oben.
+  const streifenLinks = 4;
+  const streifenBreite = 44;
 
   // 3) Kontrast: Der Hintergrund hinter der Schlagzeile muss dunkel sein.
   //    Gemessen an einem schriftfreien Randstreifen auf Schlagzeilenhöhe.

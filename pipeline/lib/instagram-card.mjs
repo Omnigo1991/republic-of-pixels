@@ -47,10 +47,21 @@ export async function besterAusschnitt(imagePath) {
   const spielraumY = height - sichtbarH;
   const spielraumX = width - sichtbarB;
 
-  // Kopfzeilen-Zone im fertigen Post: von 56 % bis 92 % der Höhe, mittlere
-  // 84 % der Breite - dort steht unsere Schlagzeile.
-  const zoneOben = Math.round(sichtbarH * 0.56);
-  const zoneHoehe = Math.max(8, Math.round(sichtbarH * 0.36));
+  // VERDECKTE ZONE - NACHGEZOGEN AUF DIE NEUE VORLAGE (24.08.2026).
+  //
+  // Diese Werte stammten aus der alten Karte, bei der die Schlagzeile ab
+  // 56 % direkt auf dem Bild stand. Seit dem 23.08. liegt dort eine
+  // Glaskarte, und die beginnt erst bei 63 % - dieselbe Kante, die das
+  // Bild-Tor als TEXTKANTE kennt. Der Ausschnittsucher hat also sieben
+  // Prozent Bildhoehe als "verdeckt" behandelt, die in Wahrheit voll
+  // sichtbar sind, und Motive aus diesem Streifen unnoetig bestraft.
+  //
+  // Ein Waechter, der eine Vorlage von vorgestern vermisst, ist genau der
+  // Fehler, den wir uns nicht mehr leisten. Die Kante steht jetzt an einer
+  // Stelle - wer die Karte verschiebt, aendert TEXTKANTE in bildtor.mjs
+  // und diesen Wert gemeinsam.
+  const zoneOben = Math.round(sichtbarH * 0.63);
+  const zoneHoehe = Math.max(8, Math.round(sichtbarH * 0.33));
   const zoneBreite = Math.max(8, Math.round(sichtbarB * 0.84));
   const zoneRand = Math.round(sichtbarB * 0.08);
 

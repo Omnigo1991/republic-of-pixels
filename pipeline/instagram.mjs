@@ -36,7 +36,6 @@ import {
 import { renderInstagramCard } from "./lib/instagram-card.mjs";
 import { renderKarte } from "./lib/instagram-karte.mjs";
 import { renderReelKarte } from "./lib/instagram-reel-karte.mjs";
-import { renderTypoCard } from "./lib/instagram-typo.mjs";
 import { holeSpielBildKandidaten } from "./lib/keyart.mjs";
 import { waehleBild, zaehleTorEntscheidung, torBericht } from "./lib/bildtor.mjs";
 import { pruefeHeadline, pruefeKicker, pruefeNotiz } from "./lib/headline.mjs";
@@ -521,6 +520,7 @@ async function prepare() {
       // 4:5-Ausschnitt gebracht und dann beurteilt - Sujet, Ausschnitt,
       // Wirkung. Siehe lib/bildtor.mjs für das Warum.
       const kandidaten = [];
+      let bildPositionX = null;
 
       if (pick.bildWahl === "pressebild" && presseTauglich) {
         kandidaten.push({
@@ -536,7 +536,12 @@ async function prepare() {
         const vorrat = await holeSpielBildKandidaten({
           gameName: pick.gameName,
           rotation,
-          anzahl: 3,
+          // MEHR AUSWAHL (Tim, 24.08.2026: "extrem kuratiert").
+          // Das Tor kann nur unter dem waehlen, was wir holen - drei von
+          // bis zu dreizehn Pool-Eintraegen war zu wenig. Sechs Quellbilder
+          // ergeben mit den Schnitt-Varianten genug zum Vergleichen; den
+          // Deckel setzt MAX_ANSICHTEN im Tor.
+          anzahl: 6,
           outPrefix: join(tmpdir(), `rop-keyart-${article.slug}`),
         });
         if (vorrat) {
@@ -570,19 +575,33 @@ async function prepare() {
           kandidaten,
           schlagzeile,
           spielName: pick.gameName ?? null,
-          letzteBilder: state.instagram.bildFinger.map((e) => e.finger),
+          // Ganze Eintraege statt nur der Abdruecke - das Tor prueft
+          // beides, Abdruck und exakte Kennung. Altbestand aus der Zeit
+          // davor (Feld "finger", Abdruck des Ausschnitts) trifft nirgends
+          // mehr zu und laeuft binnen zwei Tagen aus dem Fenster.
+          letzteBilder: state.instagram.bildFinger,
         });
         zaehleTorEntscheidung(Boolean(tor.gewaehlt));
         if (tor.gewaehlt) {
           imagePath = tor.gewaehlt.pfad;
+          // Der waagrechte Schnitt, den das Tor beurteilt hat - damit der
+          // Renderer genau das Bild baut, das geprueft wurde.
+          bildPositionX = tor.gewaehlt.positionX ?? null;
           credit = tor.gewaehlt.credit ?? credit;
-          if (tor.gewaehlt.finger) {
+          if (tor.gewaehlt.motivFinger || tor.gewaehlt.spielKey) {
             // Nur die letzten acht behalten - so weit reicht ein
             // Instagram-Raster zurueck, das jemand auf einen Blick sieht.
+            //
+            // GEMERKT WIRD DAS QUELLBILD, NICHT DER AUSSCHNITT (24.08.2026):
+            // Sonst gilt derselbe Screenshot links geschnitten als neues
+            // Motiv. Dazu die exakte Kennung Spiel + Pool-Position, die
+            // ohne Schwellenwert auskommt.
             state.instagram.bildFinger.push({
               slug: article.slug,
               wann: new Date().toISOString(),
-              finger: tor.gewaehlt.finger,
+              motivFinger: tor.gewaehlt.motivFinger ?? null,
+              spielKey: tor.gewaehlt.spielKey ?? null,
+              poolIndex: tor.gewaehlt.poolIndex ?? null,
             });
             state.instagram.bildFinger = state.instagram.bildFinger.slice(-8);
           }
@@ -613,50 +632,33 @@ async function prepare() {
       // genau die Art stiller Hintertür, die uns die erste Woche gekostet
       // hat. Erreichbar ist die Stelle ohnehin nicht mehr: Ist presseTauglich
       // wahr, steht das Pressebild garantiert in der Kandidatenliste.
-      // Letzte Stufe (Tim-Freigabe 09.08.2026): Typo-Karte - reines
-      // Marken-Design für starke Storys ohne brauchbares Bild (Hardware/
-      // Branche/Personalien). Immer als BILD gepostet (kein Ken-Burns auf
-      // Typografie) und ohne Einfluss auf den Reel/Bild-Wechsel.
+      // TYPO-KARTE ABGESCHAFFT (Tim, 24.08.2026).
       //
-      // HÖCHSTENS EINE PRO TAG (Nachbesserung 09.08. abends): Am ersten
-      // Tag landeten zwei Typo-Karten direkt hintereinander im Feed - sie
-      // sehen einander sehr ähnlich und lassen das Profil eintönig wirken.
-      // Ist das Tageskontingent weg, wird die Story übersprungen und der
-      // Lauf holt sich per Ersatz-Runde eine mit echtem Bildmaterial.
-      const alsTypoKarte = !imagePath;
-
-      // TYPO-KARTE FUER HEUTE ABGESCHALTET (Tim, 24.08.2026): Sie traegt
-      // noch die alte Optik (Versalien, Handschrift-Notiz, alter
-      // Textmarker-Verlauf) und wurde beim heutigen Umbau nicht mitgezogen.
-      // Bis sie neu gebaut ist, wird eine Story ohne Bild uebersprungen -
-      // die naechste Story mit echtem Bildmaterial rueckt nach, statt dass
-      // ein Post in der alten Vorlage rausgeht. Nur fuer HEUTE gedacht
-      // (Tims Datum): danach entweder die Karte nachziehen oder diesen
-      // Block wieder rausnehmen.
-      const TYPO_HEUTIGES_DATUM = "2026-08-24";
-      if (alsTypoKarte && day === TYPO_HEUTIGES_DATUM) {
+      // Sie war die letzte Stufe fuer starke Storys ohne brauchbares Bild:
+      // eine reine Marken-Grafik statt eines Fotos. Gemessen an 71 Posts
+      // hat sie 5 Mal gegriffen (7 %), in den letzten elf Tagen genau ein
+      // Mal. Am 24.08. lief ein ganzer Tag ohne sie - das Tagesziel von
+      // fuenf Posts wurde trotzdem erreicht, weil die Ersatz-Runde die
+      // naechste Story mit echtem Bildmaterial nachzieht.
+      //
+      // Der Grund fuer die Abschaffung ist nicht die Haeufigkeit, sondern
+      // der Massstab: Eine Karte ohne Foto sieht neben einem echten
+      // Screenshot immer selbstgebaut aus, und genau daran messen wir uns
+      // gerade. Lieber ein Post weniger als ein Post, der aus der Reihe
+      // faellt.
+      //
+      // FOLGE: Eine Story ohne taugliches Bild wird uebersprungen und
+      // gesperrt. Der Renderer dafuer liegt weiterhin unter
+      // pipeline/lib/instagram-typo-karte.mjs, ist aber nirgends
+      // eingehaengt - falls die Entscheidung je zurueckgedreht wird.
+      if (!imagePath) {
         state.instagram.uebersprungen ??= {};
         state.instagram.uebersprungen[article.slug] = new Date().toISOString();
-        console.log(
-          `  ${article.slug}: kein Bildmaterial, Typo-Karte heute abgeschaltet - übersprungen`,
-        );
-        notiere(state, GRUND.TYPO_AUS, article.slug);
+        console.log(`  ${article.slug}: kein taugliches Bild - übersprungen`);
+        notiere(state, GRUND.KEIN_BILD, article.slug);
         continue;
       }
 
-      state.instagram.typo ??= {};
-      const typoHeute = Object.values(state.instagram.typo).filter(
-        (iso) => zurich(new Date(iso)).day === day,
-      ).length;
-      if (alsTypoKarte && typoHeute >= 1) {
-        state.instagram.uebersprungen ??= {};
-        state.instagram.uebersprungen[article.slug] = new Date().toISOString();
-        console.log(
-          `  ${article.slug}: kein Bildmaterial und Typo-Karte heute schon genutzt - übersprungen`,
-        );
-        notiere(state, GRUND.TYPO_DECKEL, article.slug);
-        continue;
-      }
       const badge =
         article.category === "breaking"
           ? "BREAKING"
@@ -673,42 +675,13 @@ async function prepare() {
       // geht nie verloren.
       const istBreaking = article.category === "breaking";
       let alsReel;
-      if (alsTypoKarte) {
-        alsReel = false;
-      } else if (istBreaking) {
+      if (istBreaking) {
         alsReel = true;
       } else {
         alsReel = state.instagram.wechsel.nichtBreaking % 2 === 0;
         state.instagram.wechsel.nichtBreaking++;
       }
       let cardRel = null;
-      if (alsTypoKarte) {
-        cardRel = `/social/ig-${article.slug}.jpg`;
-        try {
-          await renderTypoCard({
-            headlineLines: pick.headlineLines,
-            kicker: pick.kicker ?? KICKER[article.category] ?? "GAMING-NEWS",
-            // Die handschriftliche Notiz steht auf JEDEM Post (BILDREGELN,
-            // Abschnitt 6) - bisher fehlte sie auf der Typo-Karte, weil das
-            // alte Design sie gar nicht vorsah.
-            notiz: pick.notiz ?? null,
-            // Steuert den Icon-Satz (breaking/leaks/reviews/news).
-            kategorie: article.category,
-            outPath: join(ROOT, "public", cardRel),
-            chromium,
-          });
-          credit = "Republic of Pixels";
-          state.instagram.typo[article.slug] = new Date().toISOString();
-          console.log(`  ${article.slug}: Typo-Karte (kein Bildmaterial verfügbar)`);
-        } catch (err) {
-          state.instagram.uebersprungen ??= {};
-          state.instagram.uebersprungen[article.slug] = new Date().toISOString();
-          console.log(
-            `  ${article.slug}: Typo-Karte fehlgeschlagen (${err.message}) - übersprungen und gesperrt`,
-          );
-          continue;
-        }
-      }
       // REELS WIEDER AN (Tim, 24.08.2026): Der Reel-Renderer traegt jetzt
       // dieselbe Vorlage wie die Bild-Karte - er teilt sich mit ihr sogar
       // dieselben CSS-Bausteine (kartenCss/kartenBody in
@@ -722,6 +695,7 @@ async function prepare() {
             kicker: pick.kicker,
             grosswort: pick.grosswort,
             imagePath,
+            positionX: bildPositionX,
             outPath: join(ROOT, "public", reelRel),
             chromium,
           });
@@ -744,6 +718,7 @@ async function prepare() {
             kicker: pick.kicker,
             grosswort: pick.grosswort,
             imagePath,
+            positionX: bildPositionX,
             outPath: join(ROOT, "public", cardRel),
             chromium,
           });
@@ -792,15 +767,8 @@ async function prepare() {
         // Schlagzeile - keine Notiz mehr. Gemessen zaehlt die Abnahme das
         // Grosswort und die Schlagzeilenzeilen sicher, den Chip je nach
         // Helligkeit des Motivs; dafuer hat sie eine Zeile Toleranz.
-        // Die Typo-Karte ist unveraendert und behaelt ihre alte Rechnung.
-        const zeilenSoll = alsTypoKarte
-          ? pick.headlineLines.length + 1 + (pick.notiz ? 1 : 0)
-          : pick.headlineLines.length + 1;
-        const abnahme = await pruefeGrafik(
-          pruefPfad,
-          zeilenSoll,
-          alsTypoKarte ? "typo" : "bild",
-        );
+        const zeilenSoll = pick.headlineLines.length + 1;
+        const abnahme = await pruefeGrafik(pruefPfad, zeilenSoll, "bild");
         if (tempBild) { try { unlinkSync(tempBild); } catch {} }
         if (!abnahme.ok) {
           state.instagram.uebersprungen ??= {};
@@ -867,8 +835,8 @@ async function prepare() {
         caption,
         altText,
         // Für die Slot-Rückgabe bei Publish-Fehlern: nur Posts, die den
-        // Wechsel-Zähler erhöht haben (Typo-Karten zählen nicht mit).
-        nichtBreaking: !istBreaking && !alsTypoKarte,
+        // Wechsel-Zähler erhöht haben.
+        nichtBreaking: !istBreaking,
       });
       // Optimistisch als gepostet markieren: verhindert Doppel-Posts selbst
       // dann, wenn die Publish-Phase später fehlschlägt (bewusster Trade-off:

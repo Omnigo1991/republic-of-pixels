@@ -225,6 +225,12 @@ export async function renderKarte({
   kicker,
   grosswort,
   imagePath,
+  // SCHNITT VOM BILD-TOR (Tim, 24.08.2026). Das Tor hat dem Modell die
+  // waagrechten Ausschnitte nebeneinander gezeigt und einen ausgewaehlt -
+  // dieser Wert ist dieses Urteil. Fehlt er, sucht der Renderer wie bisher
+  // selbst. Wichtig ist, dass beide dieselbe Zahl benutzen: Sonst beurteilt
+  // das Tor einen Ausschnitt, der so nie erscheint.
+  positionX = null,
   outPath,
   chromium,
 }) {
@@ -235,7 +241,9 @@ export async function renderKarte({
     console.log(`  Schwarze Balken entfernt (${JSON.stringify(balkenfrei.balken)})`);
   }
   const bild = balkenfrei.pfad;
-  const { positionX, positionY } = await besterAusschnitt(bild);
+  const gefunden = await besterAusschnitt(bild);
+  const schnittX = positionX ?? gefunden.positionX;
+  const positionY = gefunden.positionY;
 
   const zeilen = zeilenAusHeadline(headlineLines);
   const wort = grosswort || grosswortAusZeilen(headlineLines, kicker);
@@ -243,7 +251,7 @@ export async function renderKarte({
   const html = `<!doctype html><html><head><meta charset="utf-8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&display=swap" rel="stylesheet">
-<style>${kartenCss({ mitBildEbene: true, positionX, positionY })}</style></head><body>${kartenBody({ mitBildEbene: true, bild, wort, kicker, zeilen })}
+<style>${kartenCss({ mitBildEbene: true, positionX: schnittX, positionY })}</style></head><body>${kartenBody({ mitBildEbene: true, bild, wort, kicker, zeilen })}
 </body></html>`;
 
   const htmlDatei = join(tmpdir(), `rop-karte-${Date.now()}.html`);
@@ -268,9 +276,19 @@ export async function renderKarte({
     const mass = await page.evaluate(
       `(${einpassenQuelle().toString()})()`,
     );
+    // EINPASSUNG IST EINE SCHRANKE, KEIN HINWEIS (Tim, 24.08.2026:
+    // "unsere Glasbox muss perfekt passen").
+    //
+    // Bisher stand hier nur eine Protokollzeile. Passte das Grosswort auch
+    // bei der kleinsten erlaubten Schrift nicht mehr in die Karte, lief es
+    // ueber die Kante hinaus - und der Post ging trotzdem raus. Genau das
+    // hat Tim am "P" gesehen, dessen rechte Seite abgeschnitten war.
+    //
+    // Jetzt bricht der Renderer ab. Der Aufrufer faengt das und
+    // ueberspringt die Story; die Ersatz-Runde zieht die naechste nach.
     if (!mass.passt) {
-      console.log(
-        `  Hinweis: Vorlage eng - Wort ${mass.wortgroesse}px bis ${mass.wortBis} von ${mass.platz}px, Schlagzeile ${mass.titelgroesse}px`,
+      throw new Error(
+        `Vorlage passt nicht - Wort ${mass.wortgroesse}px reicht bis ${mass.wortBis} von ${mass.platz}px, Schlagzeile ${mass.titelgroesse}px auf ${mass.titelBreite}px`,
       );
     }
     await page.waitForTimeout(120);

@@ -3,6 +3,7 @@ import { writeFile } from "node:fs/promises";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import sharp from "sharp";
+import { MAX_VERGROESSERUNG } from "./bildtor.mjs";
 
 // Offizielles Bildmaterial für Social-Posts (Tim-Strategie 08.08.2026,
 // erweitert 09.08.2026 um IGDB): Pro Spiel existiert ein POOL aus
@@ -115,7 +116,10 @@ async function steamPool(gameName) {
       `https://cdn.cloudflare.steamstatic.com/steam/apps/${treffer.id}/library_600x900_2x.jpg`,
       `https://cdn.cloudflare.steamstatic.com/steam/apps/${treffer.id}/library_600x900.jpg`,
     ],
-    ...screenshots.slice(0, 8).map((u) => [u]),
+    // POOL VERGROESSERT 8 -> 12 (Tim, 24.08.2026): Das Tor kann nur unter
+    // dem waehlen, was wir holen. Mehr Auswahl kostet nichts, solange wir
+    // nur einen Teil davon herunterladen (siehe anzahl im Aufrufer).
+    ...screenshots.slice(0, 12).map((u) => [u]),
   ];
   return { eintraege, publisher, spielKey: normalisiert(treffer.name) };
 }
@@ -168,18 +172,24 @@ async function igdbPool(gameName) {
 
   const bild = (imageId, groesse) =>
     `https://images.igdb.com/igdb/image/upload/${groesse}/${imageId}.jpg`;
+  // ORIGINALGROESSE ZUERST (Tim, 24.08.2026: "die am hochaufgeloestesten").
+  //
+  // Wir haben bisher t_1080p geholt - das deckelt JEDES Bild auf 1920 px
+  // Breite, auch wenn IGDB das Original in 3840 px vorhaelt. Bei einem
+  // Artwork, das im Post auf 4:5 beschnitten wird, ist genau diese Reserve
+  // der Unterschied zwischen scharf und weich: Vom Original bleiben nach
+  // dem Schnitt mehr echte Bildpunkte uebrig als vom 1080p-Abzug.
+  //
+  // Die Rettungsstufen bleiben dahinter stehen, in derselben Liste - laedt
+  // das Original nicht, wird der Reihe nach abgestiegen statt der ganze
+  // Eintrag zu verfallen.
+  const stufen = (id) => [bild(id, "t_original"), bild(id, "t_1080p"), bild(id, "t_720p")];
   const eintraege = [];
   // Cover zuerst (Hochformat wie Steam-Key-Art), dann Artworks, dann
-  // Screenshots - jeweils 1080p mit 720p-Rettung im selben Eintrag.
-  if (spiel.cover?.image_id) {
-    eintraege.push([bild(spiel.cover.image_id, "t_1080p"), bild(spiel.cover.image_id, "t_720p")]);
-  }
-  for (const a of (spiel.artworks ?? []).slice(0, 5)) {
-    eintraege.push([bild(a.image_id, "t_1080p"), bild(a.image_id, "t_720p")]);
-  }
-  for (const s of (spiel.screenshots ?? []).slice(0, 4)) {
-    eintraege.push([bild(s.image_id, "t_1080p"), bild(s.image_id, "t_720p")]);
-  }
+  // Screenshots.
+  if (spiel.cover?.image_id) eintraege.push(stufen(spiel.cover.image_id));
+  for (const a of (spiel.artworks ?? []).slice(0, 6)) eintraege.push(stufen(a.image_id));
+  for (const s of (spiel.screenshots ?? []).slice(0, 6)) eintraege.push(stufen(s.image_id));
   if (eintraege.length === 0) return null;
 
   const publisher =
@@ -276,6 +286,23 @@ export async function holeSpielBildKandidaten({
         if (!roh || roh.length < 20000) continue;
         const meta = await sharp(roh).metadata();
         if ((meta.height ?? 0) < 900) continue;
+        // DIESELBE MESSLATTE WIE IM TOR, NUR FRUEHER (Tim, 24.08.2026).
+        //
+        // Die Hoehenregel allein reicht nicht: Ein Steam-Cover in 600x900
+        // besteht sie und wird im 4:5-Fenster trotzdem 1.8x aufgeblasen -
+        // das Tor verwirft es zuverlaessig, aber es hat bis dahin einen der
+        // sechs Kandidatenplaetze belegt. Gemessen an vier echten Spielen
+        // (24.08.): Silksong lieferte genau diesen Fall.
+        //
+        // Die Grenze kommt aus bildtor.mjs, damit es sie nur EINMAL gibt.
+        const skala = Math.max(1080 / (meta.width ?? 1), 1350 / (meta.height ?? 1));
+        const sichtbarB = Math.min(meta.width ?? 1, Math.round(1080 / skala));
+        if (1080 / sichtbarB > MAX_VERGROESSERUNG) {
+          console.log(
+            `  Spielbild ${index} verworfen - ${meta.width}x${meta.height} muesste ${(1080 / sichtbarB).toFixed(2)}x hochgerechnet werden`,
+          );
+          continue;
+        }
         const pfad = `${outPrefix}-${index}.jpg`;
         await writeFile(pfad, roh);
         const verhaeltnis = (meta.width ?? 1) / (meta.height ?? 1);
@@ -284,6 +311,9 @@ export async function holeSpielBildKandidaten({
           credit: `Bild: ${publisher}`,
           herkunft: index === 0 ? "offizielles Key Art" : `offizieller Screenshot ${index}`,
           poolIndex: index,
+          spielKey,
+          breite: meta.width ?? 0,
+          hoehe: meta.height ?? 0,
           verhaeltnis,
           // Alles, was nicht deutlich breiter als hoch ist, überlebt den
           // Schnitt auf 4:5 fast unbeschadet.
@@ -303,10 +333,22 @@ export async function holeSpielBildKandidaten({
     // gehen sie dem Bild-Tor zuerst unter die Augen. Die Reihenfolge
     // innerhalb der beiden Gruppen bleibt die Rotationsreihenfolge - sonst
     // käme wieder bei jedem Post dasselbe Bild.
-    kandidaten.sort((a, b) => Number(b.hochformat) - Number(a.hochformat));
+    // Innerhalb der beiden Gruppen entscheidet ab jetzt die Aufloesung
+    // (Tim, 24.08.2026). Vorher stand dort die Rotationsreihenfolge - die
+    // sorgt zwar fuer Abwechslung, aber die Abwechslung sichert seit dem
+    // 24.08. das Bildgedaechtnis im Tor, und zwar am Motiv statt an der
+    // Position. Damit ist die Reihenfolge hier frei fuer das, was sie
+    // besser kann: das schaerfste Material zuerst zeigen.
+    kandidaten.sort(
+      (a, b) =>
+        Number(b.hochformat) - Number(a.hochformat) ||
+        b.breite * b.hoehe - a.breite * a.hoehe,
+    );
     const hoch = kandidaten.filter((k) => k.hochformat).length;
+    const groesste = kandidaten[0];
     console.log(
-      `  Spielbilder: ${kandidaten.length} Kandidaten, davon ${hoch} im Hochformat`,
+      `  Spielbilder: ${kandidaten.length} Kandidaten, davon ${hoch} im Hochformat` +
+        ` (groesstes ${groesste.breite}x${groesste.hoehe})`,
     );
 
     return { kandidaten, poolGroesse: eintraege.length, spielKey, publisher };

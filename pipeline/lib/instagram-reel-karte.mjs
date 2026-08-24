@@ -64,9 +64,12 @@ async function renderOverlay({ headlineLines, kicker, grosswort, chromium, pngPa
       console.log("::warning::Reel-Overlay: Inter nicht geladen - laeuft in Ersatzschrift");
     }
     const mass = await page.evaluate(`(${einpassenQuelle().toString()})()`);
+    // Gleiche Schranke wie im Standbild: Passt das Overlay nicht, gibt es
+    // kein Reel. Der Aufrufer faellt danach auf das Standbild zurueck - das
+    // dieselbe Pruefung durchlaeuft und die Story dann sauber ueberspringt.
     if (!mass.passt) {
-      console.log(
-        `  Hinweis: Reel-Vorlage eng - Wort ${mass.wortgroesse}px bis ${mass.wortBis} von ${mass.platz}px, Schlagzeile ${mass.titelgroesse}px`,
+      throw new Error(
+        `Reel-Overlay passt nicht - Wort ${mass.wortgroesse}px reicht bis ${mass.wortBis} von ${mass.platz}px`,
       );
     }
     await page.waitForTimeout(120);
@@ -98,6 +101,8 @@ export async function renderReelKarte({
   kicker,
   grosswort,
   imagePath,
+  // Schnitt vom Bild-Tor - siehe instagram-karte.mjs.
+  positionX = null,
   outPath,
   chromium,
 }) {
@@ -115,7 +120,9 @@ export async function renderReelKarte({
   // vorab exakt auf 4:5 zugeschnitten, mit demselben Ausschnittsucher wie
   // die Karte. Der Ken-Burns-Zoom arbeitet danach auf dem richtig gelegten
   // Fenster.
-  const { positionX, positionY } = await besterAusschnitt(bild);
+  const gefunden = await besterAusschnitt(bild);
+  const schnittX = positionX ?? gefunden.positionX;
+  const positionY = gefunden.positionY;
   const { width = 0, height = 0 } = await sharp(bild).metadata();
   // UEBERGROESSE GEGEN DAS WACKELN (Tim, 24.08.2026): ffmpeg's zoompan
   // rundet die Zuschnittposition JEDES Bildes auf ganze Pixel. Lag die
@@ -138,7 +145,7 @@ export async function renderReelKarte({
     const fensterH = Math.min(height, Math.round(HOEHE / skala));
     await sharp(bild)
       .extract({
-        left: Math.round((width - fensterB) * (positionX / 100)),
+        left: Math.round((width - fensterB) * (schnittX / 100)),
         top: Math.round((height - fensterH) * (positionY / 100)),
         width: fensterB,
         height: fensterH,

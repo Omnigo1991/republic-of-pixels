@@ -60,7 +60,7 @@ import { besterAusschnitt } from "./instagram-card.mjs";
 // Der Gewinn gegenüber der alten Quellhöhen-Regel: Diese Messung gilt für
 // JEDES Seitenverhältnis. Ein 3000 x 900-Panorama besteht die 900-px-Regel,
 // liefert aber einen miserablen 4:5-Ausschnitt - hier fällt es durch.
-const MAX_VERGROESSERUNG = 1.6;
+export const MAX_VERGROESSERUNG = 1.6;
 
 // Vorschaugrösse für die Beurteilung. Halbe Kantenlänge des fertigen Posts:
 // genug, um Figur, Ausrichtung und Schärfe zu beurteilen, und ein Viertel
@@ -80,14 +80,16 @@ const SYSTEM = `Du bist Bildredaktion eines deutschsprachigen Gaming-Magazins un
  * was am Ende herauskommt. Genau dieser Fehler hat uns die erste Woche
  * gekostet.
  */
-async function fertigerAusschnitt(pfad, zielPfad) {
+async function fertigerAusschnitt(pfad, zielPfad, xVorgabe = null) {
   const balkenfrei = await entferneBalken(pfad);
   const quelle = balkenfrei.pfad;
 
   const { width = 0, height = 0 } = await sharp(quelle).metadata();
   if (!width || !height) return null;
 
-  const { positionX, positionY } = await besterAusschnitt(quelle);
+  const gefunden = await besterAusschnitt(quelle);
+  const positionY = gefunden.positionY;
+  const positionX = xVorgabe ?? gefunden.positionX;
 
   // object-fit: cover - dieselbe Rechnung wie im Browser.
   const skala = Math.max(1080 / width, 1350 / height);
@@ -109,8 +111,43 @@ async function fertigerAusschnitt(pfad, zielPfad) {
     vergroesserung: 1080 / sichtbarB,
     sichtbarB,
     sichtbarH,
+    positionX,
+    positionY,
+    // Bleibt waagrecht ueberhaupt Spielraum? Nur dann lohnen Varianten.
+    spielraumX: width - sichtbarB,
   };
 }
+
+// AUSSCHNITTE STATT NUR BILDER BEURTEILEN (Tim, 24.08.2026:
+// "die Bilder muessen perfekt geschnitten sein").
+//
+// NACHGEMESSEN AN 60 ECHTEN ARTIKELBILDERN: Alle 60 sind Querformat. Bei
+// Querformat ist der SENKRECHTE Spielraum im 4:5-Fenster exakt null - die
+// Hoehe passt aufs Pixel, es gibt nichts zu verschieben. Genau auf dieser
+// Achse sucht besterAusschnitt. Waagrecht dagegen fallen im Median 55 %
+// der Bildbreite weg, und diese Achse steht seit dem 12.08. fest auf
+// "immer mittig". Ergebnis: Der Schnitt-Waechter hat bei allen 60 Bildern
+// dieselbe Position gewaehlt wie gar kein Waechter.
+//
+// Der Grund fuer "immer mittig" war richtig und gilt weiter: Zwei Versuche,
+// die Waagrechte per Statistik zu optimieren, haben es schlechter gemacht
+// (Zelda: leerer Himmel, Halloween: Haus statt Figur). Eine Formel kennt
+// kein Motiv.
+//
+// Aber dieses Tor fragt jemanden, der sehen kann. Also legen wir dem
+// Modell die Varianten nebeneinander und lassen es entscheiden - dieselbe
+// Antwort, die wir bei der Bildwahl schon geben lassen. Keine neue
+// Heuristik, kein zusaetzlicher Modellaufruf: Die Varianten treten einfach
+// als weitere Kandidaten an.
+//
+// Mitte bleibt dabei die erste Variante. Wenn keine der seitlichen besser
+// aussieht, gewinnt sie - Abweichung bleibt die Ausnahme.
+const X_VARIANTEN = [50, 22, 78];
+
+// Deckel fuer die Zahl der Ausschnitte, die dem Modell gezeigt werden.
+// Jedes Bild kostet Rechenzeit und Geld; neun ist genug, um echte Auswahl
+// zu haben, ohne dass ein Post das Doppelte kostet.
+const MAX_ANSICHTEN = 9;
 
 /**
  * Beurteilt mehrere Bildkandidaten und liefert den besten - oder keinen.
@@ -253,36 +290,82 @@ export async function waehleBild({ kandidaten, schlagzeile, spielName, letzteBil
   // --- Stufe 1: messbare Ausschlusskriterien, ohne Modellaufruf ---
   let tauglich = [];
   for (const [i, k] of kandidaten.entries()) {
-    let schnitt;
+    let quelle = { width: 0, height: 0 };
     try {
-      schnitt = await fertigerAusschnitt(k.pfad, join(tmpdir(), `rop-tor-${Date.now()}-${i}.jpg`));
-    } catch (err) {
-      console.log(`  Bild-Tor: Kandidat ${i} nicht lesbar (${err.message})`);
-      continue;
+      const m = await sharp(k.pfad).metadata();
+      quelle = { width: m.width ?? 0, height: m.height ?? 0 };
+    } catch {
+      // Masse sind ein Zusatz fuers Urteil, kein Ausschlussgrund.
     }
-    if (!schnitt) {
-      console.log(`  Bild-Tor: Kandidat ${i} ohne Masse - verworfen`);
-      continue;
-    }
-    if (schnitt.vergroesserung > MAX_VERGROESSERUNG) {
-      console.log(
-        `  Bild-Tor: Kandidat ${i} verworfen - muesste ${schnitt.vergroesserung.toFixed(2)}x hochgerechnet werden (Grenze ${MAX_VERGROESSERUNG})`,
-      );
-      continue;
-    }
-    let lage = { schwerpunkt: 0.5, anteilUnten: 0, kantendichte: 0 };
+
+    // FINGERABDRUCK DER QUELLE, NICHT DES AUSSCHNITTS (Fund 24.08.2026).
+    //
+    // Erste Fassung nahm den Abdruck vom fertigen Ausschnitt. Im Test kam
+    // dabei heraus: Gedaechtnis sperrt "Quelle 1, mittig" - das Tor nimmt
+    // "Quelle 1, links". Fuer die Rechnung sind das zwei Bilder, fuer
+    // jeden Betrachter ist es dasselbe. Genau die Wiederholung, die Tim
+    // beanstandet hat, waere so durch die eigene Sperre gerutscht.
+    //
+    // Der Abdruck haengt jetzt am Quellbild und gilt fuer alle seine
+    // Ausschnitte gemeinsam.
+    let motivFinger = null;
     try {
-      lage = await motivSchwerpunkt(schnitt.vorschau);
-    } catch (err) {
-      console.log(`  Bild-Tor: Motivlage von Kandidat ${i} nicht messbar (${err.message})`);
-    }
-    let finger = null;
-    try {
-      finger = await bildFingerabdruck(schnitt.vorschau);
+      motivFinger = await bildFingerabdruck(k.pfad);
     } catch (err) {
       console.log(`  Bild-Tor: Fingerabdruck von Kandidat ${i} nicht lesbar (${err.message})`);
     }
-    tauglich.push({ ...k, ...schnitt, ...lage, finger, nummer: tauglich.length + 1 });
+
+    // Mitte zuerst; die seitlichen Varianten kommen nur dazu, wenn das
+    // Bild waagrecht ueberhaupt Spielraum hat (siehe X_VARIANTEN oben).
+    let varianten = [X_VARIANTEN[0]];
+    for (const [n, x] of X_VARIANTEN.entries()) {
+      let schnitt;
+      try {
+        schnitt = await fertigerAusschnitt(
+          k.pfad,
+          join(tmpdir(), `rop-tor-${Date.now()}-${i}-${x}.jpg`),
+          x,
+        );
+      } catch (err) {
+        if (n === 0) console.log(`  Bild-Tor: Kandidat ${i} nicht lesbar (${err.message})`);
+        continue;
+      }
+      if (!schnitt) {
+        if (n === 0) console.log(`  Bild-Tor: Kandidat ${i} ohne Masse - verworfen`);
+        continue;
+      }
+      if (n === 0) {
+        // Ist waagrecht nichts zu verschieben, waeren die seitlichen
+        // Varianten pixelgleich mit der Mitte - dann bleibt es bei einer.
+        varianten = schnitt.spielraumX > 8 ? X_VARIANTEN : [X_VARIANTEN[0]];
+      }
+      if (!varianten.includes(x)) continue;
+      if (schnitt.vergroesserung > MAX_VERGROESSERUNG) {
+        if (n === 0) {
+          console.log(
+            `  Bild-Tor: Kandidat ${i} verworfen - muesste ${schnitt.vergroesserung.toFixed(2)}x hochgerechnet werden (Grenze ${MAX_VERGROESSERUNG})`,
+          );
+        }
+        continue;
+      }
+      let lage = { schwerpunkt: 0.5, anteilUnten: 0, kantendichte: 0 };
+      try {
+        lage = await motivSchwerpunkt(schnitt.vorschau);
+      } catch (err) {
+        console.log(`  Bild-Tor: Motivlage von Kandidat ${i} nicht messbar (${err.message})`);
+      }
+      const lageWort = x === 50 ? "mittig" : x < 50 ? "links" : "rechts";
+      tauglich.push({
+        ...k,
+        ...schnitt,
+        ...lage,
+        motivFinger,
+        quelle,
+        schnittLage: lageWort,
+        herkunft: varianten.length > 1 ? `${k.herkunft ?? "Bild"}, ${lageWort} geschnitten` : k.herkunft,
+        nummer: tauglich.length + 1,
+      });
+    }
   }
 
   if (tauglich.length === 0) {
@@ -302,9 +385,24 @@ export async function waehleBild({ kandidaten, schlagzeile, spielName, letzteBil
   // Post mehr entstehen; eine Wiederholung ist schlecht, kein Post ist
   // schlechter.
   if (letzteBilder.length) {
-    const neuartig = tauglich.filter(
-      (t) => !t.finger || !letzteBilder.some((f) => fingerAbstand(t.finger, f) < GLEICHES_MOTIV),
-    );
+    // Zwei Wege, dasselbe Motiv zu erkennen - der zweite faengt, was der
+    // erste durchlaesst:
+    //   1. Der Bildabdruck (aehnliches Motiv, auch aus anderer Quelle).
+    //   2. Die exakte Kennung Spiel + Pool-Position. Die ist eindeutig und
+    //      kennt keine Schwellenwerte: Derselbe Steam-Screenshot desselben
+    //      Spiels ist derselbe Screenshot, Punkt.
+    const schonDa = (t) => {
+      if (t.spielKey && t.poolIndex != null) {
+        if (letzteBilder.some((f) => f?.spielKey === t.spielKey && f?.poolIndex === t.poolIndex)) {
+          return true;
+        }
+      }
+      if (!t.motivFinger) return false;
+      return letzteBilder.some(
+        (f) => f?.motivFinger && fingerAbstand(t.motivFinger, f.motivFinger) < GLEICHES_MOTIV,
+      );
+    };
+    const neuartig = tauglich.filter((t) => !schonDa(t));
     if (neuartig.length > 0 && neuartig.length < tauglich.length) {
       for (const t of tauglich.filter((x) => !neuartig.includes(x))) {
         console.log(
@@ -314,9 +412,18 @@ export async function waehleBild({ kandidaten, schlagzeile, spielName, letzteBil
       tauglich = neuartig;
       tauglich.forEach((t, n) => { t.nummer = n + 1; });
     } else if (neuartig.length === 0) {
-      console.log(
-        "  Bild-Tor: alle Kandidaten waren schon in den letzten Posts - es entscheidet die Beurteilung",
-      );
+      // KEIN VENTIL MEHR (Tim, 24.08.2026: "extrem kuratiert, ohne Wenn
+      // und Aber"). Vorher liess diese Stelle alle Kandidaten weiterlaufen,
+      // wenn jeder einzelne schon in einem der letzten Posts stand - eine
+      // Wiederholung konnte also trotz Gedaechtnis rausgehen. Das war noch
+      // die Denkweise aus der Zeit, als ein fehlender Post das Schlimmste
+      // war. Seit die Typo-Karte weg ist, kostet ein Verzicht nichts: Die
+      // Ersatz-Runde zieht die naechste Story nach.
+      return {
+        gewaehlt: null,
+        grund: "jedes Motiv stand schon in einem der letzten Posts",
+        geprueft: tauglich.length,
+      };
     }
   }
 
@@ -338,6 +445,25 @@ export async function waehleBild({ kandidaten, schlagzeile, spielName, letzteBil
     );
   }
 
+  // SCHAERFSTE ZUERST (Tim, 24.08.2026: "die am hochaufgeloestesten").
+  //
+  // Die Vergroesserung sagt, wie stark der fertige Ausschnitt auf
+  // 1080x1350 aufgeblasen werden muss - kleiner ist besser. Die
+  // Reihenfolge ist kein Urteil, sie legt nur die Nummern fest; die Wahl
+  // trifft weiterhin das Modell. Aber bei zwei gleich guten Motiven
+  // gewinnt so das schaerfere, und im Protokoll steht die Rangfolge.
+  auswahl.sort((a, b) => a.vergroesserung - b.vergroesserung);
+  if (auswahl.length > MAX_ANSICHTEN) {
+    // KEINE STILLE KUERZUNG: Wird abgeschnitten, steht es im Protokoll.
+    // Ein Deckel, den niemand sieht, liest sich spaeter wie "wir haben
+    // alles geprueft" - und genau das waere dann falsch.
+    console.log(
+      `  Bild-Tor: ${auswahl.length} Ausschnitte vorhanden, dem Urteil werden die ${MAX_ANSICHTEN} schaerfsten gezeigt`,
+    );
+    auswahl = auswahl.slice(0, MAX_ANSICHTEN);
+  }
+  auswahl.forEach((t, i) => { t.nummer = i + 1; });
+
   // --- Stufe 2: Claude schaut sich die fertigen Ausschnitte an ---
   const inhalt = [];
   for (const t of auswahl) {
@@ -352,7 +478,7 @@ export async function waehleBild({ kandidaten, schlagzeile, spielName, letzteBil
     });
     inhalt.push({
       type: "text",
-      text: `   (gemessen: Motivschwerpunkt bei ${Math.round(t.schwerpunkt * 100)}% der Bildhoehe, ${Math.round(t.anteilUnten * 100)}% der Bildinformation im spaeter verdeckten Bereich, Dichte an der Textkante ${t.kantendichte.toFixed(2)})`,
+      text: `   (gemessen: Quelle ${t.quelle?.width ?? "?"}x${t.quelle?.height ?? "?"} px, muss ${t.vergroesserung.toFixed(2)}x hochgerechnet werden - 1.0 waere verlustfrei; Motivschwerpunkt bei ${Math.round(t.schwerpunkt * 100)}% der Bildhoehe, ${Math.round(t.anteilUnten * 100)}% der Bildinformation im spaeter verdeckten Bereich, Dichte an der Textkante ${t.kantendichte.toFixed(2)})`,
     });
   }
   inhalt.push({
@@ -365,13 +491,16 @@ So sieht der fertige Post aus: Ueber dem unteren Drittel (ab etwa 63 Prozent der
 
 Zu jedem Bild steht in Klammern, wo sein Motivschwerpunkt liegt. Ueber 63 Prozent heisst: Das Wichtige verschwindet hinter der Karte.
 
-Beurteile jedes Bild nach vier Kriterien:
+Beurteile jedes Bild nach fuenf Kriterien:
 1. SUJET: Passt das Motiv zur Schlagzeile? Ein Bild aus dem falschen Spiel, der falschen Ära oder dem falschen Schauplatz ist ein Ausschlussgrund - auch wenn es schoen ist.
 2. AUSSCHNITT: Ist die Hauptfigur bzw. das Hauptmotiv als Ganzes sichtbar und gut platziert? Angeschnittene Figuren am Bildrand, Figuren die im unteren Textbereich verschwinden, oder ein leerer Bildausschnitt (nur Himmel, nur Boden, nur Wand) sind Ausschlussgruende. Ein Spiel-Schriftzug darf zu sehen sein, aber NICHT angeschnitten.
+   WICHTIG: Von einem breiten Quellbild koennen MEHRERE Ausschnitte antreten - derselbe Screenshot einmal mittig, einmal links, einmal rechts geschnitten (steht jeweils dabei). Ein breites Bild verliert im Hochformat mehr als die Haelfte seiner Breite; welcher Ausschnitt genommen wird, entscheidet darum ueber Kopf oder kein Kopf, ganze Figur oder halbe. Vergleiche diese Varianten ausdruecklich gegeneinander und nimm die, in der das Motiv am besten steht. Mittig ist die Standardwahl - weiche nur ab, wenn es sichtbar besser ist.
 3. WIRKUNG: Stoppt das Bild im Feed den Daumen? Gesichter und klare Motive ja, matschige Wimmelbilder nein.
 4. BILDGUETE - der strengste Punkt (Tim, 24.08.2026): Sieht das Bild aus, als koennte es heute von einem Premium-Magazin stammen? Wir stehen im Feed direkt neben GameStar und GamePro, die offizielle Presse-Artworks verwenden. Ausschlussgruende sind: sichtbar veraltete Grafik (kantige Modelle, flache Texturen, Optik aelterer Konsolengenerationen), weichgezeichnete oder hochskalierte Bilder ohne feine Details, Bewegungsunschaerfe aus Zwischensequenzen, sichtbare Kompressionsartefakte.
    ACHTUNG, HAEUFIGER FEHLGRIFF: Ein Motiv kann gleichzeitig IKONISCH und OPTISCH VERALTET sein. Genau daran ist das Tor am 24.08. gescheitert - es waehlte eine Grossaufnahme aus einem Spiel von 2008 mit der Begruendung, sie sei ikonisch und stoppe den Daumen. Tim dazu: "es sieht so aus als haette es ein Fuenfjaehriger gepostet." Bekanntheit ersetzt keine Bildguete. Je groesser ein Gesicht im Bild steht, desto gnadenloser faellt jede Schwaeche auf.
    Handelt die Meldung von einem alten Spiel und ist ALLES Material entsprechend alt, ist das kein Grund zur Milde: Dann taugt keines - lieber keinen Post als einen, der billig aussieht.
+
+5. AUFLOESUNG: Zu jedem Bild steht, wie stark es hochgerechnet werden muss. Unter 1.2x ist sehr gut, ueber 1.5x sichtbar weich. Das ist KEIN eigenstaendiger Ausschlussgrund - ein starkes Motiv bei 1.5x schlaegt ein schwaches bei 1.1x. Aber bei zwei gleichwertigen Bildern gewinnt IMMER das mit der kleineren Zahl.
 
 Waehle das beste Bild. Wenn KEINES die Kriterien erfuellt, waehle keines - wir nehmen dann eine andere Meldung, das ist ausdruecklich erlaubt und besser als ein schwacher Post.
 
@@ -413,14 +542,29 @@ Taugt keines: {"bestes": null, "begruendung": "ein Satz warum alle durchfallen",
     };
   }
 
-  const gewaehlt = tauglich.find((t) => t.nummer === urteil.bestes);
+  // AUS "auswahl", NICHT AUS "tauglich" (Fehler gefunden 24.08.2026).
+  //
+  // Bis hierhin wurden die Nummern zweimal neu vergeben - einmal nach dem
+  // Bildgedaechtnis, einmal nach dem Textkanten-Filter. Beim zweiten Mal
+  // wurde nur "auswahl" ersetzt, "tauglich" behielt die verworfenen
+  // Kandidaten MIT IHREN ALTEN NUMMERN. Beispiel: A(1) B(2) C(3), B faellt
+  // wegen der Textkante raus, uebrig bleiben A(1) C(2) - in "tauglich"
+  // stehen jetzt aber A(1) B(2) C(2). Sagte das Modell "Bild 2", lieferte
+  // die Suche das VERWORFENE B zurueck statt C.
+  //
+  // Genau die Sorte Fehler, die niemandem auffaellt: Das Protokoll meldet
+  // brav "Bild 2 gewaehlt", das Tor hat sauber geurteilt - und im Post
+  // steht trotzdem das Motiv, das durchgefallen ist.
+  const gewaehlt = auswahl.find((t) => t.nummer === urteil.bestes);
   if (!gewaehlt) {
     // Modell hat eine Nummer genannt, die es nicht gibt - als Durchfall
     // werten statt zu raten.
-    return { gewaehlt: null, grund: `ungueltige Bildnummer ${urteil.bestes}`, geprueft: tauglich.length };
+    return { gewaehlt: null, grund: `ungueltige Bildnummer ${urteil.bestes}`, geprueft: auswahl.length };
   }
   console.log(
-    `  Bild-Tor: Bild ${gewaehlt.nummer} gewaehlt (${gewaehlt.herkunft ?? "?"}, ${gewaehlt.vergroesserung.toFixed(2)}x) - ${urteil.begruendung ?? ""}`,
+    `  Bild-Tor: Bild ${gewaehlt.nummer} gewaehlt (${gewaehlt.herkunft ?? "?"}, ` +
+      `${gewaehlt.quelle?.width}x${gewaehlt.quelle?.height}, ${gewaehlt.vergroesserung.toFixed(2)}x, ` +
+      `Schnitt ${gewaehlt.positionX}%) - ${urteil.begruendung ?? ""}`,
   );
   return { gewaehlt, grund: urteil.begruendung ?? "", geprueft: tauglich.length };
 }
