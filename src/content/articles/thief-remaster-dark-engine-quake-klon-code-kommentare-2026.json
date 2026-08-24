@@ -1,0 +1,147 @@
+{
+  "slug": "thief-remaster-dark-engine-quake-klon-code-kommentare-2026",
+  "title": "«E3-Hack! Nach der E3 löschen!» - Thief-Code verrät sich selbst",
+  "subtitle": "Nightdive hat ein völlig veraltetes Code-Repository der Dark Engine ausgegraben - und darin steckt ein Notbehelf, der bis in Thief 2 überlebt hat",
+  "excerpt": "Nightdive arbeitet am Remaster von Thief: The Dark Project - und fand im alten Quellcode bissige Programmierer-Notizen, Messe-Hacks und eine überraschende Verwandtschaft zu Quake.",
+  "seoTitle": "Thief Remaster: Dark Engine ist «ein Klon von Quake»",
+  "metaDescription": "Nightdive gräbt im alten Thief-Quellcode: bissige Entwickler-Kommentare, ein E3-Notbehelf bis in Thief 2 und Portal-Technik, die Quake in Echtzeit nachbaut.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "tags": [
+    "Thief: The Dark Project",
+    "Nightdive Studios",
+    "Looking Glass Studios",
+    "Dark Engine",
+    "Remaster"
+  ],
+  "tldr": [
+    "Nightdive Studios sprach mit Digital Foundry über ihr Remaster von Thief: The Dark Project.",
+    "Das Team erhielt Zugriff auf ein «massiv veraltetes» Versionskontroll-Repository der Dark Engine.",
+    "Im Code stecken bissige Programmierer-Kommentare - darunter ein «E3-Hack», der noch in Thief 2 vorhanden ist.",
+    "Rendering und Beleuchtung der Dark Engine bezeichnet Nightdive-Entwickler Josh Dowell als «Klon von Quake», nur mit Echtzeit-Portalberechnung.",
+    "Ein Release-Datum für das PC-Remaster steht noch nicht fest."
+  ],
+  "whyItMatters": "Thief: The Dark Project gilt als Gründungswerk des Immersive-Sim-Stealth, und die Dark Engine als eines der eigenwilligsten Technikgerüste der 90er. Wer wissen will, wie gut ein Remaster diese Eigenheiten treffen kann, erfährt hier aus erster Hand, wie chaotisch und wie clever das Original unter der Haube tatsächlich gebaut ist.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Wenn Nightdive Studios einen Klassiker neu auflegen, gleicht das oft einer Ausgrabung - nur dass die Fundstücke aus Quellcode bestehen. Für das kommende Remaster von Thief: The Dark Project bekam das Studio ein «massiv veraltetes Versionskontroll-Repository» der Dark Engine in die Finger. Was darin steckt, hat Nightdive-Softwareingenieur Josh Dowell im Gespräch mit Digital Foundrys Retro Super Show ausgebreitet: bissige Programmierer-Kommentare, Notbehelfe für eine Messe von 1997 - und eine überraschend direkte Verwandtschaft zu Quake."
+    },
+    {
+      "type": "embed",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=Fce_5U4BPbw"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "1998",
+          "label": "Erscheinungsjahr von Thief: The Dark Project, nach Verschiebung aus 1997"
+        },
+        {
+          "value": "E3 1997",
+          "label": "Messe, für die ein bis heute nicht gelöschter Code-Hack entstand"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Ein Code, der seine eigene Entstehungsgeschichte erzählt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Thief wurde 1997 noch unter dem Titel The Dark Project auf der E3 gezeigt und sollte im selben Jahr erscheinen. Kurz darauf rutschte der Release ins Jahr 1998. Die Kommentare, die Dowell im Repository fand, lesen sich wie ein Protokoll dieser Hektik - offenbar wurde bis kurz vor Auslieferung geschraubt. Ebenso nachvollziehbar wurde für Nightdive, warum die Engine an manchen Stellen so eigenwillig aufgebaut ist: Laut Dowell wechselte ein Grossteil des ursprünglichen Teams im Laufe der Produktion zu anderen Projekten, für die zweite Hälfte der Entwicklung übernahm eine neue Mannschaft."
+    },
+    {
+      "type": "quote",
+      "text": "Am meisten Spass hatte ich bei der Durchsicht der Dark-Engine-Codebase mit all den bissigen Kommentaren der Programmierer von Looking Glass und Irrational Games. Sie lassen die wildesten Sprüche über den Code ab.",
+      "attribution": "Josh Dowell, Softwareingenieur bei Nightdive Studios"
+    },
+    {
+      "type": "paragraph",
+      "text": "Konkret zitiert Dowell zwei Fundstücke, die jede Person mit Deadline-Erfahrung sofort wiedererkennt: «Riesen-Hack! Niemals nachbauen! Das müssen wir vor '98 fixen!» und «E3-Hack! Nach der E3 unbedingt löschen!». Die Pointe liefert er gleich mit - der Messe-Notbehelf wurde nie entfernt und steckt sogar noch in Thief 2."
+    },
+    {
+      "type": "heading",
+      "text": "Warum die Dark Engine ein Quake-Verwandter ist"
+    },
+    {
+      "type": "paragraph",
+      "text": "Technisch ist die Erkenntnis noch spannender. Dass Thief 1998 so gut aussah, führt Dowell auf eine sehr direkte Verwandtschaft mit dem anderen grossen Technik-Vorreiter der Ära zurück: «Das Rendering von Thief und die Technologie hinter den Leveln sind erschreckenderweise einfach ein Klon von Quake», sagt er. Beleuchtung und das Ein- und Ausschalten von Lichtern funktionieren demnach exakt wie bei id Softwares Shooter - was bei einem Spiel, dessen gesamtes Regelwerk auf Licht und Schatten aufbaut, alles andere als ein Nebendetail ist."
+    },
+    {
+      "type": "paragraph",
+      "text": "«Unheimlich ähnlich» seien beide Engines, so Dowell - und doch gibt es einen «wirklich merkwürdigen» Unterschied, der die Dark Engine bis heute einzigartig macht."
+    },
+    {
+      "type": "quote",
+      "text": "Quake nutzt vorberechnete Sichtbarkeit. Die Dark Engine hingegen macht das, was Quake während seiner Vorberechnungsphase tut, einfach in Echtzeit.",
+      "attribution": "Josh Dowell, Softwareingenieur bei Nightdive Studios"
+    },
+    {
+      "type": "paragraph",
+      "text": "Jeder Türrahmen in der Spielwelt fungiert dabei als Portal. Die Engine erfasst das Rechteck, das durch dieses Portal sichtbar ist, registriert dahinterliegende Portale zu weiteren Türen und rechnet aus, welche davon tatsächlich einzusehen sind. Dowells Fazit: «Das Ganze ist super komplex. Ich kann kaum glauben, dass sie 1998 damit durchgekommen sind.» Die Engine führe genau den langsamen Quake-Prozess aus - nur eben live während des Spielens. Für ihn gibt es dafür bis heute keine Parallele: «So etwas gibt es bis heute kein zweites Mal.»"
+    },
+    {
+      "type": "heading",
+      "text": "Was das für das Remaster bedeutet"
+    },
+    {
+      "type": "paragraph",
+      "text": "Für Nightdive ist solches Archivwissen keine Anekdotensammlung, sondern Arbeitsgrundlage. Je genauer das Team versteht, welche Eigenheit Absicht war und welche ein stehengelassener Notbehelf, desto präziser lässt sich entscheiden, was in der Neuauflage bleiben muss - denn Thiefs Sichtbarkeits- und Lichtsystem ist kein Grafikeffekt, sondern die Spielmechanik selbst. Passend dazu hatte das Studio zuvor bereits angekündigt, den originalen Macher der Zwischensequenzen für die 4K-Fassung zurückzuholen, und ein neues Waffenrad als optionale Komfortfunktion vorgestellt."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Thief: The Dark Project Remastered erscheint für den PC, ein Release-Datum gibt es weiterhin nicht. Wer die Fortschritte verfolgen will, findet Seiten zum Spiel bei Steam, GOG und Epic. Bis dahin bleibt eine schöne Erkenntnis: Eines der einflussreichsten Stealth-Spiele der Geschichte steht auf einem Fundament aus Quake-Technik, Deadline-Panik und Kommentaren, die die eigenen Programmierer als Warnung an die Nachwelt hinterlassen haben."
+    }
+  ],
+  "poll": {
+    "question": "Was reizt euch am Thief-Remaster am meisten?",
+    "options": [
+      "Endlich ohne Fanpatches und Config-Gebastel spielen",
+      "Die 4K-Zwischensequenzen des Originalmachers",
+      "Technik-Einblicke wie diese in die Dark Engine",
+      "Nichts - ich bleibe beim Original"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-24T07:04:17.149Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "grid",
+  "sources": [
+    {
+      "title": "Thief Remaster: Alter Code enthüllt absurde Entwickler-Notizen und Quake-Parallelen",
+      "url": "https://www.eurogamer.de/thief-remaster-code-quake-engine",
+      "publisher": "Eurogamer.de"
+    },
+    {
+      "title": "Nightdive's Thief remaster unearths a 'very very out of date version control repository' with 'the wildest things to say about the code'",
+      "url": "https://www.pcgamer.com/games/sim/nightdives-thief-remaster-unearths-a-very-very-out-of-date-version-control-repository-with-the-wildest-things-to-say-about-the-code/",
+      "publisher": "PC Gamer"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/thief-remaster-dark-engine-quake-klon-code-kommentare-2026.webp",
+    "alt": "«E3-Hack! Nach der E3 löschen!» - Thief-Code verrät sich selbst",
+    "credit": "Bild: Eurogamer.de",
+    "sourceUrl": "https://www.eurogamer.de/thief-remaster-code-quake-engine",
+    "sourceWidth": 690,
+    "sourceHeight": 388
+  },
+  "relatedSlugs": [
+    "simpsons-hit-and-run-groening-d23-teaser-2026",
+    "lord-of-the-rings-war-in-the-north-legacy-edition-2026",
+    "fallout-3-remaster-purkeypile-technische-einschraenkungen-2026"
+  ]
+}
