@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T10:51:28.124Z",
+  "updatedAt": "2026-08-24T14:04:10.090Z",
   "deals": [
     {
       "appId": 1142710,
@@ -13,26 +13,26 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1142710/capsule_184x69.jpg?t=1786634522"
     },
     {
-      "appId": 1687950,
-      "title": "Persona 5 Royal",
-      "discountPercent": 70,
-      "originalPrice": 5999,
-      "finalPrice": 1799,
+      "appId": 227300,
+      "title": "Euro Truck Simulator 2",
+      "discountPercent": 75,
+      "originalPrice": 1999,
+      "finalPrice": 499,
       "currency": "EUR",
-      "endsAt": "2026-08-24T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1687950/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1687950/capsule_184x69.jpg?t=1783356822"
+      "endsAt": "2026-08-25T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/227300/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/227300/da84d11d3ddd817e0cca299608b469a854d75ba5/capsule_184x69.jpg?t=1785394779"
     },
     {
-      "appId": 2161700,
-      "title": "Persona 3 Reload",
-      "discountPercent": 65,
-      "originalPrice": 5999,
-      "finalPrice": 2099,
+      "appId": 1158310,
+      "title": "Crusader Kings III",
+      "discountPercent": 70,
+      "originalPrice": 4999,
+      "finalPrice": 1499,
       "currency": "EUR",
       "endsAt": "2026-08-24T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/2161700/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2161700/capsule_184x69.jpg?t=1764776430"
+      "url": "https://store.steampowered.com/app/1158310/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1158310/969346b7534d84360e80d8997c3f58636140893f/capsule_184x69.jpg?t=1785862913"
     },
     {
       "appId": 1771300,

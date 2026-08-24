@@ -1,0 +1,145 @@
+{
+  "slug": "gpu-lieferengpass-pc-partner-einsteigerkarten-2026",
+  "title": "GPU-Nachschub bricht ein - jetzt trifft es die günstigen Karten",
+  "subtitle": "Auftragsfertiger PC Partner rechnet mit knappem Grafikkarten-Angebot, und ausgerechnet das Einsteigersegment soll am stärksten leiden",
+  "excerpt": "Einer der grössten Grafikkarten-Hersteller der Welt warnt vor einer Verknappung in den kommenden Monaten. Schuld ist nicht nur der Speichermangel - und die günstigen Modelle stehen zuerst in der Schusslinie.",
+  "seoTitle": "GPU-Preise: PC Partner warnt vor Lieferengpass 2026",
+  "metaDescription": "PC Partner rechnet mit knappem GPU-Nachschub bis Jahresende. Nicht nur Speicher fehlt - auch PCBs und Stromkomponenten. Einsteigerkarten trifft es zuerst.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "tags": [
+    "Grafikkarten",
+    "Nvidia",
+    "AMD",
+    "PC Partner",
+    "Hardware-Preise"
+  ],
+  "tldr": [
+    "Auftragsfertiger PC Partner (Zotac, Inno3D, Manli, Sapphire) erwartet laut Straits Times deutlich knappere Grafikkarten-Lieferungen in den kommenden Monaten",
+    "Benchlife berichtet, dass der Nachschub an Nvidias RTX-Blackwell-GPUs im dritten Quartal unter dem zweiten lag - und zum Jahresende noch tiefer fallen soll",
+    "Engpässe betreffen nicht nur Speicher, sondern auch Platinen und Stromkomponenten mit längeren Lieferzeiten als im Vorjahr",
+    "Besonders betroffen sein sollen ausgerechnet die günstigen Einsteigerkarten, die bislang von den Preisspitzen verschont blieben"
+  ],
+  "whyItMatters": "Wer aktuell einen Gaming-PC plant oder aufrüstet, hat es ohnehin schon mit dem angespanntesten Grafikkartenmarkt seit Jahren zu tun. Wenn nun auch das günstige Segment von Engpässen erfasst wird, fällt die letzte bezahlbare Rückzugsoption weg - und weil AMD-Karten teils vom selben Fertiger stammen, gibt es kaum ein Ausweichmanöver.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Der Grafikkartenmarkt war schon vor dieser Meldung angespannt - jetzt kommt eine Warnung von einer Stelle, die es wissen muss. PC Partner, einer der grössten Auftragsfertiger der Branche, rechnet laut einem Bericht der singapurischen Straits Times damit, dass sich die Verfügbarkeit von Grafikkarten in den kommenden Monaten spürbar verschlechtert. Und die unangenehmste Pointe: Ausgerechnet die günstigen Einsteigermodelle sollen es am härtesten treffen."
+    },
+    {
+      "type": "embed",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=7RzZjIYJPwg"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "800 $",
+          "label": "kosten RTX 5060 Ti 16 GB und RTX 5070 aktuell im US-Handel"
+        },
+        {
+          "value": "bis zu 17 %",
+          "label": "Aufschlag drohen laut Berichten bei Nvidia-Servern mit Blackwell und Rubin"
+        },
+        {
+          "value": "529,99 $",
+          "label": "Aktionspreis der ASUS Prime Radeon RX 9070 bei Amazon nach 50 Dollar Rabatt"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Ein Name, den kaum jemand kennt - und der trotzdem zählt"
+    },
+    {
+      "type": "paragraph",
+      "text": "PC Partner taucht auf keiner Verpackung im Regal auf, steckt aber hinter enorm vielen Karten. Das Unternehmen fertigt für die eigenen Endkundenmarken Zotac, Inno3D und Manli und ist zusätzlich Auftragsfertiger für Sapphire, einen der wichtigsten Board-Partner von AMD. Die Produktionslinien im chinesischen Dongguan gehören zu den grössten der Branche. Wenn von dort Zurückhaltung signalisiert wird, betrifft das entsprechend beide GPU-Lager gleichzeitig."
+    },
+    {
+      "type": "heading",
+      "text": "Nicht nur der Speicher ist das Problem"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Diskussion der letzten Monate drehte sich fast ausschliesslich um Arbeitsspeicher und VRAM, deren Preise durch die Nachfrage der Rechenzentren nach oben gezogen werden. Die Fachseite Benchlife, die den Bericht aufgegriffen hat, nennt jedoch weitere Flaschenhälse: Auch Platinen und Stromkomponenten haben demnach deutlich längere Lieferzeiten als noch im Vorjahr. Das ist deshalb heikel, weil diese Bauteile in jeder Grafikkarte stecken - unabhängig davon, ob ein Nvidia- oder ein AMD-Chip darauf sitzt."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Speicherchips: durch die Nachfrage aus dem KI- und Rechenzentrumsgeschäft massiv verteuert",
+        "GPU-Dies: Nachschub an Nvidias RTX-Blackwell-Chips laut Benchlife im dritten Quartal unter dem Vorquartal, zum Jahresende noch tiefer",
+        "Platinen (PCBs): längere Vorlaufzeiten als im Vorjahr",
+        "Stromversorgungskomponenten: ebenfalls verzögerte Lieferungen"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Die günstigen Karten verlieren ihren Schutzschild"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bislang gab es eine Art Trostpflaster: Modelle mit 8 GB Videospeicher blieben von den grössten Preissprüngen weitgehend verschont, während die Varianten mit mehr Speicher davonzogen. Zum Vergleich: RTX 5060 Ti mit 16 GB und RTX 5070 pendeln sich derzeit bei rund 800 Dollar ein - Beträge, die vor einem Jahr in einer ganz anderen Leistungsklasse angesiedelt waren. Fallen nun auch die Einsteigerkarten unter Druck, schrumpft der Bereich, in dem ein Neubau oder ein Upgrade überhaupt noch wirtschaftlich Sinn ergibt. PC Gamer spitzt das Szenario auf ein Gedankenspiel zu: eine RTX 5050 für 500 Dollar. Zahlen muss das allerdings jemand - und genau hier entscheidet sich, ob der Markt tatsächlich mitzieht."
+    },
+    {
+      "type": "heading",
+      "text": "AMD ist keine sichere Ausweichroute"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die jüngsten Preisspitzen trafen vor allem GeForce-Karten, doch auch die Radeon-RX-9000-Serie zog kurz nach Marktstart spürbar an. Weil Sapphire-Modelle bei PC Partner vom Band laufen und die knappen Bauteile ohnehin herstellerunabhängig sind, dürfte das Problem beide Seiten erfassen. Immerhin: Punktuell gibt es noch Angebote, etwa die ASUS Prime Radeon RX 9070, die bei Amazon nach 50 Dollar Rabatt für 529,99 Dollar gelistet wurde. Solche Aktionen wirken derzeit weniger wie ein normaler Handelsrabatt als vielmehr wie das Abverkaufen von Lagerbeständen, die zu alten Konditionen eingekauft wurden."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bestätigt ist bisher der Trend, nicht die konkrete Preisentwicklung: Es handelt sich um Einschätzungen eines Fertigers zur eigenen Auftragslage plus Marktbeobachtungen von Branchenmedien, nicht um offizielle Preisankündigungen von Nvidia oder AMD. Dass der Druck real ist, zeigt allerdings das Servergeschäft, wo für Blackwell- und Rubin-Systeme Aufschläge von mindestens 15 und bis zu 17 Prozent im Raum stehen - dieselbe Speicherknappheit, nur an einer Stelle, an der Preiserhöhungen leichter durchsetzbar sind. Für Spielerinnen und Spieler heisst das vor allem eines: Wer ein konkretes Upgrade im Blick hat und ein faires Angebot findet, sollte nicht auf eine baldige Entspannung setzen."
+    }
+  ],
+  "poll": {
+    "question": "Wie reagiert ihr, wenn selbst Einsteiger-Grafikkarten teurer werden?",
+    "options": [
+      "Jetzt zuschlagen, bevor es schlimmer wird",
+      "Gebrauchtmarkt statt Neuware",
+      "Aussitzen und die alte Karte weiterquälen",
+      "Umstieg auf Konsole oder Handheld"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-24T14:02:59.939Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "circuit",
+  "sources": [
+    {
+      "title": "There's a looming GPU supply crisis, which means prices are likely to get a whole lot worse. And it's not just because of memory",
+      "url": "https://www.pcgamer.com/hardware/graphics-cards/theres-a-looming-gpu-supply-crisis-which-means-prices-are-likely-to-get-a-whole-lot-worse-and-its-not-just-because-of-memory/",
+      "publisher": "PC Gamer"
+    },
+    {
+      "title": "The Best Value Card For 1440p & 4K Gaming Is Now Even Cheaper; Meet The ASUS Prime Radeon RX 9070, Now Available On Amazon For A Low Price Of $529.99",
+      "url": "https://wccftech.com/asus-prime-radeon-rx-9070-amazon-deal-1440p-4k-gaming/",
+      "publisher": "Wccftech"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/gpu-lieferengpass-pc-partner-einsteigerkarten-2026.webp",
+    "alt": "GPU-Nachschub bricht ein - jetzt trifft es die günstigen Karten",
+    "credit": "Bild: PC Gamer",
+    "sourceUrl": "https://www.pcgamer.com/hardware/graphics-cards/theres-a-looming-gpu-supply-crisis-which-means-prices-are-likely-to-get-a-whole-lot-worse-and-its-not-just-because-of-memory/",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "gpu-preise-jahresbilanz-tracking-2026",
+    "pc-partner-grafikkarten-knappheit-preiswarnung-2026",
+    "gigabyte-aorus-rtx-5090-infinity-6195-euro-2026"
+  ]
+}
