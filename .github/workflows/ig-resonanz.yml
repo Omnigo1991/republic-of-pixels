@@ -1,0 +1,31 @@
+# INSTAGRAM-RESONANZ (Tim, 24.08.2026): Liest zurück, wie unsere Posts
+# tatsächlich gelaufen sind - Likes, Kommentare, Reichweite - und stellt sie
+# neben das, was wir über den Post wissen (Format, Spiel, Uhrzeit).
+#
+# Bisher haben wir gepostet, ohne je nachzusehen. Über 70 Posts liegen
+# draussen und wir wussten von keinem, wie er gelaufen ist.
+#
+# Läuft einmal täglich nach dem letzten Posting-Fenster und zusätzlich auf
+# Knopfdruck. Ergebnis steht im Protokoll des Laufs.
+name: Instagram-Resonanz
+
+on:
+  schedule:
+    # 21:30 UTC = 23:30 Zürich im Sommer - nach dem letzten Post des Tages,
+    # damit auch der jüngste Post ein paar Stunden Zeit hatte.
+    - cron: "30 21 * * *"
+  workflow_dispatch:
+
+jobs:
+  resonanz:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Resonanz abfragen
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+        run: node pipeline/ig-resonanz.mjs
