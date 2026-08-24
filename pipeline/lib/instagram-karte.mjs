@@ -20,9 +20,8 @@ import { entferneBalken } from "./letterbox.mjs";
 //   - das Zeichen gross oben rechts (Tims Wahl "A", 104 px)
 //   - ein GROSSWORT, das über die Oberkante der Glaskarte ins Bild ragt:
 //     der Kern der Meldung in einem Wort, im Markenverlauf
-//   - dessen letzter Buchstabe sich nach rechts in Pixel auflöst -
-//     abgeleitet aus dem Schweif unseres R (gemessen: quadratische
-//     Module). Freien Staub daneben gibt es nicht (Tim, 23.08.2026).
+//   - das Grosswort überlappt die Oberkante der Glaskarte. Kein
+//     Pixelstaub, keine Auflösung (Tim, 24.08.2026).
 //   - die Glaskarte mit Chip (Cyan-Punkt wie auf der Startseite) und der
 //     Schlagzeile in Gross-/Kleinschreibung
 //
@@ -30,9 +29,9 @@ import { entferneBalken } from "./letterbox.mjs";
 // 23.08.2026) - dadurch konnte die Karte tiefer rutschen und das Motiv
 // gewinnt oben einen Streifen zurück.
 //
-// REIHENFOLGE IST PFLICHT: Erst das Wort einpassen, dann die Auflösung
-// rechnen - sie braucht die endgültige Buchstabenbreite. Andersherum
-// passt das Raster nicht mehr zur Schrift.
+// Das Wort wird nach dem Satz eingepasst: Ein langes Wort verkleinert die
+// Schrift, und der Überhang über die Kartenkante wächst mit, damit alle
+// Posts im Feed dieselbe Silhouette haben.
 
 const HIER = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(HIER, "..", "..");
@@ -70,10 +69,8 @@ export function grosswortAusZeilen(headlineLines, kicker) {
 function einpassenQuelle() {
   return function einpassen(staerke) {
     const wort = document.getElementById("wort");
-    const feld = document.getElementById("staub");
     const karte = document.querySelector(".karte");
     const titel = document.querySelector(".titel");
-    feld.innerHTML = "";
     const platz = karte.clientWidth - 100;
 
     const textbreite = (el) => {
@@ -97,72 +94,10 @@ function einpassenQuelle() {
     feldEl.style.height = `${gr}px`;
     karte.style.paddingTop = `${ueberhang + 46}px`;
 
-    // 2) Auflösung des letzten Buchstabens
-    const r = wort.getBoundingClientRect();
-    const eltern = wort.parentElement.getBoundingClientRect();
-    // ABSTAND ZUM WORT (Tim, 23.08.2026): Der Kasten des Wortes traegt
-    // rechts 0.12em Polster, damit der letzte Buchstabe nicht angeschnitten
-    // wird - dort endet also die Schrift, nicht der Kasten. Von dieser
-    // Tintenkante aus bleibt eine Modulbreite Luft, bevor der erste Kruemel
-    // kommt. Vorher begann er direkt am Buchstaben und klebte daran.
-    const tinteRechts = r.right - eltern.left - Math.round(gr * 0.12);
-    const links = tinteRechts + Math.round(gr * 0.11);
-    const M = Math.max(6, Math.round(gr * 0.078));
-    const bandOben = r.height * 0.16;
-    const bandHoehe = r.height * 0.62;
-    const spalten = Math.round(13 * staerke) + 4;
-    // Feste Zahlenfolge aus dem Wort: derselbe Post sieht immer gleich aus,
-    // verschiedene Posts unterscheiden sich - aber keiner erwischt eine
-    // ungluecklich zerstreute Fassung.
-    let s = 0;
-    for (const z of wort.textContent) s = (s * 31 + z.charCodeAt(0)) % 100000;
-    const zufall = () => {
-      s = (s * 1103515245 + 12345) % 2147483648;
-      return s / 2147483648;
-    };
-    // DER LETZTE BUCHSTABE LOEST SICH AUF (Tim, 23.08.2026).
-    //
-    // Er bekommt eine Maske aus quadratischen Modulen im Raster unseres
-    // Zeichens: Links steht er noch ganz, nach rechts fallen immer mehr
-    // Kacheln weg.
-    const letzter = document.getElementById("letzter");
-    const lr = letzter.getBoundingClientRect();
-    const lLinks = lr.left - eltern.left;
-    const lBreite = lr.width;
-    // Ueber diese Strecke faellt die Dichte von 1 auf 0.
-    // Die Strecke haengt an der BUCHSTABENBREITE. Ein erster Versuch war
-    // 278px lang - ueber die 80px des Buchstabens fiel die Dichte damit
-    // nur von 1 auf 0.7, man sah fast nichts. Mit dem 2.4-fachen der
-    // Buchstabenbreite ist an seinem rechten Rand rund ein Drittel uebrig.
-    const strecke = lBreite * 2.4;
-    const dichteBei = (x) => Math.pow(Math.max(0, 1 - (x - lLinks) / strecke), 2.2);
-
-    // Maske bauen: weisse Kacheln bleiben stehen, fehlende werden
-    // durchsichtig. Die erste Spalte bleibt immer ganz, sonst franst der
-    // Buchstabe schon am Ansatz aus.
-    const spaltenImBuchstaben = Math.max(1, Math.ceil(lBreite / M));
-    const zeilenImBuchstaben = Math.max(1, Math.ceil(lr.height / M));
-    let kacheln = "";
-    for (let cx = 0; cx < spaltenImBuchstaben; cx++) {
-      const x = lLinks + cx * M;
-      const d = cx === 0 ? 1 : dichteBei(x);
-      for (let cy = 0; cy < zeilenImBuchstaben; cy++) {
-        if (cx > 0 && zufall() > d) continue;
-        kacheln += `<rect x="${cx * M}" y="${cy * M}" width="${M}" height="${M}" fill="#fff"/>`;
-      }
-    }
-    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${Math.ceil(lBreite)}" height="${Math.ceil(lr.height)}">${kacheln}</svg>`;
-    const maske = `url("data:image/svg+xml;utf8,${encodeURIComponent(svg)}")`;
-    letzter.style.webkitMaskImage = maske;
-    letzter.style.maskImage = maske;
-    letzter.style.webkitMaskRepeat = "no-repeat";
-    letzter.style.maskRepeat = "no-repeat";
-
-    // KEIN FREIER STAUB MEHR (Tim, 23.08.2026). Die einzelnen Kruemel
-    // neben dem Wort sind raus - was bleibt, ist die Aufloesung des
-    // letzten Buchstabens selbst. Das Feld bleibt im Aufbau, damit ein
-    // Zurueck eine Sache von wenigen Zeilen ist.
-    const weiteste = wort.getBoundingClientRect().right - eltern.left;
+    // Kein Pixelstaub, keine Auflösung (Tim, 24.08.2026): Das Grosswort
+    // steht sauber und überlappt die Oberkante der Glaskarte - das war der
+    // Teil, der ihm gefallen hat.
+    const weiteste = wort.getBoundingClientRect().right - feldEl.getBoundingClientRect().left;
 
     // 3) Schlagzeile einpassen
     let ts = 50;
@@ -177,9 +112,7 @@ function einpassenQuelle() {
 
     return {
       wortgroesse: gr,
-      modul: M,
-      kruemel: feld.querySelectorAll("b").length,
-      staubBis: Math.round(weiteste),
+      wortBis: Math.round(weiteste),
       platz,
       titelgroesse: ts,
       titelBreite: Math.round(laengste()),
@@ -249,12 +182,6 @@ export async function renderKarte({
     background:linear-gradient(120deg,#02F0D1,#FF2E97);
     -webkit-background-clip:text; background-clip:text; color:transparent;
     filter:drop-shadow(0 16px 42px rgba(0,0,0,0.62)); }
-  /* Der letzte Buchstabe wird gerastert - die Maske entsteht erst nach dem
-     Satz, weil sie die Buchstabenbreite braucht. */
-  .letzter { display:inline-block; }
-  .staub { position:absolute; left:0; top:0; pointer-events:none;
-    filter:drop-shadow(0 10px 26px rgba(0,0,0,0.45)); }
-  .staub b { position:absolute; display:block; }
   /* Chip exakt wie auf der Startseite: Cyan-Punkt, und der rechte
      Innenabstand um die Laufweite gekuerzt, damit die Schrift mittig
      sitzt - sonst steht sie 0.4px zu weit links. */
@@ -271,7 +198,7 @@ export async function renderKarte({
   <div class="bild"><img src="file://${bild}"></div>
   <img class="logo" src="file://${LOGO}">
   <div class="karte">
-    <div class="wortfeld"><span class="wort" id="wort">${escapeHtml(wort.slice(0, -1))}<span class="letzter" id="letzter">${escapeHtml(wort.slice(-1))}</span></span><div class="staub" id="staub"></div></div>
+    <div class="wortfeld"><span class="wort" id="wort">${escapeHtml(wort)}</span></div>
     <span class="chip"><i></i>${escapeHtml(kicker ?? "")}</span>
     <div class="titel">${zeilen.map((z) => `<span class="z">${escapeHtml(z)}</span>`).join("")}</div>
   </div>
@@ -301,7 +228,7 @@ export async function renderKarte({
     );
     if (!mass.passt) {
       console.log(
-        `  Hinweis: Vorlage eng - Wort ${mass.wortgroesse}px, Staub bis ${mass.staubBis} von ${mass.platz}px, Schlagzeile ${mass.titelgroesse}px`,
+        `  Hinweis: Vorlage eng - Wort ${mass.wortgroesse}px bis ${mass.wortBis} von ${mass.platz}px, Schlagzeile ${mass.titelgroesse}px`,
       );
     }
     await page.waitForTimeout(120);
