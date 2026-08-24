@@ -146,6 +146,31 @@ const TEXTKANTE = 0.63; // ab hier liegt der Textblock ueber dem Bild
 // den einen echten Fehlgriff von den funktionierenden Bildern.
 const MAX_KANTENDICHTE = 1.6;
 
+// BILDGUETE HAT KEIN CODE-GEGENSTUECK - und das ist eine bewusste Ausnahme
+// von unserer Regel "was im Prompt steht, muss im Code geprueft werden".
+//
+// Am 24.08.2026 fiel Tim ein Post auf, der "aussieht als haette ihn ein
+// Fuenfjaehriger gepostet" - eine Grossaufnahme aus Metal Gear Solid 4.
+// Ich habe drei Messverfahren an seinen guten und schlechten Beispielen
+// durchprobiert:
+//   - Schaerfe (Laplace-Varianz): Konami 233, Witcher 88 - das schlechte
+//     Bild misst SCHAERFER als das gute.
+//   - Detailtiefe (halbieren und zurueckrechnen): Konami 2.50,
+//     Witcher 1.49, Dawnwalker 1.02 - dieselbe Umkehrung.
+//   - Spitzenschaerfe der schaerfsten Kacheln: Konami 1640, Witcher 1168.
+// Alle drei ordnen die Bilder GEGENTEILIG zu Tims Urteil. Der Grund: Ein
+// modernes Motiv mit Tiefenunschaerfe ist rechnerisch weich, sieht aber
+// teuer aus; ein altes Spiel ist rechnerisch scharf und sieht billig aus.
+//
+// Auch das Erscheinungsjahr taugt nicht: Steam meldet fuer Metal Gear
+// Solid 4 den 27.08.2026, weil dort die Neuauflage gelistet ist.
+//
+// "Sieht das teuer aus" ist damit genau die Sorte Urteil, fuer die dieses
+// Tor ueberhaupt ein sehendes Modell befragt statt einer Formel. Die
+// Schranke im Code ist stattdessen die Annahmequote weiter unten: Wird das
+// Kriterium zu streng ausgelegt, faellt sie - und die Warnung schlaegt an,
+// bevor Posts ausfallen.
+
 // BILDGEDAECHTNIS (Tim, 24.08.2026 - "das darf nicht passieren").
 //
 // Am 24.08. gingen zwei Modern-Warfare-Posts direkt hintereinander mit
@@ -340,10 +365,13 @@ So sieht der fertige Post aus: Ueber dem unteren Drittel (ab etwa 63 Prozent der
 
 Zu jedem Bild steht in Klammern, wo sein Motivschwerpunkt liegt. Ueber 63 Prozent heisst: Das Wichtige verschwindet hinter der Karte.
 
-Beurteile jedes Bild nach drei Kriterien:
+Beurteile jedes Bild nach vier Kriterien:
 1. SUJET: Passt das Motiv zur Schlagzeile? Ein Bild aus dem falschen Spiel, der falschen Ära oder dem falschen Schauplatz ist ein Ausschlussgrund - auch wenn es schoen ist.
 2. AUSSCHNITT: Ist die Hauptfigur bzw. das Hauptmotiv als Ganzes sichtbar und gut platziert? Angeschnittene Figuren am Bildrand, Figuren die im unteren Textbereich verschwinden, oder ein leerer Bildausschnitt (nur Himmel, nur Boden, nur Wand) sind Ausschlussgruende. Ein Spiel-Schriftzug darf zu sehen sein, aber NICHT angeschnitten.
 3. WIRKUNG: Stoppt das Bild im Feed den Daumen? Gesichter und klare Motive ja, matschige Wimmelbilder nein.
+4. BILDGUETE - der strengste Punkt (Tim, 24.08.2026): Sieht das Bild aus, als koennte es heute von einem Premium-Magazin stammen? Wir stehen im Feed direkt neben GameStar und GamePro, die offizielle Presse-Artworks verwenden. Ausschlussgruende sind: sichtbar veraltete Grafik (kantige Modelle, flache Texturen, Optik aelterer Konsolengenerationen), weichgezeichnete oder hochskalierte Bilder ohne feine Details, Bewegungsunschaerfe aus Zwischensequenzen, sichtbare Kompressionsartefakte.
+   ACHTUNG, HAEUFIGER FEHLGRIFF: Ein Motiv kann gleichzeitig IKONISCH und OPTISCH VERALTET sein. Genau daran ist das Tor am 24.08. gescheitert - es waehlte eine Grossaufnahme aus einem Spiel von 2008 mit der Begruendung, sie sei ikonisch und stoppe den Daumen. Tim dazu: "es sieht so aus als haette es ein Fuenfjaehriger gepostet." Bekanntheit ersetzt keine Bildguete. Je groesser ein Gesicht im Bild steht, desto gnadenloser faellt jede Schwaeche auf.
+   Handelt die Meldung von einem alten Spiel und ist ALLES Material entsprechend alt, ist das kein Grund zur Milde: Dann taugt keines - lieber keinen Post als einen, der billig aussieht.
 
 Waehle das beste Bild. Wenn KEINES die Kriterien erfuellt, waehle keines - wir nehmen dann eine andere Meldung, das ist ausdruecklich erlaubt und besser als ein schwacher Post.
 
