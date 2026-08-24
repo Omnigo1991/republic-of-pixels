@@ -110,16 +110,22 @@ async function steamPool(gameName) {
   }
 
   // Pool: Key Art zuerst (beide Auflösungen = EIN Eintrag), dann bis zu
-  // 8 offizielle Screenshots.
+  // 12 offizielle Screenshots. Mehr Auswahl kostet nichts, solange wir nur
+  // einen Teil davon herunterladen (siehe anzahl im Aufrufer).
   const eintraege = [
-    [
-      `https://cdn.cloudflare.steamstatic.com/steam/apps/${treffer.id}/library_600x900_2x.jpg`,
-      `https://cdn.cloudflare.steamstatic.com/steam/apps/${treffer.id}/library_600x900.jpg`,
-    ],
-    // POOL VERGROESSERT 8 -> 12 (Tim, 24.08.2026): Das Tor kann nur unter
-    // dem waehlen, was wir holen. Mehr Auswahl kostet nichts, solange wir
-    // nur einen Teil davon herunterladen (siehe anzahl im Aufrufer).
-    ...screenshots.slice(0, 12).map((u) => [u]),
+    {
+      urls: [
+        `https://cdn.cloudflare.steamstatic.com/steam/apps/${treffer.id}/library_600x900_2x.jpg`,
+        `https://cdn.cloudflare.steamstatic.com/steam/apps/${treffer.id}/library_600x900.jpg`,
+      ],
+      herkunft: "Key Art (Steam)",
+      publisher,
+    },
+    ...screenshots.slice(0, 12).map((u, i) => ({
+      urls: [u],
+      herkunft: `Screenshot ${i + 1} (Steam)`,
+      publisher,
+    })),
   ];
   return { eintraege, publisher, spielKey: normalisiert(treffer.name) };
 }
@@ -184,17 +190,73 @@ async function igdbPool(gameName) {
   // das Original nicht, wird der Reihe nach abgestiegen statt der ganze
   // Eintrag zu verfallen.
   const stufen = (id) => [bild(id, "t_original"), bild(id, "t_1080p"), bild(id, "t_720p")];
-  const eintraege = [];
-  // Cover zuerst (Hochformat wie Steam-Key-Art), dann Artworks, dann
-  // Screenshots.
-  if (spiel.cover?.image_id) eintraege.push(stufen(spiel.cover.image_id));
-  for (const a of (spiel.artworks ?? []).slice(0, 6)) eintraege.push(stufen(a.image_id));
-  for (const s of (spiel.screenshots ?? []).slice(0, 6)) eintraege.push(stufen(s.image_id));
-  if (eintraege.length === 0) return null;
-
   const publisher =
     (spiel.involved_companies ?? []).find((c) => c.publisher && c.company?.name)?.company.name ?? "IGDB";
+  const eintraege = [];
+  // Artworks zuerst: Das sind die offiziellen Presse-Motive, und genau die
+  // liegen hier in Originalgroesse vor (bei Battlefield 6 gemessen
+  // 3840x2160, waehrend Steam nur 1920x1080 liefert). Danach das Cover,
+  // zuletzt die Screenshots.
+  for (const a of (spiel.artworks ?? []).slice(0, 6)) {
+    eintraege.push({ urls: stufen(a.image_id), herkunft: `Artwork ${eintraege.length + 1} (IGDB)`, publisher });
+  }
+  if (spiel.cover?.image_id) {
+    eintraege.push({ urls: stufen(spiel.cover.image_id), herkunft: "Cover (IGDB)", publisher });
+  }
+  for (const [i, sc] of (spiel.screenshots ?? []).slice(0, 6).entries()) {
+    eintraege.push({ urls: stufen(sc.image_id), herkunft: `Screenshot ${i + 1} (IGDB)`, publisher });
+  }
+  if (eintraege.length === 0) return null;
   return { eintraege, publisher, spielKey: normalisiert(spiel.name) };
+}
+
+// ---------- Beide Quellen zusammen ----------
+
+// BEIDE QUELLEN STATT EINER (Tim, 24.08.2026: volle Konzentration auf
+// Bildqualitaet).
+//
+// Bisher galt: Findet Steam das Spiel, wird IGDB nie gefragt. Das war eine
+// Rangfolge ohne Beleg. Nachgemessen an vier Spielen (24.08.):
+//
+//   Battlefield 6     Steam 1920x1080   IGDB 3840x2160
+//   Silksong          Steam 1920x1080   IGDB 2400x1350
+//   Arc Raiders       Steam 1920x1080   IGDB  660x309
+//   Baldur's Gate 3   Steam 1920x1080   IGDB  996x563
+//
+// Keine Quelle gewinnt immer. Steam ist verlaesslich, aber gedeckelt;
+// IGDB hat die offiziellen Presse-Artworks - manchmal in 4K, manchmal
+// winzig. Wer sich vorab fuer eine entscheidet, verliert in der Haelfte
+// der Faelle. Also treten beide an, und es entscheidet die Messung: Die
+// Kandidaten werden nach tatsaechlicher Aufloesung sortiert, zu kleine
+// fallen schon beim Holen durch, und das Bild-Tor sieht den Rest.
+//
+// Die Listen werden ABWECHSELND zusammengelegt, nicht hintereinander -
+// sonst waeren bei sechs Kandidaten alle sechs aus derselben Quelle.
+async function beidePools(gameName) {
+  const [steam, igdb] = await Promise.all([
+    steamPool(gameName).catch((err) => {
+      console.log(`  Steam-Suche fehlgeschlagen (${err.message})`);
+      return null;
+    }),
+    igdbPool(gameName).catch((err) => {
+      console.log(`  IGDB-Suche fehlgeschlagen (${err.message})`);
+      return null;
+    }),
+  ]);
+  if (!steam && !igdb) return null;
+  if (!igdb) return steam;
+  if (!steam) return igdb;
+
+  const eintraege = [];
+  for (let i = 0; i < Math.max(steam.eintraege.length, igdb.eintraege.length); i++) {
+    if (igdb.eintraege[i]) eintraege.push(igdb.eintraege[i]);
+    if (steam.eintraege[i]) eintraege.push(steam.eintraege[i]);
+  }
+  console.log(
+    `  Bildquellen: Steam ${steam.eintraege.length} + IGDB ${igdb.eintraege.length} = ${eintraege.length} Eintraege`,
+  );
+  // Steams Titel ist der genauere Schluessel (Store-Name), darum zuerst.
+  return { eintraege, publisher: steam.publisher, spielKey: steam.spielKey };
 }
 
 // ---------- Gemeinsame Auswahl + Qualitäts-Wächter ----------
@@ -203,13 +265,7 @@ async function igdbPool(gameName) {
 // modulo Poolgrösse gerechnet) oder null.
 export async function holeSpielBild({ gameName, rotation = 0, outPath }) {
   try {
-    let pool = null;
-    try {
-      pool = await steamPool(gameName);
-    } catch (err) {
-      console.log(`  Steam-Suche fehlgeschlagen (${err.message}) - versuche IGDB`);
-    }
-    if (!pool) pool = await igdbPool(gameName);
+    const pool = await beidePools(gameName);
     if (!pool) return null;
 
     const { eintraege, publisher, spielKey } = pool;
@@ -223,7 +279,7 @@ export async function holeSpielBild({ gameName, rotation = 0, outPath }) {
     let buffer = null;
     for (let n = 0; n < eintraege.length && !buffer; n++) {
       const eintrag = eintraege[(rotation + n) % eintraege.length];
-      for (const url of eintrag) {
+      for (const url of eintrag.urls) {
         const kandidat = await laden(url);
         if (!kandidat || kandidat.length < 20000) continue;
         const meta = await sharp(kandidat).metadata();
@@ -267,21 +323,16 @@ export async function holeSpielBildKandidaten({
   outPrefix,
 }) {
   try {
-    let pool = null;
-    try {
-      pool = await steamPool(gameName);
-    } catch (err) {
-      console.log(`  Steam-Suche fehlgeschlagen (${err.message}) - versuche IGDB`);
-    }
-    if (!pool) pool = await igdbPool(gameName);
+    const pool = await beidePools(gameName);
     if (!pool) return null;
 
-    const { eintraege, publisher, spielKey } = pool;
+    const { eintraege, spielKey } = pool;
     const kandidaten = [];
 
     for (let n = 0; n < eintraege.length && kandidaten.length < anzahl; n++) {
       const index = (rotation + n) % eintraege.length;
-      for (const url of eintraege[index]) {
+      const eintrag = eintraege[index];
+      for (const url of eintrag.urls) {
         const roh = await laden(url);
         if (!roh || roh.length < 20000) continue;
         const meta = await sharp(roh).metadata();
@@ -308,8 +359,8 @@ export async function holeSpielBildKandidaten({
         const verhaeltnis = (meta.width ?? 1) / (meta.height ?? 1);
         kandidaten.push({
           pfad,
-          credit: `Bild: ${publisher}`,
-          herkunft: index === 0 ? "offizielles Key Art" : `offizieller Screenshot ${index}`,
+          credit: `Bild: ${eintrag.publisher}`,
+          herkunft: eintrag.herkunft,
           poolIndex: index,
           spielKey,
           breite: meta.width ?? 0,
@@ -345,13 +396,18 @@ export async function holeSpielBildKandidaten({
         b.breite * b.hoehe - a.breite * a.hoehe,
     );
     const hoch = kandidaten.filter((k) => k.hochformat).length;
-    const groesste = kandidaten[0];
+    // Wirklich das groesste suchen, nicht das erste: Nach dem Sortieren
+    // steht vorne das beste HOCHFORMAT, das muss nicht das groesste sein.
+    // Die erste Fassung meldete fuer Battlefield 6 "groesstes 1080x1080",
+    // waehrend ein 3840x2160 im selben Satz lag - eine Protokollzeile, die
+    // luegt, ist schlimmer als keine.
+    const groesste = kandidaten.reduce((a, b) => (b.breite * b.hoehe > a.breite * a.hoehe ? b : a));
     console.log(
       `  Spielbilder: ${kandidaten.length} Kandidaten, davon ${hoch} im Hochformat` +
         ` (groesstes ${groesste.breite}x${groesste.hoehe})`,
     );
 
-    return { kandidaten, poolGroesse: eintraege.length, spielKey, publisher };
+    return { kandidaten, poolGroesse: eintraege.length, spielKey, publisher: pool.publisher };
   } catch (err) {
     console.log(`  Spielbild-Suche fehlgeschlagen (${err.message})`);
     return null;
