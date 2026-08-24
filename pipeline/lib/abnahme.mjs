@@ -153,9 +153,18 @@ export async function pruefeGrafik(pfad, zeilenSoll, art = "bild") {
   //    87 % - gemessen an acht echten Posts: Kopfzeile 61,8-63,9 %,
   //    Schlagzeile 66,5-80,4 %, Notiz 82,7-86,3 %. Das Fenster reicht von 55
   //    bis 90 %; die Trennung von hellem Bild macht die linke Kante (unten).
+  // FENSTER NACHGEMESSEN (24.08.2026, Rebranding-Post): Die letzte
+  // Schlagzeilenzeile der NEUEN Vorlage endet auf JEDEM geprüften Bild bei
+  // 91.5-91.6% der Höhe - das Fenster endete aber bei 90%. Vier von fünf
+  // Renderings schafften es nur durch ein paar Pixel Zufallsglück ins
+  // Fenster; beim fünften (GTA-6-Motiv, längere Schlagzeile) fiel die
+  // Zeile genau an der Kante ab und die Abnahme hätte einen einwandfreien
+  // Post verworfen - eine Regel, die nur "meistens" stimmt, ist keine
+  // Regel. Das Fenster reicht jetzt bis 94%, mit Prüfmarge über den
+  // gemessenen 91.6% hinaus.
   const istTypo = art === "typo";
   const textVon = Math.round(hoehe * (istTypo ? 0.3 : 0.55));
-  const textBis = Math.round(hoehe * (istTypo ? 0.72 : 0.9));
+  const textBis = Math.round(hoehe * (istTypo ? 0.72 : 0.94));
   let zeilen = textZeilen(data, breite, hoehe, textVon, textBis);
   // Bänder aussortieren, die nicht am Satzspiegel beginnen - helle
   // Bildstellen. Nur beim linksbündigen Marker-Layout; die Typo-Karte ist
