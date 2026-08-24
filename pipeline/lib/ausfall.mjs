@@ -35,6 +35,7 @@ export const GRUND = {
   AUSWAHL_LEER: "Auswahl leer",
   NICHT_ERREICHBAR: "Grafik nicht erreichbar",
   INSTAGRAM: "von Instagram abgelehnt",
+  TYPO_AUS: "Typo-Karte heute abgeschaltet",
 };
 
 // Wie lange die Tageswerte im State bleiben. Zwei Wochen reichen, um einem

@@ -607,6 +607,26 @@ async function prepare() {
       // Ist das Tageskontingent weg, wird die Story übersprungen und der
       // Lauf holt sich per Ersatz-Runde eine mit echtem Bildmaterial.
       const alsTypoKarte = !imagePath;
+
+      // TYPO-KARTE FUER HEUTE ABGESCHALTET (Tim, 24.08.2026): Sie traegt
+      // noch die alte Optik (Versalien, Handschrift-Notiz, alter
+      // Textmarker-Verlauf) und wurde beim heutigen Umbau nicht mitgezogen.
+      // Bis sie neu gebaut ist, wird eine Story ohne Bild uebersprungen -
+      // die naechste Story mit echtem Bildmaterial rueckt nach, statt dass
+      // ein Post in der alten Vorlage rausgeht. Nur fuer HEUTE gedacht
+      // (Tims Datum): danach entweder die Karte nachziehen oder diesen
+      // Block wieder rausnehmen.
+      const TYPO_HEUTIGES_DATUM = "2026-08-24";
+      if (alsTypoKarte && day === TYPO_HEUTIGES_DATUM) {
+        state.instagram.uebersprungen ??= {};
+        state.instagram.uebersprungen[article.slug] = new Date().toISOString();
+        console.log(
+          `  ${article.slug}: kein Bildmaterial, Typo-Karte heute abgeschaltet - übersprungen`,
+        );
+        notiere(state, GRUND.TYPO_AUS, article.slug);
+        continue;
+      }
+
       state.instagram.typo ??= {};
       const typoHeute = Object.values(state.instagram.typo).filter(
         (iso) => zurich(new Date(iso)).day === day,
