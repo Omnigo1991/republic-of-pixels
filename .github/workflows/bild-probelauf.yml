@@ -1,0 +1,45 @@
+# BILD-PROBELAUF (Tim, 24.08.2026): Prueft den Bildweg mit echtem Material
+# und echtem Urteil - ohne zu posten, ohne zu committen.
+#
+# Nur auf Knopfdruck. Am Ende haengen die fertigen Grafiken am Lauf und im
+# Protokoll steht eine Tabelle: Quelle, Aufloesung, Schnitt, Abnahme.
+name: Bild-Probelauf
+
+on:
+  workflow_dispatch:
+    inputs:
+      anzahl:
+        description: "Wie viele der neuesten Meldungen pruefen"
+        default: "6"
+        required: false
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - name: Dependencies installieren
+        run: npm ci
+      - name: Browser installieren
+        run: npx playwright install --with-deps chromium
+      - name: Probelauf
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
+          TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
+          PROBE_ANZAHL: ${{ inputs.anzahl }}
+        run: node pipeline/bild-probelauf.mjs
+      - name: Grafiken anhaengen
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: probelauf-grafiken
+          path: probelauf/
+          if-no-files-found: warn

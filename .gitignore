@@ -21,3 +21,4 @@ pipeline/stoerungen.json
 # Ausgabe des Modell-Vergleichs (haengt am Workflow-Lauf, nicht im Projekt)
 modell-vergleich/
 guide-entwurf/
+probelauf/
