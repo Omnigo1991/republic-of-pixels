@@ -149,7 +149,16 @@ function kartenCss({ mitBildEbene, positionX, positionY }) {
     border:1px solid rgba(255,255,255,0.16); background:rgba(255,255,255,0.09);
     backdrop-filter:blur(30px) saturate(150%); }
   .wortfeld { position:absolute; left:50px; top:-74px; height:150px; }
+  /* PLATZ FUER UMLAUTPUNKTE (Fehler vom 24.08.2026): Bei line-height 0.86
+     ist der Kasten 129px hoch, die Tinte von "Ü" braucht aber 143.3px ueber
+     der Grundlinie. Der Verlauf wird nur INNERHALB des Kastens gemalt - die
+     Punkte fielen heraus und waren unsichtbar ("ERNUCHTERT" statt
+     "ERNÜCHTERT"). Dasselbe Problem wie beim gamescom-"g" auf der Website,
+     nur oben statt unten. Das Polster gibt dem Kasten die fehlende Strecke;
+     der negative Aussenabstand nimmt sie dem Layout wieder weg, damit sich
+     nichts verschiebt. */
   .wort { position:relative; display:inline-block; padding-right:0.12em;
+    padding-top:0.16em; margin-top:-0.16em;
     font-size:150px; font-weight:900; line-height:0.86; letter-spacing:-0.055em;
     text-transform:uppercase; white-space:nowrap;
     background:linear-gradient(120deg,#02F0D1,#FF2E97);
@@ -183,7 +192,19 @@ function kartenBody({ mitBildEbene, bild, wort, kicker, zeilen }) {
 function zeilenAusHeadline(headlineLines) {
   return (headlineLines ?? []).map((z) =>
     Array.isArray(z)
-      ? z.map((seg) => (typeof seg === "string" ? seg : seg.text)).join("")
+      // MIT LEERZEICHEN VERBINDEN (Fehler vom 24.08.2026): Die Redaktion
+      // liefert jede Zeile als Kette von Segmenten - ein Ueberbleibsel der
+      // alten Vorlage, die eines davon als Textmarker einfaerbte. Die alte
+      // Karte fuegte sie mit .join(" ") zusammen; beim Umbau habe ich
+      // .join("") geschrieben. Solange nur EIN Segment pro Zeile kam, fiel
+      // es nicht auf - bei zweien klebten die Woerter zusammen ("MIT60 FPS"
+      // im Dawnwalker-Post). Der Filter entfernt zusaetzlich leere Segmente,
+      // damit kein doppeltes Leerzeichen entsteht.
+      ? z
+          .map((seg) => (typeof seg === "string" ? seg : seg.text))
+          .map((t) => String(t ?? "").trim())
+          .filter(Boolean)
+          .join(" ")
       : String(z),
   );
 }

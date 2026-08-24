@@ -560,15 +560,32 @@ async function prepare() {
           .map((z) => (Array.isArray(z) ? z.map((s) => s?.text ?? "").join(" ") : ""))
           .join(" ")
           .trim();
+        // BILDGEDAECHTNIS (Tim, 24.08.2026): Die Fingerabdruecke der letzten
+        // Posts gehen ins Tor, damit sich kein Motiv wiederholt. Am 24.08.
+        // gingen zwei Modern-Warfare-Posts direkt hintereinander mit
+        // demselben Screenshot raus - das Tor hatte beide Male sauber
+        // gewaehlt, kannte die Nachbarposts aber nicht.
+        state.instagram.bildFinger ??= [];
         const tor = await waehleBild({
           kandidaten,
           schlagzeile,
           spielName: pick.gameName ?? null,
+          letzteBilder: state.instagram.bildFinger.map((e) => e.finger),
         });
         zaehleTorEntscheidung(Boolean(tor.gewaehlt));
         if (tor.gewaehlt) {
           imagePath = tor.gewaehlt.pfad;
           credit = tor.gewaehlt.credit ?? credit;
+          if (tor.gewaehlt.finger) {
+            // Nur die letzten acht behalten - so weit reicht ein
+            // Instagram-Raster zurueck, das jemand auf einen Blick sieht.
+            state.instagram.bildFinger.push({
+              slug: article.slug,
+              wann: new Date().toISOString(),
+              finger: tor.gewaehlt.finger,
+            });
+            state.instagram.bildFinger = state.instagram.bildFinger.slice(-8);
+          }
         } else {
           // KEIN AUSWEICHEN AUF DIE TYPO-KARTE (Tim, 14.08.2026): "Wir sind
           // keine Typo-Account, sondern unser Account lebt mit Bildern."

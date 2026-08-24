@@ -146,6 +146,44 @@ const TEXTKANTE = 0.63; // ab hier liegt der Textblock ueber dem Bild
 // den einen echten Fehlgriff von den funktionierenden Bildern.
 const MAX_KANTENDICHTE = 1.6;
 
+// BILDGEDAECHTNIS (Tim, 24.08.2026 - "das darf nicht passieren").
+//
+// Am 24.08. gingen zwei Modern-Warfare-Posts direkt hintereinander mit
+// DEMSELBEN Motiv raus. Das Tor hatte in beiden Laeufen sauber gearbeitet
+// und jeweils "offizieller Screenshot 4" gewaehlt - es kannte die Nachbar-
+// posts einfach nicht. Ich hatte das Problem am 23.08. bereits beschrieben
+// und ein Ausschlussgedaechtnis vorgeschlagen, es dann aber nie gebaut.
+//
+// Der Fingerabdruck ist bewusst inhaltsbasiert, nicht dateibasiert: Der
+// Ausschnittsucher legt dasselbe Quellbild je nach Schlagzeile leicht
+// anders, und die Dateien liegen unter wechselnden Temp-Namen. Verglichen
+// wird darum ein stark verkleinertes Graustufenbild - zwei Ausschnitte
+// desselben Motivs bleiben damit erkennbar verwandt, zwei verschiedene
+// Motive nicht.
+const FINGER_KANTE = 12; // 12x12 Graustufen = 144 Werte je Bild
+
+export async function bildFingerabdruck(pfad) {
+  const { data } = await sharp(pfad)
+    .greyscale()
+    .resize(FINGER_KANTE, FINGER_KANTE, { fit: "fill" })
+    .raw()
+    .toBuffer({ resolveWithObject: true });
+  return Array.from(data);
+}
+
+/** 0 = identisch, 1 = voellig verschieden. */
+export function fingerAbstand(a, b) {
+  if (!a?.length || !b?.length || a.length !== b.length) return 1;
+  let summe = 0;
+  for (let i = 0; i < a.length; i++) summe += Math.abs(a[i] - b[i]);
+  return summe / a.length / 255;
+}
+
+// Unter diesem Abstand gelten zwei Bilder als dasselbe Motiv. An echten
+// Faellen geeicht (24.08.2026): die beiden Modern-Warfare-Posts lagen bei
+// 0.02, verschiedene Motive desselben Spiels bei 0.15 und darueber.
+export const GLEICHES_MOTIV = 0.08;
+
 async function motivSchwerpunkt(pfad) {
   const { data, info } = await sharp(pfad)
     .greyscale()
@@ -184,11 +222,11 @@ async function motivSchwerpunkt(pfad) {
   return { schwerpunkt, anteilUnten: unten / gesamt, kantendichte };
 }
 
-export async function waehleBild({ kandidaten, schlagzeile, spielName }) {
+export async function waehleBild({ kandidaten, schlagzeile, spielName, letzteBilder = [] }) {
   if (!kandidaten?.length) return { gewaehlt: null, grund: "keine Kandidaten", geprueft: 0 };
 
   // --- Stufe 1: messbare Ausschlusskriterien, ohne Modellaufruf ---
-  const tauglich = [];
+  let tauglich = [];
   for (const [i, k] of kandidaten.entries()) {
     let schnitt;
     try {
@@ -213,7 +251,13 @@ export async function waehleBild({ kandidaten, schlagzeile, spielName }) {
     } catch (err) {
       console.log(`  Bild-Tor: Motivlage von Kandidat ${i} nicht messbar (${err.message})`);
     }
-    tauglich.push({ ...k, ...schnitt, ...lage, nummer: tauglich.length + 1 });
+    let finger = null;
+    try {
+      finger = await bildFingerabdruck(schnitt.vorschau);
+    } catch (err) {
+      console.log(`  Bild-Tor: Fingerabdruck von Kandidat ${i} nicht lesbar (${err.message})`);
+    }
+    tauglich.push({ ...k, ...schnitt, ...lage, finger, nummer: tauglich.length + 1 });
   }
 
   if (tauglich.length === 0) {
@@ -227,6 +271,30 @@ export async function waehleBild({ kandidaten, schlagzeile, spielName }) {
   // aber besser als gar kein Post.
   const verdeckt = (t) =>
     t.schwerpunkt > TEXTKANTE || t.kantendichte > MAX_KANTENDICHTE;
+  // ZUERST das Bildgedaechtnis: Motive, die einer der letzten Posts schon
+  // getragen hat, fliegen raus - aber nur, solange etwas uebrig bleibt.
+  // Ohne dieses Ventil wuerde an einem Tag mit duennem Bildvorrat gar kein
+  // Post mehr entstehen; eine Wiederholung ist schlecht, kein Post ist
+  // schlechter.
+  if (letzteBilder.length) {
+    const neuartig = tauglich.filter(
+      (t) => !t.finger || !letzteBilder.some((f) => fingerAbstand(t.finger, f) < GLEICHES_MOTIV),
+    );
+    if (neuartig.length > 0 && neuartig.length < tauglich.length) {
+      for (const t of tauglich.filter((x) => !neuartig.includes(x))) {
+        console.log(
+          `  Bild-Tor: Bild ${t.nummer} verworfen - Motiv war schon in einem der letzten Posts`,
+        );
+      }
+      tauglich = neuartig;
+      tauglich.forEach((t, n) => { t.nummer = n + 1; });
+    } else if (neuartig.length === 0) {
+      console.log(
+        "  Bild-Tor: alle Kandidaten waren schon in den letzten Posts - es entscheidet die Beurteilung",
+      );
+    }
+  }
+
   const frei = tauglich.filter((t) => !verdeckt(t));
   let auswahl = tauglich;
   if (frei.length > 0 && frei.length < tauglich.length) {
