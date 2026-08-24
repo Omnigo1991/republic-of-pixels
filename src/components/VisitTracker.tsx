@@ -24,6 +24,19 @@ export function VisitTracker() {
       // Besucher-Kennung. Das hat die Zahlen aufgeblaeht.
       if (location.hostname !== "www.republicofpixels.com") return;
       if (localStorage.getItem("rop_intern")) return;
+      // KEINE AUTOMATISIERTEN BROWSER (Tim, 24.08.2026). Die Lücke von
+      // 16.08. war nur die halbe Miete: Sie schloss Vorschau-Adressen aus,
+      // nicht aber Prüfläufe gegen die ECHTE Domain. Am 24.08. habe ich
+      // beim Browser-Vergleich (Chrome gegen Safari, Desktop und Handy)
+      // www.republicofpixels.com viermal mit frisch gestarteten Browsern
+      // geladen - jeder mit leerem localStorage und damit neuer
+      // Besucher-Kennung. Vier Phantom-Besucher an einem Tag mit 85.
+      //
+      // navigator.webdriver ist true in jedem ferngesteuerten Browser
+      // (Playwright, Selenium, Puppeteer) und false bei echten Menschen -
+      // das Merkmal ist Teil des W3C-Standards und lässt sich nicht
+      // versehentlich auslösen.
+      if (navigator.webdriver) return;
       let visitor = localStorage.getItem("rop_vid");
       if (!visitor) {
         visitor = crypto.randomUUID();
