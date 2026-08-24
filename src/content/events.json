@@ -2,6 +2,14 @@
   "_hinweis": "Event-Radar-Termine, redaktionell gepflegt (Claude aktualisiert bei bestätigten Terminen aus der News-Pipeline). status: fixiert = offiziell bestätigt, erwartet = Branchen-Routine ohne offiziellen Termin, geruecht = unbestätigte Berichte. hero: true = Kandidat für die grosse Countdown-Karte (nächster künftiger Hero gewinnt). dateEnd steuert das automatische Ausblenden nach dem Event.",
   "events": [
     {
+      "name": "Opening Night Live",
+      "status": "fixiert",
+      "dateStart": "2026-08-25",
+      "dateEnd": "2026-08-25",
+      "dateLabel": "25. August · 20:00 Uhr",
+      "beschreibung": "Geoff Keighleys Show zum gamescom-Auftakt - traditionell voller Weltpremieren."
+    },
+    {
       "name": "gamescom 2026",
       "status": "fixiert",
       "hero": true,
@@ -12,12 +20,13 @@
       "thema": "gamescom"
     },
     {
-      "name": "Opening Night Live",
+      "name": "GTA 6: Extended Look",
       "status": "fixiert",
-      "dateStart": "2026-08-25",
-      "dateEnd": "2026-08-25",
-      "dateLabel": "25. August · 20:00 Uhr",
-      "beschreibung": "Geoff Keighleys Show zum gamescom-Auftakt - traditionell voller Weltpremieren."
+      "dateStart": "2026-08-27",
+      "dateEnd": "2026-08-27",
+      "dateLabel": "27. August · 21:00 Uhr",
+      "beschreibung": "Rockstars tieferer Blick auf GTA 6 - sechs Stunden exklusiv auf Netflix, danach auf YouTube.",
+      "thema": "gta-6"
     },
     {
       "name": "Tokyo Game Show 2026",
@@ -26,6 +35,14 @@
       "dateEnd": "2026-09-21",
       "dateLabel": "17.-21. September",
       "beschreibung": "Japans grösste Messe, zum 30. Jubiläum erstmals fünf Tage - Makuhari Messe, Chiba."
+    },
+    {
+      "name": "The Game Awards 2026",
+      "status": "fixiert",
+      "dateStart": "2026-12-10",
+      "dateEnd": "2026-12-10",
+      "dateLabel": "10. Dezember",
+      "beschreibung": "Die Preisverleihung des Jahres mit zahlreichen Weltpremieren - Termin von Geoff Keighley bestätigt."
     },
     {
       "name": "PlayStation State of Play",
@@ -42,14 +59,6 @@
       "dateEnd": "2026-09-30",
       "dateLabel": "September (Gerücht)",
       "beschreibung": "Mehrere Insider rechnen mit einer grossen Direct zur Weihnachtsplanung - unbestätigt."
-    },
-    {
-      "name": "The Game Awards 2026",
-      "status": "fixiert",
-      "dateStart": "2026-12-10",
-      "dateEnd": "2026-12-10",
-      "dateLabel": "10. Dezember",
-      "beschreibung": "Die Preisverleihung des Jahres mit zahlreichen Weltpremieren - Termin von Geoff Keighley bestätigt."
     }
   ]
 }
