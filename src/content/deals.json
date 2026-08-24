@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-23T22:35:44.295Z",
+  "updatedAt": "2026-08-24T02:03:57.429Z",
   "deals": [
     {
       "appId": 1142710,
@@ -11,6 +11,17 @@
       "endsAt": "2026-08-27T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/1142710/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1142710/capsule_184x69.jpg?t=1786634522"
+    },
+    {
+      "appId": 1687950,
+      "title": "Persona 5 Royal",
+      "discountPercent": 70,
+      "originalPrice": 5999,
+      "finalPrice": 1799,
+      "currency": "EUR",
+      "endsAt": "2026-08-24T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1687950/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1687950/capsule_184x69.jpg?t=1783356822"
     },
     {
       "appId": 2161700,
@@ -44,17 +55,6 @@
       "endsAt": "2026-09-05T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/1332010/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1332010/01489897d641b7f2e734a436dfabdd74afd4c677/capsule_184x69.jpg?t=1785424330"
-    },
-    {
-      "appId": 1569580,
-      "title": "Blue Prince",
-      "discountPercent": 40,
-      "originalPrice": 2999,
-      "finalPrice": 1799,
-      "currency": "EUR",
-      "endsAt": "2026-09-06T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1569580/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1569580/4f81a42ebaca088b16d5501914c6885e49f6c411/capsule_184x69.jpg?t=1783605097"
     },
     {
       "appId": 4001890,

@@ -1,0 +1,137 @@
+{
+  "slug": "dark-castle-40-jahre-steam-pc-port-2026",
+  "title": "Dark Castle wird 40 - und landet erstmals offiziell auf dem PC",
+  "subtitle": "Der Mac-Kultklassiker von 1986 und sein Nachfolger kommen als offizieller Port auf Steam - umgesetzt vom Mitschöpfer selbst",
+  "excerpt": "Ein Actionspiel, das auf dem Macintosh eigentlich gar nicht laufen konnte: Dark Castle feiert seinen 40. Geburtstag mit einem Steam-Release - inklusive eines Programmiertricks, der Apple damals gar nicht gefiel.",
+  "seoTitle": "Dark Castle: Mac-Klassiker von 1986 kommt auf Steam",
+  "metaDescription": "Dark Castle und Beyond Dark Castle erscheinen zum 40. Jubiläum offiziell auf Steam. Mitschöpfer Mark Stephen Pierce portiert die Mac-Kultklassiker selbst.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "tags": [
+    "Dark Castle",
+    "Steam",
+    "Retro",
+    "Silicon Beach Software",
+    "Macintosh",
+    "PC"
+  ],
+  "tldr": [
+    "Dark Castle (1986) und Beyond Dark Castle sind offiziell auf Steam erschienen",
+    "Der Port stammt von Mitschöpfer und Animator Mark Stephen Pierce",
+    "Das Original entstand auf dem Macintosh, der für Actionspiele technisch gar nicht ausgelegt war",
+    "Mitentwickler Jonathan Gay erfand später das Animationsformat Flash"
+  ],
+  "whyItMatters": "Dark Castle gehört zu den wenigen Actionspielen, die den frühen Macintosh an seine Grenzen trieben - bisher war es legal nur über Emulation und Archivkopien zugänglich. Der offizielle Steam-Port macht ein Stück Technikgeschichte erstmals ohne Bastelei spielbar, und zwar auf genau der Plattform, gegen die die Mac-Szene damals antrat.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "40 Jahre nach seinem Erscheinen auf dem Macintosh hat Dark Castle den Weg auf den PC gefunden. Sowohl der Klassiker von 1986 als auch der ein Jahr später veröffentlichte Nachfolger Beyond Dark Castle sind ab sofort auf Steam verfügbar - portiert von Mark Stephen Pierce, dem Animator und Mitschöpfer der Serie. Es ist die erste offizielle Möglichkeit, beide Titel ausserhalb alter Hardware oder Emulatoren zu spielen."
+    },
+    {
+      "type": "embed",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=W_j64eA-mcQ"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "1986",
+          "label": "Erscheinungsjahr des Originals auf dem Macintosh"
+        },
+        {
+          "value": "2 Spiele",
+          "label": "Dark Castle und Beyond Dark Castle kommen gemeinsam auf Steam"
+        },
+        {
+          "value": "1 Bit",
+          "label": "Farbtiefe der Originalgrafik - der Mac bekam erst 1993 Farbdisplays"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Ein Actionspiel auf der falschen Maschine"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der frühe Macintosh war alles, nur kein Spielerechner. Farbdisplays gab es erst 1993, an schnelle Bildwiederholung war kaum zu denken. Entsprechend eigenwillig fiel die Softwarebibliothek aus: Adventures, Simulationen und Edutainment-Klassiker wie Carmen Sandiego prägten das Bild. Wer als Entwicklerin oder Entwickler trotzdem auf der Plattform landete, kam meist wegen der technischen Herausforderung - nicht wegen des Marktes."
+    },
+    {
+      "type": "heading",
+      "text": "Vom Animationsdemo zum Dungeon Crawl"
+    },
+    {
+      "type": "paragraph",
+      "text": "Silicon Beach Software hatte bereits Erfolge auf dem Mac gefeiert, als das Studio auf Pierces Animationen stiess, die dem Adobe-Vorläufer VideoWorks beilagen. So etwas hatte die Szene noch nicht gesehen. Das Studio wollte daraus ein ausuferndes Science-Fiction-Abenteuer machen, Pierce hielt dagegen und schlug einen kompakteren Dungeon Crawl vor. Sein Storyboard erinnerte an Prince of Persia, kombinierte aber Gegnermuster im Stil von Donkey Kong und Space Invaders - eingebettet in Spinnweben, Fledermäuse und dunkle Ritter."
+    },
+    {
+      "type": "heading",
+      "text": "Der Trick, den Apple nicht mochte"
+    },
+    {
+      "type": "paragraph",
+      "text": "Damit die aufwendigen Animationen überhaupt flüssig liefen, arbeitete Pierce mit Jonathan Gay zusammen - jenem Programmierer, der später Flash entwickeln sollte. Beide sassen in verschiedenen Städten und schickten sich die jeweils aktuellen Builds per Post zu. Gay griff schliesslich zum sogenannten Page Flipping: Bilder wurden vorgeladen und versteckt, um dem Rechner Tempo abzuringen. Ein Kniff, den Apple offenbar nicht gerne sah, der aber funktionierte."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Ergebnis: ein 1-Bit-Spiel mit ungewöhnlich dichter Animation",
+        "Bekannt für hohen Anspruch, präzises Timing und schnelle Reflexe",
+        "Gilt als eines der härtesten Spiele der Mac-Bibliothek",
+        "1991 folgte eine Sega-Genesis-Umsetzung, die deutlich schlechter wegkam"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Vom Kultklassiker zum Steam-Eintrag"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Erfolg reichte 1987 für Beyond Dark Castle, und gemeinsam mit Lode Runner davor und Marathon danach gehört die Reihe zum festen Kanon der Macintosh-Kultklassiker. Die 1991er Genesis-Fassung fällt dagegen aus dem Rahmen: Sie wurde später vom Angry Video Game Nerd verrissen. Der neue Steam-Release ist damit vor allem eine Frage der Bequemlichkeit - er bietet einen saubereren Zugang als das Herumhantieren mit Emulatoren im Internet Archive."
+    },
+    {
+      "type": "paragraph",
+      "text": "Einordnung: Dark Castle ist weniger ein verlorenes Meisterwerk als ein technisches Dokument. Wer heute reinschaut, bekommt kein modernisiertes Remake, sondern ein knochenhartes Actionspiel in Schwarzweiss - und einen Blick darauf, wie viel Kreativität nötig war, um dem Macintosh Bewegung abzutrotzen. Dass ausgerechnet der PC die Jubiläumsplattform ist, hat dabei seinen eigenen Witz."
+    }
+  ],
+  "poll": {
+    "question": "Retro-Klassiker wie Dark Castle: Wie spielt ihr sie am liebsten?",
+    "options": [
+      "Offizieller Port auf Steam - Hauptsache, es startet",
+      "Emulator mit Originaldateien",
+      "Nur auf Originalhardware",
+      "Retro interessiert mich nur als modernes Remake"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-24T02:03:49.923Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "controller",
+  "sources": [
+    {
+      "title": "Revolutionary Macintosh Fantasy Series Celebrates 40th Anniversary With PC Version",
+      "url": "https://kotaku.com/revolutionary-macintosh-fantasy-series-celebrates-40th-anniversary-with-pc-version-2000727271",
+      "publisher": "Kotaku"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/dark-castle-40-jahre-steam-pc-port-2026.webp",
+    "alt": "Dark Castle wird 40 - und landet erstmals offiziell auf dem PC",
+    "credit": "Bild: Kotaku",
+    "sourceUrl": "https://kotaku.com/revolutionary-macintosh-fantasy-series-celebrates-40th-anniversary-with-pc-version-2000727271",
+    "sourceWidth": 844,
+    "sourceHeight": 622
+  },
+  "relatedSlugs": [
+    "epic-games-store-nutzerzahlen-keely-newzoo-2026",
+    "foxhole-charlie-krieg-71-tage-entwickler-eingriff",
+    "epic-games-store-newzoo-analyst-erholung-2026"
+  ]
+}
