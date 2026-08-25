@@ -1,6 +1,17 @@
 {
-  "updatedAt": "2026-08-25T10:04:01.928Z",
+  "updatedAt": "2026-08-25T14:04:12.939Z",
   "deals": [
+    {
+      "appId": 227300,
+      "title": "Euro Truck Simulator 2",
+      "discountPercent": 75,
+      "originalPrice": 1999,
+      "finalPrice": 499,
+      "currency": "EUR",
+      "endsAt": "2026-08-25T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/227300/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/227300/da84d11d3ddd817e0cca299608b469a854d75ba5/capsule_184x69.jpg?t=1785394779"
+    },
     {
       "appId": 302510,
       "title": "Ryse: Son of Rome",
@@ -55,17 +66,6 @@
       "endsAt": "2026-08-27T17:00:09.000Z",
       "url": "https://store.steampowered.com/app/2764460/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2764460/f0a29d6c91be4e91e9fa2f384dd5ae695bfd6b5b/capsule_184x69.jpg?t=1787606192"
-    },
-    {
-      "appId": 2358720,
-      "title": "Black Myth: Wukong",
-      "discountPercent": 30,
-      "originalPrice": 5999,
-      "finalPrice": 4199,
-      "currency": "EUR",
-      "endsAt": "2026-08-25T16:00:00.000Z",
-      "url": "https://store.steampowered.com/app/2358720/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2358720/b7f722ddd5e23503f598586aa3700dd4d827bb2d/capsule_184x69.jpg?t=1760601605"
     }
   ]
 }
