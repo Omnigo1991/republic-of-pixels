@@ -19,7 +19,7 @@
 // BILDWEG, nicht die Textauswahl - wer Schlagzeilen pruefen will, braucht
 // einen eigenen Lauf.
 
-import { readdirSync, readFileSync, mkdirSync } from "node:fs";
+import { readdirSync, readFileSync, mkdirSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { tmpdir } from "node:os";
@@ -28,6 +28,7 @@ import { holeSpielBildKandidaten } from "./lib/keyart.mjs";
 import { waehleBild, torBericht, zaehleTorEntscheidung } from "./lib/bildtor.mjs";
 import { renderKarte } from "./lib/instagram-karte.mjs";
 import { pruefeGrafik } from "./lib/abnahme.mjs";
+import { askClaude, parseJsonResponse, MODELL_HANDWERK } from "./lib/claude.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const AUS = join(ROOT, "probelauf");
@@ -47,11 +48,43 @@ function zweiZeilen(titel) {
   return [[w.slice(0, beste).join(" ")], [w.slice(beste).join(" ")]];
 }
 
+/**
+ * Der Bildpfad, den die Pipeline fuer das Pressebild benutzt - identische
+ * Reihenfolge wie portraitPathFor in instagram.mjs.
+ */
+function pressebildPfad(a) {
+  if (!a.image?.src) return null;
+  const original = join(ROOT, "public", a.image.src);
+  if (existsSync(original)) return original;
+  const portrait = join(ROOT, "public", a.image.src.replace(/\.webp$/, "-portrait.webp"));
+  return existsSync(portrait) ? portrait : null;
+}
+
+/**
+ * Spielname wie im Auswahl-Prompt der Pipeline (instagram.mjs): der exakte
+ * offizielle Titel - oder null, wenn die Meldung kein einzelnes Spiel
+ * betrifft. Ohne diesen Schritt sucht der Probelauf nach Spielen, die es
+ * nicht gibt.
+ */
+async function spielNameFuer(a) {
+  try {
+    const roh = await askClaude({
+      model: MODELL_HANDWERK,
+      maxTokens: 2000,
+      system: "Du antwortest ausschliesslich mit JSON.",
+      prompt: `Schlagzeile: "${a.title}"\nAnrisstext: "${(a.excerpt ?? "").slice(0, 300)}"\nSchlagworte: ${(a.tags ?? []).join(", ")}\n\n"gameName" = der exakte offizielle Titel des Spiels, um das sich die Story dreht (fuer die Key-Art-Suche, z. B. "Gothic 1 Remake", "Lies of P") - oder null, wenn die Story kein einzelnes Spiel betrifft (Firmen-News, Hardware, Personalien).\n\nAntworte NUR mit JSON: {"gameName": "..." oder null}`,
+    });
+    return parseJsonResponse(roh)?.gameName ?? null;
+  } catch (err) {
+    console.log(`  Spielname nicht bestimmbar (${err.message})`);
+    return null;
+  }
+}
+
 const D = join(ROOT, "src", "content", "articles");
 const artikel = readdirSync(D)
   .filter((f) => f.endsWith(".json"))
   .map((f) => JSON.parse(readFileSync(join(D, f), "utf8")))
-  .filter((a) => (a.tags ?? []).length)
   .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt))
   .slice(0, ANZAHL);
 
@@ -63,24 +96,47 @@ const letzteBilder = [];
 const zeilen = [];
 
 for (const a of artikel) {
-  const spiel = (a.tags ?? [])[0];
   console.log(`--- ${a.slug}`);
-  const vorrat = await holeSpielBildKandidaten({
-    gameName: spiel,
-    rotation: 0,
-    anzahl: 6,
-    outPrefix: join(tmpdir(), `probe-${a.slug}`),
-  });
-  if (!vorrat) {
+  const spiel = await spielNameFuer(a);
+  const kandidaten = [];
+  let jahr = null;
+
+  // Pressebild aus der Quelle - wie in der Pipeline nur, wenn die Quelle
+  // mindestens 900 px hoch ist.
+  const presse = pressebildPfad(a);
+  if (presse && (a.image?.sourceHeight ?? 0) >= 900) {
+    kandidaten.push({
+      pfad: presse,
+      credit: a.image?.credit ?? null,
+      herkunft: "Pressebild aus der Meldung",
+    });
+  }
+
+  if (spiel) {
+    const vorrat = await holeSpielBildKandidaten({
+      gameName: spiel,
+      rotation: 0,
+      anzahl: 6,
+      outPrefix: join(tmpdir(), `probe-${a.slug}`),
+    });
+    if (vorrat) {
+      kandidaten.push(...vorrat.kandidaten);
+      jahr = vorrat.jahr ?? null;
+    }
+  } else {
+    console.log("  kein einzelnes Spiel - nur Pressebild");
+  }
+
+  if (!kandidaten.length) {
     console.log("  kein Material gefunden");
-    zeilen.push({ slug: a.slug, spiel, ergebnis: "kein Material" });
+    zeilen.push({ slug: a.slug, spiel: spiel ?? "-", ergebnis: "kein Material" });
     continue;
   }
   const tor = await waehleBild({
-    kandidaten: vorrat.kandidaten,
+    kandidaten,
     schlagzeile: a.title,
     spielName: spiel,
-    jahr: vorrat.jahr ?? null,
+    jahr,
     letzteBilder,
   });
   zaehleTorEntscheidung(Boolean(tor.gewaehlt));
@@ -125,16 +181,31 @@ for (const a of artikel) {
 }
 
 console.log("\n================ ERGEBNIS ================");
-console.log(
-  "Quelle       Lupe   Schnitt  Grosswort              Herkunft                     Ergebnis",
-);
 for (const z of zeilen) {
+  const kopf = `${(z.spiel ?? "-").slice(0, 24).padEnd(26)}`;
+  if (!z.quelle) {
+    console.log(`${kopf} ${z.ergebnis}`);
+    continue;
+  }
   console.log(
-    `${String(z.quelle ?? "-").padEnd(12)} ${String(z.lupe ?? "-").padEnd(6)} ` +
-      `${String(z.schnitt ?? "-").padEnd(8)} ${String(z.wort ?? "-").padEnd(22)} ` +
-      `${String(z.herkunft ?? "-").padEnd(28)} ${z.ergebnis}`,
+    `${kopf} ${String(z.quelle).padEnd(11)} ${String(z.lupe).padEnd(6)} ` +
+      `Schnitt ${String(z.schnitt).padEnd(5)} ${String(z.herkunft).padEnd(38)} ${z.ergebnis}`,
   );
 }
+
+// Aufschluesseln, WORAN es lag - eine nackte Quote sagt nicht, ob die
+// Messlatte zu streng ist oder das Material schlecht.
+const zaehle = (f) => zeilen.filter(f).length;
+console.log(
+  `\nDavon: ${zaehle((z) => z.ergebnis === "OK")} mit Bild, ` +
+    `${zaehle((z) => z.ergebnis === "kein Material")} ohne jedes Material, ` +
+    `${zaehle((z) => String(z.ergebnis).startsWith("verworfen"))} vom Tor verworfen, ` +
+    `${zaehle((z) => String(z.ergebnis).startsWith("Grafik abgelehnt"))} an der Vorlage gescheitert, ` +
+    `${zaehle((z) => String(z.ergebnis).startsWith("Abnahme"))} an der Abnahme.`,
+);
+console.log(
+  `Meldungen ohne einzelnes Spiel: ${zaehle((z) => !z.spiel || z.spiel === "-")} - dort gibt es nur das Pressebild.`,
+);
 torBericht();
 
 // Wiederholung nachrechnen: Wie oft wurde dasselbe Quellbild gewaehlt?
