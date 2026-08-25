@@ -80,6 +80,7 @@ for (const a of artikel) {
     kandidaten: vorrat.kandidaten,
     schlagzeile: a.title,
     spielName: spiel,
+    jahr: vorrat.jahr ?? null,
     letzteBilder,
   });
   zaehleTorEntscheidung(Boolean(tor.gewaehlt));

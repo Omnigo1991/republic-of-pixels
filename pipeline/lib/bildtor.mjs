@@ -284,7 +284,7 @@ async function motivSchwerpunkt(pfad) {
   return { schwerpunkt, anteilUnten: unten / gesamt, kantendichte };
 }
 
-export async function waehleBild({ kandidaten, schlagzeile, spielName, letzteBilder = [] }) {
+export async function waehleBild({ kandidaten, schlagzeile, spielName, jahr = null, letzteBilder = [] }) {
   if (!kandidaten?.length) return { gewaehlt: null, grund: "keine Kandidaten", geprueft: 0 };
 
   // --- Stufe 1: messbare Ausschlusskriterien, ohne Modellaufruf ---
@@ -485,7 +485,7 @@ export async function waehleBild({ kandidaten, schlagzeile, spielName, letzteBil
     type: "text",
     text: `Das sind ${auswahl.length} Ausschnitt-Varianten fuer EINEN Instagram-Post. Sie sind bereits fertig zugeschnitten - genau so wuerden sie erscheinen.
 
-SCHLAGZEILE DES POSTS: "${schlagzeile}"${spielName ? `\nSPIEL: ${spielName}` : ""}
+SCHLAGZEILE DES POSTS: "${schlagzeile}"${spielName ? `\nSPIEL: ${spielName}` : ""}${jahr ? `\nDAS SPIEL ERSCHIEN URSPRUENGLICH: ${jahr}` : ""}
 
 So sieht der fertige Post aus: Ueber dem unteren Drittel (ab etwa 63 Prozent der Hoehe) liegt eine Glaskarte mit Kopfzeile und Schlagzeile - was dort im Bild steht, ist praktisch weg. Oben rechts sitzt unser Zeichen. Das Motiv muss also in den oberen zwei Dritteln tragen.
 
@@ -499,13 +499,19 @@ Beurteile jedes Bild nach fuenf Kriterien:
 4. BILDGUETE - der strengste Punkt (Tim, 24.08.2026): Sieht das Bild aus, als koennte es heute von einem Premium-Magazin stammen? Wir stehen im Feed direkt neben GameStar und GamePro, die offizielle Presse-Artworks verwenden. Ausschlussgruende sind: sichtbar veraltete Grafik (kantige Modelle, flache Texturen, Optik aelterer Konsolengenerationen), weichgezeichnete oder hochskalierte Bilder ohne feine Details, Bewegungsunschaerfe aus Zwischensequenzen, sichtbare Kompressionsartefakte.
    ACHTUNG, HAEUFIGER FEHLGRIFF: Ein Motiv kann gleichzeitig IKONISCH und OPTISCH VERALTET sein. Genau daran ist das Tor am 24.08. gescheitert - es waehlte eine Grossaufnahme aus einem Spiel von 2008 mit der Begruendung, sie sei ikonisch und stoppe den Daumen. Tim dazu: "es sieht so aus als haette es ein Fuenfjaehriger gepostet." Bekanntheit ersetzt keine Bildguete. Je groesser ein Gesicht im Bild steht, desto gnadenloser faellt jede Schwaeche auf.
    Handelt die Meldung von einem alten Spiel und ist ALLES Material entsprechend alt, ist das kein Grund zur Milde: Dann taugt keines - lieber keinen Post als einen, der billig aussieht.
+   Das Erscheinungsjahr steht oben, falls bekannt. Vor 2012 heisst: Rechne mit Originalgrafik im Material und sieh besonders genau hin. Eine Meldung ueber eine Neuauflage rechtfertigt NUR Bilder der Neuauflage, nicht Sprites des Originals.
 
 5. AUFLOESUNG: Zu jedem Bild steht, wie stark es hochgerechnet werden muss. Unter 1.2x ist sehr gut, ueber 1.5x sichtbar weich. Das ist KEIN eigenstaendiger Ausschlussgrund - ein starkes Motiv bei 1.5x schlaegt ein schwaches bei 1.1x. Aber bei zwei gleichwertigen Bildern gewinnt IMMER das mit der kleineren Zahl.
 
 Waehle das beste Bild. Wenn KEINES die Kriterien erfuellt, waehle keines - wir nehmen dann eine andere Meldung, das ist ausdruecklich erlaubt und besser als ein schwacher Post.
 
+ZUM SCHLUSS DREI EINZELFRAGEN ZU DEINEM GEWINNER. Beantworte sie getrennt mit true/false, nicht im Fliesstext - sie werden ausgewertet, und ein "false" verwirft das Bild:
+- "grafikAktuell": Koennte dieses Bild aus einem heutigen Spiel stammen? false bei Sprite- oder Pixelgrafik, kantigen Modellen, flachen Texturen, sichtbarer Optik aelterer Konsolengenerationen.
+- "schriftzugUnbeschnitten": Ist JEDER sichtbare Schriftzug und jedes Logo vollstaendig im Bild? false, sobald auch nur ein Buchstabe am Rand abgeschnitten ist. Ein abgeschnittener Schriftzug ist NIE durch andere Vorzuege aufzuwiegen.
+- "motivFrei": Bleibt das Hauptmotiv oberhalb der Textkante sichtbar, ohne von der Glaskarte zerschnitten zu werden?
+
 Antworte NUR mit JSON, erstes Zeichen "{":
-{"bestes": 1, "begruendung": "ein Satz", "verworfen": [{"bild": 2, "grund": "kurz"}]}
+{"bestes": 1, "begruendung": "ein Satz", "pruefung": {"grafikAktuell": true, "schriftzugUnbeschnitten": true, "motivFrei": true}, "verworfen": [{"bild": 2, "grund": "kurz"}]}
 Taugt keines: {"bestes": null, "begruendung": "ein Satz warum alle durchfallen", "verworfen": [...]}`,
   });
 
@@ -561,6 +567,45 @@ Taugt keines: {"bestes": null, "begruendung": "ein Satz warum alle durchfallen",
     // werten statt zu raten.
     return { gewaehlt: null, grund: `ungueltige Bildnummer ${urteil.bestes}`, geprueft: auswahl.length };
   }
+  // DIE EINZELFRAGEN WERDEN IM CODE AUSGEWERTET (24.08.2026).
+  //
+  // WARUM: Der Probelauf vom 24.08. hat zwei Bilder durchgelassen, die das
+  // Tor in seiner eigenen Begruendung selbst beanstandet hat - einmal
+  // Terranigma-Sprites von 1995, einmal ein angeschnittener
+  // Final-Fantasy-Schriftzug ("der angeschnittene Logo-Rest ... stoert
+  // kaum"). Im Fliesstext laesst sich jeder Einwand wegwiegen; auf eine
+  // getrennte Ja/Nein-Frage nicht.
+  //
+  // Ich habe vorher VIER Mal versucht, "sieht veraltet aus" zu MESSEN -
+  // Schaerfe, Detailtiefe, Spitzenschaerfe und zuletzt Farbvielfalt plus
+  // Blockigkeit. Alle vier trennen nichts: Das moderne Final-Fantasy-
+  // Artwork misst blockiger (0.839) als die Terranigma-Sprites (0.792),
+  // und Battlefield 6 hat weniger Farben als Terranigma. Es gibt keine
+  // Formel dafuer.
+  //
+  // Also wird nicht das Bild gemessen, sondern die ANTWORT geprueft: Das
+  // Modell muss jede Regel einzeln bejahen, und der Code haelt sich daran.
+  // Fehlt eine Antwort, gilt sie als nicht bestanden - ein Tor, das bei
+  // unklarer Lage durchwinkt, ist kein Tor.
+  const FRAGEN = {
+    grafikAktuell: "Grafik sieht veraltet aus",
+    schriftzugUnbeschnitten: "Schriftzug oder Logo ist angeschnitten",
+    motivFrei: "Motiv wird von der Glaskarte zerschnitten",
+  };
+  const durchgefallen = Object.entries(FRAGEN)
+    .filter(([schluessel]) => urteil.pruefung?.[schluessel] !== true)
+    .map(([, text]) => text);
+  if (durchgefallen.length) {
+    console.log(
+      `  Bild-Tor: Bild ${gewaehlt.nummer} trotz Wahl verworfen - ${durchgefallen.join("; ")}`,
+    );
+    return {
+      gewaehlt: null,
+      grund: durchgefallen.join("; "),
+      geprueft: auswahl.length,
+    };
+  }
+
   console.log(
     `  Bild-Tor: Bild ${gewaehlt.nummer} gewaehlt (${gewaehlt.herkunft ?? "?"}, ` +
       `${gewaehlt.quelle?.width}x${gewaehlt.quelle?.height}, ${gewaehlt.vergroesserung.toFixed(2)}x, ` +

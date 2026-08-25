@@ -155,7 +155,7 @@ async function igdbPool(gameName) {
       Authorization: `Bearer ${igdbToken}`,
       Accept: "application/json",
     },
-    body: `search "${gameName.replaceAll('"', "")}"; fields name,category,cover.image_id,artworks.image_id,screenshots.image_id,involved_companies.company.name,involved_companies.publisher; limit 10;`,
+    body: `search "${gameName.replaceAll('"', "")}"; fields name,category,first_release_date,cover.image_id,artworks.image_id,screenshots.image_id,involved_companies.company.name,involved_companies.publisher; limit 10;`,
     signal: AbortSignal.timeout(15000),
   }).then((r) => r.json());
 
@@ -207,7 +207,15 @@ async function igdbPool(gameName) {
     eintraege.push({ urls: stufen(sc.image_id), herkunft: `Screenshot ${i + 1} (IGDB)`, publisher });
   }
   if (eintraege.length === 0) return null;
-  return { eintraege, publisher, spielKey: normalisiert(spiel.name) };
+  // ERSCHEINUNGSJAHR DES ORIGINALS (24.08.2026). IGDB fuehrt es am
+  // Hauptspiel, nicht an der Neuauflage - anders als Steam, das fuer Metal
+  // Gear Solid 4 den 27.08.2026 meldet, weil dort das Remaster gelistet
+  // ist. Das Jahr geht als Tatsache ins Bildurteil ein: Bei einem Spiel
+  // von 1995 ist der Verdacht auf veraltete Grafik begruendet.
+  const jahr = spiel.first_release_date
+    ? new Date(spiel.first_release_date * 1000).getUTCFullYear()
+    : null;
+  return { eintraege, publisher, spielKey: normalisiert(spiel.name), jahr };
 }
 
 // ---------- Beide Quellen zusammen ----------
@@ -256,7 +264,8 @@ async function beidePools(gameName) {
     `  Bildquellen: Steam ${steam.eintraege.length} + IGDB ${igdb.eintraege.length} = ${eintraege.length} Eintraege`,
   );
   // Steams Titel ist der genauere Schluessel (Store-Name), darum zuerst.
-  return { eintraege, publisher: steam.publisher, spielKey: steam.spielKey };
+  // Das Erscheinungsjahr kommt dagegen nur von IGDB - siehe dort.
+  return { eintraege, publisher: steam.publisher, spielKey: steam.spielKey, jahr: igdb.jahr };
 }
 
 // ---------- Gemeinsame Auswahl + Qualitäts-Wächter ----------
@@ -407,7 +416,13 @@ export async function holeSpielBildKandidaten({
         ` (groesstes ${groesste.breite}x${groesste.hoehe})`,
     );
 
-    return { kandidaten, poolGroesse: eintraege.length, spielKey, publisher: pool.publisher };
+    return {
+      kandidaten,
+      poolGroesse: eintraege.length,
+      spielKey,
+      publisher: pool.publisher,
+      jahr: pool.jahr ?? null,
+    };
   } catch (err) {
     console.log(`  Spielbild-Suche fehlgeschlagen (${err.message})`);
     return null;

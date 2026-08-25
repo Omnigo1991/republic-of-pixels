@@ -521,6 +521,8 @@ async function prepare() {
       // Wirkung. Siehe lib/bildtor.mjs für das Warum.
       const kandidaten = [];
       let bildPositionX = null;
+      // Erscheinungsjahr des Originals - geht als Tatsache ins Bildurteil.
+      let spielJahr = null;
 
       if (pick.bildWahl === "pressebild" && presseTauglich) {
         kandidaten.push({
@@ -546,6 +548,7 @@ async function prepare() {
         });
         if (vorrat) {
           kandidaten.push(...vorrat.kandidaten);
+          spielJahr = vorrat.jahr ?? null;
           state.instagram.spielBild[pick.gameName.toLowerCase()] = rotation + 1;
         }
       }
@@ -575,6 +578,7 @@ async function prepare() {
           kandidaten,
           schlagzeile,
           spielName: pick.gameName ?? null,
+          jahr: spielJahr,
           // Ganze Eintraege statt nur der Abdruecke - das Tor prueft
           // beides, Abdruck und exakte Kennung. Altbestand aus der Zeit
           // davor (Feld "finger", Abdruck des Ausschnitts) trifft nirgends
