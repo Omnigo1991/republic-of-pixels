@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-25T22:05:33.084Z",
+  "updatedAt": "2026-08-25T22:42:55.048Z",
   "deals": [
     {
       "appId": 954740,
@@ -46,15 +46,15 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3240220/a318bd9affe8eee32984b18794b273c256e9b2d6/capsule_184x69.jpg?t=1781187782"
     },
     {
-      "appId": 1332010,
-      "title": "Stray",
-      "discountPercent": 50,
-      "originalPrice": 2849,
-      "finalPrice": 1424,
+      "appId": 2680010,
+      "title": "The First Berserker: Khazan",
+      "discountPercent": 40,
+      "originalPrice": 5999,
+      "finalPrice": 3599,
       "currency": "EUR",
-      "endsAt": "2026-09-05T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1332010/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1332010/01489897d641b7f2e734a436dfabdd74afd4c677/capsule_184x69.jpg?t=1785424330"
+      "endsAt": "2026-08-31T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/2680010/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2680010/capsule_184x69.jpg?t=1776936760"
     },
     {
       "appId": 4001890,
