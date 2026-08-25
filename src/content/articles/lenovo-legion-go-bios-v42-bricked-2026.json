@@ -1,0 +1,154 @@
+{
+  "slug": "lenovo-legion-go-bios-v42-bricked-2026",
+  "title": "BIOS-Update legt Legion Go lahm - zahlt Lenovo die Reparatur?",
+  "subtitle": "Nach drei Wochen Schweigen meldet sich Lenovo zum BIOS V42 - mit einem Rat, der viele Betroffene kaum weiterbringt",
+  "excerpt": "Ein Reddit-Nutzer legte eine Reparaturrechnung von fast 300 Dollar vor, dann zog Lenovo das BIOS V42 zurück. Jetzt äussert sich der Konzern - und lässt die entscheidende Frage offen.",
+  "seoTitle": "Legion Go: Lenovo bestätigt Probleme mit BIOS V42",
+  "metaDescription": "Lenovo bestätigt schwarze Bildschirme beim BIOS-Update V42 für den Legion Go. Wer betroffen ist, was der Konzern rät - und wer die Reparatur zahlt.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "bereich": "hardware",
+  "tags": [
+    "Lenovo",
+    "Legion Go",
+    "Handheld-PC",
+    "BIOS",
+    "Hardware"
+  ],
+  "tldr": [
+    "Lenovo bestätigt, dass einzelne Legion Go während der Installation von BIOS V42 einen schwarzen Bildschirm zeigen können",
+    "Das Update wurde nie über Windows Update oder Legion Space verteilt und ist inzwischen von der Support-Seite verschwunden",
+    "Betroffen ist nur das Originalmodell 8APU1 - Legion Go S und Legion Go 2 nutzen das Update nicht",
+    "Ob Reparaturen ausserhalb der Garantie kostenlos sind, hat Lenovo offiziell noch nicht zugesagt"
+  ],
+  "whyItMatters": "Ein fehlerhaftes Firmware-Update kann einen mehrere hundert Franken teuren Handheld in einen Briefbeschwerer verwandeln - ohne dass Nutzerinnen und Nutzer etwas falsch gemacht hätten. Wie Lenovo mit den Kosten umgeht, setzt einen Massstab dafür, wie viel Verantwortung Hersteller für ihre eigene Software übernehmen.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Drei Wochen nach den ersten Berichten über unbrauchbare Handhelds hat Lenovo sein Schweigen gebrochen. Der Konzern bestätigt gegenüber The Verge, dass einzelne Legion Go während der Installation des BIOS V42 einen schwarzen Bildschirm zeigen können. Der offizielle Rat fällt allerdings kurz aus: Power-Button lange gedrückt halten, warten, neu starten - und wenn das nichts bringt, den Support kontaktieren. Die Frage, wer am Ende die Reparatur bezahlt, lässt Lenovo in seinem Statement offen."
+    },
+    {
+      "type": "embed",
+      "platform": "reddit",
+      "url": "https://www.reddit.com/r/LegionGo/comments/1ve9wk0/lenovo_legion_go_bios_update_n3cn42ww_bricked_my/"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "300 $",
+          "label": "Reparaturrechnung, die ein Betroffener auf Reddit vorlegte"
+        },
+        {
+          "value": "3 von 3",
+          "label": "Testgeräte, auf denen ein europäisches Team den Fehler reproduzieren konnte"
+        },
+        {
+          "value": "10 Sek.",
+          "label": "so lange soll der Power-Button laut Lenovo gedrückt bleiben"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Ein Update, das nie den offiziellen Weg nahm"
+    },
+    {
+      "type": "paragraph",
+      "text": "BIOS V42 (intern N3CN42WW) wurde weder über Windows Update noch über Lenovos eigene Software Legion Space ausgerollt. Wer es installierte, musste die Datei rund zwei Monate lang aktiv von der Support-Website herunterladen. Anfang August zog Lenovo das Update zurück, nachdem sich Meldungen über tote Geräte häuften. Besonders viel Aufmerksamkeit bekam ein Reddit-Beitrag, in dem ein Nutzer eine Reparaturrechnung von fast 300 US-Dollar für seinen Handheld zeigte - für einen Schaden, den ein offizielles Firmware-Paket des Herstellers verursacht haben soll."
+    },
+    {
+      "type": "heading",
+      "text": "Lenovos Rat: zehn Sekunden Power-Button"
+    },
+    {
+      "type": "quote",
+      "text": "Lenovo ist bekannt, dass bei einigen Legion-Go-Geräten während der Installation von BIOS-Version V42 ein schwarzer Bildschirm auftreten kann. BIOS V42 wurde nicht über Windows Update oder Legion Space verteilt, und Lenovo hat das Update von der Support-Website entfernt, während wir unsere Validierungsarbeit fortsetzen.",
+      "attribution": "Jeff Witt, Communications Director bei Lenovo"
+    },
+    {
+      "type": "paragraph",
+      "text": "Wer bereits erfolgreich auf V42 aktualisiert hat, muss laut Lenovo nichts weiter unternehmen. Bleibt der Bildschirm während der Installation schwarz, empfiehlt der Hersteller folgende Schritte:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Power-Button rund zehn Sekunden gedrückt halten",
+        "etwa eine Minute warten",
+        "Gerät anschliessend wieder einschalten",
+        "läuft es dann immer noch nicht, hilft nur der Lenovo-Support"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Kostenlose Reparatur? Ein Forenpost sorgt für Verwirrung"
+    },
+    {
+      "type": "paragraph",
+      "text": "In Lenovos offiziellem Forum meldete sich zusätzlich ein Account namens «Daniel_Legion», der sich als Mitarbeiter präsentiert. Er schreibt, betroffene Geräte sollten innerhalb der Garantie kostenlos repariert werden - und ergänzt: «Bei Geräten ausserhalb der Garantie sollte die Reparatur kostenlos erfolgen, prüft aber bitte die lokalen Gesetze.» Ein Versprechen, das im Kern besagt: Wir reparieren, wenn das Recht es verlangt. Der Account hat ansonsten keine sichtbaren Beiträge im Forum, weshalb The Verge bei Lenovo nachgefragt hat, ob die Aussage offiziell gedeckt ist. Eine Bestätigung steht bislang aus."
+    },
+    {
+      "type": "paragraph",
+      "text": "Aus demselben Forenbeitrag geht hervor, dass die Ursachensuche noch läuft. Ein Team in Europa konnte den Fehler demnach auf drei von drei getesteten Geräten nachstellen, andere Teams dagegen überhaupt nicht."
+    },
+    {
+      "type": "quote",
+      "text": "Das Problem hängt daher höchstwahrscheinlich mit einem bestimmten Bauteil auf Mainboards aus einer bestimmten Charge oder aus bestimmten Chargen zusammen - oder es braucht spezielle Umstände, damit es auftritt.",
+      "attribution": "«Daniel_Legion» im Lenovo-Forum"
+    },
+    {
+      "type": "heading",
+      "text": "Wer überhaupt gefährdet ist"
+    },
+    {
+      "type": "paragraph",
+      "text": "Entwarnung gibt es für einen grossen Teil der Legion-Go-Besitzerinnen und -Besitzer: Betroffen sein kann ausschliesslich das Originalmodell 8APU1. Weder der abgespeckte Legion Go S noch der neuere Legion Go 2 nutzen dieses BIOS. Und selbst beim Ursprungsmodell trifft es offenbar längst nicht jedes Gerät. The-Verge-Redaktor Sean Hollister installierte das zurückgezogene V42 bewusst auf seinem eigenen Testgerät: Nach sechs Minuten aus schwarzen Bildschirmen,, Fortschrittsbalken und Warnhinweisen startete der Handheld normal - und akzeptierte anschliessend sogar die Windows-PIN-Eingabe über die Gamepad-Tasten, was vor dem Update nicht funktionierte."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung: Der Massstab heisst Framework"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Fall ist deshalb brisant, weil es bereits einen Präzedenzfall gibt. Als der Modular-PC-Hersteller Framework mit einem BIOS-Update Geräte lahmlegte, sagte das Unternehmen kostenlose Reparaturen zu - ohne Verweis auf Garantiefristen oder nationale Gesetzeslagen. Lenovo hat die betroffene Datei zwar vom Netz genommen und arbeitet nach eigenen Angaben weiter an der Validierung künftiger BIOS-Versionen. Eine klare Zusage, dass niemand für einen selbstverschuldeten Firmware-Schaden zahlen muss, fehlt bislang aber. Für alle mit einem originalen Legion Go gilt deshalb erst recht die alte Handheld-Regel: BIOS-Updates nur installieren, wenn sie ein konkretes Problem lösen."
+    }
+  ],
+  "poll": {
+    "question": "Ein Hersteller-Update macht dein Gerät kaputt - wer soll zahlen?",
+    "options": [
+      "Immer der Hersteller, auch ausserhalb der Garantie",
+      "Nur innerhalb der Garantie",
+      "Wer manuell ein BIOS flasht, trägt das Risiko selbst"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-25T02:03:10.964Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "controller",
+  "sources": [
+    {
+      "title": "Lenovo confirms Legion Go issues after gamers report bricked devices",
+      "url": "https://www.theverge.com/games/983457/lenovo-bad-legion-go-bios-update-bricked",
+      "publisher": "The Verge Games"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/lenovo-legion-go-bios-v42-bricked-2026.webp",
+    "alt": "BIOS-Update legt Legion Go lahm - zahlt Lenovo die Reparatur?",
+    "credit": "Bild: The Verge Games",
+    "sourceUrl": "https://www.theverge.com/games/983457/lenovo-bad-legion-go-bios-update-bricked",
+    "sourceWidth": 2700,
+    "sourceHeight": 1800
+  },
+  "relatedSlugs": [
+    "ryzen-7-5800x3d-x370-vs-x570-test-2026",
+    "genki-manta-controller-kickstarter-2026",
+    "sandisk-bics9-bics10-bics11-nand-roadmap-2026"
+  ]
+}
