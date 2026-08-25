@@ -178,13 +178,30 @@ function kartenCss({ mitBildEbene, positionX, positionY }) {
   .titel .z { display:block; white-space:nowrap; }`;
 }
 
+// LEERE PILLE STATT KEINER PILLE (Fund im Probelauf 25.08.2026).
+//
+// Der Chip wurde bedingungslos gerendert. Kam keine Kopfzeile an, stand
+// auf der Karte eine leere Glaspille mit einem einsamen Cyan-Punkt darin -
+// im Probelauf gleich zweimal zu sehen. Die Abnahme merkt davon nichts:
+// Sie zaehlt helle Baender, und ein leerer Chip ist keines.
+//
+// Der Aufrufer setzt zwar eine Ersatz-Kopfzeile, aber nur bei null oder
+// undefined - ein leerer String der Redaktion rutscht daran vorbei. Beide
+// Stellen sind jetzt dicht: hier gar kein Chip, und in instagram.mjs faengt
+// die Ersatzregel auch den leeren String.
+function chipHtml(kicker) {
+  const text = String(kicker ?? "").trim();
+  if (!text) return "";
+  return `<span class="chip"><i></i>${escapeHtml(text)}</span>`;
+}
+
 function kartenBody({ mitBildEbene, bild, wort, kicker, zeilen }) {
   return `
   <div class="bild">${mitBildEbene ? `<img src="file://${bild}">` : ""}</div>
   <img class="logo" src="file://${LOGO}">
   <div class="karte">
     <div class="wortfeld"><span class="wort" id="wort">${escapeHtml(wort)}</span></div>
-    <span class="chip"><i></i>${escapeHtml(kicker ?? "")}</span>
+    ${chipHtml(kicker)}
     <div class="titel">${zeilen.map((z) => `<span class="z">${escapeHtml(z)}</span>`).join("")}</div>
   </div>`;
 }

@@ -270,8 +270,22 @@ export async function pruefeGrafik(pfad, zeilenSoll, art = "bild") {
     strukturWert = (or_.stdev + og.stdev + ob.stdev) / 3 / 255;
   }
   messwerte.strukturOben = Math.round(strukturWert * 1000) / 1000;
-  if (obenPuffer && strukturWert < 0.03) {
-    fehler.push(`Obere Bildhälfte fast leer (Struktur ${messwerte.strukturOben})`);
+  // SCHWELLE NACHGEMESSEN 0.03 -> 0.065 (25.08.2026).
+  //
+  // Aufgefallen bei einem Test mit falschem Bildpfad: Die Grafik entstand
+  // OHNE Motiv - nur Navy, Verlauf, Zeichen und Glaskarte - und die Abnahme
+  // winkte sie durch. Gemessen 0.057 gegen eine Schwelle von 0.03.
+  //
+  // Der alte Wert stammt aus der Zeit, als diese Pruefung "Motiv am
+  // falschen Ort" erkennen sollte und daran scheiterte (siehe oben). Als
+  // reiner Boden gegen "gar kein Bild" war er nie nachgerechnet.
+  //
+  // Jetzt an 80 echten Karten gemessen: die schwaechste liegt bei 0.081,
+  // der Median bei 0.187. Eine Karte ohne Motiv bei 0.057. 0.065 liegt
+  // dazwischen, mit Luft nach beiden Seiten - es faellt durch, was gar
+  // kein Bild hat, und es besteht, was Tim je abgenommen hat.
+  if (obenPuffer && strukturWert < 0.065) {
+    fehler.push(`Obere Bildhälfte fast leer (Struktur ${messwerte.strukturOben}, min. 0.065)`);
   }
 
   // 5) Logo: Im unteren Bereich muss unser R stehen. Wir prüfen auf

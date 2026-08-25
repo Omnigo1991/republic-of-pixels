@@ -355,6 +355,29 @@ function KommentarFormular({
   const [text, setText] = useState("");
   const [sendet, setSendet] = useState(false);
   const [fehler, setFehler] = useState<string | null>(null);
+  const feldRef = useRef<HTMLTextAreaElement>(null);
+
+  // EINZEILIG, WÄCHST MIT (Tim, 25.08.2026): Das Feld stand als
+  // dreizeiliger Kasten da und liess sich unten rechts am Anfasser
+  // grossziehen - eine Browser-Voreinstellung, die niemand gewählt hat und
+  // mit der man das Layout zerreissen kann.
+  //
+  // Jetzt startet es einzeilig und wächst beim Tippen mit dem Inhalt.
+  // Der Weg dahin: Höhe erst auf "auto" zurücksetzen, DANN scrollHeight
+  // lesen. Ohne das Zurücksetzen misst man die alte Höhe mit und das Feld
+  // kann nur noch wachsen, nie wieder schrumpfen - etwa wenn jemand seinen
+  // Text wieder löscht.
+  //
+  // Deckel bei 320 px, damit ein sehr langer Kommentar nicht die halbe
+  // Seite einnimmt; darüber scrollt das Feld wie vorher.
+  const MAX_HOEHE = 320;
+  useEffect(() => {
+    const el = feldRef.current;
+    if (!el) return;
+    el.style.height = "auto";
+    el.style.height = `${Math.min(el.scrollHeight, MAX_HOEHE)}px`;
+    el.style.overflowY = el.scrollHeight > MAX_HOEHE ? "auto" : "hidden";
+  }, [text]);
 
   async function senden() {
     if (!text.trim()) return;
@@ -375,12 +398,16 @@ function KommentarFormular({
   return (
     <div>
       <textarea
+        ref={feldRef}
         value={text}
         onChange={(e) => setText(e.target.value)}
-        rows={parentId ? 2 : 3}
+        rows={1}
         maxLength={4000}
         placeholder={parentId ? "Deine Antwort …" : "Was denkst du dazu?"}
-        className="w-full rounded-2xl border border-border-default bg-surface-panel p-4 text-[15px] text-text-primary placeholder:text-text-disabled focus:border-accent/60 focus:outline-none"
+        // resize-none nimmt den Anfasser unten rechts weg (Tim, 25.08.2026:
+        // "das will ich nicht"). Die Höhe macht stattdessen der Inhalt -
+        // siehe wachsen() oben.
+        className="block w-full resize-none overflow-hidden rounded-2xl border border-border-default bg-surface-panel p-4 text-[15px] leading-6 text-text-primary placeholder:text-text-disabled focus:border-accent/60 focus:outline-none"
       />
       {fehler && <p className="mt-1 text-xs text-error">{fehler}</p>}
       <div className="mt-2 flex justify-end">

@@ -677,6 +677,16 @@ async function prepare() {
       //   A/B-Datenpunkte; Tageszähler im State).
       // Schlägt das Reel-Rendering fehl, greift lautlos das Bild - ein Post
       // geht nie verloren.
+      // KOPFZEILE NIE LEER (Fund im Probelauf 25.08.2026): Die bisherige
+      // Ersatzregel benutzte ??, das nur bei null und undefined greift.
+      // Ein leerer String aus der Redaktion kam durch und die Karte trug
+      // eine leere Glaspille mit einem einsamen Cyan-Punkt.
+      const kopfzeile =
+        (pick.kicker ?? "").trim() ||
+        (pick.gameName ?? "").trim() ||
+        KICKER[article.category] ||
+        "GAMING-NEWS";
+
       const istBreaking = article.category === "breaking";
       let alsReel;
       if (istBreaking) {
@@ -696,7 +706,7 @@ async function prepare() {
         try {
           const reel = await renderReelKarte({
             headlineLines: pick.headlineLines,
-            kicker: pick.kicker,
+            kicker: kopfzeile,
             grosswort: pick.grosswort,
             imagePath,
             positionX: bildPositionX,
@@ -719,7 +729,7 @@ async function prepare() {
           // gelaufen ist - der Rueckweg ist damit eine Zeile.
           const karte = await renderKarte({
             headlineLines: pick.headlineLines,
-            kicker: pick.kicker,
+            kicker: kopfzeile,
             grosswort: pick.grosswort,
             imagePath,
             positionX: bildPositionX,
