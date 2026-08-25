@@ -410,7 +410,11 @@ function KommentarFormular({
         className="block w-full resize-none overflow-hidden rounded-2xl border border-border-default bg-surface-panel p-4 text-[15px] leading-6 text-text-primary placeholder:text-text-disabled focus:border-accent/60 focus:outline-none"
       />
       {fehler && <p className="mt-1 text-xs text-error">{fehler}</p>}
-      <div className="mt-2 flex justify-end">
+      {/* GLEICHER ABSTAND OBEN WIE UNTEN (Tim, 25.08.2026): Ueber dem Feld
+          liegen 12 px (mb-3 an der Ueberschriftszeile), darunter lagen nur
+          8 px - der Knopf klebte am Feld. Massgebend ist der obere Abstand,
+          also hier ebenfalls 12 px. Wer den einen aendert, aendert beide. */}
+      <div className="mt-3 flex justify-end">
         <button
           onClick={senden}
           disabled={sendet || !text.trim()}
