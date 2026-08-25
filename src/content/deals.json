@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-25T02:04:22.486Z",
+  "updatedAt": "2026-08-25T03:11:45.583Z",
   "deals": [
     {
       "appId": 1142710,
@@ -35,15 +35,15 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3240220/a318bd9affe8eee32984b18794b273c256e9b2d6/capsule_184x69.jpg?t=1781187782"
     },
     {
-      "appId": 1569580,
-      "title": "Blue Prince",
+      "appId": 2680010,
+      "title": "The First Berserker: Khazan",
       "discountPercent": 40,
-      "originalPrice": 2999,
-      "finalPrice": 1799,
+      "originalPrice": 5999,
+      "finalPrice": 3599,
       "currency": "EUR",
-      "endsAt": "2026-09-06T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1569580/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1569580/4f81a42ebaca088b16d5501914c6885e49f6c411/capsule_184x69.jpg?t=1783605097"
+      "endsAt": "2026-08-31T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/2680010/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2680010/capsule_184x69.jpg?t=1776936760"
     },
     {
       "appId": 4001890,
