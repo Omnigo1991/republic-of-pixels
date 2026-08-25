@@ -1,0 +1,156 @@
+{
+  "slug": "arc-raiders-embark-anti-cheat-8-milliarden-industrie-2026",
+  "title": "«Wir stehen einer 8-Milliarden-Industrie gegenüber» - Embark über Cheater",
+  "subtitle": "Auf der Gamescom Dev erklärt ein Anti-Cheat-Entwickler von Embark Studios, warum ARC Raiders und THE FINALS das Katz-und-Maus-Spiel derzeit nicht gewinnen können",
+  "excerpt": "Embark Studios spricht ungewohnt offen über das Cheat-Problem in ARC Raiders und THE FINALS - inklusive einer Zahl, die erklärt, warum ein kleines Team hier strukturell im Nachteil ist.",
+  "seoTitle": "ARC Raiders: Embark über Cheater und 8-Milliarden-Industrie",
+  "metaDescription": "Embark Studios erklärt auf der Gamescom Dev, warum Cheats in ARC Raiders und THE FINALS so schwer zu stoppen sind - und setzt auf eigenes Kernel-Anti-Cheat.",
+  "category": "news",
+  "platforms": [
+    "pc",
+    "playstation",
+    "xbox"
+  ],
+  "bereich": "games",
+  "tags": [
+    "ARC Raiders",
+    "THE FINALS",
+    "Embark Studios",
+    "Anti-Cheat",
+    "Gamescom Dev"
+  ],
+  "tldr": [
+    "Embark-Entwickler Tom van Dijck bezifferte den kommerziellen Cheat-Markt auf der Gamescom Dev mit acht Milliarden Dollar",
+    "Statt auf Easy Anti-Cheat setzt das Studio künftig auf eine eigene Kernel-Lösung, entwickelt mit dem Partner Vaiiya",
+    "ARC Raiders und THE FINALS erfassen zusammen bis zu 20 Milliarden Telemetrie-Ereignisse pro Tag",
+    "An einem einzigen Montag wurden laut van Dijck 15'000 Konten gesperrt"
+  ],
+  "whyItMatters": "Wer ARC Raiders oder THE FINALS spielt, verliert Loot, Zeit und Nerven an Cheater - und erfährt jetzt erstmals aus erster Hand, warum das Studio damit so ringt. Gleichzeitig macht Embark klar, dass die Antwort ein Kernel-Anti-Cheat sein wird, also ein tiefer Eingriff ins eigene System, den viele PC-Spielende kritisch sehen.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Cheater sind das Dauerthema rund um ARC Raiders und THE FINALS - und ausgerechnet Embark Studios liefert nun die schonungsloseste Beschreibung des Problems. Auf einer Bühne der Gamescom Dev sprach Tom van Dijck, Software-Engineer und bei Embark für Anti-Cheat-Lösungen zuständig, über die Lage in beiden Spielen. Sein Fazit fiel deutlich aus: Es gibt kein Wundermittel, und der Gegner ist längst ein Wirtschaftszweig."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "8 Mrd. $",
+          "label": "Grösse der Cheat-Industrie laut Embark"
+        },
+        {
+          "value": "20 Mrd.",
+          "label": "erfasste Ereignisse pro Tag in beiden Spielen"
+        },
+        {
+          "value": "15'000",
+          "label": "Sperren an einem einzigen Montag"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Ein Gegner mit Geschäftsmodell"
+    },
+    {
+      "type": "paragraph",
+      "text": "Van Dijck beschrieb die Cheat-Szene nicht als Ansammlung von Bastlern, sondern als professionell organisierten Markt mit Produkten, Vertrieb und Kundschaft. Hardware-Cheats, KI-gestützte Aimbots und Werkzeuge zur Manipulation von Speicher und Eingaben lassen sich online für wenig Geld kaufen. Besonders KI-gestützte Lösungen bereiten Sorgen, weil sie Zielhilfen erzeugen, die klassische Erkennungsmethoden nicht greifen."
+    },
+    {
+      "type": "quote",
+      "text": "Wir sind nur ein kleines Team, und selbst wenn wir das nicht wären, stehen wir einer Acht-Milliarden-Dollar-Industrie gegenüber. Sie wird wie ein kommerzielles Geschäft betrieben.",
+      "attribution": "Tom van Dijck, Embark Studios"
+    },
+    {
+      "type": "paragraph",
+      "text": "Das Bild, das er wählte: eine Hydra. Wird ein Kopf abgeschlagen, wächst der nächste nach. «Wir können mit dem Katz-und-Maus-Spiel nicht mithalten, weil wir Tausende von Entwicklern bräuchten, um die Cheats zu kontern», sagte van Dijck."
+    },
+    {
+      "type": "heading",
+      "text": "Warum Embark auf eine eigene Kernel-Lösung setzt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ein Teil des Problems liegt laut van Dijck in den Betriebssystemen selbst: Windows und Linux seien für Cheater sehr zugänglich. Microsoft arbeite zwar daran, die Plattform abzusichern, doch das meiste davon werde nie auf ältere Versionen zurückportiert. Bleibt der Weg über den Kernel - und der ist bei der Spielerschaft notorisch unbeliebt, weil er tief ins System eingreift und Stabilitätsrisiken mitbringt."
+    },
+    {
+      "type": "quote",
+      "text": "Kernel-Level-Anti-Cheat ist offensichtlich invasiv, aber derzeit leider ein notwendiges Übel.",
+      "attribution": "Tom van Dijck, Embark Studios"
+    },
+    {
+      "type": "paragraph",
+      "text": "Embark hat sich deshalb mit dem Unternehmen Vaiiya zusammengetan, um eine eigene Kernel-Lösung zu entwickeln. Zuvor setzte das Studio auf Fremdanbieter, konkret auf Easy Anti-Cheat von Epic Games, das als Teil der Unreal Engine mitgeliefert wird. Van Dijcks Urteil dazu ist unmissverständlich - und sein Rat an die anwesenden Entwicklerinnen und Entwickler ebenso: «Wenn ihr irgendeinen Shooter macht und darüber nachdenkt, ein Produkt zu kaufen und zu integrieren, werdet ihr es nicht schaffen.»"
+    },
+    {
+      "type": "heading",
+      "text": "20 Milliarden Ereignisse - und viel Rauschen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der zweite Pfeiler ist Daten. Zwischen THE FINALS und ARC Raiders erfasst Embark täglich bis zu 20 Milliarden Ereignisse. Dazu zählen laut van Dijck unter anderem:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Mausbewegungen, Klicks und gedrückte Tasten",
+        "Rückstossmuster und die Steuerung des Fadenkreuzes",
+        "Interaktionen mit der Umgebung",
+        "Auffälligkeiten wie Dupe-Exploits oder Stürze durch Löcher in der Karte"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Ein Werkzeugkasten erlaubt es dem Team, jede Spielfigur in jedem Match nachzuverfolgen. Das Problem: Die Telemetrie ist unterschiedslos, sie erfasst alle. «Wir glauben, dass 90 Prozent der Spielenden auf normale Weise spielen wollen. Vielleicht weniger, vielleicht mehr. Wir haben die Zahlen nicht, wir sind nicht bereit, das zu teilen», sagte van Dijck. Der grösste Teil der Daten sei schlicht Rauschen, in dem einzelne verwertbare Fragmente stecken. Erschwerend kommt hinzu, dass harmlose Programme wie OBS, Steam oder Overwolf bei der Erkennung als Störfaktor auftauchen können. Dass die Maschinerie trotzdem läuft, belegte er mit einer Zahl: An jenem Montag wurden 15'000 Konten gesperrt, viele davon während des Vortrags."
+    },
+    {
+      "type": "heading",
+      "text": "Das Problem, das keine Technik löst"
+    },
+    {
+      "type": "paragraph",
+      "text": "Neben der Technik nennt van Dijck einen zweiten Schauplatz: die Diskussion selbst. Ein erheblicher Teil der Arbeit bestehe darin, mit dem Narrativ umzugehen, ARC Raiders sei von Cheatern überrannt - ein Thema, das auf Plattformen wie Reddit täglich hochkocht. Dagegen ankommen könne man kaum, weil jede Stellungnahme des Studios auf massiven Gegenwind stosse und die Lage oft verschlimmere. Hilfreich ist es auch nicht, wenn grosse Streamer live gehen und dabei sichtbar auf Stream-Sniper und Cheater treffen."
+    },
+    {
+      "type": "paragraph",
+      "text": "Einordnung: Embarks Auftritt ist vor allem ein Eingeständnis - kein Versprechen. Das Studio kündigt keinen Termin und keinen Durchbruch an, sondern erklärt, warum es strukturell im Nachteil ist und welche zwei Hebel es setzt: eigene Kernel-Technologie statt zugekaufter Standardlösung und ein datengetriebenes Erkennungssystem. Für die Spielerschaft heisst das kurzfristig wenig Entlastung, mittelfristig aber eine Entscheidung, die Diskussionsstoff liefern wird. Denn wer künftig ARC Raiders oder THE FINALS startet, lässt Software mit weitreichenden Systemrechten mitlaufen. Wie gut dieser Tausch aufgeht, wird sich erst an den Match-Ergebnissen ablesen lassen."
+    }
+  ],
+  "poll": {
+    "question": "Kernel-Anti-Cheat gegen Cheater - fairer Deal oder zu tiefer Eingriff?",
+    "options": [
+      "Fairer Deal, saubere Matches sind es wert",
+      "Zu invasiv, das kommt mir nicht aufs System",
+      "Nur wenn Embark offenlegt, was die Software tut",
+      "Bringt ohnehin nichts, Cheater umgehen auch das"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-25T06:03:01.387Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "grid",
+  "sources": [
+    {
+      "title": "Embark Studios Addresses Cheaters: We re Up Against An $8 Billion Industry",
+      "url": "https://insider-gaming.com/embark-studios-arc-raiders-cheaters-8-billion-industry/",
+      "publisher": "Insider Gaming"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/arc-raiders-embark-anti-cheat-8-milliarden-industrie-2026.webp",
+    "alt": "«Wir stehen einer 8-Milliarden-Industrie gegenüber» - Embark über Cheater",
+    "credit": "Bild: Insider Gaming",
+    "sourceUrl": "https://insider-gaming.com/embark-studios-arc-raiders-cheaters-8-billion-industry/",
+    "sourceWidth": 800,
+    "sourceHeight": 450
+  },
+  "relatedSlugs": [
+    "windows-11-rgb-software-inpoutx64-bluescreens-2026",
+    "windows-11-august-update-kb5121003-spiele-crashes-2026",
+    "arc-raiders-expeditions-pause-2027"
+  ]
+}
