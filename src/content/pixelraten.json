@@ -1,20 +1,20 @@
 {
-  "datum": "2026-08-25",
-  "nummer": 17,
-  "loesung": "Apex Legends",
+  "datum": "2026-08-26",
+  "nummer": 18,
+  "loesung": "Forza Horizon 5",
   "akzeptiert": [
-    "apexlegends",
-    "apex"
+    "forzahorizon5",
+    "forzahorizon"
   ],
   "hinweise": [
-    "Erschienen 2019 · Battle Royale",
-    "Respawn"
+    "Erschienen 2021 · Rennspiel",
+    "Mexiko"
   ],
   "bilder": [
-    "/images/pixelraten/2026-08-25-s1.jpg",
-    "/images/pixelraten/2026-08-25-s2.jpg",
-    "/images/pixelraten/2026-08-25-s3.jpg",
-    "/images/pixelraten/2026-08-25-s4.jpg",
-    "/images/pixelraten/2026-08-25-s5.jpg"
+    "/images/pixelraten/2026-08-26-s1.jpg",
+    "/images/pixelraten/2026-08-26-s2.jpg",
+    "/images/pixelraten/2026-08-26-s3.jpg",
+    "/images/pixelraten/2026-08-26-s4.jpg",
+    "/images/pixelraten/2026-08-26-s5.jpg"
   ]
 }
