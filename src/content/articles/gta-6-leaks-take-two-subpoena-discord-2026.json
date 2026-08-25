@@ -1,0 +1,163 @@
+{
+  "slug": "gta-6-leaks-take-two-subpoena-discord-2026",
+  "title": "Take-Two will Discord-Nutzerdaten - doch zugestellt wurde nichts",
+  "subtitle": "Der GTA-6-Publisher fordert Kontodaten ganzer Server-Communitys, Discord bremst und Microsoft kooperiert bereits",
+  "excerpt": "Take-Two verlangt E-Mails, IP-Adressen und Telefonnummern aller Mitglieder mehrerer Discord-Server. Discord erklärt nun: Eine Vorladung sei bisher gar nicht angekommen - und die Prüfung stehe erst noch an.",
+  "seoTitle": "GTA 6 Leaks: Discord bremst Take-Twos Datenforderung",
+  "metaDescription": "Take-Two fordert nach den GTA-6-Leaks Nutzerdaten ganzer Discord-Server. Discord erklärt, noch keine Vorladung erhalten zu haben - Microsoft kooperiert bereits.",
+  "category": "news",
+  "platforms": [
+    "pc",
+    "playstation",
+    "xbox"
+  ],
+  "bereich": "games",
+  "tags": [
+    "GTA 6",
+    "Take-Two",
+    "Rockstar Games",
+    "Discord",
+    "Microsoft"
+  ],
+  "tldr": [
+    "Take-Two hat an einem US-Bundesbezirksgericht mehrere Subpoenas eingereicht, um an Nutzerdaten von Discord und Microsoft zu kommen",
+    "Discord erklärt, bislang keine Vorladung formell zugestellt bekommen zu haben, und will Gültigkeit und Umfang prüfen",
+    "Gefordert werden unter anderem Registrierungs-E-Mails, IP-Adressen, Telefonnummern und Geräte-IDs aller Mitglieder mehrerer Server ab dem 1. Juni 2026",
+    "Microsoft kooperiert laut Xbox-CTO Scott Van Vliet bereits; Rockstar kennt die Identität der Leaker offenbar noch nicht"
+  ],
+  "whyItMatters": "Hier geht es nicht mehr nur um geleakte Videoclips, sondern um die Frage, wie weit ein Publisher in die Daten normaler Community-Mitglieder greifen darf. Wer in einem der betroffenen Discord-Server einfach nur mitgelesen hat, könnte von der Datenanfrage erfasst sein. Wie Discord und Microsoft darauf reagieren, setzt einen Massstab für künftige Leak-Jagden in der Branche.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Die Jagd auf die Quelle der GTA-6-Leaks läuft auf Hochtouren - aber sie stockt an einer entscheidenden Stelle. Take-Two hat an einem US-Bundesbezirksgericht mehrere Subpoenas eingereicht, um von Discord und Microsoft umfangreiche Nutzerdaten zu erhalten. Discord erklärt nun jedoch, bislang gar keine Vorladung erhalten zu haben. Und ohne formelle Zustellung ist ein Unternehmen auch nicht zu einer Antwort verpflichtet."
+    },
+    {
+      "type": "embed",
+      "platform": "twitter",
+      "url": "https://x.com/RKRigney/status/2091951509931954436"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "4. Sept.",
+          "label": "Frist, bis zu der Discord und Microsoft die Daten liefern sollen"
+        },
+        {
+          "value": "1. Juni 2026",
+          "label": "Beginn des Zeitraums, für den Kontodaten gefordert werden"
+        },
+        {
+          "value": "Hunderttausende",
+          "label": "Mitglieder in den betroffenen Discord-Servern"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Discord: «Wir prüfen Gültigkeit und Umfang»"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ryan K. Rigney, Marketing-Direktor bei Discord, meldete sich am 24. August auf X zu Wort und stellte klar, dass sein Unternehmen noch nichts in der Hand hält. Wichtig ist die juristische Unterscheidung: Eine Subpoena bei Gericht einzureichen ist etwas anderes, als sie einer Partei zuzustellen. Offenbar steht schlicht die formelle Zustellung noch aus."
+    },
+    {
+      "type": "quote",
+      "text": "Ich kann dazu ein Update geben: Discord wurde bislang keine Vorladung von Take-Two zugestellt. Sobald das geschieht, werden wir Gültigkeit und Umfang prüfen, bevor wir reagieren.",
+      "attribution": "Ryan K. Rigney, Marketing-Direktor bei Discord"
+    },
+    {
+      "type": "heading",
+      "text": "Was Take-Two konkret verlangt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Umfang der Forderung ist der eigentliche Aufreger. Laut der Einreichung verlangt Take-Two identifizierende Informationen zu «allen Nutzerkonten, die Mitglieder» mehrerer Community-Server sind oder waren - genannt werden unter anderem Ødyssey.gg, «! Odyssey» und DarkViperAU. Der Zeitraum beginnt am 1. Juni 2026 und reicht bis in die Gegenwart. Weil in diesen Servern Hunderttausende Menschen unterwegs sind, befürchten Nutzerinnen und Nutzer, dass die Anfrage weit über die eigentlichen Leaker hinausgreift."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Konto-ID, Registrierungs-E-Mail und Telefonnummer",
+        "IP-Adressen bei der Registrierung und beim letzten Login",
+        "Verknüpfte Konten wie Google oder Xbox",
+        "Geräte-Identifikatoren (MachineGuid/MSA) und Telemetrie-Daten",
+        "OneDrive-Inhalte mit Bezug zu GTA, Rockstar oder «Cyberleek»"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Microsoft zieht bereits mit"
+    },
+    {
+      "type": "paragraph",
+      "text": "Anders als Discord hat sich Microsoft schon positioniert. Der Konzern wurde in derselben Angelegenheit adressiert, wobei es Take-Two vor allem um OneDrive-Daten geht - dort waren Teile der Leaks gehostet - sowie um die mit Discord-Konten verknüpften Xbox-Accounts. Xbox-CTO Scott Van Vliet bestätigte die Zusammenarbeit öffentlich."
+    },
+    {
+      "type": "quote",
+      "text": "Wir arbeiten eng mit Take-Two und Rockstar Games zusammen, um die Bemühungen zum Schutz kreativer Werke und geistigen Eigentums zu unterstützen.",
+      "attribution": "Scott Van Vliet, CTO bei Xbox"
+    },
+    {
+      "type": "heading",
+      "text": "Der Ursprung: eine Woche voller Clips"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgelöst wurde die ganze Eskalation von einer Gruppe, die sich «Cyberleek» nennt und in der vergangenen Woche begann, augenscheinlich echtes Gameplay-Material aus Grand Theft Auto 6 zu veröffentlichen - wenige Tage vor einer offiziellen Präsentation bei Netflix. In den kursierenden Ausschnitten sind unter anderem eine neue Carjacking-Mechanik, ein Fahndungssystem mit sechs Sternen, nächtliche Fahrten durch die Stadt, NPC-Verhalten und Polizeiverfolgungen zu sehen. Auch die komplette Karte des Spiels soll geleakt worden sein. Offiziell bestätigt hat Rockstar die Echtheit des Materials nicht."
+    },
+    {
+      "type": "paragraph",
+      "text": "Take-Two versuchte zunächst mit DMCA-Meldungen an sämtliche Plattformen gegenzuhalten. Der Erfolg blieb überschaubar: Reuploads sammelten in sozialen Netzwerken Millionen von Aufrufen, und alle paar Tage tauchte neues Material auf, das aus derselben Quelle stammen soll. Laut Bloomberg-Reporter Jason Schreier wusste Rockstar am vergangenen Freitag weder, wer hinter dem Leak steckt, noch wie es überhaupt zum Datenabfluss kam. Die für diese Woche geplante erweiterte Netflix-Präsentation soll von den Leaks nicht betroffen sein."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Frist bis zum 4. September macht deutlich, wie dringlich Take-Two die Sache behandelt. Entscheidend wird jetzt, ob Discord die Anfrage in ihrer jetzigen Breite akzeptiert oder juristisch eingrenzt - Rigneys Formulierung von der Prüfung der «Gültigkeit und des Umfangs» klingt eher nach Letzterem. Für die Community steht dabei mehr auf dem Spiel als die Identität einer Handvoll Leaker: Wenn Mitgliedschaft in einem Server allein ausreicht, um Kontodaten offenzulegen, verschiebt das die Grenze zwischen Rechtedurchsetzung und Massenabfrage spürbar."
+    }
+  ],
+  "poll": {
+    "question": "Take-Two fordert Daten aller Mitglieder ganzer Discord-Server - wie weit darf ein Publisher gehen?",
+    "options": [
+      "Klar zu weit - das trifft Tausende Unbeteiligte",
+      "Legitim, ein Leak dieser Grösse rechtfertigt harte Mittel",
+      "Nur mit engerem Filter auf verdächtige Konten",
+      "Discord sollte sich juristisch dagegen wehren"
+    ]
+  },
+  "isLeakOrRumor": true,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-25T10:02:58.482Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "waveform",
+  "sources": [
+    {
+      "title": "Discord denies being served subpoena by Take-Two as GTA 6 leak crackdowns sweep the internet",
+      "url": "https://www.videogameschronicle.com/news/discord-denies-being-served-subpoena-by-take-two-as-gta-6-leak-crackdowns-sweep-the-internet/",
+      "publisher": "VGC"
+    },
+    {
+      "title": "Discord is yet to be served Take-Two's GTA 6 leak subpoena, which is set to demand broad access to user data",
+      "url": "https://www.eurogamer.net/take-two-rockstar-gta-6-leaks-subpoena-discord-response",
+      "publisher": "Eurogamer"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/gta-6-leaks-take-two-subpoena-discord-2026.webp",
+    "alt": "Take-Two will Discord-Nutzerdaten - doch zugestellt wurde nichts",
+    "credit": "Bild: VGC",
+    "sourceUrl": "https://www.videogameschronicle.com/news/discord-denies-being-served-subpoena-by-take-two-as-gta-6-leak-crackdowns-sweep-the-internet/",
+    "sourceWidth": 3840,
+    "sourceHeight": 2160
+  },
+  "relatedSlugs": [
+    "gta-6-leaks-take-two-subpoenas-microsoft-discord-2026",
+    "gta-6-fake-iso-113gb-malware-2026",
+    "rockstar-34-gta-6-kein-boykott-solidaritaets-shirts-2026"
+  ]
+}

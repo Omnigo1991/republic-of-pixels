@@ -1,0 +1,146 @@
+{
+  "slug": "nintendo-github-dmca-401-switch-emulator-repositories-2026",
+  "title": "Nintendo löscht 401 Repositories - doch der Code lebt weiter",
+  "subtitle": "Sieben DMCA-Beschwerden treffen ganze Fork-Netzwerke rund um Suyu, Skyline und MonoNX - und zeigen zugleich, warum solche Aktionen die Szene nie ganz erwischen",
+  "excerpt": "Nintendo hat bei Github erneut zugeschlagen: 401 gesperrte Repositories gehen auf gerade einmal sieben Beschwerden zurück. Der juristische Hebel ist dabei ein anderer, als viele vermuten.",
+  "seoTitle": "Nintendo: 401 Switch-Emulator-Repos auf Github gelöscht",
+  "metaDescription": "Nintendo lässt per DMCA 401 Github-Repositories mit Switch-Emulatoren sperren. Sieben Beschwerden treffen Suyu, Skyline und MonoNX - das steckt dahinter.",
+  "category": "news",
+  "platforms": [
+    "nintendo",
+    "pc"
+  ],
+  "bereich": "games",
+  "tags": [
+    "Nintendo",
+    "Emulation",
+    "Github",
+    "DMCA",
+    "Nintendo Switch",
+    "Urheberrecht"
+  ],
+  "tldr": [
+    "Nintendo hat sieben DMCA-Beschwerden bei Github eingereicht, in deren Folge 401 Repositories gesperrt wurden.",
+    "Den grössten Anteil stellt das Netzwerk rund um den Yuzu-Nachfolger Suyu mit 311 Repositories.",
+    "Nintendo argumentiert nicht mit der Illegalität von Emulation an sich, sondern mit der Umgehung technischer Schutzmassnahmen.",
+    "Bereits 2024 endete der Streit mit den Yuzu-Machern in einem Vergleich über 2,4 Millionen US-Dollar."
+  ],
+  "whyItMatters": "Emulatoren sind für viele Spielerinnen und Spieler das Werkzeug, um ältere oder gekaufte Titel auf eigener Hardware laufen zu lassen - und geraten zunehmend unter juristischen Druck. Nintendos Vorgehen zeigt, dass nicht der Emulator selbst, sondern der Umgang mit Verschlüsselung zum Angriffspunkt wird. Wer solche Projekte nutzt oder daran mitentwickelt, muss damit rechnen, dass Codebasen jederzeit vom Netz verschwinden.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Nintendo hält den Druck auf die Emulator-Szene der Switch hoch: Der japanische Konzern hat bei Github sieben Beschwerden nach dem US-amerikanischen Digital Millennium Copyright Act (DMCA) eingereicht. In der Folge wurden 401 Repositories gesperrt. Über den Vorgang berichtet unter anderem Tom's Hardware unter Berufung auf die öffentlich einsehbaren DMCA-Anträge, die Github traditionell dokumentiert."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "401",
+          "label": "gesperrte Github-Repositories"
+        },
+        {
+          "value": "7",
+          "label": "DMCA-Beschwerden reichten dafür aus"
+        },
+        {
+          "value": "311",
+          "label": "davon gehören allein zum Suyu-Netzwerk"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Sieben Anträge, hunderte Treffer"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Zahl 401 klingt nach einem Kahlschlag, bedeutet aber nicht, dass Nintendo ebenso viele eigenständige Emulatoren aus dem Verkehr gezogen hätte. Github fasst bei DMCA-Verfahren unter bestimmten Voraussetzungen ganze Netzwerke zusammen: das ursprüngliche Repository und sämtliche daraus abgeleiteten Forks. Eine einzige Beschwerde kann so dutzende oder hunderte Kopien und Weiterentwicklungen auf einen Schlag treffen. Genau dieser Hebel erklärt das Missverhältnis zwischen sieben Anträgen und 401 gesperrten Projektseiten."
+    },
+    {
+      "type": "paragraph",
+      "text": "Aufgeschlüsselt verteilen sich die Sperrungen im Wesentlichen auf einige bekannte Namen der Szene:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Suyu: 311 Repositories - der grösste Block, entstanden auf Basis des 2024 eingestellten Emulators Yuzu",
+        "Skyline: 29 Repositories - ein Emulator für Android-Geräte",
+        "MonoNX: 17 Repositories",
+        "Mehrere weitere Gruppen mit Yuzu-Forks und -Varianten"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Der Angriffspunkt ist die Verschlüsselung, nicht die Emulation"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bemerkenswert ist die Argumentation: Nintendo behauptet in den aktuellen Beschwerden nicht pauschal, dass Emulatoren grundsätzlich illegal seien. Im Mittelpunkt steht stattdessen die Umgehung technischer Schutzmassnahmen. Switch-Spiele liegen verschlüsselt vor und werden mithilfe proprietärer kryptografischer Schlüssel entschlüsselt. Nach Auffassung des Konzerns umgehen Emulatoren diesen Schutz, sobald sie Spiele ausführen - und ihre Verbreitung verstösst damit gegen die Anti-Umgehungsbestimmungen des DMCA."
+    },
+    {
+      "type": "paragraph",
+      "text": "Juristisch ist die Lage differenzierter, als es der Rundumschlag vermuten lässt. Selbst ein für Nintendos geistiges Eigentum zuständiger Manager hatte Anfang 2025 eingeräumt, dass sich ein Emulator nicht automatisch als illegal einstufen lasse. Entscheidend seien unter anderem die konkrete Funktionsweise, der Umgang mit Kopierschutzmassnahmen und die Nutzung urheberrechtlich geschützter Inhalte. Das DMCA-Verfahren bei Github verlangt allerdings keine gerichtliche Klärung dieser Fragen: Es genügt die Beschwerde, um Inhalte offline zu nehmen."
+    },
+    {
+      "type": "heading",
+      "text": "Vom Millionenvergleich zur Fork-Jagd"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nintendo geht seit Jahren gegen die Switch-Emulator-Szene vor, und die aktuelle Welle ist der vorläufig jüngste Akt einer längeren Geschichte. 2024 endete der Rechtsstreit mit den Entwicklern von Yuzu in einem Vergleich über 2,4 Millionen US-Dollar, das Projekt wurde eingestellt. Kurz darauf liess der Konzern bei Github bereits mehr als 8000 Yuzu-Forks entfernen."
+    },
+    {
+      "type": "paragraph",
+      "text": "Dass nun erneut hunderte Repositories betroffen sind, führt die Grenzen solcher Massnahmen vor Augen. Quellcode lässt sich kopieren, spiegeln und in neuen Forks weiterführen - ein einmal veröffentlichtes Projekt verschwindet nicht dadurch, dass die prominenteste Adresse gesperrt wird. Die aktuelle Aktion richtet sich denn auch zu einem erheblichen Teil gegen Ableger von Projekten, gegen die Nintendo bereits zuvor vorgegangen war. Suyu selbst ist das beste Beispiel: Der Emulator entstand als direkte Fortführung dessen, was Nintendo zwei Jahre zuvor per Vergleich beendet zu haben glaubte."
+    },
+    {
+      "type": "heading",
+      "text": "Was das für Nutzerinnen und Nutzer bedeutet"
+    },
+    {
+      "type": "paragraph",
+      "text": "Für alle, die Emulatoren einsetzen oder an ihnen mitentwickeln, ergibt sich daraus ein unangenehmer Dauerzustand: Plattformen wie Github bieten keine verlässliche Heimat mehr für diese Projekte. Wer ein Repository beobachtet, forkt oder für eigene Builds nutzt, kann es von einem Tag auf den anderen verlieren - inklusive Issue-Tracker, Dokumentation und Entwicklungsverlauf. Für die Szene heisst das Ausweichen auf dezentralere Wege, für interessierte Spielerinnen und Spieler unübersichtlichere Quellen."
+    },
+    {
+      "type": "paragraph",
+      "text": "Einordnung: Nintendo führt hier keinen Feldzug gegen Emulation als Technik, sondern nutzt konsequent den juristisch schärfsten verfügbaren Hebel - das Umgehungsverbot des DMCA. Das ist wirksam, solange es um zentrale Plattformen geht, und wirkungslos gegenüber der Natur von Open-Source-Code. Die eigentliche Frage, wo legale Emulation endet und unzulässige Umgehung beginnt, bleibt damit auch nach 401 Sperrungen ungeklärt."
+    }
+  ],
+  "poll": {
+    "question": "Nintendo löscht Emulator-Repositories im Hunderterpack - wie steht ihr dazu?",
+    "options": [
+      "Legitim: Verschlüsselung zu umgehen ist eine klare Grenze",
+      "Überzogen: Emulation erhält Spiele, die sonst verschwinden",
+      "Sinnlos: Der Code taucht ohnehin woanders wieder auf",
+      "Die Rechtslage müsste endlich vor Gericht geklärt werden"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-25T10:03:58.122Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "circuit",
+  "sources": [
+    {
+      "title": "Github: Nintendo l�sst �ber 400 Switch-Emulator-Repositories l�schen",
+      "url": "https://www.golem.de/news/github-nintendo-laesst-ueber-400-switch-emulator-repositories-loeschen-2608-212253.html",
+      "publisher": "Golem.de Games"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/nintendo-github-dmca-401-switch-emulator-repositories-2026.webp",
+    "alt": "Nintendo löscht 401 Repositories - doch der Code lebt weiter",
+    "credit": "Bild: Golem.de Games",
+    "sourceUrl": "https://www.golem.de/news/github-nintendo-laesst-ueber-400-switch-emulator-repositories-loeschen-2608-212253.html",
+    "sourceWidth": 1200,
+    "sourceHeight": 675
+  },
+  "relatedSlugs": [
+    "nintendo-dmca-400-switch-emulator-repos-github-2026",
+    "nintendo-switch-2-verkaufszahlen-q1-fy2027",
+    "nes-sammlung-diebstahl-washington-2026"
+  ]
+}
