@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { VERLAUFSTEXT } from "./Bausteine";
+import events from "@/content/events.json";
 
 // Sektionstitel im neuen Design (Tim-Freigabe 22.08.2026): Gross-
 // Kleinschreibung im Markenverlauf statt des gesperrten SVG-Banners.
@@ -31,26 +32,56 @@ export function SektionsTitel({
   );
 }
 
-/** gamescom-Countdown: Keynote-Moment zwischen den Sektionen. */
-export function EventCountdown({
-  name = "gamescom 2026",
-  zielIso = "2026-08-25T18:00:00Z",
-  unterzeile = "Opening Night Live am 25. August, 20:00 Uhr - wir berichten live.",
-  href = "/#radare",
-}: {
-  name?: string;
-  zielIso?: string;
-  unterzeile?: string;
-  href?: string;
-}) {
+// EVENT-COUNTDOWN.
+//
+// RÜCKT VON SELBST WEITER (Tim, 25.08.2026: "Auf unserer Seite fehlt der
+// Countdown zum nächsten Event").
+//
+// Vorher stand hier ein FEST EINGETRAGENER Termin - Opening Night Live,
+// 25. August. Als der Moment vorbei war, lieferte die Komponente null und
+// der ganze Block verschwand von der Startseite. Er wäre nie von selbst
+// weitergerückt; jemand hätte das Datum von Hand nachtragen müssen, und
+// genau das ist nicht passiert.
+//
+// Jetzt kommt das Ziel aus derselben Quelle wie der Event-Radar
+// (src/content/events.json). Ein Termin zählt nur mit, wenn er einen
+// EXAKTEN Startzeitpunkt hat ("startIso") und ausdrücklich als Countdown
+// markiert ist ("countdown": true). Beides bewusst: Eine fünftägige Messe
+// hat keinen Moment, auf den man herunterzählen kann - eine Show um 21:00
+// Uhr schon.
+type Termin = {
+  name: string;
+  startIso?: string;
+  countdown?: boolean;
+  dateLabel?: string;
+  beschreibung?: string;
+};
+
+function naechsterTermin(jetzt: number): Termin | null {
+  // events.json ist ein Objekt mit einem Hinweis und der Liste - siehe
+  // dieselbe Struktur im Event-Radar.
+  const kandidaten = ((events as { events: Termin[] }).events ?? [])
+    .filter((e) => e.countdown && e.startIso)
+    .filter((e) => new Date(e.startIso as string).getTime() > jetzt)
+    .sort((a, b) => new Date(a.startIso as string).getTime() - new Date(b.startIso as string).getTime());
+  return kandidaten[0] ?? null;
+}
+
+export function EventCountdown({ href = "/#radare" }: { href?: string }) {
   const [rest, setRest] = useState<{ t: number; s: number; m: number } | null>(null);
+  const [termin, setTermin] = useState<Termin | null>(null);
 
   useEffect(() => {
     // Erst im Browser rechnen: Der Server kennt die Uhrzeit des Lesers
     // nicht, und eine vorgerenderte Zahl wäre beim Aufschlagen falsch.
+    // Der Termin wird bei JEDEM Takt neu gesucht - läuft einer ab,
+    // während die Seite offen ist, rückt der Block auf den nächsten.
     const rechne = () => {
-      const diff = new Date(zielIso).getTime() - Date.now();
-      if (diff <= 0) return setRest({ t: 0, s: 0, m: 0 });
+      const jetzt = Date.now();
+      const naechster = naechsterTermin(jetzt);
+      setTermin(naechster);
+      if (!naechster?.startIso) return setRest(null);
+      const diff = new Date(naechster.startIso).getTime() - jetzt;
       setRest({
         t: Math.floor(diff / 86400000),
         s: Math.floor((diff % 86400000) / 3600000),
@@ -60,15 +91,27 @@ export function EventCountdown({
     rechne();
     const takt = window.setInterval(rechne, 30000);
     return () => window.clearInterval(takt);
-  }, [zielIso]);
+  }, []);
 
-  if (!rest || (rest.t === 0 && rest.s === 0 && rest.m === 0)) return null;
+  if (!rest || !termin) return null;
 
-  const felder: [string, string][] = [
-    [String(rest.t).padStart(2, "0"), "Tage"],
-    [String(rest.s).padStart(2, "0"), "Stunden"],
-    [String(rest.m).padStart(2, "0"), "Minuten"],
+  const name = termin.name;
+  const unterzeile = termin.dateLabel
+    ? `${termin.dateLabel}${termin.beschreibung ? ` - ${termin.beschreibung}` : ""}`
+    : (termin.beschreibung ?? "");
+
+  // FÜHRENDE NULLEN WEGLASSEN: "00 Tage 00 Stunden 53 Minuten" liest sich
+  // wie ein Fehler. Sind es weniger als 24 Stunden, entfällt das
+  // Tagesfeld; unter einer Stunde bleibt nur die Minute.
+  const alle: [number, string][] = [
+    [rest.t, rest.t === 1 ? "Tag" : "Tage"],
+    [rest.s, rest.s === 1 ? "Stunde" : "Stunden"],
+    [rest.m, rest.m === 1 ? "Minute" : "Minuten"],
   ];
+  const ersterEcht = alle.findIndex(([n]) => n > 0);
+  const felder: [string, string][] = alle
+    .slice(ersterEcht === -1 ? 2 : ersterEcht)
+    .map(([n, w]) => [String(n).padStart(2, "0"), w]);
 
   return (
     <div className="schrift-normal my-16 bg-[radial-gradient(ellipse_48%_42%_at_50%_58%,rgba(255,46,151,0.2),transparent_74%),radial-gradient(ellipse_34%_30%_at_76%_52%,rgba(2,240,209,0.1),transparent_72%)] px-4 py-16 text-center sm:py-20">

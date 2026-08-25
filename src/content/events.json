@@ -7,7 +7,9 @@
       "dateStart": "2026-08-25",
       "dateEnd": "2026-08-25",
       "dateLabel": "25. August · 20:00 Uhr",
-      "beschreibung": "Geoff Keighleys Show zum gamescom-Auftakt - traditionell voller Weltpremieren."
+      "beschreibung": "Geoff Keighleys Show zum gamescom-Auftakt - traditionell voller Weltpremieren.",
+      "startIso": "2026-08-25T18:00:00Z",
+      "countdown": true
     },
     {
       "name": "gamescom 2026",
@@ -26,7 +28,9 @@
       "dateEnd": "2026-08-27",
       "dateLabel": "27. August · 21:00 Uhr",
       "beschreibung": "Rockstars tieferer Blick auf GTA 6 - sechs Stunden exklusiv auf Netflix, danach auf YouTube.",
-      "thema": "gta-6"
+      "thema": "gta-6",
+      "startIso": "2026-08-27T19:00:00Z",
+      "countdown": true
     },
     {
       "name": "Tokyo Game Show 2026",
