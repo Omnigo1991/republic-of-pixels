@@ -1,42 +1,25 @@
-import Link from "next/link";
+import { BildKachel } from "./next/Bausteine";
+import { KACHEL_HOEHE } from "./WeiterlesenBox";
 import type { Article } from "@/lib/types";
-import { ArticleMedia } from "./ArticleMedia";
-import { CategoryPill } from "./Badges";
-import { formatDateTime, splitTitle } from "@/lib/format";
 
-// Artikelempfehlung im exakten Stil der Startseiten-Newsliste
-// (ArticleListItem) - gerahmt wie eine Box, damit sie sich sauber in
-// den Fliesstext einfügt. Wird sowohl inline im Artikeltext (wie bei
-// play3.de) als auch im "Weiterlesen"-Block am Artikelende verwendet,
-// damit beide Stellen gleich aussehen.
+// ARTIKELEMPFEHLUNG IM FLIESSTEXT - 1:1 die Startseiten-Kachel
+// (Tim, 25.08.2026).
+//
+// Vorher war das eine breite Zeile mit kleinem Vorschaubild links und
+// Kopfzeile, Datum, Lesezeit und Anrisstext rechts - die Optik aus der
+// Zeit vor dem Rebranding.
+//
+// Es ist bewusst DIESELBE Komponente wie im Mosaik (BildKachel) mit
+// denselben Massen (siehe KACHEL_HOEHE in WeiterlesenBox) und nicht eine
+// nachgebaute Kopie. Genau daraus war der Unterschied ja entstanden: Die
+// Startseite wurde am 22.08. umgebaut, diese Stelle nicht.
+//
+// not-prose ist Pflicht: Im Fliesstext greifen sonst die
+// Typografie-Regeln aus globals.css auf Link und Ueberschrift durch.
 export function InlineArticleCard({ article }: { article: Article }) {
-  const { kicker, headline } = splitTitle(article.title, article.tags);
   return (
-    <Link
-      href={`/artikel/${article.slug}`}
-      className="group not-prose flex items-center gap-4 sm:gap-6 rounded-2xl border border-border-default p-3 sm:p-4 transition-colors hover:bg-surface-hover"
-    >
-      <div className="relative w-28 sm:w-48 shrink-0 self-center overflow-hidden rounded-2xl border border-border-subtle aspect-[4/3] sm:aspect-[16/10]">
-        <ArticleMedia article={article} sizes="(max-width: 640px) 112px, 192px" className="h-full w-full transition-transform duration-500 group-hover:scale-105" />
-      </div>
-      <div className="flex min-w-0 flex-1 flex-col justify-center">
-        <div className="mb-2 flex flex-wrap items-center gap-2">
-          <CategoryPill category={article.category} />
-          <span className="text-xs text-text-tertiary hidden sm:inline">{formatDateTime(article.publishedAt)}</span>
-          <span className="text-xs text-text-tertiary">· {article.readingTimeMinutes} Min.</span>
-        </div>
-        {kicker && (
-          <p className="mb-0.5 text-[12px] font-bold uppercase tracking-wider text-accent line-clamp-1">
-            {kicker}
-          </p>
-        )}
-        <h3 className="text-base sm:text-lg font-semibold leading-snug text-text-primary group-hover:text-accent transition-colors line-clamp-3">
-          {headline}
-        </h3>
-        <p className="mt-1.5 hidden text-sm text-text-secondary sm:line-clamp-2">
-          {article.excerpt}
-        </p>
-      </div>
-    </Link>
+    <div className="not-prose">
+      <BildKachel article={article} hoehe={KACHEL_HOEHE} titelKlasse="text-[17px]" />
+    </div>
   );
 }
