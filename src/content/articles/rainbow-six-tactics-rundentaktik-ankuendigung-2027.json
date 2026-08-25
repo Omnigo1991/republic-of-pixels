@@ -1,0 +1,169 @@
+{
+  "slug": "rainbow-six-tactics-rundentaktik-ankuendigung-2027",
+  "title": "Rainbow Six wird rundenbasiert - und erstmals seit 18 Jahren solo",
+  "subtitle": "Ubisoft Paris schickt 15 Siege-Operatoren in ein XCOM-artiges Taktikspiel, das 2027 erscheinen soll",
+  "excerpt": "Ubisoft hat Rainbow Six Tactics angekündigt: eine reine Solo-Rundentaktik mit Drohnen, Breach-Punkten und zerstörbaren Wänden. Doch warum durfte ausgerechnet das Mario-+-Rabbids-Studio ran?",
+  "seoTitle": "Rainbow Six Tactics: Rundentaktik-Spin-off für 2027 angekündigt",
+  "metaDescription": "Ubisoft kündigt Rainbow Six Tactics an: rundenbasierte Solo-Taktik mit 15 Siege-Operatorenen, Drohnen-Recon und zerstörbaren Wänden. Release 2027 für PC, PS5 und Xbox.",
+  "category": "news",
+  "platforms": [
+    "pc",
+    "playstation",
+    "xbox"
+  ],
+  "bereich": "games",
+  "tags": [
+    "Rainbow Six Tactics",
+    "Ubisoft",
+    "Ubisoft Paris",
+    "Rundentaktik",
+    "Gamescom"
+  ],
+  "tldr": [
+    "Ubisoft hat bei der Gamescom Opening Night Live Rainbow Six Tactics enthüllt: ein rundenbasiertes Taktikspiel ausschliesslich für Einzelspieler:innen.",
+    "Entwickelt wird es bei Ubisoft Paris, dem Mitentwickler von Mario + Rabbids; Release ist für 2027 auf PC, PS5 und Xbox Series geplant.",
+    "15 Operator aus Rainbow Six Siege bringen ihre Fähigkeiten mit, Paul Bishop aus den Vegas-Teilen führt die Organisation als Kommandant.",
+    "Jede Mission startet mit Drohnen-Aufklärung und einer Breach-Phase; die Umgebung ist zerstörbar, laut play3.de soll es keine Mikrotransaktionen geben."
+  ],
+  "whyItMatters": "Rainbow Six war für viele jahrelang gleichbedeutend mit dem Multiplayer-Dauerlauf Siege - wer die Serie wegen ihrer Solo-Einsätze mochte, ging leer aus. Tactics ist der erste Versuch seit Vegas 2, diese Zielgruppe zurückzuholen, ohne den Shooter-Alltag von Siege zu kopieren. Und es zeigt, dass Ubisoft grosse Marken wieder in kleinere, klar umrissene Genre-Projekte ausleiht.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Ubisoft hat während der Gamescom Opening Night Live Tom Clancy's Rainbow Six Tactics angekündigt - ein rundenbasiertes Taktikspiel, das komplett auf Einzelspieler:innen ausgelegt ist. Entwickelt wird es bei Ubisoft Paris, jenem Studio, das unter anderem an Mario + Rabbids mitgearbeitet hat. Der Release ist für 2027 auf PC, PlayStation 5 und Xbox Series geplant, ein genaueres Datum nennt Ubisoft bislang nicht."
+    },
+    {
+      "type": "embed",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=iRJOXB3euJQ"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "2027",
+          "label": "geplantes Releasejahr für PC, PS5 und Xbox Series"
+        },
+        {
+          "value": "15",
+          "label": "spielbare Operator, allesamt aus Rainbow Six Siege"
+        },
+        {
+          "value": "4",
+          "label": "Operator ziehen pro Einsatz gemeinsam durch den Breach-Punkt"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Paul Bishop ist zurück - diesmal im Kommandosessel"
+    },
+    {
+      "type": "paragraph",
+      "text": "Erzählerisch knüpft Tactics an die Vegas-Ära an: Paul Bishop, Protagonist von Rainbow Six Vegas 1 und 2, führt die Organisation nicht mehr als Feldagent, sondern als Kommandant. Anlass ist eine Terrorgruppe, die weltweit Anschläge verübt - und Rainbow soll sie stoppen. Spielerisch bedeutet das: Ihr verwaltet die Organisation, entwickelt zwischen den Missionen Einrichtungen weiter, haushaltet mit Ressourcen und schickt Einheiten in rundenbasierte Gefechte. Der Aufbau erinnert damit nicht zufällig an XCOM."
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Truppe selbst kommt allerdings aus dem Multiplayer: Alle 15 rekrutierbaren Operatoren stammen aus Rainbow Six Siege und bringen ihre dortigen Spezialfähigkeiten mit. Im Ankündigungstrailer waren laut Rock Paper Shotgun unter anderem Nokk, Glaz, Montagne, Ash, Doc, Sledge und Zofia zu sehen - also eine Mischung aus Schadensausteilern, Supportfiguren, Flankierern und Scharfschützen. Wer mit einer XCOM-typischen Rekrutenschmiede rechnet, liegt daneben: Tactics setzt auf ein festes Ensemble mit klaren Rollen, ähnlich wie XCOM: Chimera Squad oder Tactical Breach Wizards."
+    },
+    {
+      "type": "heading",
+      "text": "Drohne, Breach, Abrissbirne: der Ablauf einer Mission"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der spannendste Teil ist die Vorbereitung. Draussen gibt es keinen Nebel des Krieges, weil das Rainbow-Team Luftaufklärung erhält - Innenräume bleiben aber verdeckt. Um zu erfahren, wer hinter den Wänden steht und wie er bewaffnet ist, schickt ihr Sieges kleine Aufklärungsdrohnen los. Erst danach entscheidet ihr euch für einen der mehreren Breach-Punkte einer Karte, stapelt vier Operator an der Wand, lasst mehrere Sturmbefehle gleichzeitig ausführen und räumt den Raum. Anschliessend wechselt das Spiel in klassische Rundenkämpfe."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Aufklärungsphase mit Drohnen statt Blindflug: Positionen und Bewaffnung der Gegner lassen sich vorab auskundschaften.",
+        "Breach-Befehle werden in eine Reihenfolge gebracht und dann gemeinsam ausgeführt.",
+        "Die Umgebung ist vollständig zerstörbar - Sledge und Co. schlagen Wege durch Wände, statt Türen zu suchen.",
+        "Die Level sind nicht prozedural generiert wie in XCOM 2, aber die Gegnerpositionen ändern sich bei jedem Durchgang."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Genau diese Kombination hebt Tactics von der Konkurrenz ab. Rock Paper Shotgun erkennt zwar Anleihen bei XCOM: Chimera Squad, Tactical Breach Wizards und Door Kickers, hält aber fest: In dieser Mischung habe bisher kein anderes Rundentaktikspiel diese Elemente zusammengeführt. Offen bleibt, wie tief die Zerstörung tatsächlich geht - in Siege dient sie nicht nur als Wegöffner, sondern auch zur Informationsbeschaffung, weil selbst ein kleines Loch in der Wand den Blick in den Nachbarraum freigibt."
+    },
+    {
+      "type": "heading",
+      "text": "Warum ein Paris-Team das Rainbow-Six-Erbe anfassen darf"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ubisoft Paris will mit Tactics ausdrücklich zwei Lager bedienen: alte Vegas-Fans und aktuelle Siege-Spieler:innen. Game Director Martial Potron argumentiert, dass die Serie das Taktische ohnehin immer in sich getragen habe."
+    },
+    {
+      "type": "quote",
+      "text": "Rainbow Six hat eine Menge Taktik in seiner DNA. Es wurde immer als taktischer Shooter bezeichnet. Von Anfang an gab es diesen Planungsmodus, in dem man seinen Trupp aufstellen und festlegen konnte, wohin er geht, während man im Ego-Shooter-Modus spielte. Und selbst in Siege sind heute viele taktische Elemente erhalten. Es war eine fantastische Gelegenheit, das zu verdrehen und ein Spiel anzubieten, das dieselbe DNA für Leute nutzt, die sie anders erleben wollen.",
+      "attribution": "Martial Potron, Game Director bei Ubisoft Paris, gegenüber GamesRadar+"
+    },
+    {
+      "type": "paragraph",
+      "text": "Widerstand aus dem Konzern gab es offenbar keinen. Ubisoft Montreal, das Siege betreut, sei schnell überzeugt gewesen: «Wir hatten absolut keine Mühe, das Rainbow-Six-Team davon zu überzeugen, dass es eine gute Idee ist», so Potron. Er bedankt sich ausdrücklich beim Team in Montreal, bei der neu gegründeten Ubisoft-Tochter Vantage und bei Ubisoft insgesamt dafür, dass sein Studio das Projekt umsetzen durfte."
+    },
+    {
+      "type": "heading",
+      "text": "Keine Mikrotransaktionen - und ein langes Warten"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ein Detail dürfte vielen wichtiger sein als jede Fähigkeitenliste: Laut play3.de soll das Spin-off ohne Mikrotransaktionen auskommen. Für ein Ubisoft-Projekt mit einer Marke, die im Multiplayer seit Jahren von Operator-Bundles und Battle Passes lebt, ist das eine bemerkenswerte Ansage - auch wenn bis 2027 noch viel Zeit bleibt, in der sich Monetarisierungspläne ändern können. Ausserdem bleibt vorerst unklar, wie umfangreich die Kampagne ausfällt und wie stark die Meta-Ebene rund um Basis und Ressourcen gewichtet wird."
+    },
+    {
+      "type": "paragraph",
+      "text": "Bemerkenswert ist vor allem der Kalender: Rainbow Six Vegas 2 erschien 2008 und war bis heute der letzte Serienteil mit richtiger Solo-Kampagne. Wie lang die Pause genau ausfällt, rechnen die internationalen Magazine unterschiedlich - GamesRadar+ spricht von 18 Jahren, Rock Paper Shotgun von 17, PC Gamer sogar von 19. Einig sind sich alle im Kern: Es sind fast zwei Jahrzehnte, in denen die Marke praktisch ausschliesslich mit Siege gleichgesetzt wurde."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Rainbow Six Tactics ist der naheliegendste Serienableger seit Jahren - Sieges Fähigkeiten-Roster, die Drohnenaufklärung und die zerstörbaren Wände waren immer schon Rundentaktik in Echtzeitverkleidung. Der Reiz liegt darin, ob Ubisoft Paris die Planungsphase so scharf hinbekommt, wie sie im Trailer wirkt, und ob die Zerstörung mehr ist als ein hübscher Effekt. Bis 2027 bleibt genug Zeit für Zweifel: Erst spielbare Missionen werden zeigen, ob hier ein eigenständiges Taktikspiel entsteht oder eine hübsch inszenierte Siege-Simulation ohne Gegenspieler:innen."
+    }
+  ],
+  "poll": {
+    "question": "Rundentaktik statt Ego-Shooter - ist das der richtige Weg für Rainbow Six?",
+    "options": [
+      "Ja, endlich wieder ein Solo-Rainbow-Six",
+      "Nur wenn die Zerstörung wirklich taktisch zählt",
+      "Nein, Rainbow Six gehört in die Ego-Perspektive",
+      "Abwarten - 2027 ist noch weit weg"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-25T18:55:16.051Z",
+  "readingTimeMinutes": 4,
+  "heroVariant": "grid",
+  "sources": [
+    {
+      "title": "Rainbow Six is getting its first new single-player entry in 18 years, an XCOM-style strategy game from the Mario + Rabbids co-developer",
+      "url": "https://www.gamesradar.com/games/tom-clancy-s/rainbow-six-is-getting-its-first-new-single-player-entry-in-18-years-an-xcom-style-strategy-game-from-the-mario-rabbids-co-developer/",
+      "publisher": "GamesRadar"
+    },
+    {
+      "title": "Rainbow Six Tactics transforms the demolition-driven Siege into a turn-based game while keeping the destructible environments, operators, and reconnaissance drones",
+      "url": "https://www.rockpapershotgun.com/rainbow-six-tactics-transforms-the-demolition-driven-siege-into-a-turn-based-game-while-keeping-the-destructible-environments-operators-and-reconnaissance-drones",
+      "publisher": "Rock Paper Shotgun"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/rainbow-six-tactics-rundentaktik-ankuendigung-2027.webp",
+    "alt": "Rainbow Six wird rundenbasiert - und erstmals seit 18 Jahren solo",
+    "credit": "Bild: GamesRadar",
+    "sourceUrl": "https://www.gamesradar.com/games/tom-clancy-s/rainbow-six-is-getting-its-first-new-single-player-entry-in-18-years-an-xcom-style-strategy-game-from-the-mario-rabbids-co-developer/",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "rog-xbox-ally-x20-vorbestellung-preis-2026",
+    "gamescom-2026-endres-heikhaus-gdq-nordamerika",
+    "gamescom-opening-night-live-2026-stream-uhrzeit-spiele"
+  ]
+}
