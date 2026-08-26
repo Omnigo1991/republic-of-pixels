@@ -132,11 +132,20 @@ export function EventCountdown({ href = "/#radare" }: { href?: string }) {
         </span>
       </Link>
       <p className="mx-auto mt-3 max-w-[620px] text-[16px] text-[#a1a1a6] sm:text-[21px]">{unterzeile}</p>
-      <div className="mt-8 flex justify-center gap-3.5">
+      {/* GLEICH BREITE KACHELN (Tim, 26.08.2026).
+          Vorher war es eine Reihe mit Mindestbreite - jede Kachel wuchs
+          mit ihrer Beschriftung. Auf dem Handy gemessen: TAGE 86 px,
+          STUNDEN 105.3 px, MINUTEN 103.1 px. Auf dem Desktop fiel es nicht
+          auf, weil dort die Mindestbreite von 104 px ohnehin groesser war
+          als alle drei Woerter.
+          Jetzt drei gleiche Spalten in einem Raster fester Breite: 340 px
+          minus zwei Abstaende, geteilt durch drei = 104 px pro Kachel,
+          unabhaengig vom Wort. */}
+      <div className="mx-auto mt-8 grid w-full max-w-[340px] grid-cols-3 gap-3.5">
         {felder.map(([zahl, wort]) => (
           <div
             key={wort}
-            className="min-w-[86px] rounded-[18px] border border-white/[0.22] bg-white/[0.12] px-5 py-4 backdrop-blur-[14px] sm:min-w-[104px]"
+            className="rounded-[18px] border border-white/[0.22] bg-white/[0.12] px-2 py-4 backdrop-blur-[14px]"
           >
             <div className="text-[28px] font-bold [font-variant-numeric:tabular-nums] sm:text-[40px]">
               {zahl}
