@@ -670,11 +670,29 @@ async function prepare() {
             ? "REVIEW"
             : null;
 
-      // Format-Regeln (Tim, 08.08.2026):
-      // - BREAKING wird IMMER als Reel gepostet und zählt nicht für den
-      //   Wechsel (beeinflusst die Reihenfolge der normalen Posts nicht).
-      // - Normale Posts wechseln strikt 50/50: Reel, Bild, Reel … (saubere
-      //   A/B-Datenpunkte; Tageszähler im State).
+      // FORMAT-REGELN.
+      //
+      // 08.08.2026: BREAKING immer als Reel, normale Posts strikt 50/50 -
+      // damit wir saubere Vergleichsdaten bekommen.
+      //
+      // 26.08.2026 - DIE DATEN SIND DA (Tim: "Stell die Posts auf mehr
+      // Reels um"). Der Ruecklese-Lauf ueber 15 Posts:
+      //
+      //   Reel   10 Posts   Likes 12.5   Reichweite 156
+      //   Bild    5 Posts   Likes  2.6   Reichweite  25
+      //
+      // Fast fuenfmal so viele Likes, ueber sechsmal so viel Reichweite.
+      // Das 50/50 hat seinen Zweck erfuellt und kostet uns jetzt Reichweite.
+      //
+      // WARUM NICHT ALLES AUF REEL: Dann haetten wir keine Vergleichsgruppe
+      // mehr und koennten nie feststellen, ob der Abstand am Format liegt
+      // oder an den Geschichten, die zufaellig als Reel gelaufen sind. 15
+      // Posts sind dafuer zu wenig. Jeder VIERTE normale Post bleibt darum
+      // ein Bild - genug, um weiter zu messen, wenig genug, um die
+      // Reichweite nicht laenger zu verschenken.
+      //
+      // Zusammen mit Breaking landen wir bei rund 80 Prozent Reels.
+      //
       // Schlägt das Reel-Rendering fehl, greift lautlos das Bild - ein Post
       // geht nie verloren.
       // KOPFZEILE NIE LEER (Fund im Probelauf 25.08.2026): Die bisherige
@@ -692,7 +710,8 @@ async function prepare() {
       if (istBreaking) {
         alsReel = true;
       } else {
-        alsReel = state.instagram.wechsel.nichtBreaking % 2 === 0;
+        // Jeder vierte normale Post bleibt ein Bild - siehe oben.
+        alsReel = state.instagram.wechsel.nichtBreaking % 4 !== 3;
         state.instagram.wechsel.nichtBreaking++;
       }
       let cardRel = null;
