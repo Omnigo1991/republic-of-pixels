@@ -114,6 +114,13 @@ h3 {
 .prose-rop li:where(:not(.not-prose, .not-prose *)) {
   margin: 0.5em 0;
   line-height: 1.65;
+  /* GLEICHE SCHRIFTGROESSE WIE DER FLIESSTEXT (Tim, 26.08.2026: "wieso
+     sind die Aufzaehlungen kleiner als der restliche Text").
+     Der Absatz bekam hier ausdrueckliche 1.125rem, der Listenpunkt gar
+     keine Angabe - er erbte damit die 16px des Grundtextes. Gemessen im
+     Artikel: Absatz 18px, Listenpunkt 16px. Auf dem Handy dasselbe eine
+     Stufe tiefer, weil auch die Verkleinerung unten nur fuer p galt. */
+  font-size: 1.125rem;
 }
 .prose-rop a:where(:not(.not-prose, .not-prose *)) {
   color: #02F0D1;
@@ -124,7 +131,8 @@ h3 {
 }
 
 @media (max-width: 640px) {
-  .prose-rop p:where(:not(.not-prose, .not-prose *)) {
+  .prose-rop p:where(:not(.not-prose, .not-prose *)),
+  .prose-rop li:where(:not(.not-prose, .not-prose *)) {
     font-size: 1.0625rem;
   }
   .prose-rop blockquote:where(:not(.not-prose, .not-prose *)) {
