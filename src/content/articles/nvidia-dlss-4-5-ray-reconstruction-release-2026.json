@@ -1,0 +1,163 @@
+{
+  "slug": "nvidia-dlss-4-5-ray-reconstruction-release-2026",
+  "title": "DLSS 4.5 Ray Reconstruction ist da - der Sprung fällt kleiner aus",
+  "subtitle": "Nvidia verspricht mit dem neuen Transformer-Denoiser deutlich sauberere Pathtracing, der erste Test in fünf Spielen sieht eher Feinschliff",
+  "excerpt": "Nvidia hat zur Gamescom 2026 DLSS 4.5 Ray Reconstruction freigegeben: neues Transformer-Modell, 35 Prozent mehr Rechenleistung, 30 Spiele per Override. Nur beim Gewinn an Bildqualität gehen die Einschätzungen auseinander.",
+  "seoTitle": "DLSS 4.5 Ray Reconstruction: Release, Preset F, Spiele",
+  "metaDescription": "Nvidia veröffentlicht DLSS 4.5 Ray Reconstruction mit Transformer-Modell: 30 Spiele per Override, ab RTX 2000, neue Titel im September. Was der erste Test zeigt.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "bereich": "hardware",
+  "tags": [
+    "Nvidia",
+    "DLSS",
+    "GeForce RTX",
+    "Pathtracing",
+    "RTX Remix",
+    "Gamescom 2026"
+  ],
+  "tldr": [
+    "Nvidia hat DLSS 4.5 Ray Reconstruction zur Gamescom 2026 veröffentlicht; der Denoiser wechselt vom CNN- auf ein Transformer-Modell.",
+    "Das neue Netz benötigt 35 Prozent mehr Rechenleistung und arbeitet mit 20 Prozent mehr Parametern, soll aber ähnlich schnell laufen wie bisher.",
+    "Aktivierung per Nvidia App über 'Preset F', aktuell für 30 freigeschaltete Spiele; lauffähig ab GeForce RTX 2000.",
+    "007: First Light (15. September) und Control Resonant (24. September) folgen, RTX Remix unterstützt die Technik ab sofort."
+  ],
+  "whyItMatters": "Ray Reconstruction ist der Denoiser hinter Raytracing und Pathtracing - er entscheidet mit, wie stabil und sauber Licht, Schatten und Spiegelungen aussehen. Weil das Update ab der GeForce RTX 2000 läuft und sich in vielen Spielen per Nvidia App nachrüsten lässt, profitieren auch Besitzerinnen und Besitzer älterer Karten, ohne dass Entwickler ein Patch liefern müssen.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Nvidia hat zur Gamescom 2026 den letzten grossen Baustein der DLSS-Suite modernisiert: DLSS 4.5 Ray Reconstruction ist ab sofort verfügbar und ersetzt das bisherige CNN-Netzwerk durch ein Transformer-Modell der zweiten Generation. Angekündigt hatte Nvidia die Technik erstmals zur Computex 2026, jetzt folgt die öffentliche Freigabe - inklusive Unterstützung in RTX Remix und einer Whitelist von zunächst 30 Spielen, in denen sich der neue Denoiser per Nvidia App erzwingen lässt."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "35 %",
+          "label": "höhere Rechenleistung des neuen Transformer-Modells gegenüber dem alten CNN"
+        },
+        {
+          "value": "30 Spiele",
+          "label": "stehen aktuell auf der Whitelist für den Override auf Preset F"
+        },
+        {
+          "value": "RTX 2000",
+          "label": "genügt als Mindestanforderung - Frame Generation bleibt neueren Karten vorbehalten"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Warum der Wechsel überfällig war"
+    },
+    {
+      "type": "paragraph",
+      "text": "Super Resolution, also das klassische Upscaling, war bereits mit dem ersten DLSS 4 auf ein Transformer-Netz umgestiegen. Zum Jahresanfang legte Nvidia mit DLSS 4.5 Super Resolution ein zweites, ungewöhnlich grosses Upgrade nach, das in einem Blindtest der ComputerBase-Leserschaft deutlich vor der nativen Auflösung und vor FSR Upscaling 4.0 landete. Frame Generation wuchs parallel auf DLSS 4.5 Multi Frame Generation 6× mit bis zu fünf statt bis zu drei Zwischenbildern, dazu kam ein Dynamic-MFG-Modus, der den Faktor an die Framerate anpasst. Nur Ray Reconstruction blieb technisch stehen - und arbeitete weiter mit dem älteren, simpleren CNN-Ansatz."
+    },
+    {
+      "type": "paragraph",
+      "text": "Das neue Modell verlangt laut Nvidia 35 Prozent mehr Rechenleistung und arbeitet mit 20 Prozent mehr Parametern als sein Vorgänger. Weil die Performance in Spielen trotzdem ähnlich ausfallen soll, spricht das Unternehmen von einem effizienteren Denoiser. Der Grund für den Qualitätsgewinn ist derselbe wie beim Upscaling: Das Netz versteht die Bewegung von Pixeln besser. Daraus sollen eine genauere Lichtdarstellung, höhere temporale Stabilität und weniger Ghosting entstehen. Nvidia nennt zusätzlich sauberere raytraced Schatten, ein schärferes Bild bei Ray- und Pathtracing sowie das Verschwinden von Boiling-Artefakten. Entwickler erhalten mehr Kontrolle über das temporale Verhalten, um das Modell an die eigenen Inhalte anzupassen."
+    },
+    {
+      "type": "heading",
+      "text": "So kommt man an Preset F"
+    },
+    {
+      "type": "paragraph",
+      "text": "Studios können DLSS 4.5 Ray Reconstruction über ein neues SDK direkt einbauen. Für alle anderen Fälle bleibt der Override in der Nvidia App: Im globalen oder im spielspezifischen Profil muss unter «DLSS-Überschreiben - Modell-Voreinstellungen» die «Strahlenrekonstruktion» auf «Preset F» gestellt werden. Preset E ist die letzte Version mit dem alten CNN-Netz und damit die Vergleichsbasis. Der Treiber GeForce 610.88 genügt, allerdings braucht es eine neue Version der Nvidia App - ob diese zunächst nur im Beta-Branch oder direkt final verteilt wird, war zum Start nicht abschliessend zu klären. Voraussetzung ist ausserdem, dass Nvidia das Spiel freigeschaltet hat."
+    },
+    {
+      "type": "paragraph",
+      "text": "Auf der aktuellen Whitelist stehen 30 Titel, darunter:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Alan Wake 2, Cyberpunk 2077, Hogwarts Legacy und Crimson Desert",
+        "Doom: The Dark Ages, Indiana Jones und der grosse Kreis, Star Wars Outlaws",
+        "Call of Duty: Black Ops 7, Marvel's Spider-Man 2, Resident Evil Requiem, Pragmata",
+        "Avatar: Frontiers of Pandora, FBC: Firebreak, F1 25, The First Descendant",
+        "die RTX-Remix-Projekte Half-Life 2 RTX und Portal RTX"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Weitere Spiele sollen kurzfristig folgen. Zwei Termine hat Nvidia zur Messe bereits genannt: 007: First Light bekommt am 15. September ein Update mit DLSS 4.5 Ray Reconstruction und Pathtracing, Control Resonant folgt am 24. September mit demselben Paket."
+    },
+    {
+      "type": "heading",
+      "text": "Sprung oder Feinschliff? Der erste Test relativiert"
+    },
+    {
+      "type": "paragraph",
+      "text": "Interessant wird es beim tatsächlichen Gewinn. Wccftech spricht nach eigenen Tests von einer massiven Verbesserung in mehreren Spielen, mit deutlich gestiegener Bildqualität und praktisch sofort reagierenden Lichtquellen. ComputerBase hat die Technik in Alan Wake 2, Crimson Desert, Cyberpunk 2077, Hogwarts Legacy und Pragmata untersucht und zusätzlich mit einer GeForce RTX 5090 nachgemessen - und kommt zu einem nüchterneren Schluss: Im Fazit stehen die Zwischentitel «Die Bildqualität steigt nur leicht» und «Die Leistung bleibt quasi gleich». Die Redaktion hat dabei bewusst die allgemeine Bildqualität betrachtet, statt sich auf bekannte Schwachstellen des alten Denoisers zu stürzen."
+    },
+    {
+      "type": "paragraph",
+      "text": "Unstrittig ist damit der wichtigste Punkt aus Spielersicht: Der Wechsel auf Preset F kostet praktisch keine Framerate. Wer Pathtracing nutzt, kann den Override also ohne Leistungsrisiko ausprobieren - und selbst entscheiden, ob der Unterschied im eigenen Spiel spürbar ist. Wie gross der Zugewinn ausfällt, dürfte stark vom Titel, von der Szene und vom Bewegungsanteil abhängen."
+    },
+    {
+      "type": "heading",
+      "text": "RTX Remix zieht mit"
+    },
+    {
+      "type": "paragraph",
+      "text": "Den zweiten Teil der Ankündigung dürfte die Mod-Szene lauter feiern als die Benchmark-Fraktion: RTX Remix unterstützt DLSS 4.5 Ray Reconstruction ab sofort, entsprechende Mods profitieren also direkt von der genaueren Lichtberechnung. Nvidia spricht zur Gamescom 2026 von fast 250 Titeln in der Pipeline, neu dabei sind unter anderem Turok, Prototype und Fallout 4. Dazu kommen Werkzeuge wie InstaMAT2Remix für prozedurale Assets, PCSX2 Remix für pathgetracte PS2-Spiele und eine Blender-Integration zur Asset-Verwaltung."
+    },
+    {
+      "type": "paragraph",
+      "text": "Zwei Remaster sind konkret: Painkiller RTX von Merry Pencil Studios umfasst 15 überarbeitete Level mit vollem Pathtracing, fortgeschrittenen Partikeleffekten, RTX Volumetrics, RTX Neural Radiance Cache, Remix Logic und RTX IO - die Demo erscheint am 25. August, die Mod ist für Besitzer des Originals auf GOG kostenlos. Ausserdem arbeitet Modder GokuwasHere an einer RTX-Fassung von The Elder Scrolls III: Morrowind, die zunächst drei Orte umfasst: Seyda Neen, die Magiergilde und Balmora."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "DLSS 4.5 Ray Reconstruction ist kein Verkaufsargument für neue Hardware, sondern ein Nachrüst-Update: Es läuft ab der GeForce RTX 2000 und lässt sich in vielen Spielen ohne Patch aktivieren. Damit bleibt die Trennlinie in Nvidias Portfolio unverändert - allein Frame Generation verlangt neuere Karten, mindestens RTX 4000 für den zweifachen Modus und RTX 5000 für Multi Frame Generation 6×. Dass die Bewertungen der Bildqualität zwischen «massiver Verbesserung» und «leichter Steigerung» auseinandergehen, spricht weniger gegen die Technik als für einen genauen Blick im eigenen Spiel. Nur ist die Erwartungshaltung nach dem Upscaling-Sprung zum Jahresanfang eben hoch."
+    }
+  ],
+  "poll": {
+    "question": "DLSS 4.5 Ray Reconstruction: echter Qualitätssprung oder nur Feinschliff?",
+    "options": [
+      "Deutlich sichtbar - Pathtracing wirkt endlich stabil",
+      "Nettes Plus, aber nichts, was ich im Spiel bemerke",
+      "Egal, Hauptsache es kostet keine Frames",
+      "Ich nutze Pathtracing sowieso nicht"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-26T07:12:25.942Z",
+  "readingTimeMinutes": 4,
+  "heroVariant": "grid",
+  "sources": [
+    {
+      "title": "DLSS 4.5 Ray Reconstruction im Test: Die Grafikqualität macht einen Sprung nach vorne",
+      "url": "https://www.computerbase.de/artikel/grafikkarten/dlss-4-5-ray-reconstruction-test.98930/",
+      "publisher": "ComputerBase"
+    },
+    {
+      "title": "NVIDIA Launches DLSS 4.5 Ray Reconstruction: Coming To 007 First Light, Control Resonant, & Now Supported In RTX Remix",
+      "url": "https://wccftech.com/nvidia-dlss-4-5-ray-reconstruction-launch-coming-to-007-first-light-control-resonant-rtx-remix/",
+      "publisher": "Wccftech"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/nvidia-dlss-4-5-ray-reconstruction-release-2026.webp",
+    "alt": "DLSS 4.5 Ray Reconstruction ist da - der Sprung fällt kleiner aus",
+    "credit": "Bild: ComputerBase",
+    "sourceUrl": "https://www.computerbase.de/artikel/grafikkarten/dlss-4-5-ray-reconstruction-test.98930/",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "warlock-dungeons-dragons-gameplay-darkon-2027",
+    "ff7-revelation-gamescom-trailer-weapons-2027",
+    "lego-skylines-ankuendigung-gamescom-2026"
+  ]
+}
