@@ -1,5 +1,3 @@
-import { existsSync } from "node:fs";
-import { join } from "node:path";
 import Link from "next/link";
 import type { Article } from "@/lib/types";
 import { PlaceholderArt } from "@/components/PlaceholderArt";
@@ -9,25 +7,7 @@ import { CHIP, VERLAUFSTEXT, KategorieChip, punktFarbe, labelFarbe, spielName } 
 // die Bühne, Titel und Anriss stehen im Bild, darunter schweben drei
 // weitere Meldungen als Glaskarten. Am Handy flacher, damit das Bild
 // weniger stark herangezoomt wird.
-/**
- * Pfad zum Hochformat - oder null, wenn es die Datei nicht gibt.
- *
- * NOTWENDIG, NICHT VORSICHTSHALBER (Fund 25.08.2026): 97 von 445 Artikeln
- * haben kein Hochformat, weil sie vor der Portrait-Erweiterung entstanden
- * sind. Ein <picture> mit einem <source>, dessen Datei fehlt, faellt NICHT
- * auf das <img> zurueck - der Browser waehlt die passende Quelle und zeigt
- * dann ein kaputtes Bild. Ohne diese Pruefung waere der Hero bei jedem
- * fuenften Artikel auf dem Handy leer.
- *
- * Die Pruefung laeuft beim Bauen der Seite, nicht im Browser.
- */
-function hochformatPfad(src: string): string | null {
-  const rel = src.replace(/\.webp$/, "-portrait.webp");
-  return existsSync(join(process.cwd(), "public", rel)) ? rel : null;
-}
-
 export function KinoHero({ artikel, weitere }: { artikel: Article; weitere: Article[] }) {
-  const hochformat = artikel.image ? hochformatPfad(artikel.image.src) : null;
   return (
     <div className="hero-voll schrift-normal relative h-[540px] sm:h-[760px] lg:h-[960px]">
       {artikel.image ? (
@@ -44,7 +24,10 @@ export function KinoHero({ artikel, weitere }: { artikel: Article; weitere: Arti
         // (sharp "attention"). Die Website hat es bis heute nirgends
         // benutzt. Unter 640 px nimmt der Hero jetzt diese Fassung.
         <picture>
-          {hochformat && <source media="(max-width: 639px)" srcSet={hochformat} />}
+          <source
+            media="(max-width: 639px)"
+            srcSet={artikel.image.src.replace(/\.webp$/, "-portrait.webp")}
+          />
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={artikel.image.src}
