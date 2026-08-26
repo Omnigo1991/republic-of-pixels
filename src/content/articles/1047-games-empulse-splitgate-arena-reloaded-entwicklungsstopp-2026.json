@@ -1,0 +1,163 @@
+{
+  "slug": "1047-games-empulse-splitgate-arena-reloaded-entwicklungsstopp-2026",
+  "title": "1047 Games stoppt Splitgate und Empulse - spielbar bleiben sie trotzdem",
+  "subtitle": "Ab dem 3. September fallen dedizierte Server und Matchmaking weg, stattdessen übernehmen Peer-to-Peer und ein Serverbrowser",
+  "excerpt": "Nach zehn Jahren Live-Service-Shootern zieht 1047 Games einen Schlussstrich: Empulse und Splitgate: Arena Reloaded bekommen keine Updates mehr. Ganz verschwinden werden sie aber nicht - und der nächste Schritt des Studios klingt nach etwas völlig anderem.",
+  "seoTitle": "1047 Games beendet Splitgate und Empulse: Server aus am 3.9.",
+  "metaDescription": "1047 Games stellt die Entwicklung von Empulse und Splitgate: Arena Reloaded ein. Ab 3. September laufen beide Shooter über Peer-to-Peer statt dedizierter Server.",
+  "category": "news",
+  "platforms": [
+    "pc",
+    "playstation",
+    "xbox"
+  ],
+  "bereich": "games",
+  "tags": [
+    "1047 Games",
+    "Splitgate",
+    "Empulse",
+    "Live-Service",
+    "Server-Abschaltung"
+  ],
+  "tldr": [
+    "1047 Games beendet die aktive Entwicklung von Empulse und Splitgate: Arena Reloaded.",
+    "Ab dem 3. September werden dedizierte Server und Matchmaking abgeschaltet - beide Spiele wechseln auf Peer-to-Peer mit Serverbrowser.",
+    "Empulse erhält als letztes Update eine neue Map und eine weltweite Preissenkung.",
+    "Die Gründer kündigen an, sich nach zehn Jahren von Live-Service-Shootern abzuwenden; zur Personalsituation äussert sich das Studio nicht."
+  ],
+  "whyItMatters": "Wer Geld in Empulse oder Splitgate: Arena Reloaded gesteckt hat, verliert zwar nicht den Zugang, aber jede Form offizieller Betreuung - Matchmaking und dedizierte Server fallen weg. Der Fall zeigt exemplarisch, wie schnell ein Live-Service-Shooter ohne stabile Spielerbasis unwirtschaftlich wird, selbst bei einem Studio mit Millionenpublikum.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "1047 Games stellt die aktive Entwicklung seiner beiden aktuellen Shooter ein: Empulse und Splitgate: Arena Reloaded erhalten keine Inhalts-Updates mehr, und ab dem 3. September werden dedizierte Server sowie Matchmaking abgeschaltet. Das Studio begründet den Schritt in einer Mitteilung auf X damit, dass keines der beiden Spiele genug Umsatz erwirtschafte, um die laufenden Serverkosten zu decken. Gleichzeitig kündigen die Gründer einen grundsätzlichen Kurswechsel an - weg vom Live-Service-Shooter, nach zehn Jahren mit genau diesem Modell."
+    },
+    {
+      "type": "embed",
+      "platform": "twitter",
+      "url": "https://x.com/Splitgate/status/1931162849977442371"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "3. Sept.",
+          "label": "Abschaltung von dedizierten Servern und Matchmaking"
+        },
+        {
+          "value": "25 Mio.",
+          "label": "Menschen haben laut Studio die Spiele von 1047 Games gespielt"
+        },
+        {
+          "value": "10 Jahre",
+          "label": "Fokus auf Live-Service-Shooter, der nun endet"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Was am 3. September konkret passiert"
+    },
+    {
+      "type": "paragraph",
+      "text": "Beide Titel verschwinden nicht aus den Bibliotheken. Statt zentraler Infrastruktur übernimmt Peer-to-Peer-Hosting, ergänzt um einen Serverbrowser: Spielerinnen und Spieler können also weiterhin Partien eröffnen und beitreten - nur eben ohne automatisches Matchmaking und ohne die Latenzvorteile dedizierter Server. Empulse bekommt zum Abschied noch ein letztes Update."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Dedizierte Server und Matchmaking enden für beide Spiele am 3. September",
+        "Ersatz: Peer-to-Peer-Hosting plus Serverbrowser",
+        "Empulse erhält eine finale neue Map",
+        "Empulse wird in allen Regionen im Preis gesenkt",
+        "Keine weiteren Inhalts-Updates für beide Titel"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Dieses Vorgehen ist für das Studio nicht neu. Das ursprüngliche Splitgate wechselte bereits im vergangenen Jahr auf Peer-to-Peer, nachdem seine dedizierten Server abgeschaltet worden waren - und ist bis heute spielbar, auch auf Konsole. Für die beiden Nachfolger dürfte damit ein ähnliches Restleben beginnen: technisch funktionsfähig, aber allein von der Community getragen."
+    },
+    {
+      "type": "heading",
+      "text": "Zwei Jahre voller Fehlstarts"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Vorgeschichte erklärt viel. Splitgate 2 erschien im Juni 2025 und geriet fast sofort in die Diskussion - unter anderem wegen einer Kappe im MAGA-Stil mit dem Aufdruck «Make FPS Great Again», die Mitgründer Ian Proulx auf der Bühne des Summer Game Fest trug, und wegen eines Kosmetik-Bundles für 145 Dollar. Binnen eines Monats entliess 1047 Games eine nicht genannte Zahl von Entwicklerinnen und Entwicklern, einen weiteren Monat später schickte das Studio das Spiel «zurück in die Beta» und strich erneut Stellen."
+    },
+    {
+      "type": "paragraph",
+      "text": "Aus dieser Rückabwicklung ging Splitgate: Arena Reloaded hervor - ein Neustart, der das Interesse nicht zurückholte. Anfang 2026 lag die tägliche Spielerzahl unter 1000, während das Studio öffentlich erklärte, Steam-Charts würden keinen Spass messen. Empulse, ein 6-gegen-6-Movement-Shooter, der als geistiger Nachfolger von Titanfall positioniert wurde, startete erst im Juni 2026 in den Early Access. Auch hier folgten innerhalb weniger Wochen mehrere Entlassungsrunden, zuletzt im Juli."
+    },
+    {
+      "type": "heading",
+      "text": "«Nicht mehr tragbar»"
+    },
+    {
+      "type": "quote",
+      "text": "Wir haben diese Kosten weiter getragen, weil wir beiden Spielen jede Chance geben wollten zu wachsen, aber wir haben den Punkt erreicht, an dem das nicht mehr tragbar ist. Wir haben es geliebt, an diesen Spielen zu arbeiten, sie zu spielen und sie mit dieser Community aufzubauen, und wir wünschten, wir könnten sie weiter unterstützen.",
+      "attribution": "1047 Games"
+    },
+    {
+      "type": "paragraph",
+      "text": "Zur Personalsituation schweigt die Mitteilung. Ob dem Entwicklungsstopp weitere Kürzungen folgen, ist damit offen - nach den bereits erfolgten Wellen der vergangenen Monate eine Frage, die viele Beobachterinnen und Beobachter beschäftigen dürfte."
+    },
+    {
+      "type": "heading",
+      "text": "Was als Nächstes kommt - und was nicht"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Mitgründer Ian Proulx und Nicholas Bagamian formulieren den Bruch deutlich: Das nächste Projekt soll sich klar von dem unterscheiden, wofür 1047 Games bislang stand - also von Portalen, Mechs und dauerbetreuten Multiplayer-Arenen."
+    },
+    {
+      "type": "quote",
+      "text": "Wir haben 1047 Games vor zehn Jahren gegründet, weil wir Videospiele lieben. Seitdem haben mehr als 25 Millionen Menschen unsere Spiele gespielt. Nach zehn Jahren mit Fokus auf Live-Service-Shooter ändert sich unser Fokus. Was wir als Nächstes bauen, sieht möglicherweise ganz anders aus, als die Leute es von 1047 Games erwarten - aber was sich nicht geändert hat, ist das Warum: Wir lieben es, Spiele zu machen.",
+      "attribution": "Ian Proulx und Nicholas Bagamian, Mitgründer von 1047 Games"
+    },
+    {
+      "type": "paragraph",
+      "text": "Einordnung: 1047 Games war eines der Studios, die den Live-Service-Traum tatsächlich einmal eingelöst hatten - das erste Splitgate wurde aus dem Nichts zum Überraschungserfolg. Dass ausgerechnet dieses Team nun beide Nachfolger abschaltet und das Genre verlässt, sagt weniger über eine einzelne Fehlentscheidung aus als über die Rechnung dahinter: Ein Shooter mit dedizierten Servern muss dauerhaft eine grosse Spielerbasis halten, sonst fressen die Betriebskosten das Projekt auf, lange bevor es sich erholen kann. Für die verbliebene Community bleibt immerhin, was schon beim ersten Splitgate funktioniert hat - ein Serverbrowser, ein paar hartnäckige Lobbys und die Freiheit, das Spiel selbst am Leben zu halten."
+    }
+  ],
+  "poll": {
+    "question": "Peer-to-Peer statt Abschaltung: Ist das ein fairer Umgang mit der Community?",
+    "options": [
+      "Ja - so bleibt das Spiel wenigstens spielbar",
+      "Halbherzig - ohne Matchmaking stirbt es trotzdem",
+      "Nein, hier hätte es mehr gebraucht als einen Serverbrowser",
+      "Egal, das Problem waren die Fehlstarts davor"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-26T23:04:49.138Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "grid",
+  "sources": [
+    {
+      "title": "1047 Games ends active development on Empulse and Splitgate: Arena Reloaded, says it's moving away from live service shooters",
+      "url": "https://www.gamesindustry.biz/1047-games-ends-active-development-on-empulse-and-splitgate-arena-reloaded-says-its-moving-away-from-live-service-shooters",
+      "publisher": "GamesIndustry.biz"
+    },
+    {
+      "title": "Empulse and Splitgate both shut down development as devs pivot away from live-service shooters entirely",
+      "url": "https://www.destructoid.com/empulse-splitgate-shut-down-devs-pivot-live-service-shooters/",
+      "publisher": "Destructoid"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/1047-games-empulse-splitgate-arena-reloaded-entwicklungsstopp-2026.webp",
+    "alt": "1047 Games stoppt Splitgate und Empulse - spielbar bleiben sie trotzdem",
+    "credit": "Bild: GamesIndustry.biz",
+    "sourceUrl": "https://www.gamesindustry.biz/1047-games-ends-active-development-on-empulse-and-splitgate-arena-reloaded-says-its-moving-away-from-live-service-shooters",
+    "sourceWidth": 690,
+    "sourceHeight": 388
+  },
+  "relatedSlugs": [
+    "rainbow-six-siege-operation-split-fire-2026",
+    "palworld-update-1-1-umfang-pocketpair-2026",
+    "helldivers-2-level-cap-300-2026"
+  ]
+}

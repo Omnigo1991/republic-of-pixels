@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-26T20:02:47.012Z",
+  "updatedAt": "2026-08-26T23:04:53.337Z",
   "deals": [
     {
       "appId": 1174180,
@@ -11,17 +11,6 @@
       "endsAt": "2026-09-08T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/1174180/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/capsule_184x69.jpg?t=1759502961"
-    },
-    {
-      "appId": 1551360,
-      "title": "Forza Horizon 5",
-      "discountPercent": 60,
-      "originalPrice": 5999,
-      "finalPrice": 2399,
-      "currency": "EUR",
-      "endsAt": "2026-09-03T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1551360/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1551360/capsule_184x69.jpg?t=1787677939"
     },
     {
       "appId": 3240220,
@@ -55,6 +44,17 @@
       "endsAt": "2026-08-27T17:00:09.000Z",
       "url": "https://store.steampowered.com/app/2764460/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2764460/f0a29d6c91be4e91e9fa2f384dd5ae695bfd6b5b/capsule_184x69.jpg?t=1787606192"
+    },
+    {
+      "appId": 1812450,
+      "title": "Bellwright",
+      "discountPercent": 34,
+      "originalPrice": 2899,
+      "finalPrice": 1913,
+      "currency": "EUR",
+      "endsAt": "2026-09-09T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1812450/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1812450/c479dda6fcd1e9edf38fe18a02ca21aab153664e/capsule_184x69.jpg?t=1786637342"
     },
     {
       "appId": 1623730,

@@ -1,20 +1,21 @@
 {
-  "datum": "2026-08-26",
-  "nummer": 18,
-  "loesung": "Forza Horizon 5",
+  "datum": "2026-08-27",
+  "nummer": 19,
+  "loesung": "Grand Theft Auto: Vice City",
   "akzeptiert": [
-    "forzahorizon5",
-    "forzahorizon"
+    "grandtheftautovicecity",
+    "gtavicecity",
+    "vicecity"
   ],
   "hinweise": [
-    "Erschienen 2021 · Rennspiel",
-    "Mexiko"
+    "Erschienen 2002 · Open World",
+    "80er-Jahre-Setting"
   ],
   "bilder": [
-    "/images/pixelraten/2026-08-26-s1.jpg",
-    "/images/pixelraten/2026-08-26-s2.jpg",
-    "/images/pixelraten/2026-08-26-s3.jpg",
-    "/images/pixelraten/2026-08-26-s4.jpg",
-    "/images/pixelraten/2026-08-26-s5.jpg"
+    "/images/pixelraten/2026-08-27-s1.jpg",
+    "/images/pixelraten/2026-08-27-s2.jpg",
+    "/images/pixelraten/2026-08-27-s3.jpg",
+    "/images/pixelraten/2026-08-27-s4.jpg",
+    "/images/pixelraten/2026-08-27-s5.jpg"
   ]
 }
