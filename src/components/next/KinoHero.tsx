@@ -11,30 +11,12 @@ export function KinoHero({ artikel, weitere }: { artikel: Article; weitere: Arti
   return (
     <div className="hero-voll schrift-normal relative h-[540px] sm:h-[760px] lg:h-[960px]">
       {artikel.image ? (
-        // HOCHFORMAT AUF DEM HANDY (Tim, 25.08.2026: "das Hero-Bild sieht
-        // auf Mobile nicht gut aus").
-        //
-        // Gemessen: Auf dem Desktop sind 84 % der Bildbreite zu sehen, auf
-        // dem Handy nur 41 %. Ein 1600x900-Bild in einem 540 px hohen
-        // Hochkant-Kasten verliert 59 % seiner Breite - blind aus der
-        // Mitte geschnitten, egal wo das Motiv steht.
-        //
-        // Die Pipeline erzeugt zu JEDEM Artikel laengst ein
-        // 1080x1350-Hochformat, dessen Ausschnitt sie selbst waehlt
-        // (sharp "attention"). Die Website hat es bis heute nirgends
-        // benutzt. Unter 640 px nimmt der Hero jetzt diese Fassung.
-        <picture>
-          <source
-            media="(max-width: 639px)"
-            srcSet={artikel.image.src.replace(/\.webp$/, "-portrait.webp")}
-          />
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={artikel.image.src}
-            alt={artikel.image.alt}
-            className="absolute inset-0 h-full w-full object-cover object-[center_42%]"
-          />
-        </picture>
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={artikel.image.src}
+          alt={artikel.image.alt}
+          className="absolute inset-0 h-full w-full object-cover object-[center_42%]"
+        />
       ) : (
         <span className="absolute inset-0">
           <PlaceholderArt variant={artikel.heroVariant} />
