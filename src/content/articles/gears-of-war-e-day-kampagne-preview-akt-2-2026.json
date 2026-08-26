@@ -1,0 +1,173 @@
+{
+  "slug": "gears-of-war-e-day-kampagne-preview-akt-2-2026",
+  "title": "Gears of War: E-Day angespielt - hier wird der Lancer geboren",
+  "subtitle": "Die ersten Kampagnen-Previews zeigen Waffen-Mods, Tactical Gear und eine Stadt, die man Block für Block zurückerobert",
+  "excerpt": "Mehrere Redaktionen durften den zweiten Akt von Gears of War: E-Day spielen. Der Tenor: Es fühlt sich an wie die 360-Trilogie - mit einer Neuerung, die das Kampfsystem spürbar verändert.",
+  "seoTitle": "Gears of War: E-Day - Kampagnen-Preview zu Akt 2",
+  "metaDescription": "Gears of War: E-Day: Erste Hands-on-Berichte zur Kampagne zeigen Waffen-Mods, Tactical Gear, offenere Stadtviertel - und die Entstehung des Kettensägen-Lancers.",
+  "category": "news",
+  "platforms": [
+    "xbox",
+    "pc"
+  ],
+  "bereich": "games",
+  "tags": [
+    "Gears of War: E-Day",
+    "The Coalition",
+    "Xbox Game Studios",
+    "Preview",
+    "Unreal Engine 5"
+  ],
+  "tldr": [
+    "Internationale Redaktionen durften rund eine Stunde den Beginn von Akt 2 der Kampagne spielen - Schauplätze sind eine Hängebrücke, das Oria-Stadion und die Innenstadt von Kolona.",
+    "Neu sind Waffen-Mods mit vier Slots pro Waffe und Tactical Gear: 45 Sekunden lange Buffs mit Abklingzeit, etwa Adrenalin-Injektor oder Schallstörer.",
+    "Die halboffenen Areale aus Gears 5 werden zu kleineren Mehrwege-Vierteln mit optionalen Nebenaufgaben und Sammelobjekten zurückgestutzt.",
+    "Technisch setzt The Coalition auf Unreal Engine 5 samt Megalights und RTX Mega Geometry - laut ComputerBase entsprechend hardwarehungrig."
+  ],
+  "whyItMatters": "E-Day ist der erste neue Gears-Auftritt seit Jahren und muss beweisen, dass The Coalition die Serie ohne die Experimente von Gears 5 wieder auf Kurs bringt. Die Previews liefern erstmals konkrete Details dazu, wie stark sich Kampf, Levelaufbau und Ausrüstung gegenüber der Trilogie verändern - und was von den offenen Arealen des Vorgängers bleibt.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Das Preview-Embargo ist gefallen: Mehrere internationale Redaktionen durften die Kampagne von Gears of War: E-Day anspielen - und zwar nicht den bereits vom Xbox Showcase bekannten Auftakt, sondern den Beginn des zweiten Akts. IGN, Eurogamer, VGC, GamesRadar, Pure Xbox, MeinMMO und ComputerBase berichten übereinstimmend von einem Shooter, der sich anfühlt wie eine direkte Fortsetzung der Xbox-360-Trilogie - garniert mit einer Handvoll Systeme, die es in dieser Form in keinem Gears zuvor gab."
+    },
+    {
+      "type": "embed",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=xPJHNRXZVTg"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "4",
+          "label": "Mod-Slots pro Waffe für freischaltbare Aufsätze"
+        },
+        {
+          "value": "45 Sek.",
+          "label": "Wirkdauer der neuen Tactical-Gear-Buffs"
+        },
+        {
+          "value": "1 Std.",
+          "label": "Spielzeit im Preview-Build (IGN), Beginn von Akt 2"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Zurück in die Rüstung: Was Akt 2 zeigt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Abschnitt setzt ein, während Marcus Fenix und Dom Santiago noch in Zivilkleidung stecken und erbeutete Mark-1-Lancer tragen. Gemeinsam mit den Soldaten Carter und Reyes erreichen sie einen improvisierten Gefechtsstand, wo Colonel Trench und der Bürgermeister von Kolona darüber streiten, was da eigentlich aus dem Boden bricht. Das Resultat: Rüstung anlegen, Bravo Squad ist geboren. Danach geht es durch eine Stadt, über der Asche regnet - laut IGN eine bewusste Rückbesinnung auf die «zerstörte Schönheit» des ersten Gears of War."
+    },
+    {
+      "type": "quote",
+      "text": "Sieht aus, als wären wir wieder mittendrin.",
+      "attribution": "Marcus Fenix (John DiMaggio) in der angespielten Demo, zitiert von IGN"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die erste grosse Kulisse ist die Allfather's-Legacy-Brücke, eine mehrteilige Hängebrücke, die im Frieden für Schiffe angehoben wurde. Statt der klassischen Deckungsarenen gibt es hier einen linearen Vorstoss, inklusive zweier Boomer und Wiedersehen mit dem Breechshot aus Gears of War: Judgment. Ziel ist das Oria-Stadion, Heimat des Thrashball-Teams Kolona Eagles, in das die COG die Zivilbevölkerung evakuiert. Eurogamer beschreibt den Rhythmus als Pendel aus Panik und Ruhe: enge Räume mit immer heftigeren Gegnerwellen, danach breitere Abschnitte für taktischere Manöver."
+    },
+    {
+      "type": "heading",
+      "text": "Waffen-Mods und Tactical Gear: Gears wird konfigurierbar"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der grösste mechanische Eingriff sind freischaltbare Waffen-Mods. Jede Schusswaffe besitzt vier Slots, die Auswahl unterscheidet sich je nach Modell. Der klassische Schadensbonus für den perfekten Nachladevorgang ist künftig selbst ein Mod und heisst «Full Metal Jacket». Dazu kommt Tactical Gear - kurzzeitige Fähigkeiten, die Spielerinnen und Spieler bereits in der Versus-Beta ausprobieren konnten und die ebenfalls eigene Mod-Slots besitzen, die im Preview-Build noch gesperrt waren."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Full Metal Jacket: der bekannte Schadensbonus nach perfektem Nachladen, jetzt als Standard-Mod jeder nachladbaren Waffe",
+        "Auto Pouch (Gnasher): lädt die Schrotflinte automatisch nach, sobald man auf eine andere Waffe wechselt",
+        "Adrenalin-Injektor: füllt sofort die Gesundheit auf, erhöht den ausgeteilten und senkt den erlittenen Schaden",
+        "Schallstörer: betäubt schwache Gegner in einem Kegel vor dem Spieler und unterbricht deren Angriffe",
+        "Nachschubdepots: über die Stadt verteilt, erlauben den Tausch von Waffen und Mods, ohne Gegner ausschalten zu müssen"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Neu ist ausserdem mehr Vertikalität: Deckungen und auch die von den Locust als Schutz genutzten Autos lassen sich überklettern, GamesRadar spricht von einem adaptiven Deckungssystem. Eurogamer relativiert allerdings, dass sich die Grundlagen kaum verändert haben - der viel diskutierte Sprungknopf sei letztlich nur ein weiteres Werkzeug zum Neupositionieren, und das Wall-Bouncing bleibe so umstritten wie eh und je. Pure Xbox merkt an, dass das Bewegungssystem aus der Multiplayer-Beta Eingewöhnung verlangt."
+    },
+    {
+      "type": "heading",
+      "text": "Die Geburt des Kettensägen-Lancers"
+    },
+    {
+      "type": "paragraph",
+      "text": "Im Stadion trifft Bravo Squad auf Quartiermeister Russ, der Marcus wohlgesonnen ist, weil er dessen Vater Adam kannte. Marcus beschwert sich, dass die Bajonette der Mark-1-Lancer ständig abbrechen - woraufhin ein Kamerad jene Kettensäge auf den Tisch legt, die Marcus in Akt 1 das Leben gerettet hat. Das Ergebnis ist der erste Prototyp des Mark-2-Lancer mit fest verbauter Kettensäge. Für ein Prequel, das rund um den Emergence Day spielt, ist das die naheliegende, aber wirkungsvolle Ursprungsgeschichte der bekanntesten Waffe der Serie."
+    },
+    {
+      "type": "heading",
+      "text": "Kein Open World, sondern offene Distrikte"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nach dem Stadion öffnet sich das Design: Auf dem Weg zum Bahnhof lässt sich die Innenstadt von Kolona Block für Block in selbst gewählter Reihenfolge säubern. IGN beschreibt das als bewusste Zähmung der weitläufigen Areale aus Gears 5 - kleiner im Massstab, aber wirkungsvoller, weil mehrere Routen, versteckte Sammelobjekte und optionale Nebenaufgaben nebeneinander existieren. In einem Beispiel muss eine in einem Laden eingeschlossene Familie befreit werden, nachdem man eine Welle Wretches abgewehrt hat; anschliessend fordert man per Funk eine Eskorte zum Stadion an."
+    },
+    {
+      "type": "paragraph",
+      "text": "Erzählerisch fällt der Ton düsterer aus als erwartet - GamesRadar hebt neben dem adaptiven Deckungssystem ausdrücklich hervor, dass die Beschränkung auf eine einzige Stadt zu den grössten Stärken zählt, und VGC spricht von der bislang emotionalsten Geschichte der Reihe. Eurogamer wiederum betont die Klaustrophobie: Auch ohne Tunnel entsteht Druck, weil das Spiel einen von Brennpunkt zu Brennpunkt zerrt, während Militär und Zivilbevölkerung gleichermassen im Chaos versinken."
+    },
+    {
+      "type": "heading",
+      "text": "Technik: schön - und hungrig"
+    },
+    {
+      "type": "paragraph",
+      "text": "ComputerBase bezeichnet die Präsentation als eine der derzeit besten überhaupt, weist aber gleichzeitig darauf hin, dass die Kampagne Hardware entsprechend fordert. Zum Einsatz kommen unter anderem Megalights der Unreal Engine 5 sowie RTX Mega Geometry. Eurogamer, sonst kritisch gegenüber dem Einheitslook vieler UE5-Titel, attestiert E-Day, dass Art Direction und Engine hier harmonieren: Es sehe aus wie die Originaltrilogie, nur deutlich hübscher. Auch das Waffengefühl sei trotz Engine-Wechsel von Unreal 3 auf 5 praktisch identisch geblieben."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Previews zeichnen ein bemerkenswert einheitliches Bild: E-Day ist kein Neuanfang, sondern eine sorgfältige Rückführung der Serie auf ihren Kern - mit Mods und Tactical Gear als einzigem echten Systembruch. Wer die 360-Ära geliebt hat, dürfte damit gut bedient sein; wer sich mit Wall-Bouncing und Deckungsshooter-Rhythmus nie anfreunden konnte, findet laut Eurogamer wenig Neues. Offen bleibt, ob die Mod- und Ausrüstungssysteme über eine ganze Kampagne tragen und wie stark die offenen Distrikte im späteren Verlauf ausgebaut werden. Ein konkretes Erscheinungsdatum nennen die Berichte nicht."
+    }
+  ],
+  "poll": {
+    "question": "Was soll Gears of War: E-Day vor allem sein?",
+    "options": [
+      "Eine kompromisslose Rückkehr zur 360-Trilogie",
+      "Klassisches Gears plus Mods und Tactical Gear",
+      "Mutiger als das - mehr offene Distrikte wagen",
+      "Hauptsache Versus und Horde stimmen"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-26T02:03:59.681Z",
+  "readingTimeMinutes": 4,
+  "heroVariant": "grid",
+  "sources": [
+    {
+      "title": "Gears of War: E-Day Campaign Hands-On Preview: To Quote Marcus Fenix, “Nice”",
+      "url": "https://www.ign.com/articles/gears-of-war-e-day-campaign-hands-on-preview-to-quote-marcus-fenix-nice",
+      "publisher": "IGN"
+    },
+    {
+      "title": "Gears of War: E-Day somehow feels exactly like a direct continuation of the original Xbox 360 trilogy, for better and for worse",
+      "url": "https://www.eurogamer.net/gears-of-war-eday-preview",
+      "publisher": "Eurogamer"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/gears-of-war-e-day-kampagne-preview-akt-2-2026.webp",
+    "alt": "Gears of War: E-Day angespielt - hier wird der Lancer geboren",
+    "credit": "Bild: IGN",
+    "sourceUrl": "https://www.ign.com/articles/gears-of-war-e-day-campaign-hands-on-preview-to-quote-marcus-fenix-nice",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "gears-of-war-e-day-beta-steam-rekord-2026",
+    "gears-of-war-e-day-pvp-versus-early-access-beta",
+    "the-witcher-4-release-fenster-2028-gamescom"
+  ]
+}

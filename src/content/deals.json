@@ -1,16 +1,16 @@
 {
-  "updatedAt": "2026-08-25T22:42:55.048Z",
+  "updatedAt": "2026-08-26T02:05:10.210Z",
   "deals": [
     {
-      "appId": 954740,
-      "title": "Terminator: Resistance",
-      "discountPercent": 80,
-      "originalPrice": 3999,
-      "finalPrice": 799,
+      "appId": 1142710,
+      "title": "Total War: WARHAMMER III",
+      "discountPercent": 85,
+      "originalPrice": 5999,
+      "finalPrice": 899,
       "currency": "EUR",
-      "endsAt": "2026-09-01T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/954740/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/954740/capsule_184x69.jpg?t=1701952741"
+      "endsAt": "2026-08-27T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1142710/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1142710/capsule_184x69.jpg?t=1786634522"
     },
     {
       "appId": 1174180,
@@ -22,17 +22,6 @@
       "endsAt": "2026-09-08T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/1174180/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/capsule_184x69.jpg?t=1759502961"
-    },
-    {
-      "appId": 1659040,
-      "title": "HITMAN World of Assassination",
-      "discountPercent": 60,
-      "originalPrice": 6999,
-      "finalPrice": 2799,
-      "currency": "EUR",
-      "endsAt": "2026-09-04T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1659040/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1659040/capsule_184x69.jpg?t=1787587100"
     },
     {
       "appId": 3240220,
@@ -66,6 +55,17 @@
       "endsAt": "2026-08-27T17:00:36.000Z",
       "url": "https://store.steampowered.com/app/4001890/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4001890/8f65bb2b78d37a9147aa79c970a51610e6955bf1/capsule_184x69.jpg?t=1787234618"
+    },
+    {
+      "appId": 2764460,
+      "title": "Sandustry",
+      "discountPercent": 35,
+      "originalPrice": 1499,
+      "finalPrice": 974,
+      "currency": "EUR",
+      "endsAt": "2026-08-27T17:00:09.000Z",
+      "url": "https://store.steampowered.com/app/2764460/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2764460/f0a29d6c91be4e91e9fa2f384dd5ae695bfd6b5b/capsule_184x69.jpg?t=1787606192"
     }
   ]
 }
