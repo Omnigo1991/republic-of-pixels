@@ -100,18 +100,18 @@ export function EventCountdown({ href = "/#radare" }: { href?: string }) {
     ? `${termin.dateLabel}${termin.beschreibung ? ` - ${termin.beschreibung}` : ""}`
     : (termin.beschreibung ?? "");
 
-  // FÜHRENDE NULLEN WEGLASSEN: "00 Tage 00 Stunden 53 Minuten" liest sich
-  // wie ein Fehler. Sind es weniger als 24 Stunden, entfällt das
-  // Tagesfeld; unter einer Stunde bleibt nur die Minute.
-  const alle: [number, string][] = [
-    [rest.t, rest.t === 1 ? "Tag" : "Tage"],
-    [rest.s, rest.s === 1 ? "Stunde" : "Stunden"],
-    [rest.m, rest.m === 1 ? "Minute" : "Minuten"],
+  // ALLE DREI FELDER, IMMER (Tim, 25.08.2026). Ich hatte führende Nullen
+  // weggelassen, weil "00 Tage 00 Stunden 53 Minuten" wie ein Fehler
+  // aussah. Tim will die Tage sehen, auch wenn dort eine Null steht - ein
+  // Countdown, bei dem Felder verschwinden, springt im Layout und man
+  // verliert das Gefühl für die Grössenordnung.
+  //
+  // Der Singular bleibt: "1 Tag" statt "1 Tage".
+  const felder: [string, string][] = [
+    [String(rest.t).padStart(2, "0"), rest.t === 1 ? "Tag" : "Tage"],
+    [String(rest.s).padStart(2, "0"), rest.s === 1 ? "Stunde" : "Stunden"],
+    [String(rest.m).padStart(2, "0"), rest.m === 1 ? "Minute" : "Minuten"],
   ];
-  const ersterEcht = alle.findIndex(([n]) => n > 0);
-  const felder: [string, string][] = alle
-    .slice(ersterEcht === -1 ? 2 : ersterEcht)
-    .map(([n, w]) => [String(n).padStart(2, "0"), w]);
 
   return (
     <div className="schrift-normal my-16 bg-[radial-gradient(ellipse_48%_42%_at_50%_58%,rgba(255,46,151,0.2),transparent_74%),radial-gradient(ellipse_34%_30%_at_76%_52%,rgba(2,240,209,0.1),transparent_72%)] px-4 py-16 text-center sm:py-20">
