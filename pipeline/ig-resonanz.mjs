@@ -29,14 +29,25 @@ if (!token) {
 
 const zurichTag = (d) =>
   new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Zurich" }).format(d);
-const zurichStunde = (d) =>
-  Number(
-    new Intl.DateTimeFormat("de-CH", {
-      timeZone: "Europe/Zurich",
-      hour: "2-digit",
-      hour12: false,
-    }).format(d),
-  );
+// STUNDE UEBER formatToParts, NICHT UEBER format (Fehler gefunden
+// 26.08.2026): Die Schweizer Schreibweise haengt "Uhr" an - aus 21 wird
+// "21 Uhr", und Number("21 Uhr") ist NaN. In der Auswertung stand deshalb
+// zwei Naechte lang bei JEDEM Post "NaNh", und die Frage "wann posten wir
+// am besten" war unbeantwortbar - obwohl sie einer der Hauptgruende fuer
+// dieses Werkzeug war.
+//
+// formatToParts liefert die Stunde als eigenes Teilstueck, ohne Zusatz.
+// Das ist unabhaengig von der Sprache und kann nicht wieder brechen.
+const zurichStunde = (d) => {
+  const teil = new Intl.DateTimeFormat("de-CH", {
+    timeZone: "Europe/Zurich",
+    hour: "2-digit",
+    hour12: false,
+  })
+    .formatToParts(d)
+    .find((t) => t.type === "hour");
+  return teil ? Number(teil.value) : null;
+};
 
 async function ig(pfad, params = {}) {
   const url = new URL(`${IG_API}${pfad}`);
@@ -64,10 +75,23 @@ function artikelInfo(slug) {
   };
 }
 
-// Der Dateiname der Karte verrät das Format: .mp4 = Reel, .jpg = Bild.
-function formatVon(slug) {
+// FORMAT KOMMT VON INSTAGRAM, NICHT AUS UNSEREM STATE (Fehler gefunden
+// 26.08.2026): Vorher wurde der Dateiname der Karte im State gesucht -
+// fehlte dort ein Eintrag, stand "?" in der Tabelle. Bei fuenf von 18
+// Posts war das so, und ausgerechnet die Format-Auswertung ist die
+// wichtigste Zahl, die dieses Werkzeug liefert.
+//
+// Instagram sagt selbst, was ein Medium ist: VIDEO fuer Reels, IMAGE
+// sonst. Das ist die Quelle, die immer da ist und nicht von unserer
+// Buchhaltung abhaengt. Der Dateiname dient nur noch als Gegenprobe -
+// weichen beide ab, steht es im Protokoll.
+function formatVonInstagram(medium) {
+  return medium.media_type === "VIDEO" ? "Reel" : "Bild";
+}
+
+function formatAusState(slug) {
   const treffer = Object.keys(cards).find((rel) => rel.includes(slug));
-  if (!treffer) return "?";
+  if (!treffer) return null;
   return treffer.endsWith(".mp4") ? "Reel" : "Bild";
 }
 
@@ -130,12 +154,20 @@ for (const m of medien) {
     // Insights sind nicht für jedes Konto und jedes Medium freigegeben -
     // Likes und Kommentare haben wir trotzdem.
   }
+  // Gegenprobe: Wenn unsere eigene Buchhaltung etwas anderes sagt als
+  // Instagram, ist eine der beiden falsch - und das will man wissen.
+  const ausState = treffer ? formatAusState(treffer.slug) : null;
+  if (ausState && ausState !== formatVonInstagram(m)) {
+    console.log(
+      `::warning::Format weicht ab bei ${treffer.slug}: Instagram sagt ${formatVonInstagram(m)}, unser State ${ausState}`,
+    );
+  }
   zeilen.push({
     id: m.id,
     tag: zurichTag(t),
     stunde: zurichStunde(t),
-    format: treffer ? formatVon(treffer.slug) : m.media_type === "VIDEO" ? "Reel" : "Bild",
-    spiel: info.spiel ?? "?",
+    format: formatVonInstagram(m),
+    spiel: info.spiel ?? "kein Artikel",
     titel: (info.titel ?? m.caption ?? "").slice(0, 52),
     likes: m.like_count ?? 0,
     kommentare: m.comments_count ?? 0,
@@ -153,7 +185,7 @@ for (const z of zeilen.slice(0, 15)) {
   console.log(
     `${String(z.likes).padStart(5)}  ${String(z.kommentare).padStart(4)}  ` +
       `${String(z.reichweite ?? "-").padStart(5)}  ${z.format.padEnd(6)}  ${z.tag}  ` +
-      `${String(z.stunde).padStart(2)}h  ${z.spiel} - ${z.titel}`,
+      `${z.stunde === null ? " ?" : String(z.stunde).padStart(2)}h  ${z.spiel} - ${z.titel}`,
   );
 }
 
@@ -177,7 +209,8 @@ for (const z of zeilen) {
   if (!nachStunde.has(z.stunde)) nachStunde.set(z.stunde, []);
   nachStunde.get(z.stunde).push(z);
 }
-for (const [std, l] of [...nachStunde].sort((a, b) => a[0] - b[0])) {
+const stundenListe = [...nachStunde].filter(([s]) => s !== null).sort((a, b) => a[0] - b[0]);
+for (const [std, l] of stundenListe) {
   console.log(
     `${String(std).padStart(2)}h   ${String(l.length).padStart(3)} Posts   Likes ⌀ ${(mittel(l, "likes") ?? 0).toFixed(1)}`,
   );
