@@ -1,9 +1,16 @@
 // News-Pipeline von Republic of Pixels.
-// Läuft alle 6 Stunden via GitHub Actions (.github/workflows/news-pipeline.yml):
-//   Feeds abrufen → neue Meldungen erkennen → per Claude auswählen & clustern
-//   → eigenständige deutsche Artikel generieren → validieren → Bild beschaffen
-//   → JSON + Bild schreiben → Workflow committet & Vercel deployt.
+// Läuft alle 30 Minuten via GitHub Actions (.github/workflows/news-pipeline.yml):
+//   Feeds abrufen → neue Meldungen erkennen → TAKT PRÜFEN → per Claude auswählen
+//   & clustern → eigenständige deutsche Artikel generieren → validieren → Bild
+//   beschaffen → JSON + Bild schreiben → Workflow committet & Vercel deployt.
 // DRY_RUN=1: nur Feeds + Kandidatenliste, keine API-Aufrufe, keine Schreibzugriffe.
+//
+// HÄUFIG SCHAUEN, GLEICH VIEL SCHREIBEN (Tim, 27.08.2026): Der Lauf findet
+// alle 30 Minuten statt, damit wir bei einem Leak nicht bis zu vier Stunden
+// hinterherhinken. Wie viel dabei erscheinen darf, entscheidet lib/takt.mjs -
+// ein Tagesbudget mit Tageskurve. Ohne diese Bremse hätte der schnellere Takt
+// bei zwei Artikeln je Lauf bis zu 96 Artikel am Tag erzeugt. Die meisten
+// Läufe enden deshalb VOR dem ersten Modellaufruf und kosten fast nichts.
 import { readFileSync, writeFileSync, readdirSync } from "node:fs";
 import { join, dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -25,6 +32,7 @@ import { acquireImage } from "./lib/images.mjs";
 import { validateArticle } from "./lib/validate.mjs";
 import { umschriebeneUmlaute } from "./lib/umlaut.mjs";
 import { pingIndexNow } from "./lib/indexnow.mjs";
+import { taktEntscheid, TAGESBUDGET } from "./lib/takt.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const STATE_FILE = join(ROOT, "pipeline", "state.json");
@@ -38,6 +46,24 @@ const MAX_ARTICLES_PER_RUN = Number(process.env.MAX_ARTICLES_PER_RUN ?? 2);
 const MANUAL_URLS = (process.env.MANUAL_URLS ?? "").split(/[\s,]+/).filter(Boolean);
 const MAX_CANDIDATE_AGE_H = 48;
 const STATE_RETENTION_DAYS = 21;
+// WIE OFT EIN KANDIDAT ANTRETEN DARF, bevor er begraben wird.
+//
+// Stand bis zum 27.08.2026 auf 3 und passte zum alten Vier-Stunden-Takt: Ein
+// Kandidat hatte damit rund zwölf Stunden Zeit, in die Auswahl zu kommen. Mit
+// dem 30-Minuten-Takt finden Auswahlen deutlich häufiger statt - dieselben
+// drei Runden wären nach anderthalb Stunden aufgebraucht gewesen, und wir
+// hätten MEHR Storys verpasst als vorher, also genau das Gegenteil des Ziels
+// (der verpasste Elite-3-Leak am 23.08. war der Anlass für die Mehrfach-
+// chancen überhaupt). 8 Runden halten das Zeitfenster ungefähr gleich gross.
+const MAX_AUSWAHLRUNDEN = 8;
+// EILMELDUNGS-BETRIEB (Tim, 27.08.2026). Gesetzt vom Workflow
+// "Eilmeldungs-Lauf", der alle 30 Minuten prueft. In diesem Modus
+// veroeffentlicht die Pipeline NUR, wenn auffaellig viele Quellen
+// gleichzeitig dasselbe melden - und dann genau einen Artikel. Instagram,
+// Deals, Charts und das Pixel-Raetsel bleiben aussen vor: Die haengen am
+// regulaeren Vier-Stunden-Lauf und haben ihre eigene Tageskurve, an der ein
+// haeufigerer Takt nicht ziehen darf.
+const NUR_EIL = process.env.NUR_EILMELDUNG === "1";
 const HERO_VARIANTS = ["circuit", "controller", "particles", "waveform", "grid"];
 
 const hashId = (s) => createHash("sha256").update(s).digest("hex").slice(0, 16);
@@ -128,7 +154,24 @@ function recentPublishedTitles(hours = 72) {
   return entries.slice(-150);
 }
 
-async function selectCandidates(candidates) {
+// Veröffentlichungszeitpunkte ALLER Artikel - Grundlage für die Tageszählung
+// in lib/takt.mjs. Bewusst aus den Dateien und nicht aus state.json: Die
+// Dateien sind die Wahrheit und zählen sich auch nach einem abgebrochenen
+// Lauf wieder richtig.
+function veroeffentlichteZeitpunkte() {
+  const liste = [];
+  for (const f of readdirSync(ARTICLES_DIR).filter((f) => f.endsWith(".json"))) {
+    try {
+      const a = JSON.parse(readFileSync(join(ARTICLES_DIR, f), "utf8"));
+      if (a.publishedAt) liste.push({ publishedAt: a.publishedAt });
+    } catch {
+      // unlesbare Datei ignorieren
+    }
+  }
+  return liste;
+}
+
+async function selectCandidates(candidates, maxAnzahl = MAX_ARTICLES_PER_RUN) {
   const published = recentPublishedTitles();
   const publishedBlock = published.length
     ? `\nBereits von uns veröffentlicht (diese Storys NICHT erneut auswählen, auch nicht aus anderer Quelle oder mit anderem Titel - vergleiche auch inhaltlich/thematisch anhand der Tags, nicht nur den Titelwortlaut):\n${published.map((p) => `- ${p.title}${p.tags.length ? ` [${p.tags.join(", ")}]` : ""}`).join("\n")}\n`
@@ -147,7 +190,7 @@ ${publishedBlock}
 
 Aufgaben:
 1. Erkenne Duplikate: Meldungen zur selben Nachricht bilden einen Cluster (Indizes zusammenfassen).
-2. Wähle die maximal ${MAX_ARTICLES_PER_RUN} relevantesten Cluster für unser Magazin aus. Kriterien: Nachrichtenwert für deutschsprachige Gamer:innen, Aktualität, Substanz.
+2. Wähle die maximal ${maxAnzahl} relevantesten Cluster für unser Magazin aus. Kriterien: Nachrichtenwert für deutschsprachige Gamer:innen, Aktualität, Substanz.
    AUSDRÜCKLICH ERWÜNSCHT sind auch MENSCHLICHE GESCHICHTEN aus der Gaming-Welt, nicht nur Ankündigungen (Tim, 24.08.2026): Sammlerstücke mit überraschendem Wert, Fundstücke und Jubiläen ("vor 22 Jahren verkaufte sich..."), erstaunliche Spielerleistungen, kuriose Entdeckungen in alten Spielen, Geschichten hinter der Entwicklung. Solche Meldungen haben oft wenig klassischen Nachrichtenwert, aber hohen Erzählwert - Leute lesen und teilen sie, weil sie etwas fühlen. Der Massstab hier ist nicht "wie wichtig", sondern "erzählt das jemand weiter". EINE davon pro Lauf ist gut, mehr nicht - wir bleiben eine Nachrichtenseite. Ausdrücklich erwünscht sind auch Hardware- und Konsolen-Themen mit Gaming-Relevanz: kommende Konsolen und Leaks dazu (z. B. PlayStation 6, nächste Xbox/Project Helix, Switch-Nachfolger), GPUs/CPUs fürs Gaming, Handhelds, sowie offizielle First-Party-Controller und -Zubehör (z. B. ein neuer Elite-Controller oder DualSense-Nachfolger) - auch als Leak. NICHT erwünscht: reine Deals-/Gewinnspiel-/Guide-Meldungen (auch nicht als "menschliche Geschichte" getarnt - ein LEGO-Set bei Edeka bleibt eine Deal-Meldung), Dritthersteller-Kleinst-Hardware ohne Gaming-Bezug (Peripherie-Restposten, Büro-Hardware), Meldungen über einzelne Streamer und ihren Alltag.
 3. Pro ausgewähltem Cluster bestimme:
    - "indices": alle zugehörigen Kandidaten-Indizes, den faktenreichsten zuerst
@@ -156,7 +199,7 @@ Aufgaben:
    - "platforms": Teilmenge von ["pc","playstation","xbox","nintendo"]
    - "bereich": "hardware" oder "games". Hardware sind Meldungen ueber GERAETE - Grafikkarten, Prozessoren, Konsolen als Produkt (Preis, Absatz, Technik), Controller, Handhelds, Monitore, Speicher, Peripherie. Alles andere ist "games", auch wenn eine Hardware-Firma vorkommt: "Sony kuendigt Spiel an" ist games, "Sony senkt den PS5-Preis" ist hardware. Ein Test zaehlt dorthin, wo der Gegenstand gehoert - ein Laptop-Test ist hardware, ein Spiele-Test ist games.
    - "isLeakOrRumor": true/false
-   - "priority": 1 (höchste) bis ${MAX_ARTICLES_PER_RUN}
+   - "priority": 1 (höchste) bis ${maxAnzahl}
    - "depth": "kurz" (Routinemeldung, wenig Substanz), "standard" (normale News) oder "lang" (grosse Nachricht mit viel Substanz und Einordnungsbedarf, z. B. Übernahmen, grosse Ankündigungen, Branchenbeben, Tests)
 
 Antworte NUR mit JSON, ohne Einleitung und ohne Kommentar - das erste Zeichen deiner Antwort muss "{" sein: {"selected":[{"indices":[...],"category":"...","platforms":[...],"bereich":"games oder hardware","isLeakOrRumor":...,"priority":...,"depth":"..."}]}
@@ -486,11 +529,14 @@ async function manuelleKandidaten(urls) {
 }
 
 async function main() {
-  console.log(`Pipeline-Lauf ${new Date().toISOString()} (max. ${MAX_ARTICLES_PER_RUN} Artikel)`);
+  console.log(
+    `Pipeline-Lauf ${new Date().toISOString()}` +
+      (NUR_EIL ? " [Eilmeldungs-Betrieb]" : ` (max. ${MAX_ARTICLES_PER_RUN} Artikel)`),
+  );
   const state = loadState();
   const slugs = existingSlugs();
 
-  console.log(MANUAL_URLS.length ? `1/5 Manueller Lauf: ${MANUAL_URLS.length} vorgegebene Quellen` : "1/5 Feeds abrufen …");
+  console.log(MANUAL_URLS.length ? `1/6 Manueller Lauf: ${MANUAL_URLS.length} vorgegebene Quellen` : "1/6 Feeds abrufen …");
   const results = MANUAL_URLS.length
     ? [{ items: await manuelleKandidaten(MANUAL_URLS) }]
     : await fetchAllFeeds(FEEDS);
@@ -501,7 +547,7 @@ async function main() {
   // (so verpassten wir den Elite-3-Leak). Jetzt darf ein Kandidat bis zu
   // drei Auswahlrunden antreten, danach ist Schluss.
   const verbraucht = (eintrag) =>
-    !!eintrag && (typeof eintrag === "string" ? true : (eintrag.n ?? 3) >= 3);
+    !!eintrag && (typeof eintrag === "string" ? true : (eintrag.n ?? MAX_AUSWAHLRUNDEN) >= MAX_AUSWAHLRUNDEN);
   const candidates = results
     .flatMap((r) => r.items)
     .filter((it) => it.publishedAt && it.publishedAt.getTime() > cutoff)
@@ -511,22 +557,55 @@ async function main() {
     .sort((a, b) => b.publishedAt.getTime() - a.publishedAt.getTime())
     .slice(0, 150);
 
-  console.log(`2/5 ${candidates.length} neue Kandidaten (Fenster ${MAX_CANDIDATE_AGE_H}h)`);
+  console.log(`2/6 ${candidates.length} neue Kandidaten (Fenster ${MAX_CANDIDATE_AGE_H}h)`);
   if (candidates.length === 0) {
     console.log("Nichts Neues - Lauf beendet.");
     return;
   }
+  // DER TAKT-RIEGEL (Tim, 27.08.2026). Ab hier kostet jeder Schritt Geld,
+  // deshalb steht die Entscheidung davor. Die meisten der 48 Tagesläufe enden
+  // genau hier, ohne einen einzigen Modellaufruf.
+  //
+  // WICHTIG: Der Riegel liegt VOR der Markierung "gesehen" am Ende von main().
+  // Ein Kandidat, der wegen des Tempos nicht drankommt, verbraucht also keine
+  // seiner Auswahlrunden und tritt im nächsten Lauf unverändert wieder an.
+  // Andernfalls hätte der schnellere Takt Storys verbrannt, statt sie zu
+  // finden.
+  //
+  // Der manuelle Nachzug (MANUAL_URLS) umgeht den Riegel: Wer eine Quelle von
+  // Hand einwirft, will sie veröffentlicht sehen, nicht vertröstet.
+  const takt = taktEntscheid({
+    artikel: veroeffentlichteZeitpunkte(),
+    kandidaten: candidates,
+    // Der Eilmeldungs-Lauf schreibt hoechstens EINEN Artikel. Er ist der
+    // schnelle Zubringer fuer eine einzelne grosse Meldung, nicht ein
+    // zweiter regulaerer Lauf - alles Weitere holt der normale Takt.
+    proLauf: NUR_EIL ? 1 : MAX_ARTICLES_PER_RUN,
+    nurEil: NUR_EIL,
+  });
+  console.log(`3/6 Takt: ${takt.grund} [Budget ${TAGESBUDGET}/Tag]`);
+
   if (process.env.DRY_RUN) {
     for (const c of candidates.slice(0, 40)) console.log(`  [${c.feedId}] ${c.title}`);
-    console.log("DRY_RUN - Ende vor Auswahl/Generierung.");
+    console.log(
+      `DRY_RUN - Ende vor Auswahl/Generierung. Der Lauf wuerde ${
+        takt.schreiben ? `bis zu ${takt.hoechstens} Artikel schreiben` : "nichts schreiben"
+      }.`,
+    );
     return;
   }
 
-  console.log("3/5 Auswahl & Clustering (Claude) …");
-  const selected = (await selectCandidates(candidates))
+  if (!takt.schreiben && !MANUAL_URLS.length) {
+    console.log("Lauf endet ohne Modellaufruf.");
+    return;
+  }
+  const hoechstens = MANUAL_URLS.length ? MAX_ARTICLES_PER_RUN : takt.hoechstens;
+
+  console.log(`4/6 Auswahl & Clustering (Claude), höchstens ${hoechstens} …`);
+  const selected = (await selectCandidates(candidates, hoechstens))
     .filter((s) => Array.isArray(s.indices) && s.indices.every((i) => candidates[i]))
     .sort((a, b) => a.priority - b.priority)
-    .slice(0, MAX_ARTICLES_PER_RUN);
+    .slice(0, hoechstens);
   console.log(`  ${selected.length} Cluster ausgewählt`);
 
   let published = 0;
@@ -535,7 +614,7 @@ async function main() {
     const items = cluster.indices.map((i) => candidates[i]);
     const label = items[0].title.slice(0, 70);
     try {
-      console.log(`4/5 Generiere: ${label}`);
+      console.log(`5/6 Generiere: ${label}`);
       const sourceTexts = [];
       for (const it of items.slice(0, 2)) {
         const ex = await extractArticleText(it.link);
@@ -633,8 +712,11 @@ async function main() {
     // Gewählte Kandidaten sind endgültig verbraucht; nicht gewählte
     // sammeln eine Runde und dürfen (bis n=3) erneut antreten. Alte
     // Einträge im Zeitstempel-Format gelten als verbraucht.
-    const runden = typeof alt === "object" && alt ? (alt.n ?? 3) + 1 : 1;
-    state.seen[k] = { t: now, n: gewaehlt.has(c.guid) ? 3 : Math.min(runden, 3) };
+    const runden = typeof alt === "object" && alt ? (alt.n ?? MAX_AUSWAHLRUNDEN) + 1 : 1;
+    state.seen[k] = {
+      t: now,
+      n: gewaehlt.has(c.guid) ? MAX_AUSWAHLRUNDEN : Math.min(runden, MAX_AUSWAHLRUNDEN),
+    };
   }
   const keepAfter = Date.now() - STATE_RETENTION_DAYS * 86400000;
   for (const [k, v] of Object.entries(state.seen)) {
@@ -680,7 +762,7 @@ async function main() {
     }
   }
 
-  console.log(`5/5 Fertig: ${published} Artikel geschrieben, State aktualisiert.`);
+  console.log(`6/6 Fertig: ${published} Artikel geschrieben, State aktualisiert.`);
   verbrauchBericht();
 }
 

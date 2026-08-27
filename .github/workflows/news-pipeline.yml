@@ -1,6 +1,26 @@
 # Fortlaufende News-Pipeline: Prüfung der RSS-Feeds alle 4 Stunden,
-# Veröffentlichung sobald relevante neue Meldungen da sind (max. 2 Artikel pro
-# Lauf). Der Push löst automatisch das Vercel-Production-Deployment aus.
+# Veröffentlichung sobald relevante neue Meldungen da sind. Der Push löst
+# automatisch das Vercel-Production-Deployment aus.
+#
+# WIE VIEL ERSCHEINT, ENTSCHEIDET SEIT DEM 27.08.2026 NICHT MEHR DIESER
+# ZEITPLAN, sondern pipeline/lib/takt.mjs: ein Tagesbudget von 20 Artikeln,
+# über den Tag verteilt freigegeben. Vorher hing die Tagesmenge daran, wie oft
+# GitHub den Lauf tatsächlich startete - gemessen waren das zehn Bündel am Tag
+# statt der sechs, die dieser Zeitplan vorsieht, und niemand konnte erklären,
+# woher die vier zusätzlichen kamen. Die Tagesmenge ist damit jetzt eine
+# Entscheidung und keine Nebenwirkung der Zeitplanung mehr.
+#
+# DESHALB STEHT DIE OBERGRENZE PRO LAUF JETZT AUF 4 UND NICHT MEHR AUF 2. Das
+# ist keine Erhöhung der Menge, sondern ihre Absicherung: Ein Lauf darf
+# nachholen, wenn er hinter der Tageskurve liegt. Durchgerechnet ergibt das
+# bei zehn Läufen 19 Artikel, bei sechs 18 und bei vier immer noch 16 - vorher
+# wären es bei sechs Läufen nur 11 gewesen. Die Menge hängt jetzt am Budget,
+# nicht an GitHubs Launen.
+#
+# EILMELDUNGEN LAUFEN GETRENNT (.github/workflows/eilmeldung.yml, alle 30
+# Minuten). Dieser Workflow hier bleibt bewusst beim Vier-Stunden-Takt, weil
+# an ihm auch Instagram, Deals, Charts und das Pixel-Rätsel hängen - siehe die
+# Begründung zum Zeitplan weiter unten.
 # Manueller Start: GitHub → Actions → "News-Pipeline" → "Run workflow".
 # Takt-Entscheidung 07.08.2026: von stündlich auf alle 3 Std. reduziert -
 # ~30 Artikel/Tag verdrängten Beiträge nach ~8 Std. von der sichtbaren
@@ -25,8 +45,8 @@ on:
   workflow_dispatch:
     inputs:
       max_articles:
-        description: "Maximale Artikel in diesem Lauf"
-        default: "2"
+        description: "Maximale Artikel in diesem Lauf (Obergrenze; die Tageskurve begrenzt zusätzlich)"
+        default: "4"
         required: false
       manual_urls:
         description: "Manueller Nachzug: Quell-URLs (durch Leerzeichen oder Komma getrennt) statt Feeds"
@@ -89,7 +109,7 @@ jobs:
       - name: Pipeline ausführen
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          MAX_ARTICLES_PER_RUN: ${{ github.event.inputs.max_articles || '2' }}
+          MAX_ARTICLES_PER_RUN: ${{ github.event.inputs.max_articles || '4' }}
           MANUAL_URLS: ${{ github.event.inputs.manual_urls || '' }}
           # Fuer die Story-Radar-Warteschlange. Der Anon-Schluessel ist
           # oeffentlich (er steckt ohnehin im Browser-Buendel); fehlen die
