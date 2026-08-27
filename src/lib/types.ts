@@ -70,6 +70,26 @@ export interface Article {
   popularityRank: number | null;
   author: string;
   publishedAt: string;
+  /**
+   * Letzte inhaltliche Überarbeitung (ISO-Zeitstempel).
+   *
+   * Gibt es erst seit dem 27.08.2026 und fehlt bei allen älteren Artikeln -
+   * dann gilt publishedAt. Der Anlass: In den strukturierten Daten stand
+   * dateModified fest auf publishedAt. Wir haben Google also bei JEDEM
+   * Artikel gemeldet, er sei seit der Erstveröffentlichung unverändert, auch
+   * nach einer Überarbeitung.
+   *
+   * Für Nachrichten ist das gleichgültig, die werden ohnehin nicht gepflegt.
+   * Für Guides ist es der Unterschied zwischen "aktuell" und "veraltet":
+   * Ein Ratgeber, der bei jedem Patch nachgezogen wird, soll auf DERSELBEN
+   * Adresse frisch werden, statt sich alle vier Wochen selbst zu ersetzen.
+   * Ohne dieses Feld wäre die Pflege für Suchmaschinen unsichtbar.
+   *
+   * BEWUSST NICHT ANGEZEIGT (Tim, 27.08.2026: "ohne an der optischen Website
+   * etwas zu ändern"). Das Feld wirkt nur in den strukturierten Daten und in
+   * der Sitemap.
+   */
+  updatedAt?: string;
   readingTimeMinutes: number;
   heroVariant: HeroVariant;
   /** Echtes Artikelbild; ohne Bild greift PlaceholderArt (heroVariant). */

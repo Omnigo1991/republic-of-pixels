@@ -71,7 +71,9 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
       ? { image: [`https://www.republicofpixels.com${article.image.src}`] }
       : {}),
     datePublished: article.publishedAt,
-    dateModified: article.publishedAt,
+    // Fällt auf publishedAt zurück, solange ein Artikel nie überarbeitet
+    // wurde - so verhält sich alles wie bisher, nur eben nicht mehr gelogen.
+    dateModified: article.updatedAt ?? article.publishedAt,
     author: [{ "@type": "Organization", name: "Republic of Pixels" }],
     publisher: {
       "@type": "Organization",
