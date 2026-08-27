@@ -35,6 +35,42 @@ const LAENGE = {
 };
 const OBERGRENZE_ZUSCHLAG = 1.3;
 
+/**
+ * Findet eine Wortfolge, die im selben Text zweimal vorkommt.
+ *
+ * DER ANLASS (Tim, 27.08.2026): Auf der Seite stand die Schlagzeile "Der
+ * nächsten Xbox könnte das Laufwerk fehlen könnte das Laufwerk fehlen - weil
+ * es niemand mehr baut". Tim hat sie gefunden, kein Wächter.
+ *
+ * Und das, obwohl jede einzelne Zutat in Ordnung war: 99 Zeichen, also
+ * innerhalb der erlaubten 15 bis 120. Genau der Fehler, der uns die erste
+ * Woche gekostet hat - alle Wächter prüfen die ZUTATEN, niemand das
+ * ERGEBNIS. Diese Prüfung schaut auf das fertige Feld.
+ *
+ * Sie ist bewusst unabhängig von der Ursache. Ob die Doppelung beim Schreiben
+ * entsteht oder beim Korrekturlesen, ist für den Leser gleichgültig; er sieht
+ * denselben kaputten Satz. Deshalb steht die Prüfung am Ende und nicht dort,
+ * wo ich die Ursache vermute.
+ *
+ * VIER WÖRTER ALS UNTERGRENZE: Kürzere Wiederholungen sind in normalem
+ * Deutsch häufig und harmlos ("mehr und mehr", "Schritt für Schritt", eine
+ * Aufzählung derselben Konsole). Ab vier Wörtern in Folge ist es kein Zufall
+ * mehr. An allen 457 bestehenden Artikeln geprüft: genau ein Treffer, und das
+ * war der echte Fehler.
+ *
+ * @returns {string|null} die doppelte Wortfolge oder null
+ */
+export function doppelteWortfolge(text, minWoerter = 4) {
+  const w = String(text ?? "").trim().split(/\s+/).filter(Boolean);
+  for (let len = Math.floor(w.length / 2); len >= minWoerter; len--) {
+    for (let i = 0; i + len <= w.length; i++) {
+      const teil = w.slice(i, i + len).join(" ");
+      if (w.slice(i + len).join(" ").includes(teil)) return teil;
+    }
+  }
+  return null;
+}
+
 export function validateArticle(a, existingSlugs, depth) {
   const errors = [];
   const need = (cond, msg) => {
@@ -46,6 +82,12 @@ export function validateArticle(a, existingSlugs, depth) {
   need(typeof a.title === "string" && a.title.length >= 15 && a.title.length <= 120, "title fehlt oder Länge ausserhalb 15-120");
   need(typeof a.subtitle === "string" && a.subtitle.length >= 20, "subtitle fehlt/zu kurz");
   need(typeof a.excerpt === "string" && a.excerpt.length >= 50 && a.excerpt.length <= 320, "excerpt fehlt oder Länge ausserhalb 50-320");
+  // Doppelte Wortfolgen in den Feldern, die der Leser als Erstes sieht.
+  for (const feld of ["title", "subtitle", "excerpt", "seoTitle", "metaDescription"]) {
+    const doppelt = doppelteWortfolge(a[feld]);
+    need(!doppelt, `${feld} enthält eine doppelte Wortfolge: "${doppelt}"`);
+  }
+
   need(CATEGORIES.includes(a.category), `category ungültig: ${a.category}`);
   need(Array.isArray(a.platforms) && a.platforms.length > 0 && a.platforms.every((p) => PLATFORMS.includes(p)), "platforms ungültig");
   need(a.isTopStory === false, "isTopStory muss von der Pipeline auf false stehen");

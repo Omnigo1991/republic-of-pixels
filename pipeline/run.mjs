@@ -448,7 +448,18 @@ Wenn fehlerfrei: {"fixes":[]}`;
         typeof f.falsch === "string" &&
         typeof f.richtig === "string" &&
         f.falsch.length >= 4 &&
-        f.falsch !== f.richtig
+        f.falsch !== f.richtig &&
+        // KEINE KORREKTUR, DIE DEN ORIGINALTEXT ENTHÄLT (Tim hat am
+        // 27.08.2026 die Schlagzeile "Der nächsten Xbox könnte das Laufwerk
+        // fehlen könnte das Laufwerk fehlen - weil es niemand mehr baut"
+        // gefunden). Die Ersetzung laeuft ueber replaceAll: Steht der
+        // fehlerhafte Ausschnitt auch in der Korrektur, wird der Text an
+        // dieser Stelle verdoppelt statt berichtigt. Eine echte
+        // Tippfehlerkorrektur sieht nie so aus.
+        !f.richtig.includes(f.falsch) &&
+        // Und keine, die den Text mehr als verdoppelt: Korrekturlesen soll
+        // Buchstaben tauschen, nicht Saetze anbauen.
+        f.richtig.length <= f.falsch.length * 2 + 20
     );
     if (fixes.length === 0) return article;
 
