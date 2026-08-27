@@ -1,0 +1,146 @@
+{
+  "slug": "amd-zen-6-olympic-ridge-medusa-am5-2026",
+  "title": "Zen 6 bleibt auf AM5 - AMD verrät es selbst, ganz nebenbei",
+  "subtitle": "Ein Suchfilter in AMDs Technikportal listet Olympic Ridge und Medusa für den Desktop-Sockel AM5 und bestätigt damit, was die Gerüchteküche seit Monaten erzählt",
+  "excerpt": "Kein Teaser, keine Roadmap: AMD bestätigt die nächste Ryzen-Generation über eine Filteroption in der eigenen Technik-Bibliothek. Was dort steht, betrifft jeden, der heute ein AM5-Board kauft.",
+  "seoTitle": "AMD Zen 6: Olympic Ridge und Medusa für Sockel AM5 bestätigt",
+  "metaDescription": "AMDs Technikportal listet die Zen-6-Chips Olympic Ridge und Medusa für Sockel AM5 sowie zwei Medusa-Varianten für FP10. Was das für AM5-Besitzer bedeutet.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "bereich": "hardware",
+  "tags": [
+    "AMD",
+    "Zen 6",
+    "Ryzen",
+    "Sockel AM5",
+    "CPU",
+    "Intel Nova Lake"
+  ],
+  "tldr": [
+    "AMDs Technical Information Portal listet die Zen-6-Codenamen «Olympic Ridge» und «Medusa1» für den Desktop-Sockel AM5",
+    "Für den Notebook-Sockel FP10 tauchen gleich zwei Varianten auf: Medusa1 und Medusa2",
+    "Gerüchte sprechen von 6 bis 24 Kernen bei Olympic Ridge und bis zu 12 Kernen pro CPU-Chiplet",
+    "Zen 6 ist im Serverbereich als Epyc 9006 alias Venice bereits gestartet, Ryzen-Modelle werden erst fürs kommende Jahr erwartet"
+  ],
+  "whyItMatters": "Wer heute ein AM5-Mainboard kauft, will wissen, wie lange die Plattform noch mit neuen CPUs versorgt wird. Die Einträge in AMDs eigener Datenbank sind ein starker Hinweis darauf, dass die nächste Ryzen-Generation kein neues Board erfordert - ein Aufrüstpfad, den es bei Intel in dieser Form seit Jahren nicht mehr gibt.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Manchmal steckt die interessanteste Ankündigung nicht in einer Pressemitteilung, sondern in einem Dropdown-Menü. In AMDs «Technical Information Portal» tauchen die Zen-6-Codenamen «Olympic Ridge» und «Medusa1» als Desktop-Prozessoren für den Sockel AM5 auf - schwarz auf weiss, in der Filterfunktion der hauseigenen Technik-Bibliothek. Entdeckt und auf X geteilt hat den Fund der Datenbank-Spezialist InstLatX64. Damit bestätigt AMD, wenn auch unfreiwillig, was seit Monaten durch die Gerüchteküche geistert."
+    },
+    {
+      "type": "embed",
+      "platform": "twitter",
+      "url": "https://x.com/InstLatX64/status/2092552096960704584"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "2029",
+          "label": "so lange will AMD den Sockel AM5 mindestens unterstützen"
+        },
+        {
+          "value": "12 Kerne",
+          "label": "sollen laut Gerüchten künftig auf ein einzelnes CPU-Chiplet passen"
+        },
+        {
+          "value": "24 Kerne",
+          "label": "Obergrenze der kolportierten Olympic-Ridge-Modellpalette"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Ein Suchfilter statt einer Roadmap"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Fundstelle ist unspektakulär, aber eindeutig: Wer im Technikportal nach Dokumenten sucht, bekommt Filteroptionen angeboten, die Codenamen bestimmten Sockeln zuordnen. Unter den Desktop-Prozessoren der Ryzen-Familie stehen dort sowohl «Medusa1» als auch «Olympic Ridge» beim Sockel AM5. Für die Mobilplattform werden «Medusa1» und «Medusa2» dem Sockel FP10 zugewiesen. Das ist keine Produktankündigung mit Terminen und Taktraten, aber es ist die erste Bestätigung aus erster Hand, dass die Namen echt sind und wo die Chips landen."
+    },
+    {
+      "type": "paragraph",
+      "text": "Dass Olympic Ridge als klassische Desktop-CPU die Nachfolge der Ryzen-9000-Reihe im Sockel AM5 antritt, war ohnehin ein offenes Geheimnis. AMD hat für die Plattform Support bis mindestens 2029 zugesagt - eine Zen-6-Generation auf einem neuen Sockel wäre schwer zu erklären gewesen."
+    },
+    {
+      "type": "heading",
+      "text": "Was Olympic Ridge bringen soll"
+    },
+    {
+      "type": "paragraph",
+      "text": "Alles, was über die reinen Sockelzuordnungen hinausgeht, bleibt unbestätigt. Die kursierenden Angaben lesen sich allerdings interessant für alle, die ihren PC primär zum Spielen nutzen:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Modellpalette von 6 bis 24 Kernen - deutlich mehr Spielraum nach oben als bei Granite Ridge",
+        "Bis zu 12 Kerne auf einem einzelnen CPU-Chiplet (CCD), 50 Prozent mehr als bisher",
+        "Das CCD soll trotzdem kaum grösser ausfallen als bei Zen 5",
+        "Alle Angaben stammen aus Leaks, nicht von AMD"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Gerade der letzte Punkt der Gerüchte hätte für Spiele Gewicht: Mehr Kerne pro Chiplet bedeutet weniger Kommunikation über die Chiplet-Grenze hinweg - genau jener Umweg, der bei Ryzen-CPUs mit zwei CCDs in bestimmten Titeln für Latenzprobleme sorgt. Bestätigt ist davon bislang nichts."
+    },
+    {
+      "type": "heading",
+      "text": "Zwei Medusas fürs Notebook - und die Frage nach Zen-c"
+    },
+    {
+      "type": "paragraph",
+      "text": "Spannender als die Desktop-Einträge ist fast die Doppelnennung im Mobilbereich. Medusa1 und Medusa2 teilen sich den Sockel FP10, worin genau sie sich unterscheiden, ist offen. Ein Muster gibt es aber: Seit Phoenix2 teilt AMD seine APU-Familien in einen grösseren Chip mit mehr vollwertigen Zen-Kernen und eine kleinere «Variante 2», die überwiegend auf die kompakteren Zen-c-Kerne setzt. Das spart Chipfläche und zielt auf günstige Einsteigergeräte. Bereits vor zwei Monaten deuteten Release Notes einer AIDA64-Beta auf mehrere Medusa-Ableger hin."
+    },
+    {
+      "type": "paragraph",
+      "text": "Medusa1 dürfte für «Medusa Point» stehen, den erwarteten Nachfolger von Strix Point und dessen Refresh Gorgon Point. Passend dazu ist in der Geekbench-Datenbank bereits ein Entwicklersample namens «AMD Plum MDS1» mit zehn Kernen aufgetaucht. Bemerkenswert ist auch die Sockel-Rochade: In der aktuellen Generation sitzen Strix Point, Krackan Point und Gorgon Point auf FP8, die grossen Halo-APUs auf FP11. FP10 ist neu - Handheld- und Notebook-Käufer sollten also nicht mit einfachen Aufrüstpfaden rechnen."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Fund ist keine Sensation, sondern eine Absicherung: Er nimmt den bisherigen Gerüchten die Spekulationsgrundlage bei den Codenamen und Sockeln, lässt aber alle Leistungsfragen offen. Im Serverbereich ist Zen 6 mit den Epyc 9006 alias Venice vor rund einem Monat bereits gestartet, die Ryzen-Ableger werden inzwischen eher für das kommende Jahr erwartet. Dann trifft AMD auf Intels Nova-Lake-Generation. Wer aktuell ein AM5-System zusammenstellt, bekommt mit diesen Einträgen zumindest ein weiteres Argument dafür, dass das Board den nächsten CPU-Wechsel noch mitmacht."
+    }
+  ],
+  "poll": {
+    "question": "Was wäre euch bei Zen 6 am wichtigsten?",
+    "options": [
+      "Mehr Kerne pro CCD gegen Latenzprobleme in Spielen",
+      "Höhere Taktraten und mehr Single-Core-Leistung",
+      "Bezahlbare 6- und 8-Kerner statt Kern-Wettrüsten",
+      "Hauptsache, mein AM5-Board bleibt nutzbar"
+    ]
+  },
+  "isLeakOrRumor": true,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-27T06:04:28.192Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "circuit",
+  "sources": [
+    {
+      "title": "Jetzt Schwarz auf Weiß: AMD Zen 6 als Olympic Ridge und Medusa im Sockel AM5",
+      "url": "https://www.computerbase.de/news/prozessoren/jetzt-schwarz-auf-weiss-amd-zen-6-als-olympic-ridge-und-medusa-im-sockel-am5.99074/",
+      "publisher": "ComputerBase"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/amd-zen-6-olympic-ridge-medusa-am5-2026.webp",
+    "alt": "Zen 6 bleibt auf AM5 - AMD verrät es selbst, ganz nebenbei",
+    "credit": "Bild: ComputerBase",
+    "sourceUrl": "https://www.computerbase.de/news/prozessoren/jetzt-schwarz-auf-weiss-amd-zen-6-als-olympic-ridge-und-medusa-im-sockel-am5.99074/",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "gpu-lieferengpass-pc-partner-einsteigerkarten-2026",
+    "ryzen-7-5800x3d-x370-vs-x570-test-2026",
+    "us-konsolenmarkt-juli-2026-speicherpreise-circana"
+  ]
+}
