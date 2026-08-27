@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-27T09:03:59.688Z",
+  "updatedAt": "2026-08-27T12:05:00.760Z",
   "deals": [
     {
       "appId": 1174180,
@@ -57,15 +57,15 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2764460/f0a29d6c91be4e91e9fa2f384dd5ae695bfd6b5b/capsule_184x69.jpg?t=1787606192"
     },
     {
-      "appId": 1812450,
-      "title": "Bellwright",
-      "discountPercent": 34,
+      "appId": 1623730,
+      "title": "Palworld",
+      "discountPercent": 30,
       "originalPrice": 2899,
-      "finalPrice": 1913,
+      "finalPrice": 2029,
       "currency": "EUR",
-      "endsAt": "2026-09-09T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1812450/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1812450/c479dda6fcd1e9edf38fe18a02ca21aab153664e/capsule_184x69.jpg?t=1786637342"
+      "endsAt": "2026-09-08T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1623730/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/0703d5a0658c7aedaa3be4391d6f5cccc1bb6d7a/capsule_184x69.jpg?t=1784714419"
     }
   ]
 }

@@ -1,0 +1,164 @@
+{
+  "slug": "nvidia-quartalszahlen-279-milliarden-speicher-geforce-2026",
+  "title": "Nvidia bestellt Speicher für 160 Milliarden - GeForce schrumpft",
+  "subtitle": "Rekordquartal mit 96,2 Milliarden Dollar Umsatz, doch in der Bilanzkonferenz kam das Wort Gaming praktisch nicht mehr vor",
+  "excerpt": "Nvidia meldet 96,2 Milliarden Dollar Quartalsumsatz und schnürt Lieferzusagen über 279 Milliarden - der grösste Posten ist Speicher. Für Gamer:innen steckt die eigentliche Nachricht im Kleingedruckten.",
+  "seoTitle": "Nvidia: 279 Mrd. Dollar Zusagen, GeForce-Umsatz sinkt",
+  "metaDescription": "Nvidia meldet 96,2 Mrd. Dollar Umsatz und sichert sich Speicher für bis zu 160 Mrd. Dollar. Was der KI-Boom für GPU- und RAM-Preise bedeutet.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "bereich": "hardware",
+  "tags": [
+    "Nvidia",
+    "GeForce",
+    "Grafikkarten",
+    "Arbeitsspeicher",
+    "Quartalszahlen",
+    "KI"
+  ],
+  "tldr": [
+    "Nvidia meldet für Q2 des Fiskaljahres 2027 einen Rekordumsatz von 96,221 Milliarden US-Dollar (+106 Prozent gegenüber Vorjahr) und 59,688 Milliarden Nettogewinn.",
+    "Die langfristigen Liefer- und Kaufzusagen steigen von 119 auf 279 Milliarden US-Dollar - der Zuwachs von 160 Milliarden geht laut Nvidia primär auf Speicher zurück.",
+    "Nvidia rechnet für das kommende Jahr mit einer Verdoppelung der Nachfrage, kann aber wegen der Lieferkette nur rund 70 Prozent Wachstum bedienen; die Knappheit soll mindestens bis Fiskaljahr 2028 anhalten.",
+    "GeForce-Verkäufe gingen laut Nvidia zurück, Gaming spielte im Earnings Call praktisch keine Rolle mehr. Für Q3 sind rund 108 Milliarden US-Dollar Umsatz geplant."
+  ],
+  "whyItMatters": "Nvidia reserviert sich für dreistellige Milliardenbeträge genau jene Speicherkapazitäten, aus denen auch GDDR- und DDR-Module für Grafikkarten und Gaming-PCs entstehen. Wenn der grösste Einkäufer der Branche Vorverträge bis ins Fiskaljahr 2029 abschliesst und die Knappheit selbst als Bremse bezeichnet, ist das ein direkter Vorbote für Preise und Verfügbarkeit im PC-Regal.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Nvidia hat erneut ein Rekordquartal vorgelegt - und diesmal steckt die für Spielerinnen und Spieler wichtigste Zahl nicht in der Umsatzzeile. Im zweiten Quartal des Fiskaljahres 2027, das am 26. Juli 2026 endete, setzte der Konzern 96,221 Milliarden US-Dollar um, ein Plus von 106 Prozent gegenüber dem Vorjahresquartal. Gleichzeitig hat Nvidia seine langfristigen Einkaufszusagen bei Zulieferern von 119 auf 279 Milliarden US-Dollar mehr als verdoppelt. Der Zuwachs von rund 160 Milliarden entfällt laut Unternehmensangaben primär auf eine einzige Komponente: Speicher."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "96,2 Mrd. $",
+          "label": "Quartalsumsatz, ein Plus von 106 Prozent gegenüber dem Vorjahr"
+        },
+        {
+          "value": "279 Mrd. $",
+          "label": "langfristige Lieferzusagen - zuvor waren es 119 Milliarden"
+        },
+        {
+          "value": "108 Mrd. $",
+          "label": "Umsatz, den Nvidia für das laufende Quartal anpeilt"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Ein Rekordquartal, in dem Gaming kaum vorkommt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Nettogewinn kletterte auf 59,688 Milliarden US-Dollar, ein Plus von 126 Prozent, bei einer Bruttomarge von 75,0 Prozent. Getragen wird das fast vollständig vom Rechenzentrumsgeschäft: 89,023 Milliarden US-Dollar entfielen auf Datacenter-Hardware, 117 Prozent mehr als ein Jahr zuvor. Hyperscaler steuerten davon 48,710 Milliarden bei, das Segment aus KI-Clouds, Industrie und Unternehmen 40,313 Milliarden - und wächst mit 138 Prozent deutlich schneller als die grossen Cloud-Konzerne."
+    },
+    {
+      "type": "paragraph",
+      "text": "Was in dieser Aufstellung fehlt, ist ausgerechnet das Geschäft, mit dem Nvidia gross geworden ist. Seit diesem Jahr weist der Konzern GeForce nicht mehr separat aus, sondern bündelt die Produkte in der Sparte «Edge Computing», die auf 7,198 Milliarden US-Dollar kam. Das Plus von 27 Prozent geht laut Nvidia jedoch vor allem auf Blackwell-Pro-Karten für Workstations zurück - also Rechenzentrumssilizium in anderem Gewand. Die GeForce-Verkäufe selbst gingen zurück. PC Gamer hält in seiner Berichterstattung fest, dass Gaming im gesamten Earnings Call schlicht keine Erwähnung mehr fand."
+    },
+    {
+      "type": "heading",
+      "text": "279 Milliarden für Nachschub - und der grösste Posten ist Speicher"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Zusagen über 279 Milliarden US-Dollar sind kein vorsichtiges Auffüllen der Lager, sondern eine strategische Reservierung von Kapazität. Klassisch umfassen diese Verpflichtungen Vorauszahlungen für Wafer-Fertigung und Advanced Packaging bei TSMC sowie HBM-Speicher von den DRAM-Herstellern. Diesmal benennt Nvidia den Schwerpunkt ausdrücklich - dazu gehört auch der Liefervertrag mit SK hynix. Die Verträge reichen bis ins Fiskaljahr 2029."
+    },
+    {
+      "type": "quote",
+      "text": "Wir haben uns mit unserem umfangreichen Zuliefernetzwerk zusammengetan, um die kritischen Komponenten zu sichern, die wir brauchen, um die Nachfrage der nächsten Jahre zu decken. Unsere Zusagen stiegen von 119 Milliarden Dollar im letzten Quartal auf 279 Milliarden Dollar, primär im Zusammenhang mit der Beschaffung von Speicher.",
+      "attribution": "Nvidia, Quartalsbericht"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bemerkenswert ist dabei ein Detail, das ComputerBase betont: Auch Nvidia kauft nicht mehr zu den günstigen Konditionen ein, die vor Jahren festgezurrt wurden, sondern muss die Preissteigerungen mitgehen. Ein erheblicher Teil der verdoppelten Summe ist also nicht mehr Menge, sondern schlicht ein höherer Preis pro Chip."
+    },
+    {
+      "type": "heading",
+      "text": "70 Prozent Wachstum - obwohl die Nachfrage doppelt so hoch wäre"
+    },
+    {
+      "type": "paragraph",
+      "text": "In der Telefonkonferenz mit Analysten wurde deutlich, warum die Einkaufsoffensive nötig war: Die Kundenprognosen deuten laut Nvidia auf eine Verdoppelung der Nachfrage im kommenden Jahr hin. Liefern kann der Konzern das nicht. Die Lieferkette trägt nach eigener Einschätzung rund 70 Prozent Wachstum - eine Zahl, die die Börse dennoch überraschte, weil Analysten bislang mit «nur» 45 Prozent gerechnet hatten."
+    },
+    {
+      "type": "quote",
+      "text": "Auch wenn unsere Nachfrage deutlich über 70 Prozent liegt, erlaubt uns unser Angebot, 70 Prozent verlässlich zu liefern. Ohne Beschränkung wäre es sehr, sehr viel mehr. Wir haben uns viel Liefermenge gesichert, aber wir brauchen einfach noch viel mehr.",
+      "attribution": "Jensen Huang, Gründer und CEO von Nvidia"
+    },
+    {
+      "type": "paragraph",
+      "text": "Das Management sagt zudem offen, dass die Verfügbarkeit mindestens bis zum Fiskaljahr 2028 der Flaschenhals bleibt. Treiber der Nachfrage ist Vera Rubin, die laut Nvidia in voller Produktion läuft und ab dem laufenden Quartal zum Umsatz beiträgt. Für den Aufbau wurde bereits Ware zusammengestellt: Der Lagerbestand wuchs von 25,8 auf 31,6 Milliarden US-Dollar - was auf den Gewinn drückte, der auf sehr hohem Niveau stagnierte."
+    },
+    {
+      "type": "heading",
+      "text": "Was das für eure nächste Grafikkarte bedeutet"
+    },
+    {
+      "type": "paragraph",
+      "text": "Hier schliesst sich der Kreis zum Gaming-PC. Tom's Hardware weist darauf hin, dass die Verkäufe von Grafikprodukten für PCs trotz Engpässen bei GPUs und Speicher stabil blieben - die Knappheit ist also bereits Realität. PC Gamer bringt die Ironie auf den Punkt: Nvidia erklärt, deutlich mehr Geld verdienen zu können, wäre da nicht die Speicherkrise, zu der der Konzern mit seinen eigenen Bestellungen beiträgt. Wer heute dreistellige Milliardenbeträge an DRAM- und HBM-Kapazität für die kommenden Jahre reserviert, entzieht dem Rest des Marktes genau jene Fertigungslinien, aus denen auch GDDR-Module und normaler Arbeitsspeicher kommen."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Nvidia sichert sich Speicherkapazität bis ins Fiskaljahr 2029 - Vorverträge in dieser Grössenordnung binden Fertigungslinien langfristig.",
+        "Der Konzern zahlt selbst höhere Preise, was gegen eine schnelle Entspannung bei den Speicherkosten spricht.",
+        "GeForce wird bilanziell nicht mehr eigenständig ausgewiesen und war im Earnings Call kein Thema.",
+        "Für Q3 plant Nvidia rund 108 Milliarden US-Dollar Umsatz - ohne jeden Datacenter-Compute-Beitrag aus China, weil die Lage bei Export- und Importlizenzen unklar ist."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nvidia hat sich mit diesem Quartal endgültig als Infrastrukturkonzern neu vermessen. Jensen Huangs Satz, KI habe «ihren Wendepunkt erreicht» und Rechenleistung sei nun gleichbedeutend mit Umsatz, beschreibt die Prioritäten präzise: Wo eine GPU im Rechenzentrum dauerhaft Geld verdient, wird sie nicht als Spielkarte verkauft. Für die PC-Plattform heisst das nicht, dass GeForce verschwindet - aber die Bilanz zeigt, an welchem Ende der Warteschlange Gaming inzwischen steht. Wer in den nächsten Monaten auf sinkende Preise bei Grafikkarten oder Arbeitsspeicher hofft, findet in diesen Zahlen kein einziges Argument dafür."
+    }
+  ],
+  "poll": {
+    "question": "Nvidia reserviert Speicher für 160 Milliarden Dollar - wer trägt die Verantwortung für teure GPUs und RAM-Riegel?",
+    "options": [
+      "Nvidia - der KI-Boom saugt den Markt leer",
+      "Die Speicherhersteller, die die Preise mitnehmen",
+      "Beide gleichermassen",
+      "Niemand - das ist einfach Angebot und Nachfrage"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-27T12:04:57.055Z",
+  "readingTimeMinutes": 4,
+  "heroVariant": "circuit",
+  "sources": [
+    {
+      "title": "Nvidia revenue tops $96 billion as memory commitments soar to $160 billion — CEO Jensen Huang says AI 'has reached its inflection point'",
+      "url": "https://www.tomshardware.com/tech-industry/big-tech/nvidia-revenue-tops-usd96-billion-as-memory-commitments-soar-to-usd160-billion-ceo-jensen-huang-says-ai-has-reached-its-inflection-point",
+      "publisher": "Tom's Hardware"
+    },
+    {
+      "title": "Rekordzahlen im Quartal: Nvidia kauft für 279 Mrd. US-Dollar ein",
+      "url": "https://www.computerbase.de/news/wirtschaft/rekordzahlen-im-quartal-nvidia-kauft-fuer-279-mrd-us-dollar-ein.99076/",
+      "publisher": "ComputerBase"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/nvidia-quartalszahlen-279-milliarden-speicher-geforce-2026.webp",
+    "alt": "Nvidia bestellt Speicher für 160 Milliarden - GeForce schrumpft",
+    "credit": "Bild: Tom's Hardware",
+    "sourceUrl": "https://www.tomshardware.com/tech-industry/big-tech/nvidia-revenue-tops-usd96-billion-as-memory-commitments-soar-to-usd160-billion-ceo-jensen-huang-says-ai-has-reached-its-inflection-point",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "gpu-lieferengpass-pc-partner-einsteigerkarten-2026",
+    "pc-partner-grafikkarten-knappheit-preiswarnung-2026",
+    "gigabyte-aorus-rtx-5090-infinity-6195-euro-2026"
+  ]
+}
