@@ -1,0 +1,142 @@
+# EILMELDUNGS-LAUF (Tim, 27.08.2026: "Bau Welle 1 so um und beginne").
+#
+# WOZU: Die News-Pipeline läuft alle vier Stunden. Bricht ein Leak um 14:10,
+# sind wir um 18:05 da - die Mitbewerber um 14:20. Bei brandneuen Themen hat
+# niemand einen Autoritätsvorsprung; dort gewinnt schlicht, wer zuerst da ist.
+# Das ist die einzige Stelle, an der reines Tempo Rennen entscheidet, und es
+# ist reine Technik.
+#
+# WARUM EIN EIGENER WORKFLOW UND NICHT EINFACH EIN SCHNELLERER TAKT:
+# "News-Pipeline" macht weit mehr als Artikel - Instagram vorbereiten und
+# posten, Deals, Charts, Pixel-Rätsel, Build und Deploy. Ihr Zeitplan ist
+# ausdrücklich so gewählt, dass die Instagram-Tageskurve ihre fünf Posts
+# erreicht. Sie auf 30 Minuten zu stellen hiesse, an all dem gleichzeitig zu
+# ziehen, bei achtfacher Laufzeit und achtfacher Zahl an Deployments. Dieser
+# Workflow rührt davon nichts an: Er veröffentlicht höchstens EINEN Artikel
+# und fasst Instagram, Deals und Charts nicht an.
+#
+# ZWEI STUFEN, DAMIT ES BILLIG BLEIBT: Stufe 1 braucht kein "npm ci" und ist
+# nach Sekunden fertig (pipeline/eil-check.mjs liest die Feeds mit
+# Bordmitteln). Sie läuft 48 Mal am Tag. Stufe 2 startet nur, wenn Stufe 1
+# tatsächlich eine Eilmeldung sieht - gemessen an echten Feed-Daten ist das
+# rund zweimal am Tag.
+#
+# WAS ALS EILMELDUNG GILT: mindestens 8 verschiedene Quellen melden innerhalb
+# von 60 Minuten dieselbe Sache. Die Schwelle ist gemessen, nicht geschätzt -
+# die Herleitung steht in pipeline/lib/takt.mjs, nachrechnen lässt sie sich
+# mit: node pipeline/eil-check.mjs --kalibrieren
+#
+# DIE TAGESDECKE GILT AUCH HIER. Beide Workflows zählen dieselben Artikel des
+# Tages, teilen sich also ein Budget. Eine früh veröffentlichte Eilmeldung
+# nimmt dem Abend einen Platz weg, statt obendrauf zu kommen.
+name: Eilmeldungs-Lauf
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  pruefen:
+    name: Vorprüfung (ohne Kosten)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      eil: ${{ steps.check.outputs.eil }}
+      wort: ${{ steps.check.outputs.wort }}
+      quellen: ${{ steps.check.outputs.quellen }}
+    steps:
+      # Flach auschecken - wir brauchen nur pipeline/feeds.mjs und
+      # pipeline/lib/takt.mjs, nicht die Geschichte des Repositoriums.
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # Bewusst OHNE "npm ci": eil-check.mjs kommt ohne Pakete aus. Genau
+      # deshalb kann diese Stufe 48 Mal am Tag laufen.
+      - name: Feeds auf Eilmeldung prüfen
+        id: check
+        run: node pipeline/eil-check.mjs
+
+  melden:
+    name: Eilmeldung veröffentlichen
+    needs: pruefen
+    if: needs.pruefen.outputs.eil == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    # DIESELBE GRUPPE WIE DIE NEWS-PIPELINE: Beide pushen auf main und beide
+    # schreiben pipeline/state.json. Sie dürfen sich nicht überholen. Die
+    # Vorprüfung oben steht bewusst NICHT in dieser Gruppe, sonst würden sich
+    # die billigen Läufe hinter einem 40-Minuten-Lauf der News-Pipeline
+    # stauen.
+    concurrency:
+      group: news-pipeline
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      # Wie in der News-Pipeline: Ein Lauf, der in der Warteschlange stand,
+      # würde sonst auf dem Stand seines Startzeitpunkts arbeiten und beim
+      # Push am Merge-Konflikt scheitern.
+      - name: Auf aktuellen Stand ziehen
+        run: git pull --ff-only origin main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Dependencies installieren
+        run: npm ci
+
+      # Kein Playwright: Der hängt an den Instagram- und Pixel-Raten-Renderern,
+      # und die laufen hier nicht mit.
+      - name: Eilmeldung schreiben
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          NUR_EILMELDUNG: "1"
+          SUPABASE_URL: https://yvsrquekxnumvmgmjfpy.supabase.co
+          SUPABASE_ANON_KEY: sb_publishable_hYuXxyx4p_uMMKLFpUu2JQ_lE2mlREG
+        run: node pipeline/run.mjs
+
+      - name: Neuen Artikel erkennen
+        id: changes
+        run: |
+          if git status --porcelain src/content/articles | grep -q .; then
+            echo "new=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "new=false" >> "$GITHUB_OUTPUT"
+            echo "Kein Artikel entstanden (Auswahl oder Wächter haben abgelehnt) — nichts zu tun."
+          fi
+
+      - name: Build-Prüfung (nichts Kaputtes veröffentlichen)
+        if: steps.changes.outputs.new == 'true'
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: https://yvsrquekxnumvmgmjfpy.supabase.co
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: sb_publishable_hYuXxyx4p_uMMKLFpUu2JQ_lE2mlREG
+        run: npm run build
+
+      - name: Änderungen committen und pushen
+        if: steps.changes.outputs.new == 'true'
+        run: |
+          git config user.name "RoP Eilmeldung"
+          git config user.email "actions@github.com"
+          git add src/content/articles pipeline/state.json src/lib/articles.generated.ts
+          if [ -d public/images/articles ]; then git add public/images/articles; fi
+          if git diff --cached --quiet; then
+            echo "Nichts zu committen."
+            exit 0
+          fi
+          git commit -m "Eilmeldung: ${{ needs.pruefen.outputs.quellen }} Quellen zu \"${{ needs.pruefen.outputs.wort }}\" ($(date -u +'%Y-%m-%d %H:%M UTC'))"
+          git pull --rebase --autostash origin main
+          git push origin main
