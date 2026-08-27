@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-27T17:38:12.131Z",
+  "updatedAt": "2026-08-27T21:04:38.251Z",
   "deals": [
     {
       "appId": 1174180,
@@ -13,6 +13,17 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/capsule_184x69.jpg?t=1759502961"
     },
     {
+      "appId": 1551360,
+      "title": "Forza Horizon 5",
+      "discountPercent": 60,
+      "originalPrice": 5999,
+      "finalPrice": 2399,
+      "currency": "EUR",
+      "endsAt": "2026-09-03T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1551360/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1551360/capsule_184x69.jpg?t=1787677939"
+    },
+    {
       "appId": 3240220,
       "title": "Grand Theft Auto V Enhanced",
       "discountPercent": 56,
@@ -24,26 +35,15 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3240220/a318bd9affe8eee32984b18794b273c256e9b2d6/capsule_184x69.jpg?t=1781187782"
     },
     {
-      "appId": 221100,
-      "title": "DayZ",
-      "discountPercent": 50,
-      "originalPrice": 4799,
-      "finalPrice": 2399,
+      "appId": 1363080,
+      "title": "Manor Lords",
+      "discountPercent": 35,
+      "originalPrice": 3999,
+      "finalPrice": 2599,
       "currency": "EUR",
-      "endsAt": "2026-09-07T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/221100/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/221100/capsule_184x69.jpg?t=1769695513"
-    },
-    {
-      "appId": 1812450,
-      "title": "Bellwright",
-      "discountPercent": 34,
-      "originalPrice": 2899,
-      "finalPrice": 1913,
-      "currency": "EUR",
-      "endsAt": "2026-09-09T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1812450/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1812450/c479dda6fcd1e9edf38fe18a02ca21aab153664e/capsule_184x69.jpg?t=1786637342"
+      "endsAt": "2026-09-10T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1363080/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1363080/capsule_184x69.jpg?t=1786634669"
     },
     {
       "appId": 1623730,
