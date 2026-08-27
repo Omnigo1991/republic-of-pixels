@@ -1,0 +1,176 @@
+{
+  "slug": "fable-gamescom-2026-kampfsystem-anspielbericht",
+  "title": "Fable verwandelt Gegner in Hühner - und die Schwierigkeit in einen Baukasten",
+  "subtitle": "Playground Games liess auf der gamescom erstmals selbst spielen und zeigte parallel 18 Minuten aus Bowerstone",
+  "excerpt": "Kriegshammer, Teleport-Zauber und Skeletthühner: Fable war auf der gamescom erstmals anspielbar. Besonders auffällig ist, wie fein sich die Action justieren lässt - und was die Entwickler zum Molyneux-Erbe sagen.",
+  "seoTitle": "Fable: Kampfsystem, Bowerstone-Demo und Release 2027",
+  "metaDescription": "Fable war auf der gamescom erstmals spielbar: wuchtiges Kampfsystem, feine Schwierigkeitsregler, 18 Minuten Bowerstone. Release am 23. Februar 2027.",
+  "category": "news",
+  "platforms": [
+    "xbox",
+    "pc",
+    "playstation"
+  ],
+  "bereich": "games",
+  "tags": [
+    "Fable",
+    "Playground Games",
+    "gamescom 2026",
+    "Xbox",
+    "Rollenspiel"
+  ],
+  "tldr": [
+    "Fable war auf der gamescom 2026 erstmals anspielbar - im Beisein der beiden Associate Game Directors William Kennedy und Craig Littler",
+    "Das Kampfsystem setzt auf Mengenkontrolle: schnelle und schwere Schläge, abbrechbare Angriffe, automatisch aufschaltende Distanzwaffe und vier direkt belegbare Zauber",
+    "Der Schwierigkeitsgrad lässt sich nicht nur in vier Stufen, sondern in Einzelwerten wie Gegnerschaden, Aggression, Reaktionsfenstern und Cooldowns anpassen",
+    "Parallel erschien eine knapp 18-minütige Gameplay-Demo aus Bowerstone; Release ist am 23. Februar 2027 für PC, PS5 und Xbox Series X/S"
+  ],
+  "whyItMatters": "Fable ist das erste grosse Rollenspiel von Playground Games und der erste echte Beweis, dass das Forza-Horizon-Studio auch ausserhalb von Rennspielen liefern kann. Für Spielerinnen und Spieler ist vor allem interessant, wie zugänglich der Reboot wird: Die Action lässt sich in Einzelwerten justieren, und die Entscheidungen sollen wie früher spürbare Konsequenzen haben.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Nach Jahren aus Trailern, Verschiebungen und Vorschussvertrauen durfte auf der gamescom 2026 erstmals selbst zum Controller gegriffen werden: Playground Games liess Fable anspielen - begleitet von den beiden Associate Game Directors William Kennedy und Craig Littler. Gezeigt wurde ein Ausschnitt aus einer betont actionreichen Quest, die vor allem drei Dinge demonstrieren sollte: die Optik, den britischen Humor und das neue Kampfsystem. Parallel dazu veröffentlichten Xbox und Playground eine knapp 18-minütige Gameplay-Präsentation, die deutlich ruhiger ausfällt und die Hauptstadt Bowerstone in den Mittelpunkt rückt."
+    },
+    {
+      "type": "embed",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=bjsoifvDe14"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "23. Feb. 2027",
+          "label": "Release für PC, PS5 und Xbox Series X/S"
+        },
+        {
+          "value": "18 Min.",
+          "label": "Länge der neuen Gameplay-Präsentation aus Bowerstone"
+        },
+        {
+          "value": "30/60 FPS",
+          "label": "beide Modi sind auf Konsole vorgesehen"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Wuchtig, aber nicht behäbig"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der spielbare Abschnitt schickte den Helden gegen von Gespenstern besessene Skelettkrieger - mit dem Kriegshammer in der Hand. Das Kampfsystem ist erkennbar auf Mengenkontrolle ausgelegt: Schnelle und schwere Attacken lassen sich kombinieren, wobei der schnelle Schlag aus dem Lauf Gegner zurückstösst, notfalls auch Abhänge hinunter. Auf dem linken Trigger liegt jederzeit eine Distanzwaffe, die automatisch aufschaltet. Wichtig für das Spielgefühl: In den meisten Frames darf ein begonnener Schlag mit der Blocktaste noch abgebrochen werden - wer defensiv und ausweichlastig spielen will, wird dafür nicht bestraft. Der Eindruck im Anspieltermin: eine saubere Balance aus Wucht und Tempo, dazu flüssige Performance und filmreife Nebeleffekte bereits bei mittleren Einstellungen."
+    },
+    {
+      "type": "heading",
+      "text": "Vier Zauber auf Knopfdruck - inklusive Brathähnchen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Magie ist kein separates Menü, sondern Teil der Kombo. Über den rechten Trigger und die Face-Buttons liegen bis zu vier Zauber gleichzeitig bereit, die sich fliessend in Schlagfolgen einbinden lassen. Besonders eindrücklich: ein Teleport, der über erstaunlich grosse Distanzen in den Rücken eines Feindes führt - und der auch zu fliegenden Kreaturen hinaufschiesst. Der Feuerball überzeugt mit deftigem Flächenschaden, und die Verwandlung eines Gegners in ein Huhn ist nicht nur ein Gag, sondern taktisch nützlich. Skelette werden dabei folgerichtig zu Skeletthühnern, und wer ein verwandeltes Ziel anzündet, erhält ein Brathähnchen. Später im Spiel wird es noch spektakulärer: Eine ganze Gegnergruppe schweben zu lassen und anschliessend per Blitz zu Boden zu schleudern, gehörten zu den Höhepunkten der Demo."
+    },
+    {
+      "type": "heading",
+      "text": "Schwierigkeit als Baukasten statt als Schalter"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der vielleicht relevanteste Punkt für die Praxis ist die Optionsseite. Fable beschränkt sich nicht auf vier Schwierigkeitsstufen, sondern erlaubt es, einzelne Aspekte selbst zu formen. Wer möchte, dreht gezielt an den Stellschrauben - und kann sich das Spiel damit sowohl deutlich härter als auch deutlich entspannter einrichten."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Gegnerschaden und Gegner-Gesundheit",
+        "Aggression der Feinde",
+        "Zeitfenster zum Reagieren",
+        "Stärke der Heilungskugeln, die Gegner fallen lassen",
+        "Geschwindigkeit der Cooldowns",
+        "eine zugänglichere Parade, bei der die Taste auch gespammt werden darf"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Die letztgenannte Option bestätigte William Kennedy auf Nachfrage. Sie dürfte für all jene wichtig werden, die zwar Lust auf Albion, aber wenig Geduld für frameperfektes Timing haben."
+    },
+    {
+      "type": "heading",
+      "text": "Zwischen Molyneux-Erbe und eigener Stimme"
+    },
+    {
+      "type": "paragraph",
+      "text": "Kaum eine Marke ist so eng mit einem einzelnen Namen verknüpft wie Fable mit Peter Molyneux, dessen Ankündigungen zu Lionhead-Zeiten regelmässig grösser ausfielen als das fertige Spiel. Playground Games geht die Frage nach dem Erbe offensiv an. Man habe zuerst verstehen wollen, was den Kern ausmache: die typisch britische Art mit Witz und Charme sowie ein Märchen-Ton, der unbeschwert sein kann, aber auch sehr düster wird - genau dieser Kontrast sei entscheidend."
+    },
+    {
+      "type": "quote",
+      "text": "Zunächst einmal sind wir alle im Studio riesige Fans der klassischen Fable-Spiele. Das war eine unserer grössten Motivationen für die Arbeit an diesem Spiel, und wir fühlen uns wirklich geehrt, einen Reboot dieses beliebten Franchises machen zu dürfen.",
+      "attribution": "William Kennedy, Associate Game Director bei Playground Games"
+    },
+    {
+      "type": "quote",
+      "text": "Es ist für uns entscheidend, den Geist von Fable zu bewahren, aber eben mit unserer eigenen Stimme. Es ist letztlich ein Reboot, aber wenn du heute die Demo spielst, fühlt es sich hoffentlich immer noch stark wie ein Fable-Spiel an.",
+      "attribution": "Craig Littler, Associate Game Director bei Playground Games"
+    },
+    {
+      "type": "paragraph",
+      "text": "Zur DNA gehört für das Team auch die Entscheidungsfreiheit. Kleine und grosse Entscheidungen sollen die Welt spürbar verändern, Konsequenzen würden unter anderem über das Ruf-System sichtbar. Freiheit gilt dabei nicht nur für die Spielerschaft: Zwar geht Playground laut Littler mit einem sehr soliden Skript in die Aufnahmen, lässt den Darstellerinnen und Darstellern aber Raum. Namen wie Hayley Atwell, Natasia Demetriou und Richard Ayoade seien bewusst gewählt worden - und ja, sie improvisieren gelegentlich. \"Meistens ist das grossartig\", so Littler."
+    },
+    {
+      "type": "heading",
+      "text": "Bowerstone: Häuser kaufen, Ruf aufbauen, Familie gründen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die 18-minütige Präsentation zeigt die andere Hälfte des Spiels. In der Hauptstadt Albions führe jeder Mensch sein eigenes Leben, jede Entscheidung habe Konsequenzen, so die Entwickler. Konkret genannt werden der Erwerb von Häusern und Geschäften, der Aufbau des eigenen Rufs, individuelle Optik, das Gründen einer Familie sowie schwierige Entscheidungen, die den Verlauf des Abenteuers massgeblich prägen. Dazu kommen Berufe und Beziehungen - jene Life-Sim-Anteile also, die die Serie immer von klassischen Action-Rollenspielen abgehoben haben. Das neu gestaltete Albion setzt laut Playground auf schwarzen Humor, skurrile Figuren und bekannte Kreaturen wie Hobbes, Balverines und Trolle; der eigene Held oder die eigene Heldin lässt sich in Nahkampf, Fernkampf und Magie spezialisieren."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der erste eigene Griff zum Controller fällt positiv aus: Die Action wirkt griffig, die Zauber sind mehr als Effektfeuerwerk, und die granularen Schwierigkeitsoptionen sind ein starkes Argument für ein Spiel, das ausdrücklich ein breites Publikum ansprechen will. Offen bleibt die entscheidende Frage, die eine Kampf-Demo naturgemäss nicht beantworten kann: ob die versprochenen Konsequenzen im fertigen Spiel wirklich tragen oder wieder nur an der Oberfläche kratzen. Reibungslos wird der Start ohnehin nicht: Eurogamer verweist in einem eigenen Beitrag darauf, dass hohe Kosten und starke Konkurrenz den Launch belasten könnten - der Februar 2027 ist bereits jetzt dicht gefüllt. Bis dahin bleibt Zeit für weitere Einblicke; genauere Angaben zu den Performance-Modi will Playground kurz vor dem Verkaufsstart nachreichen."
+    }
+  ],
+  "poll": {
+    "question": "Was muss der Fable-Reboot vor allem treffen, damit er funktioniert?",
+    "options": [
+      "Den britischen Humor und den Märchenton",
+      "Entscheidungen mit echten Konsequenzen",
+      "Ein Kampfsystem mit Wucht",
+      "Die Life-Sim-Anteile: Haus, Beruf, Familie"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-27T02:03:30.997Z",
+  "readingTimeMinutes": 4,
+  "heroVariant": "controller",
+  "sources": [
+    {
+      "title": "Fable angespielt: Neues Kampfsystem, alter Charme und ein Interview mit Playground",
+      "url": "https://www.eurogamer.de/fable-playground-games-interview-humor-kampfsystem-entscheidungen",
+      "publisher": "Eurogamer.de"
+    },
+    {
+      "title": "Fable: 18-minütige Gameplay-Präsentation zeigt die vielfältigen Möglichkeiten des Rollenspiels",
+      "url": "https://www.play3.de/2026/08/26/fable-18-minuten-gameplay-praesentation-zeigt-die-vielfaeltigen-moeglichkeiten-des-rollenspiels/",
+      "publisher": "play3.de"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/fable-gamescom-2026-kampfsystem-anspielbericht.webp",
+    "alt": "Fable verwandelt Gegner in Hühner - und die Schwierigkeit in einen Baukasten",
+    "credit": "Bild: Eurogamer.de",
+    "sourceUrl": "https://www.eurogamer.de/fable-playground-games-interview-humor-kampfsystem-entscheidungen",
+    "sourceWidth": 690,
+    "sourceHeight": 388
+  },
+  "relatedSlugs": [
+    "xbox-project-helix-disc-laufwerk-sharma-2026",
+    "ikea-xbox-yxstaby-moebel-kollektion-2026",
+    "xbox-disc-to-digital-insider-start-2026"
+  ]
+}
