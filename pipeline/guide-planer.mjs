@@ -171,7 +171,24 @@ if (quellen.length === 0) {
   process.exit(0);
 }
 
-const thema = `${beste.name}: Alles Bestätigte im Überblick - was bisher bekannt ist, was noch offen ist, und was davon bestätigt statt vermutet ist`;
+// DER AUFTRAG AN DIE WERKSTATT.
+//
+// Mein erster Entwurf lautete "... was bisher bekannt ist, was noch offen ist,
+// und was davon bestätigt statt vermutet ist". Der erste Probelauf fiel damit
+// durch das Faktentor, und zwar zu Recht: Die Aufforderung, Bestätigtes von
+// Vermutetem zu trennen, verleitet das Modell dazu, über die HERKUNFT von
+// Angaben zu schreiben. Beim Test zu The Duskbloods erfand es eine
+// "Store-Panne" als Ursprung eines kurzzeitig sichtbaren Termins - die Quelle
+// nennt dazu nichts.
+//
+// Das Faktentor hat das gefangen und die Veröffentlichung gestoppt, der
+// Schutz greift also. Aber ein Auftrag, der planmässig durchfällt, erzeugt
+// jeden Tag einen roten Lauf und keinen Guide. Deshalb verlangt der Auftrag
+// jetzt nur noch Zusammenfassung, keine Bewertung der Quellenlage.
+const thema =
+  `${beste.name}: Alles, was bekannt ist - fasse zusammen, was die Quellen zu diesem Spiel berichten. ` +
+  `Nur Angaben, die wörtlich in den Quellen stehen. KEINE Einschätzung, wie verlässlich eine Angabe ist, ` +
+  `und KEINE Vermutung darüber, woher eine Information stammt, solange die Quelle das nicht selbst sagt.`;
 
 console.log(`Thema gewählt: ${beste.name}`);
 console.log(`  eigene Artikel:  ${beste.artikel.length}`);

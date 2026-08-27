@@ -79,7 +79,15 @@ jobs:
       # Die bestehende Guide-Werkstatt, unverändert. Sie bringt ihre eigenen
       # Wächter mit: Umlaut-Prüfung, Faktentreue-Tor gegen die Quelltexte und
       # validateArticle. Scheitert das Faktentor, wird nichts veröffentlicht.
+      # continue-on-error: Ein Faktentor-Veto ist kein Defekt, sondern der
+      # Schutz bei der Arbeit - das Modell hat etwas geschrieben, das die
+      # Quellen nicht hergeben, und wir veröffentlichen es nicht. Das darf
+      # nicht jeden Tag einen roten Lauf und eine Alarm-Mail erzeugen. Der
+      # ::error::-Vermerk bleibt in der Zusammenfassung sichtbar, und der
+      # Schritt "Neuen Guide erkennen" sagt ausdrücklich, dass nichts
+      # entstanden ist.
       - name: Guide schreiben
+        continue-on-error: true
         if: steps.plan.outputs.gefunden == 'true'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -130,3 +138,16 @@ jobs:
           git commit -m "Guide: Übersicht zu ${{ steps.plan.outputs.name }} ($(date -u +'%Y-%m-%d %H:%M UTC'))"
           git pull --rebase --autostash origin main
           git push origin main
+
+      # Damit ein grüner Lauf ohne Guide nicht wie ein Erfolg aussieht.
+      - name: Ergebnis zusammenfassen
+        if: always()
+        run: |
+          if [ "${{ steps.plan.outputs.gefunden }}" != "true" ]; then
+            echo "### Guide-Automatik: kein Thema reif" >> "$GITHUB_STEP_SUMMARY"
+          elif [ "${{ steps.changes.outputs.new }}" = "true" ]; then
+            echo "### Guide veröffentlicht: ${{ steps.plan.outputs.name }}" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "### Kein Guide: Faktentor oder Validierung haben abgelehnt" >> "$GITHUB_STEP_SUMMARY"
+            echo "Thema war **${{ steps.plan.outputs.name }}**. Der Entwurf hängt als Download am Lauf." >> "$GITHUB_STEP_SUMMARY"
+          fi
