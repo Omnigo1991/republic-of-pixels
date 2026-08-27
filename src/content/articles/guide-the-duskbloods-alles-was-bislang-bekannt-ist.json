@@ -1,0 +1,173 @@
+{
+  "slug": "guide-the-duskbloods-alles-was-bislang-bekannt-ist",
+  "title": "The Duskbloods: Alles, was bislang bekannt ist",
+  "subtitle": "Dieser Guide bündelt, was die vorliegenden Quellen zu FromSoftwares Switch-2-Exklusivtitel belegen - von den Brettspiel-Mechaniken über das Matchmaking bis zum Netzwerktest.",
+  "excerpt": "Dieser Guide bündelt, was die vorliegenden Quellen zu FromSoftwares Switch-2-Exklusivtitel belegen - von den Brettspiel-Mechaniken über das Matchmaking bis zum Netzwerktest. Der geschlossene Netzwerktest von The Duskbloods hat laut Producer Yasuhiro Kitao mehr Spieleranmeldungen erhalten als der Test zu Elden Ring N…",
+  "category": "guides",
+  "platforms": [
+    "pc",
+    "playstation",
+    "xbox"
+  ],
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-27T19:54:33.106Z",
+  "readingTimeMinutes": 5,
+  "heroVariant": "controller",
+  "image": {
+    "src": "/images/articles/elden-ring-patch-1-17-waffen-buffs-beute-2026.webp",
+    "alt": "Elden Ring buffs Grossschilde - und tauscht enttäuschende Beute aus",
+    "credit": "Bild: Eurogamer.de",
+    "sourceUrl": "https://www.eurogamer.de/elden-ring-patch-1-17-waffen-buffs-bessere-beute",
+    "sourceWidth": 690,
+    "sourceHeight": 388
+  },
+  "isLeakOrRumor": false,
+  "tags": [
+    "The Duskbloods",
+    "FromSoftware",
+    "Nintendo Switch 2",
+    "Hidetaka Miyazaki"
+  ],
+  "tldr": [
+    "Plattform: exklusiv für Nintendo Switch 2, Entwickler FromSoftware, Director Hidetaka Miyazaki.",
+    "Ursprung: Entwicklung startete 2021 auf der ursprünglichen Switch, wurde später auf Switch 2 umgestellt.",
+    "Genre-Einordnung in den Quellen: Multiplayer-Titel, PvPvE.",
+    "Virtue-Punkte: durch Nebenziele, Mini-Bosse und King-of-the-Hill-Zonen - nicht nur durch direkten Kampf."
+  ],
+  "whyItMatters": "Der geschlossene Netzwerktest von The Duskbloods hat laut Producer Yasuhiro Kitao mehr Spieleranmeldungen erhalten als der Test zu Elden Ring Nightreign - und das, obwohl das Spiel nur auf einer Plattform verfügbar ist. Gleichzeitig gibt es noch kein Releasedatum, während Director Hidetaka Miyazaki in Interviews zunehmend Details zu Systemen wie Virtue-Punkten, Sigils und Matchmaking preisgibt.",
+  "poll": null,
+  "review": null,
+  "seoTitle": "The Duskbloods: Alles, was bislang bekannt ist",
+  "metaDescription": "Dieser Guide bündelt, was die vorliegenden Quellen zu FromSoftwares Switch-2-Exklusivtitel belegen - von den Brettspiel-Mechaniken über das Matchmaking bis zum…",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Stand dieses Guides: Stand: vorliegende Berichte zum geschlossenen Netzwerktest (Closed Network Test); kein Releasedatum bekannt. Wir halten ihn aktuell, wenn sich Wesentliches ändert."
+    },
+    {
+      "type": "paragraph",
+      "text": "Dieser Guide richtet sich an alle, die The Duskbloods im Blick behalten wollen, ohne sich durch Interviews, Testberichte und Meldungen einzeln durchzuarbeiten. Er sammelt ausschliesslich Angaben, die in den vorliegenden Quellen ausdrücklich stehen: Plattform, Entwicklungsgeschichte, bekannte Spielmechaniken, geplantes Matchmaking und der Verlauf des geschlossenen Netzwerktests. Wo eine Information fehlt, steht das am Ende in den offenen Punkten - Lücken werden hier nicht mit Vermutungen gefüllt."
+    },
+    {
+      "type": "heading",
+      "text": "Plattform und Entwicklungsgeschichte"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Duskbloods erscheint exklusiv für Nintendo Switch 2. Entwickler ist FromSoftware, als Game Director ist Hidetaka Miyazaki genannt. Das Projekt begann laut Miyazaki bereits 2021 auf der ursprünglichen, deutlich schwächeren Switch - Jahre, bevor die Switch 2 öffentlich bekannt wurde und bevor FromSoftware die Produktion auf einen Switch-2-Exklusivtitel umstellte."
+    },
+    {
+      "type": "paragraph",
+      "text": "Dass die Ankündigung der neuen Hardware im Studio erleichtert aufgenommen wurde, sagt Miyazaki gegenüber The Verge deutlich: «We were definitely very happy when we heard about the Switch 2, because we were thinking, 'How are we going to do this?'» Und weiter: «The Switch 2 came along and all of those problems were solved.»"
+    },
+    {
+      "type": "paragraph",
+      "text": "Miyazaki bezeichnet das Projekt als anspruchsvoll für das Studio: «The Duskbloods is a challenging game for us. There are a lot of new things in terms of designing the systems and the rules, and it requires a lot of fine-tuning and adjustments, and Nintendo has provided a lot of support in that regard.» Ausdrücklich nennt er dabei Onboarding und Tutorials als Bereiche, in denen FromSoftware historisch nicht stark sei und in denen die Unterstützung von Nintendo sehr gut gewesen sei. In einer weiteren in den Quellen genannten Aussage heisst es, The Duskbloods sei ein Switch-2-Exklusivtitel geworden, weil Nintendo der «right partner» und «very receptive» gegenüber der Idee von FromSoftware gewesen sei."
+    },
+    {
+      "type": "heading",
+      "text": "Wie sich Matches gewinnen lassen: Virtue-Punkte"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Duskbloods wird in den Quellen als PvPvE-Spiel bezeichnet. Statt Matches ausschliesslich durch das Ausschalten aller Gegner zu entscheiden, verlangt das Spiel das Sammeln von Virtue. Konkret nennen die Quellen drei Wege: Nebenziele erfüllen, Mini-Bosse ausschalten, die über die Karte streifen, und King-of-the-Hill-artige Zonen halten."
+    },
+    {
+      "type": "paragraph",
+      "text": "Miyazaki ordnet das ausdrücklich Brettspielen zu: «That's something that isn't as direct as just battling against each other, right? It's not directly a PvP thing. It's a common system in a lot of board games and something that through my own experience of playing board games has definitely rubbed off on me and it's been something that I've constantly thought about.» Praktisch heisst das für die Vorbereitung: Wer sich einlesen will, sollte nicht nur auf Kampfmechanik schauen, sondern auf Zielprioritäten - die Punktequellen liegen laut Quellen ausdrücklich auch abseits direkter Duelle."
+    },
+    {
+      "type": "heading",
+      "text": "Das Sigil-System"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der zweite Brettspiel-Einfluss ist das Sigil-System. Es erzeugt matchspezifische Beziehungen und Ziele zwischen den Spielern. Ein Sigil kann euch erlauben, einem anderen Spieler mit einem Blumenstrauss einen Antrag zu machen - dieser kann laut Quelle mit der spitzen Seite seines Schwerts antworten. Ein anderes Sigil setzt euch auf einen bestimmten gegnerischen Spieler an."
+    },
+    {
+      "type": "paragraph",
+      "text": "Miyazaki nennt das System «very similar to a lot of RPG elements you might find in a tabletop RPG». Zum Unterschied zu seinen eigenen Tabletop-Erfahrungen sagt er: «in the past when I played games like that, a lot of it was basically rolling dice to determine certain aspects of your character, and that was pretty much the extent of it.» Mit The Duskbloods wollte er «a way of controlling not just that, but the relationships between players and a variety of other elements that might be out of the scope of a TTRPG» finden."
+    },
+    {
+      "type": "heading",
+      "text": "Matchmaking: geplant ist ein Ranked-System"
+    },
+    {
+      "type": "paragraph",
+      "text": "FromSoftware plant eine Form von skill-basiertem Matchmaking. Miyazaki gegenüber IGN: «we definitely plan on having the matchmaking system work in a way so that it's ranked, and players who are really good tend to be matched with other players who are great, and players who are new tend to be matched with other new players.» Ziel ist laut Quelle, dass Soulslike-Veteranen Neueinsteigern nicht routinemässig den Spass verderben - auch mit Blick auf Spieler, die die Switch 2 erst Monate später kaufen."
+    },
+    {
+      "type": "paragraph",
+      "text": "Wichtig für die Erwartungshaltung: Siege und das Überleben bis zum finalen PvP-Showdown sind laut Miyazaki nicht der einzige Fortschrittsweg. «There are things that you can unlock through just gameplay like story content and customization for your character which should allow you to enjoy it outside of the actual combat.»"
+    },
+    {
+      "type": "heading",
+      "text": "Geplante Brücken zwischen Veteranen und Neulingen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Miyazaki will beide Gruppen zusätzlich zusammenbringen - mit dem ausdrücklichen Hinweis, dass das möglicherweise nicht zum Start kommt: «This might not be something that comes out initially and may come a bit later on, but we're definitely considering ways to build a relationship between veteran players and new players - something that's positive and not always scary or something they'd want to avoid.» Als Beispiele nennt er Event-Anpassungen, bei denen bestimmte In-Match-Ereignisse sehr selten sind oder häufiger auftreten, wenn ein sehr erfahrener Spieler im Match ist. Zudem nennt er das Alliance-System: Man solle gezielt angeben können, mit jemandem sehr Gutem mit hohem Rang gepaart zu werden, und hochrangige Spieler sollten in ihren Einstellungen die Paarung mit Neulingen priorisieren können - laut ihm «very similar to leaving signs in front of a boss in our other games»."
+    },
+    {
+      "type": "heading",
+      "text": "Der geschlossene Netzwerktest"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Closed Network Test ist laut Eurogamer inzwischen abgeschlossen. Producer Yasuhiro Kitao berichtete in einem Famitsu-Livestream, dass der Test mehr Spieleranmeldungen erhielt als jener zu Elden Ring Nightreign - obwohl The Duskbloods nur auf Switch 2 verfügbar ist. Das Team sei von dieser Reaktion überrascht gewesen. Wie beim Nightreign-Test war eine Anmeldung im Voraus nötig, und nicht alle Angemeldeten erhielten eine Einladung."
+    },
+    {
+      "type": "paragraph",
+      "text": "Kitao verwies im Livestream darauf, dass das Studio sich fragt, ob The Duskbloods aufgrund des Interesses am Test mehr Day-One-Spieler haben wird - trotz der kleineren installierten Basis der Switch 2. Eurogamer ordnet ein: Nightreigns Test lief auf PS5 und Xbox Series X/S, das Spiel selbst erschien zudem für PC, PS4 und Xbox One."
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Test verlief nicht störungsfrei: Die erste Session endete abrupt nach schwerwiegenden Verbindungsproblemen; spätere Sessions liefen dem Bericht nach offenbar reibungsloser. Ein Releasedatum gibt es laut Eurogamer weiterhin nicht - auch wenn es kurzzeitig so aussah, als würde das Spiel am 24. September erscheinen. Eine der Quellen spricht davon, dass das Spiel «sometime later this year» als Switch-2-Exklusivtitel erscheint."
+    },
+    {
+      "type": "heading",
+      "text": "Checkliste: der Stand in Kurzform"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Plattform: exklusiv für Nintendo Switch 2, Entwickler FromSoftware, Director Hidetaka Miyazaki.",
+        "Ursprung: Entwicklung startete 2021 auf der ursprünglichen Switch, wurde später auf Switch 2 umgestellt.",
+        "Genre-Einordnung in den Quellen: Multiplayer-Titel, PvPvE.",
+        "Virtue-Punkte: durch Nebenziele, Mini-Bosse und King-of-the-Hill-Zonen - nicht nur durch direkten Kampf.",
+        "Sigil-System: matchspezifische Beziehungen und Ziele, inklusive Heiratsantrag mit Blumenstrauss oder Auftrag gegen einen bestimmten Spieler.",
+        "Matchmaking: Ranked geplant, gute Spieler zu guten, neue zu neuen.",
+        "Fortschritt auch ohne Siege: Story-Inhalte und Charakter-Customization sind per Gameplay freischaltbar.",
+        "Später möglich (nicht zwingend zum Start): Event-Anpassungen und ein Alliance-System zur gezielten Paarung von Veteranen und Neulingen.",
+        "Netzwerktest: abgeschlossen, mehr Anmeldungen als bei Elden Ring Nightreign, Anmeldung im Voraus nötig, kein garantierter Zugang.",
+        "Erste Test-Session endete abrupt wegen Verbindungsproblemen, spätere Sessions liefen offenbar reibungsloser.",
+        "Release: kein Datum bekannt; der kurzzeitig sichtbare 24. September ist nicht bestätigt.",
+        "Nintendo unterstützte FromSoftware laut Miyazaki insbesondere bei Onboarding und Tutorials."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "eurogamer.net",
+      "url": "https://www.eurogamer.net/the-duskbloods-closed-network-test-more-applications-nightreign"
+    },
+    {
+      "title": "gamesradar.com",
+      "url": "https://www.gamesradar.com/games/action/the-duskbloods-devs-were-definitely-very-happy-with-the-switch-2s-reveal-after-fromsoftware-struggled-to-get-it-running-on-a-switch-1/"
+    },
+    {
+      "title": "eurogamer.de",
+      "url": "https://www.eurogamer.de/the-duskbloods-switch-2-brettspiel-elemente"
+    },
+    {
+      "title": "gamesradar.com",
+      "url": "https://www.gamesradar.com/games/action/fromsoftware-enters-the-skill-based-matchmaking-debate-with-the-duskbloods-we-definitely-plan-on-having-the-matchmaking-system-work-in-a-way-so-that-its-ranked/"
+    },
+    {
+      "title": "gamesradar.com",
+      "url": "https://www.gamesradar.com/games/action/parts-of-the-duskbloods-are-very-similar-to-a-lot-of-rpg-elements-you-might-find-in-a-tabletop-rpg-says-fromsoftware-boss-hidetaka-miyazaki/"
+    }
+  ]
+}
