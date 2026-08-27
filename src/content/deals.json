@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-27T12:05:00.760Z",
+  "updatedAt": "2026-08-27T17:38:12.131Z",
   "deals": [
     {
       "appId": 1174180,
@@ -13,17 +13,6 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/capsule_184x69.jpg?t=1759502961"
     },
     {
-      "appId": 1551360,
-      "title": "Forza Horizon 5",
-      "discountPercent": 60,
-      "originalPrice": 5999,
-      "finalPrice": 2399,
-      "currency": "EUR",
-      "endsAt": "2026-09-03T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1551360/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1551360/capsule_184x69.jpg?t=1787677939"
-    },
-    {
       "appId": 3240220,
       "title": "Grand Theft Auto V Enhanced",
       "discountPercent": 56,
@@ -35,26 +24,26 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3240220/a318bd9affe8eee32984b18794b273c256e9b2d6/capsule_184x69.jpg?t=1781187782"
     },
     {
-      "appId": 4001890,
-      "title": "How to Fish",
-      "discountPercent": 38,
-      "originalPrice": 749,
-      "finalPrice": 464,
+      "appId": 221100,
+      "title": "DayZ",
+      "discountPercent": 50,
+      "originalPrice": 4799,
+      "finalPrice": 2399,
       "currency": "EUR",
-      "endsAt": "2026-08-27T17:00:36.000Z",
-      "url": "https://store.steampowered.com/app/4001890/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4001890/8f65bb2b78d37a9147aa79c970a51610e6955bf1/capsule_184x69.jpg?t=1787234618"
+      "endsAt": "2026-09-07T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/221100/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/221100/capsule_184x69.jpg?t=1769695513"
     },
     {
-      "appId": 2764460,
-      "title": "Sandustry",
-      "discountPercent": 35,
-      "originalPrice": 1499,
-      "finalPrice": 974,
+      "appId": 1812450,
+      "title": "Bellwright",
+      "discountPercent": 34,
+      "originalPrice": 2899,
+      "finalPrice": 1913,
       "currency": "EUR",
-      "endsAt": "2026-08-27T17:00:09.000Z",
-      "url": "https://store.steampowered.com/app/2764460/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2764460/f0a29d6c91be4e91e9fa2f384dd5ae695bfd6b5b/capsule_184x69.jpg?t=1787606192"
+      "endsAt": "2026-09-09T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1812450/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1812450/c479dda6fcd1e9edf38fe18a02ca21aab153664e/capsule_184x69.jpg?t=1786637342"
     },
     {
       "appId": 1623730,
@@ -66,6 +55,17 @@
       "endsAt": "2026-09-08T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/1623730/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/0703d5a0658c7aedaa3be4391d6f5cccc1bb6d7a/capsule_184x69.jpg?t=1784714419"
+    },
+    {
+      "appId": 1874880,
+      "title": "Arma Reforger",
+      "discountPercent": 30,
+      "originalPrice": 3999,
+      "finalPrice": 2799,
+      "currency": "EUR",
+      "endsAt": "2026-09-07T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1874880/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1874880/capsule_184x69.jpg?t=1779966148"
     }
   ]
 }
