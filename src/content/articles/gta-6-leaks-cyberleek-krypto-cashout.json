@@ -1,0 +1,153 @@
+{
+  "slug": "gta-6-leaks-cyberleek-krypto-cashout",
+  "title": "GTA-6-Leaks am Ende? CyberLeek zieht 270'000 Dollar ab",
+  "subtitle": "On-Chain-Daten legen nahe, dass die Person oder Gruppe hinter den Leak-Clips ihren Meme-Coin geleert hat - wenige Stunden vor Rockstars eigenem Gameplay-Auftritt",
+  "excerpt": "Rund 15 Leak-Videos, ein eigener Krypto-Token, Abstimmungen über den nächsten Clip - und dann verschwinden rund 270'000 Dollar in mehreren Wallets. Was die Blockchain-Spuren über das Ende der GTA-6-Leaks verraten.",
+  "seoTitle": "GTA 6: CyberLeek zieht 270'000 Dollar aus Meme-Coin",
+  "metaDescription": "CyberLeek soll rund 270'000 Dollar aus dem eigenen GTA-6-Meme-Coin gezogen haben. On-Chain-Analyst Vice Cit hält die Leak-Serie damit für beendet.",
+  "category": "leaks",
+  "platforms": [
+    "pc",
+    "playstation",
+    "xbox"
+  ],
+  "bereich": "games",
+  "tags": [
+    "GTA 6",
+    "Rockstar Games",
+    "Take-Two",
+    "Leaks",
+    "Krypto"
+  ],
+  "tldr": [
+    "CyberLeek soll am 27. August in vier Transaktionen rund 270'000 US-Dollar aus dem eigenen Meme-Coin gezogen haben",
+    "Analyst Vice Cit verortet das Geld in drei separaten Wallets und vermutet mindestens zwei beteiligte Personen",
+    "Der Token verlor laut Vice Cit rund 75 Prozent seiner Marktkapitalisierung - von 23,39 Millionen auf 3,85 Millionen Dollar",
+    "Alle Angaben beruhen auf öffentlichen Blockchain-Daten und sind nicht offiziell bestätigt"
+  ],
+  "whyItMatters": "Die GTA-6-Leaks der vergangenen Wochen haben Spielerinnen und Spielern Inhalte gezeigt, die viele gar nicht sehen wollten - inklusive Story-Momenten. Wenn die Leak-Serie jetzt endet, weil sich das Geschäftsmodell dahinter erschöpft hat, sagt das mehr über die Motive aus als jedes Manifest im Wasserzeichen. Und es zeigt, wie eng Leaks inzwischen mit Krypto-Spekulation verzahnt sind.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Die Serie an GTA-6-Leaks könnte vorbei sein - und zwar nicht, weil jemand aufgeflogen wäre, sondern weil die Kasse gemacht wurde. Wenige Stunden bevor Rockstar Games in einem Extended Look bei Netflix selbst Material zu Grand Theft Auto 6 zeigte, wurden aus dem Meme-Coin rund um den Leaker CyberLeek laut öffentlichen Blockchain-Daten rund 270'000 US-Dollar abgezogen. Bestätigt ist das nicht: Die Auswertung stammt vom Krypto-Analysten Vice Cit, der die Transaktionen in den GTAForums dokumentierte, und wurde von IGN aufgegriffen."
+    },
+    {
+      "type": "embed",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=_nctNNhmY9U"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "270'000 $",
+          "label": "sollen in vier Transaktionen am 27. August abgezogen worden sein"
+        },
+        {
+          "value": "-75 %",
+          "label": "Marktkapitalisierung des Tokens innerhalb eines Tages laut Vice Cit"
+        },
+        {
+          "value": "29'000 $",
+          "label": "geschätzte Kosten für Token, Website und File-Uploads"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Vom Leak-Clip zur Abstimmungsmaschine"
+    },
+    {
+      "type": "paragraph",
+      "text": "Rund 15 Videos hat CyberLeek in den vergangenen Wochen ins Netz gestellt - von allgemeinem Gameplay bis zu Momenten, die klar in Spoiler-Gebiet reichen. Auffällig war dabei weniger der Inhalt als die Verpackung: Auf jedem einzelnen Clip prangte der Verweis auf einen eigenen Meme-Coin. Über eine verlinkte Website konnten Käuferinnen und Käufer mit dem Token darüber abstimmen, welcher Teil von GTA 6 als Nächstes geleakt wird. Leaks als Abo-Modell, bezahlt in Krypto."
+    },
+    {
+      "type": "paragraph",
+      "text": "Technisch lief das Ganze laut den Recherchen über die Solana-Blockchain. Der Token wurde zwölf Tage vor dem Cash-out erzeugt; die Wallet dahinter legte den Anfangsbestand zusammen mit einer weiteren Kryptowährung in einen sogenannten Liquidity Pool auf der Plattform Raydium. Wer dort handelt, zahlt Transaktionsgebühren - und die fliessen anteilig an die Bereitsteller der Liquidität zurück. Je mehr also gehandelt wurde, desto mehr verdiente die Wallet, die den Token überhaupt erst erschaffen hatte."
+    },
+    {
+      "type": "heading",
+      "text": "Vier Transaktionen, drei Wallets"
+    },
+    {
+      "type": "paragraph",
+      "text": "Am frühen Morgen des 27. August löste laut Vice Cit genau diese Wallet eine Gebührenauszahlung aus - über 200'000 Dollar in Form des eigenen Tokens - und tauschte den Betrag umgehend in andere Währungen um. Verteilt wurde das Geld über vier Transaktionen auf drei separate Wallets. Vice Cit vermutet deshalb, dass mindestens zwei Personen an der Konstruktion beteiligt waren."
+    },
+    {
+      "type": "quote",
+      "text": "Das hier ist nicht der Leak von 2022. Das wurde geplant und sehr bewusst umgesetzt, um das Maximum an Geld herauszuholen.",
+      "attribution": "Vice Cit, Krypto-Analyst"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Rechnung, die Vice Cit aufmacht, ist ernüchternd: Setup aus Token, Website und Datei-Uploads habe zum Zeitpunkt der ersten Untersuchung rund 29'000 Dollar gekostet, unter dem Strich blieben also etwa 241'000 Dollar Gewinn. Der Kurs brach anschliessend ein - laut Vice Cit von einem Höchststand bei 23,39 Millionen Dollar Marktkapitalisierung auf 3,85 Millionen, ein Minus von rund 75 Prozent innerhalb eines Tages. PC Gamer beziffert den unmittelbaren Wertverlust nach dem Cash-out auf etwa 40 Prozent. Wer den Token gekauft hatte, hält in jedem Fall deutlich weniger in der Hand als am Vortag."
+    },
+    {
+      "type": "heading",
+      "text": "Das \"geheime Projekt\", das keines war"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bemerkenswert ist der Kontrast zur Eigenwerbung. CyberLeek hatte den Kauf des Tokens als Unterstützung für ein \"geheimes Projekt\" im Namen von Konsumenteninteressen dargestellt. Die Mittel sollten demnach in die nötige Infrastruktur fliessen sowie in die Sicherheit, um dem unvermeidlichen Gegenschlag der Konzerne standzuhalten. Parallel dazu verschärfte Take-Two die juristische Jagd auf die Verantwortlichen - und die Botschaften in den Wasserzeichen der Clips wurden zunehmend eindringlich."
+    },
+    {
+      "type": "quote",
+      "text": "Ich glaube persönlich, dass der Leaker deutlich mehr aus dem Projekt herausholen wollte. Die Botschaften in den Wasserzeichen der jüngsten Clips wirken schon fast panisch.",
+      "attribution": "Vice Cit, Krypto-Analyst"
+    },
+    {
+      "type": "heading",
+      "text": "Was das für die Leaks bedeutet"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Zeitpunkt ist kein Zufall. Mit Rockstars eigenem Extended Look bei Netflix bekam die Öffentlichkeit legales, sauberes Material zu sehen - und damit sank der Wert gestohlener Wackelclips schlagartig. Vice Cit geht davon aus, dass CyberLeek genau diesen Moment abgepasst hat, um beim Höchststand auszusteigen, bevor das Interesse endgültig kippt. Ob damit wirklich Schluss ist, weiss derzeit niemand: Weder Rockstar noch Take-Two haben sich zum Cash-out geäussert, und die Identität hinter CyberLeek bleibt offen."
+    },
+    {
+      "type": "paragraph",
+      "text": "Für die Leserschaft heisst das zweierlei. Erstens: Die Chance, GTA 6 in den kommenden Wochen wieder unfreiwillig gespoilert zu bekommen, dürfte spürbar sinken. Zweitens - und das ist die unangenehmere Lektion: Der vermeintliche Kampf gegen die Industrie war in diesem Fall vor allem ein Geschäftsmodell, das seine Reichweite aus fremdem geistigem Eigentum bezog und die Rechnung an jene weiterreichte, die den Token gekauft haben. Rund 241'000 Dollar Gewinn stehen dabei einem Risiko gegenüber, das Vice Cit selbst offen infrage stellt - viel Geld, aber kaum genug, um dafür die eigene Freiheit aufs Spiel zu setzen."
+    }
+  ],
+  "poll": {
+    "question": "Wer trägt aus eurer Sicht die Verantwortung für den Kursabsturz des CyberLeek-Tokens?",
+    "options": [
+      "Allein CyberLeek - das war von Anfang an geplant",
+      "Die Käufer, die einem Leaker Geld anvertrauen",
+      "Die Berichterstattung, die den Hype befeuert hat",
+      "Krypto-Plattformen ohne jede Kontrolle"
+    ]
+  },
+  "isLeakOrRumor": true,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-28T05:05:36.320Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "waveform",
+  "sources": [
+    {
+      "title": "The massive GTA 6 leaks might be done for good as Cyberleek cashes out nearly £200,000 from their crypto scheme",
+      "url": "https://www.eurogamer.net/gta-6-leaker-cashes-out--cyberleek-crypto-scheme",
+      "publisher": "Eurogamer"
+    },
+    {
+      "title": "Cyberleek may have just cashed out on their GTA 6 leak, earning over $200,000 in the most predictable crypto rugpull ever performed",
+      "url": "https://www.pcgamer.com/games/grand-theft-auto/cyberleek-may-have-just-cashed-out-on-their-gta-6-leak-earning-over-usd200-000-in-the-most-predictable-crypto-rugpull-ever-performed/",
+      "publisher": "PC Gamer"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/gta-6-leaks-cyberleek-krypto-cashout.webp",
+    "alt": "GTA-6-Leaks am Ende? CyberLeek zieht 270'000 Dollar ab",
+    "credit": "Bild: Eurogamer",
+    "sourceUrl": "https://www.eurogamer.net/gta-6-leaker-cashes-out--cyberleek-crypto-scheme",
+    "sourceWidth": 690,
+    "sourceHeight": 388
+  },
+  "relatedSlugs": [
+    "gta-6-cyberleek-fkk-leak-lucia-prolog-2026",
+    "gta-6-leaks-cyberleek-take-two-subpoena-2026",
+    "gta-6-cyberleek-website-offline-take-two-2026"
+  ]
+}

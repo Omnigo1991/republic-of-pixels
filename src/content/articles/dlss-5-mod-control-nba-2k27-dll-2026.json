@@ -1,0 +1,152 @@
+{
+  "slug": "dlss-5-mod-control-nba-2k27-dll-2026",
+  "title": "DLSS 5 landet per Mod in Control - und halbiert die Bildrate",
+  "subtitle": "Eine versteckte DLL aus NBA 2K27 bringt Nvidias Neural Rendering Wochen vor dem offiziellen Start in ein sechs Jahre altes Spiel - mit sichtbaren Grenzen",
+  "excerpt": "Modder haben in der Early-Access-Version von NBA 2K27 eine unbekannte Nvidia-Bibliothek gefunden und binnen Stunden in Control eingebunden. Der erste Blick auf DLSS 5 ausserhalb offizieller Titel wirft allerdings mehr Fragen auf, als er beantwortet.",
+  "seoTitle": "DLSS 5 per Mod in Control: DLL aus NBA 2K27 entdeckt",
+  "metaDescription": "Modder binden Nvidias DLSS 5 Neural Rendering mit einer DLL aus NBA 2K27 in Control ein. Der Preis: fast 50 Prozent Leistungsverlust auf einer RTX 5070 Ti.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "bereich": "hardware",
+  "tags": [
+    "Nvidia",
+    "DLSS 5",
+    "Control",
+    "NBA 2K27",
+    "Modding",
+    "GeForce RTX 50"
+  ],
+  "tldr": [
+    "In der Early-Access-Fassung von NBA 2K27 wurde die 158 MB grosse Datei nvngx_dlssnr.dll gefunden - die Laufzeitbibliothek für Nvidias Neural Rendering.",
+    "Die Modding-Community RenoDX hat sie binnen Stunden in Control eingebunden; sieben Stile verändern derzeit nur die Charaktermodelle.",
+    "Auf einer GeForce RTX 5070 Ti brachen die Bildraten in 4K von 71 auf 35 FPS ein, HDR funktioniert nicht korrekt.",
+    "Nvidia will DLSS 5 im Herbst zunächst für die GeForce-RTX-50-Serie veröffentlichen - die Mod ist unbestätigt und nicht öffentlich verfügbar."
+  ],
+  "whyItMatters": "DLSS 5 ist kein simples Upscaling-Update, sondern greift in Beleuchtung und Materialien ein - es verändert also, wie Spiele aussehen. Der Mod-Versuch liefert den ersten Blick auf die Technik ausserhalb von Nvidias Marketing-Demos und zeigt zugleich, wie teuer Neural Rendering ohne saubere Integration wird. Und er deutet an, dass die Technik womöglich auch in Spielen landen könnte, die Nvidia nie dafür vorgesehen hat.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Nvidias DLSS 5 soll erst im Herbst erscheinen - doch in einem sechs Jahre alten Third-Person-Shooter läuft die Technik offenbar schon jetzt. Mitglieder der Modding-Community RenoDX haben nach eigenen Angaben das Neural Rendering von DLSS 5 in Control zum Laufen gebracht. Grundlage ist eine Bibliothek, die Nvidia so nie veröffentlicht hat: Sie steckte in den Spieldateien der Early-Access-Version von NBA 2K27. Alle Angaben stammen aus Beiträgen der beteiligten Modder und sind bislang weder von Nvidia noch von 2K bestätigt."
+    },
+    {
+      "type": "embed",
+      "platform": "twitter",
+      "url": "https://x.com/SwurvGaming/status/2092993944246259805"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "158 MB",
+          "label": "gross ist die gefundene Datei nvngx_dlssnr.dll aus NBA 2K27"
+        },
+        {
+          "value": "71 → 35 FPS",
+          "label": "Einbruch auf einer RTX 5070 Ti in 4K mit aktivem Neural Rendering"
+        },
+        {
+          "value": "7 Stile",
+          "label": "stehen in der experimentellen Umsetzung zur Auswahl"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Eine DLL, die es offiziell nicht geben dürfte"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgangspunkt ist die Datei nvngx_dlssnr.dll, die Windows als «NVIDIA DLSSNR» in Version 310.8.0.0 ausweist. Das Kürzel NR steht für Neural Rendering - und damit für jene Komponente, die den Kern von DLSS 5 ausmacht. Kurios: NBA 2K27 bietet gar keine entsprechende Option, und Nvidia hat das Basketballspiel auch nie als DLSS-5-Titel angekündigt. Die Bibliothek lag also schlicht ungenutzt im Spielverzeichnis."
+    },
+    {
+      "type": "paragraph",
+      "text": "Nur wenige Stunden nach dem Fund kursierten am 27. August 2026 die ersten Videoclips. Zu sehen ist Control-Protagonistin Jesse Faden, deren Erscheinungsbild sich über sieben unterschiedliche Stile verändern lässt. Auch das ältere DirectX-9-Spiel A Hat in Time soll bereits mit der experimentellen Technik versehen worden sein - ein Hinweis darauf, dass Neural Rendering per Mod potenziell in deutlich mehr Titeln funktioniert als in der offiziell unterstützten Auswahl. Eine öffentliche Version der RenoDX-Umsetzung gibt es bislang nicht."
+    },
+    {
+      "type": "heading",
+      "text": "Was Neural Rendering überhaupt tut"
+    },
+    {
+      "type": "paragraph",
+      "text": "DLSS 5 ist kein weiterer Upscaling-Schritt in der bekannten Reihe. Nvidia beschreibt die Technik als echtzeitfähiges Neural-Rendering-System: Das KI-Modell erhält ein gerendertes Bild samt Bewegungsvektoren, leitet daraus Materialeigenschaften ab und verändert anschliessend Beleuchtung und Oberflächen. Entwicklerinnen und Entwickler sollen den Effekt gezielt auf einzelne Szenen oder Objekte anwenden können - genau das zeigt die Mod, wenn auch unfreiwillig: Sie erfasst bislang ausschliesslich die Charaktermodelle, nicht die restliche Spielwelt."
+    },
+    {
+      "type": "heading",
+      "text": "Fast die Hälfte der Leistung - und HDR streikt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Von einer fertigen Implementierung ist das Experiment weit entfernt. HDR funktioniert laut den Moddern nicht korrekt, weshalb sämtliche Tests in SDR liefen. Zudem wird der Neural-Rendering-Durchlauf sehr spät in der Grafikpipeline ausgeführt, offenbar nach dem Upscaling und möglicherweise nach dem Tone Mapping - also an einer Stelle, an der Nvidia den Schritt vermutlich gar nicht vorgesehen hat. Entsprechend brutal fällt die Rechnung aus."
+    },
+    {
+      "type": "quote",
+      "text": "Läuft nur auf Blackwell-GPUs. Die Performance auf einer 5070 Ti in 4K fällt von 71 FPS auf 35 FPS (dürfte gut mit der Ausgabeauflösung skalieren).",
+      "attribution": "Compusemble auf X, unter Berufung auf den beteiligten RenoDX-Modder"
+    },
+    {
+      "type": "paragraph",
+      "text": "Einer der Entwickler bezeichnet den aktuellen Stand daher selbst als praktisch unbrauchbar. Wichtig für die Einordnung: Diese Messung sagt nichts über die von Nvidia und Studios optimierten Umsetzungen aus, die zum Marktstart erwartet werden. Sie zeigt lediglich, was passiert, wenn eine Bibliothek ohne die dazugehörige Integration in eine fremde Engine gezwungen wird."
+    },
+    {
+      "type": "heading",
+      "text": "Was das für DLSS 5 bedeutet"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Der Fund deutet darauf hin, dass DLSS 5 näher an der Veröffentlichung steht, als der bisherige Zeitplan vermuten liess - Nvidia nennt weiterhin den Herbst.",
+        "Zum Start soll die Technik ausschliesslich auf Grafikkarten der GeForce-RTX-50-Serie laufen; die Mod bestätigt die Beschränkung auf Blackwell-GPUs.",
+        "Ältere Titel könnten über die Modding-Szene nachträglich profitieren - allerdings ohne Qualitätskontrolle durch Nvidia oder die Studios.",
+        "Die gemessenen Kosten sind kein Richtwert für finale Implementierungen, machen aber deutlich, dass Neural Rendering deutlich teurer ist als klassisches Upscaling."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Einordnung: Was RenoDX hier zeigt, ist weniger ein spielbares Feature als ein Beweis, dass die Technik existiert und funktioniert. Bemerkenswert ist vor allem das Tempo - zwischen dem Fund einer versteckten DLL in einem Basketballspiel und dem ersten Videoclip aus Control lagen Stunden. Wer daraus jedoch Rückschlüsse auf Bildqualität oder Performance des fertigen DLSS 5 ziehen will, greift zu früh. Belastbare Aussagen wird es erst geben, wenn Nvidia die Technik im Herbst offiziell freigibt und die ersten Studios sie in ihre Pipelines integriert haben."
+    }
+  ],
+  "poll": {
+    "question": "Neural Rendering per Mod in alte Spiele bringen - gute Idee oder Rezept für Grafik-Chaos?",
+    "options": [
+      "Her damit, ich will DLSS 5 in meinen Lieblingsklassikern",
+      "Nur wenn die Studios es selbst integrieren",
+      "Bei 50 Prozent Leistungsverlust bleibt das Spielerei",
+      "Ich warte erst mal ab, was Nvidia im Herbst wirklich liefert"
+    ]
+  },
+  "isLeakOrRumor": true,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-28T05:03:12.389Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "particles",
+  "sources": [
+    {
+      "title": "DLL aus NBA 2K27: Modder verpflanzen DLSS 5 in Control",
+      "url": "https://www.computerbase.de/news/grafikkarten/dll-aus-nba-2k27-modder-verpflanzen-dlss-5-in-control.99096/",
+      "publisher": "ComputerBase"
+    },
+    {
+      "title": "NVIDIA’s DLSS 5 Cracked Into Control Hours After Modders Found A Hidden DLL Inside NBA 2K27",
+      "url": "https://wccftech.com/nvidias-dlss-5-cracked-into-control-hours-after-modders-found-a-hidden-dll-inside-nba-2k27/",
+      "publisher": "Wccftech"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/dlss-5-mod-control-nba-2k27-dll-2026.webp",
+    "alt": "DLSS 5 landet per Mod in Control - und halbiert die Bildrate",
+    "credit": "Bild: ComputerBase",
+    "sourceUrl": "https://www.computerbase.de/news/grafikkarten/dll-aus-nba-2k27-modder-verpflanzen-dlss-5-in-control.99096/",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "nvidia-quartalszahlen-279-milliarden-speicher-geforce-2026",
+    "nvidia-dlss-4-5-ray-reconstruction-release-2026",
+    "rdr2-nuevo-paraiso-mexiko-mod-release"
+  ]
+}
