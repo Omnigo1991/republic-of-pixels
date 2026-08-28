@@ -1,0 +1,144 @@
+{
+  "slug": "star-citizen-spielerzahlen-35890-chris-roberts-2026",
+  "title": "1,04 Milliarden Dollar - und 35'890 Spieler zur Spitzenzeit",
+  "subtitle": "Chris Roberts nennt erstmals konkrete Zahlen zur aktiven Star-Citizen-Community - der Vergleich mit Steam ordnet sie ein",
+  "excerpt": "Star Citizen hat fast 6,7 Millionen Accounts und über eine Milliarde Dollar eingespielt. Wie viele davon tatsächlich gleichzeitig im Verse unterwegs sind, hat Chris Roberts jetzt verraten.",
+  "seoTitle": "Star Citizen: 35'890 Spieler gleichzeitig zur Spitzenzeit",
+  "metaDescription": "Chris Roberts nennt die Spielerzahlen von Star Citizen: 35'890 gleichzeitig aktive Nutzer zur Spitze, 6,7 Millionen Accounts, 1,04 Milliarden Dollar Umsatz.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "bereich": "games",
+  "tags": [
+    "Star Citizen",
+    "Cloud Imperium Games",
+    "Chris Roberts",
+    "Squadron 42",
+    "PC"
+  ],
+  "tldr": [
+    "Chris Roberts nennt im Letter from the Chairman 35'890 gleichzeitig aktive Spieler zur Spitzenzeit",
+    "Die Zahl entspricht rund 0,05 Prozent der knapp 6,7 Millionen registrierten Accounts",
+    "Insgesamt hat Star Citizen 1,04 Milliarden US-Dollar eingespielt - im Schnitt knapp 155 Euro pro Konto",
+    "Alpha 4.10 bringt mit der Belagerung von Orison die erste voll instanzierte Mission"
+  ],
+  "whyItMatters": "Star Citizen ist das teuerste Crowdfunding-Projekt der Spielegeschichte, doch belastbare Spielerzahlen gab es bislang kaum. Roberts' Angaben zeigen erstmals, wie gross der aktive Kern hinter der Milliardensumme wirklich ist - und wie viel Testfeedback CIG damit überhaupt einsammeln kann.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Chris Roberts hat im aktuellen Letter from the Chairman nicht nur die Verschiebung der Einzelspielerkampagne Squadron 42 bestätigt, sondern auch eine Zahl geliefert, auf die die Community seit Jahren wartet: 35'890 Menschen waren zu Spitzenzeiten gleichzeitig in Star Citizen aktiv. Laut Roberts entspricht das einer monatlichen Steigerung von 11 Prozent gegenüber dem Vorjahr, die durchschnittliche Spielerzahl pro Tag legte um 7 Prozent zu."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "35'890",
+          "label": "Spieler gleichzeitig aktiv zur Spitzenzeit"
+        },
+        {
+          "value": "1,04 Mrd. $",
+          "label": "haben knapp 6,7 Millionen Accounts eingebracht"
+        },
+        {
+          "value": "0,05 %",
+          "label": "der registrierten Konten machen den aktiven Kern aus"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Wie gross ist die Zahl im Vergleich wirklich?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Isoliert betrachtet klingen 35'890 gleichzeitige Spieler nach viel oder nach wenig - je nachdem, welchen Massstab man anlegt. Ein Blick auf die Steam-Statistiken hilft bei der Einordnung: In derselben Grössenordnung bewegen sich dort aktuell Battlefield 6, Escape from Tarkov und Elden Ring. Das ist solide Gesellschaft für ein Spiel, das offiziell weiterhin im Alpha-Status steckt und ausschliesslich über den eigenen Launcher läuft."
+    },
+    {
+      "type": "paragraph",
+      "text": "Nach oben bleibt der Abstand allerdings gewaltig. Spitzenreiter auf Steam ist unverändert Counter-Strike 2 mit rund 1,25 Millionen gleichzeitig aktiven Spielern - das 35-Fache dessen, was Star Citizen zur besten Zeit erreicht."
+    },
+    {
+      "type": "heading",
+      "text": "6,7 Millionen Accounts, aber ein kleiner harter Kern"
+    },
+    {
+      "type": "paragraph",
+      "text": "Spannend wird die Zahl vor allem im Verhältnis zur Datenbank von Cloud Imperium Games. Star Citizen zählt mittlerweile knapp 6,7 Millionen Accounts, die zusammen 1,04 Milliarden US-Dollar in das Projekt gespült haben. Das sind im Schnitt knapp 155 Euro pro Konto - ein Wert, den kein klassisches Vollpreisspiel erreicht, weil er sich aus Schiffspaketen, Upgrades und Sammelkäufen speist."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Knapp 6,7 Millionen registrierte Accounts",
+        "1,04 Milliarden US-Dollar Gesamteinnahmen",
+        "Rund 155 Euro durchschnittlich pro Konto",
+        "35'890 gleichzeitig aktive Spieler zur Spitze - etwa 0,05 Prozent aller Konten"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Diese 0,05 Prozent sind kein Makel, sondern eine Beschreibung der Realität: Wer ein Schiffspaket kauft und danach jahrelang auf den Release wartet, taucht in keiner Statistik zu gleichzeitigen Spielern auf. Der aktive Kern dürfte den Grossteil der Tests stemmen und CIG mit Feedback versorgen - er ist damit die Basis, auf der die Entwicklung überhaupt Fortschritte messen kann. Umgekehrt heisst das aber auch: Die Datenmenge, mit der ein Projekt dieser Grössenordnung seine Serverarchitektur auf Millionen von Nutzern vorbereiten will, stammt von einer vergleichsweise kleinen Gruppe."
+    },
+    {
+      "type": "heading",
+      "text": "Alpha 4.10 sperrt Squads in eigene Instanzen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Technisch geht CIG derweil einen Schritt, den viele lange gefordert haben. Mit Patch 4.10 führt Star Citizen die erste voll instanzierte Mission ein: In der Belagerung von Orison, einem Remake des Events von vor einigen Jahren, kämpfen bis zu vier Teammitglieder gegen eine Armee aus Söldnern und Piraten. Jedes Squad bekommt eine eigene, abgeschottete Instanz zugewiesen. Das Ziel ist in erster Linie die Performance - weniger Spieler auf demselben Server bedeuten weniger Last."
+    },
+    {
+      "type": "heading",
+      "text": "Ein Livestream, der nach hinten losging"
+    },
+    {
+      "type": "paragraph",
+      "text": "Dass die Probleme damit nicht gelöst sind, führte das Studio zuletzt selbst vor. In einem Livestream zeigten CIG-Mitarbeiter anscheinend toxisches Verhalten, und trotz der neuen Instanzen traten Bugs und Glitches auf. Kleinere wie grössere Influencer griffen die Szenen auf - ausgerechnet vor jenem Publikum, das Star Citizen bislang nur am Rand verfolgt und für das ein solcher Auftritt oft der einzige Berührungspunkt ist."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Roberts liefert mit den Zahlen ein Wachstumssignal, und zweistellige Zuwächse bei den monatlichen Spitzenwerten sind für ein Alpha-Projekt nach über einem Jahrzehnt Entwicklung bemerkenswert. Gleichzeitig verschiebt sich Squadron 42 erneut - und genau diese Kampagne war für viele der eigentliche Grund, überhaupt Geld in das Projekt zu stecken. Die 35'890 sind deshalb weniger ein Erfolgsbeleg als eine Momentaufnahme: Sie zeigen, wie viele Menschen bereit sind, eine unfertige Simulation als Hobby zu behandeln - und wie viele der 6,7 Millionen Konten bis auf Weiteres schlicht abwarten."
+    }
+  ],
+  "poll": {
+    "question": "Was sagen 35'890 gleichzeitige Spieler über Star Citizen aus?",
+    "options": [
+      "Starker Wert für eine Alpha - das Projekt lebt",
+      "Ernüchternd bei 6,7 Millionen Accounts",
+      "Aussagelos, solange Squadron 42 fehlt",
+      "Genau richtig - Qualität statt Masse beim Testen"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-28T14:05:47.411Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "controller",
+  "sources": [
+    {
+      "title": "Chris Roberts: So viele Menschen spielen aktiv gleichzeitig Star Citizen",
+      "url": "https://www.golem.de/news/chris-roberts-so-viele-menschen-spielen-aktiv-gleichzeitig-star-citizen-2608-212408.html",
+      "publisher": "Golem.de Games"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/star-citizen-spielerzahlen-35890-chris-roberts-2026.webp",
+    "alt": "1,04 Milliarden Dollar - und 35'890 Spieler zur Spitzenzeit",
+    "credit": "Bild: Golem.de Games",
+    "sourceUrl": "https://www.golem.de/news/chris-roberts-so-viele-menschen-spielen-aktiv-gleichzeitig-star-citizen-2608-212408.html",
+    "sourceWidth": 1200,
+    "sourceHeight": 675
+  },
+  "relatedSlugs": [
+    "squadron-42-verschiebung-q2-2027-gta-6",
+    "star-citizen-entwickler-stream-abbruch-vertrauenskrise-2026",
+    "witcher-3-remaster-systemanforderungen-windows-11-ssd-2026"
+  ]
+}
