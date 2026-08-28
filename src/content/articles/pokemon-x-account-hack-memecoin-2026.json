@@ -1,0 +1,156 @@
+{
+  "slug": "pokemon-x-account-hack-memecoin-2026",
+  "title": "«Offizieller Pokémon-Memecoin» - 30 Minuten, die keiner geplant hatte",
+  "subtitle": "Kurz vor den Weltmeisterschaften bewirbt der offizielle Pokémon-Account auf X eine Kryptowährung - The Pokémon Company bestätigt einen unbefugten Zugriff",
+  "excerpt": "Ein Post zum 30. Jubiläum, ein Contract-Adressen-Wirrwarr und ein Link zur echten Anniversary-Seite: Warum der Fake-Memecoin so gefährlich glaubwürdig wirkte.",
+  "seoTitle": "Pokémon: X-Account gehackt, Memecoin-Posts entfernt",
+  "metaDescription": "Der offizielle Pokémon-Account auf X wurde rund 30 Minuten lang gekapert und bewarb einen angeblichen Memecoin. The Pokémon Company bestätigt den Vorfall.",
+  "category": "news",
+  "platforms": [
+    "nintendo"
+  ],
+  "bereich": "games",
+  "tags": [
+    "Pokémon",
+    "The Pokémon Company",
+    "Pokémon World Championships",
+    "Sicherheit",
+    "Krypto"
+  ],
+  "tldr": [
+    "Der offizielle Pokémon-Account auf X war am 27. August 2026 rund 30 Minuten lang unbefugt in fremder Hand.",
+    "In dieser Zeit erschien ein Post, der einen angeblichen «offiziellen Pokémon-Memecoin» namens $POKEMON zum 30. Jubiläum bewarb.",
+    "The Pokémon Company hat die Beiträge entfernt und bestätigt: Sie wurden weder erstellt noch freigegeben.",
+    "Der Vorfall fiel auf den Tag vor dem Start der Pokémon-Weltmeisterschaften in San Francisco."
+  ],
+  "whyItMatters": "Wer einem verifizierten Konto mit Millionen Followern folgt, rechnet nicht damit, dort auf eine Krypto-Masche zu stossen. Genau darauf zielen solche Übernahmen: Die Glaubwürdigkeit der Marke ersetzt die übliche Warnlampe im Kopf. Für Fans heisst das, dass auch offizielle Kanäle keine Garantie mehr sind - besonders rund um grosse Events, wenn ohnehin jede Ankündigung erwartet wird.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Einen Tag vor dem Start der Pokémon-Weltmeisterschaften in San Francisco tauchte auf dem offiziellen Pokémon-Account bei X ein Beitrag auf, der so gar nicht zur Marke passen wollte: Man feiere das 30-jährige Jubiläum «auf eine ganz neue Art» und stelle $POKEMON vor, den angeblich offiziellen Pokémon-Memecoin. Dazu gab es eine lange Contract-Adresse und einen Link auf die echte Jubiläumswebsite der Reihe. Wenige Stunden später bestätigte The Pokémon Company, was viele bereits vermutet hatten: Der Account war gekapert worden."
+    },
+    {
+      "type": "embed",
+      "platform": "twitter",
+      "url": "https://x.com/Pokemon/status/2093094076665246063"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "~30 Min.",
+          "label": "so lange war der offizielle Pokémon-Account auf X in fremder Hand"
+        },
+        {
+          "value": "27. Aug.",
+          "label": "Tag des Vorfalls - einen Tag vor dem Start der Weltmeisterschaften"
+        },
+        {
+          "value": "30 Jahre",
+          "label": "Jubiläum, das der gefälschte Post als Anlass vorschob"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Was in der halben Stunde passierte"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Zeitrahmen ist überschaubar, die Reichweite nicht: Rund eine halbe Stunde lang konnten Followerinnen und Follower Beiträge sehen, die eine Kryptowährung bewarben. Inzwischen sind die Posts gelöscht, der Account läuft wieder normal. The Pokémon Company hat den Vorfall über denselben Kanal öffentlich eingeräumt, statt ihn stillschweigend zu bereinigen - was insofern sinnvoll ist, als Screenshots des Fake-Posts längst im Umlauf waren."
+    },
+    {
+      "type": "quote",
+      "text": "Uns ist bekannt, dass ohne Autorisierung auf unser X-Konto zugegriffen und es genutzt wurde, um Beiträge zu veröffentlichen, die eine Kryptowährung bewerben. Diese Beiträge wurden nicht von Pokémon erstellt oder freigegeben und wurden entfernt. Wir entschuldigen uns für die Verwirrung und danken euch für eure Geduld.",
+      "attribution": "The Pokémon Company über den offiziellen @Pokemon-Account auf X"
+    },
+    {
+      "type": "heading",
+      "text": "Warum die Masche diesmal besser getarnt war"
+    },
+    {
+      "type": "paragraph",
+      "text": "Übernommene Prominenten- und Marken-Accounts enden meist im immer gleichen Muster: generischer Krypto-Spam, Reichwerden-über-Nacht-Versprechen, kaputte Formatierung. Hier war der Aufwand grösser. Der Post griff das laufende 30-Jahr-Jubiläum auf, blieb sprachlich nah am Marketing-Ton der Marke und verlinkte auf eine echte, offizielle Website - ein Detail, das den ersten Glaubwürdigkeits-Check bei vielen bestehen dürfte. Genau daran entzündete sich in den Kommentarspalten auch eine gewisse widerwillige Anerkennung für die kreative Tarnung."
+    },
+    {
+      "type": "paragraph",
+      "text": "Auffällig war trotzdem etwas anderes: Der Beitrag erschien ausschliesslich auf X. Auf den übrigen offiziellen Kanälen von Pokémon fehlte jede Spur davon. Dieses Ungleichgewicht war das erste harte Indiz für eine Kontoübernahme - und es ist gleichzeitig die praktischste Faustregel für alle, die vor einem verdächtigen Post stehen."
+    },
+    {
+      "type": "heading",
+      "text": "Woran ihr solche Übernahmen erkennt"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Die Ankündigung läuft nur auf einem einzigen Kanal - andere offizielle Accounts schweigen.",
+        "Es wird eine Wallet- oder Contract-Adresse genannt, die zum sofortigen Handeln auffordert.",
+        "Der Anlass klingt plausibel (Jubiläum, Turnier, Launch), das Produkt passt aber nicht zur Marke.",
+        "Echte Links auf offizielle Seiten dienen als Vertrauensanker - sie beweisen nichts über den Rest des Posts.",
+        "Zeitdruck: Solche Beiträge stehen selten länger als wenige Minuten bis Stunden online."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Kein guter Monat für Pokémon-Konten"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Vorfall reiht sich in eine unruhige Phase ein. Erst wenige Tage zuvor war der Pokémon Center von derselben Datenpanne betroffen, die auch Valve traf; Kundenbestellungen wurden in der Folge storniert. Dass nun ausgerechnet der Haupt-Social-Account kurz vor dem grössten Wettbewerbswochenende des Jahres übernommen wird, trifft die Marke zu einem denkbar ungünstigen Zeitpunkt - dann nämlich, wenn die Aufmerksamkeit ohnehin maximal ist und jede Meldung als potenzielle Ankündigung gelesen wird."
+    },
+    {
+      "type": "paragraph",
+      "text": "Wie die Angreifer Zugriff erhielten, ist bislang nicht öffentlich. The Pokémon Company nennt in ihrer Stellungnahme weder eine Ursache noch Angaben dazu, ob weitere Konten betroffen waren. Auch offen bleibt, wie viele Menschen in der halben Stunde tatsächlich auf die Contract-Adresse reagiert haben."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Reaktion war schnell, transparent und im Ergebnis wohl schadensbegrenzend - mehr lässt sich an einem übernommenen Account kaum richtig machen. Was bleibt, ist die unangenehme Erkenntnis, dass ein verifiziertes Häkchen keine Prüfinstanz mehr ist. Wer künftig auf einem offiziellen Kanal etwas liest, das Geld kostet oder Geld verspricht, sollte den Gegencheck auf einer zweiten Plattform zur Gewohnheit machen. Pokémon selbst hat sein Jubiläum in diesem Jahr auf sehr viele Arten gefeiert - eine eigene Währung war nachweislich nicht darunter."
+    }
+  ],
+  "poll": {
+    "question": "Wie viel Vertrauen haben verifizierte Marken-Accounts bei euch nach solchen Vorfällen noch?",
+    "options": [
+      "Unverändert - solche Hacks sind Einzelfälle",
+      "Ich prüfe wichtige News jetzt immer auf einem zweiten Kanal",
+      "Krypto-Posts von Firmen ignoriere ich grundsätzlich",
+      "Vertrauen war schon vorher weg"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-28T02:11:30.521Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "grid",
+  "sources": [
+    {
+      "title": "Pokémon s Social Media \"Temporarily Compromised\", Promotes Cryptocurrency",
+      "url": "https://www.nintendolife.com/news/2026/08/pokemons-social-media-temporarily-compromised-promotes-cryptocurrency",
+      "publisher": "Nintendo Life"
+    },
+    {
+      "title": "Pokémon Promotes Memecoin Ahead Of World Championships After Hack: Those Posts Were Not Created Or Approved By Pokémon",
+      "url": "https://kotaku.com/pokemon-memecoin-world-championships-hack-twitter-2000729053",
+      "publisher": "Kotaku"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/pokemon-x-account-hack-memecoin-2026.webp",
+    "alt": "«Offizieller Pokémon-Memecoin» - 30 Minuten, die keiner geplant hatte",
+    "credit": "Bild: Nintendo Life",
+    "sourceUrl": "https://www.nintendolife.com/news/2026/08/pokemons-social-media-temporarily-compromised-promotes-cryptocurrency",
+    "sourceWidth": 1141,
+    "sourceHeight": 713
+  },
+  "relatedSlugs": [
+    "pokemon-gold-silber-switch-port-hinweise-2026",
+    "pokemon-wind-und-welle-rundenbasierte-kaempfe-iwao-2027",
+    "pokemon-center-ceva-datenleck-deutschland-uk-2026"
+  ]
+}
