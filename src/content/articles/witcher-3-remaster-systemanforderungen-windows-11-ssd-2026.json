@@ -1,0 +1,153 @@
+{
+  "slug": "witcher-3-remaster-systemanforderungen-windows-11-ssd-2026",
+  "title": "Witcher 3 Remaster streicht Windows 10 - und HDDs gleich mit",
+  "subtitle": "Das Gratis-Upgrade erscheint am 29. September, doch die Eintrittskarte für den PC wird deutlich teurer",
+  "excerpt": "Der Hexer bekommt eine technische Generalüberholung - kostenlos. Auf dem PC hat das Update aber Bedingungen: Windows 11, SSD, DirectX 12. Und eine Grafikkarte, die viele noch im Rechner haben dürften.",
+  "seoTitle": "Witcher 3 Remaster: Neue Systemanforderungen ab 29. September",
+  "metaDescription": "The Witcher 3 Remastered verlangt ab dem 29. September Windows 11, DirectX 12 und eine SSD. Alle Mindest- und empfohlenen PC-Anforderungen im Überblick.",
+  "category": "news",
+  "platforms": [
+    "pc",
+    "playstation",
+    "xbox",
+    "nintendo"
+  ],
+  "bereich": "games",
+  "tags": [
+    "The Witcher 3",
+    "CD Projekt Red",
+    "Systemanforderungen",
+    "PC",
+    "Nintendo Switch 2"
+  ],
+  "tldr": [
+    "Das Remaster von The Witcher 3: Wild Hunt erscheint am 29. September für PC, PS5, Xbox Series X|S und erstmals Switch 2 - für Besitzer des Spiels kostenlos.",
+    "Mindestens vorausgesetzt werden dann Windows 11 (64 Bit), ein Core i5-8400 oder Ryzen 5 2600, eine GTX 1660 6 GB, 12 GB RAM und 70 GB auf einer SSD.",
+    "Windows 10, DirectX 11 und klassische Festplatten fallen aus der Unterstützung; die Storeseiten weisen bereits auf den Stichtag hin.",
+    "Die Story-Erweiterung «Songs of the Past» folgt später und soll die Lücke zu The Witcher 4 schliessen."
+  ],
+  "whyItMatters": "Ein kostenloses Remaster klingt nach einem Geschenk, ist auf dem PC aber an Bedingungen geknüpft: Wer noch unter Windows 10 spielt oder das Spiel von einer Festplatte startet, bleibt aussen vor. Wer die alten Anforderungen von 2015 im Kopf hat, sollte vor dem 29. September einen Blick in den eigenen Rechner werfen.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Am 29. September erscheint The Witcher 3: Wild Hunt in überarbeiteter Fassung - für alle, die das Spiel bereits besitzen, kostenlos, und neben PC, PlayStation 5 und Xbox Series X|S erstmals auch für die Nintendo Switch 2. Auf dem PC ist das Gratis-Upgrade allerdings an Bedingungen geknüpft, die CD Projekt Red inzwischen auf den Storeseiten deutlich macht: Windows 10, DirectX 11 und mechanische Festplatten werden nach dem Stichtag nicht mehr unterstützt."
+    },
+    {
+      "type": "embed",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=IGk17XQ7IrQ"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "29. Sept.",
+          "label": "Erscheinungstermin des Remasters - und Stichtag für die neuen Anforderungen"
+        },
+        {
+          "value": "12 GB",
+          "label": "Arbeitsspeicher im Minimum, statt 6 GB in der Ur-Version von 2015"
+        },
+        {
+          "value": "70 GB",
+          "label": "Speicherplatz, zwingend auf einer SSD"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Was der PC künftig leisten muss"
+    },
+    {
+      "type": "paragraph",
+      "text": "Als Mindestanforderung nennt CD Projekt Red ein 64-Bit-Windows-11, einen Core i5-8400 oder Ryzen 5 2600 sowie eine GeForce GTX 1660 mit 6 GB, eine Radeon RX 5500 XT mit 8 GB oder eine Intel Arc A580. Dazu kommen 12 GB Arbeitsspeicher und 70 GB freier Platz auf einer SSD. Die empfohlene Konfiguration, die über die Battle.net-Seite des Spiels aufgetaucht ist und laut Insider Gaming vorläufigen Charakter hat, liegt eine Stufe darüber."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Minimum: Windows 11 (64 Bit), Core i5-8400 / Ryzen 5 2600, GTX 1660 6 GB / RX 5500 XT 8 GB / Arc A580, 12 GB RAM, 70 GB SSD",
+        "Empfohlen: Windows 11 (64 Bit), Core i7-8700K / Ryzen 5 3600X, RTX 2060 SUPER / RX 6600 XT / Arc B580, 16 GB RAM, 70 GB SSD",
+        "Zum Vergleich 2015: Windows 7 oder 8.1, Core i5-2500K / Phenom II X4 940, GTX 660 / HD 7870, 6 GB RAM, 40 GB, DirectX 11"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Festplatten fliegen raus, DirectX 12 wird Pflicht"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Sprung von der GTX 660 auf die GTX 1660 wirkt gewaltig, ist bei elf Jahren Abstand aber nachvollziehbar. Bemerkenswerter sind die drei Streichungen: Windows 10 steht ohnehin bereits im Support-Aus, DirectX 11 verschwindet zugunsten von DirectX 12, und HDDs werden laut CD Projekt Red aus Leistungsgründen aus der Unterstützung genommen. Wer The Witcher 3 heute noch auf einer klassischen Festplatte liegen hat, muss das Spiel also umziehen. Steam, GOG und Epic Games Store weisen bereits mit einem Hinweis auf den Wechsel hin."
+    },
+    {
+      "type": "quote",
+      "text": "Die Systemanforderungen ändern sich am 29.09.2026.",
+      "attribution": "CD Projekt Red auf den Storeseiten von Steam, GOG und Epic Games Store"
+    },
+    {
+      "type": "paragraph",
+      "text": "Interessant ist der Blick auf das Next-Gen-Update von 2022: Dort standen für das Raytracing-Ziel in 1440p mit DLSS oder FSR bereits eine RTX 3070 beziehungsweise RX 6700 XT als Minimum in der Liste. Die neuen Werte liegen darunter - CD Projekt Red macht zur Zielauflösung diesmal allerdings keine Angabe."
+    },
+    {
+      "type": "heading",
+      "text": "Angekündigt war die Hürde schon im Frühjahr"
+    },
+    {
+      "type": "paragraph",
+      "text": "Neu ist die Ankündigung höherer Anforderungen nicht. Bereits im Mai hatte das Studio angekündigt, dass die Hürden «ab dem nächsten Update» steigen würden - damals mit Verweis auf die kommende Erweiterung. Nun ist klar, dass damit das Remaster gemeint war, das am selben Tag erscheint. Die Story-Erweiterung «Songs of the Past», ebenfalls an der Gamescom gezeigt, folgt erst im kommenden Jahr und soll die Brücke zwischen The Witcher 3 und The Witcher 4 schlagen."
+    },
+    {
+      "type": "paragraph",
+      "text": "Zwei Randnotizen runden das Bild ab. Laut Polygon übernimmt CD Projekt Red für die Neuauflage offiziell die populäre HD-Texturen-Mod der Community - ein Modder wird damit Teil des offiziellen Pakets. Und GamesRadar berichtet, dass der Publisher rund einen Monat vor dem Remaster den Preis der Complete Edition auf Steam still angehoben hat. Für Bestandskunden ändert das nichts, für Neueinsteiger schon."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ein kostenloses Remaster für ein elf Jahre altes Spiel bleibt eine faire Geste - aber es ist kein reines Geschenk. Wer den Hexer bislang auf einem älteren Rechner unter Windows 10 laufen liess, steht ab dem 29. September vor der Wahl: aufrüsten oder bei der bisherigen Fassung bleiben. Wie CD Projekt Red mit dieser Gruppe umgeht, ob die alte Version also weiterhin installierbar bleibt, ist bislang nicht kommuniziert. Und weil die empfohlenen Werte laut Insider Gaming noch vorläufig sind, lohnt sich vor dem Stichtag ein zweiter Blick auf die Storeseiten."
+    }
+  ],
+  "poll": {
+    "question": "Windows 11, SSD und DirectX 12 als Pflicht für ein Spiel von 2015 - fair oder zu viel?",
+    "options": [
+      "Völlig okay, elf Jahre sind eine Ewigkeit",
+      "Windows-11-Zwang geht mir zu weit",
+      "Die SSD-Pflicht ist der eigentliche Knackpunkt",
+      "Egal, mein Rechner packt das ohnehin"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-28T08:04:22.224Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "particles",
+  "sources": [
+    {
+      "title": "The Witcher 3: Mit dem Remaster ist Schluss für Windows 10 und HDDs",
+      "url": "https://www.computerbase.de/news/gaming/the-witcher-3-mit-dem-remaster-ist-schluss-fuer-windows-10-und-hdds.99097/",
+      "publisher": "ComputerBase"
+    },
+    {
+      "title": "The Witcher 3 Remastered PC Specs Revealed",
+      "url": "https://insider-gaming.com/witcher-3-remastered-pc-specs-revealed/",
+      "publisher": "Insider Gaming"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/witcher-3-remaster-systemanforderungen-windows-11-ssd-2026.webp",
+    "alt": "Witcher 3 Remaster streicht Windows 10 - und HDDs gleich mit",
+    "credit": "Bild: ComputerBase",
+    "sourceUrl": "https://www.computerbase.de/news/gaming/the-witcher-3-mit-dem-remaster-ist-schluss-fuer-windows-10-und-hdds.99097/",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "witcher-3-diablo-4-geralt-skin-battlenet-2026",
+    "witcher-3-remastered-gratis-update-erweiterungen-2026",
+    "witcher-3-songs-of-the-past-gwent-bestaetigt-2027"
+  ]
+}
