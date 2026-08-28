@@ -1,0 +1,172 @@
+{
+  "slug": "modern-warfare-4-open-beta-taktiksprint-switch-2-2026",
+  "title": "Modern Warfare 4: Taktiksprint ist weg - und jede Waffe wurde angefasst",
+  "subtitle": "Die Open Beta läuft bis Dienstag für alle, erstmals auch auf Switch 2 - und Infinity Ward hat zwischen den Wochenenden kräftig geschraubt",
+  "excerpt": "Kein Vorbesteller-Code mehr nötig: Die offene Beta zu Modern Warfare 4 ist für alle da. Doch wer letztes Wochenende gespielt hat, findet ein spürbar anderes Spiel vor - vor allem beim Tempo.",
+  "seoTitle": "Modern Warfare 4 Open Beta: Alle Änderungen im Überblick",
+  "metaDescription": "Die Open Beta zu Modern Warfare 4 läuft bis 1. September auf allen Plattformen. Infinity Ward ändert Taktiksprint, Time-to-Kill, Aim Assist und Killstreaks.",
+  "category": "news",
+  "platforms": [
+    "pc",
+    "playstation",
+    "xbox",
+    "nintendo"
+  ],
+  "bereich": "games",
+  "tags": [
+    "Call of Duty: Modern Warfare 4",
+    "Infinity Ward",
+    "Activision",
+    "Nintendo Switch 2",
+    "Warzone"
+  ],
+  "tldr": [
+    "Die Open Beta zu Call of Duty: Modern Warfare 4 läuft seit Freitag, 19 Uhr, bis Dienstag, 1. September, 19 Uhr - ohne Vorbestellung oder Registrierung",
+    "Erstmals ist ein Call of Duty wieder auf Nintendo-Hardware spielbar, dazu kommen neue Map Lithium, Hijack-Modus und die Warzone-Karte Zodiac",
+    "Infinity Ward erhöht die Time-to-Kill, verschiebt den Taktiksprint ins Perk-System und schwächt Aim Assist sowie Killstreaks ab",
+    "Auf dem PC bleiben TPM 2.0 und Secure Boot Pflicht, die Vollversion erscheint am 23. Oktober"
+  ],
+  "whyItMatters": "Die zweite Beta-Woche ist kein blosser Nachschlag, sondern ein Testlabor: Infinity Ward krempelt Tempo, Waffenbalance und Aim Assist um und sagt offen, dass diese Werte noch nicht final sind. Wer jetzt spielt und Feedback gibt, beeinflusst direkt, wie sich Modern Warfare 4 und Warzone ab Oktober anfühlen.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Die offene Beta zu Call of Duty: Modern Warfare 4 ist seit Freitagabend um 19 Uhr für alle zugänglich und läuft bis Dienstag, 1. September, ebenfalls 19 Uhr. Vorbestellung oder Registrierung braucht es nicht mehr, ein Download genügt. Spannender als der offene Zugang ist allerdings das, was Infinity Ward zwischen den beiden Testwochenenden verändert hat: Vom Taktiksprint über die Time-to-Kill bis zu den Killstreaks wurde an fast allen Stellschrauben gedreht."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "1. Sept.",
+          "label": "Ende der Open Beta, 19 Uhr"
+        },
+        {
+          "value": "Level 30",
+          "label": "erhöhtes Fortschritts-Limit statt zuvor 20"
+        },
+        {
+          "value": "23. Okt.",
+          "label": "Release der Vollversion"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Alle Plattformen - erstmals auch Nintendo"
+    },
+    {
+      "type": "paragraph",
+      "text": "Gespielt werden kann auf Xbox Series X und S, PlayStation 5 sowie am PC über die Xbox-App, Battle.net und Steam. Neu dabei ist die Nintendo Switch 2 - es ist das erste Call of Duty auf einer Nintendo-Konsole seit Call of Duty: Ghosts auf der Wii U im Jahr 2013. Wer bereits an der Closed Beta teilgenommen hat, nimmt seinen Fortschritt mit; das Level-Limit steigt dabei von 20 auf 30. Belohnungen für die Vollversion lassen sich auch im offenen Test freischalten."
+    },
+    {
+      "type": "paragraph",
+      "text": "Inhaltlich legt Activision nach: Mit Lithium kommt eine sechste Core-Map dazu, ausserdem der Modus Hijack, der Bodenkrieg-Schauplatz Kampf-Aussenposten und die Warzone-Karte Zodiac für Resurgence. Hardpoint auf Rooftops ist wegen eines Spawn-Bugs vorübergehend deaktiviert."
+    },
+    {
+      "type": "heading",
+      "text": "Taktiksprint wandert ins Perk-System"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der grösste Eingriff betrifft die Bewegung. Der Taktiksprint ist nicht länger standardmässig aktiv, sondern hängt am Perk Blood Rush. Infinity Ward bezeichnet das ausdrücklich als Versuch."
+    },
+    {
+      "type": "quote",
+      "text": "Das ist ein Experiment für die Beta, von dem wir hoffen, dass es das Tempo des Spiels verbessert und die Wahlmöglichkeiten der Spieler erweitert. Wenn wir bei dieser Änderung bleiben, müssen wir über ihren Platz in der Perk-Tabelle nachdenken und darüber, welche weiteren Anpassungen an Perks dazugehören.",
+      "attribution": "Infinity Ward"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Taktiksprint: Geschwindigkeit um 4 Prozent reduziert, Sprint-to-Fire-Zeit auf das Niveau des normalen Sprints angeglichen",
+        "Höhere Basis-Sprintgeschwindigkeit mit Messer und allen Pistolen",
+        "Slide: 10 Prozent weniger Distanz, 9 Prozent weniger Tempo, längere Verzögerung bis zum Sprung",
+        "Ausdauer um 8 Prozent gesenkt",
+        "Fixes: Spieler konnten deutlich höher klettern als vorgesehen, Ruckler an Leitern und Rohren sind behoben"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Jede Waffe angefasst, Killstreaks teurer"
+    },
+    {
+      "type": "paragraph",
+      "text": "Auch die Zeit bis zum Kill steigt - nicht über die Grundgesundheit, sondern über die Waffenwerte selbst."
+    },
+    {
+      "type": "quote",
+      "text": "Nach einigen Updates in der vergangenen Woche waren wir bei der Time-to-Kill immer noch nicht dort, wo wir hinwollten. Wir streben eine leichte Erhöhung der TTK an, deshalb haben wir statt der Grundgesundheit das Waffen-Tuning angepasst, um die Widerstandsfähigkeit zu verbessern, ohne dass Waffen auf Distanz zu schwach wirken. Jede einzelne Waffe in unserer Beta hat für Wochenende 2 ein Update erhalten.",
+      "attribution": "Infinity Ward"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Alle Killstreaks kosten einen Kill mehr",
+        "UAV: 60 Prozent weniger Lebenspunkte, Flughöhe um 12 Prozent gesenkt",
+        "Artilleriebeacon: fünf statt sechs Raketen, innerer Schadensradius von 15,24 auf 10,16 Meter, äusserer von 25,4 auf 17,78 Meter",
+        "Spawn-Logik trennt Teams besser, Battle Hardened wirkt jetzt auch im temporären Spawnschutz"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Dazu kommt eine global reduzierte Zielhilfe, die ausdrücklich auch für Warzone gilt. Infinity Ward räumt ein, dass dies noch nicht die gewünschte Einstellung sei und man die Werte bis zum Launch weiter justieren wolle."
+    },
+    {
+      "type": "heading",
+      "text": "PC: TPM 2.0 bleibt die eigentliche Hürde"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bei der Hardware gibt sich das Spiel erstaunlich genügsam: Minimal genügen ein Ryzen 5 1600 oder Core i5-8400, 12 GB RAM und eine Radeon RX 470, GeForce GTX 970 beziehungsweise 1060 oder Intel Arc A580 mit nur 3 GB Grafikspeicher. Empfohlen werden RX 6700 XT, RTX 3060 Ti oder Arc B580 mit 8 GB VRAM und 16 GB Arbeitsspeicher. Eine SSD ist Pflicht - und in jeder Konfiguration zwingend auch TPM 2.0 samt aktiviertem Secure Boot, was im BIOS oder UEFI eingeschaltet werden muss. Neu ist ausserdem Shader-Preloading, das Ruckler im laufenden Spiel reduzieren soll."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Das erste Beta-Wochenende erhielt gemischte Rückmeldungen, und Infinity Ward reagiert mit ungewöhnlich weitreichenden Eingriffen: Wer den Taktiksprint als Selbstverständlichkeit betrachtet, spielt ab sofort ein anderes Call of Duty. Dass das Studio diese Änderungen offen als Experiment deklariert und beim Aim Assist Nachbesserungen bis zum Launch ankündigt, macht die Open Beta zum echten Stimmungstest. Die Vollversion erscheint am 23. Oktober für PC, PlayStation 5, Xbox Series X und S sowie Nintendo Switch 2; die Kampagne führt nach Korea und unter anderem nach New York, Paris und Mumbai."
+    }
+  ],
+  "poll": {
+    "question": "Taktiksprint nur noch per Perk - gute Entscheidung?",
+    "options": [
+      "Ja, endlich ein ruhigeres Spieltempo",
+      "Nein, das kostet einen Perk-Slot zu viel",
+      "Egal - die längere TTK ist die wichtigere Änderung",
+      "Erst mal spielen, dann urteilen"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-28T18:38:27.588Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "grid",
+  "sources": [
+    {
+      "title": "Modern Warfare 4: Open Beta für das nächste Call of Duty ist gestartet",
+      "url": "https://www.computerbase.de/news/gaming/modern-warfare-4-open-beta-fuer-das-naechste-call-of-duty-ist-gestartet.99114/",
+      "publisher": "ComputerBase"
+    },
+    {
+      "title": "Modern Warfare 4 s big beta update aims to fix several nagging complaints from players",
+      "url": "https://www.destructoid.com/mw4-beta-weekend-2-patch-notes/",
+      "publisher": "Destructoid"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/modern-warfare-4-open-beta-taktiksprint-switch-2-2026.webp",
+    "alt": "Modern Warfare 4: Taktiksprint ist weg - und jede Waffe wurde angefasst",
+    "credit": "Bild: ComputerBase",
+    "sourceUrl": "https://www.computerbase.de/news/gaming/modern-warfare-4-open-beta-fuer-das-naechste-call-of-duty-ist-gestartet.99114/",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "modern-warfare-4-switch-2-digital-legends-erste-eindruecke-2026",
+    "modern-warfare-4-beta-spielerzahlen-steam-2026",
+    "modern-warfare-4-beta-kritik-ricochet-anticheat-2026"
+  ]
+}

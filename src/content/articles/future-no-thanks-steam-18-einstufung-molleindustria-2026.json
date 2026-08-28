@@ -1,0 +1,150 @@
+{
+  "slug": "future-no-thanks-steam-18-einstufung-molleindustria-2026",
+  "title": "PEGI 12 im Handel, 18+ auf Steam - «demütigend», sagt der Entwickler",
+  "subtitle": "Molleindustria hat die komplette Sex-Quest aus Future? No Thanks! gestrichen - Valve hält trotzdem an der Erwachsenen-Einstufung fest",
+  "excerpt": "Ein Adventure über einen mürrischen Rentner mit Bucket List trägt bei ESRB und PEGI die Freigaben Teen und 12. Auf Steam gilt es als pornografisch - und der Entwickler weiss bis heute nicht, warum.",
+  "seoTitle": "Future? No Thanks!: Steam stuft PEGI-12-Spiel als 18+ ein",
+  "metaDescription": "Valve markiert das PEGI-12-Adventure Future? No Thanks! als pornografisch. Der Entwickler entfernte die Sexszene - die 18+-Einstufung bleibt trotzdem bestehen.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "tags": [
+    "Future? No Thanks!",
+    "Molleindustria",
+    "Steam",
+    "Valve",
+    "Gamescom",
+    "Alterseinstufung"
+  ],
+  "tldr": [
+    "Valve stuft das Adventure Future? No Thanks! auf Steam als pornografisch und 18+ ein - ESRB vergab Teen, PEGI eine 12",
+    "Auslöser waren untexturierte Polygone in einer Sex-Quest, die das Studio inzwischen komplett aus dem Spiel entfernt hat",
+    "Trotz Neueinreichung bleibt die Erwachsenen-Einstufung bestehen, der Entwickler bekommt nach eigenen Angaben keine Erklärung",
+    "In Grossbritannien ist die Store-Seite wegen des Online Safety Act ohne Altersverifikation gar nicht einsehbar"
+  ],
+  "whyItMatters": "Wer ein Spiel auf Steam nicht einmal in der Suche findet, kauft es auch nicht - die Einstufung durch Valve entscheidet damit faktisch über die Sichtbarkeit kleiner Indie-Titel. Der Fall zeigt zudem, wie neue Altersverifikationsgesetze und intransparente Plattformregeln zusammenwirken und Spiele treffen können, die von offiziellen Prüfstellen längst freigegeben wurden.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Ein mürrischer alter Boomer arbeitet vor seinem Tod eine Bucket List ab: Das ist der Kern von Future? No Thanks!, einem erzählerischen Open-World-Adventure des Kleinstudios Molleindustria. Die ESRB hat den Titel mit «Teen» eingestuft, PEGI vergab eine 12. Auf Steam dagegen gilt das Spiel als pornografisch und trägt eine Freigabe ab 18 Jahren - mit allen Konsequenzen für Auffindbarkeit und Sichtbarkeit. Der Entwickler kämpft seit Wochen erfolglos gegen diese Einordnung."
+    },
+    {
+      "type": "embed",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=loR9sqfwGaw"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "PEGI 12",
+          "label": "offizielle europäische Einstufung des Spiels"
+        },
+        {
+          "value": "18+",
+          "label": "Einstufung, die Valve auf Steam vergeben hat"
+        },
+        {
+          "value": "20+ Jahre",
+          "label": "Erfahrung des Entwicklers in der Spieleentwicklung"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Eine Quest, die es längst nicht mehr gibt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Konflikt begann im Juli. Damals musste Molleindustria die Veröffentlichung von Future? No Thanks! verschieben, weil Steam «milde Nacktheit» beanstandete. Konkret ging es um untexturierte Polygone, die Gesäss und Brüste andeuteten und zu einem Erfolg mit dem Titel «Have Sex One Last Time» gehörten. Genug, um bei Valve die Einordnung als Erwachsenen-Inhalt auszulösen."
+    },
+    {
+      "type": "paragraph",
+      "text": "Das Studio reagierte drastisch: Die gesamte Sex-Quest flog aus dem Spiel, danach wurde der Titel erneut zur Prüfung eingereicht. Doch Valve bewegte sich nicht. Die Erwachsenen-Einstufung blieb bestehen, obwohl der beanstandete Inhalt gar nicht mehr existiert - und obwohl PEGI die ursprüngliche Fassung mit einer 12 durchgewinkt hatte."
+    },
+    {
+      "type": "heading",
+      "text": "Eskalation auf der Gamescom"
+    },
+    {
+      "type": "paragraph",
+      "text": "Öffentlich eskalierte der Fall Ende August auf der Gamescom in Köln, wo Molleindustria den Titel an einem von der deutschen Regierung geförderten Stand zeigte. Besucherinnen und Besucher fragten am Stand, warum sie die Steam-Seite eines Spiels mit Teen-Freigabe nicht aufrufen können. Der Entwickler schilderte die Situation auf Bluesky."
+    },
+    {
+      "type": "quote",
+      "text": "Das war die demütigendste und surrealste Erfahrung in über 20 Jahren Spieleentwicklung. Ich suche verzweifelt nach irgendjemandem, der jemanden bei Valve kennt, der mir wenigstens sagen kann, was los ist.",
+      "attribution": "Molleindustria auf Bluesky"
+    },
+    {
+      "type": "paragraph",
+      "text": "Besonders absurd wirkte die Lage, als am Morgen der deutsche Bundespräsident vor dem Stand für Fotos posierte. Der Entwickler kommentierte trocken, hier stelle sich das Staatsoberhaupt vor ein Spiel, das Steam für «zu pornografisch für dieses ganze Land» halte. Laut Molleindustria sucht das Studio inzwischen Unterstützung bei hochrangigen deutschen Regulierungsstellen."
+    },
+    {
+      "type": "heading",
+      "text": "Wer das Spiel gar nicht erst zu sehen bekommt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Einstufung ist kein kosmetisches Problem. In Grossbritannien blockt Steam die Store-Seite wegen des Online Safety Act komplett ab: Wer nicht per gültiger britischer Kreditkarte nachweist, dass er über 18 ist, sieht laut Kotaku statt der Produktseite nur einen Hinweis auf «reife sexuelle Inhalte». Ein Autor des Magazins berichtet, er könne das Spiel deshalb schlicht nicht ansehen - und besitze keine Kreditkarte."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Erwachsenen-Titel tauchen auf Steam standardmässig nicht in Suche und Empfehlungen auf",
+        "In Ländern mit Altersverifikation ist die Store-Seite ohne Nachweis gar nicht erreichbar",
+        "Für ein kleines Studio ohne Marketingbudget fällt damit der wichtigste Verkaufskanal weitgehend aus",
+        "Offizielle Freigaben von ESRB und PEGI ändern an der Plattformentscheidung nichts"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Kein Einzelfall"
+    },
+    {
+      "type": "paragraph",
+      "text": "An ein ähnliches Muster erinnert der Fall Horses von Santa Ragione: Das Indie-Horrorspiel flog wegen einer expliziten Szene sowohl bei Steam als auch im Epic Games Store raus. Auch dort strich das Studio das beanstandete Material - und auch dort blieb Valve bei der einmal getroffenen Entscheidung. Kotaku vergleicht die Einordnung von Future? No Thanks! süffisant mit jener von Titeln wie Sex With Hitler."
+    },
+    {
+      "type": "paragraph",
+      "text": "Der eigentliche Streitpunkt ist damit weniger die Frage, wie viel Nacktheit ein Spiel zeigen darf, sondern die Nachvollziehbarkeit: Molleindustria bekommt nach eigener Darstellung keine konkrete Begründung und keinen Ansprechpartner. Solange Valve seine Einordnung nicht revidiert oder erklärt, bleibt ein Spiel mit PEGI-12-Freigabe auf der grössten PC-Plattform faktisch unsichtbar - eine Entscheidung, gegen die es für kleine Studios kaum ein wirksames Mittel gibt."
+    }
+  ],
+  "poll": {
+    "question": "Wie soll Valve mit Alterseinstufungen umgehen?",
+    "options": [
+      "Offizielle Freigaben von PEGI und ESRB müssen bindend sein",
+      "Eigene Regeln sind okay - aber mit Begründung und Widerspruchsrecht",
+      "Valve darf im eigenen Shop einstufen, wie es will",
+      "Das Problem sind die neuen Altersverifikationsgesetze, nicht Steam"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-28T18:37:11.204Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "particles",
+  "sources": [
+    {
+      "title": "Steam s Decision To Brand His Open-World Adventure About A Cranky Old Boomer Pornography Is Humiliating And Surreal, Developer Says",
+      "url": "https://kotaku.com/steams-decision-to-brand-his-open-world-adventure-about-a-cranky-old-boomer-pornography-is-humiliating-and-surreal-developer-says-2000729298",
+      "publisher": "Kotaku"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/future-no-thanks-steam-18-einstufung-molleindustria-2026.webp",
+    "alt": "PEGI 12 im Handel, 18+ auf Steam - «demütigend», sagt der Entwickler",
+    "credit": "Bild: Kotaku",
+    "sourceUrl": "https://kotaku.com/steams-decision-to-brand-his-open-world-adventure-about-a-cranky-old-boomer-pornography-is-humiliating-and-surreal-developer-says-2000729298",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "pokemon-center-ceva-datenleck-deutschland-uk-2026",
+    "steam-hardware-ceva-datenleck-europa-2026",
+    "gamescom-2026-diebstahl-indie-stand-mimic-ryan-laley"
+  ]
+}
