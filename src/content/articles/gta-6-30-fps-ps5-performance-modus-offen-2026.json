@@ -1,0 +1,160 @@
+{
+  "slug": "gta-6-30-fps-ps5-performance-modus-offen-2026",
+  "title": "GTA 6 zielt auf 30 fps - selbst die PS5 Pro rettet das nicht",
+  "subtitle": "Rockstar-Co-Director Rob Nelson soll bestätigt haben, dass alle Konsolenfassungen derzeit mit 30 Bildern pro Sekunde laufen - ob ein Performance-Modus kommt, ist offen",
+  "excerpt": "Der Gameplay-Deep-Dive lief auf einer normalen PS5 - und offenbar mit 30 fps. Ein 60-fps-Modus ist laut Rockstar weder zugesagt noch ausgeschlossen. Was das für PS5 Pro, Series X und PC heisst.",
+  "seoTitle": "GTA 6: 30 fps auf PS5 - Performance-Modus offen",
+  "metaDescription": "GTA 6 läuft auf Konsolen derzeit mit 30 fps. Rockstar lässt offen, ob ein 60-fps-Modus zum Launch oder später kommt - auch die PS5 Pro dürfte kaum helfen.",
+  "category": "news",
+  "platforms": [
+    "playstation",
+    "xbox",
+    "pc"
+  ],
+  "bereich": "games",
+  "tags": [
+    "GTA 6",
+    "Rockstar Games",
+    "PS5",
+    "Xbox Series X",
+    "Performance-Modus"
+  ],
+  "tldr": [
+    "Laut YouTuber Davy Jones, der Rockstar North besuchte, laufen alle Konsolenfassungen von GTA 6 aktuell mit 30 fps",
+    "Co-Director Rob Nelson liess offen, ob es einen 60-fps-Modus zum Launch oder später gibt - er müsse dazu das technische Team konsultieren",
+    "Zu Auflösung und Raytracing gibt es bislang keine Angaben; auch für die PS5 Pro ist nichts bestätigt",
+    "Ein PC-Port ist weiterhin nicht angekündigt - GTA 5 kam erst rund 18 Monate nach den Konsolen auf Steam"
+  ],
+  "whyItMatters": "Für viele Spielerinnen und Spieler ist die Bildrate seit der PS5-Generation ein Kaufargument: 60 fps gelten als Standard, 30 fps als Kompromiss. Wenn ausgerechnet das grösste Spiel des Jahres darauf verzichtet, betrifft das Millionen Konsolenbesitzer - und macht die Frage nach PS5 Pro, PC-Port und Next-Gen-Neuauflagen konkret.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Der grosse Gameplay-Deep-Dive zu GTA 6 lief laut Rockstar auf einer regulären PlayStation 5 - und offenbar mit 30 Bildern pro Sekunde. Rob Nelson, Lead Developer und Co-Director bei Rockstar North, soll gegenüber dem YouTuber Davy Jones bestätigt haben, dass das Spiel derzeit auf allen Konsolen mit 30 fps läuft. Ob zum Verkaufsstart ein Performance-Modus mit 60 fps dazukommt, liess er ausdrücklich offen."
+    },
+    {
+      "type": "embed",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=QdBZY2fkU-0"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "30 fps",
+          "label": "aktuelles Bildraten-Ziel auf allen Konsolen"
+        },
+        {
+          "value": "18 Monate",
+          "label": "musste der PC auf GTA 5 warten - ein Port zu GTA 6 ist nicht angekündigt"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Was Rockstar gesagt hat - und was nicht"
+    },
+    {
+      "type": "paragraph",
+      "text": "Davy Jones gehörte zu jener Gruppe von Content-Creators, die Rockstar North in Edinburgh besuchen durfte. Die Aussage von Nelson wurde zunächst vom portugiesischsprachigen Portal Flow Games aufbereitet und von dort weiterverbreitet. Eine offizielle Mitteilung von Rockstar zur Performance gibt es bislang nicht - die Information ist damit als Bericht aus zweiter Hand einzuordnen, wenn auch aus einem direkten Gespräch mit dem Co-Director."
+    },
+    {
+      "type": "quote",
+      "text": "Während dieser Entwicklungsphase laufen die Konsolen mit 30 Bildern pro Sekunde. Es sei noch nötig, das technische Team zu konsultieren, um zu klären, ob es eine 60-fps-Option zum Launch oder in Zukunft geben wird.",
+      "attribution": "Rob Nelson, Lead Developer und Co-Director bei Rockstar North, zusammengefasst von Flow Games"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nelson betonte demnach zusätzlich, dass er zu Auflösung und weiteren technischen Merkmalen - etwa dem Einsatz von Raytracing - aktuell keine Details nennen könne. Festgehalten wurde nur der Ist-Zustand: 30 fps. Formulierungen wie «während dieser Entwicklungsphase» lassen bewusst Raum für spätere Änderungen, auch nach Release per Patch."
+    },
+    {
+      "type": "heading",
+      "text": "Warum auch die PS5 Pro kaum hilft"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die naheliegende Hoffnung vieler Besitzerinnen und Besitzer der teureren Sony-Hardware dürfte sich nur bedingt erfüllen. Die PS5 Pro bringt zwar eine deutlich stärkere GPU mit als das Basismodell, ihr Prozessor ist aber nicht potent genug, um die Bildrate einfach zu verdoppeln. Genau der CPU-Anteil ist bei einer derart dichten Open World mit Verkehr, Passanten und Simulationslogik der limitierende Faktor. Realistischer wäre ein 40-fps-Modus für 120-Hz-Fernseher - bestätigt ist auch der nicht."
+    },
+    {
+      "type": "paragraph",
+      "text": "Für Xbox gilt dieselbe Unsicherheit: Der Deep Dive wurde auf PS5 aufgezeichnet, konkrete Angaben zu Series X und der schwächeren Series S fehlen bislang komplett."
+    },
+    {
+      "type": "heading",
+      "text": "Rockstars Historie spricht gegen 60 fps"
+    },
+    {
+      "type": "paragraph",
+      "text": "Wer die Vergangenheit des Studios kennt, ist von der Nachricht wenig überrascht. Ein Blick zurück:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "GTA 5 bekam seine 60-fps-Option erst mit dem Next-Gen-Upgrade für PS5 und Xbox Series X/S - Jahre nach dem Original",
+        "Red Dead Redemption 2 hat bis heute kein offizielles 60-fps-Upgrade für aktuelle Konsolen erhalten",
+        "Der PC-Port von GTA 5 erschien erst rund 18 Monate nach dem Konsolenstart auf Steam - eine PC-Fassung von GTA 6 ist bislang nicht einmal angekündigt"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Bleibt der Ausblick auf die nächste Hardware-Generation: PS6 und Xbox Project Helix werden in wenigen Jahren erwartet. Sollte Rockstar dem eigenen Muster treu bleiben, wäre eine technisch aufgewertete Neuauflage dort der wahrscheinlichste Weg zu höheren Bildraten - was für Käuferinnen und Käufer der ersten Stunde bedeutet, dass sie später womöglich ein zweites Mal zahlen."
+    },
+    {
+      "type": "heading",
+      "text": "Wie die Community reagiert"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Aufschrei fällt bislang moderater aus als erwartet. In einer laufenden Umfrage von Push Square mit 49 abgegebenen Stimmen nannten 16 Prozent 30 fps ein Ausschlusskriterium, 35 Prozent würden sich mit einem 40-fps-Modus zufriedengeben, 20 Prozent kommen mit 30 fps zurecht und weitere 20 Prozent interessieren sich schlicht nicht für Bildraten. Die Stichprobe ist klein, zeigt aber ein Muster: Nicht die 30 fps an sich sind das Problem, sondern das Fehlen jeder Zwischenlösung."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Aussage ist keine finale Festlegung, sondern eine Momentaufnahme aus der Entwicklung - vorgetragen von einem Co-Director, der sich selbst noch mit dem Technikteam abstimmen muss. Realistisch ist: Zum Start dürften Konsolen mit 30 fps laufen, alles Weitere ist Patch-Material. Wer 60 fps als Grundbedingung setzt, wartet entweder auf den PC-Port oder auf die nächste Konsolengeneration. Bis Rockstar offizielle Angaben zu Auflösung, Raytracing und Performance-Modi macht, gilt: interessant, aber unbestätigt."
+    }
+  ],
+  "poll": {
+    "question": "GTA 6 startet voraussichtlich mit 30 fps - wie geht ihr damit um?",
+    "options": [
+      "30 fps sind okay, solange sie stabil laufen",
+      "Nur mit 40-fps-Modus auf der PS5 Pro",
+      "Ich warte auf den PC-Port",
+      "Ich warte auf die PS6-/Helix-Fassung"
+    ]
+  },
+  "isLeakOrRumor": true,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-28T00:03:07.204Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "grid",
+  "sources": [
+    {
+      "title": "GTA 6 Targeting 30fps on PS5, Undecided on Performance Mode",
+      "url": "https://www.pushsquare.com/news/2026/08/gta-6-targeting-30fps-on-ps5-undecided-on-performance-mode",
+      "publisher": "Push Square"
+    },
+    {
+      "title": "GTA 6 Will Be 30FPS At Launch, Rockstar Reportedly Not Sure About 60FPS Performance Mode",
+      "url": "https://kotaku.com/gta-6-will-be-30fps-at-launch-rockstar-reportedly-not-sure-about-60fps-performance-mode-2000729032",
+      "publisher": "Kotaku"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/gta-6-30-fps-ps5-performance-modus-offen-2026.webp",
+    "alt": "GTA 6 zielt auf 30 fps - selbst die PS5 Pro rettet das nicht",
+    "credit": "Bild: Push Square",
+    "sourceUrl": "https://www.pushsquare.com/news/2026/08/gta-6-targeting-30fps-on-ps5-undecided-on-performance-mode",
+    "sourceWidth": 1920,
+    "sourceHeight": 1080
+  },
+  "relatedSlugs": [
+    "gta-6-kartengroesse-80-stunden-rockstar-2026",
+    "gta-6-dazed-preview-rockstar-verdoppelt-npc-team-2026",
+    "gta-6-fahndungssystem-sechs-sterne-criminal-profile-2026"
+  ]
+}

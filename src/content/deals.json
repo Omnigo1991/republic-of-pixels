@@ -1,6 +1,17 @@
 {
-  "updatedAt": "2026-08-27T21:04:38.251Z",
+  "updatedAt": "2026-08-28T00:04:15.750Z",
   "deals": [
+    {
+      "appId": 990080,
+      "title": "Hogwarts Legacy",
+      "discountPercent": 90,
+      "originalPrice": 5999,
+      "finalPrice": 599,
+      "currency": "EUR",
+      "endsAt": "2026-09-03T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/990080/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/990080/1b2e4eeed79dd06971492825a461bc5130bf7c28/capsule_184x69.jpg?t=1778797474"
+    },
     {
       "appId": 1174180,
       "title": "Red Dead Redemption 2",
@@ -55,17 +66,6 @@
       "endsAt": "2026-09-08T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/1623730/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/0703d5a0658c7aedaa3be4391d6f5cccc1bb6d7a/capsule_184x69.jpg?t=1784714419"
-    },
-    {
-      "appId": 1874880,
-      "title": "Arma Reforger",
-      "discountPercent": 30,
-      "originalPrice": 3999,
-      "finalPrice": 2799,
-      "currency": "EUR",
-      "endsAt": "2026-09-07T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1874880/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1874880/capsule_184x69.jpg?t=1779966148"
     }
   ]
 }

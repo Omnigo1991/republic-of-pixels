@@ -1,21 +1,19 @@
 {
-  "datum": "2026-08-27",
-  "nummer": 19,
-  "loesung": "Grand Theft Auto: Vice City",
+  "datum": "2026-08-28",
+  "nummer": 20,
+  "loesung": "Lies of P",
   "akzeptiert": [
-    "grandtheftautovicecity",
-    "gtavicecity",
-    "vicecity"
+    "liesofp"
   ],
   "hinweise": [
-    "Erschienen 2002 · Open World",
-    "80er-Jahre-Setting"
+    "Erschienen 2023 · Action-RPG",
+    "Pinocchio"
   ],
   "bilder": [
-    "/images/pixelraten/2026-08-27-s1.jpg",
-    "/images/pixelraten/2026-08-27-s2.jpg",
-    "/images/pixelraten/2026-08-27-s3.jpg",
-    "/images/pixelraten/2026-08-27-s4.jpg",
-    "/images/pixelraten/2026-08-27-s5.jpg"
+    "/images/pixelraten/2026-08-28-s1.jpg",
+    "/images/pixelraten/2026-08-28-s2.jpg",
+    "/images/pixelraten/2026-08-28-s3.jpg",
+    "/images/pixelraten/2026-08-28-s4.jpg",
+    "/images/pixelraten/2026-08-28-s5.jpg"
   ]
 }
