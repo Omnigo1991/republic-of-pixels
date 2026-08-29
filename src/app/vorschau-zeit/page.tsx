@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getChronological } from "@/lib/articles";
-import { KategorieChip } from "@/components/next/Bausteine";
+import { KategorieChip, GLAS } from "@/components/next/Bausteine";
 import { PlaceholderArt } from "@/components/PlaceholderArt";
 import type { Article } from "@/lib/types";
 
@@ -110,6 +110,53 @@ function Kachel({
   );
 }
 
+
+/**
+ * Die rechte Spalte "Weitere Meldungen" hat kein Bild - dort gibt es keine
+ * obere rechte Ecke. Was sich von Fassung C übertragen lässt, ist ihre
+ * REGEL: Die Zeit steht immer rechts, an derselben Stelle, unabhängig davon
+ * wie lang die Schlagzeile ist. In einer Textliste heisst das rechtsbündig
+ * auf der Kicker-Zeile.
+ */
+function MeldungMitZeit({
+  article,
+  fassung,
+  jetzt,
+}: {
+  article: Article;
+  fassung: "ohne" | "rechts" | "angehaengt";
+  jetzt: number;
+}) {
+  const zeit = seit(article.publishedAt, jetzt);
+  const marke = (article.tags ?? [])[0] ?? article.category;
+  return (
+    <Link href={`/artikel/${article.slug}`} className="block py-3">
+      <span className="block text-[14.5px] font-semibold leading-[1.32] text-[#F2F8FF]">
+        {article.title}
+      </span>
+      <span className="mt-1.5 flex items-baseline justify-between gap-3">
+        <span className="text-[10px] font-bold uppercase tracking-[0.08em] text-accent">
+          {marke}
+          {fassung === "angehaengt" && (
+            <span className="font-semibold normal-case tracking-normal text-[#86868b]">
+              {" \u00b7 "}{zeit}
+            </span>
+          )}
+        </span>
+        {fassung === "rechts" && (
+          <span className="shrink-0 text-[10.5px] font-medium text-[#86868b]">{zeit}</span>
+        )}
+      </span>
+    </Link>
+  );
+}
+
+const LISTEN_FASSUNGEN: { key: "ohne" | "rechts" | "angehaengt"; titel: string; erklaerung: string }[] = [
+  { key: "ohne", titel: "Heute", erklaerung: "Keine Zeitangabe." },
+  { key: "rechts", titel: "C übertragen · rechtsbündig", erklaerung: "Dieselbe Regel wie bei der Kachel-Pille: Die Zeit steht immer rechts, egal wie lang die Schlagzeile ist. Das Auge findet sie in einer Spalte." },
+  { key: "angehaengt", titel: "Alternative · an die Marke gehängt", erklaerung: "Kompakter, liest sich als eine Zeile - aber die Zeit wandert mit der Wortlänge und steht nie an derselben Stelle." },
+];
+
 const FASSUNGEN: { key: Fassung; titel: string; erklaerung: string }[] = [
   { key: "ohne", titel: "Heute", erklaerung: "Keine Zeitangabe. Man weiss nicht, ob das von heute Morgen oder von letzter Woche ist." },
   { key: "beimChip", titel: "A · neben der Rubrik", erklaerung: "Zurückhaltend, liest sich wie eine Zeile: Rubrik, dann Alter." },
@@ -121,6 +168,7 @@ const FASSUNGEN: { key: Fassung; titel: string; erklaerung: string }[] = [
 export default function VorschauZeit() {
   const jetzt = Date.now();
   const artikel = getChronological().slice(0, 4);
+  const meldungen = getChronological().slice(4, 10);
 
   return (
     <main className="mx-auto max-w-[1180px] px-4 py-12">
@@ -154,6 +202,40 @@ export default function VorschauZeit() {
           </div>
         </section>
       ))}
+
+      <hr className="my-14 border-white/10" />
+
+      <h2 className="mb-2 text-[24px] font-bold text-white sm:text-[30px]">
+        Und rechts, in den weiteren Meldungen?
+      </h2>
+      <p className="mb-10 max-w-[66ch] text-[15px] leading-relaxed text-[#a1a1a6]">
+        Dort gibt es kein Bild und damit keine obere rechte Ecke. Übertragbar
+        ist aber die Regel hinter C: Die Zeit steht immer an derselben Stelle,
+        nämlich rechts.
+      </p>
+
+      <div className="grid gap-6 lg:grid-cols-3">
+        {LISTEN_FASSUNGEN.map((f) => (
+          <div key={f.key}>
+            <p className="mb-1 text-[13px] font-semibold uppercase tracking-wider text-accent">
+              {f.titel}
+            </p>
+            <p className="mb-4 min-h-[64px] text-[14px] leading-snug text-[#a1a1a6]">
+              {f.erklaerung}
+            </p>
+            <div className={`${GLAS} flex flex-col rounded-[22px] px-5 pb-4 pt-1.5`}>
+              <div className="px-0 pb-0.5 pt-4 text-[11px] font-bold uppercase tracking-[0.1em] text-[#86868b]">
+                Weitere Meldungen
+              </div>
+              <div className="overflow-hidden">
+                {meldungen.map((a) => (
+                  <MeldungMitZeit key={a.slug} article={a} fassung={f.key} jetzt={jetzt} />
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </main>
   );
 }
