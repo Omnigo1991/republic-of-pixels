@@ -1,0 +1,154 @@
+{
+  "slug": "rust-roadmap-2026-battle-pass-rust-premium",
+  "title": "Rust streicht den Battle Pass - dafür kommt Rust Premium",
+  "subtitle": "Facepunch hat die 2026er-Roadmap still und leise umgebaut: Sechs Features rutschen ins nächste Jahr, ein Streckenziel rückt dafür überraschend nach vorn",
+  "excerpt": "Der umstrittene Battle Pass ist von der Rust-Roadmap verschwunden - an seiner Stelle steht jetzt ein Eintrag, den viele Spielerinnen und Spieler längst besitzen, ohne es zu merken.",
+  "seoTitle": "Rust Roadmap 2026: Battle Pass raus, Rust Premium rein",
+  "metaDescription": "Facepunch hat die Rust-Roadmap 2026 heimlich überarbeitet: Der Battle Pass fliegt raus, sechs Features rutschen auf 2027 - Hunde kommen dafür früher.",
+  "category": "news",
+  "platforms": [
+    "pc",
+    "playstation",
+    "xbox"
+  ],
+  "tags": [
+    "Rust",
+    "Facepunch",
+    "Survival",
+    "Roadmap",
+    "PC"
+  ],
+  "bereich": "games",
+  "tldr": [
+    "Facepunch hat die 2026er-Roadmap für Rust ohne Ankündigung überarbeitet - Einträge wurden verschoben oder gestrichen",
+    "Der geplante Battle Pass ist komplett von der Liste verschwunden und wurde durch «Rust Premium» ersetzt",
+    "Prozedurale Höhlen, Nexus-System, Greifhaken und Terrainverformung sind auf 2027 gerutscht",
+    "Tierzucht, Charakteranpassung und - überraschend - Hunde als Haustiere sollen noch 2026 erscheinen"
+  ],
+  "whyItMatters": "Rust lebt vom monatlichen Wipe-Rhythmus: Wer Zeit investiert, will wissen, welche Systeme die nächsten Server-Runden verändern. Die stille Roadmap-Korrektur verschiebt gleich mehrere der grössten geplanten Umbauten ins nächste Jahr - und beerdigt zugleich ein Monetarisierungsmodell, gegen das Teile der Community von Anfang an Sturm gelaufen sind.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Facepunch Studios hat die Jahresplanung für Rust überarbeitet - allerdings ohne Ankündigung, ohne Blogpost, ohne Erklärung. Die zu Jahresbeginn veröffentlichte Roadmap für 2026 wurde still aktualisiert: Mehrere Einträge sind auf 2027 gerutscht, andere ganz von der Liste verschwunden. Der prominenteste Abgang ist ausgerechnet der Battle Pass, über den die Community seit Monaten streitet."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "15 $",
+          "label": "Mindestwert an Inventar-Items für den Rust-Premium-Status"
+        },
+        {
+          "value": "6",
+          "label": "Features, die von 2026 auf 2027 verschoben wurden"
+        },
+        {
+          "value": "8 Jahre",
+          "label": "so lange ist Rust bereits aus dem Early Access - und wird weiter monatlich erweitert"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Vom Battle Pass zu Rust Premium"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ursprünglich war der Battle Pass für das dritte Quartal 2026 angesetzt. Schon damals verschob Facepunch ihn zugunsten von Monument-Überarbeitungen und einem Umbau des Clan-Systems. Nun ist der Eintrag komplett gestrichen - und durch «Rust Premium» ersetzt. Grosse Trauer dürfte sich in Grenzen halten: Ein nennenswerter Teil der Spielerschaft hielt kosmetische Belohnungen über ein kostenpflichtiges Abo für nichts, was zu einem Survival-Spiel wie Rust passt."
+    },
+    {
+      "type": "paragraph",
+      "text": "Rust Premium existiert bereits, nur wissen viele nicht, dass sie es längst haben. Wer Inventar-Gegenstände im Wert von mehr als 15 US-Dollar besitzt, erhält den Status automatisch - und damit Zugang zu Premium-Servern. Deren Sinn ist weniger Prestige als Hygiene: Cheater, die mit frisch erstellten und damit leeren Accounts unterwegs sind, bleiben aussen vor. Wie Facepunch dieses derzeit sehr schmale Feature ausbauen will, ist offen. Exklusive Kosmetik oder zusätzliche Funktionen wären naheliegend, bestätigt ist davon nichts."
+    },
+    {
+      "type": "heading",
+      "text": "Sechs Features rutschen ins Jahr 2027"
+    },
+    {
+      "type": "paragraph",
+      "text": "Deutlich schmerzhafter für Langzeitspielerinnen und -spieler dürfte die Verschiebeliste sein. Gleich mehrere der ambitionierten Systeme, die den Untergrund und die Fortbewegung in Rust grundlegend verändern sollten, tauchen erst 2027 wieder auf:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Prozedural generierte Höhlen",
+        "Das Nexus-System",
+        "Der nomadische Bewohner (Nomadic Dweller)",
+        "Überarbeitetes Untergrund-Terrain",
+        "Der Greifhaken",
+        "Terrainverformung"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Auffällig ist der thematische Zusammenhang: Höhlen, Untergrund-Terrain und Terrainverformung greifen ineinander, ebenso wie Greifhaken und veränderte Landschaftsgeometrie. Wer als Team seine Basisplanung an diesen Ankündigungen ausgerichtet hat, muss mindestens ein weiteres Jahr mit der bekannten Karte auskommen."
+    },
+    {
+      "type": "heading",
+      "text": "Was 2026 noch kommt - inklusive Überraschung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Gestrichen ist der Rest des Jahres deshalb nicht. Vor Ablauf von 2026 sollen laut aktualisierter Roadmap noch mehrere Einträge landen:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Tierzucht (Animal Husbandry) - eines der am meisten erwarteten Updates",
+        "Charakteranpassung",
+        "Ein Belohnungssystem für gemeldete Bugs",
+        "Biotreibstoff-Generatoren",
+        "Hunde als Haustiere - zuvor nur ein Streckenziel, jetzt fest im Plan"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Hunde sind die eigentliche Überraschung: Sie standen bislang als optionales Stretch Goal auf der Liste und wurden nun nach vorn gezogen. In Kombination mit der Tierzucht ergibt das ein stimmiges Paket - Rust bekommt in den kommenden Monaten spürbar mehr Leben ausserhalb der Spielerfraktionen."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Acht Jahre nach dem Early-Access-Ende arbeitet Facepunch weiter im Monatstakt, und genau darin liegt der Reiz wie das Risiko: Jeder Wipe braucht einen Grund zurückzukehren. Die stille Korrektur wirkt weniger wie ein Rückzug als wie eine Priorisierung - kleinere, sicher lieferbare Systeme dieses Jahr, die grossen Weltumbauten dann 2027. Wie stark sich das auf die einzelnen Wipes auswirkt, bleibt abzuwarten. Der nächste Force Wipe im September steht kurz bevor; ein begleitender Blogpost dürfte mehr Klarheit bringen. Rust ist für PC, Mac, PS4, PS5, Xbox One und Xbox Series X erhältlich."
+    }
+  ],
+  "poll": {
+    "question": "Battle Pass gestrichen, Rust Premium stattdessen - was haltet ihr davon?",
+    "options": [
+      "Gut so, ein Battle Pass hätte nicht zu Rust gepasst",
+      "Rust Premium ist bloss eine leere Hülle",
+      "Egal - Hauptsache die Cheater bleiben draussen",
+      "Schade, ich hätte den Battle Pass gespielt"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-29T07:05:07.369Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "particles",
+  "sources": [
+    {
+      "title": "Hit Survival Game Rust Releases Major Overhaul to 2026 Roadmap",
+      "url": "https://www.polygon.com/rust-roadmap-changes-2026/",
+      "publisher": "Polygon"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/rust-roadmap-2026-battle-pass-rust-premium.webp",
+    "alt": "Rust streicht den Battle Pass - dafür kommt Rust Premium",
+    "credit": "Bild: Polygon",
+    "sourceUrl": "https://www.polygon.com/rust-roadmap-changes-2026/",
+    "sourceWidth": 1920,
+    "sourceHeight": 1080
+  },
+  "relatedSlugs": [
+    "star-citizen-spielerzahlen-35890-chris-roberts-2026",
+    "witcher-3-remaster-systemanforderungen-windows-11-ssd-2026",
+    "squadron-42-verschiebung-q2-2027-gta-6"
+  ]
+}
