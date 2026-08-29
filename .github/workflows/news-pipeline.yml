@@ -137,6 +137,14 @@ jobs:
         # dafuer, dass es niemand uebersieht.
         run: node pipeline/eventwaechter.mjs || true
 
+      - name: Countdown-Wache (Terminvorrat prüfen)
+        # Schaut voraus, wie lange der Vorrat an bestätigten Terminen noch
+        # reicht, und meldet es, BEVOR der Countdown auf der Startseite leer
+        # wird. Zweimal ist er verschwunden (25. und 29.08.2026), zweimal hat
+        # es Tim gefunden und kein Waechter. Ein fehlender Termin darf das
+        # Veroeffentlichen von Nachrichten nicht stoppen, deshalb "|| true".
+        run: node pipeline/countdown-wache.mjs || true
+
       - name: Server-Status prüfen (Störungs-Wächter)
         # Fragt die offiziellen Statusquellen ab und erkennt NEUE Störungen.
         # Der Radar ist als Leser-Feature schwach (Downdetector besetzt diese

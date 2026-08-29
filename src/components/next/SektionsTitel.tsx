@@ -43,28 +43,72 @@ export function SektionsTitel({
 // weitergerückt; jemand hätte das Datum von Hand nachtragen müssen, und
 // genau das ist nicht passiert.
 //
-// Jetzt kommt das Ziel aus derselben Quelle wie der Event-Radar
-// (src/content/events.json). Ein Termin zählt nur mit, wenn er einen
-// EXAKTEN Startzeitpunkt hat ("startIso") und ausdrücklich als Countdown
-// markiert ist ("countdown": true). Beides bewusst: Eine fünftägige Messe
-// hat keinen Moment, auf den man herunterzählen kann - eine Show um 21:00
-// Uhr schon.
+// UND ES IST TROTZDEM WIEDER PASSIERT (Tim, 29.08.2026: "Countdown vom
+// Eventradar ist wieder verschwunden. Und stelle sicher, dass das nicht
+// mehr vorkommt").
+//
+// Meine Fassung vom 25.08. las zwar events.json, verlangte aber, dass
+// jemand pro Termin ZWEI ZUSÄTZLICHE Felder von Hand nachträgt: "startIso"
+// und "countdown": true. Tokyo Game Show und The Game Awards standen längst
+// mit Datum in der Liste - nur eben ohne diese beiden Felder. Als die
+// letzte markierte Show (GTA 6, 27.08. 21:00) vorbei war, fand die Suche
+// nichts mehr und der Block verschwand.
+//
+// Ich hatte die Handarbeit also nicht abgeschafft, sondern nur eine Ebene
+// nach hinten verschoben. Deshalb jetzt umgekehrt:
+//
+// MITMACHEN IST DIE REGEL, AUSSCHLUSS DIE AUSNAHME. Jeder bestätigte
+// Termin mit Datum ist automatisch ein Countdown-Ziel. Wer einen Termin
+// NICHT herunterzählen will, setzt ausdrücklich "countdown": false.
+// Niemand muss mehr an etwas denken, damit die Anzeige weiterläuft.
+//
+// "startIso" bleibt erlaubt und gewinnt, wenn es dasteht - eine Show um
+// 21:00 Uhr verdient die genaue Minute. Fehlt es, wird auf den Beginn des
+// Tages gezählt. Das ist gröber, aber ehrlich: Wir erfinden keine Uhrzeit,
+// die wir nicht kennen.
+//
+// Nur "fixiert" zählt. Auf ein Gerücht herunterzuzählen wäre genau die
+// Sorte Behauptung, die wir sonst kennzeichnen.
 type Termin = {
   name: string;
+  status?: string;
+  dateStart?: string | null;
   startIso?: string;
   countdown?: boolean;
   dateLabel?: string;
   beschreibung?: string;
 };
 
-function naechsterTermin(jetzt: number): Termin | null {
-  // events.json ist ein Objekt mit einem Hinweis und der Liste - siehe
-  // dieselbe Struktur im Event-Radar.
-  const kandidaten = ((events as { events: Termin[] }).events ?? [])
-    .filter((e) => e.countdown && e.startIso)
-    .filter((e) => new Date(e.startIso as string).getTime() > jetzt)
-    .sort((a, b) => new Date(a.startIso as string).getTime() - new Date(b.startIso as string).getTime());
-  return kandidaten[0] ?? null;
+/**
+ * Zielzeitpunkt eines Termins, oder null, wenn er keinen hat.
+ *
+ * dateStart wird OHNE "Z" gelesen, also in der Zeitzone des Lesers. Für
+ * einen Countdown auf einen Messetag ist das die Zahl, die sich richtig
+ * anfühlt: "noch 18 Tage" heisst 18 Mal Mitternacht bei mir zu Hause.
+ */
+export function terminZiel(e: Termin): number | null {
+  if (e.countdown === false) return null;
+  if (e.status && e.status !== "fixiert") return null;
+  if (e.startIso) {
+    const t = new Date(e.startIso).getTime();
+    return Number.isNaN(t) ? null : t;
+  }
+  if (e.dateStart) {
+    const t = new Date(`${e.dateStart}T00:00:00`).getTime();
+    return Number.isNaN(t) ? null : t;
+  }
+  return null;
+}
+
+export function naechsterTermin(
+  jetzt: number,
+  liste: Termin[] = (events as { events: Termin[] }).events ?? [],
+): Termin | null {
+  const kandidaten = liste
+    .map((e) => ({ e, ziel: terminZiel(e) }))
+    .filter((x): x is { e: Termin; ziel: number } => x.ziel !== null && x.ziel > jetzt)
+    .sort((a, b) => a.ziel - b.ziel);
+  return kandidaten[0]?.e ?? null;
 }
 
 export function EventCountdown({ href = "/#radare" }: { href?: string }) {
@@ -80,8 +124,9 @@ export function EventCountdown({ href = "/#radare" }: { href?: string }) {
       const jetzt = Date.now();
       const naechster = naechsterTermin(jetzt);
       setTermin(naechster);
-      if (!naechster?.startIso) return setRest(null);
-      const diff = new Date(naechster.startIso).getTime() - jetzt;
+      const ziel = naechster ? terminZiel(naechster) : null;
+      if (ziel === null) return setRest(null);
+      const diff = ziel - jetzt;
       setRest({
         t: Math.floor(diff / 86400000),
         s: Math.floor((diff % 86400000) / 3600000),
