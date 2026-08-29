@@ -1,17 +1,6 @@
 {
-  "updatedAt": "2026-08-29T17:42:50.808Z",
+  "updatedAt": "2026-08-29T20:55:29.046Z",
   "deals": [
-    {
-      "appId": 990080,
-      "title": "Hogwarts Legacy",
-      "discountPercent": 90,
-      "originalPrice": 5999,
-      "finalPrice": 599,
-      "currency": "EUR",
-      "endsAt": "2026-09-03T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/990080/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/990080/1b2e4eeed79dd06971492825a461bc5130bf7c28/capsule_184x69.jpg?t=1778797474"
-    },
     {
       "appId": 1174180,
       "title": "Red Dead Redemption 2",
@@ -57,15 +46,26 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/0703d5a0658c7aedaa3be4391d6f5cccc1bb6d7a/capsule_184x69.jpg?t=1784714419"
     },
     {
-      "appId": 1643320,
-      "title": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+      "appId": 739630,
+      "title": "Phasmophobia",
       "discountPercent": 30,
-      "originalPrice": 5999,
-      "finalPrice": 4199,
+      "originalPrice": 1899,
+      "finalPrice": 1329,
       "currency": "EUR",
-      "endsAt": "2026-08-31T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1643320/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1643320/87ade1fa0e9869388368228258d758e040a3f651/capsule_184x69_alt_assets_7_german.jpg?t=1787923177"
+      "endsAt": "2026-09-12T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/739630/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/739630/6ecdf873de7be9450243531dd07e57e466e82464/capsule_184x69_alt_assets_12.jpg?t=1787675345"
+    },
+    {
+      "appId": 3321460,
+      "title": "Crimson Desert Enhanced",
+      "discountPercent": 20,
+      "originalPrice": 6999,
+      "finalPrice": 5599,
+      "currency": "EUR",
+      "endsAt": "2026-09-09T15:00:00.000Z",
+      "url": "https://store.steampowered.com/app/3321460/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3321460/9fef3b5648defc30432d4b3221296350354b8742/capsule_184x69.jpg?t=1787909144"
     }
   ]
 }
