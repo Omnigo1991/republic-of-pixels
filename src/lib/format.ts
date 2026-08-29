@@ -42,6 +42,50 @@ export function formatRelative(iso: string): string {
   return `vor ${diffD} Tag${diffD === 1 ? "" : "en"}`;
 }
 
+/**
+ * Alter einer Meldung als kurze Angabe: "vor 20 Min.", "vor 3 Std.",
+ * "gestern", "vor 2 Tagen", danach das Datum.
+ *
+ * WARUM NICHT formatRelative (Tim, 29.08.2026): Das gibt es zwar schon, ist
+ * aber fürs Profil gebaut und rundet auf ganze Stunden - eine Meldung von vor
+ * 20 Minuten hiesse dort "gerade eben", eine von vor 40 Minuten "vor 1 Std.".
+ * Auf einer Nachrichtenstartseite ist genau diese erste Stunde die
+ * interessanteste. Deshalb eine eigene Funktion, statt die bestehende
+ * umzubauen und damit das Profil zu verändern.
+ *
+ * AB DREI TAGEN DAS DATUM: "vor 96 Stunden" hilft niemandem, und "vor 4
+ * Tagen" ist auf einer Startseite ohnehin ein Signal, dass die Meldung nicht
+ * mehr frisch ist. Dann ist das Datum die ehrlichere Angabe.
+ */
+export function zeitSeit(iso: string, jetzt: number = Date.now()): string {
+  const min = Math.floor((jetzt - new Date(iso).getTime()) / 60000);
+  if (min < 1) return "gerade eben";
+  if (min < 60) return `vor ${min} Min.`;
+  const std = Math.floor(min / 60);
+  if (std < 24) return `vor ${std} Std.`;
+  const tage = Math.floor(std / 24);
+  if (tage === 1) return "gestern";
+  if (tage < 3) return `vor ${tage} Tagen`;
+  return kurzDatum(iso);
+}
+
+/**
+ * "29. Aug" - die Fassung, die der Server ausliefert.
+ *
+ * Sie ist bewusst NICHT relativ: Die Startseite wird zwar bei jedem Aufruf
+ * gerendert, Vercel legt die Antwort aber bis zu 20 Minuten in den
+ * Zwischenspeicher. Eine servergerechnete Minutenangabe wäre dann schlicht
+ * falsch. Das Datum stimmt immer, und der Browser ersetzt es nach dem Laden
+ * durch die genaue Angabe (siehe components/next/Zeitangabe.tsx).
+ */
+export function kurzDatum(iso: string): string {
+  return new Intl.DateTimeFormat("de-CH", {
+    day: "2-digit",
+    month: "short",
+    timeZone: ZEITZONE,
+  }).format(new Date(iso));
+}
+
 // Zerlegt einen Artikeltitel in Kicker (Themenzeile, play3-Stil) und Headline:
 // "Final Fantasy VII Revelation: Hamaguchi bekräftigt …" →
 // Kicker "Final Fantasy VII Revelation", Headline "Hamaguchi bekräftigt …".

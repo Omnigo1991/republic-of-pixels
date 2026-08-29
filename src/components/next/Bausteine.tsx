@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Article } from "@/lib/types";
 import { CATEGORY_LABELS } from "@/lib/types";
 import { PlaceholderArt } from "@/components/PlaceholderArt";
+import { Zeitangabe } from "./Zeitangabe";
 
 // Gemeinsame Bausteine des neuen Designs (Tim-Freigabe 22.08.2026).
 // Prinzip: Navy als Grund, Glas statt Rahmen, Farbe nur mit Bedeutung -
@@ -70,10 +71,19 @@ export function BildKachel({
   article,
   titelKlasse = "text-[17px]",
   hoehe = "h-full",
+  zeit = true,
 }: {
   article: Article;
   titelKlasse?: string;
   hoehe?: string;
+  /**
+   * Zeitangabe oben rechts. Standardmässig an - die Kachel wird auch in
+   * den Artikel-Empfehlungen benutzt, und "1:1 wie die Startseite" war
+   * Tims ausdrückliche Vorgabe vom 25.08.2026. Der Schalter existiert,
+   * damit sich das an einer Stelle abschalten lässt, ohne die Kachel zu
+   * kopieren.
+   */
+  zeit?: boolean;
 }) {
   return (
     <Link
@@ -93,6 +103,20 @@ export function BildKachel({
         </span>
       )}
       <span className="absolute inset-0 bg-[linear-gradient(200deg,rgba(0,0,0,0)_26%,rgba(0,0,0,0.88)_90%)]" />
+      {/* WIE ALT IST DAS? (Tim, 29.08.2026, Fassung C aus der Vorschau.)
+          Oben rechts statt beim Text, weil die Angabe dann IMMER an
+          derselben Stelle steht - unabhängig davon, wie lang die
+          Schlagzeile ist und ob sie zwei oder vier Zeilen braucht. Das Auge
+          findet sie ohne Suchen.
+          Der eigene Verlauf hinter der Pille: Oben rechts ist der Verlauf
+          der Kachel fast durchsichtig (er zieht von unten links hoch), auf
+          einem hellen Motiv wäre reine Schrift dort unlesbar. */}
+      {zeit && (
+        <Zeitangabe
+          iso={article.publishedAt}
+          className="absolute right-3 top-3 z-10 rounded-full bg-black/55 px-2.5 py-1 text-[11px] font-semibold text-white/90 backdrop-blur-[6px]"
+        />
+      )}
       <span className="relative flex flex-col items-start gap-2 p-4 sm:p-5">
         <KategorieChip article={article} klein />
         <span
@@ -115,11 +139,22 @@ export function MeldungsZeile({ article }: { article: Article; erste?: boolean }
       <span className="block text-[14.5px] font-semibold leading-[1.32] text-[#F2F8FF]">
         {article.title}
       </span>
+      {/* Marke und Alter in EINER Zeile (Tim, 29.08.2026: "die Alternative
+          für den Block rechts"). Bewusst nicht rechtsbündig: In dieser
+          schmalen Spalte stehen Markennamen wie "Call of Duty: Modern
+          Warfare 4", die rechtsbündig fast an die Zeit stossen würden.
+          Angehängt bricht die Zeile stattdessen sauber um. */}
       <span
         className="mt-1.5 block text-[10px] font-bold uppercase tracking-[0.08em]"
         style={{ color: labelFarbe(article) }}
       >
         {spielName(article)}
+        {/* Trenner und Zeit teilen sich denselben grauen Kasten, damit der
+            Punkt nicht in der Markenfarbe leuchtet. */}
+        <span className="font-semibold normal-case tracking-normal text-[#86868b]">
+          {" \u00b7 "}
+          <Zeitangabe iso={article.publishedAt} />
+        </span>
       </span>
     </Link>
   );
