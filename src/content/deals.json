@@ -1,6 +1,17 @@
 {
-  "updatedAt": "2026-08-29T16:04:29.687Z",
+  "updatedAt": "2026-08-29T17:42:50.808Z",
   "deals": [
+    {
+      "appId": 990080,
+      "title": "Hogwarts Legacy",
+      "discountPercent": 90,
+      "originalPrice": 5999,
+      "finalPrice": 599,
+      "currency": "EUR",
+      "endsAt": "2026-09-03T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/990080/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/990080/1b2e4eeed79dd06971492825a461bc5130bf7c28/capsule_184x69.jpg?t=1778797474"
+    },
     {
       "appId": 1174180,
       "title": "Red Dead Redemption 2",
@@ -11,17 +22,6 @@
       "endsAt": "2026-09-08T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/1174180/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/capsule_184x69.jpg?t=1759502961"
-    },
-    {
-      "appId": 1551360,
-      "title": "Forza Horizon 5",
-      "discountPercent": 60,
-      "originalPrice": 5999,
-      "finalPrice": 2399,
-      "currency": "EUR",
-      "endsAt": "2026-09-03T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1551360/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1551360/capsule_184x69.jpg?t=1787677939"
     },
     {
       "appId": 3240220,
