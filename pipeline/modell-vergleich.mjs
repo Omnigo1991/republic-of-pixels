@@ -19,11 +19,23 @@ import { FEEDS } from "./feeds.mjs";
 import { fetchAllFeeds } from "./lib/rss.mjs";
 import { extractArticleText } from "./lib/extract.mjs";
 import { generateArticle } from "./run.mjs";
-import { MODELL_TEXT, MODELL_URTEIL, verbrauchBericht } from "./lib/claude.mjs";
+import { MODELL_TEXT, MODELL_HANDWERK, verbrauchBericht } from "./lib/claude.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const AUS = join(ROOT, "modell-vergleich");
 const ANZAHL = Number(process.env.VERGLEICH_ANZAHL ?? 3);
+
+// WELCHE ZWEI MODELLE VERGLICHEN WERDEN (Tim, 30.08.2026: "Ja, mach den
+// Vergleich" - zur Frage, ob sich die API-Kosten senken lassen).
+//
+// Bis heute stand hier fest MODELL_TEXT gegen MODELL_URTEIL. Am 14.08. war
+// das sinnvoll, weil die beiden verschieden waren. Inzwischen sind BEIDE
+// claude-opus-5 - der Vergleich haette also denselben Artikel zweimal mit
+// demselben Modell geschrieben und waere still nutzlos gewesen. Deshalb
+// jetzt frei waehlbar, mit der aktuellen Frage als Vorgabe: Was wir heute
+// benutzen gegen das, womit wir rund 40 Prozent sparen wuerden.
+const MODELL_A = process.env.VERGLEICH_MODELL_A || MODELL_TEXT;
+const MODELL_B = process.env.VERGLEICH_MODELL_B || MODELL_HANDWERK;
 
 // Fliesstext aus den Body-Bloecken, damit sich die Fassungen lesen lassen
 // ohne JSON zu entziffern.
@@ -101,7 +113,13 @@ async function main() {
   }
 
   const ergebnisse = [];
-  const markdown = ["# Modell-Vergleich", "", `Erstellt am ${new Date().toISOString()}`, ""];
+  const markdown = [
+    "# Modell-Vergleich",
+    "",
+    `Erstellt am ${new Date().toISOString()}`,
+    `Verglichen: **${MODELL_A}** gegen **${MODELL_B}**`,
+    "",
+  ];
 
   // Solange weitersuchen, bis genug Quellen mit brauchbarem Volltext
   // beisammen sind - ein nicht abrufbarer Artikel soll den Vergleich nicht
@@ -137,7 +155,7 @@ async function main() {
     const eintrag = { quelle: item.title, link: item.link, varianten: {} };
     markdown.push(`## Quelle ${i + 1}: ${item.title}`, "", `<${item.link}>`, "");
 
-    for (const modell of [MODELL_TEXT, MODELL_URTEIL]) {
+    for (const modell of [MODELL_A, MODELL_B]) {
       process.stdout.write(`  ${modell} … `);
       try {
         // Leeres Slug-Set: Wir veroeffentlichen nicht, Doppel-Slugs sind egal.

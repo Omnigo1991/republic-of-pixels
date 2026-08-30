@@ -16,6 +16,14 @@ on:
         description: "Wie viele Meldungen vergleichen?"
         default: "3"
         required: false
+      modell_a:
+        description: "Modell A (Vorgabe: was wir heute benutzen)"
+        default: "claude-opus-5"
+        required: false
+      modell_b:
+        description: "Modell B (Vorgabe: die guenstigere Alternative)"
+        default: "claude-sonnet-5"
+        required: false
 
 # Absichtlich nur Lesezugriff: Dieser Lauf darf nichts ins Projekt schreiben.
 permissions:
@@ -40,6 +48,8 @@ jobs:
       # Post-Grafik.
       - name: Vergleich ausfuehren
         env:
+          VERGLEICH_MODELL_A: ${{ github.event.inputs.modell_a || 'claude-opus-5' }}
+          VERGLEICH_MODELL_B: ${{ github.event.inputs.modell_b || 'claude-sonnet-5' }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           VERGLEICH_ANZAHL: ${{ github.event.inputs.anzahl || '3' }}
         run: node pipeline/modell-vergleich.mjs
