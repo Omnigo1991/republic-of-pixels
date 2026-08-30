@@ -1,0 +1,150 @@
+{
+  "slug": "asus-zephyrus-m16-fluessigmetall-korrosion-heatsink-2026",
+  "title": "Flüssigmetall frisst sich durch den Kühler - dreifache FPS nach der Reparatur",
+  "subtitle": "Ein Zephyrus M16 stürzte immer wieder ab - die Ursache lag ab Werk direkt auf dem Prozessor",
+  "excerpt": "Ein Asus Zephyrus M16 überhitzte und startete ständig neu. Beim Öffnen fand der Besitzer Korrosion, die sich durch den Kühlkörper gefressen hatte - und fast bis zum Silizium vorgedrungen war.",
+  "seoTitle": "Zephyrus M16: Flüssigmetall zerfrisst Kühler und CPU-Deckel",
+  "metaDescription": "Ein Asus Zephyrus M16 crashte dauernd: Werksseitiges Flüssigmetall korrodierte Kühler und CPU-Deckel. Nach dem Repaste verdreifachte sich die Bildrate.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "bereich": "hardware",
+  "tags": [
+    "Asus",
+    "ROG Zephyrus M16",
+    "Gaming-Laptops",
+    "Flüssigmetall",
+    "Hardware"
+  ],
+  "tldr": [
+    "Ein Reddit-Nutzer öffnete seinen Asus Zephyrus M16 (2022, Core i9-12900H) wegen ständiger Überhitzung und Abstürze",
+    "Das ab Werk aufgetragene Flüssigmetall hatte den Kühlkörper zerfressen und war bis kurz vor den dünnen CPU-Deckel vorgedrungen",
+    "Nach dem Entfernen und einem Repaste mit GD900 verschwanden die Abstürze, die Bildrate verdreifachte sich",
+    "Ähnliche Berichte über Flüssigmetall in Asus-Notebooks häufen sich in Foren - Einzelfälle bleiben es damit nicht"
+  ],
+  "whyItMatters": "Flüssigmetall gilt als Premium-Kühllösung und steckt in vielen teuren Gaming-Notebooks - ausgerechnet dort, wo Hitze und Bewegung zusammenkommen. Wenn die Werksmontage schiefgeht, merkt man das erst Jahre später an Abstürzen und massivem Leistungsverlust. Wer ein betroffenes Gerät besitzt, sollte wissen, worauf beim Throttling zu achten ist.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Ein Asus ROG Zephyrus M16 überhitzte, drosselte und schaltete sich mitten im Betrieb ab. Als der Besitzer das Notebook öffnete, um die Wärmeleitpaste zu erneuern, fand er die Ursache: Das ab Werk aufgetragene Flüssigmetall hatte sich in den Kühlkörper gefressen und war bis dicht an den dünnen Deckel über dem Silizium vorgedrungen. Der Fall, dokumentiert von Reddit-Nutzer «nicknickmeetnick» und aufgegriffen von Tom's Hardware und Wccftech, endete glimpflich - aber mit einem Leistungssprung, der zeigt, wie lange das Gerät bereits kaputtgekühlt lief."
+    },
+    {
+      "type": "embed",
+      "platform": "reddit",
+      "url": "https://www.reddit.com/r/ZephyrusM16/comments/1vyxcas/liquid_metal_should_be_forbidden_the_only_good"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "3x",
+          "label": "höhere Bildrate nach dem Entfernen des Flüssigmetalls"
+        },
+        {
+          "value": "2022",
+          "label": "Baujahr des betroffenen Zephyrus M16 mit Core i9-12900H"
+        },
+        {
+          "value": "23.69 $",
+          "label": "kostet ein PTM7950-Pad (80 x 80 x 0,25 mm) laut Wccftech bei Amazon"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Ein Notebook, das sich selbst abschaltet"
+    },
+    {
+      "type": "paragraph",
+      "text": "Das Gerät stammt aus dem Modelljahr 2022 und arbeitet mit einem Intel Core i9-12900H. Gekauft wurde es laut Wccftech im Februar 2023 - Tom's Hardware spricht von gut drei Jahren Nutzungsdauer. Gespielt wurde darauf kaum: Der Besitzer nutzte den Laptop überwiegend für leichte Aufgaben sowie Programmier- und Engineering-Werkzeuge. Zuletzt häuften sich trotzdem Überhitzung und Throttling bis hin zu harten Abstürzen. Schon davor brach die Leistung in Spielen spürbar ein. Weil sich das Gerät wärmer anfühlte als gewohnt, bestellte er ein PTM7950-Phasenwechselpad und griff übergangsweise zu GD900-Wärmeleitpaste."
+    },
+    {
+      "type": "heading",
+      "text": "Was unter dem Kühler zum Vorschein kam"
+    },
+    {
+      "type": "paragraph",
+      "text": "Beim Zerlegen zeigte sich, dass das Flüssigmetall schlecht aufgetragen war und teilweise aus seiner vorgesehenen Vertiefung ausgetreten ist. Ein Teil davon hatte sich am Kühlkörper regelrecht festgebrannt. Darunter schützt nur ein dünner Deckel das Silizium - und auch dort war die Korrosion bereits sichtbar. Wäre der Besitzer noch länger untätig geblieben, hätte das leitfähige Material bis auf den Die durchsickern können. Genau das ist das grosse Risiko: Flüssigmetall leitet Strom und kann bei Kontakt mit umliegenden Bauteilen Kurzschlüsse verursachen."
+    },
+    {
+      "type": "quote",
+      "text": "Flüssigmetall sollte verboten werden! Das Einzige, was daran gut ist: Die Korrosion, die es verursacht, macht die neue Wärmeleitpaste effizienter, weil sie näher am Kern sitzt.",
+      "attribution": "Reddit-Nutzer «nicknickmeetnick»"
+    },
+    {
+      "type": "heading",
+      "text": "Warum das Material im Notebook problematisch ist"
+    },
+    {
+      "type": "paragraph",
+      "text": "Flüssigmetall enthält Gallium und ist chemisch reaktiv: Es leitet Strom und löst Aluminium an, weshalb es nur mit vernickeltem oder reinem Kupfer kombiniert werden sollte. Um das Auslaufen zu verhindern, setzen Hersteller auf Gummibarrieren und Dichtungen. Asus mischt laut den Berichten zusätzlich abrasive Chemikalien bei, damit das Material besser am Die haftet - genau diese Zusätze greifen das Metall über die Jahre an und verursachen Korrosion. Kritisch bewertet werden vor allem drei Punkte:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Notebooks sind mobile Geräte, die ständig bewegt und gekippt werden - schlechte Voraussetzungen für ein flüssiges Medium",
+        "Die automatisierte Auftragung am Fliessband ist bis heute nicht zuverlässig genug",
+        "Alternativen wie PTM7950 bringen ähnliche Ergebnisse ohne das Risiko eines Kurzschlusses"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Die Reparatur - und ein verdächtig grosser Sprung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Rettungsaktion selbst war fummelig: Mit trockener Watte schob der Nutzer das verbliebene Flüssigmetall über die korrodierten Stellen, um sie abzuschleifen. Anschliessend formte er das Material mit reichlich Isopropanol und Wattestäbchen zu einem Tropfen, den er mit Malerkrepp abnehmen konnte. Danach kam GD900 auf den Prozessor. Das Ergebnis war sofort messbar: deutlich tiefere Temperaturen, keine zufälligen Neustarts mehr - und in dem Spiel, das er mit seinen Kindern spielt, die dreifache Bildrate. Das bestellte PTM7950-Pad war da noch gar nicht eingetroffen."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ein einzelner Reddit-Beitrag ist keine Statistik, und die Bildratenangabe stammt aus dem Alltag, nicht aus einem kontrollierten Benchmark. Trotzdem ist der Fall kein Ausreisser: Eine simple Suche fördert laut Tom's Hardware ein Dutzend weiterer Berichte über Flüssigmetall-Probleme in Asus-Notebooks zutage. Für Besitzerinnen und Besitzer älterer High-End-Geräte heisst das vor allem: Wer plötzlich Throttling, Abstürze und einbrechende Frameraten erlebt, sollte nicht automatisch die alternde Hardware verantwortlich machen. Das Öffnen eines Notebooks ist allerdings kein Anfängerprojekt - und der Umgang mit Flüssigmetall erst recht nicht."
+    }
+  ],
+  "poll": {
+    "question": "Flüssigmetall in Gaming-Notebooks - Fortschritt oder Konstruktionsfehler?",
+    "options": [
+      "Gehört verboten, PTM7950 reicht völlig",
+      "Okay, wenn die Montage sauber ist",
+      "Ich repaste mein Notebook sowieso selbst",
+      "Solange die Garantie läuft, ist es mir egal"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-30T12:04:03.397Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "circuit",
+  "sources": [
+    {
+      "title": "Poor liquid metal application almost destroys Asus Zephyrus M16 laptop, eats through the processor lid — paste replacement triples framerates, drops temps, and eliminates hard crashes",
+      "url": "https://www.tomshardware.com/laptops/gaming-laptops/poor-liquid-metal-application-almost-destroys-asus-zephyrus-m16-laptop-eats-through-the-processor-lid-paste-replacement-triples-framerates-drops-temps-and-eliminates-hard-crashes",
+      "publisher": "Tom's Hardware"
+    },
+    {
+      "title": "Liquid Metal Spillage In Gaming Laptops Is Avoided By Using Chemical Mixture, But Zephyrus M16 Owner Finds The Compound Corroding Both Heatsink And Silicon Crystal",
+      "url": "https://wccftech.com/zephyrus-m16-liquid-metal-corrosion-issue-heatsink-cpu/",
+      "publisher": "Wccftech"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/asus-zephyrus-m16-fluessigmetall-korrosion-heatsink-2026.webp",
+    "alt": "Flüssigmetall frisst sich durch den Kühler - dreifache FPS nach der Reparatur",
+    "credit": "Bild: Tom's Hardware",
+    "sourceUrl": "https://www.tomshardware.com/laptops/gaming-laptops/poor-liquid-metal-application-almost-destroys-asus-zephyrus-m16-laptop-eats-through-the-processor-lid-paste-replacement-triples-framerates-drops-temps-and-eliminates-hard-crashes",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "msi-katana-15-hx-c14-ddr4-rueckkehr-2026",
+    "xbox-project-helix-geraetefamilie-sharma-2026",
+    "lenovo-legion-go-bios-v42-bricked-2026"
+  ]
+}

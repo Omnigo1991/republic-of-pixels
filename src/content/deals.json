@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-30T08:17:59.901Z",
+  "updatedAt": "2026-08-30T12:05:15.937Z",
   "deals": [
     {
       "appId": 1174180,
@@ -35,17 +35,6 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1113120/capsule_184x69.jpg?t=1733140180"
     },
     {
-      "appId": 1551360,
-      "title": "Forza Horizon 5",
-      "discountPercent": 60,
-      "originalPrice": 5999,
-      "finalPrice": 2399,
-      "currency": "EUR",
-      "endsAt": "2026-09-03T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1551360/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1551360/capsule_184x69.jpg?t=1787677939"
-    },
-    {
       "appId": 3240220,
       "title": "Grand Theft Auto V Enhanced",
       "discountPercent": 56,
@@ -66,6 +55,17 @@
       "endsAt": "2026-09-10T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/1363080/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1363080/capsule_184x69.jpg?t=1787906126"
+    },
+    {
+      "appId": 1623730,
+      "title": "Palworld",
+      "discountPercent": 30,
+      "originalPrice": 2899,
+      "finalPrice": 2029,
+      "currency": "EUR",
+      "endsAt": "2026-09-08T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1623730/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/0703d5a0658c7aedaa3be4391d6f5cccc1bb6d7a/capsule_184x69.jpg?t=1784714419"
     }
   ]
 }

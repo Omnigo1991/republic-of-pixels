@@ -1,0 +1,162 @@
+{
+  "slug": "corsair-rm1000e-2026-thermalprotect-netzteil-test",
+  "title": "Kabel misst 65 Grad - und schaltet die Grafikkarte einfach ab",
+  "subtitle": "Corsairs RM1000e (2026) bringt mit ThermalProtect einen Temperatursensor direkt in den 12V-2x6-Stecker, und die Kritik hält das für die bislang praktischste Antwort auf schmelzende Anschlüsse",
+  "excerpt": "Schmelzende 12V-2x6-Stecker sind seit Jahren ein Ärgernis. Corsair verlegt die Schutzschaltung nun ins Kabel selbst - im Test bleibt allerdings die Frage, was der Bundle-Umfang für 180 Dollar rechtfertigt.",
+  "seoTitle": "Corsair RM1000e 2026 ThermalProtect im Test-Überblick",
+  "metaDescription": "Corsairs RM1000e (2026) misst die Temperatur im 12V-2x6-Kabel und kappt bei 65 Grad die GPU. Was die Kritik zu Effizienz, Lautstärke und Preis sagt.",
+  "category": "reviews",
+  "platforms": [
+    "pc"
+  ],
+  "bereich": "hardware",
+  "tags": [
+    "Corsair",
+    "Netzteile",
+    "12V-2x6",
+    "PC-Hardware",
+    "Grafikkarten"
+  ],
+  "tldr": [
+    "Das Corsair RM1000e (2026) kam am 18. August auf den Markt und kostet 179,99 US-Dollar bei sieben Jahren Garantie",
+    "Jedes 2026er-RMe-Modell liegt mit einem ThermalProtect-12V-2x6-Kabel bei, dessen Sensor die GPU bei 65 Grad abschaltet",
+    "Cybenetics Platinum und LAMBDA A auf der Verpackung, bis 500 Watt bleibt der Lüfter aus - ein 80-PLUS-Logo fehlt bewusst",
+    "Kritikpunkte laut Test: Teapo-Kondensatoren, magerer Lieferumfang, geteilter Modularanschluss und fehlender Lüfterschalter"
+  ],
+  "whyItMatters": "Geschmolzene 12V-2x6-Stecker sind seit der Einführung der Hochleistungs-Grafikkarten ein wiederkehrendes Risiko, und bislang lag der Schutz vor allem bei Sorgfalt beim Einstecken. Corsair verlagert die Absicherung ins Kabel und macht sie damit unabhängig von Grafikkartenhersteller, Software oder Mainboard. Für alle, die eine stromhungrige GPU betreiben, verschiebt sich damit die Frage vom Hoffen zum Absichern.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Wenn ein Netzteil in einer neuen Jahresrevision erscheint, ändert sich meist wenig. Beim Corsair RM1000e (2026) ist es genau ein Detail - und ausgerechnet das adressiert eines der hartnäckigsten Hardware-Probleme der letzten Jahre. In der 2026er-Auflage der RMe-Serie steckt ein Temperatursensor im 12V-2x6-Kabel, der die Grafikkarte abschaltet, bevor der Stecker Schaden nimmt. Tom's Hardware hat das 1000-Watt-Modell getestet und kommt zu einem klaren Urteil."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "65 °C",
+          "label": "Auslöseschwelle des ThermalProtect-Sensors im 12V-2x6-Kabel"
+        },
+        {
+          "value": "180 $",
+          "label": "UVP des RM1000e (2026) inklusive sieben Jahren Garantie"
+        },
+        {
+          "value": "500 W",
+          "label": "Lastbereich, in dem der Lüfter komplett stillsteht"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Der Schutz sitzt im Kabel, nicht im Netzteil"
+    },
+    {
+      "type": "paragraph",
+      "text": "ThermalProtect ist der Grund, warum es diese Revision überhaupt gibt. Der Sensor sitzt im Kabelkamm, rund 30 Millimeter hinter dem Stecker der Grafikkarte, und ist mit den Sense-Pins des 12V-2x6-Anschlusses verdrahtet. Überschreitet die Temperatur an dieser Stelle 65 Grad, zieht der Sensor die Leitungen und fordert die Karte zum Abschalten auf - laut Corsair innerhalb von Millisekunden. Für die Nutzerin oder den Nutzer bedeutet das einen schwarzen Bildschirm, während der Rest des Systems weiterläuft."
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Test ordnet die Lösung als bewusst grobe, dafür universelle Massnahme ein: Sie ist weniger präzise als eine Strommessung pro Pin und überwacht das Kabel statt der Buchse auf der Karte. Dafür braucht sie weder Software noch einen Mainboard-Header noch Mitarbeit des GPU-Herstellers und funktioniert mit jeder Karte und jedem Netzteil mit nativem 12V-2x6-Anschluss. Eine Einschränkung gibt es: Das Kabel hat eine Ausrichtung, der Sensor muss zur Grafikkarte zeigen, sonst bleibt die Schutzfunktion wirkungslos."
+    },
+    {
+      "type": "quote",
+      "text": "Mit ThermalProtect hat Corsair im Grunde den Sicherheitsgurt für stromhungrige Grafikkarten erfunden - und ihn der Welt zur Verfügung gestellt.",
+      "attribution": "Tom's Hardware"
+    },
+    {
+      "type": "heading",
+      "text": "Platinum-Effizienz ohne 80-PLUS-Aufkleber"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die RMe-Serie ist Corsairs Mittelklasse, unterhalb von RMx und deutlich unter HXi und AXi angesiedelt, und wurde seit 2022 mehrfach überarbeitet. Gebaut wird die 2026er-Version von HEC auf der bekannten RMe-Plattform. Auffällig ist die Zertifizierungsstrategie: Auf der Verpackung prangen Cybenetics Platinum und ein LAMBDA-A-Geräuschsiegel, dazu ATX 3.1 mit PCIe 5.1 sowie ein Hinweis auf die Kompatibilität mit Nvidias 50er-Serie. Ein 80-PLUS-Logo fehlt komplett - laut Test kein Versehen, sondern Folge der öffentlich angekündigten Entscheidung, künftig ausschliesslich auf Cybenetics zu setzen."
+    },
+    {
+      "type": "paragraph",
+      "text": "Elektrisch attestiert der Test dem Netzteil starke Werte bei Effizienz, Restwelligkeit und Spannungsregulation. Bis 500 Watt bleibt der Lüfter aus. Mit 140 x 150 x 86 Millimetern gehört das Gehäuse zu den kompaktesten, die bei 1000 Watt praktisch machbar sind. Die 1000 Watt liegen auf einer einzigen 12-Volt-Schiene an und sind für 50 Grad Umgebungstemperatur spezifiziert."
+    },
+    {
+      "type": "heading",
+      "text": "Wo der Test Abzüge verteilt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Lieferumfang fällt dünn aus: Netzkabel, vier Schrauben, ein paar Kabelbinder und ein knappes Handbuch - keine Klettbänder, keine Kabelkämme, kein Tester. Für 180 Dollar bewertet der Test das als geizig. Die Kabel selbst sind komplett schwarz, einzeln ummantelt und geprägt statt der früher genutzten Flachbandvariante."
+    },
+    {
+      "type": "list",
+      "items": [
+        "24-Pin mit 610 mm, zwei EPS-4+4-Leitungen mit 750 mm",
+        "ThermalProtect-12V-2x6-Kabel mit 650 mm",
+        "12V-2x6-auf-zwei-8-Pin-PCIe-Adapterkabel mit 650 mm",
+        "zwei einzelne 8-Pin-PCIe-Leitungen mit 650 mm",
+        "ein SATA-Kabel mit vier Anschlüssen sowie ein gemischtes Kabel mit zwei SATA und zwei Molex, beide 750 mm"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Ein handfestes Limit: Das PCIe-Adapterkabel belegt denselben netzteilseitigen Anschluss wie das 12V-2x6-Kabel. Entweder 12V-2x6 oder vier PCIe-8-Pin-Stecker - beides gleichzeitig geht nicht. Dazu kommen Teapo-Kondensatoren, ein fehlender Lüfterschalter und eine Garantie von sieben Jahren, die der Test in dieser Preisklasse als Kritikpunkt notiert, auch wenn Corsair damit für die Kategorie eher grosszügig ist."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Corsair verkauft seit fast zwei Jahrzehnten Netzteile und lässt Plattformen wie fast alle Marken bei OEMs fertigen - CWT, Seasonic, Great Wall und HEC waren alle schon dran. Das Besondere an der 2026er-RMe-Generation ist nicht die Plattform, sondern dass ein Schutzmechanismus gegen schmelzende Stecker ohne Zusatzsoftware und ohne Herstellerabsprache funktioniert. Wer eine leistungsstarke Grafikkarte über 12V-2x6 versorgt, bekommt hier zum Mittelklassepreis eine Absicherung, die es in dieser Form bisher nicht gab."
+    }
+  ],
+  "poll": {
+    "question": "Temperatursensor im Kabel - reicht euch das als Schutz vor schmelzenden Steckern?",
+    "options": [
+      "Ja, endlich eine Lösung, die ohne Software funktioniert",
+      "Nein, ich will Strommessung pro Pin statt Notabschaltung",
+      "Das Problem sollte gar nicht erst am Kunden hängen",
+      "Mir egal, ich fahre weiter mit 8-Pin-PCIe"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": {
+    "label": "Klare Empfehlung",
+    "strengths": [
+      "ThermalProtect-Kabel schaltet die GPU bei 65 Grad ab - ohne Software oder Herstellerunterstützung",
+      "Effizienz auf Cybenetics-Platinum-Niveau, starke Werte bei Ripple und Spannungsregulation",
+      "Bis 500 Watt komplett lüfterlos, sehr kompaktes Gehäuse für ein 1000-Watt-Netzteil",
+      "Vollmodulare, einzeln ummantelte Kabel und nativer 12V-2x6-Anschluss"
+    ],
+    "weaknesses": [
+      "Sehr dünner Lieferumfang ohne Klettbänder, Kabelkämme oder Tester",
+      "12V-2x6- und PCIe-Adapterkabel teilen sich denselben Anschluss am Netzteil",
+      "Teapo-Kondensatoren, kein Lüftermodus-Schalter, Garantie auf sieben Jahre begrenzt"
+    ],
+    "forWhom": "Für alle, die eine stromhungrige Grafikkarte über 12V-2x6 versorgen und eine Absicherung gegen schmelzende Stecker wollen, ohne auf Enthusiasten-Preise zu gehen.",
+    "verdict": "Die Kritik bewertet das RM1000e (2026) als elektrisch starkes Mittelklasse-Netzteil, dessen eigentlicher Verkaufsgrund im ThermalProtect-Kabel liegt - laut Test der praktikabelste Schutz vor geschmolzenen 12V-2x6-Anschlüssen, weil er weder Software noch Mitarbeit des GPU-Herstellers braucht. Effizienz, Restwelligkeit und Regulation gelten als durchweg gut, der 500-Watt-Fanless-Bereich als Pluspunkt. Abzüge gibt es für Teapo-Kondensatoren, den geteilten Modularanschluss und einen für 180 Dollar spürbar mageren Lieferumfang.",
+    "recommendation": "Wer ohnehin ein neues 1000-Watt-Netzteil für eine moderne Grafikkarte sucht, greift hier bedenkenlos zu - ein bestehendes, gutes ATX-3.1-Netzteil muss man dafür aber nicht ersetzen."
+  },
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-30T12:05:12.481Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "waveform",
+  "sources": [
+    {
+      "title": "Corsair RM1000e (2026) ThermalProtect power supply review: Temperature-sensing 12V-2x6 cable shuts the GPU down before a connector can melt",
+      "url": "https://www.tomshardware.com/pc-components/power-supplies/corsair-rm1000e-2026-thermalprotect-power-supply-review",
+      "publisher": "Tom's Hardware"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/corsair-rm1000e-2026-thermalprotect-netzteil-test.webp",
+    "alt": "Kabel misst 65 Grad - und schaltet die Grafikkarte einfach ab",
+    "credit": "Bild: Tom's Hardware",
+    "sourceUrl": "https://www.tomshardware.com/pc-components/power-supplies/corsair-rm1000e-2026-thermalprotect-power-supply-review",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "gpu-preise-jahresbilanz-tracking-2026",
+    "nvidia-rtx-5090-mainboard-bundles-taiwan-2026",
+    "nvidia-quartalszahlen-279-milliarden-speicher-geforce-2026"
+  ]
+}
