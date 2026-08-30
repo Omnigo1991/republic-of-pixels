@@ -1,0 +1,156 @@
+{
+  "slug": "donkey-kong-64-pc-port-rekongpiled-ohne-ki-2026",
+  "title": "«Keine generative KI» - Donkey Kong 64 läuft jetzt nativ auf dem PC",
+  "subtitle": "Das Fanprojekt DK64 Rekongpiled entstand in zwei Monaten - als Gegenentwurf zu einem konkurrierenden Port, der stark auf Vibe Coding setzte",
+  "excerpt": "Ein nativer PC-Port von Donkey Kong 64 ist da - inklusive hoher Auflösungen, Maussteuerung und einer klaren Ansage der Programmierer: Bei diesem Projekt half keine generative KI. Der Grund dafür liegt zwei Monate zurück.",
+  "seoTitle": "Donkey Kong 64: Nativer PC-Port ohne generative KI",
+  "metaDescription": "DK64 Rekongpiled bringt Donkey Kong 64 nativ auf den PC - mit hohen Frameraten, Maussteuerung und dem ausdrücklichen Verzicht auf generative KI.",
+  "category": "news",
+  "platforms": [
+    "pc",
+    "nintendo"
+  ],
+  "bereich": "games",
+  "tags": [
+    "Donkey Kong 64",
+    "N64 Recomp",
+    "PC-Port",
+    "Fanprojekt",
+    "Nintendo 64"
+  ],
+  "tldr": [
+    "DK64 Rekongpiled ist ein nativer PC-Port von Donkey Kong 64 auf Basis einer Recompilation, nicht einer Emulation",
+    "Zum Start wird ein originales Donkey-Kong-64-ROM benötigt",
+    "Der Port läuft in hohen Auflösungen und Frameraten und unterstützt Maussteuerung",
+    "Das Team betont ausdrücklich, dass zu keinem Zeitpunkt generative KI zum Einsatz kam"
+  ],
+  "whyItMatters": "Recompilation-Projekte holen alte Konsolenklassiker technisch sauber auf moderne Hardware - ohne Emulator-Kompromisse bei Auflösung, Framerate und Eingabegeräten. Zugleich zeigt der Fall, wie stark sich die Modding- und Preservation-Szene daran spaltet, ob KI-generierter Code solchen Projekten hilft oder langfristig schadet.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Donkey Kong 64 gehört zu den grossen Sammelmarathons der Nintendo-64-Ära - und ist ausgerechnet einer jener Klassiker, um die Portierungsprojekte lange einen Bogen gemacht haben. Jetzt ist mit DK64 Rekongpiled ein nativer PC-Port erschienen. Das Team dahinter verbindet die Veröffentlichung mit einer Botschaft, die im Trailer und in einem Bluesky-Beitrag gleichermassen auftaucht: Bei der Arbeit sei zu keinem Zeitpunkt generative KI im Spiel gewesen."
+    },
+    {
+      "type": "embed",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=oVUvGGXTk0E"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "1999",
+          "label": "Erscheinungsjahr des Original-Plattformers für Nintendo 64"
+        },
+        {
+          "value": "2 Monate",
+          "label": "vom Projektstart bis zur Veröffentlichung des Ports"
+        },
+        {
+          "value": "4K / 200 fps",
+          "label": "Werte, mit denen der Release-Trailer den Port bewirbt"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Recompilation statt Emulation"
+    },
+    {
+      "type": "paragraph",
+      "text": "Technisch ist DK64 Rekongpiled keine Emulation, sondern eine Recompilation: Der Code des Originals wird für moderne Hardware übersetzt, statt eine N64-Umgebung nachzubilden. Das Resultat verhält sich wie ein gewöhnliches PC-Spiel - mit hohen Auflösungen und hohen Frameraten. Wer will, kann sogar mit der Maus spielen."
+    },
+    {
+      "type": "paragraph",
+      "text": "Inhaltlich bleibt alles beim Alten. Die etwas weiche 3D-Optik, der federnde Soundtrack und all jene Eigenheiten, die Donkey Kong 64 damals gleichzeitig innovativ und stellenweise zermürbend machten, sind unverändert vorhanden. Voraussetzung für den Start ist ein originales Donkey-Kong-64-ROM - der Port selbst liefert keine Spieldaten mit."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Nativer PC-Port statt Emulator",
+        "Hohe Auflösungen und Frameraten",
+        "Maussteuerung möglich",
+        "Originales ROM zwingend erforderlich"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Der Streit um Vibe Coding"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Vorgeschichte erklärt, warum der KI-Verzicht so prominent kommuniziert wird. Das Projekt startete erst vor rund zwei Monaten - als Reaktion darauf, dass eine andere Gruppe an einem DK64-Port arbeitete und dabei stark auf KI-generierten Code setzte. Im Discord-Server rund um N64 Recomp erklärte Mitwirkender 2dos damals, dieser Ansatz werde langfristig zum Problem."
+    },
+    {
+      "type": "quote",
+      "text": "Unser DK64-Recompilation-Projekt wird von Leuten getragen, die seit weit über einem Jahrzehnt am Backend des DK64-Codes arbeiten und daran herumbasteln - und die für Codeänderungen nicht auf Vibe Coding angewiesen sind.",
+      "attribution": "2dos, Mitwirkender an DK64 Rekongpiled"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Sorge: KI-generierter Code lasse sich mit der Zeit «zunehmend schwerer verwalten». In Emulations- und Hacking-Communitys sind Portierungen mit generativen Programmierwerkzeugen wie Claude in den vergangenen Jahren zahlreich aufgetaucht, weil sie sich in einem Bruchteil der Zeit zusammensetzen lassen. Erfahrene Programmiererinnen und Programmierer sehen darin allerdings zu viele Fehlerquellen - und arbeiten lieber mit eigenem Handwerk, so sauber wie möglich."
+    },
+    {
+      "type": "quote",
+      "text": "Zu keinem Zeitpunkt des Prozesses wurde generative KI eingesetzt.",
+      "attribution": "2dos auf Bluesky"
+    },
+    {
+      "type": "heading",
+      "text": "Ein Team mit DK64-Vergangenheit"
+    },
+    {
+      "type": "paragraph",
+      "text": "Dass ein solcher Port in zwei Monaten stehen kann, hat mit den Beteiligten zu tun: Teile des Teams haben zuvor am DK64 Randomizer gearbeitet und kennen die Innereien des Spiels entsprechend gut. Diese jahrelange Vertrautheit mit dem Code ist das eigentliche Argument des Projekts - nicht die Geschwindigkeit, sondern die Wartbarkeit dessen, was am Ende im Repository landet."
+    },
+    {
+      "type": "paragraph",
+      "text": "Selbstironie gehört ebenfalls dazu. Im Release-Trailer muss Schurke King K. Rool - gesprochen von 2dos - feststellen, dass sein Plan, den Klassiker vom PC fernzuhalten, an ein paar hartnäckigen Programmierern gescheitert ist. Sein Handlanger, ebenfalls von 2dos vertont, kann nicht fassen, dass das Spiel in 4K mit 200 Bildern pro Sekunde läuft - und lässt seinen Chef stehen, um es selbst auszuprobieren."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "DK64 Rekongpiled ist ein inoffizielles Fanprojekt und damit rechtlich so verwundbar wie jede Arbeit dieser Art. Interessanter als die Technik ist deshalb das Signal: Die Recompilation-Szene positioniert sich hier bewusst gegen einen Trend, der Portierungen schneller, aber auch fragiler macht. Dass ausgerechnet das KI-freie Projekt zuerst spielbar ist, dürfte in dieser Debatte noch häufiger zitiert werden."
+    }
+  ],
+  "poll": {
+    "question": "Wie steht ihr zu KI-Code in Fan-Ports und Emulationsprojekten?",
+    "options": [
+      "Finger weg - Wartbarkeit geht vor Tempo",
+      "Egal, Hauptsache es läuft stabil",
+      "KI ist okay, wenn Menschen alles gegenprüfen",
+      "Ohne KI würden viele Projekte nie fertig"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-30T00:03:04.166Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "waveform",
+  "sources": [
+    {
+      "title": "A native port of Donkey Kong 64 is finally playable on PC thanks to a team of programmers who boast that 'no generative AI [was] used at any point in the process'",
+      "url": "https://www.pcgamer.com/games/action/donkey-kong-64-is-finally-playable-on-pc-thanks-to-a-team-of-programmers-who-boast-that-no-generative-ai-was-used-at-any-point-in-the-process/",
+      "publisher": "PC Gamer"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/donkey-kong-64-pc-port-rekongpiled-ohne-ki-2026.webp",
+    "alt": "«Keine generative KI» - Donkey Kong 64 läuft jetzt nativ auf dem PC",
+    "credit": "Bild: PC Gamer",
+    "sourceUrl": "https://www.pcgamer.com/games/action/donkey-kong-64-is-finally-playable-on-pc-thanks-to-a-team-of-programmers-who-boast-that-no-generative-ai-was-used-at-any-point-in-the-process/",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "banjo-kazooie-evercade-double-pack-native-ports-2026",
+    "mgs4-pc-statue-erfolg-handle-with-caution-2026",
+    "ki-backlash-1666-amsterdam-james-pond-legacy-2026"
+  ]
+}

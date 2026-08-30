@@ -1,19 +1,20 @@
 {
-  "datum": "2026-08-29",
-  "nummer": 21,
-  "loesung": "Ghost of Tsushima",
+  "datum": "2026-08-30",
+  "nummer": 22,
+  "loesung": "Halo Infinite",
   "akzeptiert": [
-    "ghostoftsushima"
+    "haloinfinite",
+    "halo"
   ],
   "hinweise": [
-    "Erschienen 2020 · Open World",
-    "Samurai"
+    "Erschienen 2021 · Shooter",
+    "Master Chief"
   ],
   "bilder": [
-    "/images/pixelraten/2026-08-29-s1.jpg",
-    "/images/pixelraten/2026-08-29-s2.jpg",
-    "/images/pixelraten/2026-08-29-s3.jpg",
-    "/images/pixelraten/2026-08-29-s4.jpg",
-    "/images/pixelraten/2026-08-29-s5.jpg"
+    "/images/pixelraten/2026-08-30-s1.jpg",
+    "/images/pixelraten/2026-08-30-s2.jpg",
+    "/images/pixelraten/2026-08-30-s3.jpg",
+    "/images/pixelraten/2026-08-30-s4.jpg",
+    "/images/pixelraten/2026-08-30-s5.jpg"
   ]
 }

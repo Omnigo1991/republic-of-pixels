@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-29T20:55:29.046Z",
+  "updatedAt": "2026-08-30T00:04:12.025Z",
   "deals": [
     {
       "appId": 1174180,
@@ -11,6 +11,17 @@
       "endsAt": "2026-09-08T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/1174180/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/capsule_184x69.jpg?t=1759502961"
+    },
+    {
+      "appId": 1149460,
+      "title": "ICARUS",
+      "discountPercent": 75,
+      "originalPrice": 3399,
+      "finalPrice": 849,
+      "currency": "EUR",
+      "endsAt": "2026-09-12T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1149460/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1149460/capsule_184x69.jpg?t=1784744651"
     },
     {
       "appId": 3240220,
@@ -44,17 +55,6 @@
       "endsAt": "2026-09-08T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/1623730/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/0703d5a0658c7aedaa3be4391d6f5cccc1bb6d7a/capsule_184x69.jpg?t=1784714419"
-    },
-    {
-      "appId": 739630,
-      "title": "Phasmophobia",
-      "discountPercent": 30,
-      "originalPrice": 1899,
-      "finalPrice": 1329,
-      "currency": "EUR",
-      "endsAt": "2026-09-12T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/739630/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/739630/6ecdf873de7be9450243531dd07e57e466e82464/capsule_184x69_alt_assets_12.jpg?t=1787675345"
     },
     {
       "appId": 3321460,
