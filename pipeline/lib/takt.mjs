@@ -16,9 +16,14 @@
 //
 // DIE TRENNUNG, AUF DIE ES ANKOMMT: Wie oft wir HINSCHAUEN und wie viel wir
 // VERÖFFENTLICHEN sind zwei Regler, keiner. Hinschauen darf sehr häufig
-// sein, es kostet fast nichts. Veröffentlichen bleibt bei 19 am Tag - das ist
-// unser gemessener Ist-Wert und liegt bereits unter dem Median der
-// Mitbewerber (rund 30, gemessen an deren Feeds am 27.08.2026).
+// sein, es kostet fast nichts. Wie viel erscheint, steht in TAGESBUDGET.
+//
+// Dieser Wert bildete anfangs nur ab, was wir ohnehin produzierten (20). Seit
+// dem 30.08.2026 steht er auf 12, und zwar als bewusste Drosselung aus
+// Kostengründen - die Herleitung steht bei der Konstante selbst. Zum
+// Vergleich: Der Median der Mitbewerber lag am 27.08.2026 bei rund 30
+// Artikeln am Tag, gemessen an deren Feeds. Wir liegen also deutlich
+// darunter, und das ist eine Entscheidung, kein Versehen.
 //
 // DESHALB STEHT DIE REGEL HIER IM CODE UND NICHT IM PROMPT. Hausregel: Eine
 // Regel, die nur im Prompt steht, ist keine Regel. Das Modell entscheidet
@@ -35,18 +40,34 @@ const ZEITZONE = "Europe/Zurich";
 /**
  * Standardbudget.
  *
- * 20 ist unser gemessener Ist-Wert, NICHT eine Drosselung: Seit der
- * Umstellung auf den Vier-Stunden-Takt am 23.08.2026 lagen wir bei 19, 23 und
- * 19 Artikeln pro Tag. Der Durchschnitt über die gesamten 23 Tage (19,4) wäre
- * der falsche Massstab gewesen, weil der Takt in dieser Zeit zweimal geändert
- * wurde - in der ersten Woche liefen wir stündlich und kamen auf über 30.
+ * VON 20 AUF 12 (Tim, 30.08.2026: "Ja, mach die Artikel auch auf 12"). Das
+ * ist die erste bewusste Drosselung - bis hierhin bildete das Budget nur ab,
+ * was wir ohnehin produzierten.
+ *
+ * Der Grund ist eine Kostenrechnung mit unangenehmem Ergebnis. Gemessen an
+ * echten Läufen kostet uns ein Artikel rund 17 Cent, macht bei 20 Stück etwa
+ * $3.40 am Tag. Was ein Artikel dafür einbringt, steht in der Google Search
+ * Console: 6,7 Impressionen und 0,15 Klicks über drei Monate. Also ungefähr
+ * ein Klick pro sieben Artikel.
+ *
+ * Zwölf statt zwanzig spart rund $1.40 am Tag. Was wir dafür aufgeben, sind
+ * rechnerisch etwa 54 Impressionen täglich - bei einer Seite, die insgesamt
+ * 126 am Tag hat, ist das viel; bei einer Seite, die davon 2,8 Klicks
+ * bekommt, ist es wenig.
+ *
+ * NEBENWIRKUNG, DIE UNS GELEGEN KOMMT: Die Startseite trägt 27 Kacheln. Bei
+ * 20 Artikeln am Tag war ein Artikel 74 Minuten lang Aufmacher und nach 33
+ * Stunden verschwunden. Bei 12 sind es gut zwei Stunden und zweieinhalb
+ * Tage. Tim hatte am 27.08. gefragt, ob Artikel nicht zu schnell von der
+ * Startseite rutschen - das war die richtige Beobachtung, und sie löst sich
+ * hier nebenbei mit.
  *
  * Das Budget zählt ALLE Artikel des Tages, nicht nur die dieses Laufs. Damit
  * teilen sich der reguläre Lauf und der Eilmeldungs-Lauf dasselbe Kontingent,
  * ganz ohne Absprache zwischen den beiden - eine früh veröffentlichte
  * Eilmeldung nimmt dem Abend einen Platz weg, statt obendrauf zu kommen.
  */
-export const TAGESBUDGET = Number(process.env.TAGESBUDGET ?? 20);
+export const TAGESBUDGET = Number(process.env.TAGESBUDGET ?? 12);
 
 /**
  * Zuschlag für Eilmeldungen. Eine wirklich grosse Nachricht darf das
