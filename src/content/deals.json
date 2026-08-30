@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-30T00:04:12.025Z",
+  "updatedAt": "2026-08-30T03:05:34.780Z",
   "deals": [
     {
       "appId": 1174180,
@@ -22,6 +22,17 @@
       "endsAt": "2026-09-12T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/1149460/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1149460/capsule_184x69.jpg?t=1784744651"
+    },
+    {
+      "appId": 1551360,
+      "title": "Forza Horizon 5",
+      "discountPercent": 60,
+      "originalPrice": 5999,
+      "finalPrice": 2399,
+      "currency": "EUR",
+      "endsAt": "2026-09-03T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1551360/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1551360/capsule_184x69.jpg?t=1787677939"
     },
     {
       "appId": 3240220,
@@ -55,17 +66,6 @@
       "endsAt": "2026-09-08T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/1623730/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/0703d5a0658c7aedaa3be4391d6f5cccc1bb6d7a/capsule_184x69.jpg?t=1784714419"
-    },
-    {
-      "appId": 3321460,
-      "title": "Crimson Desert Enhanced",
-      "discountPercent": 20,
-      "originalPrice": 6999,
-      "finalPrice": 5599,
-      "currency": "EUR",
-      "endsAt": "2026-09-09T15:00:00.000Z",
-      "url": "https://store.steampowered.com/app/3321460/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3321460/9fef3b5648defc30432d4b3221296350354b8742/capsule_184x69.jpg?t=1787909144"
     }
   ]
 }

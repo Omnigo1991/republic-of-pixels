@@ -1,0 +1,134 @@
+{
+  "slug": "msi-katana-15-hx-c14-ddr4-rueckkehr-2026",
+  "title": "MSI holt DDR4 ins Gaming-Notebook zurück - wird es dadurch günstiger?",
+  "subtitle": "Das Katana 15 HX C14 kombiniert wahlweise alten Speicher mit Core i9 und RTX 5070 - eine Preisempfehlung nennt MSI aber nicht",
+  "excerpt": "Steigende RAM-Preise zwingen zum Rückschritt: MSI bietet sein neues Katana-Notebook wahlweise mit DDR4-3200 statt DDR5 an. Ob das am Ladenpreis wirklich etwas ändert, ist die grosse offene Frage.",
+  "seoTitle": "MSI Katana 15 HX C14: DDR4 kehrt ins Gaming-Notebook zurück",
+  "metaDescription": "MSI bietet das Katana 15 HX C14 wahlweise mit DDR4-3200 an, dazu Core i9-14900HX und RTX 5070. Was der Rückschritt beim Speicher wirklich bringt.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "bereich": "hardware",
+  "tags": [
+    "MSI",
+    "Gaming-Notebooks",
+    "DDR4",
+    "GeForce RTX 5070",
+    "Hardware"
+  ],
+  "tldr": [
+    "MSI bietet das Katana 15 HX C14 wahlweise mit DDR5 oder DDR4-3200 an - beide Varianten haben zwei SO-DIMM-Slots.",
+    "Ein 32-GB-Kit mit DDR4-3200 kostet aktuell ab 220 Euro, ein vergleichbares DDR5-Kit ab 380 Euro.",
+    "Im Inneren arbeiten ein Core i9-14900HX von 2024 und eine GeForce RTX 5070 Laptop mit 8 GB GDDR7 und bis zu 115 Watt.",
+    "Preise für Deutschland nennt MSI bislang nicht - ob DDR4 den Endpreis drückt, bleibt offen."
+  ],
+  "whyItMatters": "Die Speicherpreise steigen so stark, dass Hersteller lieber einen alten RAM-Standard reaktivieren, als die Notebook-Preise weiter anzuheben. Für Käuferinnen und Käufer heisst das: Ausstattungsmerkmale, die jahrelang selbstverständlich schienen, werden wieder zum Verhandlungsgegenstand - und der Blick ins Datenblatt lohnt sich mehr denn je.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Ein Gaming-Notebook mit GeForce RTX 5070, aber DDR4-Arbeitsspeicher: Was vor zwei Jahren nach einem Tippfehler im Datenblatt geklungen hätte, ist beim MSI Katana 15 HX C14 eine offizielle Konfigurationsoption. Der Hersteller stellt regionalen Vertriebspartnern frei, das Modell entweder mit DDR5 oder mit DDR4-3200 anzubieten - eine direkte Reaktion auf die aktuell hohen Speicherpreise."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "220 €",
+          "label": "Mindestpreis für ein 32-GB-Kit aus zwei DDR4-3200-Modulen"
+        },
+        {
+          "value": "380 €",
+          "label": "Mindestpreis für ein vergleichbares DDR5-Kit"
+        },
+        {
+          "value": "1.799 €",
+          "label": "regulärer Preis des bereits erhältlichen Katana 15 HX B14WGK"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Zwei Speicherwelten, ein Gehäuse"
+    },
+    {
+      "type": "paragraph",
+      "text": "Beide Ausführungen besitzen zwei SO-DIMM-Steckplätze und sollen laut MSI bis zu 96 GB Arbeitsspeicher aufnehmen. Bei der DDR4-Variante ist diese Angabe allerdings zweifelhaft: Für 96 GB bräuchte es zwei Module mit je 48 GB, und solche DDR4-SO-DIMMs gibt es schlicht nicht am Markt. Realistisch sind hier höchstens 64 GB mit zwei 32-GB-Riegeln. Vermutlich hat MSI die Maximalkapazität der DDR5-Version versehentlich übernommen."
+    },
+    {
+      "type": "heading",
+      "text": "Der Preisdruck steht im Datenblatt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Grund für den Rückschritt liegt auf der Hand. Ein 32-GB-Kit aus zwei DDR4-3200-Modulen kostet derzeit mindestens 220 Euro, für ein vergleichbares DDR5-Kit werden mindestens 380 Euro fällig. Für einen Hersteller, der eine ganze Modellreihe kalkuliert, ist das eine erhebliche Differenz - und offenbar Grund genug, einen Standard zurückzuholen, der im Gaming-Segment längst als abgelöst galt."
+    },
+    {
+      "type": "heading",
+      "text": "Alte CPU trifft aktuelle Grafik"
+    },
+    {
+      "type": "paragraph",
+      "text": "Auch beim Prozessor bleibt MSI konservativ: In der grössten Konfiguration arbeitet weiterhin Intels Core i9-14900HX aus dem Jahr 2024 mit acht Performance- und 16 Effizienzkernen. Daneben steht eine deutlich modernere GeForce RTX 5070 Laptop GPU mit 8 GB GDDR7 und bis zu 115 Watt. Das gemeinsame Leistungsbudget beider Chips liegt bei maximal 170 Watt."
+    },
+    {
+      "type": "list",
+      "items": [
+        "15,6-Zoll-Display wahlweise mit QHD (2.560 × 1.440), 165 Hz und voller DCI-P3-Abdeckung oder Full HD mit 144 Hz",
+        "Zwei M.2-Steckplätze für PCIe-4.0-SSDs",
+        "Wi-Fi 6E, Gigabit-LAN, HDMI 2.1, USB-C mit DisplayPort und Power Delivery",
+        "60-Wh-Akku - vergleichsweise klein für diese Leistungsklasse",
+        "2,1 kg schwer und maximal 22,9 mm dick: 12,5 Prozent leichter und 10,2 Prozent dünner als das bisherige Katana 15 HX",
+        "Kühlung mit zwei Lüftern, drei Heatpipes und vier Luftauslässen"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Die entscheidende Zahl fehlt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgerechnet den Preis lässt MSI offen. Das neue Modell wird zwar als weltweit verfügbar bezeichnet, konkrete Varianten oder unverbindliche Preisempfehlungen für Deutschland nennt der Hersteller aber nicht. Ein Blick auf die Reihe zeigt, wie stabil das Preisniveau lange war: Das Katana GF66 mit Core i7-11800H und RTX 3070 startete 2021 regulär bei 1.599 Euro, das Katana 15 mit RTX 4070 zwei Jahre später sogar bei 1.499 Euro. Das aktuell erhältliche Katana 15 HX B14WGK mit i9-14900HX, RTX 5070, 16 GB DDR5 und 1 TB SSD kostet regulär 1.799 Euro - allerdings noch im alten Gehäuse."
+    },
+    {
+      "type": "paragraph",
+      "text": "Einordnung: DDR4 im Gaming-Notebook ist weniger eine technische als eine betriebswirtschaftliche Entscheidung. Ob der ältere Speicher am Ende den Kaufpreis senkt oder lediglich verhindert, dass er noch weiter steigt, entscheidet sich erst mit den ersten Angeboten im Handel. Wer sich für das Katana interessiert, sollte in der Zwischenzeit genau prüfen, welche Speichervariante im jeweiligen Angebot steckt - der Unterschied steht nicht immer prominent auf der Produktseite."
+    }
+  ],
+  "poll": {
+    "question": "DDR4 statt DDR5 im neuen Gaming-Notebook - akzeptabler Kompromiss?",
+    "options": [
+      "Ja, wenn das Notebook dadurch spürbar günstiger wird",
+      "Nur bei transparenter Kennzeichnung im Angebot",
+      "Nein, 2026 gehört DDR5 in ein Gaming-Notebook",
+      "Egal - die RTX 5070 mit 8 GB stört mich mehr"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-30T03:05:31.481Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "grid",
+  "sources": [
+    {
+      "title": "Rolle rückwärts: MSI bringt DDR4 ins Gaming-Notebook zurück",
+      "url": "https://www.computerbase.de/news/notebooks/rolle-rueckwaerts-msi-bringt-ddr4-ins-gaming-notebook-zurueck.99128/",
+      "publisher": "ComputerBase"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/msi-katana-15-hx-c14-ddr4-rueckkehr-2026.webp",
+    "alt": "MSI holt DDR4 ins Gaming-Notebook zurück - wird es dadurch günstiger?",
+    "credit": "Bild: ComputerBase",
+    "sourceUrl": "https://www.computerbase.de/news/notebooks/rolle-rueckwaerts-msi-bringt-ddr4-ins-gaming-notebook-zurueck.99128/",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "xbox-project-helix-geraetefamilie-sharma-2026",
+    "lenovo-legion-go-bios-v42-bricked-2026",
+    "ryzen-7-5800x3d-x370-vs-x570-test-2026"
+  ]
+}
