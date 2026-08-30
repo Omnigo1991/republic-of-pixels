@@ -1,0 +1,148 @@
+{
+  "slug": "dlss-5-rtx-4000-modder-dlssnr-dll-2026",
+  "title": "DLSS 5 nur für RTX 5000? Ein Modder umgeht die Sperre in Tagen",
+  "subtitle": "Die in NBA 2K27 entdeckte DLSSNR.dll startet nach Anpassung auch auf Ada Lovelace - offiziell bestätigt ist davon bislang gar nichts",
+  "excerpt": "Nvidias neue DLSS-Bibliothek läuft eigentlich nur auf Blackwell. Ein Modder hat die Blackwell-Binaries ausgetauscht - und damit eine Frage aufgeworfen, die Nvidia bisher unbeantwortet lässt.",
+  "seoTitle": "DLSS 5 auf RTX 4000: Modder umgeht Blackwell-Sperre",
+  "metaDescription": "Ein Modder bringt die DLSSNR.dll aus NBA 2K27 auf GeForce RTX 4000. Nvidia schweigt zur Exklusivität von DLSS 5 - alle Fakten zum unbestätigten Fund.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "bereich": "hardware",
+  "tags": [
+    "Nvidia",
+    "DLSS 5",
+    "GeForce RTX 4000",
+    "Modding",
+    "AMD FSR 4"
+  ],
+  "tldr": [
+    "Die in NBA 2K27 gefundene DLSSNR.dll aktiviert DLSS 5 offiziell nur auf GeForce RTX 5000 'Blackwell'",
+    "Modder Uncle Burrito hat die Blackwell-spezifischen CUDA-Binaries ersetzt und die Technik auf RTX 4000 'Ada Lovelace' zum Laufen gebracht",
+    "Nvidia hat eine Exklusivität für RTX 5000 bisher weder bestätigt noch dementiert - eine finale Vorstellung zur Gamescom 2026 blieb aus",
+    "Zu Leistung und Bildqualität auf Ada Lovelace liegen keine gesicherten Erkenntnisse vor, kein einziges Spiel ist offiziell freigegeben"
+  ],
+  "whyItMatters": "Wer eine RTX-4000-Karte besitzt, steht vor der Frage, ob Nvidias nächste Upscaling-Generation an ihm vorbeigeht - oder ob die Hardware technisch längst genügen würde. Der Modding-Nachweis erhöht den Druck auf Nvidia, ähnlich wie er es bei AMD und FSR 4 getan hat. Bis dahin bleibt alles inoffiziell und ohne Garantie auf Bildqualität.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Eine Bibliothek, die im Code von NBA 2K27 steckt, dort aber gar nicht aktiv ist, beschäftigt die PC-Szene derzeit mehr als jede offizielle Ankündigung: Die DLSSNR.dll gilt als Schlüssel zu DLSS 5 - und sie liess sich zunächst ausschliesslich auf GeForce RTX 5000 alias Blackwell ausführen. Innerhalb weniger Tage hat ein Modder diese Hürde beseitigt und die Technik auch auf Karten der Reihe RTX 4000 gestartet. Bestätigt ist davon nichts: Sämtliche Erkenntnisse stammen aus der Community, nicht von Nvidia."
+    },
+    {
+      "type": "embed",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=HxRFihnFQ4A"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "RTX 4000",
+          "label": "Ada-Lovelace-Karten führen die angepasste DLSSNR.dll inoffiziell aus"
+        },
+        {
+          "value": "Juni 2026",
+          "label": "gab AMD FSR 4 nach ähnlichem Druck auch für RX 7000 frei"
+        },
+        {
+          "value": "0",
+          "label": "Spiele sind bislang offiziell für DLSS 5 freigegeben"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Warum die DLL zunächst nur auf Blackwell lief"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der technische Grund für die Beschränkung ist bekannt: In der DLSSNR.dll stecken CUDA Binaries, die explizit für Blackwell kompiliert wurden. Ältere Architekturen können mit diesem Code schlicht nichts anfangen - der Start scheitert, bevor überhaupt ein Bild berechnet wird. Genau dieser Umstand liess viele Beobachter vermuten, dass Nvidia DLSS 5 tatsächlich als exklusives Feature der aktuellen Generation plant."
+    },
+    {
+      "type": "paragraph",
+      "text": "Eine Aussage dazu gibt es bis heute nicht. Nvidia hat eine Exklusivität für RTX 5000 weder bestätigt noch dementiert, und die zur Gamescom 2026 durchaus erwartete finale Vorstellung der Technologie fand nicht statt. Damit bleibt offen, wann DLSS 5 überhaupt startet - und auf welcher Hardware."
+    },
+    {
+      "type": "heading",
+      "text": "Der Modder tauscht aus, was Blackwell voraussetzt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Modder Uncle Burrito hat die inkompatiblen Dateien durch Varianten ersetzt, die zu Ada Lovelace passen - und DLSS 5 damit auf RTX-4000-Karten zum Laufen gebracht. Zuvor war die Bibliothek bereits per Mod in Titel wie Control und Cyberpunk 2077 gewandert, obwohl sie in NBA 2K27, wo sie gefunden wurde, noch gar nicht aktiv ist. Was fehlt, sind belastbare Messwerte."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Ob die Leistung auf RTX 4000 stärker einbricht als auf RTX 5000, ist offen",
+        "Ob die Bildqualität abweicht, lässt sich derzeit nicht gesichert beurteilen",
+        "Der Reifegrad von DLSS 5 bleibt ohne Launch-Termin grundsätzlich schwer einzuordnen"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Das gleiche Muster kennt man von AMD"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Parallele zu AMD drängt sich auf. FSR 4 war lange nur für die RX-9000-Serie vorgesehen, bis eine inoffiziell verfügbar gewordene Variante die Technik auch auf RX 7000 und RX 6000 lauffähig machte. Im Juni 2026 zog AMD nach und gab FSR 4 offiziell für RX 7000 frei. Wer heute auf einer RTX 4000 sitzt, dürfte genau diesen Verlauf im Hinterkopf haben - eine Garantie, dass Nvidia denselben Weg geht, ist er allerdings nicht."
+    },
+    {
+      "type": "heading",
+      "text": "Ohne Freigabe, ohne Creator Intent"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ein Punkt geht in der Begeisterung leicht unter: Keines der aktuell mit DLSS 5 genutzten Spiele ist offiziell dafür freigegeben worden. Seit der SIGGRAPH ist bekannt, wie Entwickler Einfluss auf den Einsatz von DLSS 5 nehmen können, damit der sogenannte Creator Intent gewahrt bleibt - also der beabsichtigte Bildlook eines Spiels. Beim Einsatz des Mods greift dieser Mechanismus nicht. Was Spielerinnen und Spieler dort sehen, entspricht nicht zwingend dem, was ein Studio später ausliefern würde."
+    },
+    {
+      "type": "paragraph",
+      "text": "Bemerkenswert ist die Stimmung drumherum. Die Kritik an DLSS 5 ist nicht verschwunden, fällt aber deutlich weniger scharf aus als bei der ersten Präsentation auf der GTC 2026, als Nvidia überwiegend auf Ablehnung stiess. Inzwischen ist das Bild wesentlich gemischter - offenbar auch, weil die Community die Technik nun selbst ausprobieren kann, statt sie nur auf Folien zu sehen."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Fund belegt vorerst nur eines: Die Blackwell-Bindung von DLSS 5 ist eine Frage kompilierter Binaries, keine unüberwindbare Hardware-Grenze. Ob daraus eine offizielle Unterstützung für RTX 4000 wird, entscheidet allein Nvidia - und solange Leistung, Bildqualität und Launch-Termin ungeklärt sind, bleibt der Mod ein spannendes Experiment, kein Ersatz für eine offizielle Freigabe."
+    }
+  ],
+  "poll": {
+    "question": "Wie soll Nvidia mit DLSS 5 auf RTX 4000 umgehen?",
+    "options": [
+      "Offiziell freigeben - der Mod zeigt, dass es geht",
+      "Nur Blackwell, wenn Qualität sonst leidet",
+      "Erst Messwerte abwarten, dann entscheiden",
+      "Upscaling interessiert mich ohnehin nicht"
+    ]
+  },
+  "isLeakOrRumor": true,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-30T06:04:34.790Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "waveform",
+  "sources": [
+    {
+      "title": "DLSS 5 auf RTX 4000?: Nach Anpassung läuft die DLSSNR.dll auch auf älteren GeForce",
+      "url": "https://www.computerbase.de/news/grafikkarten/dlss-5-auf-rtx-4000-nach-anpassung-laeuft-die-dlssnr-dll-auch-auf-aelteren-geforce.99127/",
+      "publisher": "ComputerBase"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/dlss-5-rtx-4000-modder-dlssnr-dll-2026.webp",
+    "alt": "DLSS 5 nur für RTX 5000? Ein Modder umgeht die Sperre in Tagen",
+    "credit": "Bild: ComputerBase",
+    "sourceUrl": "https://www.computerbase.de/news/grafikkarten/dlss-5-auf-rtx-4000-nach-anpassung-laeuft-die-dlssnr-dll-auch-auf-aelteren-geforce.99127/",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "dlss-5-mod-control-nba-2k27-dll-2026",
+    "nvidia-quartalszahlen-279-milliarden-speicher-geforce-2026",
+    "nvidia-dlss-4-5-ray-reconstruction-release-2026"
+  ]
+}
