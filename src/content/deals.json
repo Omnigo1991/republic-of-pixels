@@ -1,6 +1,17 @@
 {
-  "updatedAt": "2026-08-30T12:05:15.937Z",
+  "updatedAt": "2026-08-30T20:59:21.806Z",
   "deals": [
+    {
+      "appId": 870780,
+      "title": "CONTROL Ultimate Edition",
+      "discountPercent": 90,
+      "originalPrice": 3999,
+      "finalPrice": 399,
+      "currency": "EUR",
+      "endsAt": "2026-09-07T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/870780/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/870780/40054b94c2e8734ad9e76787534af5ba1b034a53/capsule_184x69.jpg?t=1781607969"
+    },
     {
       "appId": 1174180,
       "title": "Red Dead Redemption 2",
@@ -22,17 +33,6 @@
       "endsAt": "2026-09-12T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/1149460/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1149460/capsule_184x69.jpg?t=1784744651"
-    },
-    {
-      "appId": 1113120,
-      "title": "IXION",
-      "discountPercent": 70,
-      "originalPrice": 3399,
-      "finalPrice": 1019,
-      "currency": "EUR",
-      "endsAt": "2026-09-12T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1113120/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1113120/capsule_184x69.jpg?t=1733140180"
     },
     {
       "appId": 3240220,
