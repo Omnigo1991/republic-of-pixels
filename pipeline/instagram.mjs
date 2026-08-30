@@ -12,7 +12,7 @@
 //     Deploy), dann Container erstellen und veröffentlichen.
 //
 // Posting-Regeln (Tim, 08.08.2026): Soll 5 Posts/Tag entlang einer
-// Tageskurve (9-21 Uhr, Europe/Zurich), Deckel 6, Breaking wird immer
+// Tageskurve (9-21 Uhr, Europe/Zurich), Deckel 4, Breaking wird immer
 // sofort gepostet (bis zum Deckel). Läuft der Tag hinter dem Soll, holt
 // ein Lauf bis zu 2 Posts nach. Feed-Posts verweisen auf den Link in der
 // Bio; ein Fehlschlag hier darf NIE den Artikel-Publish blockieren.
@@ -56,10 +56,28 @@ const SOCIAL_DIR = join(ROOT, "public", "social");
 const SITE = "https://www.republicofpixels.com";
 const IG_API = "https://graph.instagram.com/v23.0";
 
-// Tim, 08.08.2026 abends: Anspruch sind 5 Posts/Tag - der alte Grundtakt 3
-// war zu defensiv. Der Deckel (inkl. Breaking) liegt eine Stufe darüber.
-const BASE_PER_DAY = 5;
-const CAP_PER_DAY = 6;
+// ZURÜCK AUF 3 (Tim, 30.08.2026: "Ja, stell es auf drei Reels").
+//
+// Am 08.08. hatten wir von 3 auf 5 erhöht, weil 3 zu defensiv wirkte. Diese
+// Woche haben wir nachgemessen - erstens, was der Kanal bringt, zweitens,
+// was er kostet, drittens, was die Etablierten tun:
+//
+//   GamePro.de   134'000 Follower   rund 3 Beiträge/Tag
+//   PC Games      19'300 Follower   rund 3
+//   MeinMMO       14'100 Follower   rund 2
+//   wir              737 Follower        5
+//
+// Wir posteten also mehr als ein Konto mit der 180-fachen Reichweite. Und
+// die Zahlen sind auffällig flach: Ob 14'000 oder 134'000 Follower, alle
+// liegen bei zwei bis drei. Die Häufigkeit skaliert in diesem Feld nicht
+// mit der Grösse - es gibt schlicht nicht mehr her, was sich zu posten
+// lohnt.
+//
+// Dazu die Kosten: Die Instagram-Vorbereitung kostete gemessen $0.47 pro
+// Lauf, also rund 78 Dollar im Monat - für einen Kanal, der der Website 12
+// Besucher pro Woche bringt. Drei statt fünf spart davon etwa ein Drittel.
+const BASE_PER_DAY = 3;
+const CAP_PER_DAY = 4;
 const QUIET_BEFORE = 9; // Nicht-Breaking erst ab 9 Uhr …
 const QUIET_AFTER = 21; // … und bis 21 Uhr (Europe/Zurich)
 const CANDIDATE_WINDOW_H = 18;
@@ -435,18 +453,32 @@ async function prepare() {
     0,
     BASE_PER_DAY - postedToday - slots.length,
   );
+  // DIE KURVE FOLGT DEM BUDGET (Fund beim Umbau auf 3 Posts, 30.08.2026).
+  //
+  // Vorher standen hier feste Stufen: 9 Uhr 1, 12 Uhr 2, 15 Uhr 3, 17 Uhr 4,
+  // 19 Uhr 5. Die waren auf genau fünf Posts zugeschnitten. Mit Budget 3
+  // hätte "Math.min(soll, BASE_PER_DAY)" ab 15 Uhr immer 3 ergeben - alle
+  // drei Posts wären bis am frühen Nachmittag draussen gewesen und der
+  // ganze Abend leer. Ausgerechnet die Zeit, in der Gaming-Publikum online
+  // ist.
+  //
+  // Jetzt verteilt die Formel das jeweilige Budget gleichmässig über das
+  // Fenster: bei Budget 3 also 1 ab 9 Uhr, 2 ab 13 Uhr, 3 ab 17 Uhr - der
+  // Abend bleibt damit besetzt.
+  //
+  // Gegengeprüft über alle 24 Stunden: Bei BASE_PER_DAY = 5 stimmt sie mit
+  // den alten Stufen überein, mit EINER Ausnahme - um 14 Uhr sagt sie 3, wo
+  // vorher 2 stand. Das ist eine Stunde früher und in der Sache
+  // gleichgültig; ich schreibe es hin, damit niemand später über eine
+  // Abweichung stolpert, die im Kommentar geleugnet wird.
+  const fenster = QUIET_AFTER - QUIET_BEFORE;
   const sollBisJetzt =
-    hour >= 19
-      ? 5
-      : hour >= 17
-        ? 4
-        : hour >= 15
-          ? 3
-          : hour >= 12
-            ? 2
-            : hour >= 9
-              ? 1
-              : 0;
+    hour < QUIET_BEFORE
+      ? 0
+      : Math.min(
+          BASE_PER_DAY,
+          Math.floor(((hour - QUIET_BEFORE) * BASE_PER_DAY) / fenster) + 1,
+        );
   const rueckstand = Math.max(
     0,
     Math.min(sollBisJetzt, BASE_PER_DAY) - postedToday - slots.length,
@@ -706,14 +738,27 @@ async function prepare() {
         "GAMING-NEWS";
 
       const istBreaking = article.category === "breaking";
-      let alsReel;
-      if (istBreaking) {
-        alsReel = true;
-      } else {
-        // Jeder vierte normale Post bleibt ein Bild - siehe oben.
-        alsReel = state.instagram.wechsel.nichtBreaking % 4 !== 3;
-        state.instagram.wechsel.nichtBreaking++;
-      }
+      // ALLES REEL (Tim, 30.08.2026: "Ja, stell es auf drei Reels").
+      //
+      // Grundlage ist der Rücklese-Lauf über 15 Posts: Reels holten 12.5
+      // Likes und 156 Reichweite, Bilder 2.6 und 25. Fast fünfmal so viele
+      // Likes, über sechsmal so viel Reichweite.
+      //
+      // WAS WIR DAMIT AUFGEBEN, und das gehört gesagt: Am 26.08. hatte ich
+      // bewusst jeden vierten Post als Bild behalten, damit eine
+      // Vergleichsgruppe bleibt - ohne sie lässt sich nie mehr feststellen,
+      // ob der Abstand am FORMAT liegt oder an den Geschichten, die
+      // zufällig als Reel liefen. Diese Möglichkeit fällt jetzt weg.
+      //
+      // Vertretbar ist es trotzdem: Bei drei Posts am Tag wäre jeder vierte
+      // noch 0,75 Bildposts täglich - als Vergleichsgruppe ohnehin zu dünn,
+      // um daraus etwas zu lernen. Und der gemessene Abstand ist zu gross,
+      // um ihn weiter zu bezahlen.
+      //
+      // Zurückdrehen geht jederzeit: nichtBreaking-Zähler wieder heranziehen
+      // und die alte Modulo-Regel einsetzen.
+      const alsReel = true;
+      if (!istBreaking) state.instagram.wechsel.nichtBreaking++;
       let cardRel = null;
       // REELS WIEDER AN (Tim, 24.08.2026): Der Reel-Renderer traegt jetzt
       // dieselbe Vorlage wie die Bild-Karte - er teilt sich mit ihr sogar
