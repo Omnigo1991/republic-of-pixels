@@ -1,0 +1,177 @@
+{
+  "slug": "guide-call-of-duty-modern-warfare-4-alles-was-bekannt-ist",
+  "title": "Call of Duty: Modern Warfare 4 - alles, was bekannt ist",
+  "subtitle": "Der Guide bündelt Release, Beta-Zeiten, Inhalte, PC-Anforderungen und die Weekend-2-Patchnotes zu Call of Duty: Modern Warfare 4.",
+  "excerpt": "Der Guide bündelt Release, Beta-Zeiten, Inhalte, PC-Anforderungen und die Weekend-2-Patchnotes zu Call of Duty: Modern Warfare 4. Die Open Beta zu Modern Warfare 4 läuft ohne Vorbestellung und ohne Registrierung, gleichzeitig hat Infinity Ward für das zweite Wochenende jede Waffe der Beta angefasst und den Tactical …",
+  "category": "guides",
+  "platforms": [
+    "pc",
+    "playstation",
+    "xbox"
+  ],
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-30T14:28:55.289Z",
+  "readingTimeMinutes": 6,
+  "heroVariant": "controller",
+  "image": {
+    "src": "/images/articles/modern-warfare-4-open-beta-taktiksprint-switch-2-2026.webp",
+    "alt": "Modern Warfare 4: Taktiksprint ist weg - und jede Waffe wurde angefasst",
+    "credit": "Bild: ComputerBase",
+    "sourceUrl": "https://www.computerbase.de/news/gaming/modern-warfare-4-open-beta-fuer-das-naechste-call-of-duty-ist-gestartet.99114/",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "isLeakOrRumor": false,
+  "tags": [
+    "Call of Duty: Modern Warfare 4",
+    "Open Beta",
+    "Infinity Ward",
+    "Systemanforderungen"
+  ],
+  "tldr": [
+    "Beta-Fenster prüfen: Open Beta bis Dienstag, 1. September, 19 Uhr - keine Registrierung, keine Vorbestellung nötig.",
+    "Plattform wählen: Xbox Series X|S, PS5, Nintendo Switch 2 oder PC über Xbox-App, Battle.net oder Steam.",
+    "Auf dem PC im BIOS/UEFI TPM 2.0 und Secure Boot aktivieren - beides ist in allen Konfigurationen Pflicht.",
+    "Grafiktreiber aktualisieren: mindestens GeForce 610.47, Adrenalin 26.7.1 oder Intel Arc 8861."
+  ],
+  "whyItMatters": "Die Open Beta zu Modern Warfare 4 läuft ohne Vorbestellung und ohne Registrierung, gleichzeitig hat Infinity Ward für das zweite Wochenende jede Waffe der Beta angefasst und den Tactical Sprint aus der Standardbelegung genommen. Wer den Release am 23. Oktober plant, muss auf dem PC ausserdem TPM 2.0 und Secure Boot aktiv haben - eine Hürde, an der sich bereits Kritik entzündet hat.",
+  "poll": null,
+  "review": null,
+  "seoTitle": "Call of Duty: Modern Warfare 4 - alles, was bekannt ist",
+  "metaDescription": "Der Guide bündelt Release, Beta-Zeiten, Inhalte, PC-Anforderungen und die Weekend-2-Patchnotes zu Call of Duty: Modern Warfare 4.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Stand dieses Guides: Open Beta (Beta Weekend 2), Patchnotes vom 28. August 2026. Wir halten ihn aktuell, wenn sich Wesentliches ändert."
+    },
+    {
+      "type": "paragraph",
+      "text": "Dieser Guide fasst zusammen, was zu Call of Duty: Modern Warfare 4 aus den vorliegenden Berichten belegt ist: Termine, Plattformen, Beta-Inhalte, PC-Voraussetzungen, die Änderungen des zweiten Beta-Wochenendes und die dokumentierte Spielerresonanz. Er richtet sich an alle, die entscheiden wollen, ob und wie sie in die Beta einsteigen - und an PC-Spieler, die vorab klären möchten, ob ihr System die Zugangsvoraussetzungen erfüllt. Alle Angaben beziehen sich auf den Stand der Open Beta beziehungsweise der Patchnotes vom 28. August 2026."
+    },
+    {
+      "type": "heading",
+      "text": "Die Eckdaten: Release, Plattformen, Setting"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Vollversion von Call of Duty: Modern Warfare 4 erscheint am 23. Oktober für PC, PlayStation 5, Xbox Series X|S und Nintendo Switch 2. Der Titel bleibt strikt Current-Gen und lässt frühere Konsolengenerationen hinter sich, nimmt die Switch 2 aber mit. Thematisch geht es nach Korea; in der Kampagne tauchen ausserdem New York, Paris und Mumbai auf. Kotaku führt das Spiel als 23. Eintrag der Reihe. Für die Switch 2 ist es laut Destructoid das erste spielbare Call of Duty auf einer Nintendo-Konsole seit Call of Duty: Ghosts auf der Wii U im Jahr 2013."
+    },
+    {
+      "type": "heading",
+      "text": "Beta-Zeitplan und Zugang"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Closed Beta lief von Freitag, 21. August, 20 Uhr, bis Dienstag, 25. August, 19 Uhr. Sie war ausschliesslich Vorbestellern oder Spielern mit Zugangsschlüssel vorbehalten. Die Open Beta startete am Freitag, 28. August, um 19 Uhr und läuft bis Dienstag, 1. September, 19 Uhr. Für die Teilnahme ist keine Registrierung mehr nötig, ein Download genügt; eine Vorbestellung ist unabhängig von der Plattform nicht erforderlich. Wer in der Closed Beta gespielt hat, nimmt seinen Fortschritt mit. Der Level-Cap wurde von 20 auf 30 erhöht, und auch in der offenen Beta lassen sich Belohnungen für die Vollversion sammeln. Gespielt wird auf Xbox Series X|S, PlayStation 5, Nintendo Switch 2 sowie auf dem PC über die Xbox-App, Battle.net und Steam."
+    },
+    {
+      "type": "heading",
+      "text": "Was in der Open Beta enthalten ist"
+    },
+    {
+      "type": "paragraph",
+      "text": "Gegenüber der Closed Beta erweitert Activision den Umfang: Neu dazu kommt die Map Lithium, damit stehen sechs Core-Maps zur Auswahl. Ebenfalls neu sind der Hijack-Modus, der Bodenkrieg-Modus Kampf-Aussenposten und die Warzone-Karte Zodiac für den Modus Resurgence. Kotaku berichtete am 23. August, die Beta habe zu diesem Zeitpunkt nur drei der zwölf Maps enthalten, die zum Launch verfügbar sein werden. Erstmals gibt es auf dem PC ausserdem Shader-Preloading, um Ruckler im Spiel zu reduzieren."
+    },
+    {
+      "type": "heading",
+      "text": "PC: Systemanforderungen und Pflichtvoraussetzungen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Anforderungen schliessen kaum Grafikkarten aus - minimal genügen 3 GB VRAM. Zwingend sind hingegen in allen Konfigurationen TPM 2.0 und ein aktiviertes Secure Boot. Beides lässt sich im BIOS beziehungsweise UEFI des Mainboards aktivieren. Eine SSD ist erforderlich."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Minimal: Ryzen 5 1600 oder Core i5-8400, 12 GB RAM, Radeon RX 470 / GeForce GTX 970 oder GTX 1060 / Arc A580, 3 GB VRAM, Windows 10 64-Bit, DirectX 12, TPM 2.0, Secure Boot",
+        "Empfohlen: Ryzen 5 3600 oder Core i7-8700, 16 GB RAM, Radeon RX 6700 XT / GeForce RTX 3060 Ti / Arc B580, 8 GB VRAM, Windows 11 64-Bit, DirectX 12, TPM 2.0, Secure Boot",
+        "Empfohlene Treiber: Nvidia GeForce 610.47 oder neuer, AMD Adrenalin 26.7.1 oder neuer, Intel Arc 8861 oder neuer"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Anti-Cheat, TPM-Firmware und BIOS"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ein Destructoid-Autor berichtet, er sei aufgefordert worden, sein komplettes BIOS zu aktualisieren, obwohl er es bereits auf eine Version von 2025 geflasht hatte - weil die dort laufende TPM-Version von AMD nicht akzeptiert wurde. Er weist darauf hin, dass das Flashen des BIOS das Risiko birgt, das Mainboard unbrauchbar zu machen, wenn Failsafes nicht greifen. Die Kampagne lasse sich ohne diese Schritte spielen."
+    },
+    {
+      "type": "paragraph",
+      "text": "Activision hat dazu am 27. August Stellung genommen: Kernel-Level-Anti-Cheat sei keine neue Entwicklung, die Technologie existiere in PC-Spielen seit rund zwei Jahrzehnten, Call of Duty habe seinen Kernel-Treiber 2021 eingeführt. Der Treiber von RICOCHET Anti-Cheat laufe nur, während ein geschützter Call-of-Duty-Titel aktiv ist, und schalte sich beim Schliessen des Spiels ab. TPM erlaube Microsoft nicht, in den Rechner zu schauen, sondern liefere hardwaregestützte Sicherheitsfunktionen und Nachweise über den Boot-Zustand; Secure Boot verifiziere autorisierte Software in der Boot-Kette. Betroffene Spieler würden gebeten, TPM-Firmware zu aktualisieren, die AMD selbst als verwundbar und nicht vertrauenswürdig eingestuft habe; das Update stamme vom Mainboard-Hersteller. Activision installiere keine Software in die Firmware und verändere das TPM nicht. Kein Anti-Cheat-System eliminiere sämtliches Cheating, das habe man nie behauptet."
+    },
+    {
+      "type": "heading",
+      "text": "Die Änderungen zum zweiten Beta-Wochenende"
+    },
+    {
+      "type": "paragraph",
+      "text": "Infinity Ward beschreibt das Ziel als leichte Erhöhung der Time-to-Kill. Statt die Basisgesundheit zu ändern, wurde am Waffen-Tuning gearbeitet: Jede einzelne Waffe der Beta hat für Wochenende 2 ein Update erhalten. Beim Aim Assist wurden Anpassungen vorgenommen, um dessen Einfluss zu reduzieren; diese gelten global und damit auch für Warzone. Laut Entwickler ist das nicht das endgültige Tuning."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Movement: Tactical Sprint ist nicht mehr standardmässig aktiv, sondern an den Perk Blood Rush gebunden. Sprint-to-Fire-Zeit des Tactical Sprint auf das Niveau des Basis-Sprints reduziert, Tempo um 4 Prozent gesenkt.",
+        "Sprintgeschwindigkeiten: Basis-Sprinttempo mit Messer und mit allen Pistolen erhöht.",
+        "Slide: Verzögerung zwischen Slide und Sprung erhöht, Slide-Distanz um 10 Prozent, Slide-Geschwindigkeit um 9 Prozent reduziert. Stamina um 8 Prozent reduziert.",
+        "Fixes: Spieler konnten deutlich höher mantlen als vorgesehen; Stotterer beim Klettern an Leitern und Rohren behoben.",
+        "Spawns: neue Spawn-Logik zur besseren Trennung von Spielern und niedrigere Priorität für Spawns nahe Teamkollegen (beides bereits am Ende von Wochenende 1 ergänzt), teilweise verbessertes Hardpoint-Spawnsystem, Battle Hardened zum temporären Spawnschutz hinzugefügt, Hardpoint auf Rooftops wegen eines Spawn-Bugs vorübergehend deaktiviert.",
+        "Killstreaks: alle Kosten um einen Kill erhöht. UAV: Lebenspunkte um 60 Prozent, Flughöhe um 12 Prozent reduziert. Artillery Beacon: Raketen von 6 auf 5, innerer Schadensradius von 15,24 auf 10,16 Meter, äusserer von 25,4 auf 17,78 Meter, Schockwellen-Radius auf 10,16 Meter."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Wie die Beta ankam"
+    },
+    {
+      "type": "paragraph",
+      "text": "Während der Closed Beta waren zu Spitzenzeiten über 115'000 gleichzeitige Spieler allein auf Steam aktiv. Einen Tag später lag die Zahl um über 50 Prozent tiefer; zum Zeitpunkt des Destructoid-Artikels waren es gut 44'000 gleichzeitige Spieler, der Sonntags-Peak lag bei 49'706. Auf der Steam-Seite hatte die Beta ein Bewertungsniveau von 49 Prozent positiv - Rating «mixed». Die häufigste Kritik lautete, dieses Call of Duty sei nicht neu genug. Der Autor nennt zusätzlich die sehr schnelle Time-to-Kill und starke Serverinstabilität, bezeichnet die Kampagnenmission aber als solide."
+    },
+    {
+      "type": "paragraph",
+      "text": "Kotaku fasst als zentrale Kritikpunkte wenig überzeugende Maps, zu schnell tötende Waffen und schlecht verteilte Spawnpunkte zusammen; Waffenaufsätze wirkten zu schwach, und lautere Schritte als üblich verschafften Perks für leises Vorgehen einen Vorteil. Akrobatik wie Wall-Jumping und das Omnimovement aus Black Ops wurden zugunsten eines empfindlicheren Ground Slide zurückgefahren. Gesamtgrafik und dynamische Umgebungsdetails beeindruckten dagegen. Infinity Ward hatte bereits am 23. August Anpassungen bei TTK, Spawns und den Nachteilen von Attachments in Aussicht gestellt."
+    },
+    {
+      "type": "heading",
+      "text": "Checkliste vor dem Einstieg"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Beta-Fenster prüfen: Open Beta bis Dienstag, 1. September, 19 Uhr - keine Registrierung, keine Vorbestellung nötig.",
+        "Plattform wählen: Xbox Series X|S, PS5, Nintendo Switch 2 oder PC über Xbox-App, Battle.net oder Steam.",
+        "Auf dem PC im BIOS/UEFI TPM 2.0 und Secure Boot aktivieren - beides ist in allen Konfigurationen Pflicht.",
+        "Grafiktreiber aktualisieren: mindestens GeForce 610.47, Adrenalin 26.7.1 oder Intel Arc 8861.",
+        "Speicherplatz auf einer SSD freihalten, mindestens 12 GB RAM und 3 GB VRAM einplanen.",
+        "Fortschritt aus der Closed Beta wird übernommen; der Level-Cap liegt jetzt bei 30.",
+        "Loadout anpassen: Tactical Sprint erhält man nur noch über den Perk Blood Rush.",
+        "Neue Inhalte gezielt ansteuern: Map Lithium, Hijack, Kampf-Aussenposten und Zodiac im Modus Resurgence.",
+        "Release der Vollversion vormerken: 23. Oktober für PC, PS5, Xbox Series X|S und Nintendo Switch 2."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "computerbase.de",
+      "url": "https://www.computerbase.de/news/gaming/modern-warfare-4-open-beta-fuer-das-naechste-call-of-duty-ist-gestartet.99114/"
+    },
+    {
+      "title": "destructoid.com",
+      "url": "https://www.destructoid.com/mw4-beta-weekend-2-patch-notes/"
+    },
+    {
+      "title": "destructoid.com",
+      "url": "https://www.destructoid.com/modern-warfare-4-beta-sheds-half-its-player-base-after-just-a-day/"
+    },
+    {
+      "title": "kotaku.com",
+      "url": "https://kotaku.com/maps-spawn-issues-and-overall-lack-of-razzle-dazzle-leaves-players-cold-on-modern-warfare-4-beta-2000727258"
+    },
+    {
+      "title": "destructoid.com",
+      "url": "https://www.destructoid.com/hey-activision-no-games-anti-cheat-measures-should-require-me-to-update-my-entire-bios/"
+    }
+  ]
+}
