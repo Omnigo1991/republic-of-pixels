@@ -1,17 +1,6 @@
 {
-  "updatedAt": "2026-08-31T17:36:13.400Z",
+  "updatedAt": "2026-08-31T21:03:46.894Z",
   "deals": [
-    {
-      "appId": 870780,
-      "title": "CONTROL Ultimate Edition",
-      "discountPercent": 90,
-      "originalPrice": 3999,
-      "finalPrice": 399,
-      "currency": "EUR",
-      "endsAt": "2026-09-07T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/870780/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/870780/40054b94c2e8734ad9e76787534af5ba1b034a53/capsule_184x69.jpg?t=1781607969"
-    },
     {
       "appId": 1174180,
       "title": "Red Dead Redemption 2",
@@ -24,6 +13,17 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/capsule_184x69.jpg?t=1759502961"
     },
     {
+      "appId": 1326470,
+      "title": "Sons Of The Forest",
+      "discountPercent": 70,
+      "originalPrice": 2899,
+      "finalPrice": 869,
+      "currency": "EUR",
+      "endsAt": "2026-09-07T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1326470/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1326470/capsule_184x69.jpg?t=1708624856"
+    },
+    {
       "appId": 3240220,
       "title": "Grand Theft Auto V Enhanced",
       "discountPercent": 56,
@@ -33,17 +33,6 @@
       "endsAt": "2026-09-07T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/3240220/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3240220/a318bd9affe8eee32984b18794b273c256e9b2d6/capsule_184x69.jpg?t=1781187782"
-    },
-    {
-      "appId": 1363080,
-      "title": "Manor Lords",
-      "discountPercent": 35,
-      "originalPrice": 3999,
-      "finalPrice": 2599,
-      "currency": "EUR",
-      "endsAt": "2026-09-10T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1363080/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1363080/capsule_184x69.jpg?t=1787906126"
     },
     {
       "appId": 108600,
@@ -66,6 +55,17 @@
       "endsAt": "2026-09-08T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/1623730/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/0703d5a0658c7aedaa3be4391d6f5cccc1bb6d7a/capsule_184x69.jpg?t=1784714419"
+    },
+    {
+      "appId": 1203620,
+      "title": "Enshrouded",
+      "discountPercent": 25,
+      "originalPrice": 2999,
+      "finalPrice": 2249,
+      "currency": "EUR",
+      "endsAt": "2026-09-07T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1203620/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1203620/84d7ce762d0e0ad6a2dfdced85ea713d33b70e18/capsule_184x69.jpg?t=1782800102"
     }
   ]
 }
