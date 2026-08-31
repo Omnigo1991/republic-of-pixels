@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-31T15:03:41.701Z",
+  "updatedAt": "2026-08-31T17:36:13.400Z",
   "deals": [
     {
       "appId": 870780,
@@ -24,17 +24,6 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/capsule_184x69.jpg?t=1759502961"
     },
     {
-      "appId": 1551360,
-      "title": "Forza Horizon 5",
-      "discountPercent": 60,
-      "originalPrice": 5999,
-      "finalPrice": 2399,
-      "currency": "EUR",
-      "endsAt": "2026-09-03T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1551360/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1551360/capsule_184x69.jpg?t=1787677939"
-    },
-    {
       "appId": 3240220,
       "title": "Grand Theft Auto V Enhanced",
       "discountPercent": 56,
@@ -55,6 +44,17 @@
       "endsAt": "2026-09-10T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/1363080/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1363080/capsule_184x69.jpg?t=1787906126"
+    },
+    {
+      "appId": 108600,
+      "title": "Project Zomboid",
+      "discountPercent": 33,
+      "originalPrice": 2549,
+      "finalPrice": 1707,
+      "currency": "EUR",
+      "endsAt": "2026-09-07T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/108600/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/108600/capsule_184x69.jpg?t=1787740093"
     },
     {
       "appId": 1623730,
