@@ -1,21 +1,19 @@
 {
-  "datum": "2026-08-31",
-  "nummer": 23,
-  "loesung": "Baldur's Gate 3",
+  "datum": "2026-09-01",
+  "nummer": 24,
+  "loesung": "Elden Ring",
   "akzeptiert": [
-    "baldursgate3",
-    "baldursgate3",
-    "bg3"
+    "eldenring"
   ],
   "hinweise": [
-    "Erschienen 2023 · Rollenspiel",
-    "Larian Studios"
+    "Erschienen 2022 · Action-RPG",
+    "FromSoftware"
   ],
   "bilder": [
-    "/images/pixelraten/2026-08-31-s1.jpg",
-    "/images/pixelraten/2026-08-31-s2.jpg",
-    "/images/pixelraten/2026-08-31-s3.jpg",
-    "/images/pixelraten/2026-08-31-s4.jpg",
-    "/images/pixelraten/2026-08-31-s5.jpg"
+    "/images/pixelraten/2026-09-01-s1.jpg",
+    "/images/pixelraten/2026-09-01-s2.jpg",
+    "/images/pixelraten/2026-09-01-s3.jpg",
+    "/images/pixelraten/2026-09-01-s4.jpg",
+    "/images/pixelraten/2026-09-01-s5.jpg"
   ]
 }
