@@ -1,20 +1,21 @@
 {
-  "datum": "2026-08-30",
-  "nummer": 22,
-  "loesung": "Halo Infinite",
+  "datum": "2026-08-31",
+  "nummer": 23,
+  "loesung": "Baldur's Gate 3",
   "akzeptiert": [
-    "haloinfinite",
-    "halo"
+    "baldursgate3",
+    "baldursgate3",
+    "bg3"
   ],
   "hinweise": [
-    "Erschienen 2021 · Shooter",
-    "Master Chief"
+    "Erschienen 2023 · Rollenspiel",
+    "Larian Studios"
   ],
   "bilder": [
-    "/images/pixelraten/2026-08-30-s1.jpg",
-    "/images/pixelraten/2026-08-30-s2.jpg",
-    "/images/pixelraten/2026-08-30-s3.jpg",
-    "/images/pixelraten/2026-08-30-s4.jpg",
-    "/images/pixelraten/2026-08-30-s5.jpg"
+    "/images/pixelraten/2026-08-31-s1.jpg",
+    "/images/pixelraten/2026-08-31-s2.jpg",
+    "/images/pixelraten/2026-08-31-s3.jpg",
+    "/images/pixelraten/2026-08-31-s4.jpg",
+    "/images/pixelraten/2026-08-31-s5.jpg"
   ]
 }

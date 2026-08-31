@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-30T20:59:21.806Z",
+  "updatedAt": "2026-08-31T00:04:59.244Z",
   "deals": [
     {
       "appId": 870780,
@@ -11,6 +11,17 @@
       "endsAt": "2026-09-07T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/870780/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/870780/40054b94c2e8734ad9e76787534af5ba1b034a53/capsule_184x69.jpg?t=1781607969"
+    },
+    {
+      "appId": 990080,
+      "title": "Hogwarts Legacy",
+      "discountPercent": 90,
+      "originalPrice": 5999,
+      "finalPrice": 599,
+      "currency": "EUR",
+      "endsAt": "2026-09-03T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/990080/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/990080/1b2e4eeed79dd06971492825a461bc5130bf7c28/capsule_184x69.jpg?t=1778797474"
     },
     {
       "appId": 1174180,
@@ -55,17 +66,6 @@
       "endsAt": "2026-09-10T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/1363080/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1363080/capsule_184x69.jpg?t=1787906126"
-    },
-    {
-      "appId": 1623730,
-      "title": "Palworld",
-      "discountPercent": 30,
-      "originalPrice": 2899,
-      "finalPrice": 2029,
-      "currency": "EUR",
-      "endsAt": "2026-09-08T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1623730/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/0703d5a0658c7aedaa3be4391d6f5cccc1bb6d7a/capsule_184x69.jpg?t=1784714419"
     }
   ]
 }
