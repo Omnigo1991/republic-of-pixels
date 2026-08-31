@@ -1,0 +1,172 @@
+{
+  "slug": "dlss-5-kingdom-come-deliverance-2-vavra-schatten-2026",
+  "title": "«Die KI erfindet nichts» - Vávra verteidigt DLSS 5 in KCD 2",
+  "subtitle": "Der Serienchef von Kingdom Come testet die geleakte Nvidia-Technik und findet dort Schatten, die sein eigenes Spiel nie rendern konnte",
+  "excerpt": "Daniel Vávra hat die geleakte Version von DLSS 5 in Kingdom Come: Deliverance 2 ausprobiert - und widerspricht der bisherigen Kritik in fast jedem Punkt. Überzeugt ist damit längst nicht jeder.",
+  "seoTitle": "DLSS 5: KCD-2-Chef Vávra verteidigt Nvidias Technik",
+  "metaDescription": "Daniel Vávra testet das geleakte DLSS 5 in Kingdom Come: Deliverance 2 und lobt Schatten und Hautdetails. Die Community bleibt skeptisch - das steckt dahinter.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "tags": [
+    "Kingdom Come: Deliverance 2",
+    "Nvidia",
+    "DLSS 5",
+    "Warhorse Studios",
+    "PC"
+  ],
+  "tldr": [
+    "Daniel Vávra hat die geleakte Fassung von Nvidias DLSS 5 Neural Rendering in Kingdom Come: Deliverance 2 getestet und lobt sie deutlich",
+    "Laut Vávra verändert die Technik weder Geometrie noch Gesichter, sondern verbessert Hautdetails, Ambient Occlusion und Schatten von Helmen, Kapuzen und Schnallen",
+    "Die Version stammt aus einem Leak, der über ein Update für NBA 2K26 ins Netz gelangte - offiziell veröffentlicht ist DLSS 5 noch nicht",
+    "Kritiker verweisen auf Videos mit Uncanny-Valley-Effekt, fehlende Kontrolle der Studios und die Sorge vor unfertigen Spielen"
+  ],
+  "whyItMatters": "DLSS 5 Neural Rendering könnte darüber entscheiden, wie PC-Spiele in den nächsten Jahren aussehen - und ob Studios Bildqualität an eine KI-Schicht auslagern, die sie selbst nicht mehr steuern. Vávras Test ist die erste ausführliche Einschätzung eines bekannten Entwicklers zur geleakten Fassung und verschiebt die Debatte von Marketingmaterial hin zu konkreten Beispielen aus einem fertigen Spiel.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Daniel Vávra, Serienchef von Kingdom Come: Deliverance, hat die geleakte Fassung von Nvidias DLSS 5 Neural Rendering in Kingdom Come: Deliverance 2 ausprobiert - und kommt zu einem Ergebnis, das quer zur bisherigen Debatte steht. Statt verfremdeter Gesichter sieht er dort Details, die im fertigen Spiel nie zu sehen waren: Schatten von Helmen, Kapuzen und Gürtelschnallen, die die Engine schlicht nicht rendern konnte."
+    },
+    {
+      "type": "embed",
+      "platform": "twitter",
+      "url": "https://x.com/DanielVavra/status/2094125947515478452"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "März 2026",
+          "label": "Enthüllung von DLSS 5 Neural Rendering - begleitet von heftiger Kritik"
+        },
+        {
+          "value": "7 Jahre",
+          "label": "arbeitete Vávra nach eigenen Angaben an einem einzigen Spiel"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Vom Skandal-Reveal zum geleakten Build"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Vorgeschichte erklärt, warum Vávras Lob so viel Widerspruch auslöst. Seit der Vorstellung im März 2026 hängt DLSS 5 der Vorwurf an, Figuren in ein Uncanny Valley zu ziehen - der Showcase zu Resident Evil Requiem gilt bis heute als Tiefpunkt der Präsentation. Auch überzeugendere Beispiele wie die angekündigten Verbesserungen in Bethesdas Starfield haben daran wenig geändert."
+    },
+    {
+      "type": "paragraph",
+      "text": "Offiziell veröffentlicht ist die Technik nach wie vor nicht. Über ein Update für NBA 2K26 gelangte sie jedoch ins Netz, seither testen Nutzerinnen und Nutzer sie in allen möglichen Spielen - mit sehr unterschiedlichen Ergebnissen. Alle Eindrücke stammen also aus einer inoffiziellen Fassung, die vermutlich, aber nicht garantiert dem ersten offiziellen Release entspricht."
+    },
+    {
+      "type": "heading",
+      "text": "«Die KI erfindet nichts»"
+    },
+    {
+      "type": "paragraph",
+      "text": "Vávras zentrales Argument: Was geleakt wurde, sei nicht das, was Nvidia damals gezeigt habe."
+    },
+    {
+      "type": "quote",
+      "text": "Erstens einmal: Was da geleakt wurde, ist nicht im Entferntesten das, was Nvidia ursprünglich präsentiert hat. Es verändert die Geometrie der Modelle oder das Aussehen der Charaktere in keiner Weise. Ich wiederhole: Es verändert die Geometrie der Modelle oder das Aussehen der Charaktere in keiner Weise!",
+      "attribution": "Daniel Vávra auf X"
+    },
+    {
+      "type": "paragraph",
+      "text": "Stattdessen nutze die Technik vorhandene Normal Maps und erzeuge daraus deutlich bessere Hauttexturen und Gesichtsdetails, als es das Beleuchtungsmodell des Spiels könne. Es wirke ein wenig wie ein Versuch von Subsurface Scattering und anderen fortgeschrittenen Haut-Renderverfahren - Skeptiker könnten allerdings einwenden, es handle sich nur um eine schicke Variante von Clarity- und Dehaze-Filtern mit sehr ähnlichem Effekt, räumt Vávra selbst ein. Für ihn löst sich damit ein alter Streit im Studio: Er habe die Arbeit der Charakter-Artists oft kritisiert, wenn Gesichter im Spiel flach wirkten - und die hätten ihm gezeigt, dass es auf ihren Rechnern gut aussehe und das Problem an der Beleuchtung liege. «Jetzt sieht es auch im Spiel richtig aus. So sollten diese Gesichter aussehen. Die KI erfindet nichts dazu.»"
+    },
+    {
+      "type": "heading",
+      "text": "Die Schatten, die KCD 2 nie rendern konnte"
+    },
+    {
+      "type": "paragraph",
+      "text": "Den grössten Gewinn sieht Vávra bei der Ambient Occlusion, also der Berechnung von Verschattung in Vertiefungen und an Kontaktstellen. Konkret nennt er:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Schatten von Hüten, Kapuzen und Helmen auf den Köpfen der Figuren",
+        "Schatten kleiner Details an Charaktermodellen wie Schnallen, Schnüren und Beuteln",
+        "dichtere und dunklere Schatten in Haaren",
+        "aufgehellte Schatten mit sichtbaren Texturen an manchen Stellen, dunklere dort, wo es sinnvoll ist",
+        "bessere Schattendarstellung in Gras und Vegetation"
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "Ihr habt keine Ahnung, wie fürchterlich - und ich meine wirklich, wirklich - es mich gestört hat, dass wir in KCD 2 keine Schatten von Hüten, Kapuzen und Helmen auf den Köpfen der Charaktere rendern konnten.",
+      "attribution": "Daniel Vávra auf X"
+    },
+    {
+      "type": "paragraph",
+      "text": "In der Umgebung tue sich dagegen wenig, das Ergebnis sei nur eine leichte Verbesserung. Unter dem Strich spricht Vávra von einem exzellenten fotorealistischen Upgrade des Beleuchtungsmodells für Charaktere und sieht grosses Potenzial darin, auch ältere Spiele so aufzuwerten."
+    },
+    {
+      "type": "heading",
+      "text": "Widerspruch: Screenshots gegen Videos"
+    },
+    {
+      "type": "paragraph",
+      "text": "Überzeugt ist damit längst nicht jeder. Kritik entzündet sich zuerst an der Beweislage: Vávra stützt sich auf Screenshots, während kritische Testerinnen und Tester Videos veröffentlichen, in denen der Uncanny-Valley-Effekt weiterhin sichtbar ist. Vávra rät dazu, «all den gefälschten Videos, die gerade im Internet kursieren», nicht zu glauben - Belege für eine Fälschung gibt es allerdings nicht, plausibler ist, dass die jeweiligen Einstellungen der Tester das Ergebnis stark beeinflussen."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ein zweiter Einwand ist technischer Natur: Weil DLSS 5 offenbar nur mit dem arbeitet, was im aktuellen Bild sichtbar ist, könnten Lichtquellen ausserhalb des Frames zu Rateergebnissen führen - und damit zu Details, die zwar hübsch, aber physikalisch falsch sind. Dazu kommt die Sorge, dass Studios die Kontrolle über den finalen Look verlieren und unfertige Spiele mit Verweis auf die KI-Schicht durchwinken. «DLSS 5 wird so werden, wie es die Unreal Engine 5 war. Eine Handvoll Studios wird die Werkzeuge richtig nutzen. Aber ein grosser Teil wird sich den einfachen Weg suchen», heisst es in einem viel zitierten Reddit-Kommentar."
+    },
+    {
+      "type": "paragraph",
+      "text": "Vávra hat die Debatte zusätzlich befeuert, indem er den KI-Einsatz grundsätzlich verteidigte: Jeder Entwickler, mit dem er im vergangenen Jahr gesprochen habe, nutze KI, Programmierer kämen ohne sie kaum noch voran. «Ich habe sieben Jahre Tag und Nacht an EINEM Spiel gearbeitet. Wenn mir irgendetwas geholfen hätte, es in einem Jahr zu schaffen, hätte ich es jederzeit genommen.» Im deutschsprachigen Raum kommen diese Aussagen bei vielen Fans schlecht an. Zur Einordnung: Vávra betont, aktuell für kein Unternehmen und an keinem Spiel zu arbeiten - Warhorse Studios, das er mitgegründet hat, entwickelt derweil den nächsten Serienteil sowie ein Open-World-Rollenspiel im Herr-der-Ringe-Universum."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Vávras Test ist der bislang detaillierteste Blick eines erfahrenen Entwicklers auf DLSS 5 - aber eben auf eine geleakte Version, in einem einzigen Spiel, dokumentiert mit Standbildern. Wie die Technik in Bewegung, über Stunden und in fremden Händen aussieht, entscheidet sich erst beim offiziellen Start. Bis dahin bleibt die eigentliche Streitfrage offen: nicht ob die KI Details hinzufügt, sondern wer am Ende bestimmt, welche."
+    }
+  ],
+  "poll": {
+    "question": "DLSS 5 in Kingdom Come 2: echtes Grafik-Upgrade oder KI-Filter, den niemand kontrolliert?",
+    "options": [
+      "Echtes Upgrade - endlich die Schatten, die fehlten",
+      "Netter Effekt, aber kein Ersatz für saubere Beleuchtung",
+      "Gefährlich: Studios geben den Look aus der Hand",
+      "Erst urteilen, wenn die offizielle Version da ist"
+    ]
+  },
+  "isLeakOrRumor": true,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-31T12:04:37.212Z",
+  "readingTimeMinutes": 4,
+  "heroVariant": "particles",
+  "sources": [
+    {
+      "title": "NVIDIA DLSS 5 Fixes Shadows Kingdom Come: Deliverance 2 Couldn’t Render, as Daniel Vávra Says Characters Finally Look As Intended",
+      "url": "https://wccftech.com/nvidia-dlss-5-fixes-shadows-kingdom-come-deliverance-2-look-as-intended/",
+      "publisher": "Wccftech"
+    },
+    {
+      "title": "Kingdom Come: Deliverance 2 Director Defends DLSS 5 for Bringing Out ‘Original Artistic Vision'",
+      "url": "https://www.polygon.com/daniel-vavra-nvidia-dlss-5-ai-filter-kingdom-come-deliverance-2/",
+      "publisher": "Polygon"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/dlss-5-kingdom-come-deliverance-2-vavra-schatten-2026.webp",
+    "alt": "«Die KI erfindet nichts» - Vávra verteidigt DLSS 5 in KCD 2",
+    "credit": "Bild: Wccftech",
+    "sourceUrl": "https://wccftech.com/nvidia-dlss-5-fixes-shadows-kingdom-come-deliverance-2-look-as-intended/",
+    "sourceWidth": 1456,
+    "sourceHeight": 819
+  },
+  "relatedSlugs": [
+    "dlss-5-rtx-4000-modder-dlssnr-dll-2026",
+    "dlss-5-mod-control-nba-2k27-dll-2026",
+    "pc-partner-grafikkarten-knappheit-preiswarnung-2026"
+  ]
+}

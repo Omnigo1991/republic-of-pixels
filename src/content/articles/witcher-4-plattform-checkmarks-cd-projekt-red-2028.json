@@ -1,0 +1,162 @@
+{
+  "slug": "witcher-4-plattform-checkmarks-cd-projekt-red-2028",
+  "title": "Ein Häkchen fehlt - und The Witcher 4 kommt nicht weiter",
+  "subtitle": "CD Projekt Red hat das Rollenspiel längst auf PC, PS5 und Xbox Series X zum Laufen gebracht und knüpft jeden Meilenstein an harte technische Prüfpunkte",
+  "excerpt": "Nach dem Cyberpunk-Debakel zieht CD Projekt Red die Zügel an: The Witcher 4 läuft laut Co-CEO Michał Nowakowski schon heute auf allen Zielplattformen. Und wer einen Prüfpunkt reisst, kommt nicht einfach weiter.",
+  "seoTitle": "The Witcher 4: CD Projekt Red setzt harte Plattform-Checks",
+  "metaDescription": "The Witcher 4 läuft laut CD Projekt Red bereits auf PC, PS5 und Xbox Series X. Strikte Prüfpunkte pro Meilenstein sollen ein zweites Cyberpunk-Debakel verhindern.",
+  "category": "news",
+  "platforms": [
+    "pc",
+    "playstation",
+    "xbox"
+  ],
+  "bereich": "games",
+  "tags": [
+    "The Witcher 4",
+    "CD Projekt Red",
+    "Cyberpunk 2077",
+    "Unreal Engine 5",
+    "PS5",
+    "Xbox Series X|S"
+  ],
+  "tldr": [
+    "The Witcher 4 läuft laut Co-CEO Michał Nowakowski bereits jetzt spielbar auf PC, PS5 und Xbox Series X",
+    "Technische Prüfpunkte pro Meilenstein müssen erfüllt sein, offene Punkte werden nicht mehr auf später verschoben",
+    "Hintergrund ist der Start von Cyberpunk 2077, das Sony sechs Monate lang aus dem PlayStation Store nahm",
+    "The Witcher 4 zielt derzeit auf 2028, eine Verschiebung ist nicht ausgeschlossen"
+  ],
+  "whyItMatters": "Cyberpunk 2077 hat gezeigt, wie teuer es für Spielerinnen und Spieler wird, wenn Konsolenfassungen erst am Ende der Entwicklung ernst genommen werden. CD Projekt Red beschreibt nun erstmals konkret, wie das Studio diesen Fehler organisatorisch verhindern will - und daran wird es sich 2028 messen lassen müssen.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "CD Projekt Red will beim Start von The Witcher 4 nichts dem Zufall überlassen. Co-CEO Michał Nowakowski hat gegenüber Game Developer erklärt, dass das Rollenspiel bereits heute auf allen drei Zielplattformen spielbar ist - und dass das Studio jeden Entwicklungsmeilenstein an feste technische Prüfpunkte knüpft. Wer diese Punkte reisst, schiebt sie nicht mehr wie früher auf später."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "2028",
+          "label": "angepeiltes Erscheinungsjahr von The Witcher 4"
+        },
+        {
+          "value": "10",
+          "label": "technische Prüfpunkte pro Meilenstein - als Beispiel von Nowakowski genannt"
+        },
+        {
+          "value": "6 Monate",
+          "label": "fehlte Cyberpunk 2077 nach dem Launch im PlayStation Store"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Es läuft - und zwar überall"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der zentrale Punkt ist banal und doch bemerkenswert für ein Spiel, das frühestens 2028 erscheinen soll: Die Konsolenfassungen existieren nicht als Absichtserklärung, sondern als lauffähige Builds. Nowakowski beschreibt das mit einem einfachen Bild."
+    },
+    {
+      "type": "quote",
+      "text": "Ihr kommt ins Studio und startet Witcher 4 sofort. Ihr könnt es auf dem PC starten. Ihr könnt es auf der PS5 starten. Ihr könnt es auf der Xbox Series X starten - und es läuft.",
+      "attribution": "Michał Nowakowski, Co-CEO von CD Projekt Red, gegenüber Game Developer"
+    },
+    {
+      "type": "paragraph",
+      "text": "In der Branche ist es weit verbreitet, die Optimierung ans Ende der Produktion zu schieben. Genau dieses Muster hat sich bei Cyberpunk 2077 gerächt, das gleichzeitig für zwei Konsolengenerationen und den PC erschien."
+    },
+    {
+      "type": "heading",
+      "text": "Zehn Häkchen, und keines bleibt offen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die zweite Änderung betrifft die interne Buchhaltung der Entwicklung. Statt Meilensteine mit Restposten abzuhaken, gelten technische Kriterien nun als Bedingung. Wccftech fasst das so zusammen, dass die Arbeit an einer Fassung stockt, sobald eine Plattform durchfällt - Nowakowski selbst erklärt vor allem, warum das nötig wurde."
+    },
+    {
+      "type": "quote",
+      "text": "Technisch gesehen sollten wir zum Beispiel zehn Häkchen erreichen. Früher dachten wir bei ein oder zwei fehlenden: Das holen wir später nach. Manchmal haben wir es geschafft, manchmal nicht - und zwei oder drei Meilensteine später fehlen dann vier oder fünf Häkchen, und das ist nicht mehr so einfach.",
+      "attribution": "Michał Nowakowski, Co-CEO von CD Projekt Red"
+    },
+    {
+      "type": "heading",
+      "text": "Die Lehre aus dem Cyberpunk-Debakel"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nowakowski beschreibt die damalige Denkweise offen: Das Team habe die bestmögliche Optik und ein möglichst filmisches Gefühl angepeilt, und der PC sei dafür schlicht die geeignetste Hardware gewesen. Dahinter stand laut dem Co-CEO ein Trugschluss - die Annahme, man könne die Erfahrung später ohne grossen Aufwand auf die jeweilige Zielkonsole herunterskalieren. Bei The Witcher 3: Wild Hunt hatte dieser Ansatz funktioniert, allerdings sei man dabei nach eigener Einschätzung auch das eine oder andere Mal schlicht Glück gehabt."
+    },
+    {
+      "type": "paragraph",
+      "text": "Bei Cyberpunk 2077 ging die Rechnung nicht auf. Auf PS4 und Xbox One war das Spiel wegen zahlreicher technischer Probleme kaum spielbar, auch die Fassungen für PS5 und Xbox Series X|S kämpften mit eigenen Baustellen. Sony nahm den Titel schliesslich aus dem PlayStation Store; erst sechs Monate und mehrere Patches später kehrte er zurück. Nowakowskis Fazit heute: Man gehe seither keine Risiken mehr ein und wolle sicher sein, dass es tatsächlich funktioniert."
+    },
+    {
+      "type": "heading",
+      "text": "Was das für 2028 heisst"
+    },
+    {
+      "type": "list",
+      "items": [
+        "The Witcher 4 entsteht für PC, PS5 und Xbox Series X|S - alle drei Fassungen laufen bereits im Studio",
+        "Der angepeilte Termin 2028 ist nicht in Stein gemeisselt und kann sich verschieben",
+        "Als Überbrückung dienen The Witcher 3: Wild Hunt Remastered mit Start am 29. September und die Erweiterung Songs of the Past",
+        "Technisch setzt CD Projekt Red auf die Unreal Engine 5, an deren bekannten Schwachstellen das Studio selbst mitarbeitet"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Zwei Jahre Vorlauf sind viel Zeit, um Häkchen zu setzen - und genügend Zeit, um sie wieder zu verlieren, wenn Inhalte wachsen und Deadlines drücken. Genau darin liegt der interessante Teil dieser Ankündigung: CD Projekt Red verspricht keine Wunderleistung, sondern einen Prozess, der Selbstbetrug erschweren soll."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ein riesiges Open-World-Spiel ohne jeden Fehler wird auch The Witcher 4 nicht werden - dafür sind solche Produktionen zu komplex. Entscheidend ist die Differenz zu 2020: Damals war die Konsolenfassung ein Versprechen, das erst nach dem Verkauf eingelöst werden sollte. Diesmal soll sie von Anfang an das Mass sein. Ob das hält, zeigt sich erst am Erscheinungstag."
+    }
+  ],
+  "poll": {
+    "question": "Glaubt ihr CD Projekt Red, dass The Witcher 4 auf Konsolen sauber startet?",
+    "options": [
+      "Ja, aus Cyberpunk hat das Studio gelernt",
+      "Erst wenn Tests am Launch-Tag das belegen",
+      "Nein, am Ende drückt der Termin wieder",
+      "Egal - ich warte ohnehin auf Patch 1.3"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-08-31T12:03:09.148Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "waveform",
+  "sources": [
+    {
+      "title": "The Witcher 4 Development Is Halted If Any Console Fails, As CD Projekt Red Locks In Strict Platform Checkmarks",
+      "url": "https://wccftech.com/the-witcher-4-development-halted-console-fails/",
+      "publisher": "Wccftech"
+    },
+    {
+      "title": "The Witcher 4 already runs on all target platforms - CD Projekt Red not taking any chances after Cyberpunk 2077",
+      "url": "https://www.eurogamer.net/the-witcher-4-runs-on-pc-ps5-xbox-cyberpunk-2077-lessons",
+      "publisher": "Eurogamer"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/witcher-4-plattform-checkmarks-cd-projekt-red-2028.webp",
+    "alt": "Ein Häkchen fehlt - und The Witcher 4 kommt nicht weiter",
+    "credit": "Bild: Wccftech",
+    "sourceUrl": "https://wccftech.com/the-witcher-4-development-halted-console-fails/",
+    "sourceWidth": 1456,
+    "sourceHeight": 819
+  },
+  "relatedSlugs": [
+    "the-witcher-4-release-fenster-2028-gamescom",
+    "witcher-4-physische-edition-box-ohne-disc-2028",
+    "witcher-4-philipp-weber-geralt-rolle-ciri-2026"
+  ]
+}
