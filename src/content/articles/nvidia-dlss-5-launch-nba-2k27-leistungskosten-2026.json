@@ -1,0 +1,159 @@
+{
+  "slug": "nvidia-dlss-5-launch-nba-2k27-leistungskosten-2026",
+  "title": "DLSS 5 startet am Freitag - und halbiert die Bildrate",
+  "subtitle": "Nvidias neues Neural-Rendering-Modell kostet im Schnitt 50 bis 60 Prozent Leistung, die dreistelligen FPS-Werte liefert vor allem Multi Frame Generation",
+  "excerpt": "DLSS 5 erscheint am 3. September mit NBA 2K27 - exklusiv für RTX 50. Nvidias eigene Benchmarks zeigen Hunderte FPS, doch darunter liegt eine Zahl, die alles relativiert.",
+  "seoTitle": "DLSS 5: Start am 3. September, 50-60 % Leistungskosten",
+  "metaDescription": "Nvidia startet DLSS 5 am 3. September mit NBA 2K27 - nur auf RTX 50 und GeForce NOW. Erste Benchmarks zeigen 50 bis 60 Prozent Leistungsverlust im Schnitt.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "bereich": "hardware",
+  "tags": [
+    "Nvidia",
+    "DLSS 5",
+    "NBA 2K27",
+    "GeForce RTX 50",
+    "GeForce NOW"
+  ],
+  "tldr": [
+    "DLSS 5 erscheint am 3. September, erster Titel mit nativer Unterstützung ist NBA 2K27",
+    "Offiziell unterstützt werden nur RTX-50-Grafikkarten, entsprechende Notebooks und GeForce NOW",
+    "Nvidia beziffert die Leistungskosten des Modells auf durchschnittlich 50 bis 60 Prozent",
+    "Seit der GTC-Demo im März 2026 wurde das Modell laut Nvidia um den Faktor 5 beschleunigt"
+  ],
+  "whyItMatters": "DLSS 5 ist der erste grosse Versuch, ein neuronales Modell dauerhaft zwischen Renderer und Bildschirm zu schalten - und der erste, der dafür die Hälfte eurer Rohleistung verlangt. Wer eine RTX 50 besitzt, muss künftig abwägen zwischen Optik und echten Bildern pro Sekunde. Wer eine ältere Karte hat, bleibt vorerst komplett aussen vor.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Nvidia macht Ernst: DLSS 5 geht am 3. September offiziell an den Start, erster Titel mit nativer Integration ist NBA 2K27. Unterstützt wird die Technik nach Herstellerangaben auf allen Desktop-Grafikkarten der RTX-50-Serie, auf entsprechenden Notebooks sowie über den Streaming-Dienst GeForce NOW. Parallel dazu hat Nvidia die ersten eigenen Messwerte veröffentlicht - und die enthalten neben Hunderten von Bildern pro Sekunde eine Zahl, die den ganzen Rest relativiert: Das Modell kostet im Schnitt 50 bis 60 Prozent Leistung."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "3. Sept.",
+          "label": "Start von DLSS 5, zuerst in NBA 2K27"
+        },
+        {
+          "value": "50-60 %",
+          "label": "durchschnittlicher Leistungsverlust durch das Modell"
+        },
+        {
+          "value": "5x",
+          "label": "Beschleunigung des Modells seit der GTC-Demo im März 2026"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Ein Sportspiel als Türöffner"
+    },
+    {
+      "type": "paragraph",
+      "text": "Dass ausgerechnet NBA 2K27 den Anfang macht, war absehbar: Aus dem Spiel stammt jene DLL, mit der Modder DLSS 5 in den vergangenen Tagen bereits in fremde Titel gezwängt haben. Erst mit dem regulären Release der Standard-Version schaltet 2K die echte, vom Entwickler abgestimmte Integration frei - der Titel selbst erscheint am 4. September. Für Besitzerinnen und Besitzer älterer Karten ist damit vorerst Schluss: Zwar läuft das Modell auf FP8, das auch die RTX-40-Serie beherrscht, offiziell unterstützt wird aber nur Blackwell. Nvidia begründet das mit den Tensor-Kernen der fünften Generation und damit, dass ohne Multi Frame Generation und mit niedriger Basis-Bildrate schlicht kein brauchbares Spielerlebnis entstünde."
+    },
+    {
+      "type": "heading",
+      "text": "Was die Balken zeigen - und was darunter liegt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nvidias eigene Messungen entstanden mit aktiviertem Raytracing, Ultra-Preset, Multi Frame Generation im 6x-Modus und aktivem Upscaling. In 1080p schafft selbst die Einsteigerkarte RTX 5060 über 250 FPS, der Rest der Serie landet zwischen 300 und über 500 FPS. In 1440p empfiehlt Nvidia mindestens eine RTX 5070, die dort über 260 FPS liefert, während die RTX 5090 die 500er-Marke reisst. In 2160p bleiben nur noch RTX 5080 und RTX 5090 auf der Empfehlungsliste: 233 beziehungsweise 370 FPS im Schnitt."
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Ernüchterung liegt in der Rechnung dahinter. PC Gamer hat sie aufgemacht: Die 258 FPS der RTX 5060 in 1080p entsprechen einer real gerenderten Bildrate von rund 43 FPS - alles andere erzeugt die sechsfache Frame Generation. Wer eine teure Karte gekauft hat, um Regler nach rechts zu schieben, landet mit DLSS 5 also ausgerechnet dort, wo Upscaling und Bildgenerierung am Anschlag laufen müssen. Immerhin: Bei niedrigeren Auflösungen dürfte der 6x-Modus in der Praxis gar nicht nötig sein, ein 4x-Modus reicht für 240-Hz-Displays locker."
+    },
+    {
+      "type": "heading",
+      "text": "Latenz, Modelle, Masken: die technischen Details"
+    },
+    {
+      "type": "paragraph",
+      "text": "In den technischen Nachfragen gibt sich Nvidia auskunftsfreudig. Wichtigste Punkte im Überblick:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "DLSS 5 läuft auf den Tensor-Kernen der Blackwell-Generation und erzeugt keine systematische Zusatzlatenz wie Frame Generation - es muss nicht auf das nächste Bild warten. Die Mehrlatenz entsteht allein durch die Rechenzeit des Modells im aktuellen Frame.",
+        "Es handelt sich um ein allgemeines Modell, nicht um eine Trainingsarbeit pro Spiel. Die drei angebotenen Varianten A, B und C funktionieren titelübergreifend und unterscheiden sich nicht in der Performance.",
+        "Wie viele Objektgruppen oder Masken ein Studio definiert, ist für die Leistung egal - das Modell skaliert nicht mit den Werten im Buffer. Lediglich das Erzeugen dieses Buffers kann je nach Engine minimale Kosten verursachen.",
+        "DLSS 5 ist unabhängig und lässt sich auch auf dem nativen Raster-Renderer aktivieren, ohne dass andere DLSS-Techniken Voraussetzung wären.",
+        "Das Modell ist noch nicht auf NVFP4 quantisiert - hier steckt also weiteres Optimierungspotenzial."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Fünfmal schneller in fünf Monaten"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Leistungskosten sind bereits das Ergebnis einer erstaunlichen Aufholjagd. Als Jensen Huang DLSS 5 im März 2026 auf der GTC vorstellte und es als grössten Grafikdurchbruch seit dem Echtzeit-Raytracing von 2018 bezeichnete, lief die Demo noch auf zwei RTX 5090. Innerhalb von zwei Monaten verbesserte Nvidia das Modell um 50 Prozent und brachte es auf einer einzelnen 5090 zum Laufen, im Juli folgte der Faktor 2,5, im August schliesslich der Faktor 5 - und damit die Lauffähigkeit auf der gesamten RTX-50-Familie. Verantwortlich dafür ist laut Nvidia eine Mischung aus Hardware-, Kernel- und Co-Design-Optimierungen. Weitere Updates sollen noch in diesem Jahr folgen, das Tempo soll dabei sogar zunehmen."
+    },
+    {
+      "type": "heading",
+      "text": "Ein Schalter für Spieler, Regler für Entwickler"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ein Punkt, den Nvidia besonders betont: Die spektakulären Vorher-Nachher-Vergleiche, die derzeit kursieren, stammen überwiegend von Moddern, die mit Entwickler-Werkzeugen an den Parametern drehen. In nativ integrierten Spielen gibt es für die Spielerschaft nur einen simplen An-/Aus-Schalter, die Feinabstimmung bleibt beim Studio. Die Integration selbst soll über Streamline vergleichsweise einfach ausfallen."
+    },
+    {
+      "type": "quote",
+      "text": "All die Regler, die wir in den Präsentationen gezeigt haben, sind aus unserer Sicht Entwickler-Regler. Wir entwickeln sie für die Studios, damit sie ihre künstlerische Vision umsetzen können. Wenn Spielerinnen und Spieler DLSS 5 einschalten, wissen sie also, dass sie genau das sehen, was die Entwickler beabsichtigt haben.",
+      "attribution": "Nvidia im Gespräch mit Wccftech"
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "DLSS 5 startet als das umstrittenste Feature, das Nvidia je in seine Grafikkarten gepackt hat - und die Debatte verschiebt sich gerade. Die Kritik drehte sich monatelang darum, ob ein neuronales Modell überhaupt über das Bild eines Spiels legen darf; The Verge nannte die Technik nach der Ankündigung eine «Bewegungsglättung für Videospiele, nur schlimmer». Jetzt kommt eine sehr nüchterne Frage dazu: Ist der Optikgewinn den Preis wert, wenn die real gerenderte Bildrate halbiert wird und der Rest aus generierten Zwischenbildern besteht? Raytracing hat 2018 einen ähnlichen Weg genommen und wird acht Jahre später von vielen immer noch abgeschaltet. Nvidia verspricht schnellere Updates und ein weiter schrumpfendes Modell - bis dahin ist DLSS 5 vor allem ein Angebot an jene, die eine RTX 50 besitzen und bereit sind, ihre Regler weit nach links zu schieben, um das Bild nach rechts zu drehen."
+    }
+  ],
+  "poll": {
+    "question": "DLSS 5 halbiert die real gerenderte Bildrate - wäre euch die Optik das wert?",
+    "options": [
+      "Ja, der Sprung rechtfertigt das",
+      "Nur wenn die Basis-FPS stimmt",
+      "Nein, generierte Frames sind kein Ersatz",
+      "Ich lasse KI-Filter grundsätzlich aus"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-09-01T14:07:14.860Z",
+  "readingTimeMinutes": 4,
+  "heroVariant": "grid",
+  "sources": [
+    {
+      "title": "NVIDIA DLSS 5 Performance Unveiled: 5x Faster Than Original Demo, 50% Perf Penalty on Average, But RTX 50 GPUs Offer “Hundreds of FPS” With MFG Enabled & More Optimizations On the Way",
+      "url": "https://wccftech.com/nvidia-dlss-5-performance-5x-faster-rtx-50-series/",
+      "publisher": "Wccftech"
+    },
+    {
+      "title": "DLSS 5 comes with a massive 50-60% performance hit, so I hope you like lower frame rates with your dose of AI image enhancement",
+      "url": "https://www.pcgamer.com/hardware/graphics-cards/dlss-5-comes-with-a-massive-50-60-percent-performance-hit-so-i-hope-you-like-lower-frame-rates-with-your-dose-of-ai-image-enhancement/",
+      "publisher": "PC Gamer"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/nvidia-dlss-5-launch-nba-2k27-leistungskosten-2026.webp",
+    "alt": "DLSS 5 startet am Freitag - und halbiert die Bildrate",
+    "credit": "Bild: Wccftech",
+    "sourceUrl": "https://wccftech.com/nvidia-dlss-5-performance-5x-faster-rtx-50-series/",
+    "sourceWidth": 1456,
+    "sourceHeight": 819
+  },
+  "relatedSlugs": [
+    "dlss-5-mod-control-nba-2k27-dll-2026",
+    "dlss-5-kingdom-come-deliverance-2-vavra-schatten-2026",
+    "dlss-5-rtx-4000-modder-dlssnr-dll-2026"
+  ]
+}
