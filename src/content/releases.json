@@ -120,6 +120,16 @@
     ]
   },
   {
+    "title": "Silent Hill: Townfall",
+    "date": "2026-09-24",
+    "platforms": [
+      "playstation",
+      "xbox",
+      "pc"
+    ],
+    "articleSlug": "silent-hill-townfall-ps5-zeitexklusiv-xbox-2026"
+  },
+  {
     "title": "EA Sports FC 27",
     "date": "2026-09-25",
     "platforms": [
@@ -128,6 +138,28 @@
       "pc"
     ],
     "articleSlug": "ea-fc-27-the-grounds-nba-2k-vorbild"
+  },
+  {
+    "title": "The Witcher 3",
+    "date": "2026-09-29",
+    "platforms": [
+      "pc",
+      "playstation",
+      "xbox",
+      "nintendo"
+    ],
+    "articleSlug": "witcher-3-remastered-gratis-update-erweiterungen-2026"
+  },
+  {
+    "title": "CD Projekt Red",
+    "date": "2026-09-29",
+    "platforms": [
+      "pc",
+      "playstation",
+      "xbox",
+      "nintendo"
+    ],
+    "articleSlug": "witcher-3-remastered-hd-reworked-project-halk-hogan-2026"
   },
   {
     "title": "Ghost of Yotei: Complete Edition",
@@ -182,6 +214,15 @@
     ]
   },
   {
+    "title": "ROG Xbox Ally X20",
+    "date": "2026-10-15",
+    "platforms": [
+      "pc",
+      "xbox"
+    ],
+    "articleSlug": "rog-xbox-ally-x20-vorbestellung-preis-2026"
+  },
+  {
     "title": "Final Fantasy Resonance",
     "date": "2026-10-22",
     "platforms": [
@@ -230,6 +271,16 @@
     "articleSlug": "dawn-of-war-4-verschiebung-dezember-2026"
   },
   {
+    "title": "Path of Exile 2",
+    "date": "2026-12-11",
+    "platforms": [
+      "pc",
+      "playstation",
+      "xbox"
+    ],
+    "articleSlug": "path-of-exile-2-1-0-release-11-dezember-2026"
+  },
+  {
     "title": "Persona 4 Revival",
     "date": "2027-02-18",
     "platforms": [
@@ -238,5 +289,15 @@
       "pc"
     ],
     "articleSlug": "persona-4-revival-yukiko-amagi-trailer-2026"
+  },
+  {
+    "title": "Fable",
+    "date": "2027-02-23",
+    "platforms": [
+      "xbox",
+      "pc",
+      "playstation"
+    ],
+    "articleSlug": "fable-gamescom-2026-kampfsystem-anspielbericht"
   }
 ]
