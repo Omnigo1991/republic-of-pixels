@@ -1,0 +1,188 @@
+{
+  "slug": "guide-dlss-5-in-nba-2k27-alles-was-bekannt-ist",
+  "title": "DLSS 5 in NBA 2K27: Alles, was bekannt ist",
+  "subtitle": "Der Guide bündelt alle bisher veröffentlichten Angaben zu Nvidias DLSS 5 - von den offiziellen Performance-Zahlen aus NBA 2K27 bis zu den Mod-Umsetzungen auf älteren GeForce-Karten.",
+  "excerpt": "Der Guide bündelt alle bisher veröffentlichten Angaben zu Nvidias DLSS 5 - von den offiziellen Performance-Zahlen aus NBA 2K27 bis zu den Mod-Umsetzungen auf älteren GeForce-Karten. DLSS 5 ist laut Nvidia das bislang grösste und komplexeste Modell des Unternehmens und kostet im Schnitt 50 bis 60 Prozent Leistung - g…",
+  "category": "guides",
+  "platforms": [
+    "pc",
+    "playstation",
+    "xbox"
+  ],
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-09-01T14:13:51.128Z",
+  "readingTimeMinutes": 6,
+  "heroVariant": "controller",
+  "image": {
+    "src": "/images/articles/nvidia-dlss-5-launch-nba-2k27-leistungskosten-2026.webp",
+    "alt": "DLSS 5 startet am Freitag - und halbiert die Bildrate",
+    "credit": "Bild: Wccftech",
+    "sourceUrl": "https://wccftech.com/nvidia-dlss-5-performance-5x-faster-rtx-50-series/",
+    "sourceWidth": 1456,
+    "sourceHeight": 819
+  },
+  "isLeakOrRumor": false,
+  "tags": [
+    "NBA 2K27",
+    "Nvidia DLSS 5",
+    "GeForce RTX 50",
+    "Neural Rendering"
+  ],
+  "tldr": [
+    "Offizielle FPS-Zahlen immer als 6x-MFG-Werte lesen - die Basis-Framerate liegt deutlich darunter.",
+    "Mit 50 bis 60 Prozent Leistungseinbussen durch das Modell rechnen (Nvidia-Angabe, Stand 1. September 2026).",
+    "Auflösungsempfehlungen von Nvidia beachten: 1440p ab RTX 5070, 2160p ab RTX 5080/5090.",
+    "In nativen DLSS-5-Titeln gibt es nur On/Off - keine Parameter im Menü."
+  ],
+  "whyItMatters": "DLSS 5 ist laut Nvidia das bislang grösste und komplexeste Modell des Unternehmens und kostet im Schnitt 50 bis 60 Prozent Leistung - gleichzeitig kursieren seit Ende August 2026 Mods, die die Technik in über einem Dutzend Spielen und sogar auf älteren GeForce-Generationen laufen lassen. Wer wissen will, was gesichert ist und was aus experimentellen Bastellösungen stammt, findet die Angaben derzeit über mehrere Meldungen verstreut.",
+  "poll": null,
+  "review": null,
+  "seoTitle": "DLSS 5 in NBA 2K27: Alles, was bekannt ist",
+  "metaDescription": "Der Guide bündelt alle bisher veröffentlichten Angaben zu Nvidias DLSS 5 - von den offiziellen Performance-Zahlen aus NBA 2K27 bis zu den Mod-Umsetzungen auf…",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Stand dieses Guides: Quellenstand: Meldungen vom 27. August bis 1. September 2026, inklusive der ComputerBase-Updates vom 30.08.2026 und 31.08.2026. Wir halten ihn aktuell, wenn sich Wesentliches ändert."
+    },
+    {
+      "type": "paragraph",
+      "text": "Dieser Guide richtet sich an alle, die vor dem Kauf oder vor dem ersten Einschalten von DLSS 5 wissen wollen, welche Zahlen und Aussagen tatsächlich veröffentlicht sind. Er trennt konsequent zwischen den offiziellen Angaben, die Nvidia rund um NBA 2K27 kommuniziert hat, und den Messwerten aus experimentellen Mod-Umsetzungen. Alles, was hier steht, stammt aus den Meldungen von Wccftech, PC Gamer und ComputerBase zwischen dem 27. August und dem 1. September 2026."
+    },
+    {
+      "type": "heading",
+      "text": "Was DLSS 5 laut Nvidia ist"
+    },
+    {
+      "type": "paragraph",
+      "text": "DLSS 5 ist ein Echtzeit-Neural-Rendering-System. Anders als klassisches Upscaling nutzt das KI-Modell vorhandene Bildinformationen, um Beleuchtung und Materialien zu verändern; Entwickler können den Effekt gezielt auf einzelne Szenen oder Objekte anwenden. Als Eingaben dienen der Color-Buffer beziehungsweise das gerenderte Bild sowie Motion Vectors, Materialeigenschaften werden aus dem Bild abgeleitet. Nvidia beschreibt den Unterschied zu früheren Versionen so: Alle bisherigen DLSS-Varianten rekonstruieren ein Bild aus spärlichen Eingangssignalen und haben eine Ground Truth als Ziel. DLSS 5 hat keine Ground Truth - die künstlerische Vorgabe der Entwickler ist die neue Ground Truth."
+    },
+    {
+      "type": "paragraph",
+      "text": "Technisch läuft das Modell auf den Tensor-Kernen der fünften Generation aus der Blackwell-Reihe. Es ist ein einziges, allgemeines Modell, das mehrere Teilmodelle (A, B, C) enthält, die über alle integrierten Spiele hinweg funktionieren. Trainiert und ausgeführt wird es in FP8 - ein Format, das laut Wccftech sowohl RTX 50 als auch RTX 40 bieten. Eine NVFP4-Quantisierung gibt es bislang nicht. DLSS 5 ist unabhängig von anderen DLSS-Techniken und lässt sich auch über den nativen Raster-Renderer aktivieren. Reflex arbeitet nach DLSS und ist laut Nvidia komplett orthogonal, ebenso die neuronale Texturkompression."
+    },
+    {
+      "type": "heading",
+      "text": "Die offiziellen Performance-Zahlen aus NBA 2K27"
+    },
+    {
+      "type": "paragraph",
+      "text": "NBA 2K27 ist das erste Spiel mit DLSS 5. Die von Nvidia gezeigten Messungen entstanden mit DLSS 5 über die spielinternen Einstellungen, Ray Tracing an, Ultra-Preset und Multi Frame Generation im 6x-Modus; Wccftech nennt für DLSS Super Resolution den Quality-Modus, PC Gamer spricht bei den 4K-Werten von Performance-Upscaling."
+    },
+    {
+      "type": "list",
+      "items": [
+        "1080p: Die RTX 5060 schafft über 250 FPS (PC Gamer nennt 258 FPS), der Rest der Modellpalette liefert 300+ bis über 500 FPS.",
+        "1440p: Nvidia empfiehlt RTX 5070 und aufwärts. Die RTX 5070 liegt bei über 260 FPS, die RTX 5090 über 500 FPS.",
+        "2160p: Nvidia empfiehlt RTX 5080 und RTX 5090. Die RTX 5080 erreicht im Schnitt 233 FPS, die RTX 5090 im Schnitt 370 FPS.",
+        "Basis-Framerate: PC Gamer rechnet vor, dass unter den 258 FPS der RTX 5060 in 1080p tatsächlich rund 43 FPS liegen, weil 6x MFG aktiv ist."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Grund für den breiten MFG-Einsatz ist der Leistungsbedarf: Das Modell kostet im Schnitt 50 bis 60 Prozent Leistung - laut PC Gamer unabhängig vom Spiel. Zusätzliche Latenz entsteht nur durch das Modell selbst im aktuellen Frame; einen systematischen Zusatz wie bei Frame Generation gibt es laut Nvidia nicht, weil DLSS 5 nicht auf den nächsten Frame warten muss. Die Zahl der Gruppen oder Masken, die Entwickler definieren, macht keinen Leistungsunterschied, und auch zwischen den Modellen A, B und C gibt es keine Performance-Unterschiede."
+    },
+    {
+      "type": "heading",
+      "text": "So gehst du mit den Zahlen um"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Rechne bei jeder genannten FPS-Zahl den MFG-Modus mit: Alle Werte stammen aus 6x MFG.",
+        "Wccftech merkt an, dass 6x MFG in niedrigen Auflösungen kaum nötig erscheint, sofern du kein extrem schnelles Display nutzt, und dass sich auf der RTX 5090 in 4K auch mit 4x MFG ein 240-Hz-Erlebnis ergeben dürfte.",
+        "Orientiere dich bei der Auflösung an Nvidias eigenen Empfehlungen: 1440p ab RTX 5070, 2160p ab RTX 5080."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Entwicklerkontrolle statt Regler im Menü"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bei Spielen mit nativer DLSS-5-Unterstützung entscheiden die Entwickler, was verändert und aufgewertet wird. Für Spielerinnen und Spieler bleibt ein einfacher On/Off-Schalter; DLSS-5-Parameter lassen sich in nativen Titeln nicht einstellen. Nvidia formuliert die Absicht so, dass Nutzer beim Einschalten genau das sehen, was die Entwickler ursprünglich beabsichtigt haben. Ob Entwickler künftig Presets anbieten, will Nvidia nicht kommentieren. Spiele mit Streamline erleichtern die Integration; auch ältere Spiele funktionieren, wenn Entwickler DLSS 5 einbauen - nötig sind Color-Buffer und Motion Vectors."
+    },
+    {
+      "type": "heading",
+      "text": "Die Optimierungs-Chronik"
+    },
+    {
+      "type": "list",
+      "items": [
+        "GTC im März 2026: Die erste Demo lief auf zwei RTX 5090.",
+        "Innerhalb von zwei Monaten: 50 Prozent schneller, lauffähig auf einer einzelnen RTX 5090.",
+        "Juli 2026: Verbesserung um fast das 2,5-Fache.",
+        "August 2026: Verbesserung um das 5-Fache, lauffähig über die gesamte RTX-50-Reihe.",
+        "Laut Nvidia stammen die Fortschritte aus Hardware-, Software-Kernel- und Co-Design-Optimierungen; weitere Optimierungen sollen in schnellerem Tempo folgen."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Die Mod-Szene: nvngx_dlssnr.dll aus NBA 2K27"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgangspunkt ist die Datei nvngx_dlssnr.dll, entdeckt in der Early-Access-Version von NBA 2K27. Windows weist die 158 MB grosse Bibliothek als „NVIDIA DLSSNR“ in Version 310.8.0.0 aus, „NR“ steht für Neural Rendering. Eine entsprechende Option bietet das Basketballspiel bislang nicht, und Nvidia hat NBA 2K27 auch nicht als DLSS-5-Titel angekündigt (Stand ComputerBase-Meldung vom 27./28.08.2026). Mitglieder der Modding-Community RenoDX banden die Bibliothek binnen weniger Stunden in Control ein: Dort verändert das Modell das Aussehen von Jesse Faden, sieben Stile stehen zur Auswahl, erfasst werden bislang nur die Charaktermodelle. Auch das DirectX-9-Spiel A Hat in Time wurde damit versehen; kurz darauf folgten unter anderem Cyberpunk 2077, Red Dead Redemption 2, The Last of Us Part II Remastered, Hogwarts Legacy, Black Myth: Wukong, Starfield, GTA V, Metal Gear Solid Delta: Snake Eater, Monster Hunter Wilds und Silent Hill 2."
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Einschränkungen sind erheblich: HDR funktioniert nicht korrekt, weshalb in SDR getestet wurde, und der Neural-Rendering-Durchlauf läuft spät in der Pipeline, offenbar nach dem Upscaling und möglicherweise nach dem Tone Mapping. Auf einer RTX 5070 Ti in 4K fiel die Bildrate von 71 auf 35 FPS, also fast die Hälfte; einer der Entwickler bezeichnet den Stand als praktisch unbrauchbar. In Cyberpunk 2077 auf einer RTX 5070 in WQHD sank die Bildrate ohne Raytracing von 138 auf 68 FPS, mit Raytracing Ultra von 111 auf 55 FPS und im Pathtracing-Modus von 71 auf 45 FPS. Beim wiederholten Ein- und Ausschalten stieg der Videospeicherbedarf um jeweils rund 1 GB - laut ComputerBase dürfte es sich um einen Fehler der auf RenoDX und ReShade basierenden Mod handeln. ComputerBase betont ausdrücklich, dass diese Versuche nicht repräsentativ für die von Nvidia und den Entwicklern optimierte Umsetzung sind."
+    },
+    {
+      "type": "heading",
+      "text": "Ältere GeForce-Karten"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die DLL liess sich zunächst nur auf RTX 5000 ausführen, Grund dafür sind explizit für Blackwell kompilierte CUDA Binaries. Modder Uncle Burrito ersetzte diese durch Ada-Lovelace-kompatible Dateien und brachte DLSS 5 so auf RTX 4000 zum Laufen. Mit RenoDX in Version 4.5 läuft die Technik inzwischen auch auf RTX 3000 „Ampere“, das im Gegensatz zu Ada Lovelace und Blackwell nativ kein FP8 unterstützt. ComputerBase hat zudem eine Step-by-Step-Anleitung für Besitzer von RTX 50 und RTX 40 veröffentlicht (Update vom 31.08.2026). Wccftech führt in seinen weiterführenden Meldungen ausserdem Berichte zu DLSS 5 auf RTX 20 und RTX 30 sowie einen Einbruch von 138 auf 4 FPS auf einer RTX 3080 auf."
+    },
+    {
+      "type": "heading",
+      "text": "Release und Plattform-Frage"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nvidia will DLSS 5 im Herbst 2026 zunächst für die GeForce-RTX-50-Serie veröffentlichen. Ob die Technik ausschliesslich für RTX 5000 kommt, hat Nvidia bis dato weder bestätigt noch dementiert; die zur Gamescom 2026 erwartete finale Vorstellung fand nicht statt. Auf die Frage nach einer Option für ältere RTX-Familien antwortete Nvidia, DLSS 5 sei das bislang grösste und komplexeste Modell, Priorität und Fokus lägen bei der RTX-50-Serie. ComputerBase verweist auf den Präzedenzfall FSR 4, das AMD lange nur für RX 9000 vorgesehen hatte und im Juni 2026 auch für RX 7000 freigab."
+    },
+    {
+      "type": "heading",
+      "text": "Checkliste"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Offizielle FPS-Zahlen immer als 6x-MFG-Werte lesen - die Basis-Framerate liegt deutlich darunter.",
+        "Mit 50 bis 60 Prozent Leistungseinbussen durch das Modell rechnen (Nvidia-Angabe, Stand 1. September 2026).",
+        "Auflösungsempfehlungen von Nvidia beachten: 1440p ab RTX 5070, 2160p ab RTX 5080/5090.",
+        "In nativen DLSS-5-Titeln gibt es nur On/Off - keine Parameter im Menü.",
+        "Mod-Messwerte (Control, Cyberpunk 2077) nicht mit der finalen Implementierung gleichsetzen; HDR funktioniert dort nicht korrekt.",
+        "Beim Mod-Test auf RTX 40 oder RTX 30 den ungeklärten Leistungs- und Bildqualitätsstatus einkalkulieren.",
+        "Release-Fenster im Blick behalten: Herbst 2026, zunächst RTX 50.",
+        "Vor Kaufentscheidungen auf die angekündigten weiteren Optimierungen warten - Nvidia stellt für später im Jahr ein Update in Aussicht."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "wccftech.com",
+      "url": "https://wccftech.com/nvidia-dlss-5-performance-5x-faster-rtx-50-series/"
+    },
+    {
+      "title": "pcgamer.com",
+      "url": "https://www.pcgamer.com/hardware/graphics-cards/dlss-5-comes-with-a-massive-50-60-percent-performance-hit-so-i-hope-you-like-lower-frame-rates-with-your-dose-of-ai-image-enhancement/"
+    },
+    {
+      "title": "computerbase.de",
+      "url": "https://www.computerbase.de/news/grafikkarten/dlss-5-auf-rtx-4000-nach-anpassung-laeuft-die-dlssnr-dll-auch-auf-aelteren-geforce.99127/"
+    },
+    {
+      "title": "computerbase.de",
+      "url": "https://www.computerbase.de/news/grafikkarten/dll-aus-nba-2k27-modder-verpflanzen-dlss-5-in-control.99096/"
+    },
+    {
+      "title": "wccftech.com",
+      "url": "https://wccftech.com/nvidias-dlss-5-cracked-into-control-hours-after-modders-found-a-hidden-dll-inside-nba-2k27/"
+    }
+  ]
+}
