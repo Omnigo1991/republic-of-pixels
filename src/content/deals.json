@@ -1,17 +1,6 @@
 {
-  "updatedAt": "2026-09-01T07:45:06.282Z",
+  "updatedAt": "2026-09-01T11:04:54.832Z",
   "deals": [
-    {
-      "appId": 1174180,
-      "title": "Red Dead Redemption 2",
-      "discountPercent": 75,
-      "originalPrice": 5999,
-      "finalPrice": 1499,
-      "currency": "EUR",
-      "endsAt": "2026-09-08T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1174180/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/capsule_184x69.jpg?t=1759502961"
-    },
     {
       "appId": 1326470,
       "title": "Sons Of The Forest",
@@ -66,6 +55,17 @@
       "endsAt": "2026-09-08T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/1623730/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/0703d5a0658c7aedaa3be4391d6f5cccc1bb6d7a/capsule_184x69.jpg?t=1784714419"
+    },
+    {
+      "appId": 1203620,
+      "title": "Enshrouded",
+      "discountPercent": 25,
+      "originalPrice": 2999,
+      "finalPrice": 2249,
+      "currency": "EUR",
+      "endsAt": "2026-09-07T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1203620/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1203620/84d7ce762d0e0ad6a2dfdced85ea713d33b70e18/capsule_184x69.jpg?t=1782800102"
     }
   ]
 }
