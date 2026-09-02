@@ -1,0 +1,154 @@
+{
+  "slug": "dragons-dogma-2-patch-3-2-performance-drachenpest-2026",
+  "title": "Dragon's Dogma 2: Patch 3.2 heilt die Drachenpest - und Vernworth läuft",
+  "subtitle": "Capcoms grösstes Update für das Rollenspiel bringt drei Speicherplätze, sechs Waffenfertigkeiten und spürbar mehr Bilder pro Sekunde",
+  "excerpt": "48 GB Download, drei Speicherplätze und ein Trank gegen die Drachenpest: Capcom räumt vor der Dark-Arisen-Erweiterung auf. Am spannendsten ist aber, was gar nicht in den Patch Notes steht.",
+  "seoTitle": "Dragon's Dogma 2: Patch 3.2 bringt Performance-Schub",
+  "metaDescription": "Patch 3.2 für Dragon's Dogma 2 verbessert Performance auf PC, PS5 und Xbox, heilt die Drachenpest und erweitert Speicherplätze sowie Skill-Slots.",
+  "category": "news",
+  "platforms": [
+    "pc",
+    "playstation",
+    "xbox",
+    "nintendo"
+  ],
+  "bereich": "games",
+  "tags": [
+    "Dragon's Dogma 2",
+    "Capcom",
+    "Dark Arisen",
+    "Patch",
+    "RE Engine"
+  ],
+  "tldr": [
+    "Patch 3.2 ist das bislang grösste Update für Dragon's Dogma 2 und schlägt auf PS5 mit rund 48 GB zu Buche",
+    "Die Speicherplätze steigen von einem auf drei, zuweisbare Waffenfertigkeiten von vier auf sechs",
+    "Ein neuer Gegenstand, der Drachenhemmungstrank, heilt die Drachenpest bei Vasallen",
+    "Die Performance-Gewinne stehen nicht in den Patch Notes, zeigen sich laut Nutzervideos aber auf PC, Steam Deck, PS5 und Xbox Series X|S"
+  ],
+  "whyItMatters": "Die schwankende Performance war seit dem Start 2024 der grösste Kritikpunkt an Dragon's Dogma 2 - genau dort setzt Patch 3.2 an, ohne es offiziell anzukündigen. Wer das Rollenspiel damals frustriert beiseitegelegt hat, bekommt gut fünf Wochen vor der Dark-Arisen-Erweiterung einen konkreten Grund für einen zweiten Versuch. Und die neuen Speicherplätze nehmen dem Spiel eine seiner härtesten Eigenheiten.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Capcom hat für Dragon's Dogma 2 das bislang grösste Update veröffentlicht. Version 3.2 ist kein Feinschliff-Patch, sondern ein Umbau: Kampf-Balancing, Verhalten von Vasallen und Gegnern, grosse Teile der Benutzeroberfläche, das Speichersystem und die Engine selbst wurden angefasst. Auf der PS5 schlägt der Download mit rund 48 GB zu Buche - eine Grössenordnung, die eher an eine Neuveröffentlichung erinnert als an ein Wartungsupdate."
+    },
+    {
+      "type": "embed",
+      "platform": "reddit",
+      "url": "https://www.reddit.com/r/DragonsDogma/comments/1w4v3nf/capcom_actually_put_cocaine_in_this_update_the/"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "48 GB",
+          "label": "Downloadgrösse des Patches auf PS5"
+        },
+        {
+          "value": "3",
+          "label": "Speicherplätze pro Erweckter statt bisher einem"
+        },
+        {
+          "value": "9. Okt.",
+          "label": "Release der Erweiterung Dark Arisen"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Der grösste Gewinn steht nicht in den Patch Notes"
+    },
+    {
+      "type": "paragraph",
+      "text": "Kurios: Die offiziellen Patch Notes erwähnen zwar tiefgreifende Engine- und Performance-Optimierungen, aber keine konkreten Zahlen. Dass sich unter der Haube viel bewegt hat, legen die geänderten Mindestanforderungen auf dem PC nahe - und Vergleichsvideos aus der Community. Der Kanal Game Tester hat den Patch auf einem System mit Ryzen 7 7800X3D, GeForce RTX 5070 Ti und 32 GB DDR5-6000-RAM (CL30) gegenübergestellt: in 1440p, maximalen Einstellungen, maximalem Raytracing und DLSS im Quality-Modus mit Preset K. Ergebnis in Vernworth, der notorisch CPU-lastigen Hauptstadt mit ihrer hohen Zahl an NPCs: Statt hoher 80er- und 90er-Werte stehen dort nun über 120 Bilder pro Sekunde."
+    },
+    {
+      "type": "paragraph",
+      "text": "Auch am unteren Ende der Leistungsskala tut sich etwas. Ein Video von NotAGameAddict zeigt Dragon's Dogma 2 auf dem Steam Deck bei 720p mit AMD FSR 3 im Performance-Modus - und zwar mit 30 FPS und mehr ausgerechnet in Vernworth. Nutzerberichte im Subreddit der Reihe deuten darauf hin, dass die Verbesserungen auch auf PlayStation 5 und Xbox Series X|S ankommen. Das passt ins Bild: Mit Monster Hunter Wilds hat Capcom kürzlich schon den zweiten grossen Problemfall der RE Engine nachträglich in den Griff bekommen."
+    },
+    {
+      "type": "heading",
+      "text": "Drei Speicherplätze und ein Trank gegen die Drachenpest"
+    },
+    {
+      "type": "paragraph",
+      "text": "Für viele dürfte der zweite grosse Block noch wichtiger sein, weil er zwei Designentscheidungen entschärft, über die sich die Community seit dem Start 2024 gestritten hat. Die Zahl der Speicherplätze pro Erweckter steigt von einem auf drei, jeder Platz führt nun Autosave, Zwischenspeicherstand und letzten Gasthaus-Speicherpunkt getrennt. Wer den Gasthaus-Speicherpunkt lädt, löscht damit nicht mehr die anderen beiden Stände. Ausserdem zeigt der Speichern-Bildschirm jetzt Datum und Uhrzeit des letzten Speichervorgangs."
+    },
+    {
+      "type": "paragraph",
+      "text": "Und die Drachenpest, die zuvor nur über den Tod des betroffenen Vasallen oder eine Katastrophe im Spielverlauf zu lösen war, lässt sich nun behandeln: Der neue Drachenhemmungstrank heilt die Seuche, dazu gibt es passende Vasallendialoge zu dem Gegenstand."
+    },
+    {
+      "type": "heading",
+      "text": "Sechs Skill-Slots ändern das Kampfgefühl"
+    },
+    {
+      "type": "paragraph",
+      "text": "Im Kampf greift Capcom an mehreren Stellen ein. Die Zahl der zuweisbaren Waffenfertigkeiten wächst von vier auf sechs - ein Detail mit grosser Wirkung, weil gerade die Berufung des Kriegsläufers mit ihren wechselnden Waffen unter den knappen Slots litt. Dazu kommen zahlreiche Anpassungen, die Frustmomente aus dem Kampf nehmen sollen:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Nach einem Rückstoss durch einen Angriff weicht die Spielfigur seltener erneut zurück",
+        "Gegner greifen kriechende Spielfiguren seltener an",
+        "Wer am Boden liegend getroffen wird, steht sofort wieder auf",
+        "Ausdauer-Regenerationsgegenstände wirken im Erschöpfungszustand unmittelbar",
+        "Die Unbesiegbarkeitsphase nach einer Wiederbelebung per Lazarusstein hält länger"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Die vollständige Liste steht auf der offiziellen Webseite - der oben genannte Auszug ist nur ein Bruchteil der Änderungen."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung: Aufräumen vor dem grossen Auftritt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Zeitpunkt ist kein Zufall. Am 9. Oktober erscheint die Erweiterung Dragon's Dogma 2: Dark Arisen für PC, PS5, Xbox Series X|S und Nintendo Switch 2, zu der Capcom bereits einen vierminütigen Gameplay-Überblick samt neuer Mechanik rund um Relikt-Expeditionen gezeigt hat. Für die Switch-2-Fassung nennt Capcom bislang über 30 fps, und schon zuvor hatte der Publisher 60 FPS sowie einen lange gewünschten Hard Mode angekündigt. Patch 3.2 sorgt dafür, dass das Basisspiel dieser Erweiterung technisch gewachsen ist - und liefert allen, die Dragon's Dogma 2 nach einem holprigen Start früh zur Seite gelegt haben, das überzeugendste Argument für eine Rückkehr seit zwei Jahren."
+    }
+  ],
+  "poll": {
+    "question": "Was war für dich das grössere Problem an Dragon's Dogma 2?",
+    "options": [
+      "Die Performance, besonders in Vernworth",
+      "Der einzige Speicherplatz",
+      "Die unheilbare Drachenpest",
+      "Nur vier Skill-Slots"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-09-02T10:04:18.994Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "grid",
+  "sources": [
+    {
+      "title": "Dragon's Dogma 2: Bisher größtes Update verbessert Performance und heilt die Drachenpest",
+      "url": "https://www.eurogamer.de/dragons-dogma-2-update-patch-notes",
+      "publisher": "Eurogamer.de"
+    },
+    {
+      "title": "CAPCOM Finally Fixes Dragon’s Dogma 2 Biggest Flaw, As Patch 3.2 Brings Significant Performance Improvements On PC and Consoles",
+      "url": "https://wccftech.com/capcom-finally-fixes-dragons-dogma-2-patch-3-2-performance/",
+      "publisher": "Wccftech"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/dragons-dogma-2-patch-3-2-performance-drachenpest-2026.webp",
+    "alt": "Dragon's Dogma 2: Patch 3.2 heilt die Drachenpest - und Vernworth läuft",
+    "credit": "Bild: Eurogamer.de",
+    "sourceUrl": "https://www.eurogamer.de/dragons-dogma-2-update-patch-notes",
+    "sourceWidth": 690,
+    "sourceHeight": 388
+  },
+  "relatedSlugs": [
+    "dragons-dogma-2-dark-arisen-norgan-relikte-gamescom-2026",
+    "gamescom-award-2026-gewinner-witcher-3-sega",
+    "mortal-shell-2-balance-patch-glimpses-rueckerstattung"
+  ]
+}
