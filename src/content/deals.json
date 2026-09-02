@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-02T13:03:16.311Z",
+  "updatedAt": "2026-09-02T14:24:21.308Z",
   "deals": [
     {
       "appId": 1174180,
@@ -35,6 +35,17 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3240220/a318bd9affe8eee32984b18794b273c256e9b2d6/capsule_184x69.jpg?t=1781187782"
     },
     {
+      "appId": 4656000,
+      "title": "BOMBANANA!",
+      "discountPercent": 38,
+      "originalPrice": 815,
+      "finalPrice": 505,
+      "currency": "EUR",
+      "endsAt": "2026-09-09T17:00:48.000Z",
+      "url": "https://store.steampowered.com/app/4656000/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4656000/4b28cb7e3572e7ab0ffcd6a53030b1a719ff3fff/capsule_184x69.jpg?t=1788351950"
+    },
+    {
       "appId": 108600,
       "title": "Project Zomboid",
       "discountPercent": 33,
@@ -55,17 +66,6 @@
       "endsAt": "2026-09-08T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/1623730/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/0703d5a0658c7aedaa3be4391d6f5cccc1bb6d7a/capsule_184x69.jpg?t=1784714419"
-    },
-    {
-      "appId": 1203620,
-      "title": "Enshrouded",
-      "discountPercent": 25,
-      "originalPrice": 2999,
-      "finalPrice": 2249,
-      "currency": "EUR",
-      "endsAt": "2026-09-07T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1203620/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1203620/84d7ce762d0e0ad6a2dfdced85ea713d33b70e18/capsule_184x69.jpg?t=1782800102"
     }
   ]
 }
