@@ -1,0 +1,154 @@
+{
+  "slug": "xbox-disc-to-digital-kompatibilitaet-ubisoft-2026",
+  "title": "Xbox digitalisiert eure Discs - bei Ubisoft kommt eine Fehlermeldung",
+  "subtitle": "Das Disc-to-Digital-Programm läuft jetzt im Insider-Kanal, doch eine Community-Datenbank zeigt: Längst nicht jede Blu-ray lässt sich in eine Lizenz verwandeln",
+  "excerpt": "Physische Xbox-Spiele werden zur Digital-Lizenz - automatisch beim Einlegen der Disc. Eine Community-Liste hat bereits fast 2'000 Titel geprüft, und bei einigen Publishern hakt es auffällig oft.",
+  "seoTitle": "Xbox Disc to Digital: Diese Spiele lassen sich digitalisieren",
+  "metaDescription": "Xbox Disc to Digital startet im Insider-Programm. Eine Community-Datenbank listet 830 kompatible Titel - bei Ubisoft, Sega und Square Enix hakt es.",
+  "category": "news",
+  "platforms": [
+    "xbox"
+  ],
+  "bereich": "games",
+  "tags": [
+    "Xbox",
+    "Xbox Series X",
+    "Microsoft",
+    "Disc to Digital",
+    "Xbox Insider"
+  ],
+  "tldr": [
+    "Das an der Gamescom angekündigte Disc-to-Digital-Programm ist jetzt für ausgewählte Xbox Insider freigeschaltet",
+    "Die Digital-Lizenz entsteht automatisch beim Einlegen der Disc, bleibt aber an die Scheibe gekoppelt - beim Verkauf ist sie weg",
+    "Die Community-Datenbank Disc2Digital hat 1'964 Titel getestet: 830 funktionieren, 271 nicht, 863 sind unbestätigt",
+    "Spiele von Ubisoft, Square Enix, Bandai Namco und Sega melden häufig, sie nähmen nicht am Programm teil"
+  ],
+  "whyItMatters": "Wer noch ein Regal voller Xbox-Discs besitzt, kann seine Sammlung ohne Zusatzkosten in Digital-Lizenzen überführen und muss zum Spielen nicht mehr aufstehen. Gleichzeitig zeigt der Start, wie eng dieses Versprechen gefasst ist: Die Lizenz hängt weiter an der Scheibe, und ob ein Titel überhaupt mitmacht, entscheidet offenbar der Publisher.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Microsoft hat das Disc-to-Digital-Programm für Xbox Series X und Xbox One freigeschaltet - vorerst für ausgewählte Teilnehmende des Xbox-Insider-Programms. Wer dabei ist, legt eine unterstützte Disc ein und erhält eine digitale Lizenz für den Titel, der sich danach auch ohne eingelegte Scheibe starten lässt. Angekündigt hatte Microsoft die Funktion erst wenige Tage zuvor an der Gamescom, nachdem sie zuvor länger durch die Gerüchteküche gegeistert war."
+    },
+    {
+      "type": "embed",
+      "platform": "twitter",
+      "url": "https://x.com/nick_maguire254/status/2094537755577524736"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "1'964",
+          "label": "von der Community getestete Xbox-Series-X- und Xbox-One-Spiele"
+        },
+        {
+          "value": "830",
+          "label": "Titel, die die Disc-to-Digital-Lizenzierung bislang unterstützen"
+        },
+        {
+          "value": "271",
+          "label": "Spiele, die aktuell als inkompatibel gelten"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "So läuft die Umwandlung ab"
+    },
+    {
+      "type": "paragraph",
+      "text": "Auf der Xbox Series X passiert die Konvertierung automatisch: Wer mit seinem Account angemeldet ist, für den das Feature bereits freigeschaltet wurde, legt schlicht die Disc ein. Eine Benachrichtigung meldet die erfolgreiche Erzeugung der Digital-Lizenz, in der Bibliothek erhalten entsprechende Spiele anschliessend ein eigenes Badge. Die Xbox Series S bleibt aussen vor - sie hat kein Laufwerk."
+    },
+    {
+      "type": "paragraph",
+      "text": "Wer eine ganze Sammlung abarbeiten will, muss nicht jedes Spiel starten. In den Einstellungen unter «Geräte & Verbindungen» -> «Disc» lässt sich die Option «Disc automatisch wiedergeben» deaktivieren. Danach reicht es, das jeweilige Artwork auf der Startseite auszuwählen, die Menütaste zu drücken und «Digitale Lizenz abrufen» anzutippen - Disc um Disc."
+    },
+    {
+      "type": "heading",
+      "text": "Die Lizenz gehört der Disc, nicht euch"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der entscheidende Haken steht in Microsofts Supportdokument: Die digitale Lizenz bleibt an die physische Scheibe gekoppelt. Wird die Disc verkauft und von einer anderen Person eingelegt, verliert die ursprüngliche Besitzerin oder der ursprüngliche Besitzer den Zugriff auf die Disc-to-Digital-Lizenz. Wer sein Regal also zu Geld machen und die Titel trotzdem behalten will, geht leer aus - das Programm ist eine Bequemlichkeitsfunktion, kein Freibrief für den Weiterverkauf."
+    },
+    {
+      "type": "paragraph",
+      "text": "Dafür gibt es an anderer Stelle einen handfesten Mehrwert. Unterstützt ein digitalisierter Titel Xbox Play Anywhere, lässt er sich nach der Bindung an den Account auch auf dem PC oder auf Gaming-Handhelds spielen. Und Nutzerinnen und Nutzer berichten auf X, dass sogar Spiele funktionieren, die im Xbox-Store längst nicht mehr gelistet sind - genannt wird unter anderem «Deadpool»."
+    },
+    {
+      "type": "heading",
+      "text": "Eine Community-Datenbank sortiert das Chaos"
+    },
+    {
+      "type": "paragraph",
+      "text": "Weil Microsoft keine vollständige Kompatibilitätsliste liefert, hat die Community nachgelegt. Das Projekt «Disc2Digital» von XCT.live hat laut einem neuen Blogpost bereits fast die Hälfte aller Xbox-Spiele in der eigenen Datenbank durchgetestet. Der Zwischenstand:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "1'964 Xbox-Series-X- und Xbox-One-Spiele wurden bislang geprüft",
+        "830 Titel unterstützen die Disc-to-Digital-Lizenzierung",
+        "271 Titel sind als inkompatibel markiert",
+        "863 Einträge laufen weiterhin als «unconfirmed»"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Auffällig ist die Verteilung der Ausfälle. Vor allem Spiele von Ubisoft, daneben aber auch Titel von Square Enix, Bandai Namco und Sega, quittieren den Versuch mit einer Fehlermeldung."
+    },
+    {
+      "type": "quote",
+      "text": "Das Spiel nimmt nicht am Digital-Lizenzierungsprogramm teil.",
+      "attribution": "Fehlermeldung auf der Xbox, dokumentiert von Videocardz"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ob die betroffenen Publisher der Digitalisierung ihrer Katalogtitel tatsächlich aktiv widersprochen haben oder ob es sich schlicht um einen Fehler in der frühen Insider-Fassung handelt, ist derzeit offen. Microsoft hat sich dazu bislang nicht geäussert."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Disc to Digital ist der freundlichste Ausweg aus einem Problem, das sich Microsoft selbst geschaffen hat: Mit der laufwerklosen Series S und den Diskussionen rund um kommende Hardware wird die physische Sammlung für viele zur Altlast. Das Programm nimmt dieser Sammlung den Nachteil, ohne den Vorteil zu übertragen - der Wiederverkaufswert bleibt exakt dort, wo er war. Solange die Funktion nur im Insider-Kanal läuft und ein guter Teil der Bibliothek als «unconfirmed» geführt wird, lohnt sich vor allem eines: einen Blick in die Community-Liste werfen, bevor man einen Nachmittag lang Discs sortiert."
+    }
+  ],
+  "poll": {
+    "question": "Digital-Lizenz gegen Wiederverkaufswert - wie haltet ihr es mit euren Xbox-Discs?",
+    "options": [
+      "Sofort alles digitalisieren, Discs bleiben eh im Regal",
+      "Nur bei Spielen, die ich nie verkaufen würde",
+      "Nein danke - ich will meine Discs weiterverkaufen können",
+      "Egal, ich kaufe ohnehin nur noch digital"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-09-02T06:04:08.515Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "controller",
+  "sources": [
+    {
+      "title": "Disc-to-Digital für Insider: Spiele für Xbox Series X & One lassen sich jetzt digitalisieren",
+      "url": "https://www.computerbase.de/news/gaming/disc-to-digital-fuer-insider-spiele-fuer-xbox-series-x-und-one-lassen-sich-jetzt-digitalisieren.99179/",
+      "publisher": "ComputerBase"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/xbox-disc-to-digital-kompatibilitaet-ubisoft-2026.webp",
+    "alt": "Xbox digitalisiert eure Discs - bei Ubisoft kommt eine Fehlermeldung",
+    "credit": "Bild: ComputerBase",
+    "sourceUrl": "https://www.computerbase.de/news/gaming/disc-to-digital-fuer-insider-spiele-fuer-xbox-series-x-und-one-lassen-sich-jetzt-digitalisieren.99179/",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "xbox-disc-to-digital-insider-start-2026",
+    "bethesda-entlassungen-anne-barrett-zwei-minuten-2026",
+    "xbox-series-x25-ausverkauft-scalper-ebay-2026"
+  ]
+}
