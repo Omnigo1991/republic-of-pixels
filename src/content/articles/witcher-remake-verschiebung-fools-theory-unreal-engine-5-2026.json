@@ -1,0 +1,163 @@
+{
+  "slug": "witcher-remake-verschiebung-fools-theory-unreal-engine-5-2026",
+  "title": "Witcher Remake liegt auf Eis - weil Teil 4 zuerst das Fundament baut",
+  "subtitle": "CD Projekt Red erklärt, warum Fool's Theory die Neuauflage von Geralts Erstling vorerst ruhen lässt und stattdessen an einem Witcher-3-DLC arbeitet",
+  "excerpt": "Seit Oktober 2022 ist das Remake des ersten «The Witcher» angekündigt - passiert ist wenig. CD Projekt Red nennt jetzt den Grund, und er hat direkt mit «The Witcher 4» zu tun.",
+  "seoTitle": "Witcher Remake verschoben: CDPR nennt den Grund",
+  "metaDescription": "CD Projekt Red bestätigt: Das Remake des ersten «The Witcher» wartet auf die Technik von Teil 4. Fool's Theory baut derweil den DLC «Songs of the Past».",
+  "category": "news",
+  "platforms": [
+    "pc",
+    "playstation",
+    "xbox"
+  ],
+  "bereich": "games",
+  "tags": [
+    "The Witcher",
+    "CD Projekt Red",
+    "Fool's Theory",
+    "The Witcher 4",
+    "Unreal Engine 5"
+  ],
+  "tldr": [
+    "Das Remake des ersten «The Witcher» liegt vorerst auf Eis - CD Projekt Red bestätigt technische Abhängigkeiten von «The Witcher 4».",
+    "Beide Spiele entstehen erstmals in der Unreal Engine 5; Assets, Tools und Pipelines werden im Rahmen von Teil 4 gebaut.",
+    "Entwickler Fool's Theory arbeitet in der Zwischenzeit an «Songs of the Past», dem dritten Story-DLC für «The Witcher 3».",
+    "«The Witcher 4» ist derzeit für 2028 angesetzt, «Songs of the Past» soll im kommenden Jahr erscheinen."
+  ],
+  "whyItMatters": "Wer seit der Ankündigung 2022 auf eine moderne Version von Geralts erstem Abenteuer wartet, muss die Erwartungen deutlich zurückschrauben - realistisch wird daraus ein Projekt für die Zeit nach «The Witcher 4». Gleichzeitig zeigt der Fall, wie stark CD Projekt Reds gesamte Roadmap am Engine-Wechsel zur Unreal Engine 5 hängt.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Das Remake des ersten «The Witcher» steht seit Oktober 2022 auf der Roadmap von CD Projekt Red - und es bewegt sich derzeit kaum. Joint-CEO Michal Nowakowski hat nun erklärt, warum das Projekt bei Entwickler Fool's Theory faktisch auf Sparflamme läuft: Die Neuauflage von Geralts erstem Videospiel-Abenteuer hängt technisch an «The Witcher 4» - und damit an einem Spiel, das selbst erst 2028 erscheinen soll."
+    },
+    {
+      "type": "embed",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=y-XGB8_bQ3s"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "Okt. 2022",
+          "label": "seit dieser Ankündigung wartet das Remake auf die Vollproduktion"
+        },
+        {
+          "value": "2028",
+          "label": "geplanter Release von «The Witcher 4»"
+        },
+        {
+          "value": "2027",
+          "label": "im kommenden Jahr soll der DLC «Songs of the Past» erscheinen"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Der Flaschenhals heisst Unreal Engine 5"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Kern des Problems ist der grösste technische Umbruch in der Geschichte des polnischen Studios: «The Witcher 4» ist das erste Spiel, für das CD Projekt Red die hauseigene REDengine hinter sich lässt und stattdessen auf die Unreal Engine 5 setzt. Das Remake soll auf derselben Basis entstehen - nur wird diese Basis eben erst im Rahmen von Teil 4 gebaut. Solange die Werkzeuge, Assets und Produktionsabläufe nicht stehen, kann Fool's Theory keine effiziente Vollproduktion starten."
+    },
+    {
+      "type": "quote",
+      "text": "Da das Witcher Remake auf dem Fundament aufbaut, das The Witcher 4 legt, brauchen wir die nötigen Assets, Tools und Pipelines für eine effiziente Entwicklung.",
+      "attribution": "CD Projekt Red in einem Statement gegenüber GameSpot"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nowakowski wurde in einem Gespräch mit The Game Business noch deutlicher und beschrieb die Zusammenarbeit mit dem Studio als etwas, das sich anders entwickelt hat als ursprünglich gedacht."
+    },
+    {
+      "type": "quote",
+      "text": "Wir haben eine Zusammenarbeit mit Fool's Theory begonnen. Sie sollten eigentlich am Remake von The Witcher 1 arbeiten, aber wir haben gemerkt, dass das aufgrund gewisser technischer Abhängigkeiten von The Witcher 4 noch etwas mehr Zeit braucht.",
+      "attribution": "Michal Nowakowski, Joint-CEO von CD Projekt Red"
+    },
+    {
+      "type": "heading",
+      "text": "Ein Analyst lag offenbar richtig"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ganz überraschend kommt die Bestätigung nicht. Bereits Anfang des Jahres hatte der polnische Analyst Mateusz Chrzanowski durchblicken lassen, dass sich das Remake verzögern dürfte, weil Fool's Theory spürbar in die Entwicklung von «The Witcher 4» eingebunden sei. Was damals eine Einschätzung von aussen war, ist mit den Aussagen aus der Konzernspitze nun offiziell: Das Studio hilft beim Hauptteil mit - und schiebt die eigene Neuauflage nach hinten."
+    },
+    {
+      "type": "heading",
+      "text": "Aus der Warteschleife wurde ein neuer DLC"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Wartezeit blieb allerdings nicht ungenutzt. Fool's Theory arbeitet parallel an «Songs of the Past», der dritten Story-Erweiterung für «The Witcher 3» - ein Projekt, mit dem intern eigentlich niemand mehr gerechnet hatte. Grundlage ist laut Fool's-Theory-CEO Jakub Rokosz eine Jahre alte Geschichte, auf die man beim Stöbern in den Archiven stiess."
+    },
+    {
+      "type": "quote",
+      "text": "Wir hatten das Gefühl, dass The Witcher 3 ein abgeschlossenes Kapitel war und wir niemals dorthin zurückkehren würden.",
+      "attribution": "Michal Nowakowski, Joint-CEO von CD Projekt Red"
+    },
+    {
+      "type": "paragraph",
+      "text": "Für die Leserschaft heisst das: Der greifbare Nachschub im Witcher-Universum ist kurzfristig nicht das Remake, sondern die Rückkehr nach «The Witcher 3». «Songs of the Past» soll im kommenden Jahr erscheinen, während «The Witcher 4» aktuell für 2028 angesetzt ist."
+    },
+    {
+      "type": "heading",
+      "text": "Was das für den Zeitplan bedeutet"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Das Remake startet die Vollproduktion erst, wenn die UE5-Basis aus «The Witcher 4» steht.",
+        "Fool's Theory ist bis dahin doppelt gebunden: DLC-Entwicklung plus Zuarbeit zum Hauptteil.",
+        "Ein offizielles Releasefenster für die Neuauflage gibt es weiterhin nicht.",
+        "Push Square rechnet auf Basis dieser Reihenfolge frühestens mit 2029 - das ist eine Schätzung, keine Ansage des Studios."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Einordnung: CD Projekt Red gibt hier offen zu, dass die eigene Pipeline vom Engine-Wechsel diktiert wird. Wer das Remake als schnellen Zwischendurch-Titel eingeplant hatte, sollte umdenken - der Erstling von 2007 wird erst dann modernisiert, wenn das Fundament des nächsten Hauptteils trägt. Das ist die weniger befriedigende, aber vermutlich solidere Reihenfolge: Ein Remake auf einer halbfertigen Technikbasis hätte Fool's Theory kaum in die Lage versetzt, Geralts sperrigem Debüt gerecht zu werden. Nüchtern betrachtet verschiebt sich damit aber ein weiteres Grossprojekt in ein ohnehin dicht getaktetes Portfolio, in dem «The Witcher 4», mehrere Erweiterungen und die Cyberpunk-Zukunft um dieselben Entwicklerressourcen konkurrieren."
+    }
+  ],
+  "poll": {
+    "question": "Was soll CD Projekt Red mit den Ressourcen machen, die jetzt im Remake gebunden wären?",
+    "options": [
+      "Alles in «The Witcher 4» stecken",
+      "Das Remake trotzdem parallel vorantreiben",
+      "Lieber Cyberpunk 2 beschleunigen",
+      "Mehr Story-DLCs wie «Songs of the Past»"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-09-02T18:02:58.224Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "grid",
+  "sources": [
+    {
+      "title": "The Witcher Remake: Release verzögert sich CDPR erklärt, warum das Projekt auf Sparflamme läuft",
+      "url": "https://www.play3.de/2026/09/02/the-witcher-remake-release-verzoegert-sich-cdpr-erklaert-warum-das-projekt-auf-sparflamme-laeuft/",
+      "publisher": "play3.de"
+    },
+    {
+      "title": "The Witcher Remake Put on Ice as Dev Focuses on New Expansion and The Witcher 4",
+      "url": "https://www.pushsquare.com/news/2026/09/the-witcher-remake-put-on-ice-as-dev-focuses-on-new-expansion-and-the-witcher-4",
+      "publisher": "Push Square"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/witcher-remake-verschiebung-fools-theory-unreal-engine-5-2026.webp",
+    "alt": "Witcher Remake liegt auf Eis - weil Teil 4 zuerst das Fundament baut",
+    "credit": "Bild: play3.de",
+    "sourceUrl": "https://www.play3.de/2026/09/02/the-witcher-remake-release-verzoegert-sich-cdpr-erklaert-warum-das-projekt-auf-sparflamme-laeuft/",
+    "sourceWidth": 1920,
+    "sourceHeight": 1080
+  },
+  "relatedSlugs": [
+    "witcher-4-plattform-checkmarks-cd-projekt-red-2028",
+    "the-witcher-4-release-fenster-2028-gamescom",
+    "witcher-4-physische-edition-box-ohne-disc-2028"
+  ]
+}
