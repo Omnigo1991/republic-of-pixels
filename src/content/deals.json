@@ -1,6 +1,17 @@
 {
-  "updatedAt": "2026-09-02T18:04:10.127Z",
+  "updatedAt": "2026-09-03T00:05:03.398Z",
   "deals": [
+    {
+      "appId": 1174180,
+      "title": "Red Dead Redemption 2",
+      "discountPercent": 75,
+      "originalPrice": 5999,
+      "finalPrice": 1499,
+      "currency": "EUR",
+      "endsAt": "2026-09-08T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1174180/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/capsule_184x69.jpg?t=1759502961"
+    },
     {
       "appId": 1326470,
       "title": "Sons Of The Forest",
@@ -55,17 +66,6 @@
       "endsAt": "2026-09-08T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/1623730/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/0703d5a0658c7aedaa3be4391d6f5cccc1bb6d7a/capsule_184x69.jpg?t=1784714419"
-    },
-    {
-      "appId": 2350790,
-      "title": "Moonlighter 2: The Endless Vault",
-      "discountPercent": 30,
-      "originalPrice": 2999,
-      "finalPrice": 2099,
-      "currency": "EUR",
-      "endsAt": "2026-09-16T13:00:00.000Z",
-      "url": "https://store.steampowered.com/app/2350790/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2350790/a8ddc85b2e961c18a8ee4888fd7712a66d763f8b/capsule_184x69_alt_assets_4.jpg?t=1788369976"
     }
   ]
 }

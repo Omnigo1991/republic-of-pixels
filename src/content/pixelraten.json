@@ -1,19 +1,19 @@
 {
-  "datum": "2026-09-02",
-  "nummer": 25,
-  "loesung": "Balatro",
+  "datum": "2026-09-03",
+  "nummer": 26,
+  "loesung": "Rocket League",
   "akzeptiert": [
-    "balatro"
+    "rocketleague"
   ],
   "hinweise": [
-    "Erschienen 2024 · Deckbuilder",
-    "Poker-Joker"
+    "Erschienen 2015 · Sport",
+    "Autos spielen Fussball"
   ],
   "bilder": [
-    "/images/pixelraten/2026-09-02-s1.jpg",
-    "/images/pixelraten/2026-09-02-s2.jpg",
-    "/images/pixelraten/2026-09-02-s3.jpg",
-    "/images/pixelraten/2026-09-02-s4.jpg",
-    "/images/pixelraten/2026-09-02-s5.jpg"
+    "/images/pixelraten/2026-09-03-s1.jpg",
+    "/images/pixelraten/2026-09-03-s2.jpg",
+    "/images/pixelraten/2026-09-03-s3.jpg",
+    "/images/pixelraten/2026-09-03-s4.jpg",
+    "/images/pixelraten/2026-09-03-s5.jpg"
   ]
 }
