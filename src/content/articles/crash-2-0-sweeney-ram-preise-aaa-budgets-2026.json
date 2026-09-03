@@ -1,0 +1,174 @@
+{
+  "slug": "crash-2-0-sweeney-ram-preise-aaa-budgets-2026",
+  "title": "«Schlimmster Crash seit den 80ern» - Sweeney nennt den Preistreiber",
+  "subtitle": "Epic-Chef Tim Sweeney, Raph Koster, Shawn Layden und Amir Satvat erklären im Edge-Magazin, warum die Branche gleichzeitig an Budgets, Bauteilen und Entlassungen erstickt",
+  "excerpt": "Vervierfachte RAM-Preise, AAA-Budgets von bis zu 400 Millionen Dollar und Teams, die auf ein Viertel schrumpfen: Vier Branchengrössen zeichnen im Edge-Magazin das Bild eines Absturzes - und nennen sehr unterschiedliche Auswege.",
+  "seoTitle": "Tim Sweeney: Schlimmster Branchen-Crash seit den 1980ern",
+  "metaDescription": "Epic-Chef Tim Sweeney spricht vom schlimmsten Crash seit den 80ern: RAM-Preise vervierfachen sich, AAA-Budgets erreichen 400 Millionen Dollar. Was das bedeutet.",
+  "category": "news",
+  "platforms": [
+    "pc",
+    "playstation",
+    "xbox",
+    "nintendo"
+  ],
+  "bereich": "games",
+  "tags": [
+    "Tim Sweeney",
+    "Epic Games",
+    "Spielebranche",
+    "Entwicklungskosten",
+    "Hardware",
+    "KI"
+  ],
+  "tldr": [
+    "Epic-CEO Tim Sweeney nennt die aktuelle Lage der Spielebranche im Edge-Magazin den schlimmsten Crash seit den 1980er-Jahren",
+    "Grund sind laut Sweeney interne Probleme wie AAA-Budgets von 250 bis 400 Millionen Dollar und ein Bauteilemangel, weil KI-Rechenzentren die Unterhaltungsbranche überbieten",
+    "RAM- und Speicherpreise vervierfachen sich, Sweeney erwartet drei Jahre anhaltende Knappheit bei gaming-relevanter Hardware",
+    "Amir Satvat sieht klassische AAA-Studios in Nordamerika und Westeuropa als «Ground Zero» der Entlassungswelle"
+  ],
+  "whyItMatters": "Wenn RAM und Speicher sich vervierfachen, schlägt das früher oder später auf Grafikkarten, Konsolen und Aufrüstpläne durch - und trifft damit jede Spielerin und jeden Spieler direkt im Portemonnaie. Gleichzeitig entscheidet die Kostenfrage darüber, welche Spiele überhaupt noch grünes Licht bekommen: riesige Blockbuster mit Milliardenerwartung oder kleinere Titel, die schon mit 50 Millionen Dollar Umsatz ein Erfolg wären.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Tim Sweeney wählt deutliche Worte: Was die Spielebranche derzeit durchmacht, sei der schlimmste Einbruch seit den 1980er-Jahren. Der Epic-Games-Chef äussert sich in der aktuellen Ausgabe 428 des britischen Edge-Magazins, für die Contributing Editor Alex Spencer neun Fachleute zum Thema «Crash 2.0» befragt hat. Sweeney ist dabei nicht der Einzige, der den historischen Vergleich zieht - und die Diagnosen fallen erstaunlich unterschiedlich aus."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "250-400 Mio. $",
+          "label": "Budgetspanne heutiger AAA-Produktionen laut Tim Sweeney"
+        },
+        {
+          "value": "x4",
+          "label": "so stark steigen aktuell die Preise für RAM und Speicher"
+        },
+        {
+          "value": "3 Jahre",
+          "label": "so lange erwartet Sweeney die Knappheit bei Gaming-Hardware"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Zwei Krisen auf einmal"
+    },
+    {
+      "type": "paragraph",
+      "text": "Sweeney unterscheidet zwischen hausgemachten und äusseren Problemen. Zu den «internen Dysfunktionen» zählt er vor allem die explodierenden Kosten der AAA-Entwicklung. Von aussen trifft die Branche der anhaltende Bauteilemangel - und der hat einen klaren Verursacher: den beispiellosen Investitionsschub in KI-Systeme und Rechenzentren."
+    },
+    {
+      "type": "quote",
+      "text": "Es gibt eine beispiellose Investitionswelle in KI-Systeme und Rechenzentren, weil man glaubt, dass sie eine wirklich transformative Rolle in der Wirtschaft spielen werden. Und die Grösse dieser wirtschaftlichen Chance bedeutet, dass sie die gesamte Unterhaltungsindustrie bei allen Bauteilen überbieten können.",
+      "attribution": "Tim Sweeney, CEO von Epic Games"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Folge beschreibt Sweeney unmissverständlich: «Wir ziehen also den Kürzeren, und die Preise für RAM und Speicher vervierfachen sich - und hören dort nicht zwingend auf.» Für die nächsten drei Jahre rechnet er mit einer durchgehenden Versorgungskrise bei sämtlicher gaming-relevanter Hardware. Die einzige Lösung sieht er im Bau riesiger neuer Fabriken, um die weltweite Nachfrage zu decken - und davon geht er aus, dass sie kommen werden."
+    },
+    {
+      "type": "heading",
+      "text": "Alle zehn Jahre mal zehn"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die zweite Front ist älter und besser dokumentiert. Raph Koster, heute CEO von Playable Worlds, warnt seit Jahrzehnten vor der Kostenkurve. «Ich glaube, das erste Mal, dass ich gesagt habe: Hey, die Kosten werden uns umbringen - das war 2005», erinnert er sich. Damals kam er zu dem Schluss, dass sich die Entwicklungskosten pro Jahrzehnt etwa verzehnfachen. 2017 wiederholte er die Analyse auf Basis von 250 Veröffentlichungen aus dreissig Jahren und kam zum identischen Ergebnis."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Mitte der 1990er-Jahre: rund 1 Million Dollar für eine AAA-Produktion (inflationsbereinigt)",
+        "2005: rund 10 Millionen Dollar",
+        "2015: rund 100 Millionen Dollar",
+        "Heute: 250 bis 400 Millionen Dollar, so Sweeneys Einschätzung"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Zahlen erklären, warum ein einzelner Fehlschlag inzwischen ganze Studios kosten kann. Wo ein Projekt mehrere Hundert Millionen verschlingt, wird jede Neuheit zum Risiko - und jede Fortsetzung zur sicheren Bank."
+    },
+    {
+      "type": "heading",
+      "text": "Der Ausweg über kleinere Erwartungen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Shawn Layden, ehemaliger PlayStation-Chef, plädiert für einen anderen Massstab. Wer Budgets und Kosten niedrig halte, könne Spiele mit «geringerer Wahrscheinlichkeit auf finanziellen Erfolg» tragen. Sein Beispiel: «Es wird nur 50 Millionen Dollar einspielen? Also gut. Lasst uns ein Modell finden, in dem 50 Millionen Dollar eine gute Sache sind und keine schlechte. Ich glaube, daher wird die Zukunft kommen - von Leuten, die sich in diesen Bereich bewegen.» Geldmittel bezeichnet Layden als «die grosse Beschränkung, die nie erweitert wird»."
+    },
+    {
+      "type": "paragraph",
+      "text": "Besonders scharf geht er mit Design-Entscheidungen ins Gericht, die nur der Grösse wegen existieren. «Musst du eine ganze Welt modellieren, für deren Durchquerung man 45 Minuten zu Fuss braucht? Wenn es dafür keinen Grund gibt - wenn es die Erfahrung oder die Geschichte nicht vorantreibt -, dann ist das nur ein Partytrick», sagt Layden. Man habe dann Zeit ausgegeben, also Geld, für etwas ohne Bedeutung. Ein Satz, den sich manche Open-World-Karte hinter die Ohren schreiben dürfte."
+    },
+    {
+      "type": "heading",
+      "text": "KI schrumpft Teams - aber senkt sie die Kosten?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Koster hält die grosse Hoffnung der Branche für eine Fehldeutung. Der einzige Ausweg aus Crash 2.0 sei ein kompletter Reset: «Unsere Branche ist zyklisch. Solange wir nicht die Singularität erreichen, wird eine Plattform kommen, die die Dinge verändert.» KI gehöre nicht dazu. «KI ist kein Plattform-Reset, bei dem die Kosten sinken. KI ist einfach ein Computer, der grösser wird, und das Gas wird ihn weiter füllen», so Koster. Am Ende sei das unglaublich teuer, der grösste Nutzen fliesse nach oben ab."
+    },
+    {
+      "type": "paragraph",
+      "text": "Amir Satvat, früher Business-Development-Direktor bei Tencent, beobachtet dagegen sehr konkrete Auswirkungen auf Teamgrössen. Ein Spiel von ein oder zwei Personen finde er zwar toll, sagt er - spannender sei aber, wenn aus einem 50- bis 60-köpfigen Team eines mit 20 Personen werde und aus einem 400-köpfigen eines mit 100. Der Grund für diesen Glauben seien Werkzeuge wie Claude. Ob daraus messbare Produktivitätsgewinne entstehen, ist für Satvat allerdings offen: Er habe Firmen gesehen, die Stellen strichen, weil sie es dank KI für möglich hielten - und nun merken, dass sie zu viele Leute entlassen haben, und wieder einstellen."
+    },
+    {
+      "type": "heading",
+      "text": "Wo der Schaden am grössten ist"
+    },
+    {
+      "type": "paragraph",
+      "text": "Satvat lokalisiert die Entlassungswelle sehr präzise. Am härtesten getroffen seien Grossbritannien, Nord- und Westeuropa sowie Nordamerika."
+    },
+    {
+      "type": "quote",
+      "text": "Ich denke, das hier ist so schlimm wie der Crash von '83, wenn du ein Entwickler in Nordamerika oder Westeuropa in einem traditionellen AAA-Studio bist. Das ist Ground Zero der Zerstörung.",
+      "attribution": "Amir Satvat, ehemaliger Business-Development-Direktor bei Tencent"
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bemerkenswert an der Edge-Runde ist weniger die Diagnose als die Uneinigkeit über die Therapie. Sweeney setzt auf neue Fabrikkapazitäten und damit auf eine Lösung, die Jahre braucht. Layden setzt auf niedrigere Erwartungen und ein Geschäftsmodell, in dem 50 Millionen Dollar reichen. Koster wartet auf eine neue Plattform, die alles zurücksetzt - und schliesst KI ausdrücklich aus. Für die Leserschaft heisst das kurzfristig vor allem eines: Ein Aufrüsten des PCs oder der Kauf neuer Hardware dürfte in den kommenden Jahren teurer werden statt günstiger. Und mittelfristig entscheidet sich, ob die Branche ihre Blockbuster-Logik korrigiert - oder ob der nächste 400-Millionen-Titel den nächsten Studioschliessungen vorausgeht."
+    }
+  ],
+  "poll": {
+    "question": "Was ist die grössere Gefahr für euer Hobby in den nächsten drei Jahren?",
+    "options": [
+      "Steigende Hardware-Preise durch den KI-Boom",
+      "AAA-Budgets, die jedes Risiko unmöglich machen",
+      "Entlassungswellen, die Talente aus der Branche treiben",
+      "Nichts davon - die Branche hat schon schlimmere Zyklen überstanden"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-09-03T10:04:12.673Z",
+  "readingTimeMinutes": 4,
+  "heroVariant": "grid",
+  "sources": [
+    {
+      "title": "\"This is the worst crash we've seen since the 1980s,\" says Tim Sweeney",
+      "url": "https://www.gamesindustry.biz/this-is-the-worst-crash-weve-seen-since-the-1980s-says-tim-sweeney",
+      "publisher": "GamesIndustry.biz"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/crash-2-0-sweeney-ram-preise-aaa-budgets-2026.webp",
+    "alt": "«Schlimmster Crash seit den 80ern» - Sweeney nennt den Preistreiber",
+    "credit": "Bild: GamesIndustry.biz",
+    "sourceUrl": "https://www.gamesindustry.biz/this-is-the-worst-crash-weve-seen-since-the-1980s-says-tim-sweeney",
+    "sourceWidth": 690,
+    "sourceHeight": 388
+  },
+  "relatedSlugs": [
+    "nintendo-switch-2-preiserhoehung-september-499-dollar",
+    "asus-zephyrus-m16-fluessigmetall-korrosion-heatsink-2026",
+    "msi-katana-15-hx-c14-ddr4-rueckkehr-2026"
+  ]
+}
