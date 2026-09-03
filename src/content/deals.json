@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-03T00:05:03.398Z",
+  "updatedAt": "2026-09-03T14:28:10.770Z",
   "deals": [
     {
       "appId": 1174180,
@@ -57,15 +57,15 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/108600/capsule_184x69.jpg?t=1787740093"
     },
     {
-      "appId": 1623730,
-      "title": "Palworld",
-      "discountPercent": 30,
-      "originalPrice": 2899,
-      "finalPrice": 2029,
+      "appId": 648800,
+      "title": "Raft",
+      "discountPercent": 33,
+      "originalPrice": 2049,
+      "finalPrice": 1372,
       "currency": "EUR",
-      "endsAt": "2026-09-08T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1623730/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/0703d5a0658c7aedaa3be4391d6f5cccc1bb6d7a/capsule_184x69.jpg?t=1784714419"
+      "endsAt": "2026-09-07T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/648800/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/648800/capsule_184x69.jpg?t=1727184011"
     }
   ]
 }
