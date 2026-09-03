@@ -1,6 +1,17 @@
 {
-  "updatedAt": "2026-09-03T18:04:09.175Z",
+  "updatedAt": "2026-09-03T20:59:15.421Z",
   "deals": [
+    {
+      "appId": 2183900,
+      "title": "Warhammer 40,000: Space Marine 2",
+      "discountPercent": 75,
+      "originalPrice": 5999,
+      "finalPrice": 1499,
+      "currency": "EUR",
+      "endsAt": "2026-09-14T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/2183900/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2183900/capsule_184x69.jpg?t=1787837240"
+    },
     {
       "appId": 1174180,
       "title": "Red Dead Redemption 2",
@@ -55,17 +66,6 @@
       "endsAt": "2026-09-07T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/108600/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/108600/capsule_184x69.jpg?t=1787740093"
-    },
-    {
-      "appId": 1623730,
-      "title": "Palworld",
-      "discountPercent": 30,
-      "originalPrice": 2899,
-      "finalPrice": 2029,
-      "currency": "EUR",
-      "endsAt": "2026-09-08T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1623730/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/0703d5a0658c7aedaa3be4391d6f5cccc1bb6d7a/capsule_184x69.jpg?t=1784714419"
     }
   ]
 }
