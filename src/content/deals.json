@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-03T20:59:15.421Z",
+  "updatedAt": "2026-09-04T00:08:13.423Z",
   "deals": [
     {
       "appId": 2183900,
@@ -13,15 +13,15 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2183900/capsule_184x69.jpg?t=1787837240"
     },
     {
-      "appId": 1174180,
-      "title": "Red Dead Redemption 2",
+      "appId": 311210,
+      "title": "Call of Duty®: Black Ops III",
       "discountPercent": 75,
       "originalPrice": 5999,
       "finalPrice": 1499,
       "currency": "EUR",
-      "endsAt": "2026-09-08T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1174180/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/capsule_184x69.jpg?t=1759502961"
+      "endsAt": "2026-09-17T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/311210/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/311210/capsule_184x69.jpg?t=1780963650"
     },
     {
       "appId": 1326470,
