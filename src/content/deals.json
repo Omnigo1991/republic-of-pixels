@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-04T00:08:13.423Z",
+  "updatedAt": "2026-09-04T03:10:30.946Z",
   "deals": [
     {
       "appId": 2183900,
@@ -22,6 +22,17 @@
       "endsAt": "2026-09-17T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/311210/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/311210/capsule_184x69.jpg?t=1780963650"
+    },
+    {
+      "appId": 1174180,
+      "title": "Red Dead Redemption 2",
+      "discountPercent": 75,
+      "originalPrice": 5999,
+      "finalPrice": 1499,
+      "currency": "EUR",
+      "endsAt": "2026-09-08T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1174180/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/capsule_184x69.jpg?t=1759502961"
     },
     {
       "appId": 1326470,
@@ -55,17 +66,6 @@
       "endsAt": "2026-09-09T17:00:48.000Z",
       "url": "https://store.steampowered.com/app/4656000/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4656000/4b28cb7e3572e7ab0ffcd6a53030b1a719ff3fff/capsule_184x69.jpg?t=1788351950"
-    },
-    {
-      "appId": 108600,
-      "title": "Project Zomboid",
-      "discountPercent": 33,
-      "originalPrice": 2549,
-      "finalPrice": 1707,
-      "currency": "EUR",
-      "endsAt": "2026-09-07T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/108600/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/108600/capsule_184x69.jpg?t=1787740093"
     }
   ]
 }

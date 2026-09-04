@@ -1,0 +1,156 @@
+{
+  "slug": "nvidia-dlss-5-rtx-40-support-regler-gesperrt-2026",
+  "title": "DLSS 5 kommt auch auf RTX 40 - doch die Regler bleiben gesperrt",
+  "subtitle": "Nvidia reagiert auf die Mod-Welle und öffnet die Technik für ältere Karten, lässt Spielenden aber nur einen An-Aus-Schalter",
+  "excerpt": "Modder haben DLSS 5 längst in fast jedes Spiel und auf fast jede Grafikkarte gezwungen. Jetzt zieht Nvidia offiziell nach - allerdings mit einer entscheidenden Einschränkung, und mit einer offenen Frage zu den 16 angekündigten Spielen.",
+  "seoTitle": "DLSS 5 auf RTX 40: Nvidia bestätigt Support - ohne Regler",
+  "metaDescription": "Nvidia bringt DLSS 5 offiziell auf RTX-40-Karten, verweigert Spielenden aber die Detailregler. Was das kostet und welche Spiele wackeln.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "bereich": "hardware",
+  "tags": [
+    "Nvidia",
+    "DLSS 5",
+    "GeForce RTX",
+    "PC-Hardware",
+    "Modding"
+  ],
+  "tldr": [
+    "Nvidia bestätigt gegenüber The Verge, dass DLSS 5 nach der RTX-50-Optimierung offiziell auch auf RTX-40-Karten kommt",
+    "Für RTX 30 und RTX 20 gibt es keine Zusage - Modder haben die Technik dort bereits mit Abstürzen und unspielbaren Frameraten am Laufen",
+    "Spielende bekommen nur einen An-Aus-Schalter, die Detailregler bleiben Entwicklern vorbehalten",
+    "Die Leistungskosten liegen laut Nvidia bei 50 bis 60 Prozent Framerate, in 4K teils mehr"
+  ],
+  "whyItMatters": "DLSS 5 ist die erste grosse Grafiktechnik, die Nvidia so eng an eine einzige GPU-Generation gebunden hatte - und die Modder-Szene hat diese Grenze innerhalb weniger Tage eingerissen. Wie Nvidia jetzt reagiert, entscheidet darüber, ob Besitzer:innen älterer RTX-Karten die Technik legal nutzen können und wie viel Kontrolle sie am Ende über das Bild ihrer Spiele haben.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Nvidias neues KI-Rendering DLSS 5 sollte am 3. September mit genau einem Spiel starten, ausschliesslich auf den RTX-50-Karten laufen und komplett in der Hand der Entwicklerstudios bleiben. Drei dieser vier Punkte haben Modder innerhalb weniger Tage kassiert. Jetzt zieht Nvidia offiziell nach: Gegenüber The Verge bestätigt Firmensprecher Rajal Maharaj, dass DLSS 5 auch auf die ältere GeForce-RTX-40-Serie kommt. Die volle Kontrolle über die Bildwirkung bekommen Spielerinnen und Spieler aber ausdrücklich nicht."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "50-60 %",
+          "label": "Framerate-Verlust durch DLSS 5, laut Nvidia unabhängig vom Spiel"
+        },
+        {
+          "value": "unter 50 fps",
+          "label": "in Control auf einer RTX 5090 in 4K, vorher rund 110 fps"
+        },
+        {
+          "value": "RTX 40",
+          "label": "die nächste Generation, die offiziellen Support erhält - Termin offen"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Wie die Technik aus dem Käfig kam"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ausgangspunkt war die Early-Access-Fassung von NBA 2K27, dem ersten Spiel, das DLSS 5 tatsächlich ausgeliefert hat. Mit ihr landeten auch die nötigen DLL-Dateien im Netz. Was mit einer Mod für Control begann, wurde binnen Tagen zur allgemeinen Bastelvorlage: Über Projekte wie RenoDX und die ShortFuse-Mods lässt sich das neuronale Rendering inzwischen in praktisch jeden Titel schieben - auch in solche, die nie DLSS unterstützt haben. PC Gamer hat die Technik so unter anderem in Football Manager 26 aktiviert, wo sie Platzbeleuchtung, Schatten und sogar die Profilbilder der generierten Spieler sichtbar aufwertet. Andere Versuche gehen weniger gut aus: Fehlen Bewegungsvektoren oder Szenentiefe, sehen Figuren aus, als würden sich unter ihrer Haut Würmer bewegen."
+    },
+    {
+      "type": "heading",
+      "text": "RTX 40 kommt, RTX 30 und 20 bleiben offen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nvidias Antwort auf diese Entwicklung ist eine gestaffelte Öffnung. Zuerst soll die Leistung auf der aktuellen Generation stimmen, danach folgt der Support für ältere Karten."
+    },
+    {
+      "type": "quote",
+      "text": "Unser aktueller Fokus liegt auf der Performance-Optimierung für die GeForce RTX 50 Series, Modell-Updates sind für den späteren Herbst geplant. Sobald die Performance der RTX 50 Series umfassender abgestimmt ist, wollen wir die offizielle Unterstützung auf die GeForce RTX 40 Series ausweiten.",
+      "attribution": "Nvidia in einem Statement gegenüber The Verge"
+    },
+    {
+      "type": "paragraph",
+      "text": "Für RTX 30 und RTX 20 gibt es dagegen keine Zusage, obwohl Modder auch diese Karten bereits erfolgreich ins Visier genommen haben - sofern man abstürzende Spiele und kaum spielbare Frameraten als Erfolg zählt. «Im Moment liegt der Fokus natürlich auf der 50er-Serie», sagt Maharaj dazu. «Ein Schritt nach dem anderen.»"
+    },
+    {
+      "type": "heading",
+      "text": "Ein Schalter für euch, alle Regler für die Studios"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der zweite Streitpunkt bleibt bestehen. Während die Mod-Szene die Intensität frei bis ans Maximum aufdrehen kann, hält Nvidia an einer strikten Trennung fest: «Für Gamer ist DLSS 5 ein einfacher An-Aus-Schalter», bestätigt das Unternehmen. Die feineren Werkzeuge sind den Entwicklerstudios vorbehalten:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Auswahl des KI-Modells",
+        "Structure Intensity und Tone Intensity",
+        "automatisches Masking sowie eigenes Masking pro Pixel",
+        "semantisches Masking, das Gesichter, Stoffe oder Blattwerk selbstständig erkennt",
+        "Engine-Masking, mit dem Artists einzelne Objekte wie Glas, Wassertropfen oder Vegetation gezielt ansprechen"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Immerhin: Studios dürfen einzelne dieser Optionen in ihre eigenen Grafikmenüs weiterreichen. Bei DLSS Super Resolution lief es ähnlich - anfangs nur ein Schalter, heute wählbare Qualitätsstufen oder sogar exakte Prozentwerte. Technisch ist die Integration vergleichsweise simpel: Für die Unreal Engine 5 gibt es ein natives Plugin, dazu SDKs, und die Modelle laufen auf jedem einzelnen Frame, eine Mindest-Framerate braucht es nicht."
+    },
+    {
+      "type": "heading",
+      "text": "Der Preis und die Frage nach den Spielen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Günstig ist das Ganze nicht. Nvidia beziffert die Kosten selbst auf 50 bis 60 Prozent der Framerate, unabhängig vom Spiel - in 4K können es mehr sein. In Control fiel eine RTX 5090 bei DLSS Balanced, 4K und maximalem Raytracing von rund 110 fps auf unter 50 fps. Wenig überraschend, wenn man bedenkt, dass Nvidia die Technik zur GDC noch auf zwei RTX 5090 vorgeführt hat. Offen ist zudem, wer sie überhaupt einbaut: Auf die Nachfrage, ob die ursprünglich angekündigten Titel wie Assassin's Creed Shadows, Hogwarts Legacy, Starfield und Resident Evil Requiem weiterhin dabei sind, antwortete Nvidia nur ausweichend."
+    },
+    {
+      "type": "quote",
+      "text": "Weitere Spiele sind unterwegs. Viele Entwickler integrieren DLSS 5 aktiv, und wir teilen Updates zu kommenden Titeln, sobald Partner ihre Integrationen abschliessen.",
+      "attribution": "Nvidia gegenüber The Verge"
+    },
+    {
+      "type": "paragraph",
+      "text": "Einordnung: Nvidia gewinnt mit der RTX-40-Zusage Zeit und Goodwill, verliert aber die Deutungshoheit über den eigenen Look. Dass ein Programmierer von Hello Games öffentlich befürchtet, der KI-Filter könnte den eigenwilligen Stil von No Man's Sky zerstören, zeigt das eigentliche Problem: Die Debatte dreht sich längst nicht mehr um Frames, sondern darum, wem das Bild gehört - dem Studio, dem Grafikkartenhersteller oder der Person vor dem Monitor. Wer eine RTX 40 besitzt, sollte den Support-Termin ohnehin abwarten. Und danach genau hinsehen, was der Schalter mit dem Spiel macht."
+    }
+  ],
+  "poll": {
+    "question": "Wem sollte die Kontrolle über DLSS 5 gehören?",
+    "options": [
+      "Mir - volle Regler wie bei den Mods",
+      "Den Studios, sonst zerstört es ihren Stil",
+      "Kompromiss: Presets wie bei DLSS Quality",
+      "Egal, bei 50 % weniger fps bleibt es aus"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-09-04T03:10:28.474Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "particles",
+  "sources": [
+    {
+      "title": "Nvidia will officially bring DLSS 5 to older GPUs — but won’t give gamers full control",
+      "url": "https://www.theverge.com/games/989978/nvidia-dlss-5-rtx-40",
+      "publisher": "The Verge Games"
+    },
+    {
+      "title": "DLSS 5 can be jammed into almost any game now, so I've been playing FM26 with neural rendered little computer people because that's just what I do",
+      "url": "https://www.pcgamer.com/hardware/graphics-cards/dlss-5-can-be-jammed-into-almost-any-game-now-so-ive-been-playing-fm26-with-neural-rendered-little-computer-people-because-thats-just-what-i-do/",
+      "publisher": "PC Gamer"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/nvidia-dlss-5-rtx-40-support-regler-gesperrt-2026.webp",
+    "alt": "DLSS 5 kommt auch auf RTX 40 - doch die Regler bleiben gesperrt",
+    "credit": "Bild: The Verge Games",
+    "sourceUrl": "https://www.theverge.com/games/989978/nvidia-dlss-5-rtx-40",
+    "sourceWidth": 2718,
+    "sourceHeight": 1800
+  },
+  "relatedSlugs": [
+    "dlss-5-rtx-4000-modder-dlssnr-dll-2026",
+    "dlss-5-mod-control-nba-2k27-dll-2026",
+    "nvidia-dlss-5-launch-nba-2k27-leistungskosten-2026"
+  ]
+}
