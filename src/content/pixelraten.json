@@ -1,19 +1,20 @@
 {
-  "datum": "2026-09-04",
-  "nummer": 27,
-  "loesung": "Control",
+  "datum": "2026-09-05",
+  "nummer": 28,
+  "loesung": "Resident Evil 4",
   "akzeptiert": [
-    "control"
+    "residentevil4",
+    "re4"
   ],
   "hinweise": [
-    "Erschienen 2019 · Action",
-    "Remedy"
+    "Remake 2023 · Survival-Horror",
+    "Capcom"
   ],
   "bilder": [
-    "/images/pixelraten/2026-09-04-s1.jpg",
-    "/images/pixelraten/2026-09-04-s2.jpg",
-    "/images/pixelraten/2026-09-04-s3.jpg",
-    "/images/pixelraten/2026-09-04-s4.jpg",
-    "/images/pixelraten/2026-09-04-s5.jpg"
+    "/images/pixelraten/2026-09-05-s1.jpg",
+    "/images/pixelraten/2026-09-05-s2.jpg",
+    "/images/pixelraten/2026-09-05-s3.jpg",
+    "/images/pixelraten/2026-09-05-s4.jpg",
+    "/images/pixelraten/2026-09-05-s5.jpg"
   ]
 }
