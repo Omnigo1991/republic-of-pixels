@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-05T03:04:38.940Z",
+  "updatedAt": "2026-09-05T06:03:45.305Z",
   "deals": [
     {
       "appId": 2183900,
@@ -24,15 +24,15 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/capsule_184x69.jpg?t=1759502961"
     },
     {
-      "appId": 311210,
-      "title": "Call of Duty®: Black Ops III",
-      "discountPercent": 75,
-      "originalPrice": 5999,
-      "finalPrice": 1499,
+      "appId": 1326470,
+      "title": "Sons Of The Forest",
+      "discountPercent": 70,
+      "originalPrice": 2899,
+      "finalPrice": 869,
       "currency": "EUR",
-      "endsAt": "2026-09-17T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/311210/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/311210/capsule_184x69.jpg?t=1780963650"
+      "endsAt": "2026-09-07T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1326470/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1326470/capsule_184x69.jpg?t=1708624856"
     },
     {
       "appId": 3240220,
