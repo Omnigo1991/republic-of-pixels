@@ -1,20 +1,20 @@
 {
-  "datum": "2026-09-05",
-  "nummer": 28,
-  "loesung": "Resident Evil 4",
+  "datum": "2026-09-06",
+  "nummer": 29,
+  "loesung": "Helldivers 2",
   "akzeptiert": [
-    "residentevil4",
-    "re4"
+    "helldivers2",
+    "helldiversii"
   ],
   "hinweise": [
-    "Remake 2023 · Survival-Horror",
-    "Capcom"
+    "Erschienen 2024 · Koop-Shooter",
+    "Demokratie verbreiten"
   ],
   "bilder": [
-    "/images/pixelraten/2026-09-05-s1.jpg",
-    "/images/pixelraten/2026-09-05-s2.jpg",
-    "/images/pixelraten/2026-09-05-s3.jpg",
-    "/images/pixelraten/2026-09-05-s4.jpg",
-    "/images/pixelraten/2026-09-05-s5.jpg"
+    "/images/pixelraten/2026-09-06-s1.jpg",
+    "/images/pixelraten/2026-09-06-s2.jpg",
+    "/images/pixelraten/2026-09-06-s3.jpg",
+    "/images/pixelraten/2026-09-06-s4.jpg",
+    "/images/pixelraten/2026-09-06-s5.jpg"
   ]
 }
