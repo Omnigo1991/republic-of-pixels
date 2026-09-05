@@ -1,0 +1,144 @@
+{
+  "slug": "old-school-runescape-mod-jed-urteil-golddiebstahl-2026",
+  "title": "«Nur weil es virtuell ist» - RuneScape-Dev muss nicht ins Gefängnis",
+  "subtitle": "Andrew «Mod Jed» Lakeman stahl jahrelang Gold aus Spielerkonten - jetzt hat ein britisches Gericht das Strafmass festgelegt",
+  "excerpt": "Ein Jagex-Entwickler plünderte über das Account-Recovery-System die Konten von Old-School-RuneScape-Spielern und machte damit Hunderttausende Pfund. Nach sechs Jahren Ermittlung fiel das Urteil - und es fiel milder aus als erwartet.",
+  "seoTitle": "Old School RuneScape: Urteil gegen Dev Mod Jed gefallen",
+  "metaDescription": "Ex-Jagex-Entwickler Andrew Lakeman stahl Gold aus Spielerkonten und kassierte Hunderttausende Pfund. Das Gericht in Cambridge hat nun das Strafmass verkündet.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "bereich": "games",
+  "tags": [
+    "Old School RuneScape",
+    "Jagex",
+    "MMO",
+    "Gold Selling",
+    "PC"
+  ],
+  "tldr": [
+    "Ex-Jagex-Entwickler Andrew «Mod Jed» Lakeman wurde am 3. September am Cambridge Crown Court verurteilt: drei Jahre Haft, ausgesetzt auf zwei Jahre Bewährung.",
+    "Ab Mitte 2018 missbrauchte er das Account-Recovery-System von Old School RuneScape, um Gold und wertvolle Items zu stehlen und über den Graumarkt zu verkaufen.",
+    "Auf seinen Konten fanden Ermittler mehr als 364'829 Pfund Bargeld, das von Krypto-Händlern stammte.",
+    "Ein britisches Berufungsgericht stufte OSRS-Gold Anfang des Jahres als Eigentum ein, das gestohlen werden kann - ein möglicher Präzedenzfall."
+  ],
+  "whyItMatters": "Der Fall beantwortet eine Frage, die MMO-Spielerinnen und -Spieler seit Jahrzehnten beschäftigt: Ist virtueller Besitz vor Gericht überhaupt etwas wert? Ein britisches Berufungsgericht sagt Ja - und schafft damit eine Grundlage, auf die sich künftige Verfahren rund um Item-Diebstahl, Account-Hacks und Graumarkt-Handel berufen können. Gleichzeitig zeigt der Fall, wie verwundbar Spielerkonten sind, wenn der Angreifer im Studio selbst sitzt.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Sechs Jahre nach seiner Verhaftung ist der frühere Old-School-RuneScape-Entwickler Andrew Lakeman, in der Community besser bekannt als «Mod Jed», verurteilt worden. Lakeman hatte sich schuldig bekannt, über das Account-Wiederherstellungssystem des MMOs Gold und wertvolle Gegenstände aus Spielerkonten gestohlen zu haben. Am 3. September verhängte das Cambridge Crown Court laut einem Bericht der Cambridgeshire Constabulary eine dreijährige Haftstrafe, ausgesetzt auf zwei Jahre Bewährung, dazu 150 Stunden gemeinnützige Arbeit und eine 25-tägige Bewährungsauflage."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "364'829 £",
+          "label": "Bargeld von Krypto-Händlern, das Ermittler auf seinen Konten fanden"
+        },
+        {
+          "value": "3 Jahre",
+          "label": "Haftstrafe - ausgesetzt auf zwei Jahre Bewährung"
+        },
+        {
+          "value": "150 Std.",
+          "label": "gemeinnützige Arbeit als Teil des Urteils"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Der Dieb sass im Studio"
+    },
+    {
+      "type": "paragraph",
+      "text": "Lakeman arbeitete damals unter dem Namen Jed Sanderson bei Jagex, dem Entwicklerstudio hinter Old School RuneScape. Ab Mitte 2018 nutzte er die internen Werkzeuge zur Kontowiederherstellung, um sich Zugriff auf fremde Accounts zu verschaffen. Das erbeutete Gold und die hochwertigen Items verkaufte er anschliessend über den Graumarkt des MMOs gegen echtes Geld oder Kryptowährung."
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Ermittler schätzen den Ertrag des Systems auf über 300'000 Pfund. Eine Prüfung von Lakemans Konten ergab, dass er mehr als 364'829 Pfund Bargeld angehäuft hatte, das von Krypto-Händlern stammte. In privaten Nachrichten an seine Frau soll er angekündigt haben, «viel Geld zu verdienen», bevor er Jagex verlässt. Zu diesem geordneten Abgang kam es nie."
+    },
+    {
+      "type": "heading",
+      "text": "Die Falle in der Firewall"
+    },
+    {
+      "type": "paragraph",
+      "text": "Denn Jagex bemerkte die Häufung verdächtiger Kontoübernahmen - und zog den naheliegenden Schluss. Die Accounts wurden mit Informationen wiederhergestellt, die selbst die echten Besitzer kaum hätten liefern können. Damit stand für das Studio fest, dass der Täter mit hoher Wahrscheinlichkeit im eigenen Haus sass. Jagex platzierte eine Falle in der Firewall des Mitarbeiternetzwerks, und Lakeman tappte hinein."
+    },
+    {
+      "type": "paragraph",
+      "text": "Seine Verteidigungslinie war ausgerechnet jene, die gebannte OSRS-Spieler reflexartig vorbringen: Sein eigenes Konto sei kompromittiert und von Dritten für die Diebstähle benutzt worden. Überzeugt hat das niemanden. Im Juli 2019 wurde er verhaftet, die Anklagepunkte lauteten auf unbefugten Computerzugriff mit der Absicht, weitere Straftaten zu begehen, Diebstahl durch einen Angestellten, das Verschleiern, Umwandeln und Transferieren kriminellen Vermögens sowie dessen Erwerb."
+    },
+    {
+      "type": "quote",
+      "text": "Lakeman war sich sehr wohl bewusst, dass das, was er tat, falsch war, und die Hunderttausenden Pfund, die er durch den Verkauf der Ingame-Gegenstände erzielt hat, unterscheiden sich in nichts von jedem anderen Diebstahl. Nur weil es virtuell ist, heisst das nicht, dass er nicht die volle Härte des Gesetzes spüren sollte.",
+      "attribution": "Detective Constable Andrew McKeane, Cambridgeshire Constabulary"
+    },
+    {
+      "type": "heading",
+      "text": "Ist Gold überhaupt Eigentum? Ein Gericht sagt Ja"
+    },
+    {
+      "type": "paragraph",
+      "text": "Genau dieser Punkt machte das Verfahren juristisch heikel und erklärt einen Teil der langen Dauer. Ein Richter hatte zunächst entschieden, Goldstücke seien nicht «rivalisierend» und eher mit reiner Information vergleichbar - vereinfacht gesagt: Etwas ist rivalisierend, wenn niemand sonst es haben kann, solange du es hast. Nach dieser Lesart wäre ein Diebstahl im klassischen Sinn kaum möglich gewesen."
+    },
+    {
+      "type": "paragraph",
+      "text": "Anfang dieses Jahres kippte das britische Berufungsgericht diese Einschätzung mit Blick auf Lakemans Fall und stufte OSRS-Gold als Eigentum ein, das Gegenstand eines strafbaren Diebstahls sein kann."
+    },
+    {
+      "type": "quote",
+      "text": "Sie sind rivalisierend, weil ihre Nutzung und ihr Verbrauch durch die spielende Person zwangsläufig die Nutzung und den Verbrauch durch andere beeinträchtigt.",
+      "attribution": "UK Court of Appeal über OSRS-Goldstücke"
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung: ein Präzedenzfall mit Nachwirkungen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Fall ist damit weit mehr als eine kuriose MMO-Anekdote. Er liefert eine Grundlage, auf die sich künftige Verfahren rund um virtuelle Güter berufen können - und er steht nicht allein. Im September 2025 löste ein anderer OSRS-Goldverkäufer eine steuerrechtliche Debatte aus: Er hatte geschätzt knapp 500'000 Dollar eingenommen, argumentierte aber, sein tatsächlicher Umsatz müsse wegen der Einordnung von Ingame-Gold anders berechnet werden."
+    },
+    {
+      "type": "paragraph",
+      "text": "Nur wenige Tage nach dem Bekanntwerden jenes Falls kündigte Jagex umfassende Reformen gegen Cheating und Goldhandel an. Die Massnahmen wirken: Bot- und Goldverkäufer-Aktivität in Old School RuneScape ist inzwischen auf einem selten tiefen Niveau. Für die Community bleibt vor allem eine unbequeme Erkenntnis - der gefährlichste Angreifer auf ein Spielerkonto muss nicht zwingend von aussen kommen."
+    }
+  ],
+  "poll": {
+    "question": "Drei Jahre Haft auf Bewährung, 150 Stunden gemeinnützige Arbeit - ist das für über 360'000 Pfund aus gestohlenen Spielerkonten angemessen?",
+    "options": [
+      "Viel zu milde - das war organisierter Diebstahl",
+      "Angemessen, das Geld ist ja nachweisbar",
+      "Entscheidend ist das Urteil zu Gold als Eigentum, nicht das Strafmass"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-09-05T03:04:36.073Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "controller",
+  "sources": [
+    {
+      "title": "Court sentences disgraced Old School RuneScape dev who stole players' gold and \"banked more than £364,829 in cash\"",
+      "url": "https://www.gamesradar.com/games/mmo/court-sentences-disgraced-old-school-runescape-dev-who-stole-players-gold-and-banked-more-than-gbp364-829-in-cash/",
+      "publisher": "GamesRadar"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/old-school-runescape-mod-jed-urteil-golddiebstahl-2026.webp",
+    "alt": "«Nur weil es virtuell ist» - RuneScape-Dev muss nicht ins Gefängnis",
+    "credit": "Bild: GamesRadar",
+    "sourceUrl": "https://www.gamesradar.com/games/mmo/court-sentences-disgraced-old-school-runescape-dev-who-stole-players-gold-and-banked-more-than-gbp364-829-in-cash/",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "foxhole-charlie-krieg-71-tage-entwickler-eingriff",
+    "swtor-update-8-0-schwierigkeitsregler-venture-charaktere-2026",
+    "guild-wars-3-spielbare-voelker-erweiterung-2026"
+  ]
+}
