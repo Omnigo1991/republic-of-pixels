@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-05T06:03:45.305Z",
+  "updatedAt": "2026-09-05T06:54:50.531Z",
   "deals": [
     {
       "appId": 2183900,
@@ -11,17 +11,6 @@
       "endsAt": "2026-09-14T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/2183900/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2183900/capsule_184x69.jpg?t=1787837240"
-    },
-    {
-      "appId": 1174180,
-      "title": "Red Dead Redemption 2",
-      "discountPercent": 75,
-      "originalPrice": 5999,
-      "finalPrice": 1499,
-      "currency": "EUR",
-      "endsAt": "2026-09-08T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1174180/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/capsule_184x69.jpg?t=1759502961"
     },
     {
       "appId": 1326470,
@@ -44,6 +33,17 @@
       "endsAt": "2026-09-07T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/3240220/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3240220/a318bd9affe8eee32984b18794b273c256e9b2d6/capsule_184x69.jpg?t=1781187782"
+    },
+    {
+      "appId": 2489330,
+      "title": "Whiskerwood",
+      "discountPercent": 50,
+      "originalPrice": 2999,
+      "finalPrice": 1499,
+      "currency": "EUR",
+      "endsAt": "2026-09-17T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/2489330/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2489330/caaa3b4a34615707722863e102e007034eaa036a/capsule_184x69.jpg?t=1788454848"
     },
     {
       "appId": 4656000,
