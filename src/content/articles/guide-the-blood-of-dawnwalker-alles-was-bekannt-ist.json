@@ -1,0 +1,184 @@
+{
+  "slug": "guide-the-blood-of-dawnwalker-alles-was-bekannt-ist",
+  "title": "The Blood of Dawnwalker: Alles, was bekannt ist",
+  "subtitle": "Ein Überblick über Setting, Zeitsystem, Kampf, Konsolen-Modi und die ersten Zahlen zum Debüt von Rebel Wolves.",
+  "excerpt": "Ein Überblick über Setting, Zeitsystem, Kampf, Konsolen-Modi und die ersten Zahlen zum Debüt von Rebel Wolves. The Blood of Dawnwalker ist am 3. September 2026 erschienen und hat laut Bandai Namco und Rebel Wolves innerhalb von 48 Stunden eine Million verkaufte Exemplare erreicht. Gleichzeitig diskutieren Spielerinn…",
+  "category": "guides",
+  "platforms": [
+    "pc",
+    "playstation",
+    "xbox"
+  ],
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-09-06T12:58:10.280Z",
+  "readingTimeMinutes": 6,
+  "heroVariant": "controller",
+  "image": {
+    "src": "/images/articles/blood-of-dawnwalker-eine-million-verkaeufe-48-stunden-2026.webp",
+    "alt": "Eine Million in 48 Stunden - und ein Mod hebelt das Kernprinzip aus",
+    "credit": "Bild: IGN",
+    "sourceUrl": "https://www.ign.com/articles/the-blood-of-dawnwalker-passes-1-million-copies-sold-in-just-2-days",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "isLeakOrRumor": false,
+  "tags": [
+    "The Blood of Dawnwalker",
+    "Rebel Wolves",
+    "Open-World-RPG",
+    "Konrad Tomaszkiewicz"
+  ],
+  "tldr": [
+    "Vor dem ersten Start den Grafikmodus wählen: Performance (60 FPS), Balanced (40 FPS) oder Quality (30 FPS) auf PS5, PS5 Pro und Xbox Series X; auf Xbox Series S ist 30 FPS das Z…",
+    "Zeitanzeige oben in der Ecke beobachten - sie meldet, wenn eine Aktion die Uhr weiterstellt.",
+    "Handel, Erkundung und kleinere Scharmützel kosten keine Zeit; Quests und stärkere Skills schon.",
+    "Zeitkritische Quests erkennen: Das Spiel warnt deutlich, bevor sie ablaufen."
+  ],
+  "whyItMatters": "The Blood of Dawnwalker ist am 3. September 2026 erschienen und hat laut Bandai Namco und Rebel Wolves innerhalb von 48 Stunden eine Million verkaufte Exemplare erreicht. Gleichzeitig diskutieren Spielerinnen und Spieler kontrovers über die 30-Tage-Uhr und über die Konsolen-Performance, zu der der Entwickler kurz vor Release nachgebessert hat.",
+  "poll": null,
+  "review": null,
+  "seoTitle": "The Blood of Dawnwalker: Alles, was bekannt ist",
+  "metaDescription": "Ein Überblick über Setting, Zeitsystem, Kampf, Konsolen-Modi und die ersten Zahlen zum Debüt von Rebel Wolves.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Stand dieses Guides: Launch-Fassung inklusive Day-1-Patch; Meldungslage vom 5. September 2026. Wir halten ihn aktuell, wenn sich Wesentliches ändert."
+    },
+    {
+      "type": "paragraph",
+      "text": "Dieser Guide bündelt, was zu The Blood of Dawnwalker aus den vorliegenden Berichten und Tests belegt ist: Setting, Spielstruktur, Zeitsystem, Kampf, die Konsolen-Grafikmodi und die ersten Zahlen nach dem Start. Er richtet sich an alle, die vor dem Kauf wissen wollen, worauf sie sich einlassen, und an Einsteigerinnen und Einsteiger, die die zentralen Systeme verstehen möchten, bevor die Uhr zu laufen beginnt. Alles, was hier steht, stammt aus den genannten Quellen; wo Angaben vom Patch-Stand abhängen, ist das markiert."
+    },
+    {
+      "type": "heading",
+      "text": "Was für ein Spiel das ist"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die offizielle Beschreibung nennt The Blood of Dawnwalker ein \"open-world dark fantasy action RPG set in 14th-century Europe\". Es ist ein Singleplayer-Rollenspiel und eine neue Marke des 2022 gegründeten, in Warschau ansässigen Studios Rebel Wolves. Regie führt Konrad Tomaszkiewicz, Game Director von The Witcher 3: Wild Hunt und Head of Production beziehungsweise zweiter Game Director von Cyberpunk 2077. Das Team besteht laut Insider Gaming aus ehemaligen Witcher-Entwicklern. Veröffentlicht wurde das Spiel am 3. September 2026 für PC, PlayStation 5 und Xbox Series X|S; Publisher ist Bandai Namco."
+    },
+    {
+      "type": "heading",
+      "text": "Story und Schauplatz"
+    },
+    {
+      "type": "paragraph",
+      "text": "Sie spielen Coen, laut offizieller Zusammenfassung \"human by day and vampire by night\", der um seine Familie kämpft; die Erzählung wird durch Spielerentscheidungen geformt. Eurogamer beschreibt Coen als jungen Mann, der 1347 in den Karpaten Osteuropas lebt und nur teilweise in einen Vampir verwandelt wird - etwas verhindert die vollständige Verwandlung, weshalb er sich auch im Sonnenlicht bewegen kann. VGC ergänzt: Coens Familie wird von einer Gruppe vampirischer Schurken unter dem Anführer Brencis gefangen genommen. Coen muss Brencis' Generäle und danach ihn selbst ausschalten, bevor 30 spielinterne Tage vergangen sind - sonst herrscht Brencis für immer über das Land. Schauplatz ist das Tal Sangora beziehungsweise Vale Sangora, mit Svartrau als zentraler Stadt."
+    },
+    {
+      "type": "heading",
+      "text": "Das 30-Tage-System: So funktioniert die Uhr"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Zeit läuft nicht von selbst. Laut Eurogamer bestimmen Sie, wann sie voranschreitet: Aus Tag wird erst Nacht, wenn Sie den Übergang freigeben. Sie können handeln, verkaufen und Wolfsrudel bekämpfen, ohne dass Zeit vergeht. Zeit kostet dagegen das Erledigen von Quests - jede Aufgabe hat einen Zeitpreis, der in Segmenten einer Zeitanzeige oben in der Ecke dargestellt wird, die bei einem möglichen Zeitsprung aufblinkt. Grössere Quests fordern mehr Zeit, und auch das Freischalten neuer Fähigkeiten kann Zeit kosten, vor allem bei stärkeren Skills im späteren Verlauf. VGC nennt konkrete Beispiele: vier spielinterne Stunden Wartezeit auf einen Begleiter, ein ganzer Tag zum Brauen eines Tranks. Zeitkritische Quests warnen deutlich, bevor sie ablaufen. Der VGC-Test hatte am Ende, nach nahezu allem, was ihn interessierte, noch rund zehn Tage bis zur Krönung übrig."
+    },
+    {
+      "type": "heading",
+      "text": "Tag und Nacht: zwei Spielweisen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Form wechselt automatisch mit dem Tageslicht. Nachts kann Coen Wände und Felswände hochlaufen und über Dächer teleportieren - in Svartrau mit seinen dicht stehenden Häusern wird daraus laut Eurogamer ein Dächer-Spielplatz, von dem aus Sie jagen können. Tagsüber ist Coen zusätzlich eine Art Hexer: Er verfügt über mächtige Zauber, die nachts nicht nutzbar sind, etwa das Verlangsamen der Zeit bei gleichzeitig beschleunigter Bewegung, das Sprechen mit Toten und das Ausführen von Ritualen. Hexerei- und Vampirfähigkeiten liegen in sich gegenseitig ausschliessenden Skilltrees; verbunden werden sie durch einen mittleren Baum, die Schwertkunst, die für beide Formen relevant ist. Praktisch heisst das: Manche Aufgaben sind nur nachts lösbar, weil Sie die erweiterte Fortbewegung brauchen, andere nur tagsüber, weil Sie Teil der wachen Welt sein müssen."
+    },
+    {
+      "type": "heading",
+      "text": "Kampf: Parieren lernen lohnt sich"
+    },
+    {
+      "type": "paragraph",
+      "text": "Gekämpft wird mit dem Schwert und mit Coens Klauen. Beim Schwert kommt ein richtungsbasiertes Parier- und Blocksystem dazu; VGC vergleicht das \"omniblock\"-System mit den Schwertduellen der Chivalry-Reihe. Sie müssen die Blockrichtung nicht treffen - dafür gibt es den Omniblock -, aber wer die Richtung trifft, wird belohnt, meist mit aufgefrischter Ausdauer, später mit Fähigkeiten, die bei perfekten Blocks auslösen. VGC bezeichnet das Spiel als nie besonders schwer, warnt aber: Wer das Parieren nicht meistert, hat einen langen Kampf vor sich. Eurogamer hält fest, dass Gegner nie gleichzeitig angreifen, weshalb sich auch grosse Lager ausheben lassen, merkt aber an, dass Gegner mit der Zeit als Schadensschwämme wirken können."
+    },
+    {
+      "type": "heading",
+      "text": "Dialoge, Blutdurst und Verderbnis"
+    },
+    {
+      "type": "paragraph",
+      "text": "Das Dialogsystem ist laut VGC klassisch mehrteilig, doch die Entscheidungen können massive Auswirkungen auf die Gameplay-Pfade einzelner Missionen haben; die Optionen werden selten vorab angekündigt. Achtung im Vampirmodus: Dort erscheint gelegentlich die Option \"feed the hunger\". Wählen Sie nicht schnell genug etwas anderes, wird sie automatisch ausgeführt - im Test starben so wichtige NPCs und Figuren, die gerade geholfen hatten. Behalten Sie deshalb Gesundheits- und Verderbnisanzeige im Blick."
+    },
+    {
+      "type": "heading",
+      "text": "Notorietät und die Generäle"
+    },
+    {
+      "type": "paragraph",
+      "text": "Jede Region des Tals wird von einem der Generäle des Oberschurken beherrscht. Was Sie dort gegen sie unternehmen, erhöht laut Eurogamer die Notorietät; ab einem gewissen Punkt suchen die Generäle die Konfrontation. Nebenbei erfahren Sie so Hintergründe zu diesen Figuren, die es sonst nicht gibt, und es winkt eine Belohnung, wenn Sie sie besiegen."
+    },
+    {
+      "type": "heading",
+      "text": "Wann das Finale angehen?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Es gibt keine Hauptquest, die Sie durch das Spiel führt, sondern ein übergeordnetes Ziel; nach dem Prolog öffnet sich das Tal Sangora. Höherstufige Gebiete strukturieren den Ablauf indirekt. Eurogamer versuchte das Finale mit 15 verbleibenden Tagen auf der Schwierigkeit \"Fair\" (dem Normal-Äquivalent) und scheiterte zunächst, gewann dann aber in Vampirform dank Lebensraub-Fähigkeiten und schloss das Spiel ohne die Verbündeten ab, die er eigentlich sammeln wollte - inklusive Achievement. Der Epilog machte allerdings deutlich, wie viel Inhalt dabei ausgelassen wurde."
+    },
+    {
+      "type": "heading",
+      "text": "Technik und Konsolen-Modi (Stand: Day-1-Patch, 3. September 2026)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nach Kritik am fehlenden 60-FPS-Modus kündigte Rebel Wolves einen Performance Mode als Teil eines Day-1-Patches an. Auf X hiess es: \"We heard your feedback.\" Die Modi im Überblick: PS5 Pro, PS5 und Xbox Series X bieten je Performance (Ziel 60 FPS), Balanced (Ziel 40 FPS) und Quality (Ziel 30 FPS); die PS5 Pro liefert zusätzlich allgemeine visuelle Verbesserungen. Die Xbox Series S zielt auf 30 FPS. VGC berichtete im PS5-Test dennoch von einer ruckeligen Bildrate und mehr als nur einer Handvoll Bugs, hielt aber fest, dass das Spiel grosszügig mit Auto- und manuellen Speicherständen umgeht."
+    },
+    {
+      "type": "heading",
+      "text": "Wertungen, Verkäufe und Community"
+    },
+    {
+      "type": "paragraph",
+      "text": "IGN vergab 9/10 und nannte das Spiel \"amazing\": \"one of this year's best open-world RPGs\". VGC vergab 4/5 und lobt kluge Missionen, wuchtigen Kampf und eine Welt, die gross, aber nicht endlos ist; kritisiert werden die Performance und das nicht vollständig ausgearbeitete Zeitelement. Eurogamer beschreibt ein Spiel, das die hohe Messlatte von The Witcher 3 erreicht, wenn auch nicht überbietet. Insider Gaming meldete zum Zeitpunkt des Artikels einen neuen Spitzenwert von 65'433 gleichzeitigen Spielern auf Steam laut SteamDB sowie eine aktive Mod-Szene, deren populärste Mod auf Nexus Mods dem Kernprinzip des Spiels zuwiderläuft."
+    },
+    {
+      "type": "heading",
+      "text": "Ausblick auf die Reihe"
+    },
+    {
+      "type": "paragraph",
+      "text": "Rebel Wolves veröffentlichte einen CGI-Teaser, der Coen in einer modernen Umgebung des 21. Jahrhunderts zeigt. Laut Bandai Namco (Pressemitteilung im Juni) sollen die nächsten Teile der Dawnwalker-Reihe Jahrhunderte, Kontinente und Kulturen umspannen. Tomaszkiewicz erklärte, jeder Teil sei als eigenständiger Eintrag geplant, \"with its own story, without narrative cliffhangers, unresolved plot threads, or time travel ideas\". Narrative Director Jakub Szamałek riet Fans, im aktuellen Spiel auf \"breadcrumbs related to the overarching plot spanning the saga\" zu achten."
+    },
+    {
+      "type": "heading",
+      "text": "Checkliste für den Einstieg"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Vor dem ersten Start den Grafikmodus wählen: Performance (60 FPS), Balanced (40 FPS) oder Quality (30 FPS) auf PS5, PS5 Pro und Xbox Series X; auf Xbox Series S ist 30 FPS das Ziel.",
+        "Zeitanzeige oben in der Ecke beobachten - sie meldet, wenn eine Aktion die Uhr weiterstellt.",
+        "Handel, Erkundung und kleinere Scharmützel kosten keine Zeit; Quests und stärkere Skills schon.",
+        "Zeitkritische Quests erkennen: Das Spiel warnt deutlich, bevor sie ablaufen.",
+        "Nachts Mauern, Felswände und Dächer nutzen, tagsüber Zauber wie Zeitverlangsamung, Totenbefragung und Rituale.",
+        "Skillpunkte bewusst setzen: Hexerei und Vampirkräfte schliessen sich aus, Schwertkunst wirkt für beide Formen.",
+        "Richtungsblocks üben - korrekt getroffene Blocks geben Ausdauer zurück und schalten später Perfekt-Block-Effekte frei.",
+        "Im Vampirmodus zügig antworten, sonst wird \"feed the hunger\" automatisch gewählt; Gesundheit und Verderbnis im Auge behalten.",
+        "Notorietät in einer Region steigern, um den zuständigen General zur Konfrontation zu zwingen.",
+        "Vor dem Finale abwägen: Es lässt sich früh angehen, der Epilog zeigt aber, was dabei ausgelassen wurde.",
+        "Regelmässig manuell speichern - das Spiel erlaubt Auto- und manuelle Speicherstände in grosser Zahl."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "ign.com",
+      "url": "https://www.ign.com/articles/the-blood-of-dawnwalker-passes-1-million-copies-sold-in-just-2-days"
+    },
+    {
+      "title": "insider-gaming.com",
+      "url": "https://insider-gaming.com/the-blood-of-dawnwalker-1-million-copies-sold/"
+    },
+    {
+      "title": "videogameschronicle.com",
+      "url": "https://www.videogameschronicle.com/review/the-blood-of-dawnwalker-review/"
+    },
+    {
+      "title": "eurogamer.net",
+      "url": "https://www.eurogamer.net/the-blood-of-dawnwalker-review-rebel-wolves"
+    },
+    {
+      "title": "videogameschronicle.com",
+      "url": "https://www.videogameschronicle.com/news/we-heard-your-feedback-blood-of-dawnwalker-is-getting-a-60fps-mode-after-backlash/"
+    }
+  ]
+}
