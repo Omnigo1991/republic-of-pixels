@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-08-31T00:05:03.043Z",
-  "kw": 35,
+  "updatedAt": "2026-09-06T23:49:05.877Z",
+  "kw": 36,
   "games": [
     {
       "appId": 730,
       "rank": 1,
       "lastWeekRank": 1,
       "steamRank": 1,
-      "peak": 1282502,
+      "peak": 1296533,
       "name": "Counter-Strike 2",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/730/162664aa5da85f418105350c5d67ca565f6c3713/header.jpg",
       "url": "https://store.steampowered.com/app/730/"
@@ -17,7 +17,7 @@
       "rank": 2,
       "lastWeekRank": 2,
       "steamRank": 2,
-      "peak": 947995,
+      "peak": 903585,
       "name": "Dota 2",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/570/header.jpg",
       "url": "https://store.steampowered.com/app/570/"
@@ -27,7 +27,7 @@
       "rank": 3,
       "lastWeekRank": 3,
       "steamRank": 3,
-      "peak": 729602,
+      "peak": 715714,
       "name": "PUBG: BATTLEGROUNDS",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/578080/841ea38bc58cabb70aef65365cf50bc2d79329d9/header.jpg",
       "url": "https://store.steampowered.com/app/578080/"
@@ -35,49 +35,49 @@
     {
       "appId": 1172470,
       "rank": 4,
-      "lastWeekRank": 5,
-      "steamRank": 6,
-      "peak": 275380,
+      "lastWeekRank": 6,
+      "steamRank": 5,
+      "peak": 269056,
       "name": "Apex Legends",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172470/6cf04767652d703b6050da84b82cfb1194258d7d/header.jpg",
       "url": "https://store.steampowered.com/app/1172470/"
     },
     {
-      "appId": 4001890,
+      "appId": 4809930,
       "rank": 5,
-      "lastWeekRank": 9,
-      "steamRank": 5,
-      "peak": 261588,
+      "lastWeekRank": -1,
+      "steamRank": 6,
+      "peak": 245118,
+      "name": "WARDOGS Playtest",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4809930/964155a6380ecfe36a6ccf723079b250b09f65f4/header.jpg",
+      "url": "https://store.steampowered.com/app/4809930/"
+    },
+    {
+      "appId": 4001890,
+      "rank": 6,
+      "lastWeekRank": 5,
+      "steamRank": 7,
+      "peak": 112816,
       "name": "How to Fish",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4001890/45c4ddff4901e32c4b8b643e1b97d0d01898d299/header.jpg",
       "url": "https://store.steampowered.com/app/4001890/"
     },
     {
-      "appId": 1623730,
-      "rank": 6,
-      "lastWeekRank": 6,
-      "steamRank": 8,
-      "peak": 198776,
-      "name": "Palworld",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/6912f19c43a95ff5fe514eedd35e68bf12335459/header.jpg",
-      "url": "https://store.steampowered.com/app/1623730/"
-    },
-    {
-      "appId": 4783780,
+      "appId": 2868840,
       "rank": 7,
-      "lastWeekRank": 25,
-      "steamRank": 7,
-      "peak": 98306,
-      "name": "Call of Duty: Modern Warfare 4 - Beta",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4783780/8c72205bfdf522bada8431d2aacbd1b6c66fac4c/header.jpg",
-      "url": "https://store.steampowered.com/app/4783780/"
+      "lastWeekRank": 10,
+      "steamRank": 9,
+      "peak": 101346,
+      "name": "Slay the Spire 2",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2868840/b0958d387dc366211e0f353443710cfcf9fdb020/header.jpg",
+      "url": "https://store.steampowered.com/app/2868840/"
     },
     {
       "appId": 271590,
       "rank": 8,
-      "lastWeekRank": 11,
-      "steamRank": 9,
-      "peak": 91642,
+      "lastWeekRank": 8,
+      "steamRank": 8,
+      "peak": 81469,
       "name": "Grand Theft Auto V Legacy",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/271590/header.jpg",
       "url": "https://store.steampowered.com/app/271590/"

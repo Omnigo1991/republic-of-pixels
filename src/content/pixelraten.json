@@ -1,20 +1,19 @@
 {
-  "datum": "2026-09-06",
-  "nummer": 29,
-  "loesung": "Helldivers 2",
+  "datum": "2026-09-07",
+  "nummer": 30,
+  "loesung": "Fallout 4",
   "akzeptiert": [
-    "helldivers2",
-    "helldiversii"
+    "fallout4"
   ],
   "hinweise": [
-    "Erschienen 2024 · Koop-Shooter",
-    "Demokratie verbreiten"
+    "Erschienen 2015 · Rollenspiel",
+    "Endzeit"
   ],
   "bilder": [
-    "/images/pixelraten/2026-09-06-s1.jpg",
-    "/images/pixelraten/2026-09-06-s2.jpg",
-    "/images/pixelraten/2026-09-06-s3.jpg",
-    "/images/pixelraten/2026-09-06-s4.jpg",
-    "/images/pixelraten/2026-09-06-s5.jpg"
+    "/images/pixelraten/2026-09-07-s1.jpg",
+    "/images/pixelraten/2026-09-07-s2.jpg",
+    "/images/pixelraten/2026-09-07-s3.jpg",
+    "/images/pixelraten/2026-09-07-s4.jpg",
+    "/images/pixelraten/2026-09-07-s5.jpg"
   ]
 }
