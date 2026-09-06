@@ -1,0 +1,149 @@
+{
+  "slug": "mortal-shell-2-adaptiver-schwierigkeitsgrad-update-2026",
+  "title": "Mortal Shell 2 passt sich an - wer nicht stirbt, bekommt es härter",
+  "subtitle": "Cold Symmetry führt einen optionalen, adaptiven Schwierigkeitsgrad ein, der Gegner über das ursprüngliche Maximum hinaus hochskaliert - oder entschärft",
+  "excerpt": "Ein Soulslike, das mitzählt, wie oft ihr sterbt: Das neue Update für Mortal Shell 2 dreht die Gegnerwerte in beide Richtungen - und verrät euch nicht, in welche.",
+  "seoTitle": "Mortal Shell 2: Adaptiver Schwierigkeitsgrad per Update",
+  "metaDescription": "Mortal Shell 2 bekommt einen experimentellen adaptiven Schwierigkeitsgrad: Gegner werden stärker, wenn ihr gewinnt - und schwächer, wenn ihr oft sterbt.",
+  "category": "news",
+  "platforms": [
+    "pc",
+    "playstation",
+    "xbox"
+  ],
+  "bereich": "games",
+  "tags": [
+    "Mortal Shell 2",
+    "Cold Symmetry",
+    "Playstack",
+    "Soulslike",
+    "Update"
+  ],
+  "tldr": [
+    "Ein neues Update für Mortal Shell 2 führt einen optionalen, experimentellen adaptiven Schwierigkeitsgrad ein.",
+    "Wer ohne Tode durchmarschiert, trifft auf Gegner mit mehr Schaden, Leben und Standfestigkeit - über das ursprüngliche Maximum hinaus.",
+    "Wer wiederholt scheitert, bekommt schwächere Gegner und einen Schutz gegen One-Shot-Tode aus voller Gesundheit; im Nachtmodus greifen diese Erleichterungen nicht.",
+    "Dazu kommen Änderungen an Paraden, Hüllen-Fähigkeiten, Exploit-Fixes und Anpassungen an Audio, Beleuchtung und Benutzeroberfläche."
+  ],
+  "whyItMatters": "Soulslikes definieren sich traditionell über einen einzigen, für alle gleichen Schwierigkeitsgrad - Mortal Shell 2 weicht davon nun offiziell ab, in beide Richtungen. Für geübte Spielerinnen und Spieler bedeutet das eine Herausforderung jenseits der ursprünglichen Auslegung, für Frustrierte einen Ausweg ohne den bisherigen Trophäen-Verzicht. Wie gut das System die eigene Leistung liest, entscheidet darüber, ob es als Fortschritt oder als Bevormundung wahrgenommen wird.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Cold Symmetry hat ein weiteres Update für «Mortal Shell 2» veröffentlicht - und darin ein Feature untergebracht, das dem Genre-Selbstverständnis widerspricht: einen adaptiven Schwierigkeitsgrad. Er lässt sich optional zuschalten, beobachtet die eigene Spielweise und greift dann in beide Richtungen ein. Der Patch ist auf dem PC bereits verfügbar, die Fassungen für PS5 und Xbox Series X/S sollten kurz darauf folgen."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "9.999",
+          "label": "so hoch dürfen Schadenszahlen jetzt anzeigen - bisher war bei 999 Schluss"
+        },
+        {
+          "value": "1 Woche",
+          "label": "Abstand zum ersten grossen Balance-Patch des Spiels"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Ein System, das mitzählt - in beide Richtungen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Logik dahinter ist unkompliziert. Wer Gegner und Bosse ohne Tode hinter sich lässt, bekommt es mit deutlich robusteren Feinden zu tun: Sie richten mehr Schaden an, halten länger durch und lassen sich schwerer aus dem Tritt bringen. Nach oben ist die Skalierung dabei nicht durch die ursprüngliche Auslegung des Spiels begrenzt."
+    },
+    {
+      "type": "quote",
+      "text": "Gegner erhalten mehr Schaden, Leben und Bruchwiderstand, sie treffen also härter, brauchen länger, bis sie fallen, und lassen sich schwerer betäuben. Räumt weiter Begegnungen aus, ohne zu sterben, und die Gegner skalieren weit über das Härteste hinaus, für das das Spiel ursprünglich gebaut wurde - und sie steigen weiter, solange ihr gewinnt.",
+      "attribution": "Cold Symmetry im Steam-Blogpost zum Update"
+    },
+    {
+      "type": "paragraph",
+      "text": "Umgekehrt greift das System, wenn ein Abschnitt oder ein Boss wiederholt zum Verhängnis wird. Dann sinken Schaden, Lebenspunkte und Standfestigkeit der Gegner. Zusätzlich wird eine Obergrenze eingezogen: Kein einzelner Treffer darf mehr als einen festgelegten Bruchteil der Lebensleiste abziehen - aus voller Gesundheit ist ein sofortiger Tod also ausgeschlossen. Wichtig für Puristen: Im Nachtmodus gelten diese Erleichterungen laut Entwickler nicht. Und sobald sich die eigene Leistung wieder normalisiert, verblassen die Anpassungen von selbst."
+    },
+    {
+      "type": "paragraph",
+      "text": "Eine Anzeige, in welche Richtung das System gerade justiert, gibt es derzeit nicht. Cold Symmetry will eine entsprechende Rückmeldung in künftigen Updates nachreichen - bis dahin bleibt unklar, ob ein Sieg dem eigenen Können oder dem nachgebenden Regler zu verdanken ist."
+    },
+    {
+      "type": "heading",
+      "text": "Warum das für dieses Spiel besonders heikel ist"
+    },
+    {
+      "type": "paragraph",
+      "text": "«Mortal Shell 2» bricht schon vor diesem Patch mit Genre-Konventionen: Eine Ausdauerleiste gibt es nicht, und bestimmte Gegenstände senken den Anspruch auf Wunsch - allerdings um den Preis sämtlicher Trophäen. Genau diese Kopplung sorgte nach dem Release für Diskussionen. Der adaptive Modus setzt nun daneben ein zweites, deutlich subtileres Regelwerk, das nicht auf einen einzelnen Knopfdruck, sondern auf das Spielverhalten reagiert."
+    },
+    {
+      "type": "heading",
+      "text": "Paraden, Hüllen und ein geschlossenes Schlupfloch"
+    },
+    {
+      "type": "paragraph",
+      "text": "Neben dem neuen Modus arbeitet der Patch am Kampfsystem. Aufeinanderfolgende Paraden mit dem Unendlichen Siegel haben ein grösseres Zeitfenster in der Ausholbewegung, sodass sich ganze Angriffsserien abwehren lassen statt nur des ersten Treffers. Statuseffekte lassen sich neu auch dann auf Gegner anwenden, wenn diese sich nach einem Konter wieder aufrichten. Und wer beim Tod Düsteressenz verliert, soll sie dank überarbeiteter Fundstellen-Logik leichter zurückholen können."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Sariels Dornenhagel bricht in engen Räumen und unter niedrigen Decken nicht mehr ab, trifft bewegliche Ziele und bevorzugt anvisierte Gegner.",
+        "Sariels Marterung setzt keine volle Pein mehr voraus, Leiden verteilt den Schaden auf alle verfluchten Gegner.",
+        "Genessas Augmentation wurde umgebaut: unbegrenzte Entschlossenheit und endloses Beschwören Gläubiger Klone sind Geschichte.",
+        "Blutegel-Stapel werden nicht mehr gespeichert und erneut übereinandergelegt - ein möglicher Lebenspunkte-Exploit fällt weg.",
+        "Auf PS5 pausiert ein System-Pop-up das Spiel nicht mehr, die Screenshot-Funktion ist damit nutzbar."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Dazu kommt eine lange Liste kleinerer Korrekturen: Bosskollisionen, in denen Spielfiguren stecken blieben, eine nach dem Kampf verschlossene Bossarena, Stürze durch den Boden beim Verlassen von Verliesen, Dialogfehler bei Ruk und Merrick sowie Anpassungen an Beleuchtung, Nebel und Musiklautstärke."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Cold Symmetry liefert im Wochentakt - der erste grosse Balance-Patch liegt nur sieben Tage zurück. Der adaptive Schwierigkeitsgrad ist dabei der bislang mutigste Schritt: Er nimmt die alte Genre-Frage nach Zugänglichkeit auf, ohne den Anspruch pauschal zu senken, und bietet geübten Spielerinnen und Spielern sogar eine Steigerung über das ursprünglich vorgesehene Maximum hinaus. Ob das trägt, hängt an zwei Dingen - daran, wie treffsicher das System Können von Pech unterscheidet, und daran, wie schnell die versprochene Anzeige nachgeliefert wird."
+    }
+  ],
+  "poll": {
+    "question": "Adaptiver Schwierigkeitsgrad im Soulslike - Fortschritt oder Verrat am Genre?",
+    "options": [
+      "Guter Kompromiss, endlich ohne Trophäen-Strafe",
+      "Nur interessant, wenn es nach oben skaliert",
+      "Nichts für mich - ich will feste Regeln",
+      "Erst urteilen, wenn es eine Anzeige gibt"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-09-06T06:04:35.488Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "particles",
+  "sources": [
+    {
+      "title": "Mortal Shell 2: Neues Update bricht mit Soulslike-Tradition und bringt adaptiven Schwierigkeitsgrad",
+      "url": "https://www.play3.de/2026/09/05/mortal-shell-2-neues-update-bricht-mit-soulslike-tradition-und-bringt-adaptiven-schwierigkeitsgrad/",
+      "publisher": "play3.de"
+    },
+    {
+      "title": "Mortal Shell 2's latest update adds in an experimental new mode that adjusts the challenge based on how much you do or don't die",
+      "url": "https://www.rockpapershotgun.com/mortal-shell-2s-latest-update-adds-in-an-experimental-new-mode-that-adjusts-the-challenge-based-on-how-much-you-do-or-dont-die",
+      "publisher": "Rock Paper Shotgun"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/mortal-shell-2-adaptiver-schwierigkeitsgrad-update-2026.webp",
+    "alt": "Mortal Shell 2 passt sich an - wer nicht stirbt, bekommt es härter",
+    "credit": "Bild: play3.de",
+    "sourceUrl": "https://www.play3.de/2026/09/05/mortal-shell-2-neues-update-bricht-mit-soulslike-tradition-und-bringt-adaptiven-schwierigkeitsgrad/",
+    "sourceWidth": 1920,
+    "sourceHeight": 1080
+  },
+  "relatedSlugs": [
+    "mortal-shell-2-balance-patch-glimpses-rueckerstattung",
+    "mortal-shell-2-test-resolve-ausdauerleiste-2026",
+    "mortal-shell-2-test-kritik-ausdauerleiste-2026"
+  ]
+}
