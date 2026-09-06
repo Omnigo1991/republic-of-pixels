@@ -1,0 +1,156 @@
+{
+  "slug": "dlss-5-neural-rendering-mod-amd-radeon-2026",
+  "title": "DLSS 5 läuft jetzt auf Radeon - doch die Bildrate bricht ein",
+  "subtitle": "Ein Modding-Projekt bringt Nvidias Neural Rendering auf RDNA 3 und RDNA 4 - mit 33 FPS in 1080p auf einer RX 9070 XT",
+  "excerpt": "Nvidias DLSS 5 Neural Rendering läuft per Mod erstmals auf AMD-Grafikkarten der RX-9000- und RX-7000-Serie. Die Bildqualität überzeugt den Entwickler bereits - beim Tempo sieht die Sache anders aus.",
+  "seoTitle": "DLSS 5 per Mod auf AMD Radeon: Neural Rendering auf RDNA 3/4",
+  "metaDescription": "Ein Mod bringt Nvidias DLSS 5 Neural Rendering auf Radeon RX 9000 und RX 7000. Was das Projekt kann, was es kostet - und warum Vorsicht angebracht ist.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "bereich": "hardware",
+  "tags": [
+    "DLSS 5",
+    "AMD Radeon",
+    "Nvidia",
+    "Modding",
+    "FSR",
+    "Grafikkarten"
+  ],
+  "tldr": [
+    "Das Projekt DLSS-NR-on-AMD bringt Nvidias DLSS 5 Neural Rendering inoffiziell auf Radeon-Karten der RX-9000- und RX-7000-Serie",
+    "Voraussetzungen: Windows 11, Adrenalin-Treiber ab 26.1.1, ein DirectX-12-Spiel mit FSR-Unterstützung und eine eigene Kopie der Nvidia-DLL",
+    "Die Performance ist der Knackpunkt: rund 33 FPS in 1080p auf einer Radeon RX 9070 XT",
+    "Der Quellcode ist bislang nicht öffentlich, der Windows Defender schlägt beim Setup an - Vorsicht ist geboten"
+  ],
+  "whyItMatters": "Neural Rendering gilt als nächster grosser Schritt bei der Bildberechnung - und war bisher an Nvidia-Hardware gebunden. Dass ein einzelner Entwickler die Technik auf Radeon-Karten zum Laufen bringt, zeigt, wie durchlässig proprietäre Grafikfeatures inzwischen sind. Nutzbar im Alltag ist das Ganze aber noch lange nicht.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Nvidias DLSS 5 Neural Rendering läuft erstmals auf Grafikkarten von AMD. Möglich macht das ein Modding-Projekt namens DLSS-NR-on-AMD, das Radeon-Karten der RX-9000-Serie (RDNA 4) und der RX-7000-Serie (RDNA 3) unterstützt. Der Preis für den Technik-Coup ist allerdings hoch: Die Bildrate bricht deutlich ein, und der Quellcode des Projekts liegt bislang nicht offen."
+    },
+    {
+      "type": "embed",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=MQ-flbvMflY"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "33 FPS",
+          "label": "erreicht eine Radeon RX 9070 XT laut Entwickler in 1080p mit aktivem Neural Rendering"
+        },
+        {
+          "value": "+6 %",
+          "label": "mehr Leistung bietet die aktuelle Alpha 0.2.12 gegenüber der Vorgängerversion"
+        },
+        {
+          "value": "26.1.1",
+          "label": "ist die mindestens nötige Version des Adrenalin-Treibers"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Von NBA 2K27 auf fremde Hardware"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Vorgeschichte dieses Mods ist bemerkenswert kurz. Offiziell debütierte DLSS 5 Neural Rendering mit NBA 2K27. Schon vor dem regulären Verkaufsstart zogen Modder die Datei nvngx_dlssnr.dll aus der Early-Access-Fassung und verpflanzten die Technik in ältere Titel wie Control oder Cyberpunk 2077. Danach folgte der nächste Schritt: Neural Rendering lief plötzlich auch auf GeForce-Karten der RTX-4000-, RTX-3000- und RTX-2000-Generation, für die es gar nicht vorgesehen war. Der Sprung auf AMD-Hardware ist nun die logische, aber technisch deutlich anspruchsvollere Fortsetzung dieser Kette."
+    },
+    {
+      "type": "paragraph",
+      "text": "Hinter DLSS-NR-on-AMD steckt Entwickler Daniel Blanco. Auf der GitHub-Projektseite schreibt er, sein Mod solle in jedem DirectX-12-Spiel funktionieren, das FSR unterstützt. Getestet hat er das Ganze auf einer Radeon RX 9070 XT; andere RX-9000-Karten sollen ebenfalls laufen, bei der RX-7000-Generation formuliert er vorsichtiger. Ältere Radeon-Grafikkarten bleiben vorerst aussen vor."
+    },
+    {
+      "type": "heading",
+      "text": "Kein Übersetzer, sondern ein Nachbau"
+    },
+    {
+      "type": "paragraph",
+      "text": "Wichtig für die Einordnung: DLSS-NR-on-AMD ist kein Kompatibilitäts-Layer nach Vorbild von Proton oder Wine. Blanco beschreibt sein Projekt als Reimplementierung der Neural-Network-Runtime für AMD-GPUs, die von Grund auf neu programmiert worden sei. Dazu zählen die Spielintegration, die Speicherlayouts und die sogenannten HIP-Kernel. Programmcode von Nvidia werde weder verwendet noch zur Laufzeit übersetzt. Belegen lässt sich das aktuell allerdings nicht - der Quellcode steht bis heute nicht öffentlich zur Verfügung."
+    },
+    {
+      "type": "quote",
+      "text": "Die Bildqualität ist dem sehr ähnlich, was DLSS auf der Original-Hardware erzeugt.",
+      "attribution": "Daniel Blanco, Entwickler von DLSS-NR-on-AMD"
+    },
+    {
+      "type": "heading",
+      "text": "Die Performance ist der eigentliche Gegner"
+    },
+    {
+      "type": "paragraph",
+      "text": "So gut die Bildqualität laut Entwickler ausfällt, so ernüchternd sind die Bildraten. Die Leistung sei weiterhin Work-in-Progress, heisst es auf der Projektseite - rund 33 FPS in 1.920 × 1.080 Pixeln auf einer RX 9070 XT sprechen eine deutliche Sprache. Ein Video von Ancient Gameplays bestätigt den starken Einbruch, wobei auch GeForce-Karten mit den inoffiziellen Neural-Rendering-Mods Leistung verlieren. Immerhin arbeitet Blanco sichtbar daran: Version 0.2.12 soll sechs Prozent schneller sein als der Vorgänger. Sein erklärtes Ziel ist, dass eine RX 9070 XT mit dem Mod am Ende so schnell läuft wie eine GeForce RTX 5070 Ti."
+    },
+    {
+      "type": "heading",
+      "text": "Installation nur mit eigener Nvidia-DLL"
+    },
+    {
+      "type": "paragraph",
+      "text": "Wer das Projekt ausprobieren möchte, braucht mehrere Zutaten - und muss die Prozedur für jedes Spiel einzeln wiederholen. Die Voraussetzungen im Überblick:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Eine eigene Kopie der DLSS-5-DLL nvngx_dlssnr.dll in Version 310.8.0.0, kopiert aus einem offiziellen DLSS-5-Titel wie NBA 2K27",
+        "Windows 11 sowie ein Adrenalin-Treiber ab Version 26.1.1",
+        "Ein DirectX-12-Spiel, das FSR unterstützt - FSR 4, FSR 3 und FSRAA funktionieren in beliebigen Qualitätsstufen",
+        "Setup-Datei und DLL landen im Ausführungsordner des Spiels, etwa bin/x64, danach führt ein Assistent durch die Installation",
+        "Spiele mit Anti-Cheat blockieren die DLL"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Läuft alles, öffnet die Ende-Taste im Spiel ein Overlay, in dem sich unter anderem die Intensität von Farbton und Struktur sowie die Hautstruktur justieren lassen. Die Auswahl zwischen den drei Modellen, die Nvidia Entwicklerinnen und Entwicklern anbietet, will Blanco später nachreichen."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung: faszinierend, aber noch kein Werkzeug für den Alltag"
+    },
+    {
+      "type": "paragraph",
+      "text": "DLSS-NR-on-AMD ist derzeit vor allem ein Technik-Statement: Es zeigt, dass ein an Nvidia-Hardware gebundenes Feature grundsätzlich auch auf Radeon-Silizium abbildbar ist. Für den Spielealltag taugt die Alpha aber nicht - dafür ist der Leistungsverlust zu gross. Hinzu kommt ein Vertrauensproblem: Ohne offenen Quellcode und mit einer Warnung des Windows Defender beim Start der Setup-Datei, auf die Videocardz hinweist, lässt sich schlicht nicht überprüfen, was das Programm tut. Bis mehr zur Sicherheit bekannt ist, gehört dieses Projekt auf die Beobachtungsliste, nicht auf die Systempartition."
+    }
+  ],
+  "poll": {
+    "question": "Neural Rendering auf Radeon: Würdet ihr eine Alpha ohne offenen Quellcode installieren?",
+    "options": [
+      "Klar, sofort ausprobieren",
+      "Erst wenn der Quellcode offenliegt",
+      "Erst wenn die Performance stimmt",
+      "Auf keinen Fall"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-09-06T16:59:17.172Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "circuit",
+  "sources": [
+    {
+      "title": "Mit geringer Performance: DLSS 5 läuft jetzt per Mod auf Radeon-Grafik­karten",
+      "url": "https://www.computerbase.de/news/grafikkarten/mit-geringer-performance-dlss-5-laeuft-jetzt-per-mod-auf-radeon-grafikkarten.99274/",
+      "publisher": "ComputerBase"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/dlss-5-neural-rendering-mod-amd-radeon-2026.webp",
+    "alt": "DLSS 5 läuft jetzt auf Radeon - doch die Bildrate bricht ein",
+    "credit": "Bild: ComputerBase",
+    "sourceUrl": "https://www.computerbase.de/news/grafikkarten/mit-geringer-performance-dlss-5-laeuft-jetzt-per-mod-auf-radeon-grafikkarten.99274/",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "nvidia-dlss-5-rtx-40-support-regler-gesperrt-2026",
+    "dlss-5-rtx-4000-modder-dlssnr-dll-2026",
+    "dlss-5-mod-control-nba-2k27-dll-2026"
+  ]
+}
