@@ -1,0 +1,146 @@
+{
+  "slug": "starcraft-website-arg-hinweise-blizzcon-2026",
+  "title": "StarCraft-Website glitcht - im Code läuft ein Notruf aus 2575",
+  "subtitle": "Blizzard versteckt militärische Protokolle in der Entwicklerkonsole - wenige Tage vor der BlizzCon 2026",
+  "excerpt": "Bildstörungen auf der offiziellen StarCraft-Seite, verschlüsselte Funkprotokolle im Browser-Code und ein Forschungsprojekt, das offenbar ausser Kontrolle gerät: Blizzard schweigt bislang zur Auflösung.",
+  "seoTitle": "StarCraft: Blizzard versteckt Hinweise vor der BlizzCon 2026",
+  "metaDescription": "Blizzard platziert Bildstörungen und geheime Protokolle auf der StarCraft-Website. Was hinter dem Rätsel aus dem Jahr 2575 steckt, ist noch unbestätigt.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "bereich": "games",
+  "tags": [
+    "StarCraft",
+    "Blizzard",
+    "BlizzCon 2026",
+    "ARG",
+    "Nexon"
+  ],
+  "tldr": [
+    "Die offizielle StarCraft-Website zeigt absichtliche Bildstörungen; in der Entwicklerkonsole laufen militärische und medizinische Protokolle durch.",
+    "Die Zeitstempel tragen das Datum August 2575 - also mehrere Jahrzehnte nach den bisher erzählten Ereignissen der Reihe.",
+    "Die Aktion startet wenige Tage vor der BlizzCon 2026 (12. und 13. September, Anaheim Convention Center).",
+    "Blizzard hat weder ein neues Spiel noch eine StarCraft-Präsentation bestätigt - alles jenseits der Website-Funde ist unbestätigt."
+  ],
+  "whyItMatters": "StarCraft ist seit 2015 faktisch stillgelegt, obwohl die Marke zu den einflussreichsten des Strategiegenres gehört. Wenn Blizzard ausgerechnet vor der BlizzCon die offizielle Website manipuliert, ist das der bislang deutlichste Hinweis auf eine Rückkehr - was genau zurückkommt, entscheidet aber darüber, ob Strategiefans oder Shooter-Publikum bedient werden.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Wer derzeit die offizielle StarCraft-Website aufruft, sieht nicht nur die gewohnte Startseite: Immer wieder ziehen digitale Störungen über das Bild. Dahinter steckt kein Fehler, sondern ein bewusst platziertes Rätsel. In der Entwicklerkonsole des Browsers laufen militärische und medizinische Protokolle durch, die Fans inzwischen teilweise entschlüsselt haben. Was Blizzard damit ankündigen will, ist bislang offen - bestätigt ist einzig, dass die Inhalte vom Unternehmen selbst stammen."
+    },
+    {
+      "type": "embed",
+      "platform": "reddit",
+      "url": "https://www.reddit.com/r/starcraft/comments/1w6hbvx/uraiausderdose_found_these_in_the_glitching/"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "2575",
+          "label": "Jahr, aus dem die versteckten Protokolle datieren"
+        },
+        {
+          "value": "12./13. Sept.",
+          "label": "BlizzCon 2026 im Anaheim Convention Center"
+        },
+        {
+          "value": "2015",
+          "label": "letzte grosse Veröffentlichung: StarCraft II - Legacy of the Void"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Ein gestörter Datenstrom aus dem Jahr 2575"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die entschlüsselten Einträge tragen Zeitstempel aus dem August 2575 und spielen damit mehrere Jahrzehnte nach den bisher erzählten Ereignissen der Reihe. Sie lesen sich wie Fragmente eines Zwischenfalls, dessen Ausgang die Protokolle selbst nicht mehr festhalten - der letzte Eintrag der Kette endet mit einem Zusammenbruch der Energieversorgung."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Erwähnt werden der Aokara Lunar Mining Complex auf Roxara und die sogenannte Theta Squadron.",
+        "Eine geheime Fracht soll für ein Forschungsprojekt bestimmt sein.",
+        "Ein Eintrag registriert 14 nicht identifizierte Lebens- oder Bewegungssignale in einem Bereich, für den keine Personen verzeichnet sind.",
+        "Binär codierte Dialoge zeigen einen gescheiterten Systemzugriff: Ein Nutzer wird markiert und an den Dominion Service Desk verwiesen.",
+        "Nachfragen zur «Special Order 176» weist das System wegen unzureichender Freigabe zurück."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Machart erinnert an ein ARG, also ein Rätsel, das über Websites und versteckte Hinweise erzählt wird. Eine ausführliche Sammlung der bisherigen Funde führt die Community im StarCraft-Subreddit zusammen."
+    },
+    {
+      "type": "heading",
+      "text": "Das Timing kurz vor der BlizzCon dürfte kein Zufall sein"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Aktion beginnt nur wenige Tage vor der BlizzCon 2026, die am 12. und 13. September im Anaheim Convention Center stattfindet. Dass Blizzard ausgerechnet jetzt die Seite einer seit Jahren ruhenden Marke umbaut, spricht für eine bevorstehende Ankündigung. Bestätigt ist sie aber nicht: Weder ein neuer Titel noch überhaupt ein StarCraft-Programmpunkt steht bislang offiziell auf dem Plan. Genauso denkbar bleibt, dass die Protokolle auf eine kleinere Veröffentlichung, neue Inhalte für bestehende Spiele oder eine ganz andere Aktion rund um die Messe vorbereiten."
+    },
+    {
+      "type": "heading",
+      "text": "Zwei Gerüchte, die schon länger im Umlauf sind"
+    },
+    {
+      "type": "paragraph",
+      "text": "Seit 2024 hält sich der Bericht, bei Blizzard entstehe unter Leitung des früheren Far-Cry-Produzenten Dan Hay ein Shooter im StarCraft-Universum. Anfang 2026 kamen unbestätigte Angaben hinzu, wonach bereits eine interne Version existiere, die sich optisch an den realistischeren Zwischensequenzen von StarCraft II orientiert. Blizzard äussert sich dazu nicht."
+    },
+    {
+      "type": "paragraph",
+      "text": "Parallel berichteten südkoreanische Medien zuletzt über Verhandlungen zwischen Blizzard und Nexon. Dabei soll es um eine Lizenz für ein neues StarCraft-Spiel gehen, das teils bereits als möglicher Nachfolger und «StarCraft 3» bezeichnet wird. Ob diese Gespräche stattfinden und ob sie überhaupt mit den versteckten Botschaften zusammenhängen, ist unklar - Shooter und Nexon-Projekt könnten ebenso gut zwei unabhängige Vorhaben sein. Beide Berichte sind bis heute nicht bestätigt."
+    },
+    {
+      "type": "heading",
+      "text": "Was das für die Reihe bedeuten würde"
+    },
+    {
+      "type": "paragraph",
+      "text": "Für StarCraft wäre eine grössere Rückkehr bemerkenswert. StarCraft II: Legacy of the Void erschien 2015, die Episoden von Nova Covert Ops folgten 2016, StarCraft: Remastered 2017 - seither hat die Marke keinen neuen Eintrag mehr bekommen. Und ein Ausflug ins Shooter-Genre ist schon einmal gescheitert: StarCraft: Ghost wurde nie veröffentlicht."
+    },
+    {
+      "type": "paragraph",
+      "text": "Einordnung: Handfest ist bislang nur, dass Blizzard neue Inhalte auf der eigenen Website versteckt hat. Die Jahreszahl 2575, die militärischen Protokolle und die Spur zu einem offenbar ausser Kontrolle geratenen Forschungsprojekt könnten das Szenario eines künftigen Spiels umreissen - beweisen tun sie es nicht. Wer auf ein Strategie-Comeback hofft, sollte die Erwartungen deshalb bis zur BlizzCon niedrig halten: Die Fiktion auf der Website erzählt eine Geschichte, das Genre dahinter verrät sie nicht."
+    }
+  ],
+  "poll": {
+    "question": "Worauf laufen die versteckten Botschaften eurer Meinung nach hinaus?",
+    "options": [
+      "Der lange gemunkelte StarCraft-Shooter",
+      "Ein echtes StarCraft 3 - womöglich mit Nexon",
+      "Nur neue Inhalte für bestehende Spiele",
+      "Reines Marketing ohne Spielankündigung"
+    ]
+  },
+  "isLeakOrRumor": true,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-09-07T06:02:59.910Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "grid",
+  "sources": [
+    {
+      "title": "Geheime Botschaften: Blizzard deutet StarCraft-Comeback an",
+      "url": "https://www.computerbase.de/news/gaming/geheime-botschaften-blizzard-deutet-starcraft-comeback-an.99271/",
+      "publisher": "ComputerBase"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/starcraft-website-arg-hinweise-blizzcon-2026.webp",
+    "alt": "StarCraft-Website glitcht - im Code läuft ein Notruf aus 2575",
+    "credit": "Bild: ComputerBase",
+    "sourceUrl": "https://www.computerbase.de/news/gaming/geheime-botschaften-blizzard-deutet-starcraft-comeback-an.99271/",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "starcraft-website-glitch-teaser-blizzcon-2026",
+    "starcraft-ip-verkauf-nexon-blizzard-geruecht-2026",
+    "peter-cullen-optimus-prime-gestorben-85-2026"
+  ]
+}
