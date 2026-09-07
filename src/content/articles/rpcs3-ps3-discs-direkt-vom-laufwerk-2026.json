@@ -1,0 +1,164 @@
+{
+  "slug": "rpcs3-ps3-discs-direkt-vom-laufwerk-2026",
+  "title": "PS3-Discs laufen jetzt direkt am PC - ein Schlüssel fehlt trotzdem",
+  "subtitle": "RPCS3 startet Spiele direkt vom Blu-ray-Laufwerk und erweitert die Funktion auf Linux, macOS und FreeBSD",
+  "excerpt": "Der PS3-Emulator RPCS3 liest Original-Discs jetzt direkt aus dem Laufwerk - ohne vorheriges Dumpen. Ganz ohne Vorbereitung geht es allerdings nicht: Ein Detail müsst ihr selbst beisteuern.",
+  "seoTitle": "RPCS3: PS3-Spiele jetzt direkt vom Disc-Laufwerk am PC",
+  "metaDescription": "RPCS3 startet PS3-Discs direkt aus dem Blu-ray-Laufwerk - jetzt auch unter Linux, macOS und FreeBSD. Was ihr dafür braucht und wo die Grenzen liegen.",
+  "category": "news",
+  "platforms": [
+    "pc",
+    "playstation"
+  ],
+  "bereich": "games",
+  "tags": [
+    "RPCS3",
+    "PS3",
+    "Emulation",
+    "PlayStation",
+    "Spielearchivierung"
+  ],
+  "tldr": [
+    "RPCS3 kann PS3-Spiele nun direkt aus einem kompatiblen Blu-ray-Laufwerk starten, ohne die Disc vorher auf die Festplatte zu kopieren",
+    "Die Funktion war zuvor Windows-exklusiv und läuft jetzt auch unter Linux, macOS und FreeBSD",
+    "Ein Entschlüsselungsschlüssel muss weiterhin manuell im Ordner data/redump liegen - erst danach ist es echtes Plug and Play",
+    "Sony stellt die Disc-Produktion für neue PlayStation-Spiele ab 2028 ein, was der Meldung zusätzliche Brisanz gibt"
+  ],
+  "whyItMatters": "Wer eine PS3-Sammlung im Regal hat, braucht künftig weder funktionierende Konsole noch stundenlanges Dumpen auf teuren Speicher, um seine Spiele zu starten. Gleichzeitig zeigt der Schritt, welchen Wert physische Datenträger für die Spielearchivierung haben - just in dem Moment, in dem Sony den Ausstieg aus der Disc plant.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Der Open-Source-Emulator RPCS3 hat eine Hürde beseitigt, die PS3-Emulation seit Jahren begleitet: Original-Discs lassen sich nun direkt aus dem Laufwerk starten, ohne sie vorher als Abbild auf die Festplatte zu kopieren. Das Team kündigte den Schritt am 6. September 2026 über seinen Account auf X an - und nennt die neue Bedienung selbstbewusst «Plug and Play»."
+    },
+    {
+      "type": "embed",
+      "platform": "twitter",
+      "url": "https://twitter.com/cantworkitout/status/2096669803993829481"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "20 Jahre",
+          "label": "an physischen PS3-Titeln lassen sich laut RPCS3 ohne Serverabhängigkeit spielen"
+        },
+        {
+          "value": "4",
+          "label": "unterstützte Systeme: Windows, Linux, macOS und FreeBSD"
+        },
+        {
+          "value": "2028",
+          "label": "ab diesem Jahr stellt Sony die Disc-Produktion für neue PlayStation-Spiele ein"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Bislang war das direkte Abspielen vom Laufwerk eine Windows-Angelegenheit. Mit den aktuellen Änderungen ist die Funktion laut Entwicklerteam auch unter Linux, macOS und FreeBSD verfügbar. Zusätzlich wurden die Installationszeiten für Paketinstallationen von der Disc optimiert - relevant für all die Patches und Zusatzinhalte, die auf späteren PS3-Datenträgern mitgeliefert wurden. Namentlich dankt das Projekt den Beitragenden digant73 und Megamouse."
+    },
+    {
+      "type": "heading",
+      "text": "Plug and Play - fast"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ganz ohne Vorarbeit funktioniert der Griff ins Regal allerdings nicht. Beim ersten Einlegen einer PS3-Disc lässt sich nicht sofort losspielen, denn der Emulator braucht weiterhin den passenden Entschlüsselungsschlüssel."
+    },
+    {
+      "type": "quote",
+      "text": "Ihr müsst dem Emulator weiterhin den Entschlüsselungsschlüssel der Disc bereitstellen, indem ihr ihn in data/redump ablegt. Sobald er dort liegt, könnt ihr die Disc booten - sie wird im laufenden Betrieb gelesen und entschlüsselt.",
+      "attribution": "RPCS3 auf X"
+    },
+    {
+      "type": "paragraph",
+      "text": "Danach übernimmt der Emulator: Die Daten werden direkt vom Datenträger gelesen, ein vollständiges Abbild auf dem Systemspeicher ist nicht mehr nötig. Angesichts der derzeit hohen Preise für SSDs ist das mehr als eine Bequemlichkeitsfunktion. Wer einen Stapel gebrauchter Discs gekauft hat, kann jede Scheibe zunächst antesten und erst danach entscheiden, welche Titel den Platz auf der Platte wert sind."
+    },
+    {
+      "type": "heading",
+      "text": "Nicht jedes Laufwerk spielt mit"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Funktion setzt ein kompatibles Blu-ray-Laufwerk voraus - intern oder extern. RPCS3 führt auf der Projektseite eine ausführliche Liste geprüfter Modelle verschiedener Hersteller; dieselben Geräte eignen sich auch weiterhin zum Dumpen der Medien auf feste Speicher. Für exotische Laufwerke, die nicht auf der Liste stehen, gibt es einen einfachen Selbsttest:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "PS3-Disc einlegen und versuchen, die Dateien zu durchsuchen",
+        "Werden Dateien angezeigt, ist das Laufwerk kompatibel",
+        "Bleibt die Anzeige leer, funktioniert das Gerät nicht"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Eine Kuriosität am Rande: Bestätigt ist auch, dass PS4- und PS5-Besitzer:innen mit Linux-Installation PS3-Spiele über RPCS3 direkt von der Disc starten können. Die aktuelle Sony-Hardware wird damit zur Abspielstation für die Bibliothek der übernächsten Generation zurück."
+    },
+    {
+      "type": "heading",
+      "text": "Timing mit Symbolkraft"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Meldung trifft auf eine aufgeladene Debatte. Erst wenige Monate ist es her, dass Sony angekündigt hat, ab 2028 keine Discs für neue PlayStation-Spiele mehr zu produzieren. Seither haben Fans, Entwickler:innen und Publisher Kritik und Bedenken geäussert, wobei ein Thema immer wieder auftaucht: die Sorge um die Spielearchivierung. Sony hält bislang an seinem Plan fest."
+    },
+    {
+      "type": "paragraph",
+      "text": "Genau in dieser Gemengelage liefert RPCS3 ein Argument für die Gegenseite. Das Team formuliert es in seiner Ankündigung selbst so:"
+    },
+    {
+      "type": "quote",
+      "text": "Wer seine Spiele als physische Medien besitzt, kann Titel spielen, die bis zu 20 Jahre zurückliegen - ohne auf irgendwelche Server angewiesen zu sein!",
+      "attribution": "RPCS3 auf X"
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Technisch ist der Schritt kein Umbruch der Emulationsqualität, sondern eine Frage der Zugänglichkeit - und die entscheidet oft darüber, ob eine Sammlung tatsächlich gespielt oder nur gelagert wird. Die PS3 wird in diesem Jahr 20 Jahre alt, ihre Hardware altert entsprechend. Dass sich die Discs künftig auch ohne funktionierende Konsole und ohne Umweg über ein Abbild starten lassen, verlängert die Lebensdauer dieser Bibliothek erheblich. Die verbleibende Hürde bleibt der Entschlüsselungsschlüssel: Solange er manuell bereitgestellt werden muss, ist «Plug and Play» eine Beschreibung des zweiten Versuchs, nicht des ersten."
+    }
+  ],
+  "poll": {
+    "question": "Wie hältst du deine alte PS3-Sammlung am Leben?",
+    "options": [
+      "Originalkonsole, solange sie läuft",
+      "Emulator - jetzt direkt von der Disc",
+      "Discs gedumpt, alles auf der Platte",
+      "Ich kaufe die Klassiker digital neu"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-09-07T11:04:11.289Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "particles",
+  "sources": [
+    {
+      "title": "RPCS3 emulator can now run PS3 games on PC directly from a disc drive in landmark development — unlocks 20 years of physical titles on Windows, Linux, and macOS",
+      "url": "https://www.tomshardware.com/video-games/playstation/rpcs3-emulator-can-now-run-games-on-pc-directly-from-a-disc-drive-in-landmark-development-unlocks-20-years-of-physical-ps3-games-on-windows-linux-and-macos",
+      "publisher": "Tom's Hardware"
+    },
+    {
+      "title": "As Sony plans to kill discs, PS3 emulator RPCS3 is bringing them back – you can now play physical games on PC straight from your disc drive",
+      "url": "https://www.gamesradar.com/games/as-sony-plans-to-kill-discs-ps3-emulator-rpcs3-is-bringing-them-back-you-can-now-play-physical-games-on-pc-straight-from-your-disc-drive/",
+      "publisher": "GamesRadar"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/rpcs3-ps3-discs-direkt-vom-laufwerk-2026.webp",
+    "alt": "PS3-Discs laufen jetzt direkt am PC - ein Schlüssel fehlt trotzdem",
+    "credit": "Bild: Tom's Hardware",
+    "sourceUrl": "https://www.tomshardware.com/video-games/playstation/rpcs3-emulator-can-now-run-games-on-pc-directly-from-a-disc-drive-in-landmark-development-unlocks-20-years-of-physical-ps3-games-on-windows-linux-and-macos",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "playstation-disc-produktion-klarstellung-10-prozent-2028",
+    "playstation-disc-aus-shawn-layden-lizenz-2028",
+    "last-of-us-naughty-dog-neue-projekte-druckmann-2026"
+  ]
+}
