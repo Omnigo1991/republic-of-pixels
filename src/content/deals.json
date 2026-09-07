@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-07T06:04:06.035Z",
+  "updatedAt": "2026-09-07T19:04:35.087Z",
   "deals": [
     {
       "appId": 2183900,
@@ -24,24 +24,13 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/capsule_184x69.jpg?t=1759502961"
     },
     {
-      "appId": 1326470,
-      "title": "Sons Of The Forest",
-      "discountPercent": 70,
-      "originalPrice": 2899,
-      "finalPrice": 869,
-      "currency": "EUR",
-      "endsAt": "2026-09-07T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1326470/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1326470/capsule_184x69.jpg?t=1708624856"
-    },
-    {
       "appId": 3240220,
       "title": "Grand Theft Auto V Enhanced",
-      "discountPercent": 56,
-      "originalPrice": 4499,
-      "finalPrice": 1979,
+      "discountPercent": 50,
+      "originalPrice": 2999,
+      "finalPrice": 1499,
       "currency": "EUR",
-      "endsAt": "2026-09-07T17:00:00.000Z",
+      "endsAt": "2026-09-21T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/3240220/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3240220/a318bd9affe8eee32984b18794b273c256e9b2d6/capsule_184x69.jpg?t=1781187782"
     },
@@ -57,15 +46,26 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4656000/4b28cb7e3572e7ab0ffcd6a53030b1a719ff3fff/capsule_184x69.jpg?t=1788351950"
     },
     {
-      "appId": 108600,
-      "title": "Project Zomboid",
-      "discountPercent": 33,
-      "originalPrice": 2549,
-      "finalPrice": 1707,
+      "appId": 3892270,
+      "title": "Gamble With Your Friends",
+      "discountPercent": 38,
+      "originalPrice": 779,
+      "finalPrice": 482,
       "currency": "EUR",
-      "endsAt": "2026-09-07T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/108600/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/108600/capsule_184x69.jpg?t=1787740093"
+      "endsAt": "2026-09-14T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/3892270/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3892270/162b293e92bf8be850967a85c9916daa6f68591c/capsule_184x69.jpg?t=1788800889"
+    },
+    {
+      "appId": 1623730,
+      "title": "Palworld",
+      "discountPercent": 30,
+      "originalPrice": 2899,
+      "finalPrice": 2029,
+      "currency": "EUR",
+      "endsAt": "2026-09-08T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1623730/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/0703d5a0658c7aedaa3be4391d6f5cccc1bb6d7a/capsule_184x69.jpg?t=1784714419"
     }
   ]
 }
