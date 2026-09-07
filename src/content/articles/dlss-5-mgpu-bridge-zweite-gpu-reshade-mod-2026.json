@@ -1,0 +1,167 @@
+{
+  "slug": "dlss-5-mgpu-bridge-zweite-gpu-reshade-mod-2026",
+  "title": "DLSS 5 auf der zweiten Grafikkarte - bis zu 127 Prozent mehr FPS",
+  "subtitle": "Ein ReShade-Add-on schiebt Nvidias Neural Rendering auf eine zweite GPU - der Trick kostet allerdings einen zweiten Monitor und die doppelte Anzeigelatenz",
+  "excerpt": "Neural Rendering frisst in DLSS 5 einen grossen Teil der Bildrate. Ein Modder lagert die Rechenarbeit kurzerhand auf eine zweite Grafikkarte aus - und holt fast die gesamte verlorene Leistung zurück. Der Haken steckt im Setup.",
+  "seoTitle": "DLSS 5 auf zweiter GPU: Mod bringt bis zu 127 % mehr FPS",
+  "metaDescription": "Das ReShade-Add-on MGPU Bridge lagert DLSS-5-Neural-Rendering auf eine zweite RTX-50-Karte aus - bis zu 127 Prozent mehr FPS, 21 Grad kühler, aber mit Haken.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "bereich": "hardware",
+  "tags": [
+    "Nvidia",
+    "DLSS 5",
+    "Neural Rendering",
+    "GeForce RTX 50",
+    "Modding",
+    "The Blood of Dawnwalker"
+  ],
+  "tldr": [
+    "Das ReShade-Add-on MGPU Bridge von Marcelo Guibout lagert Nvidias DLSS-5-Neural-Rendering auf eine zweite Grafikkarte aus.",
+    "Im Test mit zwei RTX 5060 Ti 16 GB steigen die Bildraten je nach DLSS-Modus um bis zu 127 Prozent, die Render-Karte läuft 21 Grad kühler.",
+    "Voraussetzung sind zwei RTX-50-Karten, DirectX 12 und je ein Monitor pro Karte - die Anzeigelatenz verdoppelt sich.",
+    "Das Projekt ist experimentell, steht auf GitHub bereit und ist ausdrücklich kein Ersatz für offizielle DLSS-5-Integration."
+  ],
+  "whyItMatters": "Neural Rendering ist das Prestige-Feature von DLSS 5 - und kostet auf einer einzelnen Karte einen erheblichen Teil der Bildrate. Der Mod zeigt zum ersten Mal für Endanwender:innen, wie viel Leistung tatsächlich zurückzuholen wäre, wenn die neuronale Nachbearbeitung woanders liefe. Für alle mit einer alten Grafikkarte im Schrank eröffnet das eine Perspektive, die es seit den PhysX-Zeiten nicht mehr gab.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Nvidias DLSS 5 mit Neural Rendering ist seit dem Leak und dem anschliessenden offiziellen Rollout das grosse Thema der PC-Szene - und zugleich das teuerste. Die neuronale Nachbearbeitung kostet auf einer einzelnen Grafikkarte spürbar Bildrate. Der Entwickler Marcelo Guibout hat nun ein ReShade-Add-on namens MGPU Bridge veröffentlicht, das diesen Rechenschritt auf eine zweite GPU auslagert: Die erste Karte rendert das Spiel, die zweite übernimmt das Neural Rendering. In Guibouts Messungen kehrt damit fast die gesamte verlorene Leistung zurück. Das Projekt steht auf GitHub zum Download bereit."
+    },
+    {
+      "type": "embed",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=XWv5jw90yHc"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "+127 %",
+          "label": "höhere Bildrate im Ultra-Performance-Modus, wenn Neural Rendering auf der zweiten Karte läuft"
+        },
+        {
+          "value": "21 °C",
+          "label": "kühler läuft die Render-Karte ohne die neuronale Last"
+        },
+        {
+          "value": "86 %",
+          "label": "des möglichen Leistungsgewinns bleiben laut Entwickler im Dual-GPU-Betrieb erhalten"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Warum sich Neural Rendering überhaupt verschieben lässt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Kniff liegt in der Position des Effekts innerhalb der Bildberechnung. Neural Rendering setzt ganz am Ende an - es bekommt ein fertiges Bild und gibt ein fertiges Bild zurück. Genau deshalb lässt sich dieser Schritt herauslösen und auf fremder Hardware ausführen, ohne dass Daten zurückwandern müssen."
+    },
+    {
+      "type": "quote",
+      "text": "Das Add-on erstellt sein eigenes D3D12-Gerät auf eurer zweiten GPU, schickt jedes fertige Bild dorthin, führt dort DLSS-NR aus und zeigt das Ergebnis auf dem Monitor dieser Karte an - es muss also nichts zurückkommen. Die Render-GPU leistet überhaupt keine neuronale Arbeit und läuft aus demselben Grund kühler.",
+      "attribution": "Marcelo Guibout, Entwickler von MGPU Bridge"
+    },
+    {
+      "type": "heading",
+      "text": "Die Messwerte: zwei RTX 5060 Ti gegen eine"
+    },
+    {
+      "type": "paragraph",
+      "text": "Guibouts Testsystem besteht aus einem Ryzen 7 7800X3D, 32 GB DDR5 und zwei GeForce RTX 5060 Ti mit je 16 GB, beide über PCIe 5.0 x8 angebunden und mit je einem eigenen Display verbunden. Als Testszene dient ein Cinematic-Video aus The Blood of Dawnwalker in 1080p, DLSS Super Resolution läuft in allen Durchgängen mit. Die erste Spalte zeigt jeweils den Wert ohne Neural Rendering, also die Obergrenze des Machbaren:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "DLAA: 67-70 FPS ohne NR / 44 FPS auf der Render-Karte / 67-70 FPS auf der zweiten Karte",
+        "Quality: 98-99 / 54-55 / 91 FPS",
+        "Performance: 127-131 / 59 / 106-107 FPS",
+        "Ultra Performance: 172 / 69-71 / 157 FPS"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Entwickler warnt ausdrücklich davor, die Videos als Benchmarks zu lesen - es seien technische Demonstrationen. Interessanter als die absoluten Zahlen sei ohnehin das Verhältnis."
+    },
+    {
+      "type": "quote",
+      "text": "Die Bildraten sind nicht der Befund. Der Befund ist die Steigung: was ihr gewinnt, wenn ihr von DLAA auf Ultra Performance heruntergeht, und wie viel von diesem verfügbaren Gewinn jeder Zweig behält. Neuronale Nachbearbeitung sättigt jedes Gerät, auf dem sie läuft, und sie arbeitet immer in Ausgabeauflösung. Ihre Kosten sinken kaum, wenn ihr den DLSS-Modus senkt, während die Renderarbeit einbricht.",
+      "attribution": "Marcelo Guibout"
+    },
+    {
+      "type": "paragraph",
+      "text": "Auf der Render-Karte fresse der Effekt deshalb einen immer grösseren Anteil jedes Frames, und das Upscaling lohne sich irgendwann nicht mehr: Rund ein Drittel dessen, was die Maschine eigentlich hergeben könnte, bleibe übrig. Verschiebt man die Last auf die zweite Karte, seien es 86 Prozent. Ein zweiter Demo-Clip mit Cyberpunk 2077 zeigt dasselbe Prinzip, eine weitere Vorführung lief auf einem deutlich günstigeren Ryzen 5 5600 mit DDR4 - Highend-Unterbau ist also nicht zwingend nötig."
+    },
+    {
+      "type": "heading",
+      "text": "Der Preis: zwei Monitore, doppelte Latenz"
+    },
+    {
+      "type": "paragraph",
+      "text": "So elegant der Ansatz klingt, so eng sind die Voraussetzungen. Die aktuelle Implementierung setzt Folgendes voraus:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "ausschliesslich DirectX-12-Spiele",
+        "zwei Grafikkarten der RTX-50-Serie - RTX 40 oder älter funktionieren nicht",
+        "je ein Monitor pro Karte, da das fertige Bild auf dem Display der zweiten GPU ausgegeben wird",
+        "eine verdoppelte Anzeigelatenz",
+        "Mischbetrieb zweier unterschiedlicher RTX-50-Modelle wurde vom Entwickler nicht getestet"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung: kein SLI-Comeback, aber ein PhysX-Déjà-vu"
+    },
+    {
+      "type": "paragraph",
+      "text": "Guibout stellt selbst klar, dass MGPU Bridge nichts mit SLI zu tun hat - dort wurde die eigentliche Bildberechnung zwischen zwei Karten aufgeteilt. Und es sei ebenso wenig Nvidias Vorstellung davon, wie DLSS 5 laufen soll; die native Integration offizieller Unterstützung fehlt schlicht. Kommentare in der Community ziehen die passendere Parallele: dedizierte PhysX-Karten, die früher einen einzelnen Effekt übernahmen, während die Hauptkarte das Bild baute. Der Mod reiht sich damit in eine auffällig produktive Bastelwelle ein - Neural Rendering wurde bereits inoffiziell auf RTX 20, 30 und 40 sowie auf AMDs Radeon RX 9000 zum Laufen gebracht, wenn auch mit teils drastischen Leistungseinbrüchen. Nvidia selbst hat DLSS-5-Unterstützung für RTX-40-Karten bestätigt, optimiert die Modelle aber zunächst für die RTX-50-Serie. Wer eine ältere RTX-50-Karte übrig hat und mit einem Zweitmonitor sowie höherer Latenz leben kann, bekommt hier einen faszinierenden Blick darauf, wie viel Leistung in DLSS 5 derzeit an der falschen Stelle verpufft."
+    }
+  ],
+  "poll": {
+    "question": "Zweite Grafikkarte nur für Neural Rendering - würdet ihr das machen?",
+    "options": [
+      "Sofort, wenn eine alte Karte im Regal liegt",
+      "Nur ohne den Zweitmonitor-Zwang",
+      "Doppelte Latenz? Auf keinen Fall",
+      "Das muss Nvidia offiziell lösen, nicht die Modszene"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-09-07T14:04:31.609Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "controller",
+  "sources": [
+    {
+      "title": "Astonishing mod runs DLSS 5 on a second GPU to boost neural-rendered FPS up to 127% — game renders on one card, neural post-processing runs on the other, much like dedicated PhysX GPUs",
+      "url": "https://www.tomshardware.com/pc-components/gpus/astonishing-mod-runs-nvidia-dlss-5-on-a-second-gpu-using-a-reshade-add-on-to-reduce-performance-impact-boosts-neural-rendered-fps-up-to-127-percent-game-renders-on-one-card-neural-post-processing-runs-on-the-other-much-like-dedicated-physx-gpus",
+      "publisher": "Tom's Hardware"
+    },
+    {
+      "title": "User Demonstrates Offloading DLSS 5 Neural Rendering To The Second RTX 5060 Ti Using ReShade Add-On, Restoring Original Performance",
+      "url": "https://wccftech.com/dlss-5-runs-on-dual-gpu-setup-using-reshade-add-on/",
+      "publisher": "Wccftech"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/dlss-5-mgpu-bridge-zweite-gpu-reshade-mod-2026.webp",
+    "alt": "DLSS 5 auf der zweiten Grafikkarte - bis zu 127 Prozent mehr FPS",
+    "credit": "Bild: Tom's Hardware",
+    "sourceUrl": "https://www.tomshardware.com/pc-components/gpus/astonishing-mod-runs-nvidia-dlss-5-on-a-second-gpu-using-a-reshade-add-on-to-reduce-performance-impact-boosts-neural-rendered-fps-up-to-127-percent-game-renders-on-one-card-neural-post-processing-runs-on-the-other-much-like-dedicated-physx-gpus",
+    "sourceWidth": 1263,
+    "sourceHeight": 696
+  },
+  "relatedSlugs": [
+    "dlss-5-mod-control-nba-2k27-dll-2026",
+    "dlss-5-neural-rendering-mod-amd-radeon-2026",
+    "nvidia-dlss-5-rtx-40-support-regler-gesperrt-2026"
+  ]
+}
