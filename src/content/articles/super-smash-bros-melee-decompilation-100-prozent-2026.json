@@ -1,0 +1,147 @@
+{
+  "slug": "super-smash-bros-melee-decompilation-100-prozent-2026",
+  "title": "Melee ist zu 100 Prozent decompiliert - ein Port ist es trotzdem nicht",
+  "subtitle": "Nach über sechs Jahren liefert das Team hinter doldecomp/melee C-Code, der sich Byte für Byte in Nintendos Original zurückverwandeln lässt",
+  "excerpt": "Der GameCube-Klassiker liegt komplett als C-Code vor - kompilierbar zu einer Datei, die identisch mit Nintendos main.dol ist. Was das für Mods und Ports bedeutet, ist die eigentliche Frage.",
+  "seoTitle": "Super Smash Bros. Melee komplett decompiliert nach 6 Jahren",
+  "metaDescription": "Nach über sechs Jahren ist Super Smash Bros. Melee zu 100 Prozent decompiliert. Was der C-Code kann, was er nicht kann - und welche Rolle KI dabei spielte.",
+  "category": "news",
+  "platforms": [
+    "nintendo",
+    "pc"
+  ],
+  "bereich": "games",
+  "tags": [
+    "Super Smash Bros. Melee",
+    "Nintendo",
+    "GameCube",
+    "Decompilation",
+    "Spielearchivierung",
+    "Modding"
+  ],
+  "tldr": [
+    "Das Projekt doldecomp/melee hat Super Smash Bros. Melee nach über sechs Jahren zu 100 Prozent decompiliert",
+    "Der C-Code lässt sich zu einer Binärdatei kompilieren, die Byte für Byte identisch mit Nintendos originaler main.dol ist",
+    "Ein spielbarer Port ist das nicht: Rekonstruiert wird die 3,88 MB grosse main.dol der US-Version 1.02, Texturen und Audio müssen von der eigenen Disc kommen",
+    "Laut Tom's Hardware half auf der letzten Etappe auch aktuelle KI-Technik mit, konkret GPT-6 Astra von OpenAI"
+  ],
+  "whyItMatters": "Ein vollständig lesbarer Quellcode ist die Grundlage für alles, was die Melee-Community seit Jahren fordert: präzise Trainingstools, tiefgreifende Mods und langfristig Ports auf Hardware, die es noch zu kaufen gibt. Gleichzeitig zeigt der Meilenstein, wie stark die Spielearchivierung inzwischen von Freiwilligenprojekten abhängt - und dass zwischen «decompiliert» und «spielbar auf dem PC» noch viel Arbeit liegt.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Nach über sechs Jahren Arbeit meldet das Team hinter dem Projekt doldecomp/melee den Abschluss: Super Smash Bros. Melee, 2001 für den GameCube erschienen, ist zu 100 Prozent decompiliert. Der rekonstruierte C-Code lässt sich zu einer Binärdatei kompilieren, die Byte für Byte identisch mit Nintendos originaler main.dol ist - das strengste Gütesiegel, das ein solches Projekt erreichen kann. Wer jetzt auf einen PC-Port hofft, muss allerdings weiter warten."
+    },
+    {
+      "type": "embed",
+      "platform": "reddit",
+      "url": "https://www.reddit.com/r/SSBM/comments/1wa2vpy/super_smash_bros_melee_has_been_100_decompiled"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "100 %",
+          "label": "des Spielcodes liegen als lesbarer C-Code vor"
+        },
+        {
+          "value": "6+ Jahre",
+          "label": "steckten im Projekt doldecomp/melee"
+        },
+        {
+          "value": "3,88 MB",
+          "label": "gross ist die rekonstruierte main.dol der US-Version 1.02"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Was «Byte für Byte identisch» wirklich bedeutet"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bei einer Decompilation wird kompilierter Maschinencode in menschenlesbaren Quellcode zurückübersetzt. Der Anspruch, den sich das Melee-Team gesetzt hat, geht dabei deutlich über «funktioniert irgendwie» hinaus: Erst wenn der eigene C-Code durch den Compiler exakt dieselbe Datei ergibt, die Nintendo damals auf die Disc gepresst hat, gilt eine Funktion als korrekt rekonstruiert. Jede Abweichung von einem einzigen Byte wäre ein Hinweis darauf, dass irgendwo noch geraten wurde."
+    },
+    {
+      "type": "paragraph",
+      "text": "Genau dieser Anspruch macht Melee zu einem besonders zähen Brocken. Das Spiel ist technisch verschachtelt, sein Kampfsystem hängt an Physik, Trefferzonen und Frame-Timings, die über Jahre von der Turnierszene erforscht, aber nie im Original nachgelesen werden konnten. Ab jetzt lässt sich all das im Code selbst prüfen statt über Experimente im Emulator."
+    },
+    {
+      "type": "heading",
+      "text": "Kein Port - und was ihr trotzdem schon damit machen könnt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Wichtig für alle, die den Meilenstein mit einer spielbaren PC-Version verwechseln: Das Repository auf GitHub enthält Anleitungen, um den Code auf verschiedenen Plattformen zu kompilieren, unter anderem unter Windows. Das Ergebnis ist jedoch kein natives Spiel, sondern die 3,88 MB grosse main.dol der US-Fassung 1.02. Wer sie ausführen will, braucht zusätzlich die Original-Assets - Texturen, Audio und den restlichen Discinhalt - von einem eigenen Exemplar des Spiels."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Erreicht: vollständiger C-Code, der eine identische Kopie der Original-Binärdatei erzeugt",
+        "Nicht enthalten: Grafiken, Sounds und weitere Daten der GameCube-Disc",
+        "Noch offen: echte Ports auf moderne Systeme sowie umfangreiche Modding-Werkzeuge",
+        "Getestete Referenzversion: US-Release 1.02"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Warum die Decomp-Szene gerade jetzt Fahrt aufnimmt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Melee ist kein Einzelfall. Decompilation-Projekte gehören derzeit zu den auffälligsten Trends in der Retro- und Entwicklerszene, und viele davon laufen seit Jahren im Hintergrund. Der Antrieb ist praktisch: Alte Konsolenhardware wird selten, teuer oder lässt sich kaum noch wirtschaftlich reparieren. Wer ein Spiel dauerhaft erhalten will, braucht deshalb Code, der auf Systeme portiert werden kann, die noch gepflegt werden."
+    },
+    {
+      "type": "paragraph",
+      "text": "Der zweite Effekt ist die Modding-Perspektive. Nach früheren erfolgreichen Decompilations ist regelmässig eine Welle an Umbauten, Fanprojekten und Werkzeugen entstanden, sobald Entwicklerinnen und Entwickler die Engine im Detail verstehen konnten. Für ein Spiel wie Melee, dessen Community seit über zwei Jahrzehnten an Balance, Trainingsmodi und Netcode herumbastelt, ist der offene Blick auf Physik und Spielmechanik potenziell der grösste Gewinn - auch wenn brauchbare Tools ebenfalls Zeit und Arbeit kosten werden."
+    },
+    {
+      "type": "heading",
+      "text": "KI auf der letzten Etappe - und ein Streitpunkt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bemerkenswert ist ein Detail zum Schlussspurt: Laut Tom's Hardware trug auch aktuelle KI-Technik dazu bei, das Projekt über die Ziellinie zu bringen, konkret genannt wird GPT-6 Astra von OpenAI. Dieselbe Technik könnte dem Bericht zufolge künftig helfen, die erhofften Ports und Mods schneller zu entwickeln. In einer Szene, die sich über Jahre mit reiner Handarbeit an einzelnen Funktionen abgearbeitet hat, dürfte das nicht unwidersprochen bleiben."
+    },
+    {
+      "type": "paragraph",
+      "text": "Einordnung: Der Abschluss der Decompilation ist kein Release, sondern ein Fundament. Wer heute Melee spielen will, braucht weiterhin Konsole, Disc oder Emulator. Wer aber wissen will, wie das Spiel funktioniert, kann es ab jetzt nachlesen - und genau daraus sind in der Vergangenheit die interessanten Projekte entstanden."
+    }
+  ],
+  "poll": {
+    "question": "KI-Hilfe im Melee-Decomp: Gehört das in ein Preservation-Projekt?",
+    "options": [
+      "Ja, entscheidend ist das Ergebnis",
+      "Nur als Werkzeug für Fleissarbeit",
+      "Nein, das entwertet sechs Jahre Handarbeit",
+      "Egal - ich will endlich Mods"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-09-08T14:31:28.313Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "circuit",
+  "sources": [
+    {
+      "title": "Super Smash Bros Melee gets fully decompiled after over six years of effort — ambitious and technically impressive project delivers GameCube classic as C code",
+      "url": "https://www.tomshardware.com/video-games/retro-gaming/super-smash-bros-melee-gets-fully-decompiled-after-over-six-years-of-effort-ambitious-and-technically-impressive-project-delivers-gamecube-classic-as-c-code",
+      "publisher": "Tom's Hardware"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/super-smash-bros-melee-decompilation-100-prozent-2026.webp",
+    "alt": "Melee ist zu 100 Prozent decompiliert - ein Port ist es trotzdem nicht",
+    "credit": "Bild: Tom's Hardware",
+    "sourceUrl": "https://www.tomshardware.com/video-games/retro-gaming/super-smash-bros-melee-gets-fully-decompiled-after-over-six-years-of-effort-ambitious-and-technically-impressive-project-delivers-gamecube-classic-as-c-code",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "zelda-film-titel-original-story-miyamoto-2027",
+    "zelda-ocarina-of-time-remake-gameplay-termin-5-november-2026",
+    "switch-2-eu-revision-teardown-akku-2026"
+  ]
+}
