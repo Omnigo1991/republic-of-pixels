@@ -1,0 +1,154 @@
+{
+  "slug": "switch-2-eu-revision-teardown-akku-2026",
+  "title": "Switch 2 wird reparierbar - der Akku hält dafür kürzer",
+  "subtitle": "Ein Teardown der neuen EU-Version zeigt sichtbare Schrauben, ein verschobenes Hitzeschild und rund 48 mAh weniger Kapazität",
+  "excerpt": "Die überarbeitete Switch 2 steht in den Regalen, und die Community hat sie längst aufgeschraubt. Der Akku lässt sich nun leicht tauschen - dafür zahlt Nintendo an anderer Stelle einen kleinen Preis.",
+  "seoTitle": "Switch 2 EU-Modell: Teardown zeigt kleineren Akku",
+  "metaDescription": "Die EU-konforme Nintendo Switch 2 ist im Handel. Ein Teardown zeigt kleineren Akku, 14 Gramm mehr Gewicht und einen deutlich einfacheren Akkuwechsel.",
+  "category": "news",
+  "platforms": [
+    "nintendo"
+  ],
+  "bereich": "hardware",
+  "tags": [
+    "Nintendo Switch 2",
+    "Nintendo",
+    "Recht auf Reparatur",
+    "Hardware",
+    "EU"
+  ],
+  "tldr": [
+    "Die EU-konforme Revision der Switch 2 wird ab sofort ausgeliefert und ersetzt das Launch-Modell fliessend im Handel.",
+    "Ein Teardown des YouTube-Kanals Nintendúo zeigt: Der Akku fasst rund 48 mAh weniger, die Konsole ist mit Joy-Cons 14 Gramm schwerer.",
+    "Die Schrauben in den Joy-Con-Schienen liegen frei, Garantiesiegel entfallen, das Hitzeschild deckt den Akku nicht mehr ab.",
+    "Erkennungsmerkmale: Produktcode OSM und eine Seriennummer, die in Europa mit HLE beginnt."
+  ],
+  "whyItMatters": "Zum ersten Mal lässt sich bei einer aktuellen Nintendo-Konsole der Akku ohne Garantieverlust selbst tauschen - das verlängert die Lebensdauer der Hardware potenziell um Jahre. Wer jetzt eine Switch 2 kauft, erhält je nach Handelsbestand aber entweder das alte oder das neue Modell und sollte wissen, worauf zu achten ist.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Die überarbeitete Nintendo Switch 2 ist im Handel angekommen - und wurde von der Community bereits aufgeschraubt. Das neue Modell erfüllt die EU-Richtlinie zum «Recht auf Reparatur» sowie die aktualisierten Batterie-Verordnungen und unterscheidet sich äusserlich kaum vom Launch-Gerät. Innen dagegen deutlich: Der Akku liegt frei zugänglich, die Garantiesiegel sind verschwunden. Dafür fällt die Kapazität etwas geringer aus."
+    },
+    {
+      "type": "embed",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=jpYIpMugzFQ"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "48 mAh",
+          "label": "weniger Akkukapazität als im Launch-Modell, rund 1 Prozent"
+        },
+        {
+          "value": "14 g",
+          "label": "mehr Gewicht - Konsole samt angeschlossener Joy-Cons"
+        },
+        {
+          "value": "Anfang 2027",
+          "label": "erst dann folgen die überarbeiteten N64- und GameCube-Controller"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Was der Teardown zeigt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der YouTube-Kanal Nintendúo hat beide Varianten nebeneinander zerlegt und die Unterschiede dokumentiert. Die auffälligste Änderung betrifft die Joy-Con-Schienen: Die Schrauben darunter liegen im neuen Modell direkt frei. Beim Launch-Gerät verbargen sie sich unter Siegeln, deren Entfernung die Garantie erlöschen liess - genau jene Hürde, die ein Öffnen der Konsole für die meisten Nutzer:innen faktisch ausschloss."
+    },
+    {
+      "type": "paragraph",
+      "text": "Nimmt man die Rückabdeckung ab, wird die zweite grosse Anpassung sichtbar: Das Hitzeschild reicht nicht mehr über den Akku. Der lässt sich dadurch spürbar einfacher entnehmen und ersetzen. Als Schutz vor der Hitzeentwicklung steckt die Batterie stattdessen in einer dicken Isolierung. Es ist ein klassischer Ingenieurskompromiss: Nintendo tauscht eine feste Abschirmung gegen eine Lösung, die den Zugriff von aussen erlaubt."
+    },
+    {
+      "type": "heading",
+      "text": "Kleinerer Akku, mehr Gewicht"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bereits die im Juli veröffentlichten Designentwürfe hatten angedeutet, dass die Revision einen etwas kleineren Akku mitbringt. Der Teardown bestätigt das: Die Kapazität sinkt um knapp 1 Prozent beziehungsweise rund 48 mAh. Gleichzeitig legt die Konsole zusammen mit den angeschlossenen Joy-Cons 14 Gramm zu - Isolierung und geänderter Aufbau machen sich bemerkbar."
+    },
+    {
+      "type": "paragraph",
+      "text": "In der Praxis dürfte ein Prozent Kapazität kaum ins Gewicht fallen, zumal Akkus ohnehin über die Jahre altern. Genau hier liegt der eigentliche Gewinn: Wer bislang bei nachlassender Laufzeit auf einen Reparaturservice angewiesen war, kann die Zelle künftig selbst ersetzen. Nintendo plant den Verkauf separater Ersatz-Akkus zusammen mit einem Reparatur-Set, das eine ausführliche Schritt-für-Schritt-Anleitung zum Ein- und Ausbau enthält."
+    },
+    {
+      "type": "heading",
+      "text": "So erkennt ihr die neue Revision"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nintendo ersetzt die Bestände im Handel fliessend. Beim Kauf lässt sich die Revision also nicht aktiv wählen - wer gezielt zum neuen Modell greifen will, muss genau hinsehen. Ohne die Verpackung in der Hand sind die beiden Ausführungen kaum zu unterscheiden. Diese Merkmale helfen:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Sichtbare Schrauben in den Joy-Con-Schienen - bei Onlineshops lohnt das Heranzoomen an die Produktbilder",
+        "Produktcode OSM auf der Verpackung",
+        "Seriennummer, die in Europa mit HLE beginnt",
+        "Keine Garantiesiegel über den Schrauben"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Zubehör folgt in Etappen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Konsole ist nur der erste Schritt. Auch die Joy-Cons und der Switch 2 Pro Controller erhalten im Laufe des Jahres entsprechende Überarbeitungen. Die N64- und GameCube-Controller, die Nintendo für den Retro-Katalog des Online-Abos anbietet, folgen erst Anfang 2027. Wie diese Geräte innen aussehen, ist bislang offen - der Teardown zeigt keinen der Controller."
+    },
+    {
+      "type": "paragraph",
+      "text": "Bemerkenswert ist, wie zurückhaltend Nintendo die Umstellung kommuniziert: kein neues Modellbranding, keine hervorgehobene Kennzeichnung im Regal, sondern ein stiller Austausch der Bestände. Ursprünglich hatte der Hersteller den Sommer als Zeitraum genannt - dieser Fahrplan ist mit der Auslieferung nun eingehalten."
+    },
+    {
+      "type": "paragraph",
+      "text": "Einordnung: Die Revision ist keine technische Aufwertung, sondern eine regulatorische Anpassung - und trotzdem die spielerfreundlichere Konsole. Ein Prozent weniger Kapazität und 14 Gramm mehr Gewicht sind ein geringer Preis dafür, dass sich der wichtigste Verschleissteil eines Mobilgeräts künftig ohne Garantieverlust tauschen lässt. Wer aktuell eine Switch 2 kauft und Wert auf Langlebigkeit legt, sollte vor dem Griff ins Regal auf OSM und HLE achten."
+    }
+  ],
+  "poll": {
+    "question": "Ein Prozent weniger Akku für einen selbst tauschbaren Akku - guter Deal?",
+    "options": [
+      "Klar, Reparierbarkeit schlägt Laufzeit",
+      "Egal, ein Prozent merkt niemand",
+      "Nein, an der Laufzeit hätte man nicht sparen dürfen",
+      "Ich achte beim Kauf gezielt auf OSM und HLE"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-09-08T11:02:58.666Z",
+  "readingTimeMinutes": 2,
+  "heroVariant": "waveform",
+  "sources": [
+    {
+      "title": "Nintendo Switch 2: Neues Modell mit kleinerem Akku und mehr Gewicht",
+      "url": "https://www.eurogamer.de/nintendo-switch-2-eu-revision-teardown",
+      "publisher": "Eurogamer.de"
+    },
+    {
+      "title": "The EU's new Nintendo Switch 2 model teardown confirms smaller battery, slightly heavier console",
+      "url": "https://www.eurogamer.net/nintendo-switch-2-eu-compliant-revision-teardown",
+      "publisher": "Eurogamer"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/switch-2-eu-revision-teardown-akku-2026.webp",
+    "alt": "Switch 2 wird reparierbar - der Akku hält dafür kürzer",
+    "credit": "Bild: Eurogamer.de",
+    "sourceUrl": "https://www.eurogamer.de/nintendo-switch-2-eu-revision-teardown",
+    "sourceWidth": 690,
+    "sourceHeight": 388
+  },
+  "relatedSlugs": [
+    "nintendo-switch-2-preiserhoehung-september-499-dollar",
+    "switch-2-preis-samsung-fertigungskosten-2026",
+    "nintendo-switch-2-preiserhoehung-uk-irland-september-2026"
+  ]
+}
