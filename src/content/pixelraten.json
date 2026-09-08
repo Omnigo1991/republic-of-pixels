@@ -1,19 +1,19 @@
 {
-  "datum": "2026-09-07",
-  "nummer": 30,
-  "loesung": "Fallout 4",
+  "datum": "2026-09-08",
+  "nummer": 31,
+  "loesung": "Sea of Thieves",
   "akzeptiert": [
-    "fallout4"
+    "seaofthieves"
   ],
   "hinweise": [
-    "Erschienen 2015 · Rollenspiel",
-    "Endzeit"
+    "Erschienen 2018 · Piraten",
+    "Rare"
   ],
   "bilder": [
-    "/images/pixelraten/2026-09-07-s1.jpg",
-    "/images/pixelraten/2026-09-07-s2.jpg",
-    "/images/pixelraten/2026-09-07-s3.jpg",
-    "/images/pixelraten/2026-09-07-s4.jpg",
-    "/images/pixelraten/2026-09-07-s5.jpg"
+    "/images/pixelraten/2026-09-08-s1.jpg",
+    "/images/pixelraten/2026-09-08-s2.jpg",
+    "/images/pixelraten/2026-09-08-s3.jpg",
+    "/images/pixelraten/2026-09-08-s4.jpg",
+    "/images/pixelraten/2026-09-08-s5.jpg"
   ]
 }
