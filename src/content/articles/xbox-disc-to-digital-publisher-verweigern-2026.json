@@ -1,0 +1,150 @@
+{
+  "slug": "xbox-disc-to-digital-publisher-verweigern-2026",
+  "title": "Disc-to-Digital gestartet - vier Publisher machen offenbar nicht mit",
+  "subtitle": "Ubisoft, Square Enix, Sega und Bandai Namco blockieren laut Community-Berichten die digitale Lizenz für ihre Xbox-Discs",
+  "excerpt": "Microsofts Disc-to-Digital soll physische Sammlungen in die laufwerklose Zukunft retten. Doch bei Far Cry, Tomb Raider und Co. erscheint statt der Freischaltung eine nüchterne Fehlermeldung - und die hat einen verräterischen Wortlaut.",
+  "seoTitle": "Xbox Disc-to-Digital: Publisher machen offenbar nicht mit",
+  "metaDescription": "Ubisoft, Square Enix, Sega und Bandai Namco verweigern laut Berichten Microsofts Disc-to-Digital-Programm. Welche Spiele betroffen sind und was Microsoft sagt.",
+  "category": "news",
+  "platforms": [
+    "xbox"
+  ],
+  "bereich": "games",
+  "tags": [
+    "Xbox",
+    "Disc-to-Digital",
+    "Ubisoft",
+    "Square Enix",
+    "Microsoft",
+    "Physische Spiele"
+  ],
+  "tldr": [
+    "Microsoft hat Ende August 2026 das Disc-to-Digital-Programm für Xbox-Insider gestartet: Discs lassen sich einmalig verifizieren und danach ohne Datenträger nutzen.",
+    "Bei Titeln von Ubisoft, Square Enix, Sega und Bandai Namco erscheint laut Community-Berichten stattdessen die Meldung, das Spiel nehme nicht an der digitalen Lizenzierung teil.",
+    "Betroffen sind unter anderem Far Cry 4 und 5, Watch Dogs Legion, Assassin's Creed Odyssey, Rise of the Tomb Raider, Shadow of the Tomb Raider sowie Just Cause 3 und 4.",
+    "Stellungnahmen der Publisher fehlen bislang; Microsoft hatte einen schrittweisen Rollout angekündigt, das Feature steckt noch in der Testphase."
+  ],
+  "whyItMatters": "Disc-to-Digital ist Microsofts Antwort auf eine Konsolengeneration, die zunehmend ohne Laufwerk auskommt - und damit die Versicherung für alle, die eine physische Sammlung aufgebaut haben. Wenn grosse Dritthersteller sich verweigern, entscheidet nicht mehr die eigene Bibliothek darüber, was künftig spielbar bleibt, sondern die Vertragslage einzelner Publisher. Für Handheld- und Cloud-Nutzung heisst das im Zweifel: nochmals kaufen.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Ende August hat Microsoft das Disc-to-Digital-Programm für Mitglieder des Xbox-Insider-Programms gestartet. Die Idee: Wer eine Disc einmal ins Laufwerk legt und verifizieren lässt, erhält eine digitale Lizenz und kann den Titel danach auch ohne Datenträger spielen - relevant für Handhelds, Cloud-Gaming und eine möglicherweise laufwerklose nächste Xbox-Generation. Nun melden Insider-Nutzerinnen und -Nutzer den ersten grossen Dämpfer: Bei Spielen mehrerer Grosspublisher verweigert das System die Umwandlung. Bestätigt ist die Ursache bislang nicht, die Berichte stammen aus der Community und aus Tests von Redaktionen."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "Ende Aug.",
+          "label": "Start des Disc-to-Digital-Programms für Xbox-Insider"
+        },
+        {
+          "value": "4",
+          "label": "Publisher, die laut Berichten aktuell nicht teilnehmen"
+        },
+        {
+          "value": "8",
+          "label": "konkret dokumentierte Blockbuster, die sich nicht umwandeln lassen"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Fehlermeldung statt Freischaltung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Statt der erwarteten Lizenz erscheint bei betroffenen Titeln ein knapper Hinweis auf dem Bildschirm. Der Wortlaut ist dabei der eigentliche Aufreger, denn er klingt nicht nach «noch nicht verfügbar», sondern nach einer Entscheidung."
+    },
+    {
+      "type": "quote",
+      "text": "Digitale Lizenz nicht verfügbar - Dieses Spiel nimmt nicht an der digitalen Lizenzierung teil.",
+      "attribution": "Fehlermeldung auf der Xbox, dokumentiert von Xbox-Insidern"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Community testet seit dem Start systematisch, welche Discs sich umwandeln lassen und welche nicht. Das Ergebnis: Die grosse Mehrheit funktioniert - Ausfälle häufen sich aber auffällig bei vier Namen. Bei Ubisoft und Square Enix betrifft es Blockbuster quer durch den Katalog, bei Sega und Bandai Namco melden Nutzer ebenfalls Absagen. Auch Atlus wird in Community-Berichten genannt."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Ubisoft: Far Cry 4, Far Cry 5, Watch Dogs Legion, Assassin's Creed Odyssey",
+        "Square Enix: Rise of the Tomb Raider, Shadow of the Tomb Raider, Just Cause 3 und Just Cause 4",
+        "Weitere Meldungen betreffen Titel von Sega, Atlus und Bandai Namco"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Deadpool ja, Assassin's Creed nein"
+    },
+    {
+      "type": "paragraph",
+      "text": "Besonders bitter wirkt die Absage, weil Disc-to-Digital in den ersten Tagen für Begeisterung gesorgt hatte. Nutzer stellten fest, dass sich selbst uralte, längst aus dem Xbox Store entfernte Spiele problemlos in eine digitale Lizenz verwandeln liessen - darunter Titel wie «Deadpool», die nie regulär digital erhältlich waren. Genau dieser Kontrast prägt nun die Debatte: Wer eine physische Kopie eines Klassikers besitzt, dessen Rechtelage kompliziert ist, kommt durch. Wer eine gewöhnliche Assassin's-Creed-Disc einlegt, nicht."
+    },
+    {
+      "type": "heading",
+      "text": "Sind Abo-Modelle der Bremsklotz?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Offiziell haben sich weder Ubisoft noch Square Enix zu ihren Gründen geäussert. Kotaku hat nach eigenen Angaben Anfragen an Microsoft sowie an Square Enix, Sega, Bandai Namco und Ubisoft geschickt und wartet auf Antworten. In der Community wird vor allem ein Verdacht diskutiert: Publisher mit eigenen Abo-Angeboten - Ubisoft betreibt eines - könnten in der flexibleren Nutzung physischer Discs eine Konkurrenz zu ihren Abo-Zahlen sehen. Belegt ist diese Lesart nicht, sie bleibt Spekulation."
+    },
+    {
+      "type": "paragraph",
+      "text": "Auf der anderen Seite steht Microsofts eigene Ankündigung: Das Feature startet schrittweise und befindet sich noch in der Testphase, weitere Titel und Publisher sollen im Laufe der Zeit dazukommen. Dass Ubisoft und Square Enix den Start verpassen, muss also kein permanentes Nein sein. Die Formulierung «nimmt nicht teil» klingt allerdings weniger nach Warteliste als nach fehlender Freigabe - und genau daran entzündet sich die Kritik."
+    },
+    {
+      "type": "heading",
+      "text": "Was das für eure Sammlung heisst"
+    },
+    {
+      "type": "paragraph",
+      "text": "Praktische Folgen hat das vor allem für alle, die künftig auf ein Gerät ohne Laufwerk setzen. Wer beispielsweise «Kingdom Hearts III» als Disc im Regal hat, könnte das Spiel auf einem laufwerklosen Gerät nicht mehr starten, ohne es digital erneut zu kaufen. Damit verschiebt sich der Nutzen des Programms: Es rettet nicht die Sammlung, sondern nur jenen Teil davon, den die jeweiligen Publisher freigeben."
+    },
+    {
+      "type": "paragraph",
+      "text": "Einordnung: Microsoft geht mit Disc-to-Digital einen Weg, den Sony bislang nicht anbietet - und der Vorstoss ist im Grundsatz kundenfreundlich. Der aktuelle Stand zeigt aber, wo die Grenze liegt: Über die Zukunft physischer Bibliotheken entscheidet nicht die Plattform allein, sondern jeder Rechteinhaber einzeln. Solange Ubisoft, Square Enix, Sega und Bandai Namco schweigen, bleibt für Käuferinnen und Käufer nur die unbefriedigende Antwort: abwarten. Und beim nächsten Disc-Kauf vielleicht kurz überlegen, wessen Logo auf der Hülle steht."
+    }
+  ],
+  "poll": {
+    "question": "Publisher blocken die digitale Lizenz - wer steht für euch in der Verantwortung?",
+    "options": [
+      "Die Publisher - reine Geldgier",
+      "Microsoft - hätte das vorher vertraglich klären müssen",
+      "Niemand, es ist noch Testphase",
+      "Egal, ich kaufe längst nur digital"
+    ]
+  },
+  "isLeakOrRumor": true,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-09-08T14:05:00.651Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "controller",
+  "sources": [
+    {
+      "title": "Some Big Companies Are Seemingly Opting Out Of Xbox’s Disc-To-Digital Service",
+      "url": "https://kotaku.com/xbox-digital-licensing-disc-sega-ubisoft-square-enix-2000732117",
+      "publisher": "Kotaku"
+    },
+    {
+      "title": "Xbox Disc-to-Digital: Dämpfer zum Start Ubisoft, Square Enix weitere Publisher machen nicht mit Bericht",
+      "url": "https://www.play3.de/2026/09/08/xbox-disc-to-digital-daempfer-zum-start-ubisoft-square-enix-weitere-publisher-machen-nicht-mit/",
+      "publisher": "play3.de"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/xbox-disc-to-digital-publisher-verweigern-2026.webp",
+    "alt": "Disc-to-Digital gestartet - vier Publisher machen offenbar nicht mit",
+    "credit": "Bild: Kotaku",
+    "sourceUrl": "https://kotaku.com/xbox-digital-licensing-disc-sega-ubisoft-square-enix-2000732117",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "xbox-project-helix-laufwerk-lieferkette-2026",
+    "disc-produktion-ps5-xbox-geheimnis-2026",
+    "double-fine-tim-schafer-xbox-unabhaengigkeit-2026"
+  ]
+}
