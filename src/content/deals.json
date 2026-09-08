@@ -1,16 +1,16 @@
 {
-  "updatedAt": "2026-09-08T14:05:03.499Z",
+  "updatedAt": "2026-09-08T18:01:54.204Z",
   "deals": [
     {
-      "appId": 1174180,
-      "title": "Red Dead Redemption 2",
+      "appId": 2183900,
+      "title": "Warhammer 40,000: Space Marine 2",
       "discountPercent": 75,
       "originalPrice": 5999,
       "finalPrice": 1499,
       "currency": "EUR",
-      "endsAt": "2026-09-08T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1174180/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/capsule_184x69.jpg?t=1759502961"
+      "endsAt": "2026-09-14T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/2183900/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2183900/capsule_184x69.jpg?t=1787837240"
     },
     {
       "appId": 275850,
@@ -46,15 +46,15 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3892270/162b293e92bf8be850967a85c9916daa6f68591c/capsule_184x69.jpg?t=1788800889"
     },
     {
-      "appId": 1623730,
-      "title": "Palworld",
-      "discountPercent": 30,
-      "originalPrice": 2899,
-      "finalPrice": 2029,
+      "appId": 3624140,
+      "title": "Wanderburg",
+      "discountPercent": 35,
+      "originalPrice": 1499,
+      "finalPrice": 974,
       "currency": "EUR",
-      "endsAt": "2026-09-08T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1623730/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/0703d5a0658c7aedaa3be4391d6f5cccc1bb6d7a/capsule_184x69.jpg?t=1784714419"
+      "endsAt": "2026-09-22T17:00:17.000Z",
+      "url": "https://store.steampowered.com/app/3624140/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3624140/300527c75c0b5eb18e08bb8674b5fbad7c120ddf/capsule_184x69_alt_assets_2.jpg?t=1788882563"
     },
     {
       "appId": 2406770,
