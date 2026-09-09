@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-09T11:04:50.746Z",
+  "updatedAt": "2026-09-09T14:04:33.909Z",
   "deals": [
     {
       "appId": 2183900,
@@ -21,7 +21,7 @@
       "currency": "EUR",
       "endsAt": "2026-09-21T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/275850/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/275850/b580ec1af3eba9d81a6e0ad6af9622d6698cef34/capsule_184x69.jpg?t=1787045299"
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/275850/a797ac8f837db76dbffc40df13fd711e2b46dc0a/capsule_184x69_alt_assets_25.jpg?t=1788959178"
     },
     {
       "appId": 3240220,
@@ -35,37 +35,37 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3240220/a318bd9affe8eee32984b18794b273c256e9b2d6/capsule_184x69.jpg?t=1781187782"
     },
     {
-      "appId": 3624140,
-      "title": "Wanderburg",
-      "discountPercent": 35,
-      "originalPrice": 1499,
-      "finalPrice": 974,
+      "appId": 1144200,
+      "title": "Ready or Not",
+      "discountPercent": 50,
+      "originalPrice": 4999,
+      "finalPrice": 2499,
       "currency": "EUR",
-      "endsAt": "2026-09-22T17:00:17.000Z",
-      "url": "https://store.steampowered.com/app/3624140/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3624140/300527c75c0b5eb18e08bb8674b5fbad7c120ddf/capsule_184x69_alt_assets_2.jpg?t=1788934272"
+      "endsAt": "2026-09-18T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1144200/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1144200/2f6ca7ad511531beb421122efb376141f068ebbb/capsule_184x69.jpg?t=1781703931"
     },
     {
-      "appId": 3764200,
-      "title": "Resident Evil Requiem",
-      "discountPercent": 30,
-      "originalPrice": 6999,
-      "finalPrice": 4899,
+      "appId": 3892270,
+      "title": "Gamble With Your Friends",
+      "discountPercent": 38,
+      "originalPrice": 779,
+      "finalPrice": 482,
       "currency": "EUR",
-      "endsAt": "2026-09-21T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/3764200/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3764200/64f506b9b6210df6055136e7017f2082957e5b22/capsule_184x69.jpg?t=1779840172"
+      "endsAt": "2026-09-14T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/3892270/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3892270/162b293e92bf8be850967a85c9916daa6f68591c/capsule_184x69.jpg?t=1788800889"
     },
     {
-      "appId": 2406770,
-      "title": "Bodycam",
-      "discountPercent": 20,
-      "originalPrice": 3332,
-      "finalPrice": 2665,
+      "appId": 4656000,
+      "title": "BOMBANANA!",
+      "discountPercent": 38,
+      "originalPrice": 815,
+      "finalPrice": 505,
       "currency": "EUR",
-      "endsAt": "2026-09-10T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/2406770/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2406770/2bc46dcf375a61a0a5626bc96aaf09e32436e8cd/capsule_184x69.jpg?t=1788548796"
+      "endsAt": "2026-09-09T17:00:48.000Z",
+      "url": "https://store.steampowered.com/app/4656000/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4656000/4b28cb7e3572e7ab0ffcd6a53030b1a719ff3fff/capsule_184x69.jpg?t=1788351950"
     }
   ]
 }
