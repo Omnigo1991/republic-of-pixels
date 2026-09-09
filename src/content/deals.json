@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-09T03:03:35.241Z",
+  "updatedAt": "2026-09-09T06:04:24.245Z",
   "deals": [
     {
       "appId": 275850,
@@ -24,6 +24,17 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3240220/a318bd9affe8eee32984b18794b273c256e9b2d6/capsule_184x69.jpg?t=1781187782"
     },
     {
+      "appId": 1144200,
+      "title": "Ready or Not",
+      "discountPercent": 50,
+      "originalPrice": 4999,
+      "finalPrice": 2499,
+      "currency": "EUR",
+      "endsAt": "2026-09-18T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1144200/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1144200/2f6ca7ad511531beb421122efb376141f068ebbb/capsule_184x69.jpg?t=1781703931"
+    },
+    {
       "appId": 3892270,
       "title": "Gamble With Your Friends",
       "discountPercent": 38,
@@ -33,17 +44,6 @@
       "endsAt": "2026-09-14T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/3892270/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3892270/162b293e92bf8be850967a85c9916daa6f68591c/capsule_184x69.jpg?t=1788800889"
-    },
-    {
-      "appId": 4656000,
-      "title": "BOMBANANA!",
-      "discountPercent": 38,
-      "originalPrice": 815,
-      "finalPrice": 505,
-      "currency": "EUR",
-      "endsAt": "2026-09-09T17:00:48.000Z",
-      "url": "https://store.steampowered.com/app/4656000/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4656000/4b28cb7e3572e7ab0ffcd6a53030b1a719ff3fff/capsule_184x69.jpg?t=1788351950"
     },
     {
       "appId": 3624140,

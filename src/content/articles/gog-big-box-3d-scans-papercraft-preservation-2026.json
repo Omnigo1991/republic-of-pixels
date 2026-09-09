@@ -1,0 +1,151 @@
+{
+  "slug": "gog-big-box-3d-scans-papercraft-preservation-2026",
+  "title": "GOG rettet den grossen Pappkarton - zum Ausdrucken und Zusammenkleben",
+  "subtitle": "Fünf Klassiker bekommen einen 3D-Scan ihrer Originalverpackung, samt Bastelvorlage für das eigene Regal",
+  "excerpt": "Myst, Descent, Hitman und zwei weitere Klassiker liefern ab sofort ihre Big Box als drehbares 3D-Modell mit. Wer will, druckt sich die Verpackung sogar selbst aus - und trifft damit einen wunden Punkt der Branche.",
+  "seoTitle": "GOG: 3D-Scans klassischer Big Boxes zum Ausdrucken",
+  "metaDescription": "GOG erweitert sein Preservation-Programm: Fünf Klassiker enthalten jetzt 3D-Scans ihrer Originalverpackung - inklusive druckbarer Bastelvorlage für zu Hause.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "bereich": "games",
+  "tags": [
+    "GOG",
+    "Game Preservation",
+    "Retro",
+    "Myst",
+    "Big Box Collection",
+    "PC"
+  ],
+  "tldr": [
+    "GOG erweitert sein Game Preservation Program um 3D-Scans der originalen Big-Box-Verpackungen",
+    "Betroffen sind zunächst Myst, Descent, Hitman: Codename 47, Star Trek: 25th Anniversary und Armikrog",
+    "Die Modelle laufen in den Bordmitteln von Windows und macOS, zusätzlich gibt es flache Druckvorlagen zum Basteln",
+    "Partner ist das Ein-Mann-Projekt Big Box Collection von Benjamin Wimmer"
+  ],
+  "whyItMatters": "Wer heute einen Klassiker digital kauft, bekommt eine Datei - und verliert alles, was früher zum Spiel gehörte: Karton, Handbuch, Karten, Beilagen. GOG dehnt Spielebewahrung erstmals auf die Verpackung aus und macht sie sogar wieder anfassbar. Das ist mehr als Nostalgie, denn parallel streichen grosse Publisher physische Ausgaben ganz.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "GOG treibt sein Game Preservation Program an eine Stelle weiter, an der bislang selbst engagierte Bewahrungsprojekte aufhörten: bei der Verpackung. Fünf Klassiker - Myst, Descent, Hitman: Codename 47, Star Trek: 25th Anniversary und Armikrog - enthalten ab sofort einen interaktiven 3D-Scan ihrer echten, physischen Box. Und wer will, kann sich den Karton daheim ausdrucken und zusammenkleben."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "5",
+          "label": "Klassiker erhalten zum Start einen 3D-Scan ihrer Originalverpackung"
+        },
+        {
+          "value": "2028",
+          "label": "ab diesem Jahr stellt Sony Disc-basierte PlayStation-Spiele ein"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Was das Preservation-Programm bisher leistete"
+    },
+    {
+      "type": "paragraph",
+      "text": "GOG hatte das Programm ins Leben gerufen, um ausgewählte Klassiker dauerhaft spielbar zu halten - auf aktueller Hardware, DRM-frei und in einer möglichst vollständigen Fassung inklusive digitalisierter Handbücher und Beilagen. Der Gedanke dahinter: Ein altes Spiel ist mehr als seine ausführbare Datei. Gerade PC-Titel der Neunziger und frühen Zweitausender kamen in aufwändig gestalteten Pappkartons, in denen dicke Anleitungen mit Hintergrundinfos zur Spielwelt, Karten und Bonusmaterial steckten - Material, das oft nicht Beiwerk war, sondern Teil des Spielerlebnisses."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ein gutes Beispiel liefert Ultima 9 aus dem Jahr 1999: Der Karton enthielt eine Karte aus Stoff, Tarot-Karten und ein Poster. Keine limitierte Sammlerausgabe, sondern die ganz normale Standardversion. Wer solche Spiele heute digital kauft, bekommt davon in der Regel nichts zu sehen."
+    },
+    {
+      "type": "heading",
+      "text": "Drehen, ausdrucken, falten"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die neuen Scans erfassen laut GOG die komplette Verpackung - Vorderseite, Rückseite, Buchrücken, alles. Daraus entstehen drehbare 3D-Modelle, die man nach dem Kauf herunterladen und direkt in der 3D-Ansicht öffnen kann, die Windows und macOS ohnehin mitbringen. Keine Zusatzsoftware, kein Plug-in. Man dreht die Box auf dem Bildschirm, als hielte man sie in der Hand."
+    },
+    {
+      "type": "paragraph",
+      "text": "Der zweite Teil führt zurück ins Physische: GOG legt flache, druckbare Versionen derselben Verpackungsgrafik bei. Ausschneiden, falten, kleben - fertig ist die eigene Big Box fürs Regal. Ein Papercraft-Projekt für alle, denen Regale voller PC-Spielkartons fehlen."
+    },
+    {
+      "type": "list",
+      "items": [
+        "3D-Scan der Originalverpackung als Download nach dem Kauf",
+        "Wiedergabe über die Bordmittel von Windows und macOS, ohne Zusatzsoftware",
+        "Flache Druckvorlagen der Box-Grafik zum Selbstbauen",
+        "Die Spiele selbst bleiben wie bei GOG üblich DRM-frei"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Ein Ein-Mann-Projekt als Partner"
+    },
+    {
+      "type": "paragraph",
+      "text": "Umgesetzt wird das nicht im Alleingang. GOG arbeitet mit Big Box Collection zusammen, einer Fan-Website, auf der sich extrem scharfe 3D-Modelle klassischer PC-Verpackungen direkt im Browser betrachten lassen. Dahinter steckt Benjamin Wimmer - ein einzelner Mensch, der die alten Kartons digitalisiert. Er ist auch an den Druckvorlagen beteiligt."
+    },
+    {
+      "type": "quote",
+      "text": "Was wir definitiv brauchen, sind Helden, die vortreten und sich gut um unsere Spiele kümmern. Christopher Nolan hat sich dafür eingesetzt, dass Kubricks 2001 unrestauriert und damit so bewahrt wird, wie es gedacht war - und ich bin sicher, es wird auch für Spiele solche Helden geben.",
+      "attribution": "Benjamin Wimmer, Big Box Collection, im Interview mit GOG"
+    },
+    {
+      "type": "heading",
+      "text": "Der Seitenhieb, der mitschwingt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Ankündigung kommt nicht zufällig jetzt. Sony stellt Disc-basierte PlayStation-Spiele ab 2028 ein, und es gilt als wahrscheinlich, dass andere Hersteller nachziehen. Am PC ist der Datenträger ohnehin seit Jahren praktisch verschwunden - ausgerechnet auf der Plattform mit dem wohl reichsten Erbe an physischen Ausgaben. GOG suggeriert in seiner Mitteilung, dass DRM-freie Spieldateien plus druckbarer Karton zusammen etwas ergeben, das es sonst nicht mehr gibt: eine eigene physische Kopie, unabhängig davon, ob der Titel noch irgendwo verkauft wird."
+    },
+    {
+      "type": "paragraph",
+      "text": "Wie sehr das Thema die Branche beschäftigt, zeigt ein Blick auf aktuelle Grossproduktionen. The Witcher 4 wird laut CD Projekt Red vermutlich ohne Disc für die PS5 erscheinen - Fans sollen aber trotzdem etwas bekommen, das sie \"öffnen und geniessen\" können."
+    },
+    {
+      "type": "paragraph",
+      "text": "Einordnung: GOGs Schritt löst kein rechtliches oder technisches Problem der Spielebewahrung, und ein selbstgeklebter Karton ersetzt keine Originalausgabe. Aber er verschiebt die Definition davon, was überhaupt bewahrt gehört. Wenn Verpackung, Handbuch und Beilagen zum Werk zählen, dann ist ein blosser Download nur die halbe Miete. Dass ein Storefront das erkennt und ausgerechnet mit einem Ein-Mann-Fanprojekt umsetzt, sagt einiges darüber, wo Spielebewahrung derzeit tatsächlich stattfindet."
+    }
+  ],
+  "poll": {
+    "question": "Selbstgebastelter Pappkarton neben dem Monitor - Kult oder Kitsch?",
+    "options": [
+      "Kult - ich drucke sofort los",
+      "Nett, aber ich schaue mir nur den 3D-Scan an",
+      "Nostalgie-Deko ersetzt keine echte Box",
+      "Mir reicht, dass die Spiele DRM-frei laufen"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-09-09T06:04:19.758Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "waveform",
+  "sources": [
+    {
+      "title": "Game Preservation Program: GOG rettet den großen Spiele-Karton",
+      "url": "https://www.computerbase.de/news/gaming/game-preservation-program-gog-rettet-den-grossen-spiele-karton.99316/",
+      "publisher": "ComputerBase"
+    },
+    {
+      "title": "As publishers like Sony kill physical games, DRM-free store GOG preserves classic big boxes with 3D models and box art you can print and build yourself",
+      "url": "https://www.gamesradar.com/games/as-publishers-like-sony-kill-physical-games-drm-free-store-gog-preserves-classic-big-boxes-with-3d-models-and-box-art-you-can-print-and-build-yourself/",
+      "publisher": "GamesRadar"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/gog-big-box-3d-scans-papercraft-preservation-2026.webp",
+    "alt": "GOG rettet den grossen Pappkarton - zum Ausdrucken und Zusammenkleben",
+    "credit": "Bild: ComputerBase",
+    "sourceUrl": "https://www.computerbase.de/news/gaming/game-preservation-program-gog-rettet-den-grossen-spiele-karton.99316/",
+    "sourceWidth": 1280,
+    "sourceHeight": 720
+  },
+  "relatedSlugs": [
+    "dark-castle-40-jahre-steam-pc-port-2026",
+    "steam-15-milliarden-umsatz-2026-alinea-analytics",
+    "old-school-runescape-mod-jed-urteil-golddiebstahl-2026"
+  ]
+}
