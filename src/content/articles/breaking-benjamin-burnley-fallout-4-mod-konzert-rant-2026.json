@@ -1,0 +1,157 @@
+{
+  "slug": "breaking-benjamin-burnley-fallout-4-mod-konzert-rant-2026",
+  "title": "«Helft mir, diesen Idioten zu vernichten» - Konzert stoppt für Fallout-4-Mod",
+  "subtitle": "Breaking-Benjamin-Sänger Benjamin Burnley unterbricht seinen eigenen Auftritt in New Jersey, um Downloads für sein Nexus-Mods-Projekt einzusammeln",
+  "excerpt": "Statt Musik gab es in Holmdel knapp fünf Minuten Modding-Frust: Benjamin Burnley bewarb auf offener Bühne seinen Fallout-4-Mod - und rechnete mit einem Kritiker ab, dessen Namen er bewusst verschwieg.",
+  "seoTitle": "Fallout 4: Breaking-Benjamin-Sänger stoppt Konzert für Mod",
+  "metaDescription": "Benjamin Burnley unterbricht ein Breaking-Benjamin-Konzert, um seinen Fallout-4-Mod True First Person zu bewerben und mit einem Kritiker abzurechnen.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "bereich": "games",
+  "tags": [
+    "Fallout 4",
+    "Mods",
+    "Nexus Mods",
+    "Breaking Benjamin",
+    "Bethesda"
+  ],
+  "tldr": [
+    "Benjamin Burnley, Sänger und Gitarrist von Breaking Benjamin, unterbrach am 6. September ein Konzert in Holmdel, New Jersey, für einen Modding-Rant.",
+    "Er bewarb seinen eigenen Fallout-4-Mod «True First Person», der den kompletten Körper in der Egoperspektive sichtbar macht.",
+    "Hintergrund ist ein Streit mit einem anderen Modder, der die Arbeit öffentlich verrissen haben soll - den Namen nannte Burnley nicht.",
+    "Ein Fan filmte die Szene und stellte sie auf Reddit online, wo sie viral ging."
+  ],
+  "whyItMatters": "Der Auftritt zeigt, wie ernst Streitigkeiten in der Modding-Szene selbst für prominente Hobbyisten sind - und wie stark Sichtbarkeit auf Plattformen wie Nexus Mods über Erfolg oder Misserfolg eines Projekts entscheidet. Für Fallout-4-Fans ist zudem der Mod selbst interessant, weil er eine seit Jahren beklagte Schwäche der Egoperspektive angeht.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Wer am Sonntagabend zu einem Breaking-Benjamin-Konzert im US-Bundesstaat New Jersey gegangen ist, hat mehr über Fallout 4 gelernt als über neue Songs. Frontmann Benjamin Burnley unterbrach den Auftritt in Holmdel für einen minutenlangen Monolog über die Modding-Community - und bat das Publikum, seinen eigenen Mod auf Nexus Mods herunterzuladen. Ein Fan filmte die Szene und stellte sie unter dem Namen «im_all_ears» auf Reddit, wo sie sich rasch verbreitete."
+    },
+    {
+      "type": "embed",
+      "platform": "reddit",
+      "url": "https://www.reddit.com/r/Fallout/comments/1w9vfue/local_man_benjamin_burnley_interrupts_a_breaking/?utm_source=embedv2&amp;utm_medium=post_embed&amp;embed_host_url=https%3A%2F%2Fwww.pcgamer.com%2Fgames%2Ffallout%2Fbreaking-benjamin-frontman-pauses-concert-to-rant-about-fallout-4-modding-beef-there-was-a-modder-in-the-community-that-was-really-mean-to-me%2F"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "~5 Min.",
+          "label": "dauerte die Unterbrechung mitten im Konzert"
+        },
+        {
+          "value": "6. Sept.",
+          "label": "Auftritt in Holmdel, New Jersey"
+        },
+        {
+          "value": "81",
+          "label": "Abonnenten hat Burnleys YouTube-Kanal, auf dem er den Mod zeigt"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Modding-Frust statt Musik"
+    },
+    {
+      "type": "paragraph",
+      "text": "Dass der Sänger und Gitarrist überhaupt spielt und moddet, dürfte für viele im Publikum neu gewesen sein: Burnley bezeichnete sich auf der Bühne als «Amateur-Modder» für Skyrim und Fallout 4. Auf der grossen Leinwand neben der Bühne liess die Produktion parallel den Titel des Projekts samt seines Nexus-Mods-Namens einblenden: «True First Person Mod by killemloud». Wer kein Fallout spiele, solle den Mod trotzdem laden, forderte er - Hauptsache, die Downloadzahlen steigen bis zum nächsten Tag."
+    },
+    {
+      "type": "quote",
+      "text": "Ich habe gerade einen Mod gemacht, der dafür sorgt, dass du in der Egoperspektive auch in der Egoperspektive bleibst. Du siehst deinen Körper in der Egoperspektive. Du gehst in den Werkstattbereich in der Egoperspektive, und die Verfolgerperspektive funktioniert weiterhin. Also will ich, dass ihr diesen verdammten Mod herunterladet.",
+      "attribution": "Benjamin Burnley, Breaking Benjamin"
+    },
+    {
+      "type": "heading",
+      "text": "Was «True First Person» tatsächlich ändert"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Mod setzt an einer altbekannten Schwäche an: Fallout 4 zeigt in der Egoperspektive lediglich ein Paar schwebende Arme. Modernere Shooter rendern längst den ganzen Körper - Bethesdas Rollenspiel ist inzwischen aber über ein Jahrzehnt alt. Laut Beschreibung auf Nexus Mods leistet das Projekt Folgendes:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Der komplette Spielfigurenkörper inklusive Beine, Kleidung und Ausrüstung wird in der Egoperspektive dargestellt",
+        "Die Kamera bleibt auch bei Interaktionen in der Egoperspektive, die sonst herauszoomen - etwa an Werkbänken oder in der Power-Rüstung",
+        "Die Verfolgerperspektive bleibt unverändert",
+        "Umsetzung als F4SE-Plugin, ohne ESP, ohne Plugin-Slot, ohne Skripte",
+        "Laut Autor jederzeit installier- und entfernbar, ohne den Spielstand aufzublähen"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Der ungenannte Gegenspieler"
+    },
+    {
+      "type": "paragraph",
+      "text": "Anlass für den Bühnenauftritt war ein Konflikt mit einem anderen Modder, der Burnleys Arbeit öffentlich verrissen haben soll. Den Namen nannte der Sänger nicht - kündigte aber an, den Mod bei jedem Konzert der Tour zu bewerben, bis er die Downloadzahlen des Kritikers überholt hat. Zusätzlich warf er ihm vor, ein Update zu blockieren; auf der Bühne war von Version 1.2 die Rede. Einzelne Stimmen im Publikum riefen derweil, er solle endlich Musik machen. Burnley liess sich davon nicht bremsen."
+    },
+    {
+      "type": "quote",
+      "text": "Es gab da einen Modder in der Community, der wirklich gemein zu mir war und mich gemobbt hat. Er sagte: Dein Mod ist Mist, du hast keine Ahnung, was du tust. Bitte helft mir, diesen verdammten Idioten fertigzumachen.",
+      "attribution": "Benjamin Burnley, Breaking Benjamin"
+    },
+    {
+      "type": "heading",
+      "text": "Eine alte Verbindung zu Games"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ganz aus dem Nichts kommt die Nähe zur Spielebranche nicht. Breaking Benjamin existiert seit rund drei Jahrzehnten und steuerte 2004 den Song «Blow Me Away» zum Soundtrack von Halo 2 bei, wo er in der Mission «Gravemind» läuft. Prominente mit Gaming-Hobby sind ohnehin keine Seltenheit: Zuletzt sorgte Schauspielerin Inde Navarrette mit ihrem Twitch-Kanal für Aufsehen, und Samara Weaving bekam Lob dafür, ihre PlayStation 5 an Drehorte mitzunehmen. Der Unterschied: Burnley bleibt nicht beim Konsumieren, sondern schreibt selbst Code für ein zehn Jahre altes Rollenspiel."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Szene ist unterhaltsam, sie zeigt aber auch ein reales Problem: In der Modding-Community entscheidet Sichtbarkeit über Reichweite, und harsche öffentliche Kritik kann ein Projekt früh abwürgen. Dass jemand diesen Konflikt mit einer Konzerthalle als Verstärker austrägt, ist ein Ausnahmefall - und ein Machtgefälle, das dem ungenannten Kritiker keine Chance auf Gegenrede lässt. Für Fallout-4-Fans bleibt unabhängig vom Drama ein Mod, der eine seit Jahren beklagte Lücke schliesst. Ob die Downloadzahlen den Streit tatsächlich entscheiden, dürfte sich in den kommenden Tourwochen zeigen."
+    }
+  ],
+  "poll": {
+    "question": "Fünf Minuten Mod-Werbung mitten im Konzert - wie findet ihr Burnleys Auftritt?",
+    "options": [
+      "Grossartig, endlich mal jemand mit echter Leidenschaft",
+      "Als einmalige Einlage okay, aber nicht jeden Abend",
+      "Ich habe für Musik bezahlt, nicht für Nexus-Mods-Werbung",
+      "Egal - entscheidend ist, ob der Mod etwas taugt"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-09-09T00:05:12.362Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "grid",
+  "sources": [
+    {
+      "title": "Breaking Benjamin Frontman Stops His Own Concert to Rant About His Feud With a Fallout 4 Modder",
+      "url": "https://www.ign.com/articles/breaking-benjamin-frontman-pauses-his-own-concert-to-rant-about-his-with-a-fallout-4-modder",
+      "publisher": "IGN"
+    },
+    {
+      "title": "Fallout 4 Mod Halts Breaking Benjamin Concert in the Weirdest Way",
+      "url": "https://insider-gaming.com/fallout-4-mod-halts-breaking-benjamin-concert-weird/",
+      "publisher": "Insider Gaming"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/breaking-benjamin-burnley-fallout-4-mod-konzert-rant-2026.webp",
+    "alt": "«Helft mir, diesen Idioten zu vernichten» - Konzert stoppt für Fallout-4-Mod",
+    "credit": "Bild: IGN",
+    "sourceUrl": "https://www.ign.com/articles/breaking-benjamin-frontman-pauses-his-own-concert-to-rant-about-his-with-a-fallout-4-modder",
+    "sourceWidth": 1600,
+    "sourceHeight": 900
+  },
+  "relatedSlugs": [
+    "bg3-mod-a-dream-of-silence-revamped-astarion-2026",
+    "fallout-4-skyrim-update-mods-brechen-august",
+    "steamdb-uebernahme-nexus-mods-chosen-2026"
+  ]
+}

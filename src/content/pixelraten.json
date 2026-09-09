@@ -1,19 +1,21 @@
 {
-  "datum": "2026-09-08",
-  "nummer": 31,
-  "loesung": "Sea of Thieves",
+  "datum": "2026-09-09",
+  "nummer": 32,
+  "loesung": "The Last of Us",
   "akzeptiert": [
-    "seaofthieves"
+    "thelastofus",
+    "lastofus",
+    "tlou"
   ],
   "hinweise": [
-    "Erschienen 2018 · Piraten",
-    "Rare"
+    "Erschienen 2013 · Action-Adventure",
+    "Naughty Dog"
   ],
   "bilder": [
-    "/images/pixelraten/2026-09-08-s1.jpg",
-    "/images/pixelraten/2026-09-08-s2.jpg",
-    "/images/pixelraten/2026-09-08-s3.jpg",
-    "/images/pixelraten/2026-09-08-s4.jpg",
-    "/images/pixelraten/2026-09-08-s5.jpg"
+    "/images/pixelraten/2026-09-09-s1.jpg",
+    "/images/pixelraten/2026-09-09-s2.jpg",
+    "/images/pixelraten/2026-09-09-s3.jpg",
+    "/images/pixelraten/2026-09-09-s4.jpg",
+    "/images/pixelraten/2026-09-09-s5.jpg"
   ]
 }
