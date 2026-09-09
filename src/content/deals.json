@@ -1,17 +1,6 @@
 {
-  "updatedAt": "2026-09-09T14:04:33.909Z",
+  "updatedAt": "2026-09-09T14:29:07.989Z",
   "deals": [
-    {
-      "appId": 2183900,
-      "title": "Warhammer 40,000: Space Marine 2",
-      "discountPercent": 75,
-      "originalPrice": 5999,
-      "finalPrice": 1499,
-      "currency": "EUR",
-      "endsAt": "2026-09-14T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/2183900/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2183900/capsule_184x69.jpg?t=1787837240"
-    },
     {
       "appId": 275850,
       "title": "No Man's Sky",
@@ -66,6 +55,17 @@
       "endsAt": "2026-09-09T17:00:48.000Z",
       "url": "https://store.steampowered.com/app/4656000/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4656000/4b28cb7e3572e7ab0ffcd6a53030b1a719ff3fff/capsule_184x69.jpg?t=1788351950"
+    },
+    {
+      "appId": 3624140,
+      "title": "Wanderburg",
+      "discountPercent": 35,
+      "originalPrice": 1499,
+      "finalPrice": 974,
+      "currency": "EUR",
+      "endsAt": "2026-09-22T17:00:17.000Z",
+      "url": "https://store.steampowered.com/app/3624140/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3624140/300527c75c0b5eb18e08bb8674b5fbad7c120ddf/capsule_184x69_alt_assets_2.jpg?t=1788960012"
     }
   ]
 }
