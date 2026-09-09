@@ -28191,8 +28191,7 @@
       "onimusha-way-of-the-sword-1-million-launchtag-2026": "2026-09-07T15:47:41.096Z",
       "gta-6-release-zeiten-mitternacht-neuseeland-2026": "2026-09-08T07:05:33.776Z",
       "gta-6-criminal-profile-system-shattered-state-2026": "2026-09-08T11:06:50.032Z",
-      "zelda-ocarina-of-time-remake-gameplay-termin-5-november-2026": "2026-09-08T18:03:17.923Z",
-      "bethesda-kuhlmann-starfield-statt-elder-scrolls-6-2026": "2026-09-09T07:21:20.817Z"
+      "zelda-ocarina-of-time-remake-gameplay-termin-5-november-2026": "2026-09-08T18:03:17.923Z"
     },
     "cards": {
       "/social/ig-civilization-7-earthrise-atomzeitalter-2027.mp4": "2026-09-06T13:03:55.238Z",
@@ -28210,7 +28209,7 @@
     ],
     "wechsel": {
       "day": "2026-09-09",
-      "nichtBreaking": 1
+      "nichtBreaking": 0
     },
     "tokenCheckedAt": "2026-09-05T16:51:05.430Z",
     "token": {
@@ -28311,12 +28310,6 @@
       "mass-effect-5-bioware-ea-saudi-uebernahme-2026": "2026-08-20T13:07:03.578Z"
     },
     "ausfaelle": {
-      "2026-08-25": {
-        "kein taugliches Bild": 4,
-        "ausgeschriebene Umlaute": 3,
-        "Schlagzeile regelwidrig": 3,
-        "Auswahl leer": 2
-      },
       "2026-08-26": {
         "ausgeschriebene Umlaute": 2,
         "Schlagzeile regelwidrig": 1
@@ -28360,6 +28353,9 @@
       },
       "2026-09-08": {
         "ausgeschriebene Umlaute": 1
+      },
+      "2026-09-09": {
+        "Grafik nicht erreichbar": 1
       }
     },
     "bildFinger": [
