@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-10T06:04:35.170Z",
+  "updatedAt": "2026-09-10T11:04:47.167Z",
   "deals": [
     {
       "appId": 2183900,
@@ -13,17 +13,6 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2183900/capsule_184x69.jpg?t=1787837240"
     },
     {
-      "appId": 1378990,
-      "title": "Crash Bandicoot™ 4: It’s About Time",
-      "discountPercent": 70,
-      "originalPrice": 3999,
-      "finalPrice": 1199,
-      "currency": "EUR",
-      "endsAt": "2026-09-23T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1378990/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1378990/capsule_184x69.jpg?t=1755191015"
-    },
-    {
       "appId": 275850,
       "title": "No Man's Sky",
       "discountPercent": 60,
@@ -32,7 +21,7 @@
       "currency": "EUR",
       "endsAt": "2026-09-21T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/275850/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/275850/a797ac8f837db76dbffc40df13fd711e2b46dc0a/capsule_184x69_alt_assets_25.jpg?t=1788970295"
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/275850/a797ac8f837db76dbffc40df13fd711e2b46dc0a/capsule_184x69_alt_assets_25.jpg?t=1789027039"
     },
     {
       "appId": 3240220,
@@ -66,6 +55,17 @@
       "endsAt": "2026-09-14T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/3892270/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3892270/162b293e92bf8be850967a85c9916daa6f68591c/capsule_184x69.jpg?t=1788800889"
+    },
+    {
+      "appId": 3624140,
+      "title": "Wanderburg",
+      "discountPercent": 35,
+      "originalPrice": 1499,
+      "finalPrice": 974,
+      "currency": "EUR",
+      "endsAt": "2026-09-22T17:00:17.000Z",
+      "url": "https://store.steampowered.com/app/3624140/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3624140/300527c75c0b5eb18e08bb8674b5fbad7c120ddf/capsule_184x69_alt_assets_2.jpg?t=1788973804"
     }
   ]
 }

@@ -1,0 +1,148 @@
+{
+  "slug": "switch-2-firmware-23-0-0-vrr-tv-modus-2026",
+  "title": "Switch 2 liefert VRR am Fernseher nach - 16 Monate danach",
+  "subtitle": "Firmware 23.0.0 bringt variable Bildwiederholrate im TV-Modus, Systemtransfer zwischen zwei Switch 2 und Musik im Mii-Editor",
+  "excerpt": "Nintendo hatte VRR im Dock-Betrieb angekündigt, wieder von den Webseiten entfernt und zum Start gestrichen. Jetzt ist das Feature da - allerdings nur mit einem zusätzlichen Schritt.",
+  "seoTitle": "Switch 2 Firmware 23.0.0: VRR im TV-Modus ist da",
+  "metaDescription": "Nintendo verteilt Firmware 23.0.0 für Switch 2 und Switch: VRR am Fernseher, Systemtransfer zwischen zwei Switch 2, Musik im Mii-Editor und mehr.",
+  "category": "news",
+  "platforms": [
+    "nintendo"
+  ],
+  "bereich": "hardware",
+  "tags": [
+    "Nintendo Switch 2",
+    "Firmware-Update",
+    "VRR",
+    "Nintendo",
+    "Mii"
+  ],
+  "tldr": [
+    "Firmware 23.0.0 ist seit dem 10. September 2026 für Switch 2 und die alte Switch verfügbar",
+    "VRR funktioniert nun auch im TV-Modus - dafür muss zusätzlich das Dock aktualisiert werden",
+    "Erstmals lassen sich alle Daten von einer Switch 2 auf eine andere Switch 2 übertragen",
+    "Dazu kommen Musik und QR-Code-Sharing im Mii-Editor sowie ein Schnellzugriff auf den Handheld-Boost"
+  ],
+  "whyItMatters": "VRR im Dock-Betrieb war eines der wenigen offenen Versprechen aus der Switch-2-Ankündigung und betrifft jeden, der an einem VRR-fähigen Fernseher spielt: Schwankende Bildraten wirken dadurch merklich ruhiger. Der neue Systemtransfer ist ausserdem die Voraussetzung dafür, dass Besitzerinnen und Besitzer beim Wechsel auf ein neues Modell ihre komplette Konsole mitnehmen können.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Nintendo hat am 10. September 2026 überraschend die Systemsoftware 23.0.0 verteilt - für Switch 2 und für die ursprüngliche Switch. Der wichtigste Punkt in den Patch Notes stand jahrelang auf der Wunschliste der Community: Die Switch 2 gibt jetzt auch im TV-Modus ein Bild mit variabler Bildwiederholrate aus. Unterstützen Spiel und Fernseher die Technik, passt sich die Ausgabe der tatsächlichen Rechenleistung des Titels an - Ruckler und Bildrisse fallen dadurch weniger auf. Ein Detail sollte man dabei nicht überlesen: Ohne ein zusätzliches Update des Docks bleibt die Option ausgegraut."
+    },
+    {
+      "type": "embed",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=bZE9oIFPXWw"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "23.0.0",
+          "label": "neue Firmware für Switch 2 und Switch"
+        },
+        {
+          "value": "10. Sept.",
+          "label": "Veröffentlichungstag des Updates"
+        },
+        {
+          "value": "16 Monate",
+          "label": "seit Nintendo VRR im Dock-Betrieb gestrichen hatte"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Erst versprochen, dann gestrichen - jetzt da"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Vorgeschichte erklärt, warum das Thema so emotional besetzt ist. Bei der Enthüllung der Switch 2 nannte Nintendo für den Dock-Betrieb 4K, 120 fps und VRR in einem Atemzug. Kurz darauf verschwanden die VRR-Hinweise wieder von den offiziellen Seiten, und zum Verkaufsstart war klar: Die variable Bildwiederholrate funktionierte ausschliesslich im Handheld-Modus. Unabhängige Tests deuteten später darauf hin, dass eine Umsetzung technisch machbar wäre, doch offiziell blieb es still. Laut Wccftech liegen zwischen der Bestätigung der Streichung und der jetzigen Nachlieferung rund 16 Monate."
+    },
+    {
+      "type": "paragraph",
+      "text": "In den Systemeinstellungen findet sich neu ein eigener Punkt \"VRR-Einstellungen\" im Bildschirm-Bereich. Gleichzeitig hat Nintendo die \"Dock-Ausgabeinformationen\" in \"Video-Ausgabeinformationen\" umbenannt - dort lässt sich nun detailliert prüfen, welche Videosignale der angeschlossene Fernseher überhaupt darstellen kann. Wer das Feature sofort ausprobieren möchte, ohne auf einen Patch für ein Lieblingsspiel zu warten: Auch \"Nintendo Switch 2 Welcome Tour\" hat ein Update auf Version 1.1.0 erhalten, dessen VRR-Slider-Demo sich jetzt ebenfalls am Fernseher starten lässt."
+    },
+    {
+      "type": "heading",
+      "text": "Umzug von Switch 2 auf Switch 2"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die zweite grosse Neuerung ist der vollständige Datentransfer zwischen zwei Switch-2-Konsolen. Bislang gab es diese Möglichkeit nicht - mit 23.0.0 wandern Spielstände, Screenshots und der restliche Systeminhalt auf ein neues Gerät. Der Zeitpunkt ist kein Zufall: Nintendo hat in derselben Woche eine Switch 2 zum 40-Jahr-Jubiläum von Zelda für Oktober angekündigt. Wer zur Sonderedition wechselt, muss seine Sammlung also nicht mühsam neu einrichten. Die passende Option heisst \"Alles auf Nintendo Switch 2 übertragen\" und sitzt im System-Menü."
+    },
+    {
+      "type": "paragraph",
+      "text": "Rund um die virtuelle Spielkarte gibt es ebenfalls Bewegung - und zwar auf beiden Konsolengenerationen. Die Übersicht der virtuellen Spielkarten hat einen Einstellungspunkt bekommen, über den sich der Registrierungsstatus der Geräte prüfen lässt. Lässt sich eine Karte nicht von der anderen Konsole holen, weil diese offline ist, erscheint neu die Schaltfläche \"Mit Online-Lizenz spielen\" und der Titel läuft vorübergehend trotzdem. Wichtig: Diese Variante ist ausschliesslich der Person vorbehalten, die das Spiel gekauft hat."
+    },
+    {
+      "type": "heading",
+      "text": "Mii-Editor mit Nostalgie-Soundtrack"
+    },
+    {
+      "type": "paragraph",
+      "text": "Für Freude sorgt in der Community ein Detail, das nichts mit Bildraten zu tun hat: Im Mii-Editor läuft wieder Musik. Über den Button \"BGM-Einstellungen\" oben links lassen sich die Stücke wechseln oder abschalten - laut Nintendo Life stammen die drei Titel aus dem Mii-Maker von Wii, 3DS und Wii U, standardmässig läuft die Wii-Variante. Dazu kommt die Option, den eigenen Mii als QR-Code zu erzeugen und weiterzugeben."
+    },
+    {
+      "type": "heading",
+      "text": "Der Rest der Patch Notes"
+    },
+    {
+      "type": "list",
+      "items": [
+        "GameChat zeigt frühere Chats in der Beitrittsliste, ein Chat lässt sich ohne Auswahl von Freunden starten, und über das C-Menü kann die Fenstergrösse geändert werden",
+        "Der Handheld-Modus-Boost lässt sich per neuer Einstellung im Schnellmenü (langes Drücken der HOME-Taste) ein- und ausschalten; zudem funktionieren andere Controller nun auch mit angesteckten Joy-Con 2",
+        "Text-to-Speech und die Sprachausgabe der GameChat-Transkription unterstützen jetzt brasilianisches Portugiesisch",
+        "Die TV-Ton-Einstellungen werden pro angeschlossenem Fernseher gespeichert, und der Weckton beim TV-Betrieb lässt sich beim Justieren direkt probehören",
+        "Spielzeiten im Profil werden über mehrere Konsolen hinweg zusammengezählt, die seit dem Update gespielten Titel erscheinen chronologisch",
+        "Dazu kommen Fehlerbehebungen und Stabilitätsverbesserungen - für Switch 2 wie für die alte Switch"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Einordnung: 23.0.0 ist eines dieser Updates, die weniger neu erfinden als aufräumen. Der VRR-Support im TV-Modus schliesst eine Lücke, die Nintendo selbst aufgerissen hatte, und dürfte erst dann sein volles Potenzial zeigen, wenn mehr Spiele die Technik aktiv nutzen. Der Systemtransfer wiederum wirkt wie eine gezielte Vorbereitung auf die Zelda-Edition im Oktober. Parallel hat Nintendo diese Woche auch Updates für die Switch-App, Mario Kart World, Welcome Tour und Hyrule Warriors: Zeit der Verheerung veröffentlicht - wer die neuen Funktionen komplett nutzen will, sollte neben der Konsole also auch das Dock und ein paar Spiele auf den aktuellen Stand bringen."
+    }
+  ],
+  "poll": {
+    "question": "VRR am Fernseher ist nachgeliefert - was ist für euch das wichtigste Feature von Firmware 23.0.0?",
+    "options": [
+      "VRR im TV-Modus",
+      "Systemtransfer zwischen zwei Switch 2",
+      "Handheld-Boost im Schnellmenü",
+      "Musik im Mii-Editor"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-09-10T11:03:43.211Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "controller",
+  "sources": [
+    {
+      "title": "Nintendo Switch 2 System Update 23.0.0 Is Now Live, Here Are The Full Patch Notes",
+      "url": "https://www.nintendolife.com/news/2026/09/nintendo-switch-2-system-update-23-0-0-is-now-live-here-are-the-full-patch-notes",
+      "publisher": "Nintendo Life"
+    },
+    {
+      "title": "Switch 2 system update adds VRR support when docked, Switch 2 to Switch 2 system transfer and more",
+      "url": "https://www.videogameschronicle.com/news/switch-2-system-update-adds-vrr-support-when-docked-switch-2-to-switch-2-system-transfer-and-more/",
+      "publisher": "VGC"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/switch-2-firmware-23-0-0-vrr-tv-modus-2026.webp",
+    "alt": "Switch 2 liefert VRR am Fernseher nach - 16 Monate danach",
+    "credit": "Bild: Nintendo Life",
+    "sourceUrl": "https://www.nintendolife.com/news/2026/09/nintendo-switch-2-system-update-23-0-0-is-now-live-here-are-the-full-patch-notes",
+    "sourceWidth": 1920,
+    "sourceHeight": 1090
+  },
+  "relatedSlugs": [
+    "switch-2-eu-revision-teardown-akku-2026",
+    "nintendo-direct-zelda-40-jubilaeum-september-2026",
+    "mario-kart-8-deluxe-update-4-0-0-switch-2-2026"
+  ]
+}
