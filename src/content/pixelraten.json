@@ -1,21 +1,23 @@
 {
-  "datum": "2026-09-09",
-  "nummer": 32,
-  "loesung": "The Last of Us",
+  "datum": "2026-09-10",
+  "nummer": 33,
+  "loesung": "The Legend of Zelda: Breath of the Wild",
   "akzeptiert": [
-    "thelastofus",
-    "lastofus",
-    "tlou"
+    "thelegendofzeldabreathofthewild",
+    "zeldabreathofthewild",
+    "breathofthewild",
+    "zeldabotw",
+    "botw"
   ],
   "hinweise": [
-    "Erschienen 2013 · Action-Adventure",
-    "Naughty Dog"
+    "Erschienen 2017 · Open World",
+    "Nintendo"
   ],
   "bilder": [
-    "/images/pixelraten/2026-09-09-s1.jpg",
-    "/images/pixelraten/2026-09-09-s2.jpg",
-    "/images/pixelraten/2026-09-09-s3.jpg",
-    "/images/pixelraten/2026-09-09-s4.jpg",
-    "/images/pixelraten/2026-09-09-s5.jpg"
+    "/images/pixelraten/2026-09-10-s1.jpg",
+    "/images/pixelraten/2026-09-10-s2.jpg",
+    "/images/pixelraten/2026-09-10-s3.jpg",
+    "/images/pixelraten/2026-09-10-s4.jpg",
+    "/images/pixelraten/2026-09-10-s5.jpg"
   ]
 }

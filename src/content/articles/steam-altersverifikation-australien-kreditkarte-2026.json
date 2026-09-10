@@ -1,0 +1,163 @@
+{
+  "slug": "steam-altersverifikation-australien-kreditkarte-2026",
+  "title": "Steam prüft das Alter in Australien - Debitkarte reicht nicht",
+  "subtitle": "Valve akzeptiert für R18+-Titel nur eine australische Kreditkarte, während PlayStation, Xbox und bald auch Epic mehrere Wege anbieten",
+  "excerpt": "Wer in Australien einen R18+-Titel auf Steam kaufen will, braucht neu eine Kreditkarte - eine Debitkarte wird abgelehnt. Selbst die Shop-Seite von Doom bleibt sonst verschlossen. Und es gibt eine Lücke.",
+  "seoTitle": "Steam: Kreditkartenpflicht für R18+-Spiele in Australien",
+  "metaDescription": "Valve verifiziert das Alter australischer Steam-Nutzer nur noch per Kreditkarte. Debitkarten fallen durch, R18+-Shop-Seiten bleiben gesperrt. Alle Fakten.",
+  "category": "news",
+  "platforms": [
+    "pc"
+  ],
+  "bereich": "games",
+  "tags": [
+    "Steam",
+    "Valve",
+    "Altersverifikation",
+    "Australien",
+    "Epic Games Store"
+  ],
+  "tldr": [
+    "Valve hat in Australien eine Altersverifikation für R18+-Inhalte aktiviert - als einzige Methode wird eine gültige australische Kreditkarte akzeptiert.",
+    "Debitkarten funktionieren laut PC Gamer nicht; ohne Verifikation lassen sich betroffene Shop-Seiten nicht einmal öffnen.",
+    "Hintergrund ist der Age-Restricted Material App Distribution Services Code mit Bussen von bis zu 50 Millionen australischen Dollar.",
+    "PlayStation und Xbox bieten bereits mehrere Prüfwege an, der Epic Games Store startet seine Alterskontrolle am 9. September."
+  ],
+  "whyItMatters": "Altersverifikation im Store betrifft längst nicht mehr nur Nischenprodukte, sondern gewöhnliche Blockbuster mit hoher Freigabe. Australien zeigt, wie unterschiedlich Plattformen dieselbe Gesetzesvorgabe umsetzen - und dass die gewählte Methode darüber entscheidet, ob erwachsene Kundschaft überhaupt noch kaufen kann.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Valve hat in Australien eine Altersverifikation für Inhalte ab 18 Jahren scharf geschaltet. Wer dort einen R18+-Titel kaufen oder auch nur dessen Shop-Seite ansehen will, muss dem Steam-Konto eine gültige australische Kreditkarte hinzufügen. Eine gewöhnliche Debitkarte der Hausbank genügt nicht - das berichtet PC Gamer aus eigenem Test. Damit geht Valve einen deutlich engeren Weg als die Konkurrenz."
+    },
+    {
+      "type": "embed",
+      "platform": "reddit",
+      "url": "https://www.reddit.com/r/Steam/comments/1wbi8g6/aussie_steam_agegate_bypass_the_absolute_joke_of/"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "50 Mio. AU$",
+          "label": "mögliche Busse bei Verstössen gegen die australischen Vorgaben"
+        },
+        {
+          "value": "1",
+          "label": "akzeptierte Verifikationsmethode auf Steam: die Kreditkarte"
+        },
+        {
+          "value": "9. Sept.",
+          "label": "Start der Alterskontrolle im Epic Games Store in Australien"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Was Steam konkret verlangt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Sperre greift früher, als viele erwarten dürften: Betroffen ist nicht erst der Kauf, sondern bereits der Zugriff auf die Produktseite. Beim Aufruf von Doom aus dem Jahr 2016 erschien laut PC Gamer statt der Shop-Seite ein Hinweistext, der auf die gesetzliche Grundlage verweist und den einzigen Ausweg nennt."
+    },
+    {
+      "type": "quote",
+      "text": "Valve ist durch den Age-Restricted Material App Distribution Services Code verpflichtet zu prüfen, dass du 18 Jahre oder älter bist, bevor du auf Inhalte für Erwachsene zugreifst. Wenn du das möchtest, füge deinem Konto bitte eine gültige australische Kreditkarte hinzu und aktualisiere anschliessend die Einstellungen für Inhalte für Erwachsene.",
+      "attribution": "Hinweistext im australischen Steam-Store, zitiert von PC Gamer"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Logik dahinter ist nachvollziehbar: In Australien setzt eine Kreditkarte die Volljährigkeit voraus, eine Debitkarte dagegen können auch Jugendliche besitzen. Die Karte dient Valve also als indirekter Altersnachweis, ohne dass ein Ausweisdokument hochgeladen werden muss."
+    },
+    {
+      "type": "heading",
+      "text": "Warum die Methode Erwachsene aussperrt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Das Problem: Volljährigkeit und Kreditwürdigkeit sind nicht dasselbe. PC Gamer listet mehrere Konstellationen auf, in denen erwachsene Kundinnen und Kunden trotz vollem Anspruch auf R18+-Inhalte durch das Raster fallen."
+    },
+    {
+      "type": "list",
+      "items": [
+        "zu geringes Einkommen für eine Kreditkarte",
+        "Ablehnung durch die Bonitätsprüfung der jeweiligen Bank - die Commonwealth Bank nennt entsprechende Kriterien",
+        "negative Kredithistorie",
+        "die bewusste Entscheidung gegen eine Kreditkarte, weil man kein Geld ausgeben will, das man nicht besitzt"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Wer in eine dieser Gruppen fällt, kann auf Steam schlicht keine R18+-Spiele mehr erwerben. Der Autor des Berichts zählt sich selbst zur letzten Kategorie. PC Gamer hat Valve angefragt, ob weitere Prüfmethoden geplant sind und wann sie kommen könnten; eine Antwort steht noch aus."
+    },
+    {
+      "type": "heading",
+      "text": "Die Lücke: Keys von Drittanbietern"
+    },
+    {
+      "type": "paragraph",
+      "text": "Wasserdicht ist die Massnahme nicht. In der Community wurde bereits darauf hingewiesen, dass sich Steam-Keys für R18+-Titel weiterhin bei Drittanbietern wie Fanatical oder Green Man Gaming kaufen und anschliessend im eigenen Konto einlösen lassen. Die Kreditkartenhürde greift also nur im hauseigenen Shop. Vollständig überzeugende Alternativen gibt es allerdings ebenfalls kaum: Externe Verifikationsdienstleister wie Persona haben ernsthafte Bedenken zu Datenschutz und Informationssicherheit ausgelöst."
+    },
+    {
+      "type": "heading",
+      "text": "PlayStation, Xbox - und bald Epic"
+    },
+    {
+      "type": "paragraph",
+      "text": "Valve ist mit dem Schritt spät dran, nicht früh. PlayStation und Xbox haben ihre Alterskontrollen in Australien bereits umgesetzt, und beide bieten dabei eine kleine Auswahl an Verifikationswegen an statt nur eines einzigen. Der Epic Games Store zieht als nächster nach: Ab dem 9. September müssen australische Spielerinnen und Spieler bestätigen, dass sie mindestens 18 Jahre alt sind, bevor sie R18+-Titel herunterladen oder kaufen können."
+    },
+    {
+      "type": "paragraph",
+      "text": "Der regulatorische Druck ist erheblich. Die australischen Vorgaben sehen Bussen von bis zu 50 Millionen australischen Dollar vor - keine Plattform kann es sich leisten, den Code zu ignorieren. Die Frage ist deshalb nicht, ob geprüft wird, sondern wie."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Australien wird gerade zum Testfeld dafür, wie Storefronts Alterskontrollen technisch lösen - und Valve hat sich für die simpelste, aber auch ausschliessendste Variante entschieden. Die Kreditkarte ist datenschutzfreundlicher als ein Ausweis-Upload, koppelt den Zugang zu Spielen wie Doom aber an die Bonität. Solange Valve keine zweite Methode nachreicht, bleibt für einen Teil der volljährigen Kundschaft nur der Umweg über Key-Händler. Und weil ähnliche Regeln auch anderswo diskutiert werden, dürfte die australische Umsetzung nicht die letzte ihrer Art bleiben."
+    }
+  ],
+  "poll": {
+    "question": "Die Kreditkarte als Altersnachweis im Store - vertretbare Lösung oder Ausschluss zahlender Erwachsener?",
+    "options": [
+      "Vertretbar - besser als Ausweis-Upload an Drittfirmen",
+      "Ausschluss - Bonität hat nichts mit Volljährigkeit zu tun",
+      "Egal, ich kaufe ohnehin Keys bei Drittanbietern",
+      "Solche Alterskontrollen gehören generell nicht in Stores"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-09-10T00:04:08.835Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "grid",
+  "sources": [
+    {
+      "title": "Steam now requires Australian users to have a credit card to purchase R18+ games, and no, a simple bank debit card won't work",
+      "url": "https://www.pcgamer.com/gaming-industry/steam-now-requires-australian-users-to-have-a-credit-card-to-purchase-r18-games-and-no-a-simple-bank-debit-card-wont-work/",
+      "publisher": "PC Gamer"
+    },
+    {
+      "title": "Epic Games Store to introduce age checks for R18+ games in Australia",
+      "url": "https://www.gamesindustry.biz/epic-games-store-to-introduce-age-checks-for-r18-games-in-australia",
+      "publisher": "GamesIndustry.biz"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/steam-altersverifikation-australien-kreditkarte-2026.webp",
+    "alt": "Steam prüft das Alter in Australien - Debitkarte reicht nicht",
+    "credit": "Bild: PC Gamer",
+    "sourceUrl": "https://www.pcgamer.com/gaming-industry/steam-now-requires-australian-users-to-have-a-credit-card-to-purchase-r18-games-and-no-a-simple-bank-debit-card-wont-work/",
+    "sourceWidth": 1280,
+    "sourceHeight": 718
+  },
+  "relatedSlugs": [
+    "steam-15-milliarden-umsatz-2026-alinea-analytics",
+    "left-4-dead-2-trailer-selbstleak-valve-esrb-faliszek",
+    "future-no-thanks-steam-18-einstufung-molleindustria-2026"
+  ]
+}
