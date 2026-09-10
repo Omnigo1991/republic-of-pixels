@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-10T18:03:34.472Z",
+  "updatedAt": "2026-09-10T20:49:56.793Z",
   "deals": [
     {
       "appId": 2183900,
@@ -11,6 +11,17 @@
       "endsAt": "2026-09-14T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/2183900/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2183900/capsule_184x69.jpg?t=1787837240"
+    },
+    {
+      "appId": 1850570,
+      "title": "DEATH STRANDING DIRECTOR'S CUT",
+      "discountPercent": 75,
+      "originalPrice": 3999,
+      "finalPrice": 999,
+      "currency": "EUR",
+      "endsAt": "2026-09-24T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1850570/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1850570/f98586104479ed55cdb3de18c42b0dc6120691fe/capsule_184x69.jpg?t=1773400635"
     },
     {
       "appId": 275850,
@@ -33,17 +44,6 @@
       "endsAt": "2026-09-21T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/3240220/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3240220/a318bd9affe8eee32984b18794b273c256e9b2d6/capsule_184x69.jpg?t=1781187782"
-    },
-    {
-      "appId": 1144200,
-      "title": "Ready or Not",
-      "discountPercent": 50,
-      "originalPrice": 4999,
-      "finalPrice": 2499,
-      "currency": "EUR",
-      "endsAt": "2026-09-18T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1144200/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1144200/2f6ca7ad511531beb421122efb376141f068ebbb/capsule_184x69.jpg?t=1789019569"
     },
     {
       "appId": 3949040,

@@ -1,0 +1,180 @@
+{
+  "slug": "wardogs-early-access-eine-million-server-warteschlangen-2026",
+  "title": "Wardogs verkauft sich eine Million Mal - doch viele kommen nicht rein",
+  "subtitle": "Über 300'000 gleichzeitige Spieler auf Steam, abgeschaltete Server und ein CEO, der einen Teil der Warteschlangen bei Valve verortet",
+  "excerpt": "Bulkheads Militär-Shooter Wardogs meldet am Early-Access-Tag mehr als eine Million verkaufte Exemplare und über 300'000 gleichzeitige Spieler auf Steam. Nur: Ins Spiel kamen längst nicht alle davon.",
+  "seoTitle": "Wardogs: 1 Mio. Verkäufe am ersten Tag, Server unter Last",
+  "metaDescription": "Wardogs verkauft sich am Early-Access-Tag über eine Million Mal und knackt 300'000 Spieler auf Steam - doch Warteschlangen und Login-Fehler bremsen den Start.",
+  "category": "news",
+  "platforms": [
+    "pc",
+    "playstation",
+    "xbox"
+  ],
+  "bereich": "games",
+  "tags": [
+    "Wardogs",
+    "Bulkhead",
+    "Steam",
+    "Early Access",
+    "Shooter"
+  ],
+  "tldr": [
+    "Wardogs hat laut Entwickler Bulkhead am Early-Access-Starttag mehr als eine Million Exemplare verkauft",
+    "Auf Steam war das Spiel globaler Top-Seller und erreichte laut SteamDB über 300'000 gleichzeitige Spieler",
+    "Warteschlangen, Login-Fehler und zeitweise komplett abgeschaltete Server bremsten den Start; ein Hotfix lässt Spielende in kontrollierten Schüben zurück ins Spiel",
+    "Fassungen für PS5 und Xbox sind angekündigt, peilen laut Bulkhead aber erst 2028 an"
+  ],
+  "whyItMatters": "Seit Jahren dominieren Call of Duty und Battlefield das Genre der grossen Multiplayer-Shooter - Wardogs zeigt, dass ein kleineres Studio dazwischen Platz findet. Gleichzeitig ist der Start ein Lehrstück darüber, wie wenig geschlossene Betas über die Belastbarkeit am Launch-Tag aussagen. Wer jetzt kauft, sollte wissen: Early Access heisst hier ausdrücklich Baustelle.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Bulkhead hat seinen Shooter Wardogs in den Early Access geschickt - und meldete bereits am ersten Tag mehr als eine Million verkaufte Exemplare. Auf Steam schob sich der Titel an die Spitze der globalen Verkaufscharts, laut SteamDB kletterte er auf über 300'000 gleichzeitige Spielerinnen und Spieler. Der Haken: Ein grosser Teil von ihnen sass zunächst in Warteschlangen fest oder starrte auf Login-Fehler, weil die Server dem Andrang nicht gewachsen waren."
+    },
+    {
+      "type": "embed",
+      "platform": "twitter",
+      "url": "https://x.com/WARDOGS/status/2098137975045403063"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "1 Mio.",
+          "label": "verkaufte Exemplare am Tag des Early-Access-Starts"
+        },
+        {
+          "value": "300'000+",
+          "label": "gleichzeitige Spieler auf Steam laut SteamDB"
+        },
+        {
+          "value": "2028",
+          "label": "angepeiltes Jahr für die Fassungen auf PS5 und Xbox"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Eine Million verkaufte Exemplare - ohne Blindkauf-Hype"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bulkhead hatte in den Monaten vor dem Start ungewöhnlich defensiv kommuniziert: Statt Superlativen wollte das Studio möglichst genau erklären, was Wardogs ist - und was eben nicht. Dazu gehörte auch eine Aktion, bei der die Entwickler zehn Gründe auflisteten, das Spiel nicht zu kaufen. Umso deutlicher fiel die Reaktion von Studiochef Joe Brammer auf die Verkaufszahl aus."
+    },
+    {
+      "type": "quote",
+      "text": "Beim Start in den Early Access die Millionenmarke zu knacken, ist verrückt. Wir haben die letzten Monate damit verbracht, den Leuten genau zu zeigen, was Wardogs ist und was es nicht ist - und an einem Punkt haben wir allen buchstäblich zehn Gründe genannt, es nicht zu kaufen. Wir wollten nicht, dass Leute blindem Hype hinterherkaufen. Dass sich mehr als eine Million Menschen trotzdem entschieden haben, zum Early-Access-Start einzusteigen, bedeutet uns allen enorm viel. Aber das hier ist immer noch Early Access. Wir müssen Dinge reparieren, wollen Dinge verbessern und noch viel mehr bauen.",
+      "attribution": "Joe Brammer, CEO von Bulkhead"
+    },
+    {
+      "type": "heading",
+      "text": "Vom Top-Seller zum Login-Fehler"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Absturz in die technische Realität kam schnell. Destructoid meldete schon wenige Minuten nach dem Start rund 266'000 gleichzeitige Spielende, kurz darauf war die 300'000er-Marke gefallen. Etwa zeitgleich häuften sich die Probleme: Anmeldungen liefen in Fehlermeldungen wie «Failed to Authenticate with Server», die Warteschlangen wuchsen, und Bulkhead nahm die Server zwischenzeitlich komplett vom Netz, um an einer Lösung zu arbeiten. Auf X sprach das Studio von einem Problem, das in der vorangegangenen Beta noch nicht aufgetreten sei."
+    },
+    {
+      "type": "quote",
+      "text": "Wir arbeiten aktiv daran, so viele von euch wie möglich so schnell wie möglich ins Spiel zu bringen. Entschuldigt die Störung.",
+      "attribution": "Wardogs auf X"
+    },
+    {
+      "type": "heading",
+      "text": "Der CEO nennt Valve als Mitgrund"
+    },
+    {
+      "type": "paragraph",
+      "text": "In einem Video am Starttag deutete Brammer an, dass die langen Wartezeiten nicht allein an der eigenen Infrastruktur liegen: Das Studio sei bei Valve in der Zahl der Anfragen begrenzt. Für ein Team, das gerade eben erst eine Million Exemplare verkauft hat, ist das eine unfreiwillig passende Momentaufnahme - technisch behandelt wie ein kleiner Anbieter, gemessen an einer Nachfrage, die Blockbuster-Grössenordnung hat."
+    },
+    {
+      "type": "quote",
+      "text": "Idealerweise wären wir für einige dieser Dinge auf einer Triple-A-Stufe, sind wir aber nicht. Also reden wir mit ihnen und versuchen, das geregelt zu bekommen. Es ist, wie es ist. Ich würde die Warteschlange nicht verlassen, sondern einfach drinbleiben.",
+      "attribution": "Joe Brammer, CEO von Bulkhead"
+    },
+    {
+      "type": "heading",
+      "text": "Hotfix in Wellen: Was ihr jetzt wissen müsst"
+    },
+    {
+      "type": "paragraph",
+      "text": "Im Lauf des Tages verteilte Bulkhead ein Update, das die Serverprobleme gezielt angeht. Der Weg zurück ins Spiel ist dabei nicht ganz reibungslos - wer bereits in einer Warteschlange steht, muss das Spiel schliessen, das Update laden und sich anschliessend erneut hinten anstellen."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Neuer Steam-Client beziehungsweise Update wird benötigt; ein Redaktor von PC Gamer lud eine rund 236 MB grosse Datei",
+        "Alle Spielenden, die gerade im Spiel sind, werden ausgeloggt",
+        "Nach dem Neustart landen alle wieder in der Warteschlange",
+        "Bulkhead lässt Spielende in Wellen beziehungsweise «kontrollierten Schüben» zurück ins Spiel - die Grösse dieser Schübe wurde nicht genannt",
+        "Einen konkreten Zeitplan für die vollständige Behebung gibt es bislang nicht"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Die Betas hatten Sicherheit versprochen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Besonders bitter ist der Fehlstart, weil Bulkhead bis kurz vor dem Launch mehrere geschlossene Betas fuhr. Die letzte fand am Wochenende vor dem Start statt - inklusive der Aufforderung an die Teilnehmenden, die Server zu «zerlegen». Viele Spielende leiteten daraus ab, dass die Infrastruktur den Launch-Tag verkraften würde. Dass die aktuellen Probleme laut Studio in den Tests gar nicht auftraten, ist eine Erklärung, aber kein Trost für alle, die am Abend statt im Gefecht in einer Warteschlange landeten."
+    },
+    {
+      "type": "heading",
+      "text": "Konsolen erst 2028 - und die Erwartung sinkender Zahlen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Wardogs ist derzeit ausschliesslich auf dem PC spielbar, was die Startzahlen zusätzlich einordnet. Fassungen für PS5 und Xbox sind bestätigt, Bulkhead peilt dafür allerdings 2028 an - ein konkretes Datum nannte das Studio nicht. Wer auf Konsole spielt, wartet also noch lange. Gleichzeitig dämpft das Studio die Erwartungen an die Spielerzahlen: Man wolle sich bei neuen Inhalten Zeit lassen und rechne damit, dass die Kurve nach dem ersten Ansturm wieder abflacht."
+    },
+    {
+      "type": "paragraph",
+      "text": "Spielerisch sucht Wardogs den Platz zwischen zwei Lagern: geerdeter und taktischer als Battlefield, aber deutlich zugänglicher als eine Simulation vom Schlage Armas, dazu Schlachten mit bis zu 100 Teilnehmenden. Genau dieses Zwischending scheint einen Nerv zu treffen."
+    },
+    {
+      "type": "paragraph",
+      "text": "Einordnung: Ein Millionenstart innerhalb eines Tages, ohne Konsolenfassung und ohne Publisher-Marketingmaschine, ist bemerkenswert - und er zeigt, dass im Shooter-Genre neben Call of Duty und Battlefield Raum für Alternativen ist. Die eigentliche Prüfung kommt aber erst: Ob Wardogs die Millionen Käuferinnen und Käufer über Monate hält, entscheidet sich nicht an den Warteschlangen des ersten Tages, sondern am Tempo, mit dem Bulkhead die Early-Access-Baustelle abarbeitet."
+    }
+  ],
+  "poll": {
+    "question": "Wardogs verkauft sich millionenfach, aber die Server knicken ein - wie bewertet ihr diesen Start?",
+    "options": [
+      "Halb so wild, das ist Early Access",
+      "Ärgerlich - die Betas hätten das zeigen müssen",
+      "Ich warte auf die Konsolenfassung 2028",
+      "Serverprobleme am Launch-Tag sind nie entschuldbar"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-09-10T20:49:53.158Z",
+  "readingTimeMinutes": 4,
+  "heroVariant": "grid",
+  "sources": [
+    {
+      "title": "Wardogs Surpasses 1 Million Copies Sold on Day One, Blows Past 300k Peak Concurrent Players on Steam",
+      "url": "https://www.ign.com/articles/wardogs-surpasses-1-million-copies-sold-on-day-one-blows-past-300k-peak-concurrent-players-on-steam",
+      "publisher": "IGN"
+    },
+    {
+      "title": "Wardogs servers go down as over 300,000 people rush to play on launch day [Update]",
+      "url": "https://www.pcgamer.com/games/fps/wardogs-servers-go-down-as-over-300-000-people-rush-to-play-on-launch-day/",
+      "publisher": "PC Gamer"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/wardogs-early-access-eine-million-server-warteschlangen-2026.webp",
+    "alt": "Wardogs verkauft sich eine Million Mal - doch viele kommen nicht rein",
+    "credit": "Bild: IGN",
+    "sourceUrl": "https://www.ign.com/articles/wardogs-surpasses-1-million-copies-sold-on-day-one-blows-past-300k-peak-concurrent-players-on-steam",
+    "sourceWidth": 1920,
+    "sourceHeight": 1080
+  },
+  "relatedSlugs": [
+    "wardogs-beta-500000-spieler-bulkhead-early-access",
+    "no-rest-for-the-wicked-verschiebung-maerz-2027-open-beta",
+    "vapor-world-over-the-mind-ki-zwischensequenzen-backlash"
+  ]
+}
