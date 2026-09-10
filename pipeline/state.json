@@ -30170,8 +30170,7 @@
       "zelda-ocarina-of-time-remake-gameplay-termin-5-november-2026": "2026-09-08T18:03:17.923Z",
       "elden-ring-patch-1-17-1-tarnished-pack-gratis-items-2026": "2026-09-09T11:06:05.925Z",
       "breaking-benjamin-burnley-fallout-4-mod-konzert-rant-2026": "2026-09-09T11:07:01.976Z",
-      "physint-xbox-game-studios-sony-ausstieg-2026": "2026-09-10T03:04:17.666Z",
-      "project-dream-snes-prototyp-leak-rare-banjo-kazooie-2026": "2026-09-10T11:05:51.179Z"
+      "physint-xbox-game-studios-sony-ausstieg-2026": "2026-09-10T03:04:17.666Z"
     },
     "cards": {
       "/social/ig-onimusha-way-of-the-sword-1-million-launchtag-2026.mp4": "2026-09-07T15:47:41.096Z",
@@ -30189,7 +30188,7 @@
     ],
     "wechsel": {
       "day": "2026-09-10",
-      "nichtBreaking": 1
+      "nichtBreaking": 0
     },
     "tokenCheckedAt": "2026-09-05T16:51:05.430Z",
     "token": {
@@ -30294,10 +30293,6 @@
       "mass-effect-5-bioware-ea-saudi-uebernahme-2026": "2026-08-20T13:07:03.578Z"
     },
     "ausfaelle": {
-      "2026-08-26": {
-        "ausgeschriebene Umlaute": 2,
-        "Schlagzeile regelwidrig": 1
-      },
       "2026-08-27": {
         "kein taugliches Bild": 1
       },
@@ -30341,6 +30336,9 @@
       "2026-09-09": {
         "Grafik nicht erreichbar": 1,
         "kein taugliches Bild": 1
+      },
+      "2026-09-10": {
+        "Grafik nicht erreichbar": 1
       }
     },
     "bildFinger": [
