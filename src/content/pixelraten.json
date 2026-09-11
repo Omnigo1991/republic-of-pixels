@@ -1,23 +1,20 @@
 {
-  "datum": "2026-09-10",
-  "nummer": 33,
-  "loesung": "The Legend of Zelda: Breath of the Wild",
+  "datum": "2026-09-11",
+  "nummer": 34,
+  "loesung": "Borderlands 3",
   "akzeptiert": [
-    "thelegendofzeldabreathofthewild",
-    "zeldabreathofthewild",
-    "breathofthewild",
-    "zeldabotw",
-    "botw"
+    "borderlands3",
+    "borderlands"
   ],
   "hinweise": [
-    "Erschienen 2017 · Open World",
-    "Nintendo"
+    "Erschienen 2019 · Loot-Shooter",
+    "Cel-Shading"
   ],
   "bilder": [
-    "/images/pixelraten/2026-09-10-s1.jpg",
-    "/images/pixelraten/2026-09-10-s2.jpg",
-    "/images/pixelraten/2026-09-10-s3.jpg",
-    "/images/pixelraten/2026-09-10-s4.jpg",
-    "/images/pixelraten/2026-09-10-s5.jpg"
+    "/images/pixelraten/2026-09-11-s1.jpg",
+    "/images/pixelraten/2026-09-11-s2.jpg",
+    "/images/pixelraten/2026-09-11-s3.jpg",
+    "/images/pixelraten/2026-09-11-s4.jpg",
+    "/images/pixelraten/2026-09-11-s5.jpg"
   ]
 }

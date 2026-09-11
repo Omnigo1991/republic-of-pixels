@@ -1,17 +1,6 @@
 {
-  "updatedAt": "2026-09-10T20:49:56.793Z",
+  "updatedAt": "2026-09-11T00:04:30.863Z",
   "deals": [
-    {
-      "appId": 2183900,
-      "title": "Warhammer 40,000: Space Marine 2",
-      "discountPercent": 75,
-      "originalPrice": 5999,
-      "finalPrice": 1499,
-      "currency": "EUR",
-      "endsAt": "2026-09-14T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/2183900/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2183900/capsule_184x69.jpg?t=1787837240"
-    },
     {
       "appId": 1850570,
       "title": "DEATH STRANDING DIRECTOR'S CUT",
@@ -24,6 +13,17 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1850570/f98586104479ed55cdb3de18c42b0dc6120691fe/capsule_184x69.jpg?t=1773400635"
     },
     {
+      "appId": 2183900,
+      "title": "Warhammer 40,000: Space Marine 2",
+      "discountPercent": 75,
+      "originalPrice": 5999,
+      "finalPrice": 1499,
+      "currency": "EUR",
+      "endsAt": "2026-09-14T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/2183900/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2183900/capsule_184x69.jpg?t=1787837240"
+    },
+    {
       "appId": 275850,
       "title": "No Man's Sky",
       "discountPercent": 60,
@@ -33,6 +33,17 @@
       "endsAt": "2026-09-21T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/275850/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/275850/a797ac8f837db76dbffc40df13fd711e2b46dc0a/capsule_184x69_alt_assets_25.jpg?t=1789027039"
+    },
+    {
+      "appId": 2169200,
+      "title": "Sniper Elite: Resistance",
+      "discountPercent": 60,
+      "originalPrice": 4999,
+      "finalPrice": 1999,
+      "currency": "EUR",
+      "endsAt": "2026-09-17T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/2169200/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2169200/7fa2c363905869ad0d53fbdab682cfc04b4e36fc/capsule_184x69.jpg?t=1765448187"
     },
     {
       "appId": 3240220,
@@ -55,17 +66,6 @@
       "endsAt": "2026-09-24T14:00:00.000Z",
       "url": "https://store.steampowered.com/app/3949040/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3949040/87c1df082a7b29a7ffd7f32ab03d0d9d12e0f876/capsule_184x69_alt_assets_0.jpg?t=1789049074"
-    },
-    {
-      "appId": 3892270,
-      "title": "Gamble With Your Friends",
-      "discountPercent": 38,
-      "originalPrice": 779,
-      "finalPrice": 482,
-      "currency": "EUR",
-      "endsAt": "2026-09-14T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/3892270/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3892270/162b293e92bf8be850967a85c9916daa6f68591c/capsule_184x69.jpg?t=1788800889"
     }
   ]
 }
