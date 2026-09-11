@@ -1,17 +1,6 @@
 {
-  "updatedAt": "2026-09-11T11:04:36.493Z",
+  "updatedAt": "2026-09-11T14:07:38.577Z",
   "deals": [
-    {
-      "appId": 1029690,
-      "title": "Sniper Elite 5",
-      "discountPercent": 90,
-      "originalPrice": 4999,
-      "finalPrice": 499,
-      "currency": "EUR",
-      "endsAt": "2026-09-17T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1029690/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1029690/capsule_184x69.jpg?t=1770633150"
-    },
     {
       "appId": 1850570,
       "title": "DEATH STRANDING DIRECTOR'S CUT",
@@ -46,15 +35,15 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2169200/7fa2c363905869ad0d53fbdab682cfc04b4e36fc/capsule_184x69.jpg?t=1765448187"
     },
     {
-      "appId": 2668510,
-      "title": "Red Dead Redemption",
+      "appId": 3240220,
+      "title": "Grand Theft Auto V Enhanced",
       "discountPercent": 50,
-      "originalPrice": 4999,
-      "finalPrice": 2499,
+      "originalPrice": 2999,
+      "finalPrice": 1499,
       "currency": "EUR",
-      "endsAt": "2026-09-24T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/2668510/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2668510/dd69185119f7583eda918ed1018b2330994aa71d/capsule_184x69_german.jpg?t=1781132266"
+      "endsAt": "2026-09-21T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/3240220/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3240220/a318bd9affe8eee32984b18794b273c256e9b2d6/capsule_184x69.jpg?t=1781187782"
     },
     {
       "appId": 3624140,
@@ -65,7 +54,18 @@
       "currency": "EUR",
       "endsAt": "2026-09-22T17:00:17.000Z",
       "url": "https://store.steampowered.com/app/3624140/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3624140/300527c75c0b5eb18e08bb8674b5fbad7c120ddf/capsule_184x69_alt_assets_2.jpg?t=1789065688"
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3624140/300527c75c0b5eb18e08bb8674b5fbad7c120ddf/capsule_184x69_alt_assets_2.jpg?t=1789130061"
+    },
+    {
+      "appId": 1465470,
+      "title": "The Crust",
+      "discountPercent": 35,
+      "originalPrice": 2999,
+      "finalPrice": 1949,
+      "currency": "EUR",
+      "endsAt": "2026-09-24T17:00:50.000Z",
+      "url": "https://store.steampowered.com/app/1465470/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1465470/8e979132c954444babac43d23b7c4a8085831308/capsule_184x69_alt_assets_18.jpg?t=1789119232"
     }
   ]
 }
