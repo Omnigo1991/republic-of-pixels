@@ -1,6 +1,17 @@
 {
-  "updatedAt": "2026-09-11T06:05:26.958Z",
+  "updatedAt": "2026-09-11T11:04:36.493Z",
   "deals": [
+    {
+      "appId": 1029690,
+      "title": "Sniper Elite 5",
+      "discountPercent": 90,
+      "originalPrice": 4999,
+      "finalPrice": 499,
+      "currency": "EUR",
+      "endsAt": "2026-09-17T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1029690/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1029690/capsule_184x69.jpg?t=1770633150"
+    },
     {
       "appId": 1850570,
       "title": "DEATH STRANDING DIRECTOR'S CUT",
@@ -11,17 +22,6 @@
       "endsAt": "2026-09-24T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/1850570/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1850570/f98586104479ed55cdb3de18c42b0dc6120691fe/capsule_184x69.jpg?t=1773400635"
-    },
-    {
-      "appId": 2183900,
-      "title": "Warhammer 40,000: Space Marine 2",
-      "discountPercent": 75,
-      "originalPrice": 5999,
-      "finalPrice": 1499,
-      "currency": "EUR",
-      "endsAt": "2026-09-14T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/2183900/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2183900/capsule_184x69.jpg?t=1787837240"
     },
     {
       "appId": 275850,
@@ -35,15 +35,15 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/275850/a797ac8f837db76dbffc40df13fd711e2b46dc0a/capsule_184x69_alt_assets_25.jpg?t=1789027039"
     },
     {
-      "appId": 3240220,
-      "title": "Grand Theft Auto V Enhanced",
-      "discountPercent": 50,
-      "originalPrice": 2999,
-      "finalPrice": 1499,
+      "appId": 2169200,
+      "title": "Sniper Elite: Resistance",
+      "discountPercent": 60,
+      "originalPrice": 4999,
+      "finalPrice": 1999,
       "currency": "EUR",
-      "endsAt": "2026-09-21T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/3240220/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3240220/a318bd9affe8eee32984b18794b273c256e9b2d6/capsule_184x69.jpg?t=1781187782"
+      "endsAt": "2026-09-17T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/2169200/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2169200/7fa2c363905869ad0d53fbdab682cfc04b4e36fc/capsule_184x69.jpg?t=1765448187"
     },
     {
       "appId": 2668510,
