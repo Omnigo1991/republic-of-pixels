@@ -1,0 +1,149 @@
+{
+  "slug": "roblox-everywhere-standalone-apps-rdc-2026",
+  "title": "Roblox-Spiele verlassen Roblox - als eigene Apps auf PC und Konsole",
+  "subtitle": "Auf der Entwicklerkonferenz RDC kündigt Roblox an, dass Creator ihre Titel künftig als eigenständige Anwendungen veröffentlichen dürfen - offen ist nur, wo sie landen",
+  "excerpt": "Roblox Everywhere soll Creator-Spiele als eigene Apps auf PC, Konsole und Mobile bringen, inklusive Cross-Play. Ob sie dabei auch auf Steam oder im Epic Games Store auftauchen, lässt der Konzern bewusst offen.",
+  "seoTitle": "Roblox Everywhere: Creator-Spiele als eigene Apps",
+  "metaDescription": "Roblox lässt Creator ihre Spiele als eigenständige Apps für PC, Konsole und Mobile veröffentlichen. Dazu kommen Browser-Start, Offline-Modus und echte Auszahlungen.",
+  "category": "news",
+  "platforms": [
+    "pc",
+    "playstation",
+    "xbox",
+    "nintendo"
+  ],
+  "bereich": "games",
+  "tags": [
+    "Roblox",
+    "Roblox Everywhere",
+    "RDC 2026",
+    "Game-Engines",
+    "Monetarisierung"
+  ],
+  "tldr": [
+    "Mit «Roblox Everywhere» sollen Creator ihre Spiele künftig als eigenständige Apps für PC, Konsole und Mobile veröffentlichen - Cross-Play ist standardmässig aktiv",
+    "Ob die Titel auf Storefronts wie Steam, Epic oder GOG erscheinen, ist noch offen: Roblox startet mit ausgewählten Studios und Shops",
+    "Bis Jahresende sollen Spiele per Link direkt im Browser starten (zuerst Chrome), dazu kommt ein Offline-Modus für Singleplayer-Sessions",
+    "Neue Auszahlungswerkzeuge: Roblox Wallet zahlt an jedem Werktag in echter Währung aus, die Roblox Card folgt 2027"
+  ],
+  "whyItMatters": "Roblox ist für viele Spielerinnen und Spieler bislang eine abgeschottete Welt - wer die Plattform nicht nutzt, kommt an die dort entstandenen Spiele nicht heran. Öffnet sich dieser Käfig, konkurrieren Creator-Titel künftig direkt mit klassischen Indie-Releases auf denselben Plattformen. Gleichzeitig entscheidet die noch offene Storefront-Frage darüber, ob daraus wirklich ein zweiter Vertriebsweg wird oder nur eine hübschere Verpackung.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Roblox will seine grösste Schwäche und zugleich seine grösste Stärke aufbrechen: die eigenen Mauern. Auf der zwölften Roblox Developers Conference (RDC), einem geschlossenen Branchentreffen in der Bay Area, hat das Unternehmen aus San Mateo eine Initiative namens «Roblox Everywhere» vorgestellt. Creator sollen ihre auf der Plattform gebauten Spiele künftig als eigenständige Apps für Mobile, PC und Konsolen veröffentlichen können - die Technik und die Dienste dahinter liefert weiterhin Roblox. Cross-Play ist laut Ankündigung standardmässig aktiv, gemeinsame Sessions mit Leuten in der regulären Roblox-App bleiben also möglich."
+    },
+    {
+      "type": "embed",
+      "platform": "twitter",
+      "url": "https://twitter.com/cantworkitout/status/2098485895896695222"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "29 Mrd.",
+          "label": "Stunden Spielzeit im vergangenen Quartal, laut Roblox"
+        },
+        {
+          "value": "180+",
+          "label": "Länder, in denen gespielt wurde"
+        },
+        {
+          "value": "2027",
+          "label": "Start der Roblox Card für Creator-Auszahlungen"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Die entscheidende Frage bleibt vorerst offen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die naheliegendste Frage lautet: Landen diese Apps dann auch auf Steam, im Epic Games Store oder auf GOG? Genau dort wird Roblox vage. Gegenüber PC Gamer erklärte ein Unternehmenssprecher, Verfügbarkeit auf Storefronts über alle Plattformen hinweg sei das Ziel, die Optionen würden aber noch geprüft."
+    },
+    {
+      "type": "quote",
+      "text": "Wir starten mit einer ausgewählten Gruppe von Spieleentwicklern und Storefronts, um zu testen, und wir werden bald weitere Details mitteilen.",
+      "attribution": "Roblox-Sprecher gegenüber PC Gamer"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bis dahin bleibt unklar, ob aus «Roblox Everywhere» ein echter zweiter Vertriebsweg wird oder zunächst ein eng kuratiertes Pilotprojekt. Für Creator hängt daran allerdings viel: Manche Roblox-Spiele erreichen gewaltige Zahlen, bleiben aber im eigenen Ökosystem eingezäunt. Wer ausserhalb der Plattform Publikum sucht, kommt derzeit schlicht nicht dorthin."
+    },
+    {
+      "type": "heading",
+      "text": "Browser statt Installation, Offline statt Dauerverbindung"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Öffnung geht über eigenständige Apps hinaus. Bis Jahresende sollen sich Spiele direkt im Browser starten lassen - zunächst in Chrome, weitere folgen später. Ein geteilter Link wird damit zum direkten Weg von der Entdeckung ins Spiel, ohne Zusatzsoftware oder Installation. Parallel kündigt Roblox einen Offline-Modus an: Creator können Online- und Offline-Betrieb in einem Titel kombinieren, was Singleplayer-Kampagnen und Sessions ohne Netzverbindung ermöglicht."
+    },
+    {
+      "type": "paragraph",
+      "text": "Dazu kommen Engine-Erweiterungen, die das Klischee vom simplen Klickspiel weiter aushöhlen sollen. Für 2D-Projekte gibt es eine orthografische Kamera, animierte Bildcontainer und den direkten Import von Sprite-Sheets. Der Build-Tab in der Roblox-App, mit dem sich Spiele allein per Texteingabe erstellen und veröffentlichen lassen, weitet seine öffentliche Alpha auf Serbien und Singapur aus. Ein Scene Generator soll später im Jahr Prompt-zu-Szene-Funktionen in Build und Studio bringen, ausserdem sind bis Jahresende zwei neue NPC-Verhaltensweisen geplant - darunter NPCs, die selbst Playtests übernehmen."
+    },
+    {
+      "type": "heading",
+      "text": "Geld, das den Plattformkreislauf verlässt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Auch bei der Bezahlung öffnet sich Roblox nach aussen. Das neue Roblox Wallet soll Creator direkt in echter Währung verdienen lassen, mit automatischer Auszahlung an jedem Werktag, Überweisungen an andere Roblox-Konten oder externe Konten und ausführlicheren Einnahmen-Analysen im Creator Hub. Zahlungsdienstleister dahinter ist Airwallex, das derzeit in fünf US-Bundesstaaten nicht verfügbar ist: New York, Nevada, Hawaii, Indiana und Wisconsin. Für betroffene Kundinnen und Kunden arbeite der Anbieter mit US-Banken zusammen, erklärte ein Sprecher gegenüber Polygon. Ab 2027 folgt die Roblox Card, laut Unternehmen eine an das Wallet gekoppelte Karte, die wie eine Debitkarte funktioniert - ausdrücklich ohne Kreditlinie oder Darlehen."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung: Der Verkehr fliesst plötzlich in beide Richtungen"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Bewegung ist bemerkenswert, weil sie das übliche Muster umkehrt. Bisher rückten klassische Publisher an Roblox heran, um Spielerinnen und Spieler dort abzuholen, wo sie ohnehin sind: Starbreeze veröffentlichte in diesem Jahr einen Payday-Ableger auf der Plattform, Mattels Einstieg ins Videospielgeschäft zielt ausdrücklich auf Creator-Plattformen wie Roblox und Fortnite. Nun blickt Roblox zurück - und zwar auf jene Märkte, die es bisher nicht bedient. Wie gross der Hebel ist, zeigt eine Einschätzung des Analysten Matthew Ball, heute Chief Strategy Officer bei Xbox: 2025 erklärte er, Roblox stehe für mehr Wachstum bei Spielerbindung und Umsatz als Steam, PlayStation und Fortnite zusammen."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ein Thema sparte die Konferenz allerdings aus: die anhaltende Kritik am Kinder- und Jugendschutz, die Roblox in den USA und international weiter begleitet - auch nach Einführung altersbeschränkter Konten im Juni. Wer Roblox-Spiele künftig als normale App auf Steam oder Konsole erwartet, sollte sich deshalb auf mehr als nur eine technische Debatte einstellen."
+    }
+  ],
+  "poll": {
+    "question": "Würdet ihr ein Roblox-Spiel kaufen oder spielen, wenn es als eigenständige App auf Steam oder Konsole erscheint?",
+    "options": [
+      "Ja, wenn die Qualität stimmt, ist mir die Herkunft egal",
+      "Nur kostenlos - zahlen würde ich dafür nicht",
+      "Nein, Roblox-Titel gehören für mich in die Roblox-App",
+      "Erst mal abwarten, wie die ersten Titel aussehen"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-09-11T20:55:42.030Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "circuit",
+  "sources": [
+    {
+      "title": "Roblox games are escaping Roblox: Creators will soon be able to export standalone apps for PC, console, and mobile",
+      "url": "https://www.pcgamer.com/software/platforms/roblox-games-are-escaping-roblox-creators-will-soon-be-able-to-export-standalone-apps-for-pc-console-and-mobile/",
+      "publisher": "PC Gamer"
+    },
+    {
+      "title": "Roblox Rolls Out Massive Updates at RDC 2026",
+      "url": "https://www.polygon.com/roblox-september-update-rdc-2026/",
+      "publisher": "Polygon"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/roblox-everywhere-standalone-apps-rdc-2026.webp",
+    "alt": "Roblox-Spiele verlassen Roblox - als eigene Apps auf PC und Konsole",
+    "credit": "Bild: PC Gamer",
+    "sourceUrl": "https://www.pcgamer.com/software/platforms/roblox-games-are-escaping-roblox-creators-will-soon-be-able-to-export-standalone-apps-for-pc-console-and-mobile/",
+    "sourceWidth": 1280,
+    "sourceHeight": 710
+  },
+  "relatedSlugs": [
+    "roblox-kurssturz-discovery-algorithmus-2026",
+    "roblox-australien-esafety-kinderschutz-2026",
+    "roblox-us-senat-untersuchung-kinderschutz-2026"
+  ]
+}
