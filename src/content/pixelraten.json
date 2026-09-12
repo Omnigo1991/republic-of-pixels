@@ -1,20 +1,20 @@
 {
-  "datum": "2026-09-11",
-  "nummer": 34,
-  "loesung": "Borderlands 3",
+  "datum": "2026-09-12",
+  "nummer": 35,
+  "loesung": "Dark Souls III",
   "akzeptiert": [
-    "borderlands3",
-    "borderlands"
+    "darksoulsiii",
+    "darksouls3"
   ],
   "hinweise": [
-    "Erschienen 2019 · Loot-Shooter",
-    "Cel-Shading"
+    "Erschienen 2016 · Action-RPG",
+    "FromSoftware"
   ],
   "bilder": [
-    "/images/pixelraten/2026-09-11-s1.jpg",
-    "/images/pixelraten/2026-09-11-s2.jpg",
-    "/images/pixelraten/2026-09-11-s3.jpg",
-    "/images/pixelraten/2026-09-11-s4.jpg",
-    "/images/pixelraten/2026-09-11-s5.jpg"
+    "/images/pixelraten/2026-09-12-s1.jpg",
+    "/images/pixelraten/2026-09-12-s2.jpg",
+    "/images/pixelraten/2026-09-12-s3.jpg",
+    "/images/pixelraten/2026-09-12-s4.jpg",
+    "/images/pixelraten/2026-09-12-s5.jpg"
   ]
 }

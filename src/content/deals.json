@@ -1,17 +1,6 @@
 {
-  "updatedAt": "2026-09-11T20:55:45.749Z",
+  "updatedAt": "2026-09-12T00:04:09.488Z",
   "deals": [
-    {
-      "appId": 2183900,
-      "title": "Warhammer 40,000: Space Marine 2",
-      "discountPercent": 75,
-      "originalPrice": 5999,
-      "finalPrice": 1499,
-      "currency": "EUR",
-      "endsAt": "2026-09-14T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/2183900/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2183900/capsule_184x69.jpg?t=1787837240"
-    },
     {
       "appId": 1850570,
       "title": "DEATH STRANDING DIRECTOR'S CUT",
@@ -46,17 +35,6 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3240220/a318bd9affe8eee32984b18794b273c256e9b2d6/capsule_184x69.jpg?t=1781187782"
     },
     {
-      "appId": 1144200,
-      "title": "Ready or Not",
-      "discountPercent": 50,
-      "originalPrice": 4999,
-      "finalPrice": 2499,
-      "currency": "EUR",
-      "endsAt": "2026-09-18T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/1144200/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1144200/2f6ca7ad511531beb421122efb376141f068ebbb/capsule_184x69.jpg?t=1789019569"
-    },
-    {
       "appId": 3949040,
       "title": "RV There Yet?",
       "discountPercent": 40,
@@ -66,6 +44,28 @@
       "endsAt": "2026-09-24T14:00:00.000Z",
       "url": "https://store.steampowered.com/app/3949040/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3949040/87c1df082a7b29a7ffd7f32ab03d0d9d12e0f876/capsule_184x69_alt_assets_0.jpg?t=1789134289"
+    },
+    {
+      "appId": 3892270,
+      "title": "Gamble With Your Friends",
+      "discountPercent": 38,
+      "originalPrice": 779,
+      "finalPrice": 482,
+      "currency": "EUR",
+      "endsAt": "2026-09-14T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/3892270/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3892270/162b293e92bf8be850967a85c9916daa6f68591c/capsule_184x69.jpg?t=1788800889"
+    },
+    {
+      "appId": 3624140,
+      "title": "Wanderburg",
+      "discountPercent": 35,
+      "originalPrice": 1499,
+      "finalPrice": 974,
+      "currency": "EUR",
+      "endsAt": "2026-09-22T17:00:17.000Z",
+      "url": "https://store.steampowered.com/app/3624140/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3624140/300527c75c0b5eb18e08bb8674b5fbad7c120ddf/capsule_184x69_alt_assets_2.jpg?t=1789141114"
     }
   ]
 }
