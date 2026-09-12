@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-12T07:07:42.414Z",
+  "updatedAt": "2026-09-12T10:04:35.585Z",
   "deals": [
     {
       "appId": 1850570,
@@ -46,6 +46,17 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3624140/300527c75c0b5eb18e08bb8674b5fbad7c120ddf/capsule_184x69_alt_assets_2.jpg?t=1789141114"
     },
     {
+      "appId": 2536520,
+      "title": "Diablo II: Resurrected – Infernal Edition",
+      "discountPercent": 30,
+      "originalPrice": 3999,
+      "finalPrice": 2799,
+      "currency": "EUR",
+      "endsAt": "2026-09-24T17:00:00.000Z",
+      "url": "https://store.steampowered.com/app/2536520/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2536520/2a400c5821131f4525919029b03adf1168fdffd3/capsule_184x69.jpg?t=1774399170"
+    },
+    {
       "appId": 1390270,
       "title": "Diablo® IV: Lord of Hatred™ – Standard Edition",
       "discountPercent": 25,
@@ -55,17 +66,6 @@
       "endsAt": "2026-09-24T17:00:00.000Z",
       "url": "https://store.steampowered.com/app/1390270/",
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/1390270/210eccf911643b6bcc3efec599376a958376e146/capsule_184x69.jpg?t=1777330861"
-    },
-    {
-      "appId": 2456740,
-      "title": "inZOI",
-      "discountPercent": 20,
-      "originalPrice": 3999,
-      "finalPrice": 3199,
-      "currency": "EUR",
-      "endsAt": "2026-09-22T16:00:00.000Z",
-      "url": "https://store.steampowered.com/app/2456740/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2456740/db7e09bed342057b3ae057d5a2fcfb94a37f0762/capsule_184x69.jpg?t=1777449358"
     }
   ]
 }

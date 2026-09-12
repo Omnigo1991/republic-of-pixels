@@ -1,0 +1,160 @@
+{
+  "slug": "level-5-genai-kritik-hino-entschuldigung-2026",
+  "title": "«Wir nehmen das als Lehre» - Level-5 hält am KI-Kurs fest",
+  "subtitle": "Nach dem Showcase-Ärger entschuldigt sich CEO Akihiro Hino für die KI-Trailer - und kündigt im selben Atemzug noch mehr KI an",
+  "excerpt": "Level-5 wollte mit dem eigenen Showcase glänzen, doch die Fans zählten KI-Artefakte statt Ankündigungen. Jetzt reagiert CEO Akihiro Hino - mit einer Entschuldigung, die vieles offenlässt.",
+  "seoTitle": "Level-5: Hino entschuldigt sich für KI im Showcase",
+  "metaDescription": "Level-5-CEO Akihiro Hino entschuldigt sich für den KI-Einsatz im Showcase, verteidigt die Technologie aber weiter. Was das für Professor Layton und Co. heisst.",
+  "category": "news",
+  "platforms": [
+    "nintendo"
+  ],
+  "tags": [
+    "Level-5",
+    "Professor Layton",
+    "Generative KI",
+    "Akihiro Hino",
+    "DecaPolice",
+    "Inazuma Eleven"
+  ],
+  "tldr": [
+    "Level-5 zeigte auf dem Showcase «LEVEL5 VISION 2026 II: Dreams» unter anderem ein Remake von Professor Layton und das geheimnisvolle Dorf - die Community diskutierte stattdessen über mutmassliche KI-Inhalte.",
+    "CEO Akihiro Hino entschuldigt sich öffentlich für den KI-Einsatz in den Videos, betont aber, dass Szenarien, Charakterdesigns und Settings von Menschen stammen.",
+    "Am Kurs ändert sich nichts: KI soll die Entwicklungszeit grosser Titel von fünf auf zwei Jahre drücken.",
+    "Kritik kommt unter anderem von Castlevania-Regisseur Samuel Deats und von japanischen Fans - die Vorwürfe zu den Spielen selbst sind unbestätigt."
+  ],
+  "whyItMatters": "Level-5 steht für handgezeichnete Rätselwelten und Studio-Ghibli-Charme - ausgerechnet dieses Studio macht generative KI zum Kern seiner Produktionspipeline. Wer Professor Layton, Inazuma Eleven oder Yo-kai Watch kaufen will, muss sich künftig entscheiden, wie viel KI im fertigen Spiel akzeptabel ist. Und die Antwort darauf lässt sich von aussen kaum überprüfen.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Level-5 wollte mit der eigenen Präsentation «LEVEL5 VISION 2026 II: Dreams» einen Triumph feiern - stattdessen diskutiert die Community seit Tagen über flackernde Hintergründe, steife Animationen und die Frage, wie viel generative KI in den kommenden Spielen des Studios steckt. CEO Akihiro Hino hat sich inzwischen öffentlich geäussert: Er entschuldigt sich für den KI-Einsatz in den gezeigten Videos, verteidigt die Technologie aber ausdrücklich weiter."
+    },
+    {
+      "type": "embed",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=z9nITMlt8Fk"
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "80-90 %",
+          "label": "des Codes werden laut Hino bereits von KI geschrieben und danach von Menschen korrigiert"
+        },
+        {
+          "value": "5 → 2 Jahre",
+          "label": "so stark will Level-5 die Entwicklungszeit grosser Titel verkürzen"
+        },
+        {
+          "value": "2023",
+          "label": "seit damals räumt das Studio ChatGPT-Einsatz bei Designs und Hintergründen ein"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Ein Showcase, bei dem Fans nach KI-Spuren suchten"
+    },
+    {
+      "type": "paragraph",
+      "text": "Rund 24 Stunden nach dem Nintendo Direct vom 9. September 2026, in dem das lange verschobene Professor Layton and the New World of Steam endlich einen Termin erhielt, streamte Level-5 seine eigene Show. Auf dem Papier ein Selbstläufer: der erste ausführliche Trailer zu DecaPolice und die Ankündigung eines Remakes des allerersten Layton-Spiels. Doch schon die merkwürdig animierte Nachbildung von Hino selbst setzte den Ton - danach sezierte die Community jedes gezeigte Projekt."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Yo-kai Watch 2: Haunted Domain - Kritik an den Hintergrundbildern und am plötzlich veränderten Gesicht der Hauptfigur",
+        "Inazuma Eleven: Bold Revolution - Vorwurf «zu viel KI» wegen steifer Figurenbewegungen",
+        "Professor Layton und das geheimnisvolle Dorf (Remake) - angeblich inkonsistente, KI-generierte Hintergründe",
+        "DecaPolice - Fans monieren Beleuchtungsfehler und Figuren, die zwischen zwei Einstellungen die Position tauschen"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Bestätigt ist davon nichts. Gerade beim Layton-Remake wäre ein grossflächiger KI-Einsatz besonders heikel, weil die handgezeichneten Hintergründe und Figuren zu den zentralen Verkaufsargumenten der Reihe gehören. Dass die Fanbase trotzdem jedes Bild unter die Lupe nimmt, kommt allerdings nicht aus dem Nichts."
+    },
+    {
+      "type": "heading",
+      "text": "Hinos Erklärung: Menschen entwerfen, KI digitalisiert"
+    },
+    {
+      "type": "paragraph",
+      "text": "In seinem Statement räumt Hino ein, dass der Wunsch nach einer besonders spektakulären Show zu einem Übermass an KI-Material geführt habe. Gleichzeitig zieht er eine Linie zwischen Präsentation und Produkt."
+    },
+    {
+      "type": "quote",
+      "text": "Bei uns entstehen die Teile, die den Reiz und die Eigenständigkeit der veröffentlichten Werke ausmachen - also Szenarien, Charakterdesigns und Grundsettings -, vollständig durch Menschenhand. Was wir uns von KI an Effizienz erhoffen, ist vor allem die Digitalisierung von kreativer Arbeit, die Menschen geschaffen haben, zum Beispiel das präzise Umwandeln von Originalzeichnungen in Polygone.",
+      "attribution": "Akihiro Hino, CEO von Level-5"
+    },
+    {
+      "type": "paragraph",
+      "text": "Am eingeschlagenen Kurs ändert das nichts. Die gewonnene Zeit, so Hino, fliesse zurück in den Kern der Kreation - und die Ergebnisse würden dadurch besser als zuvor. Als Ziel nennt er ausdrücklich, die aktuell fünfjährige Entwicklungszeit grosser Titel auf zwei Jahre zu drücken; man befinde sich dabei in einer Phase von Versuch und Irrtum. Für den Showcase gilt sein Fazit: «Wir werden das als Lehre mitnehmen und in die nächste Präsentation einfliessen lassen.»"
+    },
+    {
+      "type": "heading",
+      "text": "Warum die Entschuldigung nicht verfängt"
+    },
+    {
+      "type": "paragraph",
+      "text": "Der Widerspruch, den viele sehen: Wer KI in der Show einsetzt, kann sie auch im Spiel einsetzen. Genau das formulierte ein japanischer Nutzer auf X - «Wir haben sie nicht im Werk benutzt, aber in der Präsentation» sei ein derart starker Widerspruch, dass Vertrauen schwerfalle. Eine langjährige Fanstimme nennt den KI-Einsatz zudem umweltschädlich und respektlos gegenüber dem Team, das hart gearbeitet habe. Grundsätzlicher wird Samuel Deats, Regisseur der Netflix-Serie Castlevania beim Studio Powerhouse Animation."
+    },
+    {
+      "type": "quote",
+      "text": "Generative KI wird von Tech-Konzernen auf den gestohlenen Werken unzähliger Künstlerinnen und Künstler trainiert, um mit deren Arbeit Profit zu machen - mit der Absicht, Künstler zu ersetzen. Indem ihr sie einsetzt, habt ihr Künstler ersetzt.",
+      "attribution": "Samuel Deats, Regisseur der Netflix-Serie Castlevania"
+    },
+    {
+      "type": "heading",
+      "text": "Die Vorgeschichte: von ChatGPT-Hintergründen bis 90 Prozent KI-Code"
+    },
+    {
+      "type": "paragraph",
+      "text": "Neu ist die Debatte bei Level-5 nicht. Bereits 2023 räumte das Studio ein, ChatGPT für Charakterdesigns und Hintergrundgrafiken in Inazuma Eleven: Victory Road genutzt zu haben. Im vergangenen Jahr erklärte Hino vor Nachwuchskräften des japanischen Top Game Creators Academy-Programms, rund 80 bis 90 Prozent des Codes würden bereits von KI geschrieben und anschliessend von menschlichen Programmierern korrigiert - «mit anderen Worten: Rund 80 bis 90 Prozent der Spiele werden derzeit von KI gemacht.» KI greife darüber hinaus in Kunst, Musik und sogar Gamedesign ein. Im Dezember 2025 forderte er zudem öffentlich, generative KI nicht länger zu dämonisieren."
+    },
+    {
+      "type": "paragraph",
+      "text": "Einordnung: Level-5 hat mit dem Showcase ein Vertrauensproblem geschaffen, das sich mit einer Entschuldigung für Trailer-Effekte nicht auflösen lässt. Solange von aussen niemand prüfen kann, wo die Grenze zwischen «von Menschen gezeichnet» und «von KI digitalisiert» verläuft, werden Fans jedes neue Bild aus Ni-no-Kuni-, Layton- oder Yo-kai-Watch-Umfeld mit der Lupe betrachten - und das Studio wird sich diese Aufmerksamkeit mit jedem Trailer neu verdienen müssen. Die Vorwürfe zu den einzelnen Spielen bleiben bis auf Weiteres unbestätigt."
+    }
+  ],
+  "poll": {
+    "question": "Level-5 will die Entwicklungszeit mit KI von fünf auf zwei Jahre drücken - wie steht ihr dazu?",
+    "options": [
+      "Wenn das Ergebnis stimmt, ist mir der Weg egal",
+      "KI im Trailer ist schon zu viel - Vertrauen weg",
+      "Nur okay, wenn Artwork und Story menschlich bleiben",
+      "Für mich ein klarer Kaufstopp"
+    ]
+  },
+  "isLeakOrRumor": false,
+  "review": null,
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-09-12T10:03:09.781Z",
+  "readingTimeMinutes": 3,
+  "heroVariant": "circuit",
+  "sources": [
+    {
+      "title": "\"We Will Take This As A Lesson\" - Level-5 CEO Doubles Down On GenAI Despite Backlash",
+      "url": "https://www.nintendolife.com/news/2026/09/we-will-take-this-as-a-lesson-level-5-ceo-doubles-down-on-genai-despite-backlash",
+      "publisher": "Nintendo Life"
+    },
+    {
+      "title": "Professor Layton Fans Are In Full Panic Mode After Studio Presentation They Worry Is Full Of AI Slop",
+      "url": "https://kotaku.com/professor-layton-ai-level-5-curious-village-remake-inazuma-eleven-2000733548",
+      "publisher": "Kotaku"
+    }
+  ],
+  "image": {
+    "src": "/images/articles/level-5-genai-kritik-hino-entschuldigung-2026.webp",
+    "alt": "«Wir nehmen das als Lehre» - Level-5 hält am KI-Kurs fest",
+    "credit": "Bild: Nintendo Life",
+    "sourceUrl": "https://www.nintendolife.com/news/2026/09/we-will-take-this-as-a-lesson-level-5-ceo-doubles-down-on-genai-despite-backlash",
+    "sourceWidth": 1280,
+    "sourceHeight": 800
+  },
+  "relatedSlugs": [
+    "ki-backlash-1666-amsterdam-james-pond-legacy-2026",
+    "gta-6-keine-mikrotransaktionen-keine-generative-ki-2026",
+    "vapor-world-over-the-mind-ki-zwischensequenzen-backlash"
+  ]
+}
