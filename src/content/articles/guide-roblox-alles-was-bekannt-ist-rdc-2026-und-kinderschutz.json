@@ -1,0 +1,179 @@
+{
+  "slug": "guide-roblox-alles-was-bekannt-ist-rdc-2026-und-kinderschutz",
+  "title": "Roblox: Alles, was bekannt ist - RDC 2026 und Kinderschutz",
+  "subtitle": "Der Guide fasst zusammen, was die Quellen zu Roblox Everywhere, den neuen Creator-Werkzeugen, der Roblox-Wallet und den laufenden Kinderschutz-Verfahren berichten.",
+  "excerpt": "Der Guide fasst zusammen, was die Quellen zu Roblox Everywhere, den neuen Creator-Werkzeugen, der Roblox-Wallet und den laufenden Kinderschutz-Verfahren berichten. Roblox will seine Spiele erstmals aus der eigenen App herauslösen: Creator sollen ihre Titel als eigenständige Apps für Mobile, PC und Konsolen veröffent…",
+  "category": "guides",
+  "platforms": [
+    "pc",
+    "playstation",
+    "xbox"
+  ],
+  "isTopStory": false,
+  "popularityRank": null,
+  "author": "Republic of Pixels Redaktion",
+  "publishedAt": "2026-09-12T12:57:25.838Z",
+  "readingTimeMinutes": 7,
+  "heroVariant": "controller",
+  "image": {
+    "src": "/images/articles/roblox-everywhere-standalone-apps-rdc-2026.webp",
+    "alt": "Roblox-Spiele verlassen Roblox - als eigene Apps auf PC und Konsole",
+    "credit": "Bild: PC Gamer",
+    "sourceUrl": "https://www.pcgamer.com/software/platforms/roblox-games-are-escaping-roblox-creators-will-soon-be-able-to-export-standalone-apps-for-pc-console-and-mobile/",
+    "sourceWidth": 1280,
+    "sourceHeight": 710
+  },
+  "isLeakOrRumor": false,
+  "tags": [
+    "Roblox",
+    "Roblox Everywhere",
+    "RDC 2026",
+    "Kinderschutz"
+  ],
+  "tldr": [
+    "Standalone-Apps: Roblox Everywhere ist angekündigt, Start mit einer ausgewählten Gruppe von Entwicklern und Storefronts - warten Sie die angekündigten Details ab, bevor Sie eine…",
+    "Cross-Play ist bei Roblox Everywhere laut Ankündigung standardmässig aktiv.",
+    "Browser-Start: bis Ende des Jahres geplant, zuerst Chrome, ohne externe Software oder Installation.",
+    "Offline-Modus: Online und Offline sollen in einem Spiel kombinierbar sein, inklusive Singleplayer-Kampagnen."
+  ],
+  "whyItMatters": "Roblox will seine Spiele erstmals aus der eigenen App herauslösen: Creator sollen ihre Titel als eigenständige Apps für Mobile, PC und Konsolen veröffentlichen können, und bis Jahresende sollen Spiele im Browser startbar sein. Gleichzeitig laufen gegen die Plattform eine Untersuchung eines Senats-Unterausschusses in den USA und Auflagen der australischen Regulierungsbehörde eSafety zum Kinderschutz.",
+  "poll": null,
+  "review": null,
+  "seoTitle": "Roblox: Alles, was bekannt ist - RDC 2026 und Kinderschutz",
+  "metaDescription": "Der Guide fasst zusammen, was die Quellen zu Roblox Everywhere, den neuen Creator-Werkzeugen, der Roblox-Wallet und den laufenden Kinderschutz-Verfahren berichten.",
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Stand dieses Guides: RDC-2026-Ankündigungen (Meldungen vom 11. September 2026) sowie Berichte vom 14. und 20. August 2026. Wir halten ihn aktuell, wenn sich Wesentliches ändert."
+    },
+    {
+      "type": "paragraph",
+      "text": "Dieser Guide richtet sich an alle, die Roblox spielen, dort entwickeln oder die Plattform beruflich beobachten - und die wissen wollen, was aktuell belegt ist und was nicht. Er bündelt ausschliesslich Angaben aus den vorliegenden Berichten zu zwei Themenblöcken: den Ankündigungen der Roblox Developers Conference 2026 und den laufenden Verfahren rund um Kinderschutz. Wo eine Angabe an einen Zeitpunkt gebunden ist, steht der Stand dabei."
+    },
+    {
+      "type": "heading",
+      "text": "Der Rahmen: RDC 2026 und Plattformgrösse"
+    },
+    {
+      "type": "paragraph",
+      "text": "Laut Polygon fand diese Woche die 12. jährliche Roblox Developers Conference (RDC) statt, eine private Veranstaltung in der Bay Area für die Creator-Community der Plattform. Das Unternehmen sitzt in San Mateo, Kalifornien. In einer Polygon vorliegenden Pressemitteilung gibt Roblox an, dass Spielerinnen und Spieler im letzten Quartal 29 Milliarden Stunden auf Roblox verbracht haben, in mehr als 180 Ländern. PC Gamer verweist zusätzlich auf Branchenanalyst Matthew Ball, inzwischen Chief Strategy Officer bei Xbox, der 2025 sagte, Roblox habe für mehr Spieler-Engagement und Umsatzwachstum gestanden als Steam, PlayStation und Fortnite zusammen."
+    },
+    {
+      "type": "heading",
+      "text": "Roblox Everywhere: Spiele als eigenständige Apps"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die auf der RDC vorgestellte Initiative heisst Roblox Everywhere. Im Wortlaut der Ankündigung: «Soon, creators will have the option to make their games available as standalone apps across mobile, PC, and consoles, with Roblox powering the technology and services underneath.» Polygon formuliert es gleichlautend: Creator erhalten die Option, ihre Spiele als eigenständige Apps für Mobile, PC und Konsolen anzubieten, während Roblox die Technologie und die Dienste darunter bereitstellt. In der von PC Gamer zitierten Ankündigung (Post vom 11. September 2026) heisst es zudem, Cross-Play sei standardmässig aktiv, sodass man mit Freundinnen und Freunden spielen kann, die bereits die Roblox-App nutzen."
+    },
+    {
+      "type": "paragraph",
+      "text": "Zur Frage, ob diese eigenständigen Spiele auf Storefronts wie Steam, Epic oder GOG erscheinen, sind die Details laut PC Gamer noch nicht festgezurrt. Ein Roblox-Vertreter sagte PC Gamer, Ziel sei die Verfügbarkeit auf Storefronts über alle Plattformen hinweg, Optionen würden aber noch geprüft: «We will start with a select set of gaming developers and storefronts to test, and we will share more details soon.» Konkrete Handlungsanweisung für Creator: Planen Sie keine Veröffentlichung auf einem bestimmten Store ein, solange Roblox die angekündigten weiteren Details nicht nachgeliefert hat, und rechnen Sie damit, dass der Start auf eine ausgewählte Gruppe von Entwicklern und Storefronts begrenzt ist."
+    },
+    {
+      "type": "heading",
+      "text": "Browser, Offline-Modus und 2D"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Browser: Laut PC Gamer erwartet das Unternehmen, bis Ende des Jahres den Beitritt zu Spielen im Browser zu ermöglichen - zuerst Chrome, weitere folgen -, ohne externe Software oder Installation. Polygon ergänzt: Ein geteilter Link wird damit zum direkten Weg von der Entdeckung zum Spiel.",
+        "Offline: Roblox plant laut PC Gamer eine neue Offline-Option, die Singleplayer-Spiele auch ohne Netzwerk ermöglicht. Polygon formuliert es so, dass Creator Online- und Offline-Modi in einem Spiel kombinieren können, was Singleplayer-Kampagnen und Sessions abseits eines Netzwerks eröffnet.",
+        "2D: Roblox erweitert laut Polygon die Engine-Fähigkeiten um Unterstützung für 2D-Spiele - mit einer neuen orthografischen Kamera, animierten Bildcontainern und direktem Sprite-Sheet-Import."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Neue Entwicklungswerkzeuge"
+    },
+    {
+      "type": "paragraph",
+      "text": "Build ist laut Polygon ein Tab in der Roblox-App, mit dem sich allein per Prompt ein Spiel erstellen und veröffentlichen lässt. Die öffentliche Alpha wird nach Serbien und Singapur ausgeweitet. Wenn Sie ausserhalb dieser Regionen arbeiten, planen Sie Build vorerst nicht als Teil Ihres Workflows ein. Zusätzlich fügt Roblox Werkzeuge für mehr Kontrolle hinzu: eine neue Asset-Bibliothek, Desktop-Zugriff und iterative Steuerung. Später in diesem Jahr soll der Scene Generator Prompt-zu-Szene-Funktionalität in Build und Studio bringen, wobei die grössere Creator-Kontrolle in Studio verfügbar ist. Bis Jahresende erweitert Roblox laut Polygon ausserdem, was NPCs können, um zwei neue Verhaltensweisen - darunter NPCs, die Playtesting übernehmen."
+    },
+    {
+      "type": "heading",
+      "text": "Geld: Roblox Wallet und Roblox Card"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Roblox Wallet ist laut Polygon ein Finanzkonto, das mit Creator-Geschäften mitwachsen soll: Creator verdienen direkt in echter Währung, werden automatisch an jedem Geschäftstag ausbezahlt und können Gelder auf andere Roblox-Konten oder ein externes Konto bewegen; im Creator Hub gibt es reichhaltigere Earnings-Analytics. Zahlungsdienstleister hinter der Wallet ist Airwallex, das derzeit in fünf US-Bundesstaaten nicht verfügbar ist: New York, Nevada, Hawaii, Indiana und Wisconsin. Auf Nachfrage von Polygon sagte ein Vertreter: «For some US customers, they [Airwallex] partner with trusted US banks to provide payment services.» Wenn Sie in einem dieser fünf Staaten sitzen, klären Sie die Auszahlungswege ab, bevor Sie Ihre Finanzplanung auf die Wallet umstellen."
+    },
+    {
+      "type": "paragraph",
+      "text": "Die Roblox Card ist mit der Wallet verbunden und soll es Creators erlauben, ihr verfügbares Guthaben überall dort auszugeben, wo die Karte akzeptiert wird. Der Rollout beginnt laut Polygon 2027. Ein Roblox-Sprecher präzisierte: Die Karte funktioniere wie eine Debitkarte und erlaube den Zugriff auf das verfügbare Wallet-Guthaben für reale Ausgaben überall dort, wo grosse Kartennetzwerke akzeptiert werden. «It is not a credit card. There is no line of credit or loan.»"
+    },
+    {
+      "type": "heading",
+      "text": "Kinderschutz: Australien, Stand 20. August 2026"
+    },
+    {
+      "type": "paragraph",
+      "text": "Laut The Verge sagt Roblox weitere Änderungen an seinen Kinderschutz-Funktionen zu, nachdem die australische Regulierungsbehörde eSafety getestet hat. eSafety ging Bedenken nach, das Unternehmen halte den australischen Online Safety Act nicht ein, unter anderem wegen «allegedly failing to have sufficient measures in place to prevent contact between adults and children under 16». Die Tests in diesem Jahr ergaben, dass die Plattform weiterhin Kinder gefährde, einschliesslich Kontakt zwischen Kindern und erwachsenen Fremden. Konkret fand eSafety: Erwachsene konnten jungen australischen Kindern ohne Zustimmung von Eltern oder Betreuungspersonen Verbindungsanfragen senden; Kinder und Erwachsene konnten ohne solche Zustimmung gegenseitig Beiträge in Foren ausserhalb von Spielumgebungen sehen und beantworten; die Verbindungen von Kindern waren für jeden auf der Plattform sichtbar; Profile und Biografien von Kindern - inklusive Kontonamen, Anzahl und Namen der Verbindungen, Avatarbilder und nicht sensible biografische Angaben wie Interessen - waren für jeden sichtbar, ohne Möglichkeit, diese Sichtbarkeit einzuschränken."
+    },
+    {
+      "type": "paragraph",
+      "text": "Roblox ist laut eSafety der Auffassung, seine Pflichten aus dem Online Safety Act zu erfüllen, will aber weitere Massnahmen ergänzen: Erwachsene daran hindern, unbekannte Kinder ohne elterliche Zustimmung zu kontaktieren; Konteneinstellungen von Kinderkonten so stärken, dass sie standardmässig privat sind; zugängliche Meldemechanismen, die Nutzende über Beschwerdeergebnisse informieren; und einen unabhängigen Drittprüfer beauftragen, der die Wirksamkeit der Sicherheitsmassnahmen bewertet, einschliesslich des Einsatzes der Altersschätzungs-Massnahmen. Nicky Jackson Colaço, Global Head of Public Policy bei Roblox, nennt als Beispiel «our recent rollout of industry leading safety features on Roblox, including Roblox Kids and Select accounts tailored specifically for users under 16». Polygon hält fest, dass die RDC-Ankündigungen die Kinderschutz-Bedenken nicht adressieren, auch nicht nach der Einführung neuer altersbeschränkter Konten im Juni."
+    },
+    {
+      "type": "heading",
+      "text": "Kinderschutz: USA, Stand 14. August 2026"
+    },
+    {
+      "type": "paragraph",
+      "text": "Die US-Senatoren Josh Hawley (R-MO) und Dick Durbin (D-IL) haben laut Polygon und Destructoid eine Untersuchung zu Roblox eröffnet; Destructoid datiert das Schreiben an CEO Baszucki auf den 12. August 2026. Polygon beschreibt die parteiübergreifende Untersuchung als geführt vom Senate Judiciary Subcommittee on Crime and Counterterrorism, Destructoid spricht vom Senate Judiciary Committee und von einer offiziellen Untersuchung zu «child safety on the Roblox gaming platform». Im Brief heisst es unter anderem: «You trumpet Roblox as a safe digital playground for children as young as five. But the public record raises serious questions about this promise of safety.» Genannt wird, dass Roblox 2025 insgesamt 65'381 Fälle mutmasslicher sexueller Ausbeutung von Kindern an das National Center for Missing & Exploited Children meldete - mehr als doppelt so viele wie 2024. Die Untersuchung ordnet laut Destructoid ausdrücklich an, alle Unterlagen zu Kinderschutz, körperlichem oder sexuellem Missbrauch, Mobbing und finanzieller Ausbeutung von Kindern aufzubewahren."
+    },
+    {
+      "type": "paragraph",
+      "text": "Weitere in den Quellen genannte Verfahren und Vorgänge: eine am 21. April 2025 eingereichte Klage einer Jugendlichen aus Florida gegen Roblox und Discord; ein Vergleich mit Nevada über 12 Millionen Dollar, der verschärften Jugendschutz im Spiel verlangte; eine Untersuchung der US-Börsenaufsicht SEC, über die Bloomberg Anfang 2025 berichtete; eine Klage Louisianas; laut Destructoid zudem Untersuchungen des Staates Louisiana, von LA County und des Generalstaatsanwalts von Florida. The Verge hält fest, dass Roblox in den USA von einem Senats-Unterausschuss untersucht wird, von mehreren Bundesstaaten verklagt wurde und einige dieser Klagen beigelegt hat. Auf Produktseite nennt Polygon eingeschränkte Avatar-Anpassung sowie eine Ende 2025 eingeführte, umstrittene Änderung, die von Spielenden ein Selfie und einen ID-Check zur Altersverifikation verlangt."
+    },
+    {
+      "type": "heading",
+      "text": "Einordnung der Plattform-Bewegungen"
+    },
+    {
+      "type": "paragraph",
+      "text": "PC Gamer nennt zwei Beispiele für die Gegenrichtung: Starbreeze brachte dieses Jahr ein neues Payday-Spin-off auf Roblox, und Mattels Einstieg in Videospiele richtet sich gezielt «on creator platforms such as Roblox and Fortnite». Zur Bandbreite der Inhalte verweist PC Gamer auf den Shooter TTK und auf Morgan Parks Formulierung, viele lernten erst jetzt, dass die Plattform mehr könne als Idle-Clicker, Horror-Walking-Sims und Obbys."
+    },
+    {
+      "type": "heading",
+      "text": "Checkliste"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Standalone-Apps: Roblox Everywhere ist angekündigt, Start mit einer ausgewählten Gruppe von Entwicklern und Storefronts - warten Sie die angekündigten Details ab, bevor Sie einen Store fest einplanen.",
+        "Cross-Play ist bei Roblox Everywhere laut Ankündigung standardmässig aktiv.",
+        "Browser-Start: bis Ende des Jahres geplant, zuerst Chrome, ohne externe Software oder Installation.",
+        "Offline-Modus: Online und Offline sollen in einem Spiel kombinierbar sein, inklusive Singleplayer-Kampagnen.",
+        "2D-Projekte: orthografische Kamera, animierte Bildcontainer und direkter Sprite-Sheet-Import kommen in die Engine.",
+        "Build-Alpha: öffentliche Alpha wird nach Serbien und Singapur ausgeweitet; Scene Generator später in diesem Jahr in Build und Studio.",
+        "NPCs: zwei neue Verhaltensweisen bis Jahresende, darunter NPCs, die playtesten.",
+        "Roblox Wallet: Auszahlung in echter Währung an jedem Geschäftstag; Airwallex ist in New York, Nevada, Hawaii, Indiana und Wisconsin derzeit nicht verfügbar - Auszahlungsweg vorab klären.",
+        "Roblox Card: Rollout ab 2027, Debitkarten-Funktion, kein Kredit und kein Darlehen.",
+        "Elternseitig: In Australien sagt Roblox unter anderem private Standardeinstellungen für Kinderkonten und eine unabhängige Drittprüfung der Schutzmassnahmen zu (Stand: 20. August 2026)."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "pcgamer.com",
+      "url": "https://www.pcgamer.com/software/platforms/roblox-games-are-escaping-roblox-creators-will-soon-be-able-to-export-standalone-apps-for-pc-console-and-mobile/"
+    },
+    {
+      "title": "polygon.com",
+      "url": "https://www.polygon.com/roblox-september-update-rdc-2026/"
+    },
+    {
+      "title": "theverge.com",
+      "url": "https://www.theverge.com/games/982885/roblox-australia-safety-regulator-child-safety"
+    },
+    {
+      "title": "polygon.com",
+      "url": "https://www.polygon.com/roblox-senate-investigation-2026/"
+    },
+    {
+      "title": "destructoid.com",
+      "url": "https://www.destructoid.com/roblox-under-bipartisan-investigation/"
+    }
+  ]
+}
