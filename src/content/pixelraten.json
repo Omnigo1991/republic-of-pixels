@@ -1,20 +1,19 @@
 {
-  "datum": "2026-09-12",
-  "nummer": 35,
-  "loesung": "Dark Souls III",
+  "datum": "2026-09-13",
+  "nummer": 36,
+  "loesung": "Anno 1800",
   "akzeptiert": [
-    "darksoulsiii",
-    "darksouls3"
+    "anno1800"
   ],
   "hinweise": [
-    "Erschienen 2016 · Action-RPG",
-    "FromSoftware"
+    "Erschienen 2019 · Aufbau-Strategie",
+    "Industrialisierung"
   ],
   "bilder": [
-    "/images/pixelraten/2026-09-12-s1.jpg",
-    "/images/pixelraten/2026-09-12-s2.jpg",
-    "/images/pixelraten/2026-09-12-s3.jpg",
-    "/images/pixelraten/2026-09-12-s4.jpg",
-    "/images/pixelraten/2026-09-12-s5.jpg"
+    "/images/pixelraten/2026-09-13-s1.jpg",
+    "/images/pixelraten/2026-09-13-s2.jpg",
+    "/images/pixelraten/2026-09-13-s3.jpg",
+    "/images/pixelraten/2026-09-13-s4.jpg",
+    "/images/pixelraten/2026-09-13-s5.jpg"
   ]
 }
