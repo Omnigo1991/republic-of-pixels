@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-12T23:59:19.875Z",
+  "updatedAt": "2026-09-13T03:04:35.792Z",
   "deals": [
     {
       "appId": 2183900,
@@ -57,15 +57,15 @@
       "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3949040/87c1df082a7b29a7ffd7f32ab03d0d9d12e0f876/capsule_184x69_alt_assets_0.jpg?t=1789134289"
     },
     {
-      "appId": 3892270,
-      "title": "Gamble With Your Friends",
-      "discountPercent": 38,
-      "originalPrice": 779,
-      "finalPrice": 482,
+      "appId": 3624140,
+      "title": "Wanderburg",
+      "discountPercent": 35,
+      "originalPrice": 1499,
+      "finalPrice": 974,
       "currency": "EUR",
-      "endsAt": "2026-09-14T17:00:00.000Z",
-      "url": "https://store.steampowered.com/app/3892270/",
-      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3892270/162b293e92bf8be850967a85c9916daa6f68591c/capsule_184x69.jpg?t=1789210203"
+      "endsAt": "2026-09-22T17:00:17.000Z",
+      "url": "https://store.steampowered.com/app/3624140/",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3624140/300527c75c0b5eb18e08bb8674b5fbad7c120ddf/capsule_184x69_alt_assets_2.jpg?t=1789141114"
     }
   ]
 }
